@@ -1,0 +1,186 @@
+{
+    "UUID": "5cf39b3b-41d8-45c1-8ef2-d4678c7a7b85",
+    "ClassName": "CRUS_Starlifter_M2",
+    "Name": "Crusader M2 Hercules Starlifter",
+    "Description": "Manufacturer: Crusader Industries\\nFocus: Medium Freight \/ Combat\\n\\nThe M2 Hercules is the UEE's premier tactical starlifter. The large-scale transport's potent combination of capacity, maneuverability, durability, and robust weapons package assures your cargo and crew get to where they\u2019re going in one piece.",
+    "Career": "Transporter",
+    "Role": "Courier",
+    "Manufacturer": {
+        "Code": "CRUS",
+        "Name": "Crusader Industries"
+    },
+    "Size": 5,
+    "Width": 94,
+    "Length": 70,
+    "Height": 23,
+    "Crew": 3,
+    "Insurance": {
+        "ExpeditedCost": 1810,
+        "ExpeditedClaimTime": 8,
+        "StandardClaimTime": 25
+    },
+    "IsVehicle": false,
+    "IsGravlev": false,
+    "IsSpaceship": true,
+    "Mass": 2339240.06,
+    "ShieldFaceType": "Quadrant",
+    "QuantumTravel": {
+        "FuelCapacity": 6600,
+        "Range": 53939195815.62602,
+        "Speed": 282000000,
+        "SpoolTime": 7,
+        "PortOlisarToArcCorpTime": 148.67854989361703,
+        "PortOlisarToArcCorpFuel": 5130.2306769252,
+        "PortOlisarToArcCorpAndBack": 0.6432459294360332
+    },
+    "Propulsion": {
+        "FuelCapacity": 132000,
+        "FuelIntakeRate": 0,
+        "FuelUsage": {
+            "Main": 1124.765365,
+            "Retro": 70.3197915,
+            "Vtol": 304.04261999999994,
+            "Maneuvering": 609.1132875000001
+        },
+        "ThrustCapacity": {
+            "Main": 159142146,
+            "Retro": 13394246,
+            "Vtol": 57912880,
+            "Maneuvering": 194916252
+        },
+        "IntakeToMainFuelRatio": 0,
+        "IntakeToTankCapacityRatio": 0,
+        "ManeuveringTimeTillEmpty": 92.35147796782292
+    },
+    "FlightCharacteristics": {
+        "ScmSpeed": 160,
+        "MaxSpeed": 950,
+        "BoostSpeedForward": 320,
+        "BoostSpeedBackward": 170,
+        "Acceleration": {
+            "Main": 68.03155807788278,
+            "Retro": 5.7258962981336765,
+            "Vtol": 24.75713416091207,
+            "Maneuvering": 83.32460414515985
+        },
+        "AccelerationG": {
+            "Main": 6.937288276616662,
+            "Retro": 0.5838789289037212,
+            "Vtol": 2.5245251090751757,
+            "Maneuvering": 8.49674497867874
+        },
+        "Pitch": 20,
+        "Yaw": 18,
+        "Roll": 30,
+        "PitchBoostMultiplier": 1.5,
+        "YawBoostMultiplier": 1.5,
+        "RollBoostMultiplier": 2,
+        "Afterburner": {
+            "PreDelayTime": 0,
+            "RampUpTime": 2,
+            "RampDownTime": 0.2,
+            "Capacitor": 20,
+            "IdleCost": 1,
+            "LinearCost": 0,
+            "AngularCost": 0,
+            "RegenPerSec": 0.75,
+            "RegenDelayAfterUse": 1.1
+        },
+        "ZeroToScm": 2.3518497079962715,
+        "ZeroToMax": 13.964107641227862,
+        "ScmToZero": 27.94322350059869,
+        "MaxToZero": 165.91288953480472
+    },
+    "Cargo": 522,
+    "CargoGrids": [
+        {
+            "SCU": 360,
+            "unit": 0,
+            "unitName": "SCU",
+            "x": 10,
+            "y": 18.75,
+            "z": 3.75,
+            "minSize": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1.25
+            },
+            "maxSize": {
+                "x": 10,
+                "y": 10,
+                "z": 2.5
+            },
+            "isOpenContainer": true,
+            "isExternalContainer": false,
+            "isClosedContainer": false,
+            "uuid": "f059c1ba-89f0-4919-aedb-4e54b0e78884"
+        },
+        {
+            "SCU": 162,
+            "unit": 0,
+            "unitName": "SCU",
+            "x": 7.5,
+            "y": 11.25,
+            "z": 3.75,
+            "minSize": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1.25
+            },
+            "maxSize": {
+                "x": 7.5,
+                "y": 10,
+                "z": 2.5
+            },
+            "isOpenContainer": true,
+            "isExternalContainer": false,
+            "isClosedContainer": false,
+            "uuid": "b900bb10-7bc0-433f-a393-25f5acc7d13a"
+        }
+    ],
+    "CargoSizeLimits": {
+        "MinSize": {
+            "x": 1.25,
+            "y": 1.25,
+            "z": 1.25
+        },
+        "MaxSize": {
+            "x": 10,
+            "y": 10,
+            "z": 2.5
+        }
+    },
+    "Health": 101820,
+    "DamageBeforeDestruction": {
+        "Body": 58500
+    },
+    "DamageBeforeDetach": {
+        "Tail_Left": 4680,
+        "Tail_Right": 4680,
+        "Wing_Left": 7930,
+        "Wing_Right": 7930
+    },
+    "RemoteTurrets": [
+        {
+            "Size": 5,
+            "Fixed": true,
+            "WeaponSizes": [
+                5
+            ]
+        },
+        {
+            "Size": 5,
+            "Fixed": true,
+            "WeaponSizes": [
+                5
+            ]
+        },
+        {
+            "Size": 5,
+            "Fixed": true,
+            "WeaponSizes": [
+                5
+            ]
+        }
+    ]
+}

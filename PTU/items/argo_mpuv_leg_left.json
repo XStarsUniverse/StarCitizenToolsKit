@@ -1,0 +1,2235 @@
+{
+    "Raw": {
+        "Entity": {
+            "Category": 40,
+            "Icon": "Default.bmp",
+            "Invisible": 0,
+            "BBoxSelection": 0,
+            "entityDensityClass": "00000000-0000-0000-0000-000000000000",
+            "__ref": "469652b2-8d31-4e97-a71c-76deadde110b",
+            "__path": "libs/foundry/records/entities/scitem/ships/shippart/argo_mpuv_leg_left.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
+            "tags": [],
+            "StaticEntityClassData": [],
+            "Components": {
+                "SAttachableComponentParams": {
+                    "attachToTileItemPort": "ExteriorConnection",
+                    "AttachDef": {
+                        "Type": "Misc",
+                        "SubType": "UNDEFINED",
+                        "Size": 1,
+                        "Grade": 1,
+                        "Manufacturer": {
+                            "Logo": "UI/SharedAssets/ManufacturerLogos/Argo_256.tif",
+                            "LogoFullColor": "ui/textures/logos/logo_corp_argo_square_color.tif",
+                            "LogoSimplifiedWhite": "ui/textures/logos/logo_corp_argo_square_white.tif",
+                            "Code": "ARGO",
+                            "DashboardCanvasConfig": "d1e7da57-6eff-4a36-8b3f-e200280b4ffc",
+                            "BuildingBlocksStyle": "70a4e00c-6cfc-4997-8957-1168b95cfd26",
+                            "AudioManufacturerTag": "6f3a91cd-c1bd-4fc4-97d4-03b928d45685",
+                            "__ref": "9e1f5a35-edcc-4d19-bede-08e2730043c5",
+                            "__path": "libs/foundry/records/scitemmanufacturer/scitemmanufacturer.argo.xml",
+                            "Localization": {
+                                "Name": "Argo Astronautics",
+                                "__Name": "@manufacturer_NameARGO",
+                                "ShortName": "",
+                                "__ShortName": "@LOC_EMPTY",
+                                "Description": "This commercial ship manufacturer focuses on building shuttles, transport vessels and utility vehicles that can be seen around the universe.",
+                                "__Description": "@manufacturer_DescARGO",
+                                "displayFeatures": {
+                                    "LogoSimplifiedWhite": "",
+                                    "FrontendBackground": "",
+                                    "History": "",
+                                    "__History": "@LOC_EMPTY",
+                                    "Callout1": "",
+                                    "__Callout1": "@LOC_EMPTY",
+                                    "Callout2": "",
+                                    "__Callout2": "@LOC_EMPTY",
+                                    "Callout3": "",
+                                    "__Callout3": "@LOC_EMPTY",
+                                    "UIPriority": 0,
+                                    "locationAudioPlayTrigger": {
+                                        "audioTrigger": ""
+                                    },
+                                    "locationAudioStopTrigger": {
+                                        "audioTrigger": ""
+                                    }
+                                },
+                                "English": {
+                                    "Locale": "english",
+                                    "Name": "Argo Astronautics",
+                                    "ShortName": "",
+                                    "Description": "This commercial ship manufacturer focuses on building shuttles, transport vessels and utility vehicles that can be seen around the universe."
+                                }
+                            }
+                        },
+                        "inheritParentManufacturer": 0,
+                        "Tags": "",
+                        "RequiredTags": "",
+                        "DisplayType": "",
+                        "ignoredAttachAxis": "None",
+                        "attachCheckCenterOfMass": 0,
+                        "Localization": {
+                            "Name": "<= PLACEHOLDER =>",
+                            "__Name": "@LOC_PLACEHOLDER",
+                            "ShortName": "",
+                            "__ShortName": "@LOC_EMPTY",
+                            "Description": "",
+                            "__Description": "@LOC_EMPTY",
+                            "displayFeatures": {
+                                "LogoSimplifiedWhite": "",
+                                "FrontendBackground": "",
+                                "History": "",
+                                "__History": "@LOC_EMPTY",
+                                "Callout1": "",
+                                "__Callout1": "@LOC_EMPTY",
+                                "Callout2": "",
+                                "__Callout2": "@LOC_EMPTY",
+                                "Callout3": "",
+                                "__Callout3": "@LOC_EMPTY",
+                                "UIPriority": 0,
+                                "locationAudioPlayTrigger": {
+                                    "audioTrigger": ""
+                                },
+                                "locationAudioStopTrigger": {
+                                    "audioTrigger": ""
+                                }
+                            },
+                            "English": {
+                                "Locale": "english",
+                                "Name": "<= PLACEHOLDER =>",
+                                "ShortName": "",
+                                "Description": ""
+                            }
+                        },
+                        "mannequinTags": {
+                            "mannequinClassTag": "",
+                            "mannequinTypeTag": "",
+                            "mannequinBaseTag": ""
+                        },
+                        "inventoryOccupancyVolume": {
+                            "SMicroCargoUnit": {
+                                "microSCU": 1
+                            }
+                        },
+                        "inventoryOccupancyDimensions": {
+                            "x": 0.15,
+                            "y": 0.15,
+                            "z": 0.15
+                        },
+                        "inventoryOccupancyLocalBoundsMin": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "inventoryOccupancyLocalBoundsMax": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        },
+                        "inventoryOccupancyDimensionsUIOverride": []
+                    },
+                    "entityAttachParams": []
+                },
+                "SEntityComponentDefaultLoadoutParams": {
+                    "loadout": {
+                        "SItemPortLoadoutManualParams": {
+                            "WearRange": [],
+                            "DirtRange": [],
+                            "InventoryItems": [],
+                            "entries": [
+                                {
+                                    "itemPortName": "hardpoint_engine_left",
+                                    "entityClassName": "ARGO_MPUV_Thruster_Main_Joint",
+                                    "entityClassReference": "00000000-0000-0000-0000-000000000000",
+                                    "inventoryContainer": [],
+                                    "loadout": []
+                                },
+                                {
+                                    "itemPortName": "hardpoint_fuel_intake_left",
+                                    "entityClassName": "INTK_ARGO_MPUV",
+                                    "entityClassReference": "00000000-0000-0000-0000-000000000000",
+                                    "inventoryContainer": [],
+                                    "loadout": [],
+                                    "InstalledItem": {
+                                        "Category": "Default",
+                                        "Icon": "Default.bmp",
+                                        "Invisible": 0,
+                                        "BBoxSelection": 0,
+                                        "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
+                                        "__ref": "2e0a5325-8d81-4cad-8bbd-db96d6cc99e6",
+                                        "__path": "libs/foundry/records/entities/scitem/ships/fuel_intakes/intk_argo_mpuv.xml",
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
+                                        "tags": [],
+                                        "StaticEntityClassData": [],
+                                        "Components": {
+                                            "SAttachableComponentParams": {
+                                                "attachToTileItemPort": "NoConnection",
+                                                "AttachDef": {
+                                                    "Type": "FuelIntake",
+                                                    "SubType": "Fuel",
+                                                    "Size": 1,
+                                                    "Grade": 1,
+                                                    "Manufacturer": "00000000-0000-0000-0000-000000000000",
+                                                    "inheritParentManufacturer": 0,
+                                                    "Tags": "flightReady",
+                                                    "RequiredTags": "",
+                                                    "DisplayType": "",
+                                                    "ignoredAttachAxis": "None",
+                                                    "attachCheckCenterOfMass": 0,
+                                                    "Localization": {
+                                                        "Name": "<= PLACEHOLDER =>",
+                                                        "__Name": "@LOC_PLACEHOLDER",
+                                                        "ShortName": "",
+                                                        "__ShortName": "@LOC_EMPTY",
+                                                        "Description": "",
+                                                        "__Description": "@LOC_EMPTY",
+                                                        "displayFeatures": {
+                                                            "LogoSimplifiedWhite": "",
+                                                            "FrontendBackground": "",
+                                                            "History": "",
+                                                            "__History": "@LOC_EMPTY",
+                                                            "Callout1": "",
+                                                            "__Callout1": "@LOC_EMPTY",
+                                                            "Callout2": "",
+                                                            "__Callout2": "@LOC_EMPTY",
+                                                            "Callout3": "",
+                                                            "__Callout3": "@LOC_EMPTY",
+                                                            "UIPriority": 0,
+                                                            "locationAudioPlayTrigger": {
+                                                                "audioTrigger": ""
+                                                            },
+                                                            "locationAudioStopTrigger": {
+                                                                "audioTrigger": ""
+                                                            }
+                                                        },
+                                                        "English": {
+                                                            "Locale": "english",
+                                                            "Name": "<= PLACEHOLDER =>",
+                                                            "ShortName": "",
+                                                            "Description": ""
+                                                        }
+                                                    },
+                                                    "mannequinTags": {
+                                                        "mannequinClassTag": "",
+                                                        "mannequinTypeTag": "",
+                                                        "mannequinBaseTag": ""
+                                                    },
+                                                    "inventoryOccupancyVolume": {
+                                                        "SMicroCargoUnit": {
+                                                            "microSCU": 1
+                                                        }
+                                                    },
+                                                    "inventoryOccupancyDimensions": {
+                                                        "x": 0.1501,
+                                                        "y": 0.15,
+                                                        "z": 0.15
+                                                    },
+                                                    "inventoryOccupancyLocalBoundsMin": {
+                                                        "x": 0,
+                                                        "y": 0,
+                                                        "z": 0
+                                                    },
+                                                    "inventoryOccupancyLocalBoundsMax": {
+                                                        "x": 0,
+                                                        "y": 0,
+                                                        "z": 0
+                                                    },
+                                                    "inventoryOccupancyDimensionsUIOverride": []
+                                                },
+                                                "entityAttachParams": []
+                                            },
+                                            "SCItemFuelIntakeParams": {
+                                                "fuelPushRate": 0,
+                                                "minimumRate": 0.2
+                                            },
+                                            "SGeometryResourceParams": {
+                                                "cacheResources": 0,
+                                                "rootOverridePaint": 0,
+                                                "inheritModelTagFromHost": 1,
+                                                "ModelTag": [],
+                                                "meshsetup": {
+                                                    "visibilityTags": {
+                                                        "tags": []
+                                                    }
+                                                },
+                                                "Geometry": {
+                                                    "Tags": "",
+                                                    "ScaleMultiplier": 1,
+                                                    "Geometry": {
+                                                        "Slot": "Main",
+                                                        "MaterialAttachments": "",
+                                                        "ProxyCDFPath": "",
+                                                        "ModifiersPath": "",
+                                                        "AttachFlags": 0,
+                                                        "DeformerType": "Standard",
+                                                        "ProtosBShapeExclude": 0,
+                                                        "VisTP": 1,
+                                                        "VisFP": 1,
+                                                        "VisShadow": 1,
+                                                        "VisSecondaryViews": 1,
+                                                        "WrinkleMap": 0,
+                                                        "EnableDecalProjection": 0,
+                                                        "BBoxJoint": "",
+                                                        "BBoxRadius": 0,
+                                                        "Wear": 0,
+                                                        "Dirt": 0,
+                                                        "Interference": 0,
+                                                        "Damage": 0,
+                                                        "RenderLayer": "Default",
+                                                        "VisAreaMode": "AABB_Center",
+                                                        "SunShadowMode": "Upto_400m",
+                                                        "viewDistRatio": "00000000-0000-0000-0000-000000000000",
+                                                        "LodRatio": 100,
+                                                        "Geometry": {
+                                                            "path": ""
+                                                        },
+                                                        "Material": {
+                                                            "path": ""
+                                                        },
+                                                        "SimulationGeometry": [],
+                                                        "Palette": {
+                                                            "RootRecord": "00000000-0000-0000-0000-000000000000",
+                                                            "ChildPath": "",
+                                                            "SwizzleOverride": []
+                                                        }
+                                                    },
+                                                    "SubGeometry": []
+                                                },
+                                                "Material": {
+                                                    "Tags": "",
+                                                    "Material": {
+                                                        "path": ""
+                                                    },
+                                                    "Palette": {
+                                                        "RootRecord": "00000000-0000-0000-0000-000000000000",
+                                                        "ChildPath": "",
+                                                        "SwizzleOverride": []
+                                                    },
+                                                    "materialVariants": []
+                                                }
+                                            },
+                                            "SEntityPhysicsControllerParams": {
+                                                "PhysType": {
+                                                    "SEntityRigidPhysicsControllerParams": {
+                                                        "Mass": 10,
+                                                        "compoundingAllowed": 1,
+                                                        "spawnBoxScale": 0.5,
+                                                        "maxLoggedCollisions": 1,
+                                                        "Damping": 0.01,
+                                                        "DampingZeroG": 0.01,
+                                                        "DampingFreefall": 0.05,
+                                                        "PushableByPlayers": 1,
+                                                        "NeverAffectTriggers": 0,
+                                                        "UseManualGridTransition": 0,
+                                                        "aiNavigationType": "Included",
+                                                        "Kinematic": 0,
+                                                        "EnableCrossGridChecks": 0,
+                                                        "Resting": 0,
+                                                        "physicalizeAllSlots": 1,
+                                                        "enableExteriorShadow": 0,
+                                                        "breakableParams": [],
+                                                        "gameCollisionClass": [],
+                                                        "PhysFlagsOverride": [],
+                                                        "PhysFlagsColliderOverride": [],
+                                                        "grid": [],
+                                                        "shieldSDFParams": [],
+                                                        "buoyancyParams": [],
+                                                        "temperature": {
+                                                            "enable": 0,
+                                                            "initialTemperature": -1,
+                                                            "internalTemperatureGeneration": 0,
+                                                            "coolingEqualizationParams": {
+                                                                "CoolingEqualizationMultiplier": {
+                                                                    "coolingEqualizationMultiplier": 1
+                                                                }
+                                                            },
+                                                            "signatureParams": {
+                                                                "enable": 0,
+                                                                "minimumTemperatureForIR": 250,
+                                                                "temperatureToIR": 6
+                                                            },
+                                                            "itemResourceParams": {
+                                                                "poweredAmbientCoolingMultiplier": 1,
+                                                                "minOperatingTemperature": 0,
+                                                                "minCoolingTemperature": 300,
+                                                                "enableOverheat": 0,
+                                                                "overheatTemperature": 450,
+                                                                "overheatWarningTemperature": 370,
+                                                                "overheatRecoveryTemperature": 350,
+                                                                "stateHeatGenerationValues": [],
+                                                                "degradationTemperatureMultipliers": []
+                                                            },
+                                                            "misfireTemperatureRange": {
+                                                                "minimum": 370,
+                                                                "maximum": 600
+                                                            },
+                                                            "fireHazard": {
+                                                                "enable": 1,
+                                                                "dissolveOnBurn": 0,
+                                                                "dissolvePercentageRange": {
+                                                                    "minimum": 0,
+                                                                    "maximum": 1
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "EntityComponentHeatConnection": {
+                                                "TemperatureToIR": 0.5,
+                                                "StartIRTemperature": 250,
+                                                "OverpowerHeat": 0,
+                                                "OverclockThresholdMinHeat": 0,
+                                                "OverclockThresholdMaxHeat": 0,
+                                                "ThermalEnergyBase": 10,
+                                                "ThermalEnergyDraw": 20,
+                                                "ThermalConductivity": 3,
+                                                "SpecificHeatCapacity": 13,
+                                                "Mass": 200,
+                                                "SurfaceArea": 50,
+                                                "StartCoolingTemperature": 300,
+                                                "MaxCoolingRate": 1,
+                                                "MaxTemperature": 450,
+                                                "OverheatTemperature": 370,
+                                                "RecoveryTemperature": 350,
+                                                "MinTemperature": 0,
+                                                "MisfireMinTemperature": 370,
+                                                "MisfireMaxTemperature": 600
+                                            },
+                                            "EntityComponentPowerConnection": {
+                                                "PowerBase": 0.5,
+                                                "PowerDraw": 1,
+                                                "TimeToReachDrawRequest": 0,
+                                                "SafeguardPriority": 0,
+                                                "DisplayedInPoweredItemList": 0,
+                                                "IsThrottleable": 0,
+                                                "IsOverclockable": 0,
+                                                "OverclockThresholdMin": 0,
+                                                "OverclockThresholdMax": 0,
+                                                "OverpowerPerformance": 0,
+                                                "OverclockPerformance": 0,
+                                                "PowerToEM": 50,
+                                                "DecayRateOfEM": 0.15,
+                                                "WarningDelayTime": 0.3,
+                                                "WarningDisplayTime": 8,
+                                                "MisfireItemTypeLocID": "<= PLACEHOLDER =>",
+                                                "__MisfireItemTypeLocID": "@LOC_PLACEHOLDER",
+                                                "MisfireGenerationParams": [],
+                                                "MisfireEvents": {
+                                                    "MinorMisfires": [],
+                                                    "MajorMisfires": [],
+                                                    "CriticalMisfires": []
+                                                }
+                                            },
+                                            "ItemControlComponentParams": {
+                                                "turnedOnByDefault": 0,
+                                                "forceOn": 0,
+                                                "asopSpawnState": "None",
+                                                "throttleParams": [],
+                                                "masterModeExclusionsOverride": []
+                                            }
+                                        }
+                                    }
+                                },
+                                {
+                                    "itemPortName": "hardpoint_thruster_rear_left_top",
+                                    "entityClassName": "ARGO_MPUV_Thruster_Aux_Top",
+                                    "entityClassReference": "00000000-0000-0000-0000-000000000000",
+                                    "inventoryContainer": [],
+                                    "loadout": []
+                                },
+                                {
+                                    "itemPortName": "hardpoint_thruster_rear_left_bottom",
+                                    "entityClassName": "ARGO_MPUV_Thruster_Aux_Bottom",
+                                    "entityClassReference": "00000000-0000-0000-0000-000000000000",
+                                    "inventoryContainer": [],
+                                    "loadout": []
+                                },
+                                {
+                                    "itemPortName": "hardpoint_thruster_rear_left_middle",
+                                    "entityClassName": "ARGO_MPUV_Thruster_Aux_Side_Rear",
+                                    "entityClassReference": "00000000-0000-0000-0000-000000000000",
+                                    "inventoryContainer": [],
+                                    "loadout": []
+                                },
+                                {
+                                    "itemPortName": "hardpoint_seat_access_leg_left",
+                                    "entityClassName": "ARGO_MPUV_Maelstrom_SCItem_SeatAccess_Leg_Left",
+                                    "entityClassReference": "00000000-0000-0000-0000-000000000000",
+                                    "inventoryContainer": [],
+                                    "loadout": []
+                                },
+                                {
+                                    "itemPortName": "hardpoint_lights_leg_left",
+                                    "entityClassName": "ARGO_MPUV_Lights_Leg_left",
+                                    "entityClassReference": "00000000-0000-0000-0000-000000000000",
+                                    "inventoryContainer": [],
+                                    "loadout": []
+                                },
+                                {
+                                    "itemPortName": "hardpoint_landing_gear_left",
+                                    "entityClassName": "ARGO_MPUV_LandingSystem_Leg_Left",
+                                    "entityClassReference": "00000000-0000-0000-0000-000000000000",
+                                    "inventoryContainer": [],
+                                    "loadout": []
+                                }
+                            ]
+                        }
+                    }
+                },
+                "SGeometryResourceParams": {
+                    "cacheResources": 0,
+                    "rootOverridePaint": 0,
+                    "inheritModelTagFromHost": 1,
+                    "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
+                    "Geometry": {
+                        "Tags": "",
+                        "ScaleMultiplier": 1,
+                        "Geometry": {
+                            "Slot": "Main",
+                            "MaterialAttachments": "",
+                            "ProxyCDFPath": "",
+                            "ModifiersPath": "",
+                            "AttachFlags": 0,
+                            "DeformerType": "Standard",
+                            "ProtosBShapeExclude": 0,
+                            "VisTP": 1,
+                            "VisFP": 1,
+                            "VisShadow": 1,
+                            "VisSecondaryViews": 1,
+                            "WrinkleMap": 0,
+                            "EnableDecalProjection": 0,
+                            "BBoxJoint": "",
+                            "BBoxRadius": 0,
+                            "Wear": 0,
+                            "Dirt": 0,
+                            "Interference": 0,
+                            "Damage": 0,
+                            "RenderLayer": "Default",
+                            "VisAreaMode": "AABB_Center",
+                            "SunShadowMode": "Upto_400m",
+                            "viewDistRatio": "00000000-0000-0000-0000-000000000000",
+                            "LodRatio": 100,
+                            "Geometry": {
+                                "path": "Objects/Spaceships/Ships/ARGO/MPUV_Utility_Vehicle_Maelstrom/ARGO_MPUV_Leg_Left.cga"
+                            },
+                            "Material": {
+                                "path": ""
+                            },
+                            "SimulationGeometry": [],
+                            "Palette": {
+                                "RootRecord": "00000000-0000-0000-0000-000000000000",
+                                "ChildPath": "",
+                                "SwizzleOverride": []
+                            }
+                        },
+                        "SubGeometry": []
+                    },
+                    "Material": {
+                        "Tags": "",
+                        "Material": {
+                            "path": ""
+                        },
+                        "Palette": {
+                            "RootRecord": "00000000-0000-0000-0000-000000000000",
+                            "ChildPath": "",
+                            "SwizzleOverride": []
+                        },
+                        "materialVariants": []
+                    }
+                },
+                "SAnimationControllerParams": {
+                    "AnimationDatabase": "Spaceships/Ships/ARGO/MPUV_Utility_Vehicle/ARGO_MPUV_Maelstrom_Leg_Left_Anims.adb",
+                    "AnimationController": "Spaceships/Ships/ARGO/MPUV_Utility_Vehicle/ARGO_MPUV_Maelstrom_Leg_Left_ControllerDefs.xml",
+                    "Tags": {
+                        "String": {
+                            "value": "ARGO_MPUV"
+                        }
+                    },
+                    "ScopeContexts": {
+                        "SAnimationScopeContext": {
+                            "scopeContext": "Ship",
+                            "type": "Self"
+                        }
+                    },
+                    "AnimationJointControls": {
+                        "AnimationJointControl": {
+                            "variables": [
+                                {
+                                    "name": "AnimProgress",
+                                    "defaultValue": 0,
+                                    "range": {
+                                        "minimum": 0,
+                                        "maximum": 1
+                                    },
+                                    "defaultInterpolation": {
+                                        "timeRange": 1,
+                                        "type": "Linear"
+                                    }
+                                },
+                                {
+                                    "name": "LegAnimProgress",
+                                    "defaultValue": 0,
+                                    "range": {
+                                        "minimum": 0,
+                                        "maximum": 1
+                                    },
+                                    "defaultInterpolation": {
+                                        "timeRange": 1,
+                                        "type": "Linear"
+                                    }
+                                }
+                            ],
+                            "movements": [],
+                            "animations": [
+                                {
+                                    "variable": "AnimationJointControls.AnimationJointControl.variables[0]",
+                                    "animationName": "leg_left_panel_deploy",
+                                    "layerId": 25
+                                },
+                                {
+                                    "variable": "AnimationJointControls.AnimationJointControl.variables[1]",
+                                    "animationName": "leg_left_deploy",
+                                    "layerId": 0
+                                }
+                            ]
+                        }
+                    },
+                    "AnimationControlActorIKs": [],
+                    "AnimationTasks": [],
+                    "defaultAnimation": []
+                },
+                "SItemPortContainerComponentParams": {
+                    "PortFlags": "",
+                    "PortTags": "",
+                    "RequiredItemTags": "",
+                    "LinkAllItemsToResourceNetwork": 0,
+                    "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
+                    "masterController": [],
+                    "Ports": [
+                        {
+                            "Name": "hardpoint_engine_left",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "main uneditable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 1,
+                            "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [
+                                {
+                                    "Name": "MainPower",
+                                    "Klass": "Power"
+                                },
+                                {
+                                    "Name": "MainHeat",
+                                    "Klass": "Heat"
+                                },
+                                {
+                                    "Name": "MainFuel",
+                                    "Klass": "Fuel"
+                                }
+                            ],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "MainThruster",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationBone": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "hardpoint_engine_left",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
+                        },
+                        {
+                            "Name": "hardpoint_fuel_intake_left",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "invisible uneditable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 1,
+                            "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [
+                                {
+                                    "Name": "MainPower",
+                                    "Klass": "Power"
+                                },
+                                {
+                                    "Name": "MainHeat",
+                                    "Klass": "Heat"
+                                },
+                                {
+                                    "Name": "MainFuel",
+                                    "Klass": "Fuel"
+                                }
+                            ],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "FuelIntake",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationBone": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "hardpoint_fuel_intake_left",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
+                        },
+                        {
+                            "Name": "hardpoint_landing_gear_left",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "uneditable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 0,
+                            "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "LandingSystem",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationBone": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "hardpoint_landing_gear_left",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
+                        },
+                        {
+                            "Name": "hardpoint_lights_leg_left",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "uneditable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 1,
+                            "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "Room",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationBone": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "hardpoint_lights_leg_left",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
+                        },
+                        {
+                            "Name": "hardpoint_thruster_rear_left_top",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "uneditable maneuver orientation -Z",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 1,
+                            "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [
+                                {
+                                    "Name": "MainPower",
+                                    "Klass": "Power"
+                                },
+                                {
+                                    "Name": "MainHeat",
+                                    "Klass": "Heat"
+                                },
+                                {
+                                    "Name": "MainFuel",
+                                    "Klass": "Fuel"
+                                }
+                            ],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "ManneuverThruster",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationBone": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "hardpoint_thruster_rear_left_top",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
+                        },
+                        {
+                            "Name": "hardpoint_thruster_rear_left_middle",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "uneditable maneuver orientation +X",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 1,
+                            "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [
+                                {
+                                    "Name": "MainPower",
+                                    "Klass": "Power"
+                                },
+                                {
+                                    "Name": "MainHeat",
+                                    "Klass": "Heat"
+                                },
+                                {
+                                    "Name": "MainFuel",
+                                    "Klass": "Fuel"
+                                }
+                            ],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "ManneuverThruster",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationBone": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "hardpoint_thruster_rear_left_middle",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
+                        },
+                        {
+                            "Name": "hardpoint_thruster_rear_left_bottom",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "uneditable maneuver orientation +Z",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 1,
+                            "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [
+                                {
+                                    "Name": "MainPower",
+                                    "Klass": "Power"
+                                },
+                                {
+                                    "Name": "MainHeat",
+                                    "Klass": "Heat"
+                                },
+                                {
+                                    "Name": "MainFuel",
+                                    "Klass": "Fuel"
+                                }
+                            ],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "ManneuverThruster",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationBone": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "hardpoint_thruster_rear_left_bottom",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
+                        },
+                        {
+                            "Name": "hardpoint_seat_access_leg_left",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "uneditable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 1,
+                            "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [
+                                {
+                                    "Name": "MainPower",
+                                    "Klass": "Power"
+                                },
+                                {
+                                    "Name": "MainHeat",
+                                    "Klass": "Heat"
+                                }
+                            ],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "SeatAccess",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationBone": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "hardpoint_seat_access_leg_left",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
+                        }
+                    ],
+                    "InternalResourceLinks": [],
+                    "InternalHardpointLinks": [],
+                    "destroyEntitiesOnItemportList": [],
+                    "resourceNetworkPowerPools": {
+                        "maxDefaultDistribution": 0,
+                        "itemPools": []
+                    }
+                },
+                "SEntityPhysicsControllerParams": {
+                    "PhysType": {
+                        "SEntityRigidPhysicsControllerParams": {
+                            "Mass": 1000,
+                            "compoundingAllowed": 1,
+                            "spawnBoxScale": 0.5,
+                            "maxLoggedCollisions": 1,
+                            "Damping": 0.01,
+                            "DampingZeroG": 0.01,
+                            "DampingFreefall": 0.05,
+                            "PushableByPlayers": 1,
+                            "NeverAffectTriggers": 0,
+                            "UseManualGridTransition": 0,
+                            "aiNavigationType": "Included",
+                            "Kinematic": 0,
+                            "EnableCrossGridChecks": 0,
+                            "Resting": 0,
+                            "physicalizeAllSlots": 1,
+                            "enableExteriorShadow": 0,
+                            "breakableParams": [],
+                            "gameCollisionClass": [],
+                            "PhysFlagsOverride": [],
+                            "PhysFlagsColliderOverride": [],
+                            "grid": [],
+                            "shieldSDFParams": [],
+                            "buoyancyParams": [],
+                            "temperature": {
+                                "enable": 0,
+                                "initialTemperature": -1,
+                                "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
+                                "signatureParams": {
+                                    "enable": 0,
+                                    "minimumTemperatureForIR": 250,
+                                    "temperatureToIR": 6
+                                },
+                                "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
+                                    "minOperatingTemperature": 0,
+                                    "minCoolingTemperature": 300,
+                                    "enableOverheat": 0,
+                                    "overheatTemperature": 450,
+                                    "overheatWarningTemperature": 370,
+                                    "overheatRecoveryTemperature": 350,
+                                    "stateHeatGenerationValues": [],
+                                    "degradationTemperatureMultipliers": []
+                                },
+                                "misfireTemperatureRange": {
+                                    "minimum": 370,
+                                    "maximum": 600
+                                },
+                                "fireHazard": {
+                                    "enable": 1,
+                                    "dissolveOnBurn": 0,
+                                    "dissolvePercentageRange": {
+                                        "minimum": 0,
+                                        "maximum": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "SHealthComponentParams": {
+                    "Health": 240,
+                    "DamageCap": 0,
+                    "SerializedDamageMapPath": "",
+                    "ClientOnly": 0,
+                    "UnlockInteractionsOnDeath": 0,
+                    "PushDamageUpPartsHeirarchyWhenDead": 1,
+                    "DetachFromItemPortOnDeath": 1,
+                    "DetachFromEntityOnDeath": 1,
+                    "DestroySelfOnDeath": 0,
+                    "DestroyChildrenOnDeath": 0,
+                    "PropagateExplosionDamageToChildren": 0,
+                    "UseDirtShaderForDamage": 0,
+                    "UpdateObservableStatus": 0,
+                    "DestroyedGeometryTag": "",
+                    "ExplodedGeometryTag": "",
+                    "DebrisGeometryTag": "",
+                    "ExplosionDelayTime": 0,
+                    "ExplosionRandomDelayRange": 0,
+                    "ExplosionBone": "",
+                    "IsSalvagable": 1,
+                    "IsRepairable": 1,
+                    "SalvageDamageModifier": 1,
+                    "MirrorSalvageHit": 0,
+                    "DisableMaterialDamage": 0,
+                    "alwaysPropagateHitToParent": 0,
+                    "duplicateHitToParent": 0,
+                    "sendOnDestructionEventToMasterRootContainer": 0,
+                    "DamageResistances": {
+                        "DamageResistance": {
+                            "IgnoreMeleeDamage": 0,
+                            "PhysicalResistance": {
+                                "Multiplier": 1,
+                                "Threshold": 0,
+                                "DamageCap": 0
+                            },
+                            "EnergyResistance": {
+                                "Multiplier": 1,
+                                "Threshold": 0,
+                                "DamageCap": 0
+                            },
+                            "DistortionResistance": {
+                                "Multiplier": 1,
+                                "Threshold": 0,
+                                "DamageCap": 0
+                            },
+                            "ThermalResistance": {
+                                "Multiplier": 1,
+                                "Threshold": 0,
+                                "DamageCap": 0
+                            },
+                            "BiochemicalResistance": {
+                                "Multiplier": 1,
+                                "Threshold": 0,
+                                "DamageCap": 0
+                            },
+                            "StunResistance": {
+                                "Multiplier": 1,
+                                "Threshold": 0,
+                                "DamageCap": 0
+                            }
+                        }
+                    },
+                    "hitManipulationParams": [],
+                    "InitialDamage": [],
+                    "HealthLevelStates": [],
+                    "DeathExplosionParams": [],
+                    "DeathGasComposition": [],
+                    "InteractionLocks": [],
+                    "sequencerTasks": [],
+                    "maelstromEvents": [],
+                    "craftingData": []
+                },
+                "SInteractionStateMachineParams": {
+                    "StateTypes": [
+                        {
+                            "StateTypeName": "PanelAnim",
+                            "bindingsMethod": "None",
+                            "DefaultState": "StateTypes[0].SInteractionStateType.States[1]",
+                            "asopReset": 0,
+                            "networkAuthority": "Server",
+                            "States": [
+                                {
+                                    "StateName": "PanelOpening",
+                                    "EnterStateEffectGroup": "",
+                                    "ExitStateEffectGroup": "",
+                                    "EnterStatePlaySequence": "null",
+                                    "ExitStatePlaySequence": "null",
+                                    "enterGeometryTags": "",
+                                    "enterStateEffectTags": [],
+                                    "exitStateEffectTags": [],
+                                    "EnterEventDispatchers": {
+                                        "AnimationSetVariable": {
+                                            "variable": "AnimationJointControls.AnimationJointControl.variables[0]",
+                                            "value": 1,
+                                            "overrideInterpolation": []
+                                        }
+                                    },
+                                    "ExitEventDispatchers": [],
+                                    "StateAutoChange": [],
+                                    "Interactions": [
+                                        {
+                                            "Interaction": "Interactable.SharedInteractions[1]",
+                                            "NextState": "StateTypes[0].SInteractionStateType.States[1]"
+                                        },
+                                        {
+                                            "Interaction": "Interactable.SharedInteractions[2]",
+                                            "NextState": "StateTypes[0].SInteractionStateType.States[1]"
+                                        }
+                                    ],
+                                    "interactionPoints": [],
+                                    "stateTags": {
+                                        "tags": {
+                                            "Reference": {
+                                                "value": "cd7e6305-6a13-46f4-a888-aeba694cdf3f"
+                                            }
+                                        }
+                                    },
+                                    "entityTags": {
+                                        "tags": []
+                                    }
+                                },
+                                {
+                                    "StateName": "PanelClosing",
+                                    "EnterStateEffectGroup": "",
+                                    "ExitStateEffectGroup": "",
+                                    "EnterStatePlaySequence": "null",
+                                    "ExitStatePlaySequence": "null",
+                                    "enterGeometryTags": "",
+                                    "enterStateEffectTags": [],
+                                    "exitStateEffectTags": [],
+                                    "EnterEventDispatchers": {
+                                        "AnimationSetVariable": {
+                                            "variable": "AnimationJointControls.AnimationJointControl.variables[0]",
+                                            "value": 0,
+                                            "overrideInterpolation": []
+                                        }
+                                    },
+                                    "ExitEventDispatchers": [],
+                                    "StateAutoChange": [],
+                                    "Interactions": [
+                                        {
+                                            "Interaction": "Interactable.SharedInteractions[0]",
+                                            "NextState": "StateTypes[0].SInteractionStateType.States[0]"
+                                        },
+                                        {
+                                            "Interaction": "Interactable.SharedInteractions[2]",
+                                            "NextState": "StateTypes[0].SInteractionStateType.States[0]"
+                                        }
+                                    ],
+                                    "interactionPoints": [],
+                                    "stateTags": {
+                                        "tags": {
+                                            "Reference": {
+                                                "value": "a9cb8495-19c4-410e-8154-20bd9e192415"
+                                            }
+                                        }
+                                    },
+                                    "entityTags": {
+                                        "tags": []
+                                    }
+                                }
+                            ],
+                            "StateModifiers": []
+                        },
+                        {
+                            "StateTypeName": "LandingGearState",
+                            "bindingsMethod": "None",
+                            "DefaultState": "StateTypes[1].SInteractionStateType.States[0]",
+                            "asopReset": 0,
+                            "networkAuthority": "Server",
+                            "States": [
+                                {
+                                    "StateName": "AnimTo1",
+                                    "EnterStateEffectGroup": "",
+                                    "ExitStateEffectGroup": "",
+                                    "EnterStatePlaySequence": "null",
+                                    "ExitStatePlaySequence": "null",
+                                    "enterGeometryTags": "",
+                                    "enterStateEffectTags": {
+                                        "Reference": {
+                                            "value": "0e506111-b0f7-4dfd-8904-97a641148aba"
+                                        }
+                                    },
+                                    "exitStateEffectTags": [],
+                                    "EnterEventDispatchers": {
+                                        "AnimationSetVariable": {
+                                            "variable": "AnimationJointControls.AnimationJointControl.variables[1]",
+                                            "value": 1,
+                                            "overrideInterpolation": []
+                                        }
+                                    },
+                                    "ExitEventDispatchers": [],
+                                    "StateAutoChange": [],
+                                    "Interactions": {
+                                        "SInteractionStateTransition": {
+                                            "Interaction": "Interactable.SharedInteractions[3]",
+                                            "NextState": "StateTypes[1].SInteractionStateType.States[1]"
+                                        }
+                                    },
+                                    "interactionPoints": [],
+                                    "stateTags": {
+                                        "tags": {
+                                            "Reference": {
+                                                "value": "cd7e6305-6a13-46f4-a888-aeba694cdf3f"
+                                            }
+                                        }
+                                    },
+                                    "entityTags": {
+                                        "tags": []
+                                    }
+                                },
+                                {
+                                    "StateName": "AnimTo0",
+                                    "EnterStateEffectGroup": "",
+                                    "ExitStateEffectGroup": "",
+                                    "EnterStatePlaySequence": "null",
+                                    "ExitStatePlaySequence": "null",
+                                    "enterGeometryTags": "",
+                                    "enterStateEffectTags": {
+                                        "Reference": {
+                                            "value": "5c5a47b2-fc0a-425c-a0e0-b0a220322fa1"
+                                        }
+                                    },
+                                    "exitStateEffectTags": [],
+                                    "EnterEventDispatchers": {
+                                        "AnimationSetVariable": {
+                                            "variable": "AnimationJointControls.AnimationJointControl.variables[1]",
+                                            "value": 0,
+                                            "overrideInterpolation": []
+                                        }
+                                    },
+                                    "ExitEventDispatchers": [],
+                                    "StateAutoChange": [],
+                                    "Interactions": {
+                                        "SInteractionStateTransition": {
+                                            "Interaction": "Interactable.SharedInteractions[3]",
+                                            "NextState": "StateTypes[1].SInteractionStateType.States[0]"
+                                        }
+                                    },
+                                    "interactionPoints": [],
+                                    "stateTags": {
+                                        "tags": {
+                                            "Reference": {
+                                                "value": "a9cb8495-19c4-410e-8154-20bd9e192415"
+                                            }
+                                        }
+                                    },
+                                    "entityTags": {
+                                        "tags": []
+                                    }
+                                }
+                            ],
+                            "StateModifiers": {
+                                "LandingGearStateModifier": {
+                                    "deploying": "null",
+                                    "deployed": "StateTypes[1].SInteractionStateType.States[0]",
+                                    "retracting": "StateTypes[1].SInteractionStateType.States[1]",
+                                    "retracted": "null",
+                                    "context": {
+                                        "AttachableStateModifierContext_Parent": []
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                "SEntityComponentSequencerParams": {
+                    "resetSequence": "null",
+                    "sequences": [
+                        {
+                            "name": "OpenPanel",
+                            "interaction": "null",
+                            "taskEntries": {
+                                "SSequencerSequenceTaskEntryParams": {
+                                    "task": "Interactable.interactionTasks[0]",
+                                    "postDelay": 0,
+                                    "haltOnFailure": 1,
+                                    "dependentTasks": []
+                                }
+                            }
+                        },
+                        {
+                            "name": "ClosePanel",
+                            "interaction": "null",
+                            "taskEntries": {
+                                "SSequencerSequenceTaskEntryParams": {
+                                    "task": "Interactable.interactionTasks[1]",
+                                    "postDelay": 0,
+                                    "haltOnFailure": 1,
+                                    "dependentTasks": []
+                                }
+                            }
+                        }
+                    ]
+                },
+                "SEntityInteractableParams": {
+                    "Interactable": {
+                        "SharedInteractions": [
+                            {
+                                "Name": "PanelOpen",
+                                "RoomTag": "00000000-0000-0000-0000-000000000000",
+                                "UsableTag": "00000000-0000-0000-0000-000000000000",
+                                "LinkingTag": "00000000-0000-0000-0000-000000000000",
+                                "DisplayName": "Use",
+                                "__DisplayName": "@usable_use",
+                                "DisplayType": "Show",
+                                "GenericCursor": "SingleAction",
+                                "FocusModeOnly": 0,
+                                "Sendable": 1,
+                                "Linkable": 1,
+                                "LockedByLinks": 0,
+                                "RequiresAuthorizedUser": 0,
+                                "available": 1,
+                                "InheritsConditionDisplaysThroughLinks": 0,
+                                "QueryTags": [],
+                                "conditionList": [],
+                                "playerAnimatedInteractionBase": []
+                            },
+                            {
+                                "Name": "PanelClose",
+                                "RoomTag": "00000000-0000-0000-0000-000000000000",
+                                "UsableTag": "00000000-0000-0000-0000-000000000000",
+                                "LinkingTag": "00000000-0000-0000-0000-000000000000",
+                                "DisplayName": "Use",
+                                "__DisplayName": "@usable_use",
+                                "DisplayType": "Show",
+                                "GenericCursor": "SingleAction",
+                                "FocusModeOnly": 0,
+                                "Sendable": 1,
+                                "Linkable": 1,
+                                "LockedByLinks": 0,
+                                "RequiresAuthorizedUser": 0,
+                                "available": 1,
+                                "InheritsConditionDisplaysThroughLinks": 0,
+                                "QueryTags": [],
+                                "conditionList": [],
+                                "playerAnimatedInteractionBase": []
+                            },
+                            {
+                                "Name": "PanelCycle",
+                                "RoomTag": "00000000-0000-0000-0000-000000000000",
+                                "UsableTag": "00000000-0000-0000-0000-000000000000",
+                                "LinkingTag": "00000000-0000-0000-0000-000000000000",
+                                "DisplayName": "Use",
+                                "__DisplayName": "@usable_use",
+                                "DisplayType": "Show",
+                                "GenericCursor": "SingleAction",
+                                "FocusModeOnly": 0,
+                                "Sendable": 0,
+                                "Linkable": 1,
+                                "LockedByLinks": 0,
+                                "RequiresAuthorizedUser": 0,
+                                "available": 1,
+                                "InheritsConditionDisplaysThroughLinks": 0,
+                                "QueryTags": [],
+                                "conditionList": [],
+                                "playerAnimatedInteractionBase": []
+                            },
+                            {
+                                "Name": "LegDeploy",
+                                "RoomTag": "00000000-0000-0000-0000-000000000000",
+                                "UsableTag": "00000000-0000-0000-0000-000000000000",
+                                "LinkingTag": "a7fb7879-abd0-4fd2-b616-46d6ca90b308",
+                                "DisplayName": "Deploy",
+                                "__DisplayName": "@ui_interactor_deploy",
+                                "DisplayType": "Show",
+                                "GenericCursor": "SingleAction",
+                                "FocusModeOnly": 0,
+                                "Sendable": 0,
+                                "Linkable": 1,
+                                "LockedByLinks": 0,
+                                "RequiresAuthorizedUser": 0,
+                                "available": 1,
+                                "InheritsConditionDisplaysThroughLinks": 0,
+                                "QueryTags": [],
+                                "conditionList": [],
+                                "playerAnimatedInteractionBase": []
+                            },
+                            {
+                                "Name": "LegRetract",
+                                "RoomTag": "00000000-0000-0000-0000-000000000000",
+                                "UsableTag": "00000000-0000-0000-0000-000000000000",
+                                "LinkingTag": "01beec7c-915a-439d-9782-d26a644af739",
+                                "DisplayName": "Retract",
+                                "__DisplayName": "@ui_interactor_retract",
+                                "DisplayType": "Show",
+                                "GenericCursor": "SingleAction",
+                                "FocusModeOnly": 0,
+                                "Sendable": 0,
+                                "Linkable": 1,
+                                "LockedByLinks": 0,
+                                "RequiresAuthorizedUser": 0,
+                                "available": 1,
+                                "InheritsConditionDisplaysThroughLinks": 0,
+                                "QueryTags": [],
+                                "conditionList": [],
+                                "playerAnimatedInteractionBase": []
+                            },
+                            {
+                                "Name": "LegCycle",
+                                "RoomTag": "00000000-0000-0000-0000-000000000000",
+                                "UsableTag": "00000000-0000-0000-0000-000000000000",
+                                "LinkingTag": "00000000-0000-0000-0000-000000000000",
+                                "DisplayName": "Use",
+                                "__DisplayName": "@usable_use",
+                                "DisplayType": "Show",
+                                "GenericCursor": "SingleAction",
+                                "FocusModeOnly": 0,
+                                "Sendable": 0,
+                                "Linkable": 1,
+                                "LockedByLinks": 0,
+                                "RequiresAuthorizedUser": 0,
+                                "available": 1,
+                                "InheritsConditionDisplaysThroughLinks": 0,
+                                "QueryTags": [],
+                                "conditionList": [],
+                                "playerAnimatedInteractionBase": []
+                            }
+                        ],
+                        "InteractionPoints": [],
+                        "interactionTasks": [
+                            {
+                                "interaction": "PanelOpen",
+                                "triggerType": "Self"
+                            },
+                            {
+                                "interaction": "PanelClose",
+                                "triggerType": "Self"
+                            }
+                        ],
+                        "actionHandlerTasks": [],
+                        "itemActionTasks": [],
+                        "menuTitle": []
+                    }
+                },
+                "SInteractionLinkParams": {
+                    "vehicleItemPortInteractionLinks": [],
+                    "linkPlugs": []
+                },
+                "SEntityTraversingTreeParams": {
+                    "TraversingNodes": [],
+                    "TraversingTargets": []
+                }
+            },
+            "ClassName": "ARGO_MPUV_Leg_Left",
+            "__type": "Misc"
+        }
+    },
+    "Item": {
+        "className": "ARGO_MPUV_Leg_Left",
+        "reference": "469652b2-8d31-4e97-a71c-76deadde110b",
+        "itemName": "argo_mpuv_leg_left",
+        "type": "Misc",
+        "subType": "UNDEFINED",
+        "size": 1,
+        "grade": 1,
+        "name": "<= PLACEHOLDER =>",
+        "tags": "",
+        "required_tags": "",
+        "manufacturer": "ARGO",
+        "stdItem": {
+            "UUID": "469652b2-8d31-4e97-a71c-76deadde110b",
+            "ClassName": "ARGO_MPUV_Leg_Left",
+            "Size": 1,
+            "Grade": 1,
+            "Width": 0.15,
+            "Height": 0.15,
+            "Length": 0.15,
+            "Type": "Misc.UNDEFINED",
+            "Name": "<= PLACEHOLDER =>",
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Code": "ARGO",
+                "Name": "Argo Astronautics",
+                "UUID": "9e1f5a35-edcc-4d19-bede-08e2730043c5"
+            },
+            "Ports": [
+                {
+                    "PortName": "hardpoint_engine_left",
+                    "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
+                    "Flags": [
+                        "main",
+                        "uneditable"
+                    ],
+                    "Types": [
+                        "MainThruster"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MainThruster"
+                        }
+                    ],
+                    "Uneditable": true
+                },
+                {
+                    "PortName": "hardpoint_fuel_intake_left",
+                    "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
+                    "Flags": [
+                        "invisible",
+                        "uneditable"
+                    ],
+                    "Types": [
+                        "FuelIntake"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FuelIntake"
+                        }
+                    ],
+                    "EquippedItem": "2e0a5325-8d81-4cad-8bbd-db96d6cc99e6",
+                    "Uneditable": true
+                },
+                {
+                    "PortName": "hardpoint_landing_gear_left",
+                    "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
+                    "Flags": [
+                        "uneditable"
+                    ],
+                    "Types": [
+                        "LandingSystem"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "LandingSystem"
+                        }
+                    ],
+                    "EquippedItem": "530a0139-ddb6-46bb-9ff9-3dec00a3a847",
+                    "Uneditable": true
+                },
+                {
+                    "PortName": "hardpoint_lights_leg_left",
+                    "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
+                    "Flags": [
+                        "uneditable"
+                    ],
+                    "Types": [
+                        "Room"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Room"
+                        }
+                    ],
+                    "Uneditable": true
+                },
+                {
+                    "PortName": "hardpoint_thruster_rear_left_top",
+                    "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
+                    "Flags": [
+                        "uneditable",
+                        "maneuver",
+                        "orientation",
+                        "-Z"
+                    ],
+                    "Types": [
+                        "ManneuverThruster"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ManneuverThruster"
+                        }
+                    ],
+                    "Uneditable": true
+                },
+                {
+                    "PortName": "hardpoint_thruster_rear_left_middle",
+                    "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
+                    "Flags": [
+                        "uneditable",
+                        "maneuver",
+                        "orientation",
+                        "+X"
+                    ],
+                    "Types": [
+                        "ManneuverThruster"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ManneuverThruster"
+                        }
+                    ],
+                    "Uneditable": true
+                },
+                {
+                    "PortName": "hardpoint_thruster_rear_left_bottom",
+                    "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
+                    "Flags": [
+                        "uneditable",
+                        "maneuver",
+                        "orientation",
+                        "+Z"
+                    ],
+                    "Types": [
+                        "ManneuverThruster"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ManneuverThruster"
+                        }
+                    ],
+                    "Uneditable": true
+                },
+                {
+                    "PortName": "hardpoint_seat_access_leg_left",
+                    "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
+                    "Flags": [
+                        "uneditable"
+                    ],
+                    "Types": [
+                        "SeatAccess"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SeatAccess"
+                        }
+                    ],
+                    "Uneditable": true
+                }
+            ],
+            "Durability": {
+                "Health": 240,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "FuelIntake": {
+                "Rate": 0,
+                "MinRate": 0.2
+            },
+            "HeatConnection": {
+                "TemperatureToIR": 0.5,
+                "StartIRTemperature": 250,
+                "OverpowerHeat": 0,
+                "OverclockThresholdMinHeat": 0,
+                "OverclockThresholdMaxHeat": 0,
+                "ThermalEnergyBase": 10,
+                "ThermalEnergyDraw": 20,
+                "ThermalConductivity": 3,
+                "SpecificHeatCapacity": 13,
+                "Mass": 200,
+                "SurfaceArea": 50,
+                "StartCoolingTemperature": 300,
+                "MaxCoolingRate": 1,
+                "MaxTemperature": 450,
+                "OverheatTemperature": 370,
+                "RecoveryTemperature": 350,
+                "MinTemperature": 0,
+                "MisfireMinTemperature": 370,
+                "MisfireMaxTemperature": 600
+            },
+            "Interactions": [
+                "Panelopen",
+                "Panelclose",
+                "Panelcycle",
+                "Legdeploy",
+                "Legretract",
+                "Legcycle"
+            ],
+            "PowerConnection": {
+                "PowerBase": 0.5,
+                "PowerDraw": 1,
+                "TimeToReachDrawRequest": 0,
+                "SafeguardPriority": 0,
+                "DisplayedInPoweredItemList": 0,
+                "IsThrottleable": 0,
+                "IsOverclockable": 0,
+                "OverclockThresholdMin": 0,
+                "OverclockThresholdMax": 0,
+                "OverpowerPerformance": 0,
+                "OverclockPerformance": 0,
+                "PowerToEM": 50,
+                "DecayRateOfEM": 0.15
+            }
+        }
+    }
+}

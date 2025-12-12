@@ -1,0 +1,170 @@
+{
+    "UUID": "dc537d66-2abb-43aa-9d37-4e963fc6e9e2",
+    "ClassName": "ORIG_315p",
+    "Name": "Origin 315p",
+    "Description": "Manufacturer: Origin Jumpworks\\nFocus:\u00a0Pathfinder\\n\\nExploration is man's highest calling. Prepare to chart distant horizons with man's most sophisticated piece of technology, the Origin 315p. Featuring a more robust power plant and a custom scanning package, exclusively designed by Chimera Communications.",
+    "Career": "Exploration",
+    "Role": "Pathfinder",
+    "Manufacturer": {
+        "Code": "ORIG",
+        "Name": "Origin Jumpworks"
+    },
+    "Size": 2,
+    "Width": 17,
+    "Length": 27,
+    "Height": 8,
+    "Crew": 1,
+    "Insurance": {
+        "ExpeditedCost": 2579,
+        "ExpeditedClaimTime": 1.73,
+        "StandardClaimTime": 5.18
+    },
+    "IsVehicle": false,
+    "IsGravlev": false,
+    "IsSpaceship": true,
+    "Mass": 70592,
+    "ShieldFaceType": "Bubble",
+    "QuantumTravel": {
+        "FuelCapacity": 1800,
+        "Range": 310344827586.2069,
+        "Speed": 215000000,
+        "SpoolTime": 4,
+        "PortOlisarToArcCorpTime": 195.01093520930232,
+        "PortOlisarToArcCorpFuel": 243.178636206,
+        "PortOlisarToArcCorpAndBack": 3.7009830059150324
+    },
+    "Propulsion": {
+        "FuelCapacity": 18000,
+        "FuelIntakeRate": 12,
+        "FuelUsage": {
+            "Main": 66.46062174999999,
+            "Retro": 37.669025000000005,
+            "Vtol": 0,
+            "Maneuvering": 52.13308062500001
+        },
+        "ThrustCapacity": {
+            "Main": 12599170,
+            "Retro": 3013522,
+            "Vtol": 0,
+            "Maneuvering": 16682585.8
+        },
+        "IntakeToMainFuelRatio": 0.18055804601316422,
+        "IntakeToTankCapacityRatio": 0.0006666666666666666,
+        "TimeForIntakesToFillTank": 1500,
+        "ManeuveringTimeTillEmpty": 223.5270626578093
+    },
+    "FlightCharacteristics": {
+        "ScmSpeed": 258,
+        "MaxSpeed": 1460,
+        "BoostSpeedForward": 550,
+        "BoostSpeedBackward": 270,
+        "Acceleration": {
+            "Main": 178.4787228014506,
+            "Retro": 42.68928490480508,
+            "Vtol": 0,
+            "Maneuvering": 236.32402821849502
+        },
+        "AccelerationG": {
+            "Main": 18.19976473122326,
+            "Retro": 4.353095593786367,
+            "Vtol": 0,
+            "Maneuvering": 24.09834430906528
+        },
+        "Pitch": 50,
+        "Yaw": 46,
+        "Roll": 175,
+        "PitchBoostMultiplier": 1.2,
+        "YawBoostMultiplier": 1.2,
+        "RollBoostMultiplier": 1.2,
+        "Afterburner": {
+            "PreDelayTime": 0.15,
+            "RampUpTime": 0.4,
+            "RampDownTime": 0.2,
+            "Capacitor": 20,
+            "IdleCost": 1,
+            "LinearCost": 0,
+            "AngularCost": 0,
+            "RegenPerSec": 0.75,
+            "RegenDelayAfterUse": 0.2
+        },
+        "ZeroToScm": 1.4455504608636918,
+        "ZeroToMax": 8.180246794034845,
+        "ScmToZero": 6.0436711595269585,
+        "MaxToZero": 34.20061973995876
+    },
+    "Cargo": 12,
+    "CargoGrids": [
+        {
+            "SCU": 8,
+            "unit": 0,
+            "unitName": "SCU",
+            "x": 2.5,
+            "y": 5,
+            "z": 1.25,
+            "minSize": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1.25
+            },
+            "maxSize": {
+                "x": 2.5,
+                "y": 1.25,
+                "z": 1.25
+            },
+            "isOpenContainer": true,
+            "isExternalContainer": false,
+            "isClosedContainer": false,
+            "uuid": "8a5fe9c3-0131-4a14-af06-ff4ee190f98e"
+        },
+        {
+            "SCU": 4,
+            "unit": 0,
+            "unitName": "SCU",
+            "x": 2.5,
+            "y": 2.5,
+            "z": 1.25,
+            "minSize": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1.25
+            },
+            "maxSize": {
+                "x": 2.5,
+                "y": 2.5,
+                "z": 1.25
+            },
+            "isOpenContainer": true,
+            "isExternalContainer": false,
+            "isClosedContainer": false,
+            "uuid": "ee68d155-ce3c-4028-aa67-75064ff97892"
+        }
+    ],
+    "CargoSizeLimits": {
+        "MinSize": {
+            "x": 1.25,
+            "y": 1.25,
+            "z": 1.25
+        },
+        "MaxSize": {
+            "x": 2.5,
+            "y": 2.5,
+            "z": 1.25
+        }
+    },
+    "Health": 9100,
+    "DamageBeforeDestruction": {
+        "tail": 2100,
+        "nose": 2100
+    },
+    "DamageBeforeDetach": {
+        "glass_canopy_front": 1500,
+        "wing_b_left": 500,
+        "wing_left_top": 200,
+        "wing_flap_left": 200,
+        "wing_left_bottom": 800,
+        "wing_b_right": 500,
+        "wing_right_top": 200,
+        "wing_flap_right": 200,
+        "wing_right_bottom": 800
+    }
+}

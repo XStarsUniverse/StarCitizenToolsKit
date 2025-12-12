@@ -1,0 +1,144 @@
+{
+    "UUID": "4da0c1b0-cc77-86e4-93d5-759a2e6f7581",
+    "ClassName": "DRAK_Corsair_Exec_Military",
+    "Name": "Corsair PYAM Exec",
+    "Description": "Manufacturer: Drake Interplanetary\\nFocus: Exploration\\n\\nHeed the call of uncharted space and harness the spirit of exploration with the Drake Corsair. Utilizing a unique asymmetrical hull design, this versatile explorer can go wherever the winds of adventure may steer you. This variant features an exclusive livery and loadout for the ship.",
+    "Career": "Exploration",
+    "Role": "Expedition",
+    "Manufacturer": {
+        "Code": "DRAK",
+        "Name": "Drake Interplanetary"
+    },
+    "Size": 4,
+    "Width": 30,
+    "Length": 53,
+    "Height": 25,
+    "Crew": 4,
+    "Insurance": {
+        "ExpeditedCost": 6805,
+        "ExpeditedClaimTime": 5.67,
+        "StandardClaimTime": 17.01
+    },
+    "IsVehicle": false,
+    "IsGravlev": false,
+    "IsSpaceship": true,
+    "Mass": 380456,
+    "ShieldFaceType": "Quadrant",
+    "QuantumTravel": {
+        "FuelCapacity": 5200,
+        "Range": 851900393184.7968,
+        "Speed": 314000000,
+        "SpoolTime": 6,
+        "PortOlisarToArcCorpTime": 133.5265957643312,
+        "PortOlisarToArcCorpFuel": 255.92455093128,
+        "PortOlisarToArcCorpAndBack": 10.159244162152083
+    },
+    "Propulsion": {
+        "FuelCapacity": 116000,
+        "FuelIntakeRate": 54,
+        "FuelUsage": {
+            "Main": 289.595775,
+            "Retro": 115.7955,
+            "Vtol": 0,
+            "Maneuvering": 125.431753125
+        },
+        "ThrustCapacity": {
+            "Main": 23167662,
+            "Retro": 9263640,
+            "Vtol": 0,
+            "Maneuvering": 40138161
+        },
+        "IntakeToMainFuelRatio": 0.18646680877854657,
+        "IntakeToTankCapacityRatio": 0.00046551724137931035,
+        "TimeForIntakesToFillTank": 2148.1481481481483,
+        "ManeuveringTimeTillEmpty": 388.85507620106
+    },
+    "FlightCharacteristics": {
+        "ScmSpeed": 190,
+        "MaxSpeed": 1025,
+        "BoostSpeedForward": 390,
+        "BoostSpeedBackward": 205,
+        "Acceleration": {
+            "Main": 60.894458229072484,
+            "Retro": 24.348781462245306,
+            "Vtol": 0,
+            "Maneuvering": 105.50013930651639
+        },
+        "AccelerationG": {
+            "Main": 6.2095066336692435,
+            "Retro": 2.482884722330797,
+            "Vtol": 0,
+            "Maneuvering": 10.758020252228476
+        },
+        "Pitch": 26,
+        "Yaw": 20,
+        "Roll": 44,
+        "PitchBoostMultiplier": 1.2,
+        "YawBoostMultiplier": 1.2,
+        "RollBoostMultiplier": 1.2,
+        "Afterburner": {
+            "PreDelayTime": 0,
+            "RampUpTime": 1.5,
+            "RampDownTime": 0.2,
+            "Capacitor": 20,
+            "IdleCost": 1,
+            "LinearCost": 0,
+            "AngularCost": 0,
+            "RegenPerSec": 0.75,
+            "RegenDelayAfterUse": 0.9
+        },
+        "ZeroToScm": 3.1201525643804713,
+        "ZeroToMax": 16.832401992052542,
+        "ScmToZero": 7.803265239150053,
+        "MaxToZero": 42.09656247436213
+    },
+    "Cargo": 72,
+    "CargoGrids": [
+        {
+            "SCU": 72,
+            "unit": 0,
+            "unitName": "SCU",
+            "x": 5,
+            "y": 11.25,
+            "z": 2.5,
+            "minSize": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1.25
+            },
+            "maxSize": {
+                "x": 5,
+                "y": 7.5,
+                "z": 2.5
+            },
+            "isOpenContainer": true,
+            "isExternalContainer": false,
+            "isClosedContainer": false,
+            "uuid": "59df765b-ed64-43fc-bff4-083a4975da15"
+        }
+    ],
+    "CargoSizeLimits": {
+        "MinSize": {
+            "x": 1.25,
+            "y": 1.25,
+            "z": 1.25
+        },
+        "MaxSize": {
+            "x": 5,
+            "y": 7.5,
+            "z": 2.5
+        }
+    },
+    "Health": 91000,
+    "DamageBeforeDestruction": {
+        "body": 15000
+    },
+    "DamageBeforeDetach": {
+        "wing_top_hinge_mesh": 2500,
+        "wing_bottom_hinge_b_mesh": 2500,
+        "nacelle_left_mesh": 12500,
+        "rignt_wing_tip_antenna_mesh": 500,
+        "right_wing_mesh": 5000,
+        "nacelle_right_mesh": 12500
+    }
+}
