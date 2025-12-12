@@ -869,6 +869,7 @@
         "grade": 1,
         "name": "Construction Pieces",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "df671466-1ff7-429e-b0b6-09f9b1f545c2",
@@ -881,13 +882,43 @@
             "Type": "Cargo.Cargo",
             "Name": "Construction Pieces",
             "Description": "Can be processed at refineries into Construction Material.",
+            "DescriptionText": "Can be processed at refineries into Construction Material.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 24,
+                    "UnitName": "SCU",
+                    "SCU": 24
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "0de337b5-01ca-4fd7-afdf-b67cf598f3c3",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -1148,6 +1148,7 @@
         "grade": 1,
         "name": "Hair Care Product",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c19c1fee-a069-4bf1-9b63-d6c8947b75fa",
             "ClassName": "ht_spa_sauna_thermometer_1_a",
@@ -1159,11 +1160,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Hair Care Product",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

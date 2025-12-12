@@ -1562,6 +1562,7 @@
         "grade": 1,
         "name": "Beradom",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "38d7d7e9-819b-4351-a40e-7b764cb304e6",
             "ClassName": "Harvestable_Mineral_1H_Beradom",
@@ -1573,13 +1574,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Beradom",
             "Description": "Formed when sap from the Beraber Fir is crystalized during forest fires, this transparent deep blue \"gemstone\" is often polished smooth and used in jewelry. While it can be manufactured by growing trees and then doing a controlled burn, the time investment for the trees to reach the proper maturity still make this a rare commodity.",
+            "DescriptionText": "Formed when sap from the Beraber Fir is crystalized during forest fires, this transparent deep blue \"gemstone\" is often polished smooth and used in jewelry. While it can be manufactured by growing trees and then doing a controlled burn, the time investment for the trees to reach the proper maturity still make this a rare commodity.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "c339897c-d682-48ad-a16f-daf145bc0f4d",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

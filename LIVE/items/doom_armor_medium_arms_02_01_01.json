@@ -1980,6 +1980,7 @@
         "grade": 1,
         "name": "Stitcher Arms",
         "tags": "ShipJacker Set_02 Color_01 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "DOOM",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1993,9 +1994,18 @@
             "Type": "Char_Armor_Arms.Medium",
             "Name": "Stitcher Arms",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -52 / 82 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nDress to impress in scrapheap chic! The Stitcher armor might look like it's held together with tape and good intentions but we swear it's space safe. The intentional ramshackle design features a funky double collar, plenty of storage, and a ribbed industrial hose attached to a metal cylinder on the back just for the hell of it.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-52 / 82 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Dress to impress in scrapheap chic! The Stitcher armor might look like it's held together with tape and good intentions but we swear it's space safe. The intentional ramshackle design features a funky double collar, plenty of storage, and a ribbed industrial hose attached to a metal cylinder on the back just for the hell of it.",
             "Manufacturer": {
                 "Code": "DOOM",
-                "Name": "Doomsday"
+                "Name": "Doomsday",
+                "UUID": "b495993e-c10a-41e4-876d-1de96de54e33"
             },
             "Tags": [
                 "ShipJacker",
@@ -2008,15 +2018,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 5
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -52,
                 "Maximum": 82
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

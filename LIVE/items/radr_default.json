@@ -2220,6 +2220,7 @@
         "grade": 1,
         "name": "Radar",
         "tags": "flightReady",
+        "required_tags": "",
         "classification": "Ship.Radar.MidRangeRadar",
         "stdItem": {
             "UUID": "05166c08-0e57-47ca-be82-7b8aee16e831",
@@ -2232,6 +2233,12 @@
             "Type": "Radar.MidRangeRadar",
             "Name": "Radar",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
             ],
@@ -2239,17 +2246,35 @@
                 {
                     "PortName": "BatteryPort",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "invisible"
                     ],
                     "Types": [
                         "Battery"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Battery"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 2.5,
+                "DecayRate": 150,
+                "Maximum": 3000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 390
+                "Health": 390,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -2286,6 +2311,33 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 5000,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 0,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 375
+                        }
+                    }
+                ]
             },
             "Radar": {
                 "Cooldown": 2.5,

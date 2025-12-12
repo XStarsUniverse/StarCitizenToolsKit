@@ -557,6 +557,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "1d0f01ad-d97c-4120-b453-a82c1346fe7a",
@@ -569,13 +570,32 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

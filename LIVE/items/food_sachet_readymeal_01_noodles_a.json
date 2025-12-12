@@ -1678,6 +1678,7 @@
         "grade": 1,
         "name": "ReadyMeal (Chicken Patty and Noodles)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "4ad1c5eb-53c7-4192-ad21-e3a394606b7d",
@@ -1690,9 +1691,15 @@
             "Type": "Food.Sachet",
             "Name": "ReadyMeal (Chicken Patty and Noodles)",
             "Description": "NDR: 60\\nEffects: None\\n\\nThe classic taste that's all you need, this Chicken Patty and Noodles from ReadyMeal features a crispy chicken patty paired with garlic butter noodles all ready-to-eat in seconds.",
+            "DescriptionData": {
+                "NDR": "60",
+                "Effects": "None"
+            },
+            "DescriptionText": "The classic taste that's all you need, this Chicken Patty and Noodles from ReadyMeal features a crispy chicken patty paired with garlic butter noodles all ready-to-eat in seconds.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1700,12 +1707,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "sachet"
-            }
+                "NutritionalDensityRating": "60",
+                "Effects": [
+                    "None"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "sachet",
+                "ContainerTypeTag": "sachet",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

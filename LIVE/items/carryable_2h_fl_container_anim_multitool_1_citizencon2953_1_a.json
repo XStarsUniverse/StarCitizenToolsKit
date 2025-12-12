@@ -18789,6 +18789,7 @@
         "grade": 1,
         "name": "Pyrotechnic Amalgamated Toolbox",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "387ad3ab-5d5f-49d4-bb44-c4357d2b0b8c",
             "ClassName": "Carryable_2H_FL_Container_Anim_multitool_1_citizencon2953_1_a",
@@ -18800,34 +18801,64 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Pyrotechnic Amalgamated Toolbox",
             "Description": "Proudly put your multi-tool on display with this toolbox reclaimed from the Pyro system that's not only withstood the star's dangerous flares but also the ravages of time.",
+            "DescriptionText": "Proudly put your multi-tool on display with this toolbox reclaimed from the Pyro system that's not only withstood the star's dangerous flares but also the ravages of time.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "grin_multitool_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 },
                 {
                     "PortName": "weapon_action_attachment",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Personal"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Personal"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "module_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
@@ -18838,18 +18869,36 @@
                         "grin_multitool_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Utility"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Utility"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "canister_attach",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "multitool_resource"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -18909,14 +18958,17 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.6,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Open",
+                "Close",
+                "Stow",
+                "On",
+                "Off",
+                "Store"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 50,

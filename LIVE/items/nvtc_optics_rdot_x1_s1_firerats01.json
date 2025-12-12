@@ -1616,6 +1616,7 @@
         "grade": 1,
         "name": "Delta \"Scorched\" (1x Reflex)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "NVTC",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1629,15 +1630,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "Delta \"Scorched\" (1x Reflex)",
             "Description": "Manufacturer: NV-TAC \\nType: Reflex\\nAttachment Point: Optic\\nMagnification: 1x - 3x\\nAim Time: +2.5%\\nRecoil Smoothness: +10%\\nSize: 1\\n\\nIdeal for civilians and professionals, the Delta non-magnifying reflex sight from NV-TAC provides a precise illuminated target marker, visible across a wide range of light levels. The Scorched edition features a unique flame patina.",
+            "DescriptionData": {
+                "Manufacturer": "NV-TAC",
+                "Type": "Reflex",
+                "Attachment Point": "Optic",
+                "Magnification": "1x - 3x",
+                "Size": "1"
+            },
+            "DescriptionText": "Ideal for civilians and professionals, the Delta non-magnifying reflex sight from NV-TAC provides a precise illuminated target marker, visible across a wide range of light levels. The Scorched edition features a unique flame patina.",
             "Manufacturer": {
                 "Code": "NVTC",
-                "Name": "NV-TAC"
+                "Name": "NV-TAC",
+                "UUID": "f113387e-0905-489a-829d-8cebfdc19e66"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

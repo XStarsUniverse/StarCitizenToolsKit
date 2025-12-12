@@ -4896,6 +4896,7 @@
         "grade": 1,
         "name": "Giocoso Helmet Obsidian",
         "tags": "Origin Set_01 Color_11 ",
+        "required_tags": "",
         "manufacturer": "ORIG",
         "classification": "FPS.Armor.Helmet",
         "stdItem": {
@@ -4909,9 +4910,18 @@
             "Type": "Char_Armor_Helmet.Medium",
             "Name": "Giocoso Helmet Obsidian",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -55 / 85 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nInspired by the sleek stylings of the 100 series, the Giocoso is a helmet worthy of Origin Jumpworks. It features a wide face shield to provide excellent peripheral vision and a special internal air flow system to dissipate heat and humidity. In a nod to the 100 series, the back of the helmet slyly integrates the iconic shape language of the ship's tail into the form.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-55 / 85 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Inspired by the sleek stylings of the 100 series, the Giocoso is a helmet worthy of Origin Jumpworks. It features a wide face shield to provide excellent peripheral vision and a special internal air flow system to dissipate heat and humidity. In a nod to the 100 series, the back of the helmet slyly integrates the iconic shape language of the ship's tail into the form.",
             "Manufacturer": {
                 "Code": "ORIG",
-                "Name": "Origin Jumpworks"
+                "Name": "Origin Jumpworks",
+                "UUID": "1e47a9ec-a3f0-431d-be0e-377712e1ed84"
             },
             "Tags": [
                 "Origin",
@@ -4922,83 +4932,137 @@
                 {
                     "PortName": "visor_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "long_range_radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "ping",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Ping"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Ping"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "scanner",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Avionics"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Avionics"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "flashlight",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
-                        "Suit"
+                        "Suit.Flashlight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Suit",
+                            "sub_types": [
+                                "Flashlight"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "holo_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "universal_necksock",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "necksock"
                     ],
@@ -5007,12 +5071,19 @@
                     ],
                     "Types": [
                         "Char_Flair"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Flair"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "universal_undersuit_necksock",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "necksock_undersuit"
                     ],
@@ -5021,6 +5092,11 @@
                     ],
                     "Types": [
                         "Char_Flair"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Flair"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -5030,14 +5106,64 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Helmet": {
+                "atmosphere_capacity": 0.0015,
+                "puncture_max_area": 0.0001,
+                "puncture_max_number": 10
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Attachtosuit"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "ea721959-c3e2-4df8-9ef3-8831dc98c514"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 6
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -61,
                 "Maximum": 91
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

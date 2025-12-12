@@ -633,6 +633,7 @@
         "grade": 1,
         "name": "Fuse",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "3e4429cb-fb98-420b-aed2-648dad6144e0",
             "ClassName": "ARGO_ATLS_Battery",
@@ -644,13 +645,21 @@
             "Type": "Misc.Fuse",
             "Name": "Fuse",
             "Description": "This safety device provides protection to relays and other power systems from excessive current. Once tripped, fuses need to be replaced before normal operation can resume.",
+            "DescriptionText": "This safety device provides protection to relays and other power systems from excessive current. Once tripped, fuses need to be replaced before normal operation can resume.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 225
+                "Health": 225,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

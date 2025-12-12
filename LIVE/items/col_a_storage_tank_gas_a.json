@@ -634,6 +634,7 @@
         "grade": 1,
         "name": "Liquid Fuel Tanks",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.FuelTank.Fuel",
         "stdItem": {
             "UUID": "1c9f68e2-1869-48f6-8d8e-98101e614d8a",
@@ -646,8 +647,16 @@
             "Type": "FuelTank.Fuel",
             "Name": "Liquid Fuel Tanks",
             "Description": "Liquid Fuel Tanks",
+            "DescriptionText": "Liquid Fuel Tanks",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Durability": {
-                "Health": 800
+                "Health": 800,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

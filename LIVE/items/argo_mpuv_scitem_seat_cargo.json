@@ -543,6 +543,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ARGO",
         "stdItem": {
             "UUID": "578f5664-90a5-46fb-9dec-33609a5268af",
@@ -555,9 +556,28 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ARGO",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "9e1f5a35-edcc-4d19-bede-08e2730043c5"
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

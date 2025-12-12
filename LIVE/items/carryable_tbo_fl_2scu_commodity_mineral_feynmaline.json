@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Feynmaline",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "1502ef65-babc-4156-a98b-7da764fb8641",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Feynmaline",
             "Description": "The paramorphic crystalline structure of this mineral is extremely volatile. When extra energy is introduced, as is typical with modern mining, the ore will often explosively degrade into the more stably structured Janalite. This instability makes Feynamline very dangerous to acquire but also extremely valuable as an industrial anti-matter precursor if it can be properly harvested.",
+            "DescriptionText": "The paramorphic crystalline structure of this mineral is extremely volatile. When extra energy is introduced, as is typical with modern mining, the ore will often explosively degrade into the more stably structured Janalite. This instability makes Feynamline very dangerous to acquire but also extremely valuable as an industrial anti-matter precursor if it can be properly harvested.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 2,
+                    "UnitName": "SCU",
+                    "SCU": 2
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "7310c15d-359c-42b4-b61e-7da3d0da3384",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

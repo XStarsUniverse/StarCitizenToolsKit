@@ -1300,6 +1300,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "c7dc8c3a-127c-47ec-ba93-f41469b07078",
@@ -1312,12 +1313,25 @@
             "Type": "SeatDashboard.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
+            },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 400,
+                "Maximum": 2000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.1,
@@ -1340,6 +1354,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Flight_ready",
+                "Commsinteraction"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,
@@ -1354,6 +1372,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

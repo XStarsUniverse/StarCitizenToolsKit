@@ -699,6 +699,7 @@
         "grade": 1,
         "name": "CST-313 \"Castillo\"",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "BEH",
         "stdItem": {
             "UUID": "c9686715-884f-456a-afbe-054107c8c54a",
@@ -711,9 +712,16 @@
             "Type": "BombLauncher.BombRack",
             "Name": "CST-313 \"Castillo\"",
             "Description": "Item Type: Bomb Rack\\nManufacturer: Behring\\nSize: S3\\n\\nDesigned to fit a wide variety of ships, the CST-313 \"Castillo\" bomb rack is able to store a single S3 bomb and makes for a good alternative on ships that can support a S3 missile rack.",
+            "DescriptionData": {
+                "Item Type": "Bomb Rack",
+                "Manufacturer": "Behring",
+                "Size": "S3"
+            },
+            "DescriptionText": "Designed to fit a wide variety of ships, the CST-313 \"Castillo\" bomb rack is able to store a single S3 bomb and makes for a good alternative on ships that can support a S3 missile rack.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "flightReady"
@@ -722,14 +730,26 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "Bomb"
+                        "Bomb.Utility"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Bomb",
+                            "sub_types": [
+                                "Utility"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -766,6 +786,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

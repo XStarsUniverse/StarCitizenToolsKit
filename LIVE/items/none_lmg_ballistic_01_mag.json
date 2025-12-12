@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "Pulverizer LMG Magazine (120 Cap)",
         "tags": "none_lmg_ballistic_01",
+        "required_tags": "",
         "manufacturer": "UNKN",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Pulverizer LMG Magazine (120 Cap)",
             "Description": "Item Type: Magazine\\nCapacity: 120\\n\\nThis magazine for the Pulverizer LMG comes pre-loaded with one hundred and twenty .50 caliber rounds.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "120"
+            },
+            "DescriptionText": "This magazine for the Pulverizer LMG comes pre-loaded with one hundred and twenty .50 caliber rounds.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": [
                 "none_lmg_ballistic_01"
@@ -1959,7 +1966,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

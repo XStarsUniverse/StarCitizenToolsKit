@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Fluorine",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "f6fee092-8598-48a4-a1fc-e13bc0f9724f",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Fluorine",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 8,
+                    "UnitName": "SCU",
+                    "SCU": 8
+                },
+                "InclusiveGroups": [
+                    "4d3f31f7-feab-488c-8f36-ac7c8c4012b8"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "0e49f648-a7d0-4e5c-80e6-9636bd9a8ed6",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

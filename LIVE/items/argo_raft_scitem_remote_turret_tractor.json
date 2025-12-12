@@ -723,6 +723,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady ARGO_RAFT_Tractor_Turret",
+        "required_tags": "ARGO_RAFT_Tractor_Turret",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "2b66c594-b102-4941-b93b-6c7501bf53ae",
@@ -735,9 +736,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady",
@@ -747,11 +750,18 @@
                 {
                     "PortName": "turret_left",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "TractorBeam"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "TractorBeam"
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -777,6 +787,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

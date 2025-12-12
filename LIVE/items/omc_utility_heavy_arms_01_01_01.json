@@ -1835,6 +1835,7 @@
         "grade": 1,
         "name": "Corbel Arms Smolder",
         "tags": "SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "CDS",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1848,9 +1849,18 @@
             "Type": "Char_Armor_Arms.Heavy",
             "Name": "Corbel Arms Smolder",
             "Description": "Item Type: Heavy Armor\\nDamage Reduction: 40%\\nTemp. Rating: -70 / 100 \u00b0C\\nRadiation Protection: 26800 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nOriginally designed as a strength enhancement suit to give factory workers better lifting power, CDS found wider application in utilizing its defensive capabilities. It's triple-enforced armor plating provides extreme physical protection, with deliberate placing of materials to protect the most vulnerable parts of the body. A series of pneumatic levers offer increased flexibility in the joints, alleviating pressure and weight in key areas to create an accessible and highly protective armor despite its heavy weight.\\n\\nThe Smolder edition is primarily gray and black with sharp red segments.",
+            "DescriptionData": {
+                "Item Type": "Heavy Armor",
+                "Damage Reduction": "40%",
+                "Temp. Rating": "-70 / 100 \u00b0C",
+                "Radiation Protection": "26800 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Originally designed as a strength enhancement suit to give factory workers better lifting power, CDS found wider application in utilizing its defensive capabilities. It's triple-enforced armor plating provides extreme physical protection, with deliberate placing of materials to protect the most vulnerable parts of the body. A series of pneumatic levers offer increased flexibility in the joints, alleviating pressure and weight in key areas to create an accessible and highly protective armor despite its heavy weight.\n\nThe Smolder edition is primarily gray and black with sharp red segments.",
             "Manufacturer": {
                 "Code": "CDS",
-                "Name": "Clark Defense Systems"
+                "Name": "Clark Defense Systems",
+                "UUID": "8a7bd715-5b97-404f-b02e-0d0cc593f608"
             },
             "Tags": [
                 "SM_RestrictedArm"
@@ -1860,15 +1870,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.65,
+                    "Physical": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.4,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 20
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -70,
                 "Maximum": 100
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26800,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

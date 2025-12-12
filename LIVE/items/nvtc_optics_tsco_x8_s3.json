@@ -1776,6 +1776,7 @@
         "grade": 1,
         "name": "Theta Pro (8x Telescopic)\u00a0",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "NVTC",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1789,15 +1790,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "Theta Pro (8x Telescopic)\u00a0",
             "Description": "Manufacturer: NV-TAC\u00a0\\nType: Telescopic\\nAttachment Point: Optic\u00a0\u00a0\\nMagnification: 8x\\nAim Time: +0%\\nSize: 3\\n\\nCarefully crafted and calibrated, the Theta Pro delivers precise and effective long distance combat engagement capabilities thanks to its powerful 8x telescopic sight.",
+            "DescriptionData": {
+                "Manufacturer": "NV-TAC",
+                "Type": "Telescopic",
+                "Attachment Point": "Optic",
+                "Magnification": "8x",
+                "Size": "3"
+            },
+            "DescriptionText": "Carefully crafted and calibrated, the Theta Pro delivers precise and effective long distance combat engagement capabilities thanks to its powerful 8x telescopic sight.",
             "Manufacturer": {
                 "Code": "NVTC",
-                "Name": "NV-TAC"
+                "Name": "NV-TAC",
+                "UUID": "f113387e-0905-489a-829d-8cebfdc19e66"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

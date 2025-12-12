@@ -2099,6 +2099,7 @@
         "grade": 1,
         "name": "ThermoWeave Pants ASD Edition",
         "tags": "grin_refinery_pants Set_02 Color_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2112,9 +2113,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "ThermoWeave Pants ASD Edition",
             "Description": "Carrying Capacity: 2K \u00b5SCU\\n\\nThe ThermoWeave pants have a large, easy-access pocket on each leg and feature a special fire-resistant synthetic moisture-wicking lining that makes them comfortable to wear for an entire shift.\\n\\nWorn by employees who require an extra level of protection in their field, the ASD Edition showcases the reds and greens of the ASD branding.",
+            "DescriptionData": {
+                "Carrying Capacity": "2K \u00b5SCU"
+            },
+            "DescriptionText": "The ThermoWeave pants have a large, easy-access pocket on each leg and feature a special fire-resistant synthetic moisture-wicking lining that makes them comfortable to wear for an entire shift.\n\nWorn by employees who require an extra level of protection in their field, the ASD Edition showcases the reds and greens of the ASD branding.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_refinery_pants",
@@ -2125,19 +2131,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2147,13 +2165,23 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2164,8 +2192,19 @@
                         "datapad"
                     ],
                     "Types": [
-                        "WeaponPersonal",
+                        "WeaponPersonal.Gadget",
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        },
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2175,6 +2214,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.002,
                 "unit": 6,
@@ -2190,6 +2238,10 @@
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

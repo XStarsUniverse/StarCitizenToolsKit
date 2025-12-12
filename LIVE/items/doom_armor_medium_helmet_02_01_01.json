@@ -4731,6 +4731,7 @@
         "grade": 1,
         "name": "The Butcher Helmet",
         "tags": "ShipJacker Set_02 Color_01 $$$snoopy_cap+++ SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "DOOM",
         "classification": "FPS.Armor.Helmet",
         "stdItem": {
@@ -4744,9 +4745,19 @@
             "Type": "Char_Armor_Helmet.Medium",
             "Name": "The Butcher Helmet",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -56 / 86 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\nCarrying Capacity: 4.0 \u00b5SCU\\n\\nBe the reaper with this terrifying battle helmet molded after some kind of animal. We aren't a vet, it just looked cool. All we know is that it'll withstand some serious punishment and look bad ass doing it. Visor is AR crosshair compatible.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-56 / 86 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s",
+                "Carrying Capacity": "4.0 \u00b5SCU"
+            },
+            "DescriptionText": "Be the reaper with this terrifying battle helmet molded after some kind of animal. We aren't a vet, it just looked cool. All we know is that it'll withstand some serious punishment and look bad ass doing it. Visor is AR crosshair compatible.",
             "Manufacturer": {
                 "Code": "DOOM",
-                "Name": "Doomsday"
+                "Name": "Doomsday",
+                "UUID": "b495993e-c10a-41e4-876d-1de96de54e33"
             },
             "Tags": [
                 "ShipJacker",
@@ -4759,77 +4770,129 @@
                 {
                     "PortName": "visor_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "long_range_radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "ping",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Ping"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Ping"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "scanner",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Avionics"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Avionics"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "flashlight",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
-                        "Suit"
+                        "Suit.Flashlight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Suit",
+                            "sub_types": [
+                                "Flashlight"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "holo_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -4839,14 +4902,64 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Helmet": {
+                "atmosphere_capacity": 0.0015,
+                "puncture_max_area": 0.0001,
+                "puncture_max_number": 10
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Attachtosuit"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "ea721959-c3e2-4df8-9ef3-8831dc98c514"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 6
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -52,
                 "Maximum": 82
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

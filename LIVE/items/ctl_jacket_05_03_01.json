@@ -2013,6 +2013,7 @@
         "grade": 1,
         "name": "Prestige MISC Racing Jacket",
         "tags": "ctl_jacket set_05 Texture_03 Color_01",
+        "required_tags": "",
         "manufacturer": "CTL",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2026,9 +2027,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Prestige MISC Racing Jacket",
             "Description": "Carrying Capacity: 1k \u00b5SCU\\n\\nPart of City Lights' stylish collection of racewear, the Prestige Origin Racing Jacket is high-quality, durable outerwear that features a colorful asymmetric design celebrating Origin's line of luxury racing vehicles.",
+            "DescriptionData": {
+                "Carrying Capacity": "1k \u00b5SCU"
+            },
+            "DescriptionText": "Part of City Lights' stylish collection of racewear, the Prestige Origin Racing Jacket is high-quality, durable outerwear that features a colorful asymmetric design celebrating Origin's line of luxury racing vehicles.",
             "Manufacturer": {
                 "Code": "CTL",
-                "Name": "City Lights"
+                "Name": "City Lights",
+                "UUID": "5ca8a669-44c2-40e4-89b2-7a5da790b832"
             },
             "Tags": [
                 "ctl_jacket",
@@ -2040,11 +2046,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2054,6 +2067,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2069,6 +2091,10 @@
             "TemperatureResistance": {
                 "Minimum": 1,
                 "Maximum": 29
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -981,6 +981,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "77f64a6c-d779-4b47-9e58-5e9cb53e4bca",
             "ClassName": "Seat_Chair_ANVL_Spartan",
@@ -991,7 +992,17 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

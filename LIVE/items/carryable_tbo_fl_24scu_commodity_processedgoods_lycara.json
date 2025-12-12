@@ -869,6 +869,7 @@
         "grade": 1,
         "name": "Lycara",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "c5610e66-b90e-476d-ada1-f2ed7f429e29",
@@ -881,13 +882,43 @@
             "Type": "Cargo.Cargo",
             "Name": "Lycara",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 24,
+                    "UnitName": "SCU",
+                    "SCU": 24
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "ac0c8daa-05d6-4000-a12d-5e0451da4aea",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

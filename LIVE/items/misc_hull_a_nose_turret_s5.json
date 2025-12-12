@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Crusader Mercury Star Runner Nose Turret",
         "tags": "$MISC_Hull_A_Turret",
+        "required_tags": "",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "920c89a5-30e2-403a-88bf-9e3d33a3f8f9",
@@ -885,9 +886,16 @@
             "Type": "Turret.BallTurret",
             "Name": "Crusader Mercury Star Runner Nose Turret",
             "Description": "Item Type: Turret\\nManufacturer: Crusader Industries\\nSize: 3\\n\\nThis pilot-controlled, dual-linked nose turret is mounted to the belly of the Mercury Star Runner. Bespoke to the ship, the turret is outfitted with two size-3 laser repeaters ready to help keep your flight path clear.",
+            "DescriptionData": {
+                "Item Type": "Turret",
+                "Manufacturer": "Crusader Industries",
+                "Size": "3"
+            },
+            "DescriptionText": "This pilot-controlled, dual-linked nose turret is mounted to the belly of the Mercury Star Runner. Bespoke to the ship, the turret is outfitted with two size-3 laser repeaters ready to help keep your flight path clear.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "$MISC_Hull_A_Turret"
@@ -896,16 +904,36 @@
                 {
                     "PortName": "hardpoint_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -916,7 +944,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 2500
+                "Health": 2500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

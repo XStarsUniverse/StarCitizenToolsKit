@@ -761,6 +761,7 @@
         "grade": 1,
         "name": "Aegis Retaliator Torpedo Rack",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -774,9 +775,11 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "Aegis Retaliator Torpedo Rack",
             "Description": "Aegis Retaliator Torpedo Rack",
+            "DescriptionText": "Aegis Retaliator Torpedo Rack",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "flightReady"
@@ -785,16 +788,40 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 9,
+                    "MinSize": 9,
+                    "MaxSize": 9,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile",
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile",
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_02_attach",
                     "Size": 9,
+                    "MinSize": 9,
+                    "MaxSize": 9,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile",
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile",
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -805,7 +832,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.5,
@@ -845,6 +874,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

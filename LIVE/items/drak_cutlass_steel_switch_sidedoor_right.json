@@ -2213,6 +2213,7 @@
         "grade": 1,
         "name": "Door Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "bc35c162-32b1-43cb-bfe9-b60c2eb07645",
             "ClassName": "DRAK_Cutlass_Steel_Switch_SideDoor_Right",
@@ -2223,7 +2224,28 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Door Control",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Hack",
+                "Repair",
+                "Syncopen",
+                "Syncclose",
+                "Opencomplete",
+                "Closecomplete",
+                "Deploy",
+                "Retract",
+                "Syncdeploy",
+                "Syncretract",
+                "Retractclose"
+            ]
         }
     }
 }

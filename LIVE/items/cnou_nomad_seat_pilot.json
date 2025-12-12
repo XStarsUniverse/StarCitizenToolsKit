@@ -811,6 +811,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "CNOU",
         "stdItem": {
             "UUID": "774bd021-1710-4bf9-8110-c1a6f3cf4fe6",
@@ -823,9 +824,31 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "CNOU",
-                "Name": "Consolidated Outland"
+                "Name": "Consolidated Outland",
+                "UUID": "ec227ef3-fb08-4897-abdb-579eb4e87c25"
+            },
+            "Interactions": [
+                "Ejection"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

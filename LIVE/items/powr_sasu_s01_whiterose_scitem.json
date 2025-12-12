@@ -1142,6 +1142,7 @@
         "grade": 1,
         "name": "WhiteRose",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SASU",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1155,17 +1156,37 @@
             "Type": "PowerPlant.Power",
             "Name": "WhiteRose",
             "Description": "Item Type: Power Plant\\nManufacturer: Sakura Sun\\nSize: 1\\nGrade: A\\nClass: Civilian\\n\\nPull incredible performance from the WhiteRose. This small power plant from Sakura Sun shines when generating the kind of power that leaves the other small power plants in its wake.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Sakura Sun",
+                "Size": "1",
+                "Grade": "A",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Pull incredible performance from the WhiteRose. This small power plant from Sakura Sun shines when generating the kind of power that leaves the other small power plants in its wake.",
             "Manufacturer": {
                 "Code": "SASU",
-                "Name": "Sakura Sun"
+                "Name": "Sakura Sun",
+                "UUID": "40c59850-8fb5-4a0e-ab61-7fd3871a632a"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 20,
+                "Maximum": 6000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 450
+                "Health": 450,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.75,
@@ -1188,6 +1209,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2419.03,
@@ -1205,6 +1230,39 @@
             },
             "PowerPlant": {
                 "Output": 2419.03
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 15,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 15,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 6190
+                        }
+                    }
+                ]
             }
         }
     }

@@ -1891,6 +1891,7 @@
         "grade": 1,
         "name": "Cambio SRT Canister",
         "tags": "grin_tool_salvage_01_canister",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1904,9 +1905,14 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Cambio SRT Canister",
             "Description": "Item Type: RMC Canister (Large)\\n\\nCanister used by the Cambio SRT to store recycle material composite (RMC) reclaimed from scrap. Contents can be sold or used to make repairs.",
+            "DescriptionData": {
+                "Item Type": "RMC Canister (Large)"
+            },
+            "DescriptionText": "Canister used by the Cambio SRT to store recycle material composite (RMC) reclaimed from scrap. Contents can be sold or used to make repairs.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_tool_salvage_01_canister"
@@ -1965,7 +1971,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

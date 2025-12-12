@@ -1577,6 +1577,7 @@
         "grade": 1,
         "name": "Cruiser Dog",
         "tags": "hotdog cruiser",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "bbe3f611-07ba-4029-88b3-1b8bd300562b",
@@ -1589,9 +1590,15 @@
             "Type": "Food.Junk",
             "Name": "Cruiser Dog",
             "Description": "NDR: 34\\nEffects: Dehydrating, Hyper-Metabolic\\n\\nA griddled hot dog topped with diced tomatoes, diced onions, sliced chilies, and a drizzle of mayonnaise.",
+            "DescriptionData": {
+                "NDR": "34",
+                "Effects": "Dehydrating, Hyper-Metabolic"
+            },
+            "DescriptionText": "A griddled hot dog topped with diced tomatoes, diced onions, sliced chilies, and a drizzle of mayonnaise.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "hotdog",
@@ -1603,12 +1610,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "hotdog"
-            }
+                "NutritionalDensityRating": "34",
+                "Effects": [
+                    "Dehydrating",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

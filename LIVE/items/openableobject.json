@@ -658,6 +658,7 @@
         "grade": 1,
         "name": "Openable",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "69e3715f-17ff-4c85-8ad5-98cdd3df23b7",
@@ -669,7 +670,17 @@
             "Length": 0.15,
             "Type": "Cargo.UNDEFINED",
             "Name": "Openable",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Open",
+                "Close"
+            ]
         }
     }
 }

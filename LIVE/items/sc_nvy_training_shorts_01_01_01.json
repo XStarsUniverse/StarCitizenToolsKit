@@ -1539,6 +1539,7 @@
         "grade": 1,
         "name": "ActiveWear Training Shorts",
         "tags": "nvy_shorts Training Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "NVY",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -1552,9 +1553,11 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "ActiveWear Training Shorts",
             "Description": "Standard issue ActiveWear training shorts are constructed from four-way stretch fabric technology to allow for increased airflow and a larger range of motion while keeping you cool and dry during the most intensive training sessions.",
+            "DescriptionText": "Standard issue ActiveWear training shorts are constructed from four-way stretch fabric technology to allow for increased airflow and a larger range of motion while keeping you cool and dry during the most intensive training sessions.",
             "Manufacturer": {
                 "Code": "NVY",
-                "Name": "UEE Navy"
+                "Name": "UEE Navy",
+                "UUID": "d133f90d-bc69-4273-9867-6c03631f0c4b"
             },
             "Tags": [
                 "nvy_shorts",
@@ -1562,9 +1565,21 @@
                 "Set_01",
                 "Color_01"
             ],
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openexternalinventory"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

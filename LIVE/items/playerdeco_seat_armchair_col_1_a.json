@@ -903,6 +903,7 @@
         "grade": 1,
         "name": "Low End Arm Chair",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "60c4dcd9-1dd2-4b54-9564-00963163b723",
             "ClassName": "PlayerDeco_Seat_Armchair_Col_1_a",
@@ -914,11 +915,21 @@
             "Type": "Usable.Cargo",
             "Name": "Low End Arm Chair",
             "Description": "Arm Chair Decoration",
+            "DescriptionText": "Arm Chair Decoration",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

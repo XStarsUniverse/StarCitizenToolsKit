@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Personal Care Product",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "80f7fdea-0e00-48ca-8ef7-3ff1f3dfd1ed",
             "ClassName": "un_personal_deodorant_1_a_Triggerfish",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Personal Care Product",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

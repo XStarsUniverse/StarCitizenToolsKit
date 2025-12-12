@@ -266,6 +266,7 @@
         "grade": 3,
         "name": "Internal Tank",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.QuantumFuelTank.QuantumFuel",
         "stdItem": {
@@ -279,13 +280,55 @@
             "Type": "QuantumFuelTank.QuantumFuel",
             "Name": "Internal Tank",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady"
             ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 7,
+                    "UnitName": "SCU",
+                    "SCU": 7
+                },
+                "InclusiveResources": [
+                    "f4846780-182f-49d1-a711-f08c0172735e"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "f4846780-182f-49d1-a711-f08c0172735e",
+                        "Weight": 1
+                    }
+                ]
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 100,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Storage",
+                                "Resource": "QuantumFuel",
+                                "Rate": 0.25,
+                                "GeneratedResource": "QuantumFuel",
+                                "GeneratedRate": 0.25,
+                                "Discharge": 0
+                            }
+                        ]
+                    }
+                ]
+            },
             "QuantumFuelTank": {
                 "Capacity": 0
             }

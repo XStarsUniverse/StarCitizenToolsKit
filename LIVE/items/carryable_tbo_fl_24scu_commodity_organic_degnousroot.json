@@ -866,6 +866,7 @@
         "grade": 1,
         "name": "Degnous Root",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "f82b890a-5bd4-48f3-b099-d5da66c73345",
@@ -878,13 +879,43 @@
             "Type": "Cargo.Cargo",
             "Name": "Degnous Root",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 24,
+                    "UnitName": "SCU",
+                    "SCU": 24
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "a0046f6f-ce84-4ca2-b5d1-d6598a9aad39",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

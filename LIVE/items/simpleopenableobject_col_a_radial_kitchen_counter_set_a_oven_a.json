@@ -477,6 +477,7 @@
         "grade": 1,
         "name": "Oven",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "5c43ef96-5b2b-48d7-9801-222d36cf29e4",
@@ -488,7 +489,17 @@
             "Length": 0.15,
             "Type": "Cargo.UNDEFINED",
             "Name": "Oven",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Open",
+                "Close"
+            ]
         }
     }
 }

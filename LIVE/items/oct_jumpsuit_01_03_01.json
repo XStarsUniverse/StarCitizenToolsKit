@@ -2117,6 +2117,7 @@
         "grade": 1,
         "name": "Ventris Jumpsuit Crusader Edition Light Blue / Dark Teal",
         "tags": "oct_jumpsuit Set_01 Material_03 Color_01",
+        "required_tags": "",
         "manufacturer": "OCT",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2130,9 +2131,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Ventris Jumpsuit Crusader Edition Light Blue / Dark Teal",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nThe Ventris is a sleek jumpsuit that mixes several rip and stain resistant polymer fabrics for a dynamic design. It also features a half-zip front and adjustable belt to ensure an ideal fit while the soft inner lining makes it an ideal choice for all day wear. The special Crusader Edition was made to be worn by employees of the company and features the sword and C logo on the front.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "The Ventris is a sleek jumpsuit that mixes several rip and stain resistant polymer fabrics for a dynamic design. It also features a half-zip front and adjustable belt to ensure an ideal fit while the soft inner lining makes it an ideal choice for all day wear. The special Crusader Edition was made to be worn by employees of the company and features the sword and C logo on the front.",
             "Manufacturer": {
                 "Code": "OCT",
-                "Name": "Octagon"
+                "Name": "Octagon",
+                "UUID": "4a05001d-0511-415f-8e32-618fbd75242b"
             },
             "Tags": [
                 "oct_jumpsuit",
@@ -2144,19 +2150,33 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Clothing_Torso2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Char_Clothing_Torso_2"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Torso_2"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2166,6 +2186,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2181,6 +2210,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

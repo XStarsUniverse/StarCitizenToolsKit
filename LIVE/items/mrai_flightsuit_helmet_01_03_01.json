@@ -4934,6 +4934,7 @@
         "grade": 1,
         "name": "Origin Racing Helmet",
         "tags": "mrai_flightsuit_helmet Set_01 Texture_03 Color_01  SM_RestrictedArm Helmet",
+        "required_tags": "",
         "manufacturer": "MIS",
         "classification": "FPS.Armor.Helmet",
         "stdItem": {
@@ -4947,9 +4948,18 @@
             "Type": "Char_Armor_Helmet.UNDEFINED",
             "Name": "Origin Racing Helmet",
             "Description": "Item Type: Helmet\\nDamage Reduction: 10%\\nTemp. Rating: -30 / 60 \u00b0C\\nRadiation Protection: 15200 REM\\nRadiation Scrub Rate: 81 REM/s\\n\\nPlunge headlong into extreme speed in comfort and style with the Origin racing helmet. Primarily white with black and blue highlights, the helmet features a wide visor for unobstructed views as you speed by.",
+            "DescriptionData": {
+                "Item Type": "Helmet",
+                "Damage Reduction": "10%",
+                "Temp. Rating": "-30 / 60 \u00b0C",
+                "Radiation Protection": "15200 REM",
+                "Radiation Scrub Rate": "81 REM/s"
+            },
+            "DescriptionText": "Plunge headlong into extreme speed in comfort and style with the Origin racing helmet. Primarily white with black and blue highlights, the helmet features a wide visor for unobstructed views as you speed by.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Mirai"
+                "Name": "Mirai",
+                "UUID": "cdf6ea1e-7de3-4b58-bf9d-13c5fbafc49a"
             },
             "Tags": {
                 "0": "mrai_flightsuit_helmet",
@@ -4963,83 +4973,137 @@
                 {
                     "PortName": "visor_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "long_range_radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "ping",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Ping"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Ping"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "scanner",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Avionics"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Avionics"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "flashlight",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
-                        "Suit"
+                        "Suit.Flashlight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Suit",
+                            "sub_types": [
+                                "Flashlight"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "holo_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "universal_necksock",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "necksock"
                     ],
@@ -5048,12 +5112,19 @@
                     ],
                     "Types": [
                         "Char_Flair"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Flair"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "universal_undersuit_necksock",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "necksock_undersuit"
                     ],
@@ -5063,11 +5134,18 @@
                     "Types": [
                         "Char_Flair"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Flair"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "HelmetVisor_ItemPort",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "mrai_flightsuit_helmet"
                     ],
@@ -5077,6 +5155,11 @@
                     "Types": [
                         "Char_Flair"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Flair"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
@@ -5085,14 +5168,63 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Helmet": {
+                "atmosphere_capacity": 0.0015,
+                "puncture_max_area": 0.0001,
+                "puncture_max_number": 10
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "ea721959-c3e2-4df8-9ef3-8831dc98c514"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -30,
                 "Maximum": 60
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 15200,
+                "RadiationDissipationRate": 81
             }
         }
     }

@@ -978,6 +978,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c8969807-d46c-4d51-9855-beef44364c20",
             "ClassName": "Seat_Chair_Desk_a",
@@ -988,7 +989,17 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

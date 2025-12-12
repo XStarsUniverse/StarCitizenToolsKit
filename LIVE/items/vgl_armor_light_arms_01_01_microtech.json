@@ -1913,6 +1913,7 @@
         "grade": 1,
         "name": "TrueDef-Pro Arms",
         "tags": "Virgil Set_01 Color_microtech SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "VGL",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1926,9 +1927,11 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "TrueDef-Pro Arms",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "VGL",
-                "Name": "Virgil"
+                "Name": "Virgil",
+                "UUID": "0e6d8f1b-ebb8-4773-8ca4-f25d737c8709"
             },
             "Tags": [
                 "Virgil",
@@ -1941,15 +1944,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -38,
                 "Maximum": 68
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

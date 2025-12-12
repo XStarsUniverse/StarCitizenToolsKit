@@ -1149,6 +1149,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "XNAA",
         "stdItem": {
             "UUID": "17a2b467-c221-492a-b25f-0ac752e6850c",
@@ -1161,9 +1162,36 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "XNAA",
-                "Name": "Aopoa"
+                "Name": "Aopoa",
+                "UUID": "06370f79-4741-4781-be08-d5acc9e28047"
+            },
+            "Interactions": [
+                "Ejection",
+                "Enterdefaultmode",
+                "Enterscanmode",
+                "Enterquantummode",
+                "Enter_request",
+                "Exit_request"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

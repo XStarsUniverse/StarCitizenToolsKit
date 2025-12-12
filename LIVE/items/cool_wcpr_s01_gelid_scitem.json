@@ -922,6 +922,7 @@
         "grade": 1,
         "name": "Gelid",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "WCPR",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Gelid",
             "Description": "Item Type: Cooler\\nManufacturer: Wen/Cassel Propulsion\\nSize: 1\\nGrade: A\\nClass: Civilian\\n\\nAllowing for greater thermo-dispersal and improved performance output, the top-of-the-line Gelid cooler from Wen/Cassel is an all-inclusive heat management system ideal for a variety of ships.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Wen/Cassel Propulsion",
+                "Size": "1",
+                "Grade": "A",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Allowing for greater thermo-dispersal and improved performance output, the top-of-the-line Gelid cooler from Wen/Cassel is an all-inclusive heat management system ideal for a variety of ships.",
             "Manufacturer": {
                 "Code": "WCPR",
-                "Name": "Wen/Cassel Propulsion"
+                "Name": "Wen/Cassel Propulsion",
+                "UUID": "d8ef0f35-e196-4d18-affa-750f6cdf8cb4"
             },
             "Cooler": {
                 "CoolingRate": 204000,
@@ -949,8 +959,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 330
+                "Health": 330,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 8.25,
                 "DecayRateOfEM": 0.24
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 17.6,
+                                "MinimumFraction": 0.5,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 750,
+                            "IR": 4400
+                        }
+                    }
+                ]
             }
         }
     }

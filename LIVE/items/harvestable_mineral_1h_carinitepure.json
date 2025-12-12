@@ -1559,6 +1559,7 @@
         "grade": 1,
         "name": "Carinite (Pure)",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "9904aaa2-9a13-48d2-a48d-7494e60d012f",
             "ClassName": "Harvestable_Mineral_1H_CarinitePure",
@@ -1570,13 +1571,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Carinite (Pure)",
             "Description": "Typical carinite sources feature various impurities. However, under certain extremely rare conditions, carinite veins that are more than 90% pure can form. Computing hardware that demands exacting precision will usually seek out pure carinite.",
+            "DescriptionText": "Typical carinite sources feature various impurities. However, under certain extremely rare conditions, carinite veins that are more than 90% pure can form. Computing hardware that demands exacting precision will usually seek out pure carinite.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "d7d39082-ba27-470c-bc9a-d9e82ce838ae",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

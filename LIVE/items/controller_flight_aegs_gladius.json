@@ -2074,6 +2074,7 @@
         "grade": 1,
         "name": "Gladius Standard Flight Blade",
         "tags": "AEGS_Gladius_Blade",
+        "required_tags": "AEGS_Gladius_Blade",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "e77f778b-4931-4f99-b41c-097e17c065e8",
@@ -2086,9 +2087,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Gladius Standard Flight Blade",
             "Description": "Manufacturer: Aegis Dynamics\\nType: Flight Blade\\n\\nThis is the standard issue flight blade for the Aegis Gladius.",
+            "DescriptionData": {
+                "Manufacturer": "Aegis Dynamics",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "This is the standard issue flight blade for the Aegis Gladius.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Gladius_Blade"
@@ -2131,6 +2138,40 @@
                     "CapacitorRegenDelayAfterUse": 0.2,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

@@ -2037,6 +2037,7 @@
         "grade": 1,
         "name": "Stratus Jacket Purple",
         "tags": "cba_jacket Set_02 Color_08",
+        "required_tags": "",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2050,9 +2051,15 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Stratus Jacket Purple",
             "Description": "Temp. Rating: -20 / 20 \u00b0C\\nCarrying Capacity: 3K \u00b5SCU\\n\\nEven though it's rated to withstand arctic conditions, you won't want any snow accumulating on this distinct and dazzling jacket. The Stratus will keep you warm from neck to knees thanks to its high collar and precisely layered pieces.",
+            "DescriptionData": {
+                "Temp. Rating": "-20 / 20 \u00b0C",
+                "Carrying Capacity": "3K \u00b5SCU"
+            },
+            "DescriptionText": "Even though it's rated to withstand arctic conditions, you won't want any snow accumulating on this distinct and dazzling jacket. The Stratus will keep you warm from neck to knees thanks to its high collar and precisely layered pieces.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_jacket",
@@ -2063,11 +2070,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2077,6 +2091,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.003,
                 "unit": 6,
@@ -2092,6 +2115,10 @@
             "TemperatureResistance": {
                 "Minimum": -20,
                 "Maximum": 20
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

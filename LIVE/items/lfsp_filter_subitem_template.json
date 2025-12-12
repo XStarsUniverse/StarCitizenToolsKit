@@ -1495,6 +1495,7 @@
         "grade": 1,
         "name": "",
         "tags": "filter",
+        "required_tags": "",
         "stdItem": {
             "UUID": "ff03dae8-2d74-435b-bfb8-271931196086",
             "ClassName": "LFSP_Filter_subItem_template",
@@ -1506,6 +1507,12 @@
             "Type": "Misc.Utility",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "filter"
             ],
@@ -1515,8 +1522,17 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 100
-            }
+                "Health": 100,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

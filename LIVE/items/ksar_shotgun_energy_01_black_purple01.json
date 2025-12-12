@@ -9799,6 +9799,7 @@
         "grade": 1,
         "name": "Devastator \"Rager\" Shotgun",
         "tags": "stocked ksar_shotgun_energy_01 shotgun",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -9812,9 +9813,19 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Devastator \"Rager\" Shotgun",
             "Description": "Manufacturer: Kastak Arms\\nItem Type: Shotgun\\nClass: Energy (Plasma)\\n\\nBattery Size: 12\\nRate Of Fire: 60 rpm\\nEffective Range: 20 m\\n\\nThis semi-automatic electric shotgun from Kastak Arms delivers high-impact plasma blasts ideal for close combat. The Voyager edition upgrades the look with a checked metallic finish offset with blue highlights. An outrageous combination of black, cyan, and purple makes the \"Rager\" edition an extra good time.",
+            "DescriptionData": {
+                "Manufacturer": "Kastak Arms",
+                "Item Type": "Shotgun",
+                "Class": "Energy (Plasma)",
+                "Size": "12",
+                "Rate Of Fire": "60 rpm",
+                "Effective Range": "20 m"
+            },
+            "DescriptionText": "This semi-automatic electric shotgun from Kastak Arms delivers high-impact plasma blasts ideal for close combat. The Voyager edition upgrades the look with a checked metallic finish offset with blue highlights. An outrageous combination of black, cyan, and purple makes the \"Rager\" edition an extra good time.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "stocked",
@@ -9825,6 +9836,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "ksar_shotgun_energy_01"
                     ],
@@ -9832,24 +9845,45 @@
                         "ksar_shotgun_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "86eec5f7-3dd0-40f2-a433-3dc143c0d231",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory",
                         "energy_barrel"
@@ -9859,24 +9893,44 @@
                         "energy_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9956,14 +10010,21 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

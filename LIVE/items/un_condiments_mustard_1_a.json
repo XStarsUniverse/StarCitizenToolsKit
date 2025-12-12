@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Mustard",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "6a43191c-3a7b-4e11-8c07-1fc3e8c71fca",
             "ClassName": "un_condiments_mustard_1_a",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Mustard",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

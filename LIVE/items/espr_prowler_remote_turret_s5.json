@@ -1093,6 +1093,7 @@
         "grade": 1,
         "name": "Esperia Prowler Turret",
         "tags": "gimbalMount",
+        "required_tags": "ESPR_Prowler_Base",
         "manufacturer": "ESPR",
         "stdItem": {
             "UUID": "92d6e85c-e59a-4826-bcfa-f96e580164b1",
@@ -1105,9 +1106,15 @@
             "Type": "Turret.BallTurret",
             "Name": "Esperia Prowler Turret",
             "Description": "Item Type: Turret\\nManufacturer: Esperia\\n\\nThis faithful recreation of the original Tevarin design features modern mounts for precise target acquisition.",
+            "DescriptionData": {
+                "Item Type": "Turret",
+                "Manufacturer": "Esperia"
+            },
+            "DescriptionText": "This faithful recreation of the original Tevarin design features modern mounts for precise target acquisition.",
             "Manufacturer": {
                 "Code": "ESPR",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "4ecc1a24-d228-4dd5-8857-21ba6145a1d3"
             },
             "Tags": [
                 "gimbalMount"
@@ -1116,24 +1123,56 @@
                 {
                     "PortName": "hardpoint_weapon_left",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "left"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_weapon_right",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "right"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1144,7 +1183,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1167,6 +1208,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 15,

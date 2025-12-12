@@ -2037,6 +2037,7 @@
         "grade": 1,
         "name": "C8R Pisces Standard Flight Blade",
         "tags": "ANVL_Pisces_C8R_Blade",
+        "required_tags": "ANVL_Pisces_C8R_Blade",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "c8a18f9f-bdea-4bcf-b011-68e0959ee297",
@@ -2049,9 +2050,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "C8R Pisces Standard Flight Blade",
             "Description": "Manufacturer: Anvil Aerospace\\nType: Flight Blade\\n\\nThis is the standard issue flight blade for the Anvil C8R Pisces Rescue.",
+            "DescriptionData": {
+                "Manufacturer": "Anvil Aerospace",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "This is the standard issue flight blade for the Anvil C8R Pisces Rescue.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Pisces_C8R_Blade"
@@ -2094,6 +2101,40 @@
                     "CapacitorRegenDelayAfterUse": 1.1,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

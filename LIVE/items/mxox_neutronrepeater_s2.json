@@ -4839,6 +4839,7 @@
         "grade": 1,
         "name": "NDB-28 Repeater",
         "tags": "flightReady weaponMountUsable MXOX",
+        "required_tags": "",
         "manufacturer": "MXOX",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4852,9 +4853,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "NDB-28 Repeater",
             "Description": "Manufacturer: MaxOx\\nItem Type: Neutron Repeater\\nSize: 2\\n\\nFeaturing a sleek, scientific design, the MaxOx NDB-28 is the next step in serious stopping power. Twin barrels overlap blasts for sustained neutron fire that remains effective at short to medium range.",
+            "DescriptionData": {
+                "Manufacturer": "MaxOx",
+                "Item Type": "Neutron Repeater",
+                "Size": "2"
+            },
+            "DescriptionText": "Featuring a sleek, scientific design, the MaxOx NDB-28 is the next step in serious stopping power. Twin barrels overlap blasts for sustained neutron fire that remains effective at short to medium range.",
             "Manufacturer": {
                 "Code": "MXOX",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "de0d3594-9f18-42c0-8a90-6edd723d80f8"
             },
             "Tags": [
                 "flightReady",
@@ -4865,33 +4873,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "cc96be3a-eafc-4548-b158-6be512189b22",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "e090007e-3c41-4429-8b32-76794da6e246",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "f4bdaf29-0ffd-4ace-a45a-cbeea4fb1039",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "cd67ef2c-8124-4bca-8a43-1197c36c33cc",
                     "Uneditable": false
                 }
             ],
@@ -4916,8 +4968,37 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.05,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

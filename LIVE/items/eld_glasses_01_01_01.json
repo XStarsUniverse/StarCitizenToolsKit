@@ -1397,6 +1397,7 @@
         "grade": 1,
         "name": "PH - eld_glasses_01_01_01",
         "tags": "eld_glasses Set_01 Color_01",
+        "required_tags": "Protos",
         "manufacturer": "ELD",
         "stdItem": {
             "UUID": "438c2a51-e3f8-44de-97bc-5b03f0c19dfe",
@@ -1409,9 +1410,11 @@
             "Type": "Char_Accessory_Eyes.UNDEFINED",
             "Name": "PH - eld_glasses_01_01_01",
             "Description": "PH - eld_glasses_01_01_01",
+            "DescriptionText": "PH - eld_glasses_01_01_01",
             "Manufacturer": {
                 "Code": "ELD",
-                "Name": "Escar Limited"
+                "Name": "Escar Limited",
+                "UUID": "190a2e0e-6d60-4719-8238-ac7e1c746626"
             },
             "Tags": [
                 "eld_glasses",
@@ -1422,7 +1425,16 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Inspect"
+            ]
         }
     }
 }

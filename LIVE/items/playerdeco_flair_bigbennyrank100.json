@@ -913,6 +913,7 @@
         "grade": 1,
         "name": "Big Benny's \"Classic\" Vending Machine",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "566b9e3a-dcd1-46ba-b446-b257fad575ef",
             "ClassName": "PlayerDeco_Flair_BigBennyRank100",
@@ -924,11 +925,20 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Big Benny's \"Classic\" Vending Machine",
             "Description": "A replica of the original Big Benny's vending machine designed to bring a nostalgic touch to any environment.",
+            "DescriptionText": "A replica of the original Big Benny's vending machine designed to bring a nostalgic touch to any environment.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Activate jingle"
+            ]
         }
     }
 }

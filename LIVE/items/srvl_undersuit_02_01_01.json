@@ -4018,6 +4018,7 @@
         "grade": 1,
         "name": "Wastelander Undersuit Ransacker",
         "tags": "$armor_mobi++ SM_RestrictedArm",
+        "required_tags": "",
         "classification": "FPS.Armor.Undersuit",
         "stdItem": {
             "UUID": "980585cd-2025-418d-8bf9-1592efffdf84",
@@ -4030,6 +4031,19 @@
             "Type": "Char_Armor_Undersuit.UNDEFINED",
             "Name": "Wastelander Undersuit Ransacker",
             "Description": "Item Type: Undersuit\\nDamage Reduction: 10%\\nTemp. Rating: -30 / 60 \u00b0C\\nRadiation Protection: 15200 REM\\nRadiation Scrub Rate: 81 REM/s\\n\\nRoughly sewn together from a variety of ransacked materials, the Wastelander undersuit will just about do the job.",
+            "DescriptionData": {
+                "Item Type": "Undersuit",
+                "Damage Reduction": "10%",
+                "Temp. Rating": "-30 / 60 \u00b0C",
+                "Radiation Protection": "15200 REM",
+                "Radiation Scrub Rate": "81 REM/s"
+            },
+            "DescriptionText": "Roughly sewn together from a variety of ransacked materials, the Wastelander undersuit will just about do the job.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "$armor_mobi++",
                 "SM_RestrictedArm"
@@ -4038,6 +4052,8 @@
                 {
                     "PortName": "wep_stocked_3",
                     "Size": 5,
+                    "MinSize": 2,
+                    "MaxSize": 5,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -4046,15 +4062,39 @@
                         "transferable"
                     ],
                     "Types": [
-                        "WeaponPersonal",
-                        "FPS_Deployable",
-                        "WeaponPersonal"
+                        "WeaponPersonal.Medium",
+                        "WeaponPersonal.Large",
+                        "FPS_Deployable.Medium",
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Medium",
+                                "Large"
+                            ]
+                        },
+                        {
+                            "type": "FPS_Deployable",
+                            "sub_types": [
+                                "Medium"
+                            ]
+                        },
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "magazine_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -4062,13 +4102,25 @@
                         "transferable"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine",
+                        "WeaponAttachment.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "magazine_attach_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -4076,13 +4128,25 @@
                         "transferable"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine",
+                        "WeaponAttachment.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "medPen_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -4092,11 +4156,18 @@
                     "Types": [
                         "FPS_Consumable"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FPS_Consumable"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -4107,14 +4178,32 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal",
-                        "RemovableChip"
+                        "WeaponPersonal.Gadget",
+                        "WeaponPersonal.Rocket",
+                        "RemovableChip.Hacking"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget",
+                                "Rocket"
+                            ]
+                        },
+                        {
+                            "type": "RemovableChip",
+                            "sub_types": [
+                                "Hacking"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "oxyPen_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -4124,11 +4213,18 @@
                     "Types": [
                         "FPS_Consumable"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FPS_Consumable"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -4136,13 +4232,25 @@
                         "transferable"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small",
+                        "WeaponPersonal.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Torso",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nontransferable",
@@ -4151,11 +4259,18 @@
                     "Types": [
                         "Char_Armor_Torso"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Torso"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Arms",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nontransferable",
@@ -4164,11 +4279,18 @@
                     "Types": [
                         "Char_Armor_Arms"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Arms"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Legs",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nontransferable",
@@ -4177,11 +4299,18 @@
                     "Types": [
                         "Char_Armor_Legs"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Legs"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Helmet",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys",
                         "unlootable",
@@ -4192,11 +4321,18 @@
                     "Types": [
                         "Char_Armor_Helmet"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Helmet"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "helmethook_attach_PLACEHOLDER",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -4207,6 +4343,11 @@
                     "Types": [
                         "Char_Armor_Helmet"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Helmet"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
@@ -4215,18 +4356,87 @@
                 "Length": 0.75,
                 "Height": 1.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openlootingui"
+            ],
+            "ResourceContainer": {
+                "Mass": 0.2,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 100,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 9.999999999999999e-5
+                },
+                "InclusiveResources": [
+                    "12181a14-034b-4deb-92b7-2faf2cfd182b"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "12181a14-034b-4deb-92b7-2faf2cfd182b",
+                        "Weight": 1
+                    }
+                ]
+            },
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 1,
+                    "Physical": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.85,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "cbe3a3e8-5035-4772-acb7-014617c6b03a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013",
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "a473c5da-487a-4a97-9356-99a0be1d4cbe",
                     "b8507c75-47b0-4119-9657-2e516f6959cb"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Infrared",
+                        "Emission": 0
+                    },
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 0
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -30,
                 "Maximum": 60
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 15200,
+                "RadiationDissipationRate": 81
             }
         }
     }

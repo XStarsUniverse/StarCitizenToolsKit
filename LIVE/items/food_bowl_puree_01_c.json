@@ -2288,6 +2288,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "a9959047-793f-44f1-9c0e-1f982268fed0",
@@ -2300,40 +2301,62 @@
             "Type": "Food.Consumable",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Ports": [
                 {
                     "PortName": "$proxy_port_utensil_1",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "WeaponPersonal"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$proxy_port_utensil_2",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Types": [
                         "WeaponPersonal"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$slot_chunk_1",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Uneditable": false
                 },
                 {
                     "PortName": "$slot_chunk_2",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Uneditable": false
                 },
                 {
                     "PortName": "$slot_chunk_3",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Uneditable": false
                 }
             ],
@@ -2343,12 +2366,21 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": ""
-            }
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerTypeTag": "",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -4783,6 +4783,7 @@
         "grade": 1,
         "name": "Attrition-2 Repeater",
         "tags": "HRST LaserRepeater flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "HRST",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4796,9 +4797,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Attrition-2 Repeater",
             "Description": "Manufacturer: Hurston Dynamics\\nItem Type: Laser Repeater\\nSize: 2\\n\\nWhen the battle is heating up, that's when Hurston Dynamics' cascade laser technology really shines. With the size two Attrition-2 repeater, an operator can utilize sustained bursts of laser fire in order to translate excess heat into greater weapon performance.",
+            "DescriptionData": {
+                "Manufacturer": "Hurston Dynamics",
+                "Item Type": "Laser Repeater",
+                "Size": "2"
+            },
+            "DescriptionText": "When the battle is heating up, that's when Hurston Dynamics' cascade laser technology really shines. With the size two Attrition-2 repeater, an operator can utilize sustained bursts of laser fire in order to translate excess heat into greater weapon performance.",
             "Manufacturer": {
                 "Code": "HRST",
-                "Name": "Hurston Dynamics"
+                "Name": "Hurston Dynamics",
+                "UUID": "ee8b7bb3-d420-435c-924f-561e67e64588"
             },
             "Tags": [
                 "HRST",
@@ -4810,33 +4818,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "fd055ecf-d21d-4486-aab3-76a915942f7a",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "b559abe7-6a46-45d3-950e-4439ebaf3892",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "851c418c-daef-4a75-8075-355dc5ec102a",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "41581324-24e9-4e90-8e1b-3d2d71c26b7f",
                     "Uneditable": false
                 }
             ],
@@ -4861,8 +4913,37 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.05,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

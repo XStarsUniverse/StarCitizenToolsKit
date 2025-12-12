@@ -1369,6 +1369,7 @@
         "grade": 1,
         "name": "Nav-E7 Echo Scanner",
         "tags": "DRAK_Cutlass_Remote_Turret",
+        "required_tags": "DRAK_Cutlass_Remote_Turret",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "a1b8ef62-25b0-4ece-a01d-9272219d4a2a",
@@ -1381,9 +1382,16 @@
             "Type": "TurretBase.Unmanned",
             "Name": "Nav-E7 Echo Scanner",
             "Description": "Item Type: Turret\\nManufacturer: Nav-E7\\nSize: 4\\n\\nThe Echo scanner from Nav-E7 utilizes enhanced long-range sensor capabilities and the manual precision of a remote turret mount to become an indispensable tool during search operations.",
+            "DescriptionData": {
+                "Item Type": "Turret",
+                "Manufacturer": "Nav-E7",
+                "Size": "4"
+            },
+            "DescriptionText": "The Echo scanner from Nav-E7 utilizes enhanced long-range sensor capabilities and the manual precision of a remote turret mount to become an indispensable tool during search operations.",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "DRAK_Cutlass_Remote_Turret"
@@ -1394,7 +1402,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 2000
+                "Health": 2000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1417,6 +1427,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 15,

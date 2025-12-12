@@ -1137,6 +1137,7 @@
         "grade": 1,
         "name": "JS-500",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AMRS",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1150,17 +1151,37 @@
             "Type": "PowerPlant.Power",
             "Name": "JS-500",
             "Description": "Item Type: Power Plant \\nManufacturer: Amon & Reese Co. \\nSize: 3\\nGrade: A\\nClass: Military\\n\\nThe JS-500 is A&R\u2019s best performing large power plant. This military-grade component receives consistent praise from users both in the military and civilian market.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Amon & Reese Co.",
+                "Size": "3",
+                "Grade": "A",
+                "Class": "Military"
+            },
+            "DescriptionText": "The JS-500 is A&R's best performing large power plant. This military-grade component receives consistent praise from users both in the military and civilian market.",
             "Manufacturer": {
                 "Code": "AMRS",
-                "Name": "Amon & Reese Co."
+                "Name": "Amon & Reese Co.",
+                "UUID": "eccba58a-f6d9-42e8-95c6-d0a65763e583"
             },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 1.5,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 133.33,
+                "Maximum": 40000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 3100
+                "Health": 3100,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1183,6 +1204,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 42500,
@@ -1200,6 +1225,39 @@
             },
             "PowerPlant": {
                 "Output": 42500
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 25,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 24,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 12400
+                        }
+                    }
+                ]
             }
         }
     }

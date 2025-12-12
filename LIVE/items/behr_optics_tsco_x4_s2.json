@@ -1623,6 +1623,7 @@
         "grade": 1,
         "name": "EE04 (4x Telescopic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1636,15 +1637,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "EE04 (4x Telescopic)",
             "Description": "Manufacturer: Behring\\nType: Telescopic  \\nAttachment Point: Optic\\nMagnification: 4x\\nZoom: 4x-5.5x\\nAim Time: +25%\\nSize: S2\\n\\nGet a clear view of your target from afar with the EE04. Behring craftsmanship produced a 4x scope that's lightweight, durable, and deadly accurate. A rigorous 22-step testing process ensures the EE04 can deliver precision targeting even after encountering extreme weather or surviving battlefield wear and tear.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Type": "Telescopic",
+                "Attachment Point": "Optic",
+                "Magnification": "4x",
+                "Size": "S2"
+            },
+            "DescriptionText": "Get a clear view of your target from afar with the EE04. Behring craftsmanship produced a 4x scope that's lightweight, durable, and deadly accurate. A rigorous 22-step testing process ensures the EE04 can deliver precision targeting even after encountering extreme weather or surviving battlefield wear and tear.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

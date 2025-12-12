@@ -2825,6 +2825,7 @@
         "grade": 1,
         "name": "SureGrip HV-S1 Tractor Beam",
         "tags": "flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "355b26c5-a3b7-4c34-ad8b-d281473715e8",
@@ -2837,9 +2838,15 @@
             "Type": "TractorBeam.UNDEFINED",
             "Name": "SureGrip HV-S1 Tractor Beam",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Tractor Beam\\nMax Angle: 60\u00b0\\nMax Range: 130 m\\nFull Strength Distance: 55 m\\n\\nThis heavy-duty variant of Greycat\u2019s SureGrip tractor beam sacrifices range in exchange for additional power to handle larger and heavier objects making it an essential tool in a variety of industrial applications.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Tractor Beam"
+            },
+            "DescriptionText": "This heavy-duty variant of Greycat's SureGrip tractor beam sacrifices range in exchange for additional power to handle larger and heavier objects making it an essential tool in a variety of industrial applications.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "flightReady",
@@ -2849,32 +2856,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2884,8 +2931,37 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1050
+                "Health": 1050,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

@@ -865,6 +865,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "80ab6c74-b84a-45b2-bd8f-9a1fb2aa804d",
@@ -877,12 +878,42 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
+            },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

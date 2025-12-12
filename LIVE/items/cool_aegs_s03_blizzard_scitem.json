@@ -925,6 +925,7 @@
         "grade": 1,
         "name": "Blizzard",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -938,9 +939,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Blizzard",
             "Description": "Item Type: Cooler\\nManufacturer: Aegis Dynamics\\nSize: 3\\nGrade: A \\nClass: Military\\n\\nNavy mechanics worked with Aegis engineers to ensure the Blizzard met their specific needs. When it reached the commercial market, this top of the line, military-grade cooler became one of Aegis\u2019 top selling components.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "3",
+                "Grade": "A",
+                "Class": "Military"
+            },
+            "DescriptionText": "Navy mechanics worked with Aegis engineers to ensure the Blizzard met their specific needs. When it reached the commercial market, this top of the line, military-grade cooler became one of Aegis' top selling components.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Cooler": {
                 "CoolingRate": 11600000,
@@ -952,8 +962,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 2000
+                "Health": 2000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 20,
@@ -990,6 +1011,31 @@
                 "OverclockPerformance": 0.08,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 5,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 38.4,
+                                "MinimumFraction": 0.4,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 2480,
+                            "IR": 12700
+                        }
+                    }
+                ]
             }
         }
     }

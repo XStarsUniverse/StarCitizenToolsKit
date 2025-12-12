@@ -747,6 +747,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "24c57dac-759d-4bd6-bef6-72f422ffbac9",
@@ -759,13 +760,35 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "Interactions": [
+                "Ejection"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

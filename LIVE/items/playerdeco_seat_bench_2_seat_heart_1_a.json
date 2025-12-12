@@ -1189,6 +1189,7 @@
         "grade": 1,
         "name": "Coramor '55 Loveseat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "97e44de7-bd60-4157-802e-a4c506abc2f9",
             "ClassName": "PlayerDeco_Seat_Bench_2_Seat_Heart_1_a",
@@ -1200,11 +1201,22 @@
             "Type": "Usable.Cargo",
             "Name": "Coramor '55 Loveseat",
             "Description": "Snuggle up this Coramor on this luxurious heart-shaped couch. Featuring a captivating crimson covering, the nano-woven fibers of this settee guarantee you'll stay comfortable all night long.",
+            "DescriptionText": "Snuggle up this Coramor on this luxurious heart-shaped couch. Featuring a captivating crimson covering, the nano-woven fibers of this settee guarantee you'll stay comfortable all night long.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit_left",
+                "Exit",
+                "Sit_right"
+            ]
         }
     }
 }

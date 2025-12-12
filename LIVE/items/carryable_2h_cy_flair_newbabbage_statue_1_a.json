@@ -1027,6 +1027,7 @@
         "grade": 1,
         "name": "Wally's Bar Hologram Replica",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "081fe84e-0e31-4d22-88e2-8281fe5e10f2",
             "ClassName": "Carryable_2H_CY_flair_newbabbage_statue_1_a",
@@ -1038,11 +1039,22 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "Wally's Bar Hologram Replica",
             "Description": "This replica of the holographic center piece at the infamous Wally's Bar in New Babbage features warm oranges and yellows that evoke the feeling of a tropical sunset in your personal habitat.",
+            "DescriptionText": "This replica of the holographic center piece at the infamous Wally's Bar in New Babbage features warm oranges and yellows that evoke the feeling of a tropical sunset in your personal habitat.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

@@ -2781,6 +2781,7 @@
         "grade": 1,
         "name": "Waveshift",
         "tags": "mining_gadget GRIN WaveShift",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "478ffd41-77dc-4239-a842-9fdf3d2072ac",
@@ -2793,9 +2794,18 @@
             "Type": "Gadget.Gadget",
             "Name": "Waveshift",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Gadget\\n\\nLaser Instability: -35%\\nOptimal Charge Window Size: +100%\\n\\nOptimal Charge Window Rate: -30%\\n\\nA unique chipset allows the WaveShift to keep instability in check while dramatically increasing the size of the optimal charge window. Though the optimal charge window will fill slower, the larger target area makes it easier to find the perfect spot to shatter a deposit. \\n\\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Gadget",
+                "Laser Instability": "-35%",
+                "Optimal Charge Window Size": "+100%",
+                "Optimal Charge Window Rate": "-30%"
+            },
+            "DescriptionText": "A unique chipset allows the WaveShift to keep instability in check while dramatically increasing the size of the optimal charge window. Though the optimal charge window will fill slower, the larger target area makes it easier to find the perfect spot to shatter a deposit. \n\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "mining_gadget",
@@ -2808,8 +2818,24 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 10
-            }
+                "Health": 10,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Activate",
+                "Deactivate",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Offhandequip",
+                "Prime",
+                "Unprime",
+                "Carrylowered"
+            ]
         }
     }
 }

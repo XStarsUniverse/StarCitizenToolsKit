@@ -1940,6 +1940,7 @@
         "grade": 1,
         "name": "Placeholder - SPV Jacket",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SPV",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1953,19 +1954,28 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Placeholder - SPV Jacket",
             "Description": "Placeholder - SPV Jacket Desc",
+            "DescriptionText": "Placeholder - SPV Jacket Desc",
             "Manufacturer": {
                 "Code": "SPV",
-                "Name": "Spar Van Miles"
+                "Name": "Spar Van Miles",
+                "UUID": "e7c9f9ee-a1db-40ee-bfa8-a8ffead4ac1d"
             },
             "Ports": [
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1975,6 +1985,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -1990,6 +2009,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

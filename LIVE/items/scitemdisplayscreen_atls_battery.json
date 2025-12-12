@@ -1063,6 +1063,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "437f093f-305c-4d8a-92f1-210583303565",
             "ClassName": "SCItemDisplayScreen_ATLS_Battery",
@@ -1074,9 +1075,21 @@
             "Type": "Display.Default",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
-            "Durability": {
-                "Health": 50
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
             },
+            "Durability": {
+                "Health": 50,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Turnon",
+                "Turnoff"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,

@@ -2220,6 +2220,7 @@
         "grade": 1,
         "name": "Chernykh",
         "tags": "flightReady",
+        "required_tags": "",
         "classification": "Ship.Radar.MidRangeRadar",
         "stdItem": {
             "UUID": "5b0d1308-b34a-4b55-94f5-7270e03ca82a",
@@ -2232,6 +2233,19 @@
             "Type": "Radar.MidRangeRadar",
             "Name": "Chernykh",
             "Description": "Item Type: Radar\\nManufacturer: WillsOp\\nSize: 2\\nGrade: C\\nClass: Civilian\\n\\nThe Chernykh is named after the famed 26th century engineer who designed some of the most prized radars of that era. This medium radar from WillsOp celebrates both the look and performance of those classic components.",
+            "DescriptionData": {
+                "Item Type": "Radar",
+                "Manufacturer": "WillsOp",
+                "Size": "2",
+                "Grade": "C",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "The Chernykh is named after the famed 26th century engineer who designed some of the most prized radars of that era. This medium radar from WillsOp celebrates both the look and performance of those classic components.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
             ],
@@ -2239,17 +2253,35 @@
                 {
                     "PortName": "BatteryPort",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "invisible"
                     ],
                     "Types": [
                         "Battery"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Battery"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 300,
+                "Maximum": 6000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 820
+                "Health": 820,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.445,
@@ -2286,6 +2318,33 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 5000,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 2,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 750
+                        }
+                    }
+                ]
             },
             "Radar": {
                 "Cooldown": 2.5,

@@ -2544,6 +2544,7 @@
         "grade": 1,
         "name": "Lancet MH1 Mining Laser",
         "tags": "flightReady weaponMountUsable miningMount",
+        "required_tags": "miningMount",
         "manufacturer": "GRIN",
         "classification": "Ship.Mining.Gun",
         "stdItem": {
@@ -2557,9 +2558,24 @@
             "Type": "WeaponMining.Gun",
             "Name": "Lancet MH1 Mining Laser",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Laser \\nSize: 1\\n\\nOptimal Range: 30m\\nMaximum Range: 90m\\n\\nMining Laser Power: 504 - 2520\\nExtraction Laser Power: 1850\\n\\nModule Slots: 1\\n\\nLaser Instability: -10%\\nOptimal Charge Window Rate: +40%\\nInert Material Level: -30%\\n\\nOptimal Charge Window Size: -60%\\n\\nGreycat classifies the Lancet MH1 as a support laser best utilized when mining with others. While the mining laser's small optimal charge window size means precision is key, the Lancet MH1 excels at reducing the amount of inert materials collected by the extraction laser. For mining crews, it's an ideal support laser to use alongside other lasers.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Laser",
+                "Size": "1",
+                "Optimal Range": "30m",
+                "Maximum Range": "90m",
+                "Mining Laser Power": "504 - 2520",
+                "Extraction Laser Power": "1850",
+                "Module Slots": "1",
+                "Laser Instability": "-10%",
+                "Optimal Charge Window Rate": "+40%",
+                "Optimal Charge Window Size": "-60%"
+            },
+            "DescriptionText": "Greycat classifies the Lancet MH1 as a support laser best utilized when mining with others. While the mining laser's small optimal charge window size means precision is key, the Lancet MH1 excels at reducing the amount of inert materials collected by the extraction laser. For mining crews, it's an ideal support laser to use alongside other lasers.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "flightReady",
@@ -2570,6 +2586,8 @@
                 {
                     "PortName": "BONE_ItemPort_Consumable_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable1"
@@ -2578,15 +2596,33 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2596,8 +2632,37 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

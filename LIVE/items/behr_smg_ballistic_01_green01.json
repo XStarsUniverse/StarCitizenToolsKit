@@ -9192,6 +9192,7 @@
         "grade": 1,
         "name": "P8-SC\u00a0\"Warhawk\" SMG",
         "tags": "stocked behr_smg_ballistic_01 smg",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -9205,9 +9206,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "P8-SC\u00a0\"Warhawk\" SMG",
             "Description": "Manufacturer: Behring\\nItem Type: SMG\\nClass: Ballistic\\n\\nMagazine Size: 45\\nRate Of Fire: 800 rpm\\nEffective Range: 30 m\\n\\nAttachments: Optics (S1), Barrel (S1), Underbarrel (S1)\\n\\nWhen the top fighting force in the universe chooses a weapon as their standard, it pays to stand up and take notice. The Behring-crafted P8-SC has been the ballistic submachine gun of choice for the UEE Marines since it first came off the production line, but since then, many have come to rely on this weapon for their own personal safety and protection.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "SMG",
+                "Class": "Ballistic",
+                "Magazine Size": "45",
+                "Rate Of Fire": "800 rpm",
+                "Effective Range": "30 m",
+                "Attachments": "Optics (S1), Barrel (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "When the top fighting force in the universe chooses a weapon as their standard, it pays to stand up and take notice. The Behring-crafted P8-SC has been the ballistic submachine gun of choice for the UEE Marines since it first came off the production line, but since then, many have come to rely on this weapon for their own personal safety and protection.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "stocked",
@@ -9218,6 +9230,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "behr_smg_ballistic_01"
                     ],
@@ -9225,24 +9239,45 @@
                         "behr_smg_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "90adb28a-049e-4357-8000-a4bb75bb7f6f",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
@@ -9251,24 +9286,44 @@
                         "ballistic_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9327,14 +9382,21 @@
                 "Length": 1.125,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

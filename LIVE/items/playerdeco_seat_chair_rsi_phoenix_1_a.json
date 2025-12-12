@@ -928,6 +928,7 @@
         "grade": 1,
         "name": "RSI Accent Chair",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "cb2b3432-ab5f-4499-96e6-12a0620e3eb4",
@@ -940,15 +941,21 @@
             "Type": "Usable.Cargo",
             "Name": "RSI Accent Chair",
             "Description": "Styled after the seats aboard the RSI Constellation Phoenix, this grey and white accent chair is fantastic way to show your love of space travel even when staying at home.",
+            "DescriptionText": "Styled after the seats aboard the RSI Constellation Phoenix, this grey and white accent chair is fantastic way to show your love of space travel even when staying at home.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

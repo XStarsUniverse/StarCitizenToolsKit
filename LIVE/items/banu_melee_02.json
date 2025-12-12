@@ -1736,6 +1736,7 @@
         "grade": 1,
         "name": "Myondo Knife",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "BANU",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1749,9 +1750,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "Myondo Knife",
             "Description": "Manufacturer: Banu\\nItem Type: Knife\\nClass: Melee\\n\\nSize: N/A\\n\\nThe Myondo is a distinct, curved blade with a notched finger-well and bejeweled pommel. The texture on both the blade and handle come from the unique forging process used by the Banu craftsmen who make them.",
+            "DescriptionData": {
+                "Manufacturer": "Banu",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "N/A"
+            },
+            "DescriptionText": "The Myondo is a distinct, curved blade with a notched finger-well and bejeweled pommel. The texture on both the blade and handle come from the unique forging process used by the Banu craftsmen who make them.",
             "Manufacturer": {
                 "Code": "BANU",
-                "Name": "Banu"
+                "Name": "Banu",
+                "UUID": "2b5ba252-e826-4356-ac0d-8d88007ea386"
             },
             "Tags": [
                 "knife"
@@ -1761,6 +1770,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

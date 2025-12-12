@@ -1488,6 +1488,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "9873fa65-1abb-4907-a943-20c94c68de0f",
@@ -1500,20 +1501,30 @@
             "Type": "Visor.Personal",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Ports": [
                 {
                     "PortName": "radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
+                    ],
+                    "EquippedItem": "a64be577-9f99-403d-bd9b-e4de74d55de6",
                     "Uneditable": true
                 }
             ],

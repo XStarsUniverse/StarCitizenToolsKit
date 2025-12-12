@@ -1506,6 +1506,7 @@
         "grade": 1,
         "name": "Mala",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1bb9c577-1561-4904-aafa-4d106810383e",
             "ClassName": "Harvestable_Vice_Mala",
@@ -1517,13 +1518,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Mala",
             "Description": "Digestion of the unique toxins found in the Mala fly causes confusion of the congnitive pathways of the brain and results in synesthesia where different sensory experiences cross and mix. Effects described by users range widely; from being able to see music to tasting colors. Since pain does not register the same way while under the influence of the toxin, many people of have been severely injured while \"sense swapping.\" For example, one user lost their arm after perceiving the heat from a thruster engine as pleasurable.",
+            "DescriptionText": "Digestion of the unique toxins found in the Mala fly causes confusion of the congnitive pathways of the brain and results in synesthesia where different sensory experiences cross and mix. Effects described by users range widely; from being able to see music to tasting colors. Since pain does not register the same way while under the influence of the toxin, many people of have been severely injured while \"sense swapping.\" For example, one user lost their arm after perceiving the heat from a thruster engine as pleasurable.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 750,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.00075
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "801ba093-ccce-4514-9fff-212fdcce9397",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -1295,6 +1295,7 @@
         "grade": 3,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "TARS",
         "stdItem": {
             "UUID": "ea607138-635a-4d31-9be6-9ec651b8260c",
@@ -1307,12 +1308,25 @@
             "Type": "JumpDrive.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "TARS",
-                "Name": "Tarsus"
+                "Name": "Tarsus",
+                "UUID": "2b25a2dd-47ea-4ab0-8711-03d34be214b1"
+            },
+            "Distortion": {
+                "DecayDelay": 1,
+                "DecayRate": 345.6,
+                "Maximum": 1728,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
             },
             "Durability": {
-                "Health": 1900
+                "Health": 1900,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 80,
@@ -1328,6 +1342,34 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Transiting",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "QuantumFuel",
+                                "Rate": 0,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

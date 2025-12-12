@@ -1503,6 +1503,7 @@
         "grade": 1,
         "name": "Glow",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "eefcd9ea-0506-49c8-9c61-0a707376fd0f",
             "ClassName": "Harvestable_Vice_Glow",
@@ -1514,13 +1515,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Glow",
             "Description": "A variant of the street drug known as \"Neon,\" Glow is formulated to create more euphoric feelings and less hallucinations than are normally associated with other members of its chemical family. The telltale sign of a user is that swallowing the capsule often leaves glowing residue on the tongue. Some people microdose Glow to help them maintain a more positive attitude (being careful to drip the dose directly onto the back of their throat). The main risk is that once the effect wears off people can become suicidally depressed for a short while before their brain chemistry normalizes.",
+            "DescriptionText": "A variant of the street drug known as \"Neon,\" Glow is formulated to create more euphoric feelings and less hallucinations than are normally associated with other members of its chemical family. The telltale sign of a user is that swallowing the capsule often leaves glowing residue on the tongue. Some people microdose Glow to help them maintain a more positive attitude (being careful to drip the dose directly onto the back of their throat). The main risk is that once the effect wears off people can become suicidally depressed for a short while before their brain chemistry normalizes.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 750,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.00075
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "bdeef09b-a4da-4b51-a7fa-54147871525e",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

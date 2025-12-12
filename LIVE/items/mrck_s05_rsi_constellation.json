@@ -1161,6 +1161,7 @@
         "grade": 1,
         "name": "RSI Constellation Top Missile Rack",
         "tags": "flightReady",
+        "required_tags": "RSI_Constellation_Base",
         "manufacturer": "RSI",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -1174,9 +1175,11 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "RSI Constellation Top Missile Rack",
             "Description": "RSI Constellation Top Missile Rack",
+            "DescriptionText": "RSI Constellation Top Missile Rack",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady"
@@ -1185,48 +1188,108 @@
                 {
                     "PortName": "missile_attach_01",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_attach_02",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_attach_03",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_attach_04",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_attach_05",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_attach_06",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1237,7 +1300,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.5,
@@ -1277,6 +1342,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

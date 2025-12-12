@@ -1086,6 +1086,7 @@
         "grade": 1,
         "name": "Fresh Food",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "6aad1a77-cef2-405f-8f59-24827f37a4bf",
@@ -1098,6 +1099,12 @@
             "Type": "Cargo.Small",
             "Name": "Fresh Food",
             "Description": "Various meats, grains and produce that have not yet been cooked, dried, salted, frozen, pickled, or otherwise preserved.",
+            "DescriptionText": "Various meats, grains and produce that have not yet been cooked, dried, salted, frozen, pickled, or otherwise preserved.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1105,6 +1112,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "096618a0-1f7d-48db-9c6a-9ac459386527",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

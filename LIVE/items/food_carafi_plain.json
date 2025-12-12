@@ -1532,6 +1532,7 @@
         "grade": 1,
         "name": "Carafi Cube",
         "tags": "carafi plain",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "3317c57a-5bfc-4dea-8a2e-9394f0626de6",
@@ -1544,9 +1545,15 @@
             "Type": "Food.Consumable",
             "Name": "Carafi Cube",
             "Description": "NDR: 10\\nEffects: Hypermetabolic\\n\\nA flavorless nutrient jelly with a firm, slippery texture.\\n",
+            "DescriptionData": {
+                "NDR": "10",
+                "Effects": "Hypermetabolic"
+            },
+            "DescriptionText": "A flavorless nutrient jelly with a firm, slippery texture.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "carafi",
@@ -1558,12 +1565,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "10",
+                "Effects": [
+                    "Hypermetabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -266,6 +266,7 @@
         "grade": 1,
         "name": "Internal Tank",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "BANU",
         "classification": "Ship.FuelTank.Fuel",
         "stdItem": {
@@ -279,15 +280,57 @@
             "Type": "FuelTank.Fuel",
             "Name": "Internal Tank",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "BANU",
-                "Name": "Banu"
+                "Name": "Banu",
+                "UUID": "2b5ba252-e826-4356-ac0d-8d88007ea386"
             },
             "Tags": [
                 "flightReady"
             ],
             "FuelTank": {
                 "Capacity": 0
+            },
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 21.5,
+                    "UnitName": "SCU",
+                    "SCU": 21.5
+                },
+                "InclusiveResources": [
+                    "de9f4d03-6b60-429d-9b26-9f2308bae973"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "de9f4d03-6b60-429d-9b26-9f2308bae973",
+                        "Weight": 1
+                    }
+                ]
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 100,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Storage",
+                                "Resource": "Fuel",
+                                "Rate": 10,
+                                "GeneratedResource": "Fuel",
+                                "GeneratedRate": 10,
+                                "Discharge": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

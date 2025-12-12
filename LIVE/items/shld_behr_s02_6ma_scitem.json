@@ -1076,6 +1076,7 @@
         "grade": 2,
         "name": "6MA 'Kozane'",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1089,17 +1090,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "6MA 'Kozane'",
             "Description": "Item Type: Shield Generator\\nManufacturer: Behring\\nSize: 2\\nGrade: B\\nClass: Civilian\\n\\nBehring\u2019s ironclad reputation is almost as impenetrable as the shield produced by the 6MA \u2018Kozane\u2019. If it\u2019s good enough for Behring, it\u2019s good enough for you.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Behring",
+                "Size": "2",
+                "Grade": "B",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Behring's ironclad reputation is almost as impenetrable as the shield produced by the 6MA 'Kozane'. If it's good enough for Behring, it's good enough for you.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 720
+                "Health": 720,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 3.5,
@@ -1136,6 +1157,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2.5,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 295,
+                                "MinimumFraction": 0.6666667,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 3,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1350
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 4430,

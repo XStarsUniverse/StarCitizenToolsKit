@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Carinite (Pure)",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "a4260be4-d1f6-4be9-9dea-8b38e50f7a9f",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Carinite (Pure)",
             "Description": "Typical carinite sources feature various impurities. However, under certain extremely rare conditions, carinite veins that are more than 90% pure can form. Computing hardware that demands exacting precision will usually seek out pure carinite.",
+            "DescriptionText": "Typical carinite sources feature various impurities. However, under certain extremely rare conditions, carinite veins that are more than 90% pure can form. Computing hardware that demands exacting precision will usually seek out pure carinite.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 2,
+                    "UnitName": "SCU",
+                    "SCU": 2
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "80dd9dd7-1a4e-41b9-9b3b-4f385b87396c",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

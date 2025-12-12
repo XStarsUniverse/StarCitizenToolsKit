@@ -1402,6 +1402,7 @@
         "grade": 1,
         "name": "Hydrogen",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "4c9ab95b-cb2a-4145-aa22-12da28605aaf",
@@ -1414,6 +1415,12 @@
             "Type": "Cargo.Small",
             "Name": "Hydrogen",
             "Description": "The most abundant element in the universe. The building block of stars. Highly flammable in its pure form.",
+            "DescriptionText": "The most abundant element in the universe. The building block of stars. Highly flammable in its pure form.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1423,7 +1430,31 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 5
+                "Health": 5,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "530da47b-c6bb-4d95-a1ee-23a1e4e27b45",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -879,6 +879,7 @@
         "grade": 1,
         "name": "Turret",
         "tags": "",
+        "required_tags": "RSI_Lynx",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "0df7b3c2-70c4-461d-b2fc-d171ea6c0096",
@@ -891,33 +892,58 @@
             "Type": "Turret.BallTurret",
             "Name": "Turret",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Ports": [
                 {
                     "PortName": "turret_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "left"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "turret_right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "right"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Activate remote camera"
             ],
             "PowerConnection": {
                 "PowerBase": 0,

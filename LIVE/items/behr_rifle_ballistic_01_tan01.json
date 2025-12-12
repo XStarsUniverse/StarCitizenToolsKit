@@ -8983,6 +8983,7 @@
         "grade": 1,
         "name": "P4-AR \"Desert Shadow\" Rifle",
         "tags": "stocked behr_rifle_ballistic_01 rifle",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -8996,9 +8997,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "P4-AR \"Desert Shadow\" Rifle",
             "Description": "Manufacturer: Behring\\nItem Type: Assault Rifle\\nClass: Ballistic\\n\\nMagazine Size: 40\\nRate Of Fire: 550 rpm\\nEffective Range: 50 m\\n\\nAttachments: Optics (S2), Barrel (S2), Underbarrel (S2)\\n\\nBehring's classic P4-AR rifle features a collapsible stock and shortened barrel, making it an ideal choice for close-quarter firefights. Its accuracy and general ease of use make it universally valued among security, military and civilian users.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Assault Rifle",
+                "Class": "Ballistic",
+                "Magazine Size": "40",
+                "Rate Of Fire": "550 rpm",
+                "Effective Range": "50 m",
+                "Attachments": "Optics (S2), Barrel (S2), Underbarrel (S2)"
+            },
+            "DescriptionText": "Behring's classic P4-AR rifle features a collapsible stock and shortened barrel, making it an ideal choice for close-quarter firefights. Its accuracy and general ease of use make it universally valued among security, military and civilian users.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "stocked",
@@ -9009,6 +9021,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "behr_rifle_ballistic_01"
                     ],
@@ -9016,24 +9030,45 @@
                         "behr_rifle_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "1f8845fb-22de-4c73-b6e6-ed1d1b066808",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
@@ -9042,24 +9077,44 @@
                         "ballistic_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9118,14 +9173,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

@@ -1074,6 +1074,7 @@
         "grade": 1,
         "name": "@items_commodities_valakkarpearl_apex_tier1",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "f0920bf8-e0c6-4045-a6ca-2c57a37bc1eb",
             "ClassName": "Carryable_2H_FL_Vlk_Pearl_Super_01",
@@ -1085,11 +1086,23 @@
             "Type": "Misc.Harvestable",
             "Name": "@items_commodities_valakkarpearl_apex_tier1",
             "Description": "@items_commodities_valakkarpearl_desc",
+            "DescriptionText": "@items_commodities_valakkarpearl_desc",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

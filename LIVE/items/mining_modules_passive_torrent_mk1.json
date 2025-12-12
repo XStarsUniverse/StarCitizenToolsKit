@@ -1999,6 +1999,7 @@
         "grade": 1,
         "name": "Torrent Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "THCN",
         "stdItem": {
             "UUID": "d1b1792f-21bc-456f-ae53-20f301920a55",
@@ -2011,9 +2012,17 @@
             "Type": "MiningModifier.Gun",
             "Name": "Torrent Module",
             "Description": "Manufacturer: Thermyte Concern\\nItem Type: Mining Module (Passive)\\n\\nOptimal Charge Rate: +30%\\n\\nOptimal Charge Window Size: -10%\\n\\nSave time while mining with the Torrent Module. It requires steady hands to hit the sweet spot but accelerates the charge rate once there.",
+            "DescriptionData": {
+                "Manufacturer": "Thermyte Concern",
+                "Item Type": "Mining Module (Passive)",
+                "Optimal Charge Rate": "+30%",
+                "Optimal Charge Window Size": "-10%"
+            },
+            "DescriptionText": "Save time while mining with the Torrent Module. It requires steady hands to hit the sweet spot but accelerates the charge rate once there.",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "miningConsumable",
@@ -2025,8 +2034,17 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

@@ -1719,6 +1719,7 @@
         "grade": 1,
         "name": "Cambio-Lite SRT Attachment",
         "tags": "grin_multitool_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.WeaponAttachment.Utility",
         "stdItem": {
@@ -1732,9 +1733,16 @@
             "Type": "WeaponAttachment.Utility",
             "Name": "Cambio-Lite SRT Attachment",
             "Description": "MUST BUY BASE MULTI-TOOL TO USE: \"Pyro RYT Multi-Tool\"\\n\\nManufacturer: Greycat Industrial\\nItem Type: Multi-Tool Attachment\\nClass: Salvage and Repair\\n\\nGreycat delivers once again, bringing their popular salvage and repair tool (SRT) as an attachment for the Multi-Tool. Though not as powerful as the Cambio, the Cambio-Lite also collects and converts alloys and polymers found in scrap into recycled material composite that can either be sold or used to make quick repairs. Whether stripping salvage for creds or patching a hull to make a ship space-safe, the Cambio-Lite is ready to get to work.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Multi-Tool Attachment",
+                "Class": "Salvage and Repair"
+            },
+            "DescriptionText": "Greycat delivers once again, bringing their popular salvage and repair tool (SRT) as an attachment for the Multi-Tool. Though not as powerful as the Cambio, the Cambio-Lite also collects and converts alloys and polymers found in scrap into recycled material composite that can either be sold or used to make quick repairs. Whether stripping salvage for creds or patching a hull to make a ship space-safe, the Cambio-Lite is ready to get to work.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_multitool_01"
@@ -1743,7 +1751,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

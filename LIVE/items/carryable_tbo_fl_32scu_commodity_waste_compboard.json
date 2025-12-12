@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Compboard",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "ee30f79e-a0a4-4fd8-93f5-a6c90b9f1560",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Compboard",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3.75,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 32,
+                    "UnitName": "SCU",
+                    "SCU": 32
+                },
+                "InclusiveGroups": [
+                    "3492ff58-bd82-41f2-9af0-b13569e22ce6"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "9177e3bb-6714-49f5-8beb-46a981226ff6",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -922,6 +922,7 @@
         "grade": 2,
         "name": "Eco-Flow",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "JUST",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Eco-Flow",
             "Description": "Item Type: Cooler\\nManufacturer: Juno Starwerk\\nSize: 1\\nGrade: B\\nClass: Industrial\\n\\nA standard for centuries, Juno Starwerk\u2019s industrial Eco-Flow cooler is a favorite of haulers for being easy to maintain even when carrying the heaviest cargo loads.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Juno Starwerk",
+                "Size": "1",
+                "Grade": "B",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "A standard for centuries, Juno Starwerk's industrial Eco-Flow cooler is a favorite of haulers for being easy to maintain even when carrying the heaviest cargo loads.",
             "Manufacturer": {
                 "Code": "JUST",
-                "Name": "Juno Starwerk"
+                "Name": "Juno Starwerk",
+                "UUID": "d7cc897f-b760-4a73-93c0-27e23c52db0a"
             },
             "Cooler": {
                 "CoolingRate": 420000,
@@ -949,8 +959,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 350
+                "Health": 350,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 8.25,
                 "DecayRateOfEM": 0.19
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 19.8,
+                                "MinimumFraction": 0.6666667,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1490,
+                            "IR": 6530
+                        }
+                    }
+                ]
             }
         }
     }

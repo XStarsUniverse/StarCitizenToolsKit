@@ -966,6 +966,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "625f1c8b-8504-482b-976c-aa5bc3a5ba3c",
             "ClassName": "SCItemDisplayScreen_Consumer_Minimal",
@@ -977,9 +978,21 @@
             "Type": "Display.Default",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
-            "Durability": {
-                "Health": 50
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
             },
+            "Durability": {
+                "Health": 50,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Turnon",
+                "Turnoff"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,

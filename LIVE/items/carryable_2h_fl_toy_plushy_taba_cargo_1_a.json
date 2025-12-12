@@ -1031,6 +1031,7 @@
         "grade": 1,
         "name": "T.A.B.A. Cargo Plushie",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1581e12a-b162-40c1-ae28-0adf5edc15ad",
             "ClassName": "Carryable_2H_FL_toy_plushy_taba_cargo_1_a",
@@ -1042,11 +1043,24 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "T.A.B.A. Cargo Plushie",
             "Description": "Here's a haul you can hug. This plushie shaped like a cargo container features T.A.B.A. Freightline branding with the company's logo and black and grey color scheme.",
+            "DescriptionText": "Here's a haul you can hug. This plushie shaped like a cargo container features T.A.B.A. Freightline branding with the company's logo and black and grey color scheme.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

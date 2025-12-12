@@ -1373,6 +1373,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "be897cd5-1aab-4d72-8256-de90c0a758f2",
             "ClassName": "Seat_Stool_Animated_DRAK_Clipper_Cockpit",
@@ -1383,7 +1384,22 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit",
+                "Type",
+                "Order",
+                "Drink",
+                "Open",
+                "Close"
+            ]
         }
     }
 }

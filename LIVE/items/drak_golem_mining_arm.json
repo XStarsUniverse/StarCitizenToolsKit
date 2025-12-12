@@ -413,6 +413,7 @@
         "grade": 1,
         "name": "Mining Arm",
         "tags": "$miningMount",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "d5c7bdc2-c1a2-4576-ae4e-42bd76d7f981",
@@ -425,9 +426,11 @@
             "Type": "ToolArm.UNDEFINED",
             "Name": "Mining Arm",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "$miningMount"
@@ -436,6 +439,8 @@
                 {
                     "PortName": "hardpoint_mining_laser",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "$uneditable"
                     ],
@@ -446,7 +451,15 @@
                         "$DRAK_miningMount"
                     ],
                     "Types": [
-                        "WeaponMining"
+                        "WeaponMining.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponMining",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 }

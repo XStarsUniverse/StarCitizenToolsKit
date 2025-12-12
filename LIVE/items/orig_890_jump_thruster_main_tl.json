@@ -1602,6 +1602,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "flightReady",
+        "required_tags": "",
         "classification": "Ship.MainThruster.FixedThruster",
         "stdItem": {
             "UUID": "088cee98-acb4-41e3-acc5-88006a93e2e6",
@@ -1614,11 +1615,19 @@
             "Type": "MainThruster.FixedThruster",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
             ],
             "Durability": {
-                "Health": 45000
+                "Health": 45000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 11,
@@ -1655,6 +1664,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 50,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Fuel",
+                                "Rate": 0.01,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Thruster": {
                 "thrustCapacity": 273000000,

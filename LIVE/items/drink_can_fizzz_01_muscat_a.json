@@ -1977,6 +1977,7 @@
         "grade": 1,
         "name": "Fizzz Muscat",
         "tags": "fizzz muscat",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "2553f95f-acd8-4372-9fca-30a2aea5a77c",
@@ -1989,9 +1990,15 @@
             "Type": "Drink.Can",
             "Name": "Fizzz Muscat",
             "Description": "HEI: 16\\nEffects: Energizing, Hyper-Metabolic\\n\\nA refreshing burst of fizzzy muscat flavor!",
+            "DescriptionData": {
+                "HEI": "16",
+                "Effects": "Energizing, Hyper-Metabolic"
+            },
+            "DescriptionText": "A refreshing burst of fizzzy muscat flavor!",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "fizzz",
@@ -2003,12 +2010,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "16",
+                "Effects": [
+                    "Energizing",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

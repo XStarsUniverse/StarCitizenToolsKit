@@ -1602,6 +1602,7 @@
         "grade": 1,
         "name": "RF1 (1x Reflex)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1615,15 +1616,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "RF1 (1x Reflex)",
             "Description": "Manufacturer: Behring\\nType: Reflex\\nAttachment Point: Optic\\nMagnification: 1x\\nAim Time: +15%\\nSize: 1\\n\\nPerfect for close-quarter combat, the RF1 non-magnifying reflex optic was the first to use Behring's Hyper-Lumen substrate coating to ensure the aiming reticle could be seen in wide range of light conditions, day or night.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Type": "Reflex",
+                "Attachment Point": "Optic",
+                "Magnification": "1x",
+                "Size": "1"
+            },
+            "DescriptionText": "Perfect for close-quarter combat, the RF1 non-magnifying reflex optic was the first to use Behring's Hyper-Lumen substrate coating to ensure the aiming reticle could be seen in wide range of light conditions, day or night.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

@@ -2833,6 +2833,7 @@
         "grade": 1,
         "name": "Durus Tractor Beam",
         "tags": "flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "83b3857b-d7d5-40bd-b79c-058026f29ec6",
@@ -2845,9 +2846,15 @@
             "Type": "TractorBeam.UNDEFINED",
             "Name": "Durus Tractor Beam",
             "Description": "Manufacturer: Argo Astronautics\\nItem Type: Tractor Beam\\nMax Angle: 60\u00b0\\nMax Range: 150 m\\nFull Strength Distance: 75 m\\n\\nMade specifically for the ATLS power suit, the Durus tractor beam from Argo Astronautics has been carefully tuned for loading and unloading cargo.",
+            "DescriptionData": {
+                "Manufacturer": "Argo Astronautics",
+                "Item Type": "Tractor Beam"
+            },
+            "DescriptionText": "Made specifically for the ATLS power suit, the Durus tractor beam from Argo Astronautics has been carefully tuned for loading and unloading cargo.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "flightReady",
@@ -2857,32 +2864,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2892,8 +2939,37 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1050
+                "Health": 1050,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

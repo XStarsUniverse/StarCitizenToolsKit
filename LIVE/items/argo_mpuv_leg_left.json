@@ -1927,6 +1927,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ARGO",
         "stdItem": {
             "UUID": "469652b2-8d31-4e97-a71c-76deadde110b",
@@ -1939,14 +1940,18 @@
             "Type": "Misc.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ARGO",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "9e1f5a35-edcc-4d19-bede-08e2730043c5"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_engine_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "main",
                         "uneditable"
@@ -1954,11 +1959,18 @@
                     "Types": [
                         "MainThruster"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MainThruster"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_fuel_intake_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
@@ -1966,33 +1978,56 @@
                     "Types": [
                         "FuelIntake"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FuelIntake"
+                        }
+                    ],
+                    "EquippedItem": "2e0a5325-8d81-4cad-8bbd-db96d6cc99e6",
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_landing_gear_left",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "LandingSystem"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "LandingSystem"
+                        }
+                    ],
+                    "EquippedItem": "530a0139-ddb6-46bb-9ff9-3dec00a3a847",
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_lights_leg_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Room"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Room"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_thruster_rear_left_top",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable",
                         "maneuver",
@@ -2002,11 +2037,18 @@
                     "Types": [
                         "ManneuverThruster"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ManneuverThruster"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_thruster_rear_left_middle",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable",
                         "maneuver",
@@ -2016,11 +2058,18 @@
                     "Types": [
                         "ManneuverThruster"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ManneuverThruster"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_thruster_rear_left_bottom",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable",
                         "maneuver",
@@ -2030,22 +2079,36 @@
                     "Types": [
                         "ManneuverThruster"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ManneuverThruster"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_seat_access_leg_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "SeatAccess"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SeatAccess"
+                        }
+                    ],
                     "Uneditable": true
                 }
             ],
             "Durability": {
-                "Health": 240
+                "Health": 240,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "FuelIntake": {
                 "Rate": 0,
@@ -2072,6 +2135,14 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Panelopen",
+                "Panelclose",
+                "Panelcycle",
+                "Legdeploy",
+                "Legretract",
+                "Legcycle"
+            ],
             "PowerConnection": {
                 "PowerBase": 0.5,
                 "PowerDraw": 1,

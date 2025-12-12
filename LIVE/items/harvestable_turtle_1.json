@@ -1271,6 +1271,7 @@
         "grade": 1,
         "name": "@item_commodities_stonebugshell",
         "tags": "Fossil",
+        "required_tags": "",
         "stdItem": {
             "UUID": "a0a4e1f8-8c68-486f-b828-5b241d02337a",
             "ClassName": "Harvestable_Turtle_1",
@@ -1282,6 +1283,12 @@
             "Type": "Misc.Harvestable",
             "Name": "@item_commodities_stonebugshell",
             "Description": "@item_commodities_stonebugshell_desc",
+            "DescriptionText": "@item_commodities_stonebugshell_desc",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Fossil"
             ],
@@ -1289,7 +1296,15 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ]
         }
     }
 }

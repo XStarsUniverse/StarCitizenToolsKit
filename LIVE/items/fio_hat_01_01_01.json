@@ -1765,6 +1765,7 @@
         "grade": 1,
         "name": "Pacifica Hat",
         "tags": "fio_hat Set_01 Color_01 KeepsShape $hatHair+",
+        "required_tags": "Protos",
         "manufacturer": "FIO",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1778,9 +1779,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Pacifica Hat",
             "Description": "The Pacifica is a white wide-brimmed sun hat featuring a large decorative flower and striped hat band secured by a gold clasp.",
+            "DescriptionText": "The Pacifica is a white wide-brimmed sun hat featuring a large decorative flower and striped hat band secured by a gold clasp.",
             "Manufacturer": {
                 "Code": "FIO",
-                "Name": "Fiore"
+                "Name": "Fiore",
+                "UUID": "503b0974-5027-4c69-bce6-a38c42e87ebe"
             },
             "Tags": [
                 "fio_hat",
@@ -1793,11 +1796,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1807,9 +1817,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

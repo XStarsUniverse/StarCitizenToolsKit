@@ -922,6 +922,7 @@
         "grade": 4,
         "name": "RapidCool",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ACOM",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "RapidCool",
             "Description": "Item Type: Cooler\\nManufacturer: ACOM\\nSize: 2\\nGrade: D \\nClass: Competition\\n\\nACOM brings its performance first philosophy to this medium cooler. The RapidCool trades signature strength and durability for better performance.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "ACOM",
+                "Size": "2",
+                "Grade": "D",
+                "Class": "Competition"
+            },
+            "DescriptionText": "ACOM brings its performance first philosophy to this medium cooler. The RapidCool trades signature strength and durability for better performance.",
             "Manufacturer": {
                 "Code": "ACOM",
-                "Name": "ACOM"
+                "Name": "ACOM",
+                "UUID": "5d616e6f-3257-4d19-90c3-11ab974f12e7"
             },
             "Cooler": {
                 "CoolingRate": 4560000,
@@ -949,8 +959,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 260
+                "Health": 260,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 15,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.16
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 26.4,
+                                "MinimumFraction": 1,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1230,
+                            "IR": 7200
+                        }
+                    }
+                ]
             }
         }
     }

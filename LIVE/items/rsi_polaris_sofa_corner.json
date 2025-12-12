@@ -1856,6 +1856,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "47f470c4-ca27-4749-a12a-228760b976c0",
             "ClassName": "rsi_polaris_sofa_corner",
@@ -1866,7 +1867,17 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

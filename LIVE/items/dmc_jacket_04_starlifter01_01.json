@@ -1958,6 +1958,7 @@
         "grade": 1,
         "name": "Hercules Starlifter Flight Jacket",
         "tags": "dmc_jacket Set_04 Color_01",
+        "required_tags": "",
         "manufacturer": "DMC",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1971,9 +1972,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Hercules Starlifter Flight Jacket",
             "Description": "Carrying Capacity: 2K \u00b5SCU\\n\\nA flight jacket dedicated to the Hercules Starlifter and its ability to handle more than twelve labors. Made from synthetic leather, the jacket is styled with two front pockets, a ribbed waistband and cuffs to guarantee a good fit. The front features a Crusader logo while the back sports the ship serenely soaring through the clouds.",
+            "DescriptionData": {
+                "Carrying Capacity": "2K \u00b5SCU"
+            },
+            "DescriptionText": "A flight jacket dedicated to the Hercules Starlifter and its ability to handle more than twelve labors. Made from synthetic leather, the jacket is styled with two front pockets, a ribbed waistband and cuffs to guarantee a good fit. The front features a Crusader logo while the back sports the ship serenely soaring through the clouds.",
             "Manufacturer": {
                 "Code": "DMC",
-                "Name": "DMC"
+                "Name": "DMC",
+                "UUID": "a53bbc2b-aa43-483d-967e-0cebc5600c04"
             },
             "Tags": [
                 "dmc_jacket",
@@ -1984,11 +1990,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1998,6 +2011,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.002,
                 "unit": 6,
@@ -2013,6 +2035,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

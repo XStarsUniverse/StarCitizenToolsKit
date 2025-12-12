@@ -1495,6 +1495,7 @@
         "grade": 1,
         "name": "Flareweed Stalk",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "3fb5efa8-9a85-48d7-a8fe-56caaef4329a",
             "ClassName": "Harvestable_Flareweed",
@@ -1506,13 +1507,40 @@
             "Type": "Misc.Harvestable",
             "Name": "Flareweed Stalk",
             "Description": "Flareweed is a hearty plant that can survive in harsh environments. With a natural ability to filter out harmful elements from its water supply, flareweed stalks are frequently harvested to be used in filtration systems.",
+            "DescriptionText": "Flareweed is a hearty plant that can survive in harsh environments. With a natural ability to filter out harmful elements from its water supply, flareweed stalks are frequently harvested to be used in filtration systems.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                }
             }
         }
     }

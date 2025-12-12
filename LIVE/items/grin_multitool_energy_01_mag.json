@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "Pyro RYT Multi-Tool Battery",
         "tags": "grin_multitool_energy_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,11 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Pyro RYT Multi-Tool Battery",
             "Description": "This battery powers Greycat's Pyro RYT Multi-Tool, so that you can tackle a variety of tasks.",
+            "DescriptionText": "This battery powers Greycat's Pyro RYT Multi-Tool, so that you can tackle a variety of tasks.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_multitool_energy_01"
@@ -1959,7 +1962,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

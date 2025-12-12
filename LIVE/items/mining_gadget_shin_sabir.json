@@ -2790,6 +2790,7 @@
         "grade": 1,
         "name": "Sabir",
         "tags": "mining_gadget SHIN Sabir",
+        "required_tags": "",
         "manufacturer": "SHIN",
         "stdItem": {
             "UUID": "d539a485-4a68-4426-8678-2cff115e6051",
@@ -2802,9 +2803,18 @@
             "Type": "Gadget.Gadget",
             "Name": "Sabir",
             "Description": "Manufacturer: Shubin Interstellar\\nItem Type: Mining Gadget\\n\\nOptimal Charge Window Size: +50%\\nResistance: -50%\\n\\nInstability: +15%\\n\\nMake that tough deposit easier to crack with the Sabir. It uses a special sensor to modulate laser power and adjust it to that particular deposit. The effect increases instability but also provides a dramatic drop in resistance and an increased optimal charge window to make mining it easier. \\n\\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
+            "DescriptionData": {
+                "Manufacturer": "Shubin Interstellar",
+                "Item Type": "Mining Gadget",
+                "Optimal Charge Window Size": "+50%",
+                "Resistance": "-50%",
+                "Instability": "+15%"
+            },
+            "DescriptionText": "Make that tough deposit easier to crack with the Sabir. It uses a special sensor to modulate laser power and adjust it to that particular deposit. The effect increases instability but also provides a dramatic drop in resistance and an increased optimal charge window to make mining it easier. \n\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
             "Manufacturer": {
                 "Code": "SHIN",
-                "Name": "Shubin Interstellar"
+                "Name": "Shubin Interstellar",
+                "UUID": "ab35f85f-919f-4457-8d58-4e885ea6c5c0"
             },
             "Tags": [
                 "mining_gadget",
@@ -2817,8 +2827,24 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 10
-            }
+                "Health": 10,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Activate",
+                "Deactivate",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Offhandequip",
+                "Prime",
+                "Unprime",
+                "Carrylowered"
+            ]
         }
     }
 }

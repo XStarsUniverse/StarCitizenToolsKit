@@ -437,6 +437,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.Container.Cargo",
         "stdItem": {
             "UUID": "fd267a6b-5f62-42d8-a47e-770177ad7d71",
@@ -448,7 +449,27 @@
             "Length": 0.15,
             "Type": "Container.Cargo",
             "Name": "<= PLACEHOLDER =>",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Ejectcargo"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 32,
+                    "UnitName": "SCU",
+                    "SCU": 32
+                }
+            }
         }
     }
 }

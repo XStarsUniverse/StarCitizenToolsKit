@@ -1547,6 +1547,7 @@
         "grade": 1,
         "name": "RSI Polaris Torpedo Rack",
         "tags": "$RSI_Perseus",
+        "required_tags": "RSI_Perseus",
         "manufacturer": "RSI",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -1560,9 +1561,16 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "RSI Polaris Torpedo Rack",
             "Description": "Item Type: Torpedo Rack\\nManufacturer: RSI\\nSize: 10\\nTorpedo: 7xS10 \\n\\nBring the impressive firepower of the Polaris to bear with this bespoke torpedo rack holding seven massive S10 torpedoes.",
+            "DescriptionData": {
+                "Item Type": "Torpedo Rack",
+                "Manufacturer": "RSI",
+                "Size": "10"
+            },
+            "DescriptionText": "Bring the impressive firepower of the Polaris to bear with this bespoke torpedo rack holding seven massive S10 torpedoes.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "$RSI_Perseus"
@@ -1571,80 +1579,180 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_02_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_03_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_04_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_05_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_06_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_07_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_08_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_09_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_10_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1655,7 +1763,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 2000
+                "Health": 2000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1,
@@ -1695,6 +1805,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

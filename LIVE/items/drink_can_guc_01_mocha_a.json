@@ -1965,6 +1965,7 @@
         "grade": 1,
         "name": "Get Up Coffee (Mocha)",
         "tags": "guc mocha",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "b1873456-fa9d-4a91-870b-5f56f65a5c8b",
@@ -1977,9 +1978,15 @@
             "Type": "Drink.Can",
             "Name": "Get Up Coffee (Mocha)",
             "Description": "HEI: 15\\nEffects: Dehydrating, Cognitive Boosting\\n\\nGet Up Coffee is roasted with care to ensure a smooth blend of rich coffee flavor brewed to perfection. Enjoy your break even more with Mocha, our coffee enhanced with a swirl of chocolate and milk.",
+            "DescriptionData": {
+                "HEI": "15",
+                "Effects": "Dehydrating, Cognitive Boosting"
+            },
+            "DescriptionText": "Get Up Coffee is roasted with care to ensure a smooth blend of rich coffee flavor brewed to perfection. Enjoy your break even more with Mocha, our coffee enhanced with a swirl of chocolate and milk.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "guc",
@@ -1991,12 +1998,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "15",
+                "Effects": [
+                    "Dehydrating",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

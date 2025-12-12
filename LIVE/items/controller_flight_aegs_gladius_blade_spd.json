@@ -2074,6 +2074,7 @@
         "grade": 1,
         "name": "Gladius TSB Flight Blade",
         "tags": "AEGS_Gladius_Blade",
+        "required_tags": "AEGS_Gladius_Blade",
         "manufacturer": "BRRA",
         "stdItem": {
             "UUID": "d21e1dc6-a7c3-40ba-b3de-8acba4e8a073",
@@ -2086,9 +2087,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Gladius TSB Flight Blade",
             "Description": "Manufacturer: Broad & Rabiee\\nType: Flight Blade\\n\\nUnlock the potential of your Aegis Gladius with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
+            "DescriptionData": {
+                "Manufacturer": "Broad & Rabiee",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "Unlock the potential of your Aegis Gladius with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
             "Manufacturer": {
                 "Code": "BRRA",
-                "Name": "Broad & Rabiee"
+                "Name": "Broad & Rabiee",
+                "UUID": "ad865899-f5ba-4818-ae8c-fe80a55108b7"
             },
             "Tags": [
                 "AEGS_Gladius_Blade"
@@ -2131,6 +2138,40 @@
                     "CapacitorRegenDelayAfterUse": 0.2,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

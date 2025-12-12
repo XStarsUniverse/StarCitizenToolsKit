@@ -1402,6 +1402,7 @@
         "grade": 1,
         "name": "Astatine",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "e4fcf4ad-e52d-4370-9eb2-d4be3c338df2",
@@ -1414,6 +1415,12 @@
             "Type": "Cargo.Small",
             "Name": "Astatine",
             "Description": "A dangerously radioactive, highly unstable halogen. Some of its isotopes have half-lives of one second or less.",
+            "DescriptionText": "A dangerously radioactive, highly unstable halogen. Some of its isotopes have half-lives of one second or less.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1423,7 +1430,31 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 5
+                "Health": 5,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "e821252d-9d3f-479d-aea3-6ac6cb835784",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

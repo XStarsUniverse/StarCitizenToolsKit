@@ -2214,6 +2214,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "c57cff4a-f5ec-403c-b2b4-201f60b2a59d",
@@ -2226,62 +2227,130 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_turret_weapon_left_a",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_turret_weapon_left_b",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_turret_weapon_right_b",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_turret_weapon_right_a",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 }
             ],
             "Durability": {
-                "Health": 13000
+                "Health": 13000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -2304,6 +2373,15 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode",
+                "Toptobottom",
+                "Bottomtotop",
+                "Snaptobottomstate",
+                "Snaptotopstate",
+                "Cycleturretposition"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

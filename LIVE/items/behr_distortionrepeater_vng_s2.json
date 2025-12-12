@@ -2428,6 +2428,7 @@
         "grade": 1,
         "name": "ATVS Repeater",
         "tags": "flightReady weaponMountUsable VanguardNose AEGS_Vanguard_Base",
+        "required_tags": "AEGS_Vanguard_Base VanguardNose",
         "manufacturer": "BEH",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2441,9 +2442,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "ATVS Repeater",
             "Description": "Manufacturer: Behring\\nItem Type: Distortion Repeater\\nSize: 2\\n\\nMess with an aggressor's electrical system with the ATVS from Behring. This disruptive, non-lethal distortion repeater is only compatible with the nose-mount on the Aegis Vanguard.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Distortion Repeater",
+                "Size": "2"
+            },
+            "DescriptionText": "Mess with an aggressor's electrical system with the ATVS from Behring. This disruptive, non-lethal distortion repeater is only compatible with the nose-mount on the Aegis Vanguard.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "flightReady",
@@ -2480,8 +2488,37 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.467,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

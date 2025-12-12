@@ -4693,6 +4693,7 @@
         "grade": 1,
         "name": "Dominance-3 Scattergun",
         "tags": "HRST ScatterGun flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "HRST",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4706,9 +4707,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Dominance-3 Scattergun",
             "Description": "Manufacturer: Hurston Dynamics\\nItem Type: Laser Scattergun\\nSize: 3\\n\\nThe Dominance-3 scattergun from Hurston Dynamics showcases the weapons manufacturer's cascade technology. As the operator continues to fire the size three weapon, the better able it is to convert the heat generated into increasingly devastating attacks.",
+            "DescriptionData": {
+                "Manufacturer": "Hurston Dynamics",
+                "Item Type": "Laser Scattergun",
+                "Size": "3"
+            },
+            "DescriptionText": "The Dominance-3 scattergun from Hurston Dynamics showcases the weapons manufacturer's cascade technology. As the operator continues to fire the size three weapon, the better able it is to convert the heat generated into increasingly devastating attacks.",
             "Manufacturer": {
                 "Code": "HRST",
-                "Name": "Hurston Dynamics"
+                "Name": "Hurston Dynamics",
+                "UUID": "ee8b7bb3-d420-435c-924f-561e67e64588"
             },
             "Tags": [
                 "HRST",
@@ -4720,33 +4728,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "f48031f5-172a-4049-a4ee-00c2904d054e",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d3edf817-cfe5-45bb-8c9c-4c7c02389970",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "72981786-7fe8-4b78-9676-f61a2d74cd89",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "8c862c60-1f8d-462a-a939-d58687036116",
                     "Uneditable": false
                 }
             ],
@@ -4771,8 +4823,37 @@
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1550
+                "Health": 1550,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.938,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

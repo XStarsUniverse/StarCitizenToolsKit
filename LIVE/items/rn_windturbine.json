@@ -550,6 +550,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "EnergySource",
+        "required_tags": "",
         "classification": "Ship.Weapon",
         "stdItem": {
             "UUID": "5c847555-077b-4f3c-b757-f9ebce947f44",
@@ -562,9 +563,58 @@
             "Type": "WeaponGun.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "EnergySource"
-            ]
+            ],
+            "Interactions": [
+                "On",
+                "Off"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 55,
+                "States": [
+                    {
+                        "Name": "Powered",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            }
+                        ],
+                        "LinkedInteractionStates": [
+                            {
+                                "linkedInteractionState": "StateTypes[1].SInteractionStateType.States[1]",
+                                "changeInteractionState": 1
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Unpowered",
+                        "LinkedInteractionStates": [
+                            {
+                                "linkedInteractionState": "StateTypes[1].SInteractionStateType.States[0]",
+                                "changeInteractionState": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

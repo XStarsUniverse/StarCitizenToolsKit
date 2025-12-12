@@ -2639,6 +2639,7 @@
         "grade": 1,
         "name": "M9A Cannon",
         "tags": "flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2652,9 +2653,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "M9A Cannon",
             "Description": "Manufacturer: Behring\\nItem Type: Laser Cannon\\nSize: 7\\n\\nStrike at the very heart of your enemies with the devastating impact of Behring's M9A energy autocannon. When fully charged, the massive stopping power of this laser weapon has the potential to halt even capital ships in their tracks.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Laser Cannon",
+                "Size": "7"
+            },
+            "DescriptionText": "Strike at the very heart of your enemies with the devastating impact of Behring's M9A energy autocannon. When fully charged, the massive stopping power of this laser weapon has the potential to halt even capital ships in their tracks.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "flightReady",
@@ -2664,32 +2672,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2715,8 +2763,37 @@
                 "Length": 3.75,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 708660
+                "Health": 708660,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4.93,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

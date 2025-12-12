@@ -196,6 +196,7 @@
         "grade": 1,
         "name": "SHIELDS",
         "tags": "flightReady",
+        "required_tags": "",
         "stdItem": {
             "UUID": "b60cc31d-9b0d-44d4-98ad-d3f750388c44",
             "ClassName": "Controller_Shield_MRAI_Pulse",
@@ -207,9 +208,33 @@
             "Type": "ShieldController.UNDEFINED",
             "Name": "SHIELDS",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Shield",
+                                "Rate": 1000000,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

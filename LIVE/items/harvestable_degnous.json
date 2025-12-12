@@ -1570,6 +1570,7 @@
         "grade": 1,
         "name": "Degnous Root",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d8676266-51a0-47f6-badf-99afc69ea29a",
             "ClassName": "Harvestable_Degnous",
@@ -1581,13 +1582,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Degnous Root",
             "Description": "Degnous root is a macroalgae that was discovered in the shallow coastlines of Prime on Terra. Once harvested, degnous can be utilized as an ingredient in medical and health products thanks to its unique blend of amino acids.",
+            "DescriptionText": "Degnous root is a macroalgae that was discovered in the shallow coastlines of Prime on Terra. Once harvested, degnous can be utilized as an ingredient in medical and health products thanks to its unique blend of amino acids.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 600,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.0006
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "a0046f6f-ce84-4ca2-b5d1-d6598a9aad39",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -3927,6 +3927,7 @@
         "grade": 1,
         "name": "S00 Hofstede",
         "tags": "flightReady weaponMountUsable miningMount",
+        "required_tags": "miningMount roc_ds",
         "manufacturer": "SHIN",
         "classification": "Ship.Mining.Gun",
         "stdItem": {
@@ -3940,9 +3941,25 @@
             "Type": "WeaponMining.Gun",
             "Name": "S00 Hofstede",
             "Description": "Manufacturer: Shubin Interstellar\\nItem Type: Mining Laser\\nSize: S0\\nGrade: B\\n \\nOptimal Range: 30 m\\nMaximum Range: 30 m\\nGather Radius: 1 m\\nExtraction Throughput: 4 cSCU/s\\n \\nPower Transfer: 35\\n \\nInstability: +30 %\\nResistance: -40 %\\nOptimal Charge Window Size: +40 %\\nOptimal Charge Window Rate: +20 %\\nThrottle min: 20%\\n\\nThis is the default mining head for the ROC DS slightly stronger than the Arbor",
+            "DescriptionData": {
+                "Manufacturer": "Shubin Interstellar",
+                "Item Type": "Mining Laser",
+                "Size": "S0",
+                "Grade": "B",
+                "Optimal Range": "30 m",
+                "Maximum Range": "30 m",
+                "Extraction Throughput": "4 cSCU/s",
+                "Power Transfer": "35",
+                "Instability": "+30 %",
+                "Resistance": "-40 %",
+                "Optimal Charge Window Size": "+40 %",
+                "Optimal Charge Window Rate": "+20 %"
+            },
+            "DescriptionText": "This is the default mining head for the ROC DS slightly stronger than the Arbor",
             "Manufacturer": {
                 "Code": "SHIN",
-                "Name": "Shubin Interstellar"
+                "Name": "Shubin Interstellar",
+                "UUID": "ab35f85f-919f-4457-8d58-4e885ea6c5c0"
             },
             "Tags": [
                 "flightReady",
@@ -3953,18 +3970,30 @@
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "Mining_Modifier_ATLS",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
@@ -3977,13 +4006,23 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "UNDEFINED"
+                        "UNDEFINED.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "UNDEFINED",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "Mining_Modifier_ROCds",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
@@ -4003,8 +4042,42 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Activate",
+                "Store",
+                "Deactivate"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Ration pack",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "5c247abb-acfd-4ebc-badf-b9c0446c36ea",
             "ClassName": "un_mre_food_2_a",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Ration pack",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

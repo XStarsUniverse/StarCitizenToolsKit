@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Ship Ammunition",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "0ace073a-7aeb-4e13-977f-df5f40a84e31",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Ship Ammunition",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 8,
+                    "UnitName": "SCU",
+                    "SCU": 8
+                },
+                "InclusiveGroups": [
+                    "9379b129-8688-4777-9f65-9dc09ba935ee"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "984c2ac5-70dc-43be-85a2-15b8db95dcd2",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

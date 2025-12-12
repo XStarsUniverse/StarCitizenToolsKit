@@ -1352,6 +1352,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "bcde6b98-c150-40e7-af98-f51adf7e2090",
             "ClassName": "Seat_Stool_Animated_Ursa_Rover_RSI",
@@ -1362,7 +1363,22 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit",
+                "Type",
+                "Order",
+                "Drink",
+                "Open",
+                "Close"
+            ]
         }
     }
 }

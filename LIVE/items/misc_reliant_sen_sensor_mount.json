@@ -803,6 +803,7 @@
         "grade": 1,
         "name": "Reliant Samos Sensor Suite",
         "tags": "MISC_Reliant_Mount",
+        "required_tags": "MISC_Reliant_Base",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "a587ba9e-7cc9-49c8-bf63-d6bae4a8a9b8",
@@ -815,9 +816,16 @@
             "Type": "Turret.GunTurret",
             "Name": "Reliant Samos Sensor Suite",
             "Description": "Item Type: Sensor Suite\\nManufacturer: MISC\\nSize: 4\\n\\nStandard on the Reliant Sen, the Samos sensor suite was designed to aid in the discovery and study of space phenomena.",
+            "DescriptionData": {
+                "Item Type": "Sensor Suite",
+                "Manufacturer": "MISC",
+                "Size": "4"
+            },
+            "DescriptionText": "Standard on the Reliant Sen, the Samos sensor suite was designed to aid in the discovery and study of space phenomena.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "MISC_Reliant_Mount"
@@ -828,7 +836,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -851,6 +861,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 15,

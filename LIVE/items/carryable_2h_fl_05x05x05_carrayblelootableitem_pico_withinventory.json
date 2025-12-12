@@ -1111,6 +1111,7 @@
         "grade": 1,
         "name": "Container",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "b798ed34-c074-43d0-b252-376719c4a67a",
             "ClassName": "Carryable_2H_FL_05x05x05_CarraybleLootableItem_Pico_WithInventory",
@@ -1122,11 +1123,24 @@
             "Type": "Misc.Personal",
             "Name": "Container",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0123,
                 "unit": 6,

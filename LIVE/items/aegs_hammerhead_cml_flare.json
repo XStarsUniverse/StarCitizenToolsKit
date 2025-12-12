@@ -1919,6 +1919,7 @@
         "grade": 1,
         "name": "Aegis Hammerhead - Decoy Launcher",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -1932,9 +1933,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "Aegis Hammerhead - Decoy Launcher",
             "Description": "Aegis Hammerhead - Decoy Launcher",
+            "DescriptionText": "Aegis Hammerhead - Decoy Launcher",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Ammunition": {
                 "UUID": "7b549a87-5904-4d4a-a6c1-34eaa043722d",
@@ -1950,7 +1953,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,

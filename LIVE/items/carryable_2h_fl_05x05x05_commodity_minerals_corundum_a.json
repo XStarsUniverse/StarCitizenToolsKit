@@ -1196,6 +1196,7 @@
         "grade": 1,
         "name": "Corundum",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "0cbe992e-013a-48ba-b219-0c10c0478ff9",
@@ -1208,6 +1209,12 @@
             "Type": "Cargo.Small",
             "Name": "Corundum",
             "Description": "The crystalline form of aluminum oxide. Used as a gem. Varieties include ruby, sapphire, and padparadscha.",
+            "DescriptionText": "The crystalline form of aluminum oxide. Used as a gem. Varieties include ruby, sapphire, and padparadscha.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1215,6 +1222,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "4236c16b-c47f-4083-9e26-4313733f2326",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

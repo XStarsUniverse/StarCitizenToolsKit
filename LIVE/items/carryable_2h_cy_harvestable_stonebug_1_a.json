@@ -1231,6 +1231,7 @@
         "grade": 1,
         "name": "Stone Bug Shell",
         "tags": "Fossil",
+        "required_tags": "",
         "stdItem": {
             "UUID": "8b765ff3-4cea-403c-8dda-fab783eaf73b",
             "ClassName": "Carryable_2H_CY_harvestable_stonebug_1_a",
@@ -1242,6 +1243,12 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Stone Bug Shell",
             "Description": "Known to curl into a tight ball when threatened, the stone bug is sought after for its tough shell, which can be removed and used as a durable material that has even been utilized in certain armor composites.",
+            "DescriptionText": "Known to curl into a tight ball when threatened, the stone bug is sought after for its tough shell, which can be removed and used as a durable material that has even been utilized in certain armor composites.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Fossil"
             ],
@@ -1249,7 +1256,14 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Throw",
+                "Store"
+            ]
         }
     }
 }

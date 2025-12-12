@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Inert Materials",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "bbc00a82-ccac-4cd5-a5c7-374bf5b0fff0",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Inert Materials",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 8,
+                    "UnitName": "SCU",
+                    "SCU": 8
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "b8029480-f171-4a88-a44d-4323e021f82a",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

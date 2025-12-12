@@ -1981,6 +1981,7 @@
         "grade": 1,
         "name": "Frontier 11 Classic Onyx",
         "tags": "dmc_pants Set_07 Texture_01 Color_18",
+        "required_tags": "",
         "manufacturer": "DMC",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -1994,9 +1995,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Frontier 11 Classic Onyx",
             "Description": "Carrying Capacity: 2k \u00b5SCU\\n\\nConstructed with large pockets and made from durable synth-cloth, the Frontier 11 Classic pants from DMC are a rugged garment designed to handle whatever life might throw your way.",
+            "DescriptionData": {
+                "Carrying Capacity": "2k \u00b5SCU"
+            },
+            "DescriptionText": "Constructed with large pockets and made from durable synth-cloth, the Frontier 11 Classic pants from DMC are a rugged garment designed to handle whatever life might throw your way.",
             "Manufacturer": {
                 "Code": "DMC",
-                "Name": "DMC"
+                "Name": "DMC",
+                "UUID": "a53bbc2b-aa43-483d-967e-0cebc5600c04"
             },
             "Tags": [
                 "dmc_pants",
@@ -2008,19 +2014,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2030,7 +2048,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2040,6 +2066,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.002,
                 "unit": 6,
@@ -2055,6 +2090,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

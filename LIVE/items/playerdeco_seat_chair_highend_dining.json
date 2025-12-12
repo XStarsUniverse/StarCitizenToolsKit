@@ -885,6 +885,7 @@
         "grade": 1,
         "name": "High End Dining Chair",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "20e53e69-1dfd-4f8f-8beb-8af29e1ef1ca",
             "ClassName": "PlayerDeco_Seat_Chair_HighEnd_Dining",
@@ -896,11 +897,21 @@
             "Type": "Usable.Cargo",
             "Name": "High End Dining Chair",
             "Description": "Chair Decoration",
+            "DescriptionText": "Chair Decoration",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

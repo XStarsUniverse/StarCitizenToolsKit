@@ -1111,6 +1111,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady",
+        "required_tags": "AEGS_Reclaimer_Base",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "86be150c-8c7f-47f8-9392-1026189d6003",
@@ -1123,9 +1124,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "flightReady"
@@ -1134,6 +1137,8 @@
                 {
                     "PortName": "hardpoint_weapon_salvage",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Tags": [
                         "$salvageMount"
                     ],
@@ -1143,19 +1148,42 @@
                     "Types": [
                         "SalvageHead"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SalvageHead"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_interior",
                     "Size": 4,
+                    "MinSize": 1,
+                    "MaxSize": 4,
                     "Types": [
                         "Room"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Room"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 4000
+                "Health": 4000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1178,6 +1206,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,

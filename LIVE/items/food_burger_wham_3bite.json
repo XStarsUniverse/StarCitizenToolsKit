@@ -1692,6 +1692,7 @@
         "grade": 1,
         "name": "Whamburger",
         "tags": "sandwich burger whammers",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "ba4c4510-5cab-4d03-b7b2-e708704b8593",
@@ -1704,9 +1705,15 @@
             "Type": "Food.Junk",
             "Name": "Whamburger",
             "Description": "NDR: 38\\nEffects: Dehydrating, Hyper-Metabolic\\n\\nThe original burger that put Whammer's on the starmap. All Whams come with crisp greens, tomatoes, piccamix, and Crave Sauce.",
+            "DescriptionData": {
+                "NDR": "38",
+                "Effects": "Dehydrating, Hyper-Metabolic"
+            },
+            "DescriptionText": "The original burger that put Whammer's on the starmap. All Whams come with crisp greens, tomatoes, piccamix, and Crave Sauce.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "sandwich",
@@ -1719,12 +1726,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "38",
+                "Effects": [
+                    "Dehydrating",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

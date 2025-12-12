@@ -1959,6 +1959,7 @@
         "grade": 1,
         "name": "Cyan QuikFlarePro",
         "tags": "utility",
+        "required_tags": "",
         "manufacturer": "SHIN",
         "classification": "FPS.Weapon.Grenade",
         "stdItem": {
@@ -1972,9 +1973,14 @@
             "Type": "WeaponPersonal.Grenade",
             "Name": "Cyan QuikFlarePro",
             "Description": "Manufacturer: Shubin Interstellar\\n\\nIlluminate the way forward or signal for help with the Cyan QuikFlarePro from Shubin Interstellar. For centuries, miners have counted on this flare as part of their core toolkit, thanks to its tried and true design and durability that ensures it stays ablaze in the various harsh weather and difficult atmospheric conditions encountered across the 'verse.\u00a0The QuikFlarePro uses advanced tech to glow longer than regular flares.",
+            "DescriptionData": {
+                "Manufacturer": "Shubin Interstellar"
+            },
+            "DescriptionText": "Illuminate the way forward or signal for help with the Cyan QuikFlarePro from Shubin Interstellar. For centuries, miners have counted on this flare as part of their core toolkit, thanks to its tried and true design and durability that ensures it stays ablaze in the various harsh weather and difficult atmospheric conditions encountered across the 'verse. The QuikFlarePro uses advanced tech to glow longer than regular flares.",
             "Manufacturer": {
                 "Code": "SHIN",
-                "Name": "Shubin Interstellar"
+                "Name": "Shubin Interstellar",
+                "UUID": "ab35f85f-919f-4457-8d58-4e885ea6c5c0"
             },
             "Tags": [
                 "utility"
@@ -1983,7 +1989,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Equip",
+                "Offhandequip",
+                "Store",
+                "Offhandstore",
+                "Activate"
+            ]
         }
     }
 }

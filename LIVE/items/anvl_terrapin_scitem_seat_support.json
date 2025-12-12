@@ -2018,6 +2018,7 @@
         "grade": 1,
         "name": "Manned Turret",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "4cbb0194-a946-da9a-e179-4b7f5b98ce98",
@@ -2030,9 +2031,11 @@
             "Type": "Seat.UNDEFINED",
             "Name": "Manned Turret",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "flightReady"
@@ -2041,25 +2044,58 @@
                 {
                     "PortName": "Screen_Center",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_scanner",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Tags": [
                         "uneditable"
                     ],
                     "Types": [
                         "UNDEFINED"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "UNDEFINED"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 2500
+                "Health": 2500,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Enterturret",
+                "Power_on",
+                "Power_off",
+                "Turret_sensitivity_increase",
+                "Turret_sensitivity_decrease",
+                "Turret_sensitivity_reset",
+                "Turret_gyro_mode",
+                "Turret_fire_mode",
+                "Activatespotlight",
+                "Deactivatespotlight"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50
             }
         }
     }

@@ -1580,6 +1580,7 @@
         "grade": 1,
         "name": "Drema Injector",
         "tags": "Stash_MediPen medical_injection",
+        "required_tags": "",
         "manufacturer": "RRS",
         "stdItem": {
             "UUID": "6a163e8b-1819-424b-abac-3e8662c55237",
@@ -1592,9 +1593,15 @@
             "Type": "FPS_Consumable.Medical",
             "Name": "Drema Injector",
             "Description": "Manufacturer: Roussimoff Rehabilitation Systems\\nItem Type: Medical Consumable\\n\\nDesigned by RRS for field applications, this single-use device injects a fast-acting sedative into the target's body that will incapacitate the subject for a short duration preventing them from hurting themselves or others.",
+            "DescriptionData": {
+                "Manufacturer": "Roussimoff Rehabilitation Systems",
+                "Item Type": "Medical Consumable"
+            },
+            "DescriptionText": "Designed by RRS for field applications, this single-use device injects a fast-acting sedative into the target's body that will incapacitate the subject for a short duration preventing them from hurting themselves or others.",
             "Manufacturer": {
                 "Code": "RRS",
-                "Name": "Roussimoff Rehabilitation Systems"
+                "Name": "Roussimoff Rehabilitation Systems",
+                "UUID": "73a6ba90-8f53-423d-ad0b-96e81b7e18a5"
             },
             "Tags": [
                 "Stash_MediPen",
@@ -1606,12 +1613,26 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 1,
-                "containerTypeTag": "injection"
+                "Type": "FPS_Consumable",
+                "ContainerClosed": 0,
+                "ContainerType": "injection",
+                "ContainerTypeTag": "injection",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 1
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Consume"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 0,

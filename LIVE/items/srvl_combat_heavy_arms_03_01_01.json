@@ -1780,6 +1780,7 @@
         "grade": 1,
         "name": "Wrecker Arms",
         "tags": "SM_RestrictedArm",
+        "required_tags": "",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
             "UUID": "428d72a7-1786-4e5f-86cb-6afd248f1352",
@@ -1792,6 +1793,19 @@
             "Type": "Char_Armor_Arms.Heavy",
             "Name": "Wrecker Arms",
             "Description": "Item Type: Heavy Armor\\nDamage Reduction: 40%\\nTemp. Rating: -70 / 100 \u00b0C\\nRadiation Protection: 26800 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nFavored by the most brutal of hunters, the Wrecker armor is a fusion of discarded metal and pilfered fabric cobbled together to offer protection while stalking prey. It is sprayed with orange paint and anointed with bone fragments and Vanduul armor pieces.",
+            "DescriptionData": {
+                "Item Type": "Heavy Armor",
+                "Damage Reduction": "40%",
+                "Temp. Rating": "-70 / 100 \u00b0C",
+                "Radiation Protection": "26800 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Favored by the most brutal of hunters, the Wrecker armor is a fusion of discarded metal and pilfered fabric cobbled together to offer protection while stalking prey. It is sprayed with orange paint and anointed with bone fragments and Vanduul armor pieces.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "SM_RestrictedArm"
             ],
@@ -1800,15 +1814,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.65,
+                    "Physical": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.4,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 20
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -70,
                 "Maximum": 100
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26800,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

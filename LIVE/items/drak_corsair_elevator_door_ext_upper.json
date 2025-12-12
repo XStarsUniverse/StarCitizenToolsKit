@@ -1276,6 +1276,7 @@
         "grade": 1,
         "name": "Elevator Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "eeb6398c-392a-4b83-96ba-adb7df94ac27",
             "ClassName": "DRAK_Corsair_Elevator_Door_Ext_Upper",
@@ -1287,9 +1288,28 @@
             "Type": "Door.UNDEFINED",
             "Name": "Elevator Control",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Toggle",
+                "Lock",
+                "Unlock",
+                "Openfinished",
+                "Closefinished",
+                "Lightson",
+                "Lightslow"
+            ]
         }
     }
 }

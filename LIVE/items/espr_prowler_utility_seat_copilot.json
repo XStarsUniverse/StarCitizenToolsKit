@@ -817,6 +817,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "flightReady",
+        "required_tags": "ESPR_Prowler_Base",
         "manufacturer": "ESPR",
         "stdItem": {
             "UUID": "8e7c5bec-31f1-4617-a1a8-70b781d016f7",
@@ -829,13 +830,32 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ESPR",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "4ecc1a24-d228-4dd5-8857-21ba6145a1d3"
             },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

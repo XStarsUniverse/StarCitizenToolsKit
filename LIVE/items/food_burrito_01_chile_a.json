@@ -1590,6 +1590,7 @@
         "grade": 1,
         "name": "Chile Birria Burrito",
         "tags": "burrito chile",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "e5d0e1cf-4960-4cfc-970c-397d1d31760d",
@@ -1602,9 +1603,15 @@
             "Type": "Food.Junk",
             "Name": "Chile Birria Burrito",
             "Description": "NDR: 34\\nEffects: Dehydrating\\n\\nThis satisfying burrito features a tortilla wrapper filled with rich and spicy stewed mutton.",
+            "DescriptionData": {
+                "NDR": "34",
+                "Effects": "Dehydrating"
+            },
+            "DescriptionText": "This satisfying burrito features a tortilla wrapper filled with rich and spicy stewed mutton.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "burrito",
@@ -1616,12 +1623,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "34",
+                "Effects": [
+                    "Dehydrating"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

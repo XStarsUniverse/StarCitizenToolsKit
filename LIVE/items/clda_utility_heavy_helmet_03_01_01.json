@@ -5919,6 +5919,7 @@
         "grade": 1,
         "name": "Siebe Helmet",
         "tags": "clda_utility_heavy 03 Set_03 Color_01 $$$snoopy_cap+++ SM_RestrictedArm ",
+        "required_tags": "",
         "manufacturer": "CLDA",
         "classification": "FPS.Armor.Helmet",
         "stdItem": {
@@ -5932,9 +5933,18 @@
             "Type": "Char_Armor_Helmet.Heavy",
             "Name": "Siebe Helmet",
             "Description": "Item Type: Heavy Utility\\nDamage Reduction: 25%\\nTemp. Rating: -75 / 225 \u00b0C\\nRadiation Protection: 33600 REM\\nRadiation Scrub Rate: 147.42 REM/s\\n\\nDurability and a classic aesthetic combine with the Siebe helmet; designed by Caldera to thrive amidst extreme conditions found both in space and atmosphere. Resilient yet lightweight plating and an impact resistant visor provide premium protection, while an integrated monitoring system helps protect the wearer from environmental fluctuations.",
+            "DescriptionData": {
+                "Item Type": "Heavy Utility",
+                "Damage Reduction": "25%",
+                "Temp. Rating": "-75 / 225 \u00b0C",
+                "Radiation Protection": "33600 REM",
+                "Radiation Scrub Rate": "147.42 REM/s"
+            },
+            "DescriptionText": "Durability and a classic aesthetic combine with the Siebe helmet; designed by Caldera to thrive amidst extreme conditions found both in space and atmosphere. Resilient yet lightweight plating and an impact resistant visor provide premium protection, while an integrated monitoring system helps protect the wearer from environmental fluctuations.",
             "Manufacturer": {
                 "Code": "CLDA",
-                "Name": "Caldera"
+                "Name": "Caldera",
+                "UUID": "eddc1a94-7840-4855-9889-544821d4d739"
             },
             "Tags": [
                 "clda_utility_heavy",
@@ -5948,77 +5958,129 @@
                 {
                     "PortName": "visor_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "long_range_radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "ping",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Ping"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Ping"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "scanner",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Avionics"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Avionics"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "flashlight",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
-                        "Suit"
+                        "Suit.Flashlight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Suit",
+                            "sub_types": [
+                                "Flashlight"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "holo_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -6028,14 +6090,64 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Helmet": {
+                "atmosphere_capacity": 0.0015,
+                "puncture_max_area": 0.0001,
+                "puncture_max_number": 10
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Attachtosuit"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.65,
+                    "Physical": {
+                        "Multiplier": 0.75,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.75,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.75,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.75,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.75,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.4,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "ea721959-c3e2-4df8-9ef3-8831dc98c514"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 30
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -150,
                 "Maximum": 175
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 33600,
+                "RadiationDissipationRate": 147.42
             }
         }
     }

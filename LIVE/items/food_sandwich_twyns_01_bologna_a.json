@@ -1546,6 +1546,7 @@
         "grade": 1,
         "name": "Bologna Sandwich",
         "tags": "sandwich twyns bologna",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "4ef4f879-5817-4361-8101-e81e5122bad5",
@@ -1558,9 +1559,15 @@
             "Type": "Food.Junk",
             "Name": "Bologna Sandwich",
             "Description": "NDR: 41\\nEffects: None\\n\\nArtisanally crafted in the old-world tradition, our lightly smoked bologna is paired with a sharp mustard and layered between soft, buttery rice bread. At Twyn's, it's what's inside that counts.",
+            "DescriptionData": {
+                "NDR": "41",
+                "Effects": "None"
+            },
+            "DescriptionText": "Artisanally crafted in the old-world tradition, our lightly smoked bologna is paired with a sharp mustard and layered between soft, buttery rice bread. At Twyn's, it's what's inside that counts.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "sandwich",
@@ -1573,12 +1580,25 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "41",
+                "Effects": [
+                    "None"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Consume"
+            ]
         }
     }
 }

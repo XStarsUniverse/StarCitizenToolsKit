@@ -1573,6 +1573,7 @@
         "grade": 1,
         "name": "Prota",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "0b45378f-af70-46a0-a6de-c156c6ff9d1d",
             "ClassName": "Harvestable_Prota",
@@ -1584,13 +1585,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Prota",
             "Description": "A resilient slime mold that can form in extremely corrosive environments and pressure, Prota secretes a strong adhesive that can be distilled into a commercial-grade glue.",
+            "DescriptionText": "A resilient slime mold that can form in extremely corrosive environments and pressure, Prota secretes a strong adhesive that can be distilled into a commercial-grade glue.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 600,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.0006
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "70684af3-55f1-43db-8aca-eae33cfac445",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

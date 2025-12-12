@@ -733,6 +733,7 @@
         "grade": 1,
         "name": "Anvil Gladiator Torpedo Rack",
         "tags": "flightReady",
+        "required_tags": "ANVL_Gladiator",
         "manufacturer": "AEG",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -746,9 +747,11 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "Anvil Gladiator Torpedo Rack",
             "Description": "Anvil Gladiator Torpedo Rack",
+            "DescriptionText": "Anvil Gladiator Torpedo Rack",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "flightReady"
@@ -757,16 +760,36 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_02_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -777,7 +800,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.5,
@@ -817,6 +842,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

@@ -2645,6 +2645,7 @@
         "grade": 1,
         "name": "Pitman Mining Laser",
         "tags": "flightReady weaponMountUsable $DRAK_miningMount",
+        "required_tags": "DRAK_miningMount",
         "manufacturer": "DRAK",
         "classification": "Ship.Mining.Gun",
         "stdItem": {
@@ -2658,9 +2659,23 @@
             "Type": "WeaponMining.Gun",
             "Name": "Pitman Mining Laser",
             "Description": "Manufacturer: Drake Interplanetary\\nItem Type: Mining Laser \\nSize: 1\\n\\nOptimal Range: 40m\\nMaximum Range: 45m\\nMining Laser Power: 3150\\n\\nModule Slots: 2\\n \\nResistance: +25 %\\nLaser Instability: +35 %\\nInert Material Level: -30%\\nOptimal Charge Window Rate: -40%\\n\\nBespoke to the Drake Golem, this mining laser was designed for those beginning a career in mining. It's been carefully calibrated to ensure an easy operator experience and reduce the likelihood of catastrophic accidents.",
+            "DescriptionData": {
+                "Manufacturer": "Drake Interplanetary",
+                "Item Type": "Mining Laser",
+                "Size": "1",
+                "Optimal Range": "40m",
+                "Maximum Range": "45m",
+                "Mining Laser Power": "3150",
+                "Module Slots": "2",
+                "Resistance": "+25 %",
+                "Laser Instability": "+35 %",
+                "Optimal Charge Window Rate": "-40%"
+            },
+            "DescriptionText": "Bespoke to the Drake Golem, this mining laser was designed for those beginning a career in mining. It's been carefully calibrated to ensure an easy operator experience and reduce the likelihood of catastrophic accidents.",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "flightReady",
@@ -2671,6 +2686,8 @@
                 {
                     "PortName": "BONE_ItemPort_Consumable_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable1"
@@ -2679,13 +2696,23 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "BONE_ItemPort_Consumable_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable2"
@@ -2694,15 +2721,33 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2712,8 +2757,37 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

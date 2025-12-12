@@ -1503,6 +1503,7 @@
         "grade": 1,
         "name": "Dopple",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "74b44fe0-063d-44e1-a89b-98295945a544",
             "ClassName": "Harvestable_Vice_Dopple",
@@ -1514,13 +1515,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Dopple",
             "Description": "A dissociative drug that creates a strong feeling of separation. People, places, and objects familiar to the user take on a distorted and unreal quality. Some users report a detachment from emotions. Doplencyethorphine is used in small dosages medically to help with extreme emotion issues and rage management problems. Recreational users take it for the effect of resetting the mundane and everyday into something new and different. Side effects include memory loss, panic attacks, paranoia, and psychotic episodes.",
+            "DescriptionText": "A dissociative drug that creates a strong feeling of separation. People, places, and objects familiar to the user take on a distorted and unreal quality. Some users report a detachment from emotions. Doplencyethorphine is used in small dosages medically to help with extreme emotion issues and rage management problems. Recreational users take it for the effect of resetting the mundane and everyday into something new and different. Side effects include memory loss, panic attacks, paranoia, and psychotic episodes.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 750,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.00075
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "93d40906-a95a-4df5-9ac0-0a47c0d782b1",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

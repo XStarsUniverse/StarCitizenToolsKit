@@ -196,6 +196,7 @@
         "grade": 1,
         "name": "SHIELDS",
         "tags": "flightReady",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c6f6ff9d-54e9-43a3-ac87-3e1ad0de1f31",
             "ClassName": "Controller_Shield_AEGS_Sabre_Peregrine",
@@ -207,9 +208,33 @@
             "Type": "ShieldController.UNDEFINED",
             "Name": "SHIELDS",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Shield",
+                                "Rate": 1000000,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

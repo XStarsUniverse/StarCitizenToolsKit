@@ -1931,6 +1931,7 @@
         "grade": 1,
         "name": "Coda Pistol Magazine (6 cap)",
         "tags": "ksar_pistol_ballistic_01",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1944,9 +1945,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Coda Pistol Magazine (6 cap)",
             "Description": "Item Type: Magazine\\nCapacity: 6\\n\\nThis magazine for the Kastak Arms Coda holds six .50 caliber rounds.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "6"
+            },
+            "DescriptionText": "This magazine for the Kastak Arms Coda holds six .50 caliber rounds.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "ksar_pistol_ballistic_01"
@@ -2005,7 +2012,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

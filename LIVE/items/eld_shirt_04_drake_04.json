@@ -1852,6 +1852,7 @@
         "grade": 1,
         "name": "Drake T-Shirt Red Logo",
         "tags": "eld_shirt Set_04 Texture_drake Color_04",
+        "required_tags": "",
         "manufacturer": "ELD",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1865,9 +1866,11 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "Drake T-Shirt Red Logo",
             "Description": "Drake Interplanetary's designs have caught the public's imagination. From the Kraken to the Cutlass, share your love for their ships with this comfortable black and red shirt, featuring the company's logo.",
+            "DescriptionText": "Drake Interplanetary's designs have caught the public's imagination. From the Kraken to the Cutlass, share your love for their ships with this comfortable black and red shirt, featuring the company's logo.",
             "Manufacturer": {
                 "Code": "ELD",
-                "Name": "Escar Limited"
+                "Name": "Escar Limited",
+                "UUID": "190a2e0e-6d60-4719-8238-ac7e1c746626"
             },
             "Tags": [
                 "eld_shirt",
@@ -1879,11 +1882,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1893,9 +1903,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

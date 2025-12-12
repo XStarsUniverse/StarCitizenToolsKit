@@ -1972,6 +1972,7 @@
         "grade": 1,
         "name": "Creese Yormandi Jacket",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "VPW",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1985,19 +1986,28 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Creese Yormandi Jacket",
             "Description": "Make a splash with this Yormandi-themed jacket. Featuring the ferocious creature erupting from water, this predator snakes around the side of the dark teal jacket to showcase Vaporwear's logo on the back.",
+            "DescriptionText": "Make a splash with this Yormandi-themed jacket. Featuring the ferocious creature erupting from water, this predator snakes around the side of the dark teal jacket to showcase Vaporwear's logo on the back.",
             "Manufacturer": {
                 "Code": "VPW",
-                "Name": "Vaporwear"
+                "Name": "Vaporwear",
+                "UUID": "7dfff1b9-2bfa-4ace-86d9-30329a2a0f30"
             },
             "Ports": [
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2007,6 +2017,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0004,
                 "unit": 6,
@@ -2022,6 +2041,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

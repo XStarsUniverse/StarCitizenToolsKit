@@ -1955,6 +1955,7 @@
         "grade": 1,
         "name": "Vanduul Noise Launcher",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "VNC",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -1968,9 +1969,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "Vanduul Noise Launcher",
             "Description": "Vanduul Noise Launcher",
+            "DescriptionText": "Vanduul Noise Launcher",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
             "Ammunition": {
                 "UUID": "fba15492-1bee-4ef0-8efd-815e3c500ea9",
@@ -1986,7 +1989,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,

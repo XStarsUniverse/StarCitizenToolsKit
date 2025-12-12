@@ -1717,6 +1717,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "2fb62910-ac97-4caa-b6f7-281bf6f26161",
@@ -1729,68 +1730,141 @@
             "Type": "SeatDashboard.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Ports": [
                 {
                     "PortName": "Screen_MFD_Radar",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_MFD_left",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_MFD_right",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_support_far_left",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_support_far_right",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_support_left",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_support_right",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
+                    ],
                     "Uneditable": false
                 }
-            ]
+            ],
+            "Interactions": [
+                "Flightready",
+                "Openmissiles",
+                "Closemissiles"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

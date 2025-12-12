@@ -2868,6 +2868,7 @@
         "grade": 1,
         "name": "Manned Turret",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "f4428535-7133-497f-98ef-3774cd730921",
@@ -2880,9 +2881,11 @@
             "Type": "TurretBase.MannedTurret",
             "Name": "Manned Turret",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "flightReady"
@@ -2891,52 +2894,101 @@
                 {
                     "PortName": "hardpoint_weapon_left",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_weapon_right",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "Screen_Right_Top",
                     "Size": 1,
-                    "Types": [
-                        "Display"
+                    "MinSize": 1,
+                    "MaxSize": 1,
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Left_Top",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 10000
+                "Health": 10000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -2959,6 +3011,13 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Turret_fire_mode",
+                "Turret_gyro_mode",
+                "Ai_use",
+                "Turret_sensitivity_decrease",
+                "Turret_sensitivity_reset"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,
@@ -2973,6 +3032,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

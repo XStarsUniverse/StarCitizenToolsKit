@@ -1665,6 +1665,7 @@
         "grade": 1,
         "name": "",
         "tags": "salvageMount",
+        "required_tags": "salvageMount",
         "stdItem": {
             "UUID": "fddf6a6a-e0df-465e-ba4a-6af41045dafb",
             "ClassName": "MISC_Fortune_Salvage_Arm",
@@ -1676,6 +1677,12 @@
             "Type": "ToolArm.UNDEFINED",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "salvageMount"
             ],
@@ -1683,6 +1690,8 @@
                 {
                     "PortName": "hardpoint_salvage_arm_head",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Tags": [
                         "salvageMount"
                     ],
@@ -1692,11 +1701,18 @@
                     "Types": [
                         "SalvageHead"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SalvageHead"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_disintegration_intake",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "uneditable"
                     ],
@@ -1705,6 +1721,11 @@
                     ],
                     "Types": [
                         "SalvageFieldEmitter"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SalvageFieldEmitter"
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -1715,7 +1736,9 @@
                 "Height": 0.38
             },
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

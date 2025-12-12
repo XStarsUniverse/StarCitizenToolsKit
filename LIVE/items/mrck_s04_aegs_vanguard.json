@@ -1012,6 +1012,7 @@
         "grade": 1,
         "name": "MSD-442 Missile Rack",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -1025,9 +1026,17 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "MSD-442 Missile Rack",
             "Description": "Item Type: Missile Rack\\nManufacturer: Behring\\nSize: 4\\nMissiles: 4xS2\\n\\nBehring\u2019s MSD-442 \"Marsden\" is a complete ordnance storage and deployment system that can be mounted on any compatible size 4 hardpoint for the reliable and effective launch of four S2 missiles.",
+            "DescriptionData": {
+                "Item Type": "Missile Rack",
+                "Manufacturer": "Behring",
+                "Size": "4",
+                "Missiles": "4xS2"
+            },
+            "DescriptionText": "Behring's MSD-442 \"Marsden\" is a complete ordnance storage and deployment system that can be mounted on any compatible size 4 hardpoint for the reliable and effective launch of four S2 missiles.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "flightReady"
@@ -1036,32 +1045,72 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_02_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_03_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_04_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1072,7 +1121,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1,
@@ -1112,6 +1163,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

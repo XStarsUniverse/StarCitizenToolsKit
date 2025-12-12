@@ -2012,6 +2012,7 @@
         "grade": 1,
         "name": "Vestal Water",
         "tags": "bottle_01 Stash_Water",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "6d38f57a-deab-4449-8ead-3ec476811eb2",
@@ -2024,9 +2025,15 @@
             "Type": "Drink.Bottle",
             "Name": "Vestal Water",
             "Description": "HEI: 44\\nEffect: Hydrating\\n\\nSourced from carefully selected water-rich asteroids, this crystalline pure water contains naturally occurring minerals for a smooth, refreshing taste that makes it a perfect choice for all your hydration needs.\\n",
+            "DescriptionData": {
+                "HEI": "44",
+                "Effect": "Hydrating"
+            },
+            "DescriptionText": "Sourced from carefully selected water-rich asteroids, this crystalline pure water contains naturally occurring minerals for a smooth, refreshing taste that makes it a perfect choice for all your hydration needs.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01",
@@ -2038,12 +2045,26 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 1,
-                "discardWhenConsumed": 1,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "44",
+                "Effects": [
+                    "Hydrating"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 1,
+                "DiscardWhenConsumed": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

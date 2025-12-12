@@ -1775,6 +1775,7 @@
         "grade": 1,
         "name": "Davin Work Gloves Dark Green",
         "tags": "scu_gloves Set_02 Color_16",
+        "required_tags": "",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -1788,9 +1789,11 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "Davin Work Gloves Dark Green",
             "Description": "Field-tested for over fifty years, you can find Davin work gloves at numerous sites and ships around the Empire. Stegman's rugged construction and comfort lining have made them a customer favorite.",
+            "DescriptionText": "Field-tested for over fifty years, you can find Davin work gloves at numerous sites and ships around the Empire. Stegman's rugged construction and comfort lining have made them a customer favorite.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_gloves",
@@ -1801,11 +1804,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1815,9 +1825,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

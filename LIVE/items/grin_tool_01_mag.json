@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "Cambrio SRT Battery",
         "tags": "grin_salvage_repair_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,14 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Cambrio SRT Battery",
             "Description": "Item Type: Battery\\n\\nThis replacement battery powers Greycat's Cambrio salvage and repair tool, allowing your work to continue unabated.",
+            "DescriptionData": {
+                "Item Type": "Battery"
+            },
+            "DescriptionText": "This replacement battery powers Greycat's Cambrio salvage and repair tool, allowing your work to continue unabated.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_salvage_repair_01"
@@ -1959,7 +1965,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

@@ -1648,6 +1648,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
             "UUID": "c999b0e5-2506-4d87-b2d9-488b8416c1ac",
@@ -1660,11 +1661,27 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "<= PLACEHOLDER =>",
             "Description": "<= PLACEHOLDER =>",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

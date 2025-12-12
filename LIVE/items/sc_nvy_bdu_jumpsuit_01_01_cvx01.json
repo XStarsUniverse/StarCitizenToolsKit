@@ -1895,6 +1895,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "nvy_jumpsuit BDU Set_01 Color_cvx",
+        "required_tags": "",
         "manufacturer": "NVY",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1908,9 +1909,11 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "NVY",
-                "Name": "UEE Navy"
+                "Name": "UEE Navy",
+                "UUID": "d133f90d-bc69-4273-9867-6c03631f0c4b"
             },
             "Tags": [
                 "nvy_jumpsuit",
@@ -1922,6 +1925,8 @@
                 {
                     "PortName": "Clothing_Helmet",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys",
                         "unlootable"
@@ -1929,20 +1934,44 @@
                     "Types": [
                         "Char_Clothing_Hat"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Hat"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Clothing_Torso2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Char_Clothing_Torso_2"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Torso_2"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openexternalinventory"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

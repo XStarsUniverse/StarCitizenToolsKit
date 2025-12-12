@@ -1929,6 +1929,7 @@
         "grade": 1,
         "name": "Flight Blade",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "CNOU",
         "stdItem": {
             "UUID": "4c143b67-e684-47b7-99e3-6ec869ed90ea",
@@ -1941,9 +1942,11 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Flight Blade",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "CNOU",
-                "Name": "Consolidated Outland"
+                "Name": "Consolidated Outland",
+                "UUID": "ec227ef3-fb08-4897-abdb-579eb4e87c25"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
@@ -1983,6 +1986,40 @@
                     "CapacitorRegenDelayAfterUse": 2,
                     "CapacitorRegenPerSec": 2
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "MinimumFraction": 0.5
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

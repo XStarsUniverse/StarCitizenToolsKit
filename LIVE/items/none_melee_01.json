@@ -1544,6 +1544,7 @@
         "grade": 1,
         "name": "Prison Shiv",
         "tags": "knife Stash_Shank",
+        "required_tags": "",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
             "UUID": "31ef8e9c-1add-414a-87d0-07a38d923ac8",
@@ -1556,6 +1557,18 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "Prison Shiv",
             "Description": "Manufacturer: Unknown\\nItem Type: Knife\\nClass: Melee\\n\\nSize: N/A\\n\\nA deadly, improvised knife made by an industrious prisoner by securing a sharpened piece of metal to an OxyPen with a bit of thin cord. Considered contraband within prison facilities.",
+            "DescriptionData": {
+                "Manufacturer": "Unknown",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "N/A"
+            },
+            "DescriptionText": "A deadly, improvised knife made by an industrious prisoner by securing a sharpened piece of metal to an OxyPen with a bit of thin cord. Considered contraband within prison facilities.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "knife",
                 "Stash_Shank"
@@ -1565,6 +1578,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carry",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

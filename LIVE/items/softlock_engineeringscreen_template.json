@@ -1842,6 +1842,7 @@
         "grade": 1,
         "name": "Screen",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "26cd663d-9c7b-4ef6-8d08-e75ef0c43695",
             "ClassName": "SoftLock_EngineeringScreen_Template",
@@ -1852,7 +1853,33 @@
             "Length": 0.15,
             "Type": "SeatDashboard.UNDEFINED",
             "Name": "Screen",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Useconsole"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 1,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

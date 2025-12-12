@@ -1956,6 +1956,7 @@
         "grade": 1,
         "name": "",
         "tags": "nvy_pants Medical Corpsman Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "NVY",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -1969,9 +1970,11 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "NVY",
-                "Name": "UEE Navy"
+                "Name": "UEE Navy",
+                "UUID": "d133f90d-bc69-4273-9867-6c03631f0c4b"
             },
             "Tags": [
                 "nvy_pants",
@@ -1984,6 +1987,8 @@
                 {
                     "PortName": "medPen_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -1992,11 +1997,18 @@
                     "Types": [
                         "FPS_Consumable"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FPS_Consumable"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2006,26 +2018,46 @@
                         "melee"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Knife"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Knife"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2034,12 +2066,29 @@
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openexternalinventory"
             ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -19133,6 +19133,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "d80f6a0d-5c60-40d6-b4e8-9d9c60b47292",
@@ -19145,59 +19146,109 @@
             "Type": "SeatDashboard.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Ports": [
                 {
                     "PortName": "radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Display_HUD",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Annunciator",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "screen_top_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "screen_top_right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "screen_bottom_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 400,
+                "Maximum": 2000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.1,
@@ -19220,6 +19271,115 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Openaccesspoints",
+                "Closeaccesspoints",
+                "Flight_ready",
+                "Dummyinteraction",
+                "Commsinteraction",
+                "Opencanopy",
+                "Closecanopy",
+                "Deployladder",
+                "Retractladder",
+                "Landinggear_deploy",
+                "Landinggear_retract",
+                "Autoland_setactive",
+                "Autoland_setinactive",
+                "Coupled_setcoupled",
+                "Coupled_setdecoupled",
+                "Gsafe_setactive",
+                "Gsafe_setinactive",
+                "Esp_setactive",
+                "Esp_setinactive",
+                "Cruisecontrol_setactive",
+                "Cruisecontrol_setinactive",
+                "Quantumspool_setactive",
+                "Quantumspool_setinactive",
+                "Quantumtravel_setactive",
+                "Quantumtravel_setinactive",
+                "Navfilter_setnone",
+                "Navfilter_setpoi",
+                "Navfilter_setquantum",
+                "Weaponcontroller_setactive",
+                "Weaponcontroller_setinactive",
+                "Gimbaltype_setfixed",
+                "Gimbaltype_setgimbal",
+                "Gimbaltype_setaimassist",
+                "Firepattern_setstaggered",
+                "Firepattern_setsynchronized",
+                "Piptype_setlead",
+                "Piptype_setlag",
+                "Navfilter_isnone",
+                "Navfilter_ispoi",
+                "Navfilter_isquantum",
+                "Landinggear_invalid",
+                "Cyclefriendly",
+                "Cyclehostile",
+                "Cycleall",
+                "Cyclepinned",
+                "Exteriorlights_on",
+                "Exteriorlights_off",
+                "Interiorlights_on",
+                "Interiorlights_off",
+                "Selfdestruct_engage",
+                "Selfdestruct_disengage",
+                "Alarm_on",
+                "Alarm_off",
+                "Hailtarget_start",
+                "Hailtarget_stop",
+                "Sensors_on",
+                "Sensors_off",
+                "Ping",
+                "Scan_enable",
+                "Scan_disable",
+                "Shields_on",
+                "Shields_off",
+                "Subtarget_setnone",
+                "Subtarget_setengines",
+                "Subtarget_setturrets",
+                "Missiles_armmissile",
+                "Missiles_disarmmissiles",
+                "Missiles_cyclemissiles",
+                "Missiles_firemissiles",
+                "Weapons_on",
+                "Weapons_off",
+                "Transponder_on",
+                "Transponder_off",
+                "Suppression_on",
+                "Suppression_off",
+                "Screens_on",
+                "Screens_off",
+                "Darkfilter_on",
+                "Darkfilter_off",
+                "Convergencerange_setlong",
+                "Convergencerange_setmid",
+                "Convergencerange_setshort",
+                "Powersafety_on",
+                "Powersafety_off",
+                "Countermeasures_chaff",
+                "Countermeasures_flare",
+                "Countermeasures_fire",
+                "Markhostile",
+                "Markfriendly",
+                "Pintarget",
+                "Unpintarget",
+                "Scanrange_setlong",
+                "Scanrange_setmedium",
+                "Scanrange_setshort",
+                "Headlights_on",
+                "Headlights_off",
+                "Vtol_setactive",
+                "Vtol_setinactive",
+                "Proximityassist_setactive",
+                "Proximityassist_setinactive",
+                "Flighthud_invalid",
+                "Scanninghud_invalid",
+                "Comms_acceptcall",
+                "Comms_declinecall",
+                "Subtarget_cycle",
+                "Windows_deploy",
+                "Windows_retract"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,
@@ -19234,6 +19394,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

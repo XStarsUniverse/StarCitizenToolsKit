@@ -235,6 +235,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "DRAK_Caterpillar_Base",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "classification": "Ship.Armor.Medium",
         "stdItem": {
@@ -248,9 +249,11 @@
             "Type": "Armor.Medium",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "DRAK_Caterpillar_Base"
@@ -271,7 +274,9 @@
                 }
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

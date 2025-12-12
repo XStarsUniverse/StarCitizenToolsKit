@@ -1283,6 +1283,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "f455b66a-cdcd-48e2-abbb-2c7fa7e3bd5d",
@@ -1295,10 +1296,24 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Seat",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
-            }
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
+            },
+            "Interactions": [
+                "Driverseatenter",
+                "Driverseatexit",
+                "Bonnet_open",
+                "Bonnet_close",
+                "Fuelport_open",
+                "Fuelport_close",
+                "Grille_open",
+                "Grille_close",
+                "Boot_open",
+                "Boot_close"
+            ]
         }
     }
 }

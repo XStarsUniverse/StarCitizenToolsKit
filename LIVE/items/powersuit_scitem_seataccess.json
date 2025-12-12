@@ -555,6 +555,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "46e6c32c-6a10-4474-be98-12b68a91ccc7",
             "ClassName": "PowerSuit_SCItem_SeatAccess",
@@ -565,7 +566,17 @@
             "Length": 0.15,
             "Type": "SeatAccess.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Riderenter",
+                "Riderexit"
+            ]
         }
     }
 }

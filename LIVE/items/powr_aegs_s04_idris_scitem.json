@@ -1094,6 +1094,7 @@
         "grade": 1,
         "name": "Main Powerplant",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
             "UUID": "4f29e9ae-6a77-4461-b479-0479b9ecdca0",
@@ -1106,13 +1107,30 @@
             "Type": "PowerPlant.Power",
             "Name": "Main Powerplant",
             "Description": "Aegis Idris Powerplant",
+            "DescriptionText": "Aegis Idris Powerplant",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 66.66,
+                "Maximum": 70000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 29000
+                "Health": 29000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1135,6 +1153,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 250000,
@@ -1152,6 +1174,39 @@
             },
             "PowerPlant": {
                 "Output": 250000
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 29,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 28,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 14400
+                        }
+                    }
+                ]
             }
         }
     }

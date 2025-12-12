@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Construction Salvage",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "2e11ba45-2701-4fcd-8aea-482430910239",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Construction Salvage",
             "Description": "Can be processed at refineries into Construction Material.",
+            "DescriptionText": "Can be processed at refineries into Construction Material.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 2,
+                    "UnitName": "SCU",
+                    "SCU": 2
+                },
+                "InclusiveGroups": [
+                    "9379b129-8688-4777-9f65-9dc09ba935ee"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "ebacf963-517e-4b05-b6cd-ee135e04a1ae",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

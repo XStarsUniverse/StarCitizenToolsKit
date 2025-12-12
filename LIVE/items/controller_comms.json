@@ -218,6 +218,7 @@
         "grade": 1,
         "name": "COMMS",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "ae1a186e-0f8c-4deb-8079-bfb54df4a8a7",
             "ClassName": "Controller_Comms",
@@ -228,7 +229,19 @@
             "Length": 0.15,
             "Type": "CommsController.UNDEFINED",
             "Name": "COMMS",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Hailtarget",
+                "Acceptcall",
+                "Declinecall",
+                "Endcall"
+            ]
         }
     }
 }

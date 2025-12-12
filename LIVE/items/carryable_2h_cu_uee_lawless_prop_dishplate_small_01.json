@@ -937,6 +937,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "f07ff609-d4ac-4e5b-ade2-2e6ef0928c3e",
             "ClassName": "Carryable_2H_CU_uee_lawless_prop_dishplate_small_01",
@@ -948,11 +949,22 @@
             "Type": "Misc.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

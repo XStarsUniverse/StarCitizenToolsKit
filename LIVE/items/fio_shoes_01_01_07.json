@@ -1882,6 +1882,7 @@
         "grade": 1,
         "name": "Prim Shoes Blue",
         "tags": "fio_shoes Set_01 Color_07",
+        "required_tags": "",
         "manufacturer": "FIO",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1895,9 +1896,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Prim Shoes Blue",
             "Description": "Professional yet casual, the Prim utilizes cutting-edge synthetic construction to provide maximum comfort and a shine that won't fade.",
+            "DescriptionText": "Professional yet casual, the Prim utilizes cutting-edge synthetic construction to provide maximum comfort and a shine that won't fade.",
             "Manufacturer": {
                 "Code": "FIO",
-                "Name": "Fiore"
+                "Name": "Fiore",
+                "UUID": "503b0974-5027-4c69-bce6-a38c42e87ebe"
             },
             "Tags": [
                 "fio_shoes",
@@ -1908,11 +1911,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1922,9 +1932,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

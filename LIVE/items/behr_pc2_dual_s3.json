@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "PC2 Dual S3 Mount",
         "tags": "gimbalMount flightReady $MISC_Freelancer_Base",
+        "required_tags": "",
         "stdItem": {
             "UUID": "9352b228-86a5-43c7-9b8d-a04cd7f0470b",
             "ClassName": "BEHR_PC2_Dual_S3",
@@ -884,6 +885,12 @@
             "Type": "Turret.NoseMounted",
             "Name": "PC2 Dual S3 Mount",
             "Description": "PC2 Dual S3 Mount",
+            "DescriptionText": "PC2 Dual S3 Mount",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "gimbalMount",
                 "flightReady",
@@ -893,16 +900,36 @@
                 {
                     "PortName": "hardpoint_weapon_01",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_weapon_02",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -913,7 +940,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 2500
+                "Health": 2500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

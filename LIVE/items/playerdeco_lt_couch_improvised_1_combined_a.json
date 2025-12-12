@@ -2015,6 +2015,7 @@
         "grade": 1,
         "name": "Low End Couch",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "101f3a22-1817-42de-8117-ba8b31e088cd",
             "ClassName": "PlayerDeco_lt_couch_improvised_1_combined_a",
@@ -2026,11 +2027,23 @@
             "Type": "Usable.Cargo",
             "Name": "Low End Couch",
             "Description": "Couch Decoration",
+            "DescriptionText": "Couch Decoration",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit_middle",
+                "Exit",
+                "Sit_right",
+                "Sit_left"
+            ]
         }
     }
 }

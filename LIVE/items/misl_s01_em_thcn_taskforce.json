@@ -993,6 +993,7 @@
         "grade": 1,
         "name": "TaskForce I Missile",
         "tags": "THCN EM flightReady",
+        "required_tags": "",
         "manufacturer": "THCN",
         "classification": "Ship.Missile.Missile",
         "stdItem": {
@@ -1006,9 +1007,16 @@
             "Type": "Missile.Missile",
             "Name": "TaskForce I Missile",
             "Description": "Manufacturer: Thermyte Concern\\nTracking Signal: Electromagnetic\\nSize: 1\\n\\nVenturing into the weapons market, Thermyte Concern have pooled their extensive knowledge of demolition explosives to create the TaskForce. A lightweight EM tracking strike missile with a top-in-class propulsion system provides an efficient mixture of speed and firepower to establish battlefield dominance.",
+            "DescriptionData": {
+                "Manufacturer": "Thermyte Concern",
+                "Tracking Signal": "Electromagnetic",
+                "Size": "1"
+            },
+            "DescriptionText": "Venturing into the weapons market, Thermyte Concern have pooled their extensive knowledge of demolition explosives to create the TaskForce. A lightweight EM tracking strike missile with a top-in-class propulsion system provides an efficient mixture of speed and firepower to establish battlefield dominance.",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "THCN",
@@ -1020,8 +1028,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 25
+                "Health": 25,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

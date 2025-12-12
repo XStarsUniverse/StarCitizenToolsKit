@@ -922,6 +922,7 @@
         "grade": 4,
         "name": "Boreal",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Boreal",
             "Description": "Item Type: Cooler\\nManufacturer: Aegis Dynamics\\nSize: 2\\nGrade: D\\nClass: Military\\n\\nDesigned to disperse the heat of battle, Aegis Dynamics\u2019 Boreal cooler is a military standard with the capacity to survive stressful situations.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "2",
+                "Grade": "D",
+                "Class": "Military"
+            },
+            "DescriptionText": "Designed to disperse the heat of battle, Aegis Dynamics' Boreal cooler is a military standard with the capacity to survive stressful situations.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Cooler": {
                 "CoolingRate": 4800000,
@@ -949,8 +959,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 650
+                "Health": 650,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 15,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.07,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.22
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 26,
+                                "MinimumFraction": 0.25,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1980,
+                            "IR": 8580
+                        }
+                    }
+                ]
             }
         }
     }

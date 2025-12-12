@@ -1686,6 +1686,7 @@
         "grade": 1,
         "name": "OneMeal Nutrition Bar (Grilled Steak)",
         "tags": "onemeal steak",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "b63510ef-b886-42a9-beb9-5d1cfe0ad085",
@@ -1698,9 +1699,15 @@
             "Type": "Food.Bar",
             "Name": "OneMeal Nutrition Bar (Grilled Steak)",
             "Description": "NDR: 21\\nEffects: Hypo-Metabolic\\n\\nOneMeal optimal nutrition bars are a scientifically balanced and complete meal replacement that's \"ready when you are.\"",
+            "DescriptionData": {
+                "NDR": "21",
+                "Effects": "Hypo-Metabolic"
+            },
+            "DescriptionText": "OneMeal optimal nutrition bars are a scientifically balanced and complete meal replacement that's \"ready when you are.\"",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "onemeal",
@@ -1712,12 +1719,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bar"
-            }
+                "NutritionalDensityRating": "21",
+                "Effects": [
+                    "Hypo-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "bar",
+                "ContainerTypeTag": "bar",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

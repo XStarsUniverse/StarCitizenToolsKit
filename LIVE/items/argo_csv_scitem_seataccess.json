@@ -1571,6 +1571,7 @@
         "grade": 1,
         "name": "Access",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ARGO",
         "stdItem": {
             "UUID": "ec7784a8-ee2f-4cec-a7f8-78b1986439a4",
@@ -1583,10 +1584,28 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Access",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ARGO",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "9e1f5a35-edcc-4d19-bede-08e2730043c5"
             },
+            "Interactions": [
+                "Seatenter",
+                "Seatexit",
+                "Rear_cargo_open",
+                "Rear_cargo_close",
+                "Fuel_open",
+                "Fuel_close",
+                "Personalstorage_open",
+                "Personalstorage_close",
+                "Component_bay_left_open",
+                "Component_bay_left_close",
+                "Component_bay_right_open",
+                "Component_bay_right_close",
+                "Loot",
+                "Openinventory"
+            ],
             "InventoryContainer": {
                 "unit": 0,
                 "unitName": "SCU",

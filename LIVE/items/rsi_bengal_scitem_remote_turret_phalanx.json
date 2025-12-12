@@ -5715,6 +5715,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "96394fd4-6aa3-4f96-87f9-07b6c4b4aaa4",
@@ -5727,9 +5728,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "flightReady"
@@ -5738,12 +5741,23 @@
                 {
                     "PortName": "turret_centre",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "a2c01b55-7c88-4b8a-a45c-c99951ab9e11",
                     "Uneditable": true
                 }
             ],
@@ -5768,8 +5782,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 2000
+                "Health": 2000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -5792,6 +5817,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,
@@ -5806,6 +5835,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

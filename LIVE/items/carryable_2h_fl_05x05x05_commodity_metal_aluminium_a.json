@@ -1199,6 +1199,7 @@
         "grade": 1,
         "name": "Aluminum",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "0de4154c-bda8-49f6-85c4-ab0bb60e0096",
@@ -1211,6 +1212,12 @@
             "Type": "Cargo.Small",
             "Name": "Aluminum",
             "Description": "A chemically reactive, gray metal that is malleable, lightweight, ductile, strong, and resistant to corrosion. Capable of superconductivity.",
+            "DescriptionText": "A chemically reactive, gray metal that is malleable, lightweight, ductile, strong, and resistant to corrosion. Capable of superconductivity.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1218,6 +1225,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "48c7080a-bbef-43d2-901a-698321ed4340",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

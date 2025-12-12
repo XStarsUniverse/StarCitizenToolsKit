@@ -3257,6 +3257,7 @@
         "grade": 1,
         "name": "IFR-W57 Turret",
         "tags": "flightReady $AEGS_Idris_Front_Turret",
+        "required_tags": "AEGS_Idris_Front_Turret",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "a1a6eaa7-b0d6-4afe-9b99-07a9d57d0e52",
@@ -3269,9 +3270,16 @@
             "Type": "TurretBase.MannedTurret",
             "Name": "IFR-W57 Turret",
             "Description": "Item Type: Turret\\nManufacturer: Aegis Dynamics\\nSize: 7\\n\\nThis manned turret, designed by Aegis to be equipped with two size 5 weapons, is bespoke to the Idris frigate.",
+            "DescriptionData": {
+                "Item Type": "Turret",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "7"
+            },
+            "DescriptionText": "This manned turret, designed by Aegis to be equipped with two size 5 weapons, is bespoke to the Idris frigate.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "flightReady",
@@ -3281,79 +3289,152 @@
                 {
                     "PortName": "hardpoint_weapon_left",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_weapon_right",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "Screen_Right_Top",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Right_Bottom",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Left_Top",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Left_Bottom",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Turret_Backing",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "AEGS_Idris"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 15000
+                "Health": 15000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -3376,6 +3457,13 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Turret_fire_mode",
+                "Ai_use",
+                "Retractturret",
+                "Turret_gyro_mode",
+                "Turret_sensitivity_reset"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,
@@ -3390,6 +3478,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

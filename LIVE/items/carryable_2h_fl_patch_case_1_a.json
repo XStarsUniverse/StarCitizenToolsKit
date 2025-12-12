@@ -973,6 +973,7 @@
         "grade": 1,
         "name": "Invictus Patch Collection",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "b84ce874-f4e9-4921-9c75-2e4a5855b186",
             "ClassName": "Carryable_2H_FL_Patch_Case_1_a",
@@ -984,11 +985,22 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "Invictus Patch Collection",
             "Description": "Mounted inside a beautiful display case, this collection features three patches honoring the naval bases used over the centuries to train recruits into the brave starmen who dedicate their lives to defending Humanity.",
+            "DescriptionText": "Mounted inside a beautiful display case, this collection features three patches honoring the naval bases used over the centuries to train recruits into the brave starmen who dedicate their lives to defending Humanity.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

@@ -372,6 +372,7 @@
         "grade": 1,
         "name": "WEAPONS",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c78851f1-ded8-4e8d-91ec-905e3dae075e",
             "ClassName": "Controller_Weapon",
@@ -382,7 +383,26 @@
             "Length": 0.15,
             "Type": "WeaponController.UNDEFINED",
             "Name": "WEAPONS",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Enableweapons",
+                "Disableweapons",
+                "Setlagpips",
+                "Setleadpips",
+                "Setgimballock",
+                "Setfreegimbal",
+                "Setaimassist",
+                "Setstaggeredfire",
+                "Setsynchronousfire",
+                "Fireweapongroup1",
+                "Fireweapongroup2"
+            ]
         }
     }
 }

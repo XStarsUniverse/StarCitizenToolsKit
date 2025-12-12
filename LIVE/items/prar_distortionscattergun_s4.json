@@ -2672,6 +2672,7 @@
         "grade": 1,
         "name": "Salvation Distortion Scattergun",
         "tags": "PRAR DistortionScatterGun flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "PRAR",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2685,9 +2686,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Salvation Distortion Scattergun",
             "Description": "Manufacturer: Preacher Armaments\\nItem Type: Distortion Scattergun\\nSize: 4\\n\\nDisable an enemy's ship without damaging it with the Salvation scattergun from Preacher Armaments. With its wide spread and low rate of fire this size four scattergun is most potent at close range.",
+            "DescriptionData": {
+                "Manufacturer": "Preacher Armaments",
+                "Item Type": "Distortion Scattergun",
+                "Size": "4"
+            },
+            "DescriptionText": "Disable an enemy's ship without damaging it with the Salvation scattergun from Preacher Armaments. With its wide spread and low rate of fire this size four scattergun is most potent at close range.",
             "Manufacturer": {
                 "Code": "PRAR",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "a2ba1db6-a7e8-49db-ba52-c61219693531"
             },
             "Tags": [
                 "PRAR",
@@ -2699,32 +2707,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2758,8 +2806,37 @@
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1650
+                "Health": 1650,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.09,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

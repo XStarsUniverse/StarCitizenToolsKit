@@ -1990,6 +1990,7 @@
         "grade": 1,
         "name": "Star Kitten Mug",
         "tags": "Mug StarKitten",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "d5f2412c-e848-44ff-87a3-df1df8a5e824",
@@ -2002,9 +2003,11 @@
             "Type": "Drink.UNDEFINED",
             "Name": "Star Kitten Mug",
             "Description": "The cuteness can't be contained but hot beverages can be with this Star Kitten mug. Personally designed by the character's legendary creator Genady Kuzo, it features an extra large handle that makes it easy to hold and is constructed with an ultra-durable ceramic so its adorableness won't chip or fade away.",
+            "DescriptionText": "The cuteness can't be contained but hot beverages can be with this Star Kitten mug. Personally designed by the character's legendary creator Genady Kuzo, it features an extra large handle that makes it easy to hold and is constructed with an ultra-durable ceramic so its adorableness won't chip or fade away.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "Mug",
@@ -2014,11 +2017,18 @@
                 {
                     "PortName": "slot_garnish",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "slot_garnish"
                     ],
                     "Types": [
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2029,12 +2039,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 0,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

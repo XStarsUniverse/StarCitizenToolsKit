@@ -1086,6 +1086,7 @@
         "grade": 1,
         "name": "Confidential",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "stdItem": {
             "UUID": "af6f5fc6-c5d5-4fb5-b193-a082b055199b",
             "ClassName": "Carryable_2H_FL_MissionItem_ClassifiedFiles_a",
@@ -1097,6 +1098,12 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Confidential",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1104,7 +1111,12 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

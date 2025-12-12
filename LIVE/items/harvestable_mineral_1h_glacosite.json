@@ -1562,6 +1562,7 @@
         "grade": 1,
         "name": "Glacosite",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "ae6d8d74-04fa-4d21-9991-4232f8eb2cfe",
             "ClassName": "Harvestable_Mineral_1H_Glacosite",
@@ -1573,13 +1574,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Glacosite",
             "Description": "As glaciers form, heavier mineral contents sink over time and are then crushed by the weight above as the ice deforms and flows. When the glacier recedes, Glacosite deposits are left behind. White and blue in color, the crystals form in long shiny strands that almost are cotton-like in appearance. Glacosite has found specialized commercial use since it is an extremely light and durable insulator.",
+            "DescriptionText": "As glaciers form, heavier mineral contents sink over time and are then crushed by the weight above as the ice deforms and flows. When the glacier recedes, Glacosite deposits are left behind. White and blue in color, the crystals form in long shiny strands that almost are cotton-like in appearance. Glacosite has found specialized commercial use since it is an extremely light and durable insulator.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "960eda23-d77c-425e-8cbd-89d94ca6e2aa",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

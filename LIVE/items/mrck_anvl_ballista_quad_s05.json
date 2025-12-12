@@ -940,6 +940,7 @@
         "grade": 1,
         "name": "Anvil Ballista S05 Missile Rack",
         "tags": "ANVL_Ballista",
+        "required_tags": "ANVL_Ballista",
         "manufacturer": "ANVL",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -953,9 +954,17 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "Anvil Ballista S05 Missile Rack",
             "Description": "Item Type: Missile Rack\\nManufacturer: Anvil Aerospace\\nSize: 5\\nMissiles: 4xS5 \\n\\nMissile rack for the Anvil Ballista that carries four, S5 missiles.",
+            "DescriptionData": {
+                "Item Type": "Missile Rack",
+                "Manufacturer": "Anvil Aerospace",
+                "Size": "5",
+                "Missiles": "4xS5"
+            },
+            "DescriptionText": "Missile rack for the Anvil Ballista that carries four, S5 missiles.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Ballista"
@@ -964,44 +973,84 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "RequiredTags": [
                         "ANVL_Ballista"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_02_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "RequiredTags": [
                         "ANVL_Ballista"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_03_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "RequiredTags": [
                         "ANVL_Ballista"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_04_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "RequiredTags": [
                         "ANVL_Ballista"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1049,6 +1098,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 20,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

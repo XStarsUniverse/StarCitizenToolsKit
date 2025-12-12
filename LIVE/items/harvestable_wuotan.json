@@ -1495,6 +1495,7 @@
         "grade": 1,
         "name": "Wuotan Seed",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "9b7febe0-9594-4637-941f-90b850aeef9b",
             "ClassName": "Harvestable_Wuotan",
@@ -1506,13 +1507,40 @@
             "Type": "Misc.Harvestable",
             "Name": "Wuotan Seed",
             "Description": "Harvested from the wuotan plant, these seed pods become bioluminescent when ripe to draw attention and encourage their spread. They are often collected to utilize as a natural light source.",
+            "DescriptionText": "Harvested from the wuotan plant, these seed pods become bioluminescent when ripe to draw attention and encourage their spread. They are often collected to utilize as a natural light source.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                }
             }
         }
     }

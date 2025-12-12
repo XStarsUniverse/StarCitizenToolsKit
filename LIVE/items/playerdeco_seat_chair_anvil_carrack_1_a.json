@@ -928,6 +928,7 @@
         "grade": 1,
         "name": "Anvil Accent Chair",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "eaed6fd3-f991-41e7-841e-0efa193eff6a",
@@ -940,15 +941,21 @@
             "Type": "Usable.Cargo",
             "Name": "Anvil Accent Chair",
             "Description": "Styled after the seats aboard the Anvil Carrack, this grey and white accent chair is fantastic way to show your love of space travel even when staying at home.",
+            "DescriptionText": "Styled after the seats aboard the Anvil Carrack, this grey and white accent chair is fantastic way to show your love of space travel even when staying at home.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

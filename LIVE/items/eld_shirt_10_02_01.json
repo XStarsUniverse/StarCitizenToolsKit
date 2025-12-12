@@ -1809,6 +1809,7 @@
         "grade": 1,
         "name": "Future Navy Pilot T-Shirt",
         "tags": "eld_shirt Set_10 Color_expo",
+        "required_tags": "",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
             "UUID": "39f98c32-8fc6-45d8-a9ed-0c726f9c49ed",
@@ -1821,6 +1822,12 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "Future Navy Pilot T-Shirt",
             "Description": "Are you ready to shoot for the stars? Show the 'verse that you're on the way to being the best of the best: a pilot of the UEE Navy. In addition to the message emblazoned on the front, this show-stopping t-shirt features an all-over image of a blue and white nebula, the seal of the UEE Navy, and the Invictus logo.",
+            "DescriptionText": "Are you ready to shoot for the stars? Show the 'verse that you're on the way to being the best of the best: a pilot of the UEE Navy. In addition to the message emblazoned on the front, this show-stopping t-shirt features an all-over image of a blue and white nebula, the seal of the UEE Navy, and the Invictus logo.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "eld_shirt",
                 "Set_10",
@@ -1830,11 +1837,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1844,9 +1858,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

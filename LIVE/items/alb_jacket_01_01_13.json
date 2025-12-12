@@ -1960,6 +1960,7 @@
         "grade": 1,
         "name": "Tuvic Outerwear Jacket Crimson",
         "tags": "alb_jacket Set_01 Color_13",
+        "required_tags": "",
         "manufacturer": "ALB",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1973,9 +1974,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Tuvic Outerwear Jacket Crimson",
             "Description": "Carrying Capacity: 2K \u00b5SCU\\n\\nAlejo Brothers have seamlessly blended functionality and style with the Tuvic line of outerwear. These rugged jackets feature reinforced leather padding to offer additional protection and support while still maintaining a modern aesthetic.\\n\\nWomen's sizes currently out of stock.",
+            "DescriptionData": {
+                "Carrying Capacity": "2K \u00b5SCU"
+            },
+            "DescriptionText": "Alejo Brothers have seamlessly blended functionality and style with the Tuvic line of outerwear. These rugged jackets feature reinforced leather padding to offer additional protection and support while still maintaining a modern aesthetic.\n\nWomen's sizes currently out of stock.",
             "Manufacturer": {
                 "Code": "ALB",
-                "Name": "Alejo Brothers"
+                "Name": "Alejo Brothers",
+                "UUID": "dd14fd7f-eead-4f7d-8057-2d95405a0183"
             },
             "Tags": [
                 "alb_jacket",
@@ -1986,11 +1992,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2000,6 +2013,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.002,
                 "unit": 6,
@@ -2015,6 +2037,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

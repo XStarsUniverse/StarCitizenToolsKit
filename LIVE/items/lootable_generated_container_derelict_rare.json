@@ -1844,6 +1844,7 @@
         "grade": 1,
         "name": "Large Container",
         "tags": "LootableContainer",
+        "required_tags": "",
         "stdItem": {
             "UUID": "be4bf939-e870-455f-8c34-2e51ff193fbc",
             "ClassName": "Lootable_Generated_Container_Derelict_Rare",
@@ -1855,8 +1856,21 @@
             "Type": "Container.UNDEFINED",
             "Name": "Large Container",
             "Description": "A large container used to hold various items.",
+            "DescriptionText": "A large container used to hold various items.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "LootableContainer"
+            ],
+            "Interactions": [
+                "Open",
+                "Close",
+                "Openlootingui",
+                "Carry",
+                "Drop"
             ],
             "InventoryContainer": {
                 "SCU": 0.0975,

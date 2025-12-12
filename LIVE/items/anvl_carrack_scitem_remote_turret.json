@@ -1021,6 +1021,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady $ANVL_Carrack_Turret",
+        "required_tags": "$ANVL_Carrack_Turret",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "25aed8f9-b86f-4529-92a2-320f0abd9a1c",
@@ -1033,9 +1034,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "flightReady",
@@ -1045,24 +1048,58 @@
                 {
                     "PortName": "turret_left",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "turret_right",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 12500
+                "Health": 12500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1085,6 +1122,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

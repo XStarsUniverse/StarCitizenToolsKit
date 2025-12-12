@@ -3855,6 +3855,7 @@
         "grade": 1,
         "name": "ORC-mkV Core Executive",
         "tags": "Marine_Legacy_Medium Set_01 Color_gld SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "CDS",
         "classification": "FPS.Armor.Torso",
         "stdItem": {
@@ -3868,9 +3869,19 @@
             "Type": "Char_Armor_Torso.Medium",
             "Name": "ORC-mkV Core Executive",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -55 / 85 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\nCarrying Capacity: 6.4 \u00b5SCU\\nBackpacks: Medium, Light\\n\\nDependable and durable armor never goes out of style. The ORC-mkV from Clark Defense Systems has been a battlefield staple for centuries. This highly regarded medium armor blends composite plating with a special fiber reinforced polymer to provide solid protection and a wide range of movement.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-55 / 85 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s",
+                "Carrying Capacity": "6.4 \u00b5SCU"
+            },
+            "DescriptionText": "Dependable and durable armor never goes out of style. The ORC-mkV from Clark Defense Systems has been a battlefield staple for centuries. This highly regarded medium armor blends composite plating with a special fiber reinforced polymer to provide solid protection and a wide range of movement.",
             "Manufacturer": {
                 "Code": "CDS",
-                "Name": "Clark Defense Systems"
+                "Name": "Clark Defense Systems",
+                "UUID": "8a7bd715-5b97-404f-b02e-0d0cc593f608"
             },
             "Tags": [
                 "Marine_Legacy_Medium",
@@ -3882,6 +3893,8 @@
                 {
                     "PortName": "wep_stocked_2",
                     "Size": 4,
+                    "MinSize": 2,
+                    "MaxSize": 4,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -3890,15 +3903,37 @@
                         "transferable"
                     ],
                     "Types": [
-                        "WeaponPersonal",
-                        "FPS_Deployable",
-                        "WeaponPersonal"
+                        "WeaponPersonal.Medium",
+                        "FPS_Deployable.Medium",
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Medium"
+                            ]
+                        },
+                        {
+                            "type": "FPS_Deployable",
+                            "sub_types": [
+                                "Medium"
+                            ]
+                        },
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "wep_stocked_3",
                     "Size": 5,
+                    "MinSize": 2,
+                    "MaxSize": 5,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -3907,132 +3942,276 @@
                         "transferable"
                     ],
                     "Types": [
-                        "WeaponPersonal",
-                        "FPS_Deployable",
-                        "WeaponPersonal"
+                        "WeaponPersonal.Medium",
+                        "WeaponPersonal.Large",
+                        "FPS_Deployable.Medium",
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Medium",
+                                "Large"
+                            ]
+                        },
+                        {
+                            "type": "FPS_Deployable",
+                            "sub_types": [
+                                "Medium"
+                            ]
+                        },
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "magazine_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine",
+                        "WeaponAttachment.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "magazine_attach_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine",
+                        "WeaponAttachment.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "magazine_attach_3",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine",
+                        "WeaponAttachment.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "magazine_attach_4",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine",
+                        "WeaponAttachment.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "magazine_attach_5",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine",
+                        "WeaponAttachment.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "magazine_attach_6",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine",
+                        "WeaponAttachment.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "grenade_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal",
-                        "FPS_Deployable"
+                        "WeaponPersonal.Grenade",
+                        "FPS_Deployable.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Grenade"
+                            ]
+                        },
+                        {
+                            "type": "FPS_Deployable",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "grenade_attach_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal",
-                        "FPS_Deployable"
+                        "WeaponPersonal.Grenade",
+                        "FPS_Deployable.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Grenade"
+                            ]
+                        },
+                        {
+                            "type": "FPS_Deployable",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "grenade_attach_3",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal",
-                        "FPS_Deployable"
+                        "WeaponPersonal.Grenade",
+                        "FPS_Deployable.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Grenade"
+                            ]
+                        },
+                        {
+                            "type": "FPS_Deployable",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "backpack",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "body_attach",
                         "inventory"
@@ -4047,11 +4226,18 @@
                     "Types": [
                         "Char_Armor_Backpack"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Backpack"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "gadget_attach_1",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -4061,6 +4247,11 @@
                     "Types": [
                         "Gadget"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Gadget"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
@@ -4069,6 +4260,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0075,
                 "unit": 6,
@@ -4081,14 +4281,71 @@
                 "isClosedContainer": true,
                 "uuid": "9a573a20-4610-4aa5-82fe-bff7ee3419a7"
             },
+            "ResourceContainer": {
+                "Mass": 0.2,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 100,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 9.999999999999999e-5
+                },
+                "InclusiveResources": [
+                    "12181a14-034b-4deb-92b7-2faf2cfd182b"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "12181a14-034b-4deb-92b7-2faf2cfd182b",
+                        "Weight": 1
+                    }
+                ]
+            },
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "cbe3a3e8-5035-4772-acb7-014617c6b03a"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 6
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -55,
                 "Maximum": 85
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

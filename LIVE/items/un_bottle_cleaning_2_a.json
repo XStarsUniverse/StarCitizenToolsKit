@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Bottle",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "07f36567-ac56-4062-b7af-eb1153b0f5f3",
             "ClassName": "un_bottle_cleaning_2_a",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Bottle",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

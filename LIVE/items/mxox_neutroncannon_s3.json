@@ -2779,6 +2779,7 @@
         "grade": 1,
         "name": "NN-14 Cannon",
         "tags": "MXOX NeutronCannon flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "MXOX",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2792,9 +2793,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "NN-14 Cannon",
             "Description": "Manufacturer: MaxOx\\nItem Type: Neutron Cannon\\nSize: 2\\n\\nBuilding on the technology of the NN-13, MaxOx\u2019s NN-14 offers a significant increase in power for the neutron autocannon to give each shot a devastating punch. With that increased damage however, comes a heavier draw on your power plant.",
+            "DescriptionData": {
+                "Manufacturer": "MaxOx",
+                "Item Type": "Neutron Cannon",
+                "Size": "2"
+            },
+            "DescriptionText": "Building on the technology of the NN-13, MaxOx's NN-14 offers a significant increase in power for the neutron autocannon to give each shot a devastating punch. With that increased damage however, comes a heavier draw on your power plant.",
             "Manufacturer": {
                 "Code": "MXOX",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "de0d3594-9f18-42c0-8a90-6edd723d80f8"
             },
             "Tags": [
                 "MXOX",
@@ -2806,32 +2814,72 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2857,8 +2905,37 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.58,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

@@ -1870,6 +1870,7 @@
         "grade": 1,
         "name": "Bedrock Boots",
         "tags": "gsb_shoes Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "GSB",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1883,9 +1884,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Bedrock Boots",
             "Description": "This steel-toe workboot from Grindstone features SureFire grip technology, giving you firm traction even on slip, oil and abrasion surfaces.",
+            "DescriptionText": "This steel-toe workboot from Grindstone features SureFire grip technology, giving you firm traction even on slip, oil and abrasion surfaces.",
             "Manufacturer": {
                 "Code": "GSB",
-                "Name": "GSB"
+                "Name": "GSB",
+                "UUID": "6d4b7375-8e0c-445a-a243-21f8f94f99cb"
             },
             "Tags": [
                 "gsb_shoes",
@@ -1896,11 +1899,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1910,9 +1920,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 25
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

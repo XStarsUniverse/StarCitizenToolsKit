@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "Arclight Pistol Battery (30 cap)",
         "tags": "klwe_pistol_energy_01",
+        "required_tags": "",
         "manufacturer": "KLA",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Arclight Pistol Battery (30 cap)",
             "Description": "Item Type: Battery\\nCapacity: 30\\n\\nThis plasma cell has enough capacity for the Klaus & Werner Arclight pistol to fire 30 rounds before needing a recharge.\u00a0",
+            "DescriptionData": {
+                "Item Type": "Battery",
+                "Capacity": "30"
+            },
+            "DescriptionText": "This plasma cell has enough capacity for the Klaus & Werner Arclight pistol to fire 30 rounds before needing a recharge.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "klwe_pistol_energy_01"
@@ -1959,7 +1966,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

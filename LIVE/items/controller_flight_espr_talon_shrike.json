@@ -2062,6 +2062,7 @@
         "grade": 1,
         "name": "Flight Blade",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ESPR",
         "stdItem": {
             "UUID": "6c5e6aae-0357-42ae-95d2-027609962ead",
@@ -2074,9 +2075,11 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Flight Blade",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ESPR",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "4ecc1a24-d228-4dd5-8857-21ba6145a1d3"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
@@ -2116,6 +2119,40 @@
                     "CapacitorRegenDelayAfterUse": 0.2,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

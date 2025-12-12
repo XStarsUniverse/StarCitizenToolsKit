@@ -1361,6 +1361,7 @@
         "grade": 1,
         "name": "Quasi Grazer Tongue",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "06b503b8-01c8-4447-80d5-843d61a5d2b6",
             "ClassName": "Harvestable_Trophy_1H_QuasigrazerTongue",
@@ -1372,10 +1373,35 @@
             "Type": "Misc.Harvestable",
             "Name": "Quasi Grazer Tongue",
             "Description": "The tundra Quasi grazer has evolved a long coat and insulating fat reserves that allow it to stay warm at arctic-level temperatures. The animal's tongue is especially renowned for the fat it contains, which can be rendered into a lubricant that remains fluid in extreme cold.",
+            "DescriptionText": "The tundra Quasi grazer has evolved a long coat and insulating fat reserves that allow it to stay warm at arctic-level temperatures. The animal's tongue is especially renowned for the fat it contains, which can be rendered into a lubricant that remains fluid in extreme cold.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                }
             }
         }
     }

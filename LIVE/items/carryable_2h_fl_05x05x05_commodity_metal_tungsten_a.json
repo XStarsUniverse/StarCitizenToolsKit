@@ -1199,6 +1199,7 @@
         "grade": 1,
         "name": "Tungsten",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "71ee8b89-5a81-40c4-89db-03fdd9c5da5f",
@@ -1211,6 +1212,12 @@
             "Type": "Cargo.Small",
             "Name": "Tungsten",
             "Description": "Used in many different alloys, tungsten in its pure form becomes malleable while maintaining its hardness. \\n",
+            "DescriptionText": "Used in many different alloys, tungsten in its pure form becomes malleable while maintaining its hardness.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1218,6 +1225,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "60f116f4-c02a-45b2-9ded-333747795124",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

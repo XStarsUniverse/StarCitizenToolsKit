@@ -1231,6 +1231,7 @@
         "grade": 1,
         "name": "Wikelo Emporium Bust",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "718b9da5-c0ff-4506-9b8e-e4763d3d263e",
             "ClassName": "PlayerDeco_Static_Hologram_Wikelo_1_a",
@@ -1242,10 +1243,18 @@
             "Type": "Usable.Cargo",
             "Name": "Wikelo Emporium Bust",
             "Description": "Hello, human neighbor. I am Wikelo and now live in your human system of Stanton. Have many things if you would like to come visit. Can make too. If not, I understand. Enjoy this gift from me.\\n\\nBye.",
+            "DescriptionText": "Hello, human neighbor. I am Wikelo and now live in your human system of Stanton. Have many things if you would like to come visit. Can make too. If not, I understand. Enjoy this gift from me.\n\nBye.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "hologram",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -1253,7 +1262,11 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Turnon",
+                "Turnoff"
+            ]
         }
     }
 }

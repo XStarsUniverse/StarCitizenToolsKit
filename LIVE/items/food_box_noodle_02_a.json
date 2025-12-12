@@ -1602,6 +1602,7 @@
         "grade": 1,
         "name": "Mushroom Pad Thai",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "a83b9175-b5f5-4d7c-9346-fa972597749a",
@@ -1614,9 +1615,15 @@
             "Type": "Food.Box",
             "Name": "Mushroom Pad Thai",
             "Description": "NDR: 48\\nEffects: Hypertrophic, Hypo-Metabolic\\n\\nRoasted mushrooms pair with vegetables and rice noodles in a sweet and tangy tamarind sauce. Light, but filling.",
+            "DescriptionData": {
+                "NDR": "48",
+                "Effects": "Hypertrophic, Hypo-Metabolic"
+            },
+            "DescriptionText": "Roasted mushrooms pair with vegetables and rice noodles in a sweet and tangy tamarind sauce. Light, but filling.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1624,12 +1631,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": ""
-            }
+                "NutritionalDensityRating": "48",
+                "Effects": [
+                    "Hypertrophic",
+                    "Hypo-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerTypeTag": "",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

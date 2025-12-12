@@ -1579,6 +1579,7 @@
         "grade": 1,
         "name": "Ranta Dung",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "4ecdaee3-2886-4b77-90fa-372cbe88fb84",
             "ClassName": "Harvestable_RantaDung",
@@ -1590,13 +1591,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Ranta Dung",
             "Description": "A dry cube-shaped dung that comes from a large isopod-like crustacean known as a Ranta. It has recently been discovered that the dung contains a unique bacterial biome that helps the Ranta process and digest minerals and some researches are hopeful will lead to industrial or medical innovations.",
+            "DescriptionText": "A dry cube-shaped dung that comes from a large isopod-like crustacean known as a Ranta. It has recently been discovered that the dung contains a unique bacterial biome that helps the Ranta process and digest minerals and some researches are hopeful will lead to industrial or medical innovations.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 700,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.0007
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "5cc98bf3-8edd-4184-9e47-2ff40e4c556b",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Silicon",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "a74787c3-3d67-4f4b-b9d6-83293b0aaf8f",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Silicon",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 4,
+                    "UnitName": "SCU",
+                    "SCU": 4
+                },
+                "InclusiveGroups": [
+                    "4d3f31f7-feab-488c-8f36-ac7c8c4012b8"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "7bbd3197-a6e1-49b3-a495-0b7ef4f8ce40",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

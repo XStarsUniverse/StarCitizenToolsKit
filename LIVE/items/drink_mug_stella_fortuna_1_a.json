@@ -1990,6 +1990,7 @@
         "grade": 1,
         "name": "2954 Tempt Fate Tankard",
         "tags": "Mug StellaFortuna",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "31142a63-5179-48e5-b382-a705d8d01672",
@@ -2002,9 +2003,11 @@
             "Type": "Drink.UNDEFINED",
             "Name": "2954 Tempt Fate Tankard",
             "Description": "Featuring a clover motif with an antique finish, this pewter and brass tankard is perfect for making a traditional Stella Fortuna toast to \"Tempt Fate.\"",
+            "DescriptionText": "Featuring a clover motif with an antique finish, this pewter and brass tankard is perfect for making a traditional Stella Fortuna toast to \"Tempt Fate.\"",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "Mug",
@@ -2014,11 +2017,18 @@
                 {
                     "PortName": "slot_garnish",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "slot_garnish"
                     ],
                     "Types": [
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2029,12 +2039,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 0,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

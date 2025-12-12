@@ -1762,6 +1762,7 @@
         "grade": 1,
         "name": "Theaters of War: Hathor Group Hat",
         "tags": "gys_hat Hathor Set_01 Color_01 KeepsShape $hatHair+",
+        "required_tags": "Protos",
         "manufacturer": "GYS",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1775,9 +1776,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Theaters of War: Hathor Group Hat",
             "Description": "This Hathor Group hat resurrects the original design worn by workers in Nexus when the company controlled the system. It has been intentionally distressed to reflect the harsh conditions in the system, and released as a special Theaters of War (Working Title) tie-in to promote their Nexus sim map.",
+            "DescriptionText": "This Hathor Group hat resurrects the original design worn by workers in Nexus when the company controlled the system. It has been intentionally distressed to reflect the harsh conditions in the system, and released as a special Theaters of War (Working Title) tie-in to promote their Nexus sim map.",
             "Manufacturer": {
                 "Code": "GYS",
-                "Name": "Gyson Inc."
+                "Name": "Gyson Inc.",
+                "UUID": "d56a3985-2f29-4095-b2f2-542376cc74f4"
             },
             "Tags": [
                 "gys_hat",
@@ -1791,11 +1794,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1805,9 +1815,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

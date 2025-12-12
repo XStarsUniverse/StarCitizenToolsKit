@@ -925,6 +925,7 @@
         "grade": 1,
         "name": "Elsen",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -938,9 +939,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Elsen",
             "Description": "Item Type: Cooler\\nManufacturer: Wen/Cassel Propulsion\\nSize: 3\\nGrade: B\\nClass: Civilian\\n\\nWen/Cassel engineers used many of the same parts found in the Draug, only fine tuned to deliver improved performance and durability without greatly enhancing its signature. That makes the Elsen large cooler a worthy upgrade for those that can handle the extra heat.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Wen/Cassel Propulsion",
+                "Size": "3",
+                "Grade": "B",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Wen/Cassel engineers used many of the same parts found in the Draug, only fine tuned to deliver improved performance and durability without greatly enhancing its signature. That makes the Elsen large cooler a worthy upgrade for those that can handle the extra heat.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Cooler": {
                 "CoolingRate": 7840000,
@@ -952,8 +962,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1500
+                "Health": 1500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 20,
@@ -990,6 +1011,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.22
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 30.8,
+                                "MinimumFraction": 0.5,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1500,
+                            "IR": 7700
+                        }
+                    }
+                ]
             }
         }
     }

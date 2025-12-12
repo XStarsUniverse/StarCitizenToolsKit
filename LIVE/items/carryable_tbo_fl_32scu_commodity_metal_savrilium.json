@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Savrilium",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "f2e4ecc6-7c58-443d-9ace-5205e2a1edbe",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Savrilium",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3.75,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 32,
+                    "UnitName": "SCU",
+                    "SCU": 32
+                },
+                "InclusiveGroups": [
+                    "9b28b2e4-7df3-43f3-a69a-d82b119e25bf"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "4a47cad8-0271-4048-b19b-d9b52521fc20",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

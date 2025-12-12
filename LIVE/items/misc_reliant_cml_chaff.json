@@ -1955,6 +1955,7 @@
         "grade": 1,
         "name": "MISC Reliant - Noise Launcher",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "MIS",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -1968,9 +1969,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "MISC Reliant - Noise Launcher",
             "Description": "MISC Reliant - Noise Launcher",
+            "DescriptionText": "MISC Reliant - Noise Launcher",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Ammunition": {
                 "UUID": "fba15492-1bee-4ef0-8efd-815e3c500ea9",
@@ -1986,7 +1989,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,

@@ -947,6 +947,7 @@
         "grade": 1,
         "name": "Plasma Battery",
         "tags": "PlasmaContainer",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "6df61bd2-2485-4c3a-a4cc-23e095d6339e",
@@ -959,6 +960,12 @@
             "Type": "Cargo.Cargo",
             "Name": "Plasma Battery",
             "Description": "A small plasma battery developed for use in ASD facilities.",
+            "DescriptionText": "A small plasma battery developed for use in ASD facilities.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "PlasmaContainer"
             ],
@@ -968,7 +975,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 20
+                "Health": 20,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

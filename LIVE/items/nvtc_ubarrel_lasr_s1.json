@@ -1632,6 +1632,7 @@
         "grade": 1,
         "name": "250-E Laser Pointer",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "NVTC",
         "classification": "FPS.WeaponAttachment.BottomAttachment",
         "stdItem": {
@@ -1645,15 +1646,32 @@
             "Type": "WeaponAttachment.BottomAttachment",
             "Name": "250-E Laser Pointer",
             "Description": "Manufacturer: NV-TAC\\nType: Laser Pointer\\nAttachment Point: Underbarrel\\nSize: 1\\n\\nSpread: -12.5%\\n\\nThe 250-E is an intuitive aiming aid that produces a laser visible to you and others. NV-TAC built the attachment to be lightweight yet durable so it won't add extra weight to your weapon.",
+            "DescriptionData": {
+                "Manufacturer": "NV-TAC",
+                "Type": "Laser Pointer",
+                "Attachment Point": "Underbarrel",
+                "Size": "1"
+            },
+            "DescriptionText": "The 250-E is an intuitive aiming aid that produces a laser visible to you and others. NV-TAC built the attachment to be lightweight yet durable so it won't add extra weight to your weapon.",
             "Manufacturer": {
                 "Code": "NVTC",
-                "Name": "NV-TAC"
+                "Name": "NV-TAC",
+                "UUID": "f113387e-0905-489a-829d-8cebfdc19e66"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

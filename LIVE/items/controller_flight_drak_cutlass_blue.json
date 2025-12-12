@@ -2062,6 +2062,7 @@
         "grade": 1,
         "name": "Flight Blade",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "01755e4b-1371-468b-9e02-773f29ebcc5e",
@@ -2074,9 +2075,11 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Flight Blade",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
@@ -2116,6 +2119,40 @@
                     "CapacitorRegenDelayAfterUse": 0.7,
                     "CapacitorRegenPerSec": 100
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 6,
+                                "MinimumFraction": 0.1666667
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

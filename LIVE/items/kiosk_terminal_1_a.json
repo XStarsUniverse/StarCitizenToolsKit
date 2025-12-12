@@ -824,6 +824,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e1b658e9-182c-4d63-9bb0-42dacd8bd1c0",
             "ClassName": "kiosk_terminal_1_a",
@@ -835,15 +836,35 @@
             "Type": "Display.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "screen_01",
                     "Size": 2,
+                    "MinSize": 0,
+                    "MaxSize": 2,
                     "Types": [
-                        "Display"
+                        "Display.UNDEFINED"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display",
+                            "sub_types": [
+                                "UNDEFINED"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "873783b5-f21f-474c-a753-eae98453a2c3",
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Login"
             ]
         }
     }

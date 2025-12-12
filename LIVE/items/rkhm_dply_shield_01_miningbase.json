@@ -2482,6 +2482,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "rkhm_dply_shield_01",
+        "required_tags": "",
         "stdItem": {
             "UUID": "b29ec947-3168-40fc-8537-10cc404cddc3",
             "ClassName": "rkhm_dply_shield_01_MiningBase",
@@ -2493,12 +2494,33 @@
             "Type": "Gadget.Gadget",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "rkhm_dply_shield_01"
             ],
             "Durability": {
-                "Health": 10000
-            }
+                "Health": 10000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Activate",
+                "Deactivate",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Offhandequip",
+                "Prime",
+                "Unprime"
+            ]
         }
     }
 }

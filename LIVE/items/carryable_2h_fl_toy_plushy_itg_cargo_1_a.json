@@ -1031,6 +1031,7 @@
         "grade": 1,
         "name": "Interstellar Transport Guild Cargo Plushie",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "44ebfd0d-038b-41af-a292-ef18302186f6",
             "ClassName": "Carryable_2H_FL_toy_plushy_ITG_cargo_1_a",
@@ -1042,11 +1043,24 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "Interstellar Transport Guild Cargo Plushie",
             "Description": "Here's a haul you can hug. This plushie shaped like a cargo container features Interstellar Transport Guild branding with the guild's logo and blue and grey color scheme.",
+            "DescriptionText": "Here's a haul you can hug. This plushie shaped like a cargo container features Interstellar Transport Guild branding with the guild's logo and blue and grey color scheme.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

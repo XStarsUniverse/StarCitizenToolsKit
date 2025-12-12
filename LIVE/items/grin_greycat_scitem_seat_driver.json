@@ -1094,6 +1094,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "12516294-990d-4d00-87a0-e5280e5fef26",
@@ -1106,20 +1107,51 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Ports": [
                 {
                     "PortName": "MFD_Screen_Center",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
+                    ],
                     "Uneditable": false
                 }
-            ]
+            ],
+            "Interactions": [
+                "Flightready",
+                "Openaccesspoints",
+                "Closeaccesspoints"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

@@ -1990,6 +1990,7 @@
         "grade": 1,
         "name": "Cup",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "b85485a3-6eb8-44e6-807b-047502d26ed8",
@@ -2002,19 +2003,28 @@
             "Type": "Drink.UNDEFINED",
             "Name": "Cup",
             "Description": "A drinking vessel.",
+            "DescriptionText": "A drinking vessel.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Ports": [
                 {
                     "PortName": "slot_garnish",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "slot_garnish"
                     ],
                     "Types": [
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2025,12 +2035,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 0,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -1603,6 +1603,7 @@
         "grade": 1,
         "name": "Tin",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "4e8154da-02cb-49e1-a694-a2933e9f1bf2",
@@ -1615,9 +1616,11 @@
             "Type": "Food.Tin",
             "Name": "Tin",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1625,12 +1628,22 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "tinCan"
-            }
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "tinCan",
+                "ContainerTypeTag": "tinCan",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -1142,6 +1142,7 @@
         "grade": 2,
         "name": "Fierell Cascade",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1155,17 +1156,37 @@
             "Type": "PowerPlant.Power",
             "Name": "Fierell Cascade",
             "Description": "Item Type: Power Plant\\nManufacturer: Aegis Dynamics\\nSize: 1\\nGrade: B\\nClass: Military\\n\\nRely on Aegis\u2019 expertise to power your ship. The Fierell Cascade is a military-grade power plant that prioritizes performance over everything else.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "1",
+                "Grade": "B",
+                "Class": "Military"
+            },
+            "DescriptionText": "Rely on Aegis' expertise to power your ship. The Fierell Cascade is a military-grade power plant that prioritizes performance over everything else.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 20,
+                "Maximum": 6000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 630
+                "Health": 630,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.75,
@@ -1188,6 +1209,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 3365.6,
@@ -1205,6 +1230,39 @@
             },
             "PowerPlant": {
                 "Output": 3365.6
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 16,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 15,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 7920
+                        }
+                    }
+                ]
             }
         }
     }

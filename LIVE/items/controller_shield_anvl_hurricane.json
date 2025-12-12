@@ -196,6 +196,7 @@
         "grade": 1,
         "name": "SHIELDS",
         "tags": "flightReady",
+        "required_tags": "",
         "stdItem": {
             "UUID": "bf1613d4-5bf0-48b7-9038-ab498a6bdce9",
             "ClassName": "Controller_Shield_ANVL_Hurricane",
@@ -207,9 +208,33 @@
             "Type": "ShieldController.UNDEFINED",
             "Name": "SHIELDS",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Shield",
+                                "Rate": 1000000,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

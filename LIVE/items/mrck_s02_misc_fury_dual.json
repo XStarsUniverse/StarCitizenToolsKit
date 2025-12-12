@@ -733,6 +733,7 @@
         "grade": 1,
         "name": "Mirai Fury MX 2xS1 Missile Rack",
         "tags": "flightReady $MISC_Fury_Miru",
+        "required_tags": "MISC_Fury_Miru",
         "manufacturer": "MIS",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -746,9 +747,17 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "Mirai Fury MX 2xS1 Missile Rack",
             "Description": "Item Type: Missile Rack\\nManufacturer: Mirai\\nSize: 2\\nMissiles: 2xS1\\n\\nTo make the Fury a threat despite its small size, Mirai developed this bespoke missile rack, which can carry and deploy two S1 missiles without undermining the ship's compact profile.",
+            "DescriptionData": {
+                "Item Type": "Missile Rack",
+                "Manufacturer": "Mirai",
+                "Size": "2",
+                "Missiles": "2xS1"
+            },
+            "DescriptionText": "To make the Fury a threat despite its small size, Mirai developed this bespoke missile rack, which can carry and deploy two S1 missiles without undermining the ship's compact profile.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Mirai"
+                "Name": "Mirai",
+                "UUID": "cdf6ea1e-7de3-4b58-bf9d-13c5fbafc49a"
             },
             "Tags": [
                 "flightReady",
@@ -758,16 +767,36 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_02_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -778,7 +807,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.5,
@@ -818,6 +849,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

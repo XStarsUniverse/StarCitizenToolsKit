@@ -19069,6 +19069,7 @@
         "grade": 1,
         "name": "AAT-34 Turret",
         "tags": "",
+        "required_tags": "NOPE",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "b0329c6c-5a8d-41be-8baf-ad80e605c63c",
@@ -19081,9 +19082,15 @@
             "Type": "Turret.MannedTurret",
             "Name": "AAT-34 Turret",
             "Description": "Manufacturer: Behring\\nItem Type: Anti-Aircraft Turret\\n\\nMaintain order with the AAT-34 anti-aircraft turret. This rugged design is ideal for perimeter protection and can survive long exposure to the elements with minimal maintenance while still providing first class defensive fire from its S10 weapon and dual S7 missile launchers. Its custom targeting software also helps to maximize area coverage while keeping placement numbers reasonable; protecting more sky with fewer turrets.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Anti-Aircraft Turret"
+            },
+            "DescriptionText": "Maintain order with the AAT-34 anti-aircraft turret. This rugged design is ideal for perimeter protection and can survive long exposure to the elements with minimal maintenance while still providing first class defensive fire from its S10 weapon and dual S7 missile launchers. Its custom targeting software also helps to maximize area coverage while keeping placement numbers reasonable; protecting more sky with fewer turrets.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Cooler": {
                 "CoolingRate": 5800000,
@@ -19095,8 +19102,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 25
+                "Health": 25,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -19143,6 +19161,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Radar": {
                 "Cooldown": 2.5,

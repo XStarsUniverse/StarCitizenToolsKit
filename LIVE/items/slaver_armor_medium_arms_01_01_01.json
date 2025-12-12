@@ -1925,6 +1925,7 @@
         "grade": 1,
         "name": "DustUp Arms Tactical",
         "tags": "Slaver_Medium Set_01 Color_01 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1938,9 +1939,18 @@
             "Type": "Char_Armor_Arms.Medium",
             "Name": "DustUp Arms Tactical",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -60 / 90 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nThe DustUp has your back if you\u2019re looking to get into some trouble. The body plating is built off of the same CDS undersuit used by the UEE Marines, it adds reconstructed Omni-Role mkII pieces to give you solid protection against incoming fire, but the real gem is the modified helmet. That thing was built to withstand explosions, so it should totally protect you against some shots. The whole thing\u2019s been reasonably tested against vacuum too, so you can feel free to EVA all you want without worrying about dying.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-60 / 90 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "The DustUp has your back if you're looking to get into some trouble. The body plating is built off of the same CDS undersuit used by the UEE Marines, it adds reconstructed Omni-Role mkII pieces to give you solid protection against incoming fire, but the real gem is the modified helmet. That thing was built to withstand explosions, so it should totally protect you against some shots. The whole thing's been reasonably tested against vacuum too, so you can feel free to EVA all you want without worrying about dying.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "Slaver_Medium",
@@ -1953,15 +1963,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 5
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -60,
                 "Maximum": 90
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

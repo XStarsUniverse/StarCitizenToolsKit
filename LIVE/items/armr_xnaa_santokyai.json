@@ -235,6 +235,7 @@
         "grade": 1,
         "name": "Scout Ship Armor",
         "tags": "XNAA_SanTokYai_Base",
+        "required_tags": "",
         "manufacturer": "XNAA",
         "classification": "Ship.Armor.Medium",
         "stdItem": {
@@ -248,9 +249,11 @@
             "Type": "Armor.Medium",
             "Name": "Scout Ship Armor",
             "Description": "Scout Ship Armor",
+            "DescriptionText": "Scout Ship Armor",
             "Manufacturer": {
                 "Code": "XNAA",
-                "Name": "Aopoa"
+                "Name": "Aopoa",
+                "UUID": "06370f79-4741-4781-be08-d5acc9e28047"
             },
             "Tags": [
                 "XNAA_SanTokYai_Base"
@@ -271,7 +274,9 @@
                 }
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

@@ -2037,6 +2037,7 @@
         "grade": 1,
         "name": "Flight Blade",
         "tags": "VNCL_Stinger_Blade",
+        "required_tags": "VNCL_Stinger_Blade",
         "manufacturer": "ESPR",
         "stdItem": {
             "UUID": "4a4879ca-ddd2-4995-96c3-92cce1854c5d",
@@ -2049,9 +2050,11 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Flight Blade",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ESPR",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "4ecc1a24-d228-4dd5-8857-21ba6145a1d3"
             },
             "Tags": [
                 "VNCL_Stinger_Blade"
@@ -2094,6 +2097,40 @@
                     "CapacitorRegenDelayAfterUse": 0.7,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

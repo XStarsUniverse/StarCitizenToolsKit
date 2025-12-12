@@ -8954,6 +8954,7 @@
         "grade": 1,
         "name": "Demeco LMG",
         "tags": "stocked lmg klwe_lmg_energy_01",
+        "required_tags": "",
         "manufacturer": "KLA",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -8967,9 +8968,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Demeco LMG",
             "Description": "Manufacturer: Klaus & Werner\\nItem Type: LMG\\nClass: Energy (Laser)\\n\\nBattery Size: 100\\nRate Of Fire: 400 rpm\\nEffective Range: 40 m\\n\\nAttachments: Optics (S2), Barrel (S2), Underbarrel (S3)\\n\\nKlaus & Werner has created an iconic weapon with tried and true Demeco laser LMG. Used extensively in military engagements, this short-to-mid-range infantry favorite has been constructed with stability and accuracy at the forefront.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Item Type": "LMG",
+                "Class": "Energy (Laser)",
+                "Size": "100",
+                "Rate Of Fire": "400 rpm",
+                "Effective Range": "40 m",
+                "Attachments": "Optics (S2), Barrel (S2), Underbarrel (S3)"
+            },
+            "DescriptionText": "Klaus & Werner has created an iconic weapon with tried and true Demeco laser LMG. Used extensively in military engagements, this short-to-mid-range infantry favorite has been constructed with stability and accuracy at the forefront.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "stocked",
@@ -8980,6 +8992,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "klwe_lmg_energy_01"
                     ],
@@ -8987,24 +9001,45 @@
                         "klwe_lmg_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "b62224ba-5c56-4306-857a-70de7d570767",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory",
                         "energy_barrel"
@@ -9014,24 +9049,44 @@
                         "energy_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9090,14 +9145,21 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

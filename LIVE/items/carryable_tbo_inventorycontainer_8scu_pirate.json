@@ -786,6 +786,7 @@
         "grade": 1,
         "name": "Salvaged Skull 8 SCU Container",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1c0e750c-6c3a-4215-ad5b-3712e8d2dd97",
             "ClassName": "Carryable_TBO_InventoryContainer_8SCU_Pirate",
@@ -797,11 +798,23 @@
             "Type": "InventoryContainer.Cargo",
             "Name": "Salvaged Skull 8 SCU Container",
             "Description": "It may be used to transport \u201cgoods\u201d, but this battered and scarred 8 SCU container is anything but thanks to its vivid skull markings.",
+            "DescriptionText": "It may be used to transport \u201cgoods\u201d, but this battered and scarred 8 SCU container is anything but thanks to its vivid skull markings.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
+            "Interactions": [
+                "Open",
+                "Drop",
+                "Place",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "unit": 0,
                 "unitName": "SCU",

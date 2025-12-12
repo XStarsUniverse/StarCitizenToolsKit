@@ -1394,6 +1394,7 @@
         "grade": 1,
         "name": "SightRight Goggles Yellow",
         "tags": "scu_goggles Set_02 Color_01",
+        "required_tags": "Protos",
         "manufacturer": "SCU",
         "stdItem": {
             "UUID": "8431c4ac-6d13-47bb-8e4d-24cf15ed72e5",
@@ -1406,9 +1407,11 @@
             "Type": "Char_Accessory_Eyes.UNDEFINED",
             "Name": "SightRight Goggles Yellow",
             "Description": "Stegman's SightRight goggles strike a careful balance between ultralight comfort and professional-quality protection. The enhanced polycarbonate frame offers maximum eye safety with a durable scratch-resistant lens construction that also features an award-winning anti-fog coating to maintain visibility in the harshest of worksites.",
+            "DescriptionText": "Stegman's SightRight goggles strike a careful balance between ultralight comfort and professional-quality protection. The enhanced polycarbonate frame offers maximum eye safety with a durable scratch-resistant lens construction that also features an award-winning anti-fog coating to maintain visibility in the harshest of worksites.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_goggles",
@@ -1419,7 +1422,16 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Inspect"
+            ]
         }
     }
 }

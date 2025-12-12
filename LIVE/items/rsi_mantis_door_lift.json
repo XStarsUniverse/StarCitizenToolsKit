@@ -6389,6 +6389,7 @@
         "grade": 1,
         "name": "Door Control",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "75707891-2128-4903-9d53-fc74c4bae1b5",
@@ -6401,14 +6402,18 @@
             "Type": "Door.UNDEFINED",
             "Name": "Door Control",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_panel_screen",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Flags": [
                         "uneditable"
                     ],
@@ -6416,8 +6421,16 @@
                 }
             ],
             "Durability": {
-                "Health": 400
+                "Health": 400,
+                "Salvageable": 1,
+                "Repairable": 1
             },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Lock",
+                "Unlock"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,

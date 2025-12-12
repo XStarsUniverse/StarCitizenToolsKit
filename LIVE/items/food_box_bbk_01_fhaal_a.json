@@ -1602,6 +1602,7 @@
         "grade": 1,
         "name": "Fhaal Fire Kacho",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "d286214d-fa11-4ee5-97e3-8dcac74987e9",
@@ -1614,9 +1615,15 @@
             "Type": "Food.Box",
             "Name": "Fhaal Fire Kacho",
             "Description": "NDR: 30\\nEffects: None\\n\\nBig Benny's kacho is based on traditional family recipes straight from Corel, combining springy noodles and a rich, warm broth to create a taste enjoyed the 'verse over. The Fhaal Fire flavor takes heat to another level with its bold spice blend.",
+            "DescriptionData": {
+                "NDR": "30",
+                "Effects": "None"
+            },
+            "DescriptionText": "Big Benny's kacho is based on traditional family recipes straight from Corel, combining springy noodles and a rich, warm broth to create a taste enjoyed the 'verse over. The Fhaal Fire flavor takes heat to another level with its bold spice blend.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1624,12 +1631,25 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": ""
-            }
+                "NutritionalDensityRating": "30",
+                "Effects": [
+                    "None"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerTypeTag": "",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

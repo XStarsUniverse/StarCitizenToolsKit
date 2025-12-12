@@ -1374,6 +1374,7 @@
         "grade": 1,
         "name": "Maze",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "c731e598-8691-4ea9-a4ed-8f86740e094f",
@@ -1386,6 +1387,12 @@
             "Type": "Cargo.Small",
             "Name": "Maze",
             "Description": "Street name for a tranquilizer and knock-out hallucinogen that's Tevarin in origin. Dosing up is like taking a massive journey into your own mind. To the outside world, you\u2019re nearly comatose, but to you, it\u2019s a wild trip. A handful of religions have been started after a user took a trip into the maze. Aside from the toxic element, there\u2019s a chance you won\u2019t come down from the high. They call this \u2018getting disconnected.\u2019 Users stay locked in their own head until their brain decays. Maze was originally used as a near religious experience for Tevarin warriors to find their path in life. Since the fall of the Tevarin empire, it's become corrupted into a purely recreational drug. The Tevarin who once treated this drug with reverence and ritual, now make boatloads of credits selling it to anyone who wants to risk a potentially dangerous trip.",
+            "DescriptionText": "Street name for a tranquilizer and knock-out hallucinogen that's Tevarin in origin. Dosing up is like taking a massive journey into your own mind. To the outside world, you're nearly comatose, but to you, it's a wild trip. A handful of religions have been started after a user took a trip into the maze. Aside from the toxic element, there's a chance you won't come down from the high. They call this 'getting disconnected.' Users stay locked in their own head until their brain decays. Maze was originally used as a near religious experience for Tevarin warriors to find their path in life. Since the fall of the Tevarin empire, it's become corrupted into a purely recreational drug. The Tevarin who once treated this drug with reverence and ritual, now make boatloads of credits selling it to anyone who wants to risk a potentially dangerous trip.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1395,7 +1402,42 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 4
+                "Health": 4,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "ExclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "ca8dcc9f-35d9-4652-b270-7db91ccd25a8",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

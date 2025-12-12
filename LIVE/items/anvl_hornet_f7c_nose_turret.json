@@ -916,6 +916,7 @@
         "grade": 1,
         "name": "Anvil Hornet F7C Nose Turret",
         "tags": "ANVL_Hornet_Center flightReady",
+        "required_tags": "ANVL_Hornet_Base",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "d342658d-9562-4b07-aa26-7a47b6ed6fd3",
@@ -928,9 +929,16 @@
             "Type": "Turret.CanardTurret",
             "Name": "Anvil Hornet F7C Nose Turret",
             "Description": "Item Type: Turret\\nManufacturer: Anvil Aerospace\\nSize: 3\\n\\nThis nose turret was designed specifically for Anvil's F7C Hornet to allow for mounting two Size-1 weapons and precise gimbaled tracking of targets.",
+            "DescriptionData": {
+                "Item Type": "Turret",
+                "Manufacturer": "Anvil Aerospace",
+                "Size": "3"
+            },
+            "DescriptionText": "This nose turret was designed specifically for Anvil's F7C Hornet to allow for mounting two Size-1 weapons and precise gimbaled tracking of targets.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Hornet_Center",
@@ -940,16 +948,36 @@
                 {
                     "PortName": "hardpoint_class_1_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_class_1_right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -960,7 +988,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 600
+                "Health": 600,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

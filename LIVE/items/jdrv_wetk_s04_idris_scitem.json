@@ -1254,6 +1254,7 @@
         "grade": 1,
         "name": "Exfiltrate",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "af671ad3-d55d-44b3-8617-473bd3dc0da6",
             "ClassName": "JDRV_WETK_S04_Idris_SCItem",
@@ -1265,8 +1266,30 @@
             "Type": "JumpDrive.UNDEFINED",
             "Name": "Exfiltrate",
             "Description": "Item Type: Jump Module\\nManufacturer: Aegis Dynamics\\nSize: 4\\n\\nThis capital-class jump module was designed specifically for the Idris frigate.",
+            "DescriptionData": {
+                "Item Type": "Jump Module",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "4"
+            },
+            "DescriptionText": "This capital-class jump module was designed specifically for the Idris frigate.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Distortion": {
+                "DecayDelay": 1,
+                "DecayRate": 345.6,
+                "Maximum": 1728,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 17000
+                "Health": 17000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 80,
@@ -1282,6 +1305,34 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Transiting",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "QuantumFuel",
+                                "Rate": 0,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

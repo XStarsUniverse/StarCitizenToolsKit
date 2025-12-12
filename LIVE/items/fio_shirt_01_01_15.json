@@ -1894,6 +1894,7 @@
         "grade": 1,
         "name": "Concept Shirt Tan",
         "tags": "fio_shirt Set_01 Color_15",
+        "required_tags": "",
         "manufacturer": "FIO",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1907,9 +1908,11 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "Concept Shirt Tan",
             "Description": "This crisp, versatile button-front shirt from Fiore is made with cutting edge stain resistant and wrinkle-free technology, guaranteeing that you stay professional at all times.",
+            "DescriptionText": "This crisp, versatile button-front shirt from Fiore is made with cutting edge stain resistant and wrinkle-free technology, guaranteeing that you stay professional at all times.",
             "Manufacturer": {
                 "Code": "FIO",
-                "Name": "Fiore"
+                "Name": "Fiore",
+                "UUID": "503b0974-5027-4c69-bce6-a38c42e87ebe"
             },
             "Tags": [
                 "fio_shirt",
@@ -1920,11 +1923,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1934,9 +1944,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

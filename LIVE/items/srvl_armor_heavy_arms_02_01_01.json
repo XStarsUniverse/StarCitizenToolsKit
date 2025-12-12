@@ -1881,6 +1881,7 @@
         "grade": 1,
         "name": "Dust Devil Armor Arms",
         "tags": "Survival_Heavy Set_01 Color_01 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "UNKN",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1894,9 +1895,18 @@
             "Type": "Char_Armor_Arms.Heavy",
             "Name": "Dust Devil Armor Arms",
             "Description": "Item Type: Heavy Armor\\nDamage Reduction: 40%\\nTemp. Rating: -85 / 115 \u00b0C\\nRadiation Protection: 26800 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nSalvaged pieces of disused protective gear were welded together to make this intimidating armor set.",
+            "DescriptionData": {
+                "Item Type": "Heavy Armor",
+                "Damage Reduction": "40%",
+                "Temp. Rating": "-85 / 115 \u00b0C",
+                "Radiation Protection": "26800 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Salvaged pieces of disused protective gear were welded together to make this intimidating armor set.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": [
                 "Survival_Heavy",
@@ -1909,15 +1919,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.65,
+                    "Physical": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.4,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 20
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -85,
                 "Maximum": 115
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26800,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

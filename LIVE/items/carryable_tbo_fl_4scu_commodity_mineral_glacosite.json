@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Glacosite",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "733e63a4-ff22-4a68-9f70-2575faaa1036",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Glacosite",
             "Description": "As glaciers form, heavier mineral contents sink over time and are then crushed by the weight above as the ice deforms and flows. When the glacier recedes, Glacosite deposits are left behind. White and blue in color, the crystals form in long shiny strands that almost are cotton-like in appearance. Glacosite has found specialized commercial use since it is an extremely light and durable insulator.",
+            "DescriptionText": "As glaciers form, heavier mineral contents sink over time and are then crushed by the weight above as the ice deforms and flows. When the glacier recedes, Glacosite deposits are left behind. White and blue in color, the crystals form in long shiny strands that almost are cotton-like in appearance. Glacosite has found specialized commercial use since it is an extremely light and durable insulator.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 4,
+                    "UnitName": "SCU",
+                    "SCU": 4
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "960eda23-d77c-425e-8cbd-89d94ca6e2aa",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

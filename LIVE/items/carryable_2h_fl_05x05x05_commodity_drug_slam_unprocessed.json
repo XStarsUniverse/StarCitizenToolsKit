@@ -1284,6 +1284,7 @@
         "grade": 1,
         "name": "DCSR2",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "cd90dea7-264d-4f42-90ca-dc9a33c6a5d4",
@@ -1296,6 +1297,12 @@
             "Type": "Cargo.Small",
             "Name": "DCSR2",
             "Description": "An organically derived terpenoid lipid, dicylasterone (commonly known as DCSR2), has been banned from use in biomedical applications. Currently, it is most typically used in the manufacture of illegal narcotic 'SLAM.'",
+            "DescriptionText": "An organically derived terpenoid lipid, dicylasterone (commonly known as DCSR2), has been banned from use in biomedical applications. Currently, it is most typically used in the manufacture of illegal narcotic 'SLAM.'",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1305,7 +1312,25 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 4
+                "Health": 4,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                }
             }
         }
     }

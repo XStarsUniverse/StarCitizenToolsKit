@@ -866,6 +866,7 @@
         "grade": 1,
         "name": "Human Food Bars",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "76651abc-35d8-420d-96bd-4ae246972cf4",
@@ -878,13 +879,43 @@
             "Type": "Cargo.Cargo",
             "Name": "Human Food Bars",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 24,
+                    "UnitName": "SCU",
+                    "SCU": 24
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "ea78052a-11b2-484e-a7ee-d19ed906a037",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

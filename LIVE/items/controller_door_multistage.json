@@ -236,6 +236,7 @@
         "grade": 1,
         "name": "SECURITY",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d87f99d4-5bcd-4411-92e0-abdf656c87a0",
             "ClassName": "Controller_Door_MultiStage",
@@ -246,7 +247,20 @@
             "Length": 0.15,
             "Type": "DoorController.UNDEFINED",
             "Name": "SECURITY",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Openalldoors",
+                "Closealldoors",
+                "Lockalldoors",
+                "Unlockalldoors",
+                "Halfopenalldoors"
+            ]
         }
     }
 }

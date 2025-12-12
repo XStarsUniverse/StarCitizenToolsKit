@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Copper (Ore)",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "d19c7698-d468-4ac9-8d6e-a7e01cb62f20",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Copper (Ore)",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 4,
+                    "UnitName": "SCU",
+                    "SCU": 4
+                },
+                "InclusiveGroups": [
+                    "9b28b2e4-7df3-43f3-a69a-d82b119e25bf"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "d4ba4af8-80f1-4a8a-b8cd-5ba7e37c005c",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

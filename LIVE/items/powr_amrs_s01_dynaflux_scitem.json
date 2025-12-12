@@ -1142,6 +1142,7 @@
         "grade": 2,
         "name": "DynaFlux",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AMRS",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1155,17 +1156,37 @@
             "Type": "PowerPlant.Power",
             "Name": "DynaFlux",
             "Description": "Item Type: Power Plant\\nManufacturer:\u00a0Amon & Reese Co.\\nSize: 1\\nGrade: B\\nClass: Military\\n\\nThe DynaFlux was one of the first components A&R Co. built when they expanded their product line to more than energy weapons. Their years of experience manufacturing military-grade equipment went a long way to making the DynaFlux power plant a standout right from the beginning.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Amon & Reese Co.",
+                "Size": "1",
+                "Grade": "B",
+                "Class": "Military"
+            },
+            "DescriptionText": "The DynaFlux was one of the first components A&R Co. built when they expanded their product line to more than energy weapons. Their years of experience manufacturing military-grade equipment went a long way to making the DynaFlux power plant a standout right from the beginning.",
             "Manufacturer": {
                 "Code": "AMRS",
-                "Name": "Amon & Reese Co."
+                "Name": "Amon & Reese Co.",
+                "UUID": "eccba58a-f6d9-42e8-95c6-d0a65763e583"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 20,
+                "Maximum": 6000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 630
+                "Health": 630,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.75,
@@ -1188,6 +1209,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 3470.78,
@@ -1205,6 +1230,39 @@
             },
             "PowerPlant": {
                 "Output": 3470.78
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 16,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 15,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 7920
+                        }
+                    }
+                ]
             }
         }
     }

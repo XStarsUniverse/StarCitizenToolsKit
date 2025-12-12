@@ -782,6 +782,7 @@
         "grade": 1,
         "name": "TMSB-5 Gimbal Mount",
         "tags": "gimbalMount flightReady ANVL_BallisticGatling_Bespoke",
+        "required_tags": "ANVL_BallisticGatling_Bespoke",
         "manufacturer": "BEH",
         "stdItem": {
             "UUID": "fbccf8e2-2085-48c3-bfa8-00226450636d",
@@ -794,9 +795,16 @@
             "Type": "Turret.GunTurret",
             "Name": "TMSB-5 Gimbal Mount",
             "Description": "Manufacturer: Behring\\nItem Type: Gimbal Mount\\nSize: 5\\n\\nDesigned in conjunction with Anvil Aerospace for use on the F7C Hornet Mk II, this gimbal mount allows for adaptive targeting and is fitted with bespoke twin ballistic gatling guns.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Gimbal Mount",
+                "Size": "5"
+            },
+            "DescriptionText": "Designed in conjunction with Anvil Aerospace for use on the F7C Hornet Mk II, this gimbal mount allows for adaptive targeting and is fitted with bespoke twin ballistic gatling guns.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "gimbalMount",
@@ -807,6 +815,8 @@
                 {
                     "PortName": "hardpoint_class_2",
                     "Size": 3,
+                    "MinSize": 2,
+                    "MaxSize": 3,
                     "Tags": [
                         "ANVL_BallisticGatling_Bespoke"
                     ],
@@ -814,7 +824,15 @@
                         "ANVL_BallisticGatling_Bespoke"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -825,7 +843,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1024
+                "Health": 1024,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

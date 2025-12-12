@@ -1680,6 +1680,7 @@
         "grade": 1,
         "name": "Buster's Chocolate Bar",
         "tags": "busters",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "fae33afb-e2e1-459d-9159-f9caf72533a5",
@@ -1692,9 +1693,15 @@
             "Type": "Food.Bar",
             "Name": "Buster's Chocolate Bar",
             "Description": "NDR: 10\\nEffects: Energizing, Hyper-Metabolic\\n\\nSmooth sesame paste, salty roasted nuts, and a rich chocolate coating all combine to make Buster's, the classic treat that the Empire has loved for over two hundred years. Buster's or Bust!",
+            "DescriptionData": {
+                "NDR": "10",
+                "Effects": "Energizing, Hyper-Metabolic"
+            },
+            "DescriptionText": "Smooth sesame paste, salty roasted nuts, and a rich chocolate coating all combine to make Buster's, the classic treat that the Empire has loved for over two hundred years. Buster's or Bust!",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "busters"
@@ -1705,12 +1712,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bar"
-            }
+                "NutritionalDensityRating": "10",
+                "Effects": [
+                    "Energizing",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "bar",
+                "ContainerTypeTag": "bar",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

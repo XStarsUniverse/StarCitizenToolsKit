@@ -782,6 +782,7 @@
         "grade": 1,
         "name": "VariPuck S5 Gimbal Mount",
         "tags": "gimbalMount flightReady",
+        "required_tags": "",
         "manufacturer": "FFSY",
         "stdItem": {
             "UUID": "99e0ea17-45fc-4700-8607-ab879d05a284",
@@ -794,9 +795,16 @@
             "Type": "Turret.GunTurret",
             "Name": "VariPuck S5 Gimbal Mount",
             "Description": "Manufacturer: Flashfire Systems\\nItem Type: Weapon Mount\\nSize: 5\\n\\nThe VariPuck fits between your weapon and the ship hardpoint to transform a fixed weapon mount into a gimballed mount, allowing the pilot to independently aim their weapon\u2019s fire. VariPucks will accept any weapon the same size as the hardpoint it is mounting to.",
+            "DescriptionData": {
+                "Manufacturer": "Flashfire Systems",
+                "Item Type": "Weapon Mount",
+                "Size": "5"
+            },
+            "DescriptionText": "The VariPuck fits between your weapon and the ship hardpoint to transform a fixed weapon mount into a gimballed mount, allowing the pilot to independently aim their weapon's fire. VariPucks will accept any weapon the same size as the hardpoint it is mounting to.",
             "Manufacturer": {
                 "Code": "FFSY",
-                "Name": "Flashfire Systems"
+                "Name": "Flashfire Systems",
+                "UUID": "b9b97673-c585-4e0a-b229-a0a3c79668c3"
             },
             "Tags": [
                 "gimbalMount",
@@ -806,8 +814,18 @@
                 {
                     "PortName": "hardpoint_class_2",
                     "Size": 5,
+                    "MinSize": 4,
+                    "MaxSize": 5,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -818,7 +836,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 2640
+                "Health": 2640,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

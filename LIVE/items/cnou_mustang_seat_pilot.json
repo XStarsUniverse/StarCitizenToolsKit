@@ -913,6 +913,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "CNOU",
         "stdItem": {
             "UUID": "aa49dcfc-831a-41a0-bd98-58e51a8289d7",
@@ -925,20 +926,49 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "CNOU",
-                "Name": "Consolidated Outland"
+                "Name": "Consolidated Outland",
+                "UUID": "ec227ef3-fb08-4897-abdb-579eb4e87c25"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_cockpit_radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
+                    ],
                     "Uneditable": false
                 }
-            ]
+            ],
+            "Interactions": [
+                "Ejection"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

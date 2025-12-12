@@ -3494,6 +3494,7 @@
         "grade": 1,
         "name": "Door Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "bbbc5f3a-be49-48fe-967e-ea17b199e4dd",
             "ClassName": "RSI_Phoenix_Door_Comp_Right",
@@ -3505,15 +3506,29 @@
             "Type": "Door.UNDEFINED",
             "Name": "Door Control",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "hardpoint_panel_screen",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Flags": [
                         "uneditable"
                     ],
                     "Uneditable": true
                 }
+            ],
+            "Interactions": [
+                "Open",
+                "Close",
+                "Lock",
+                "Unlock"
             ],
             "PowerConnection": {
                 "PowerBase": 0,

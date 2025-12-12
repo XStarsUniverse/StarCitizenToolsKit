@@ -1073,6 +1073,7 @@
         "grade": 1,
         "name": "Gladius Dunlevy Model",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "818e49c0-70d5-402d-9c6d-dde6ecfad9ed",
             "ClassName": "Carryable_2H_SQ_gladius_model_1_stand_a",
@@ -1084,10 +1085,18 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "Gladius Dunlevy Model",
             "Description": "This exquisitely detailed Gladius model honors the light fighter that's been protecting the UEE for centuries. Soaring above a stand featuring the UEE logo and ship's name, the Dunlevy variant of the Gladius was crafted to honor Captain Alexandra Dunlevy, who shaped the course of the Navy's elite Squadron 42.",
+            "DescriptionText": "This exquisitely detailed Gladius model honors the light fighter that's been protecting the UEE for centuries. Soaring above a stand featuring the UEE logo and ship's name, the Dunlevy variant of the Gladius was crafted to honor Captain Alexandra Dunlevy, who shaped the course of the Navy's elite Squadron 42.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$slot_subitem_001",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -1095,7 +1104,12 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

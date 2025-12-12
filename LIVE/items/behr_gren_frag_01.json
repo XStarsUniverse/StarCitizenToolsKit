@@ -2163,6 +2163,7 @@
         "grade": 1,
         "name": "MK-4 Frag Grenade",
         "tags": "grenade",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.Weapon.Grenade",
         "stdItem": {
@@ -2176,9 +2177,17 @@
             "Type": "WeaponPersonal.Grenade",
             "Name": "MK-4 Frag Grenade",
             "Description": "Manufacturer: Behring\\nItem Type: Grenade\\n\\nArea of Effect: 20 m\\nDamage Type: Frag\\n\\nA continuation of the iconic hand grenade first produced by Behring in 2894, the MK-4 is an anti-personnel fragmentation grenade capable of saturating the kill-zone with lethal projectiles and a devastating concussive blast.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Grenade",
+                "Area of Effect": "20 m",
+                "Damage Type": "Frag"
+            },
+            "DescriptionText": "A continuation of the iconic hand grenade first produced by Behring in 2894, the MK-4 is an anti-personnel fragmentation grenade capable of saturating the kill-zone with lethal projectiles and a devastating concussive blast.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "grenade"
@@ -2187,7 +2196,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place"
+            ]
         }
     }
 }

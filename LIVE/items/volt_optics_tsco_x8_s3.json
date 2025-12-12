@@ -1670,6 +1670,7 @@
         "grade": 1,
         "name": "FarSight (8x Telescopic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1683,15 +1684,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "FarSight (8x Telescopic)",
             "Description": "Manufacturer: VOLT\\nType: Telescopic\\nAttachment Point: Optic\\nMagnification: 8x\\nAim Time: +0%\\nSize: 3\\n\\nDesigned for long distance precision shooting, the FarSight is carefully crafted to provide unparalleled fidelity of targets. VOLT's TruePicture lens technology provides high levels of light transmission, ensuring easy target acquisition and daylight illumination so you always get your mark.",
+            "DescriptionData": {
+                "Manufacturer": "VOLT",
+                "Type": "Telescopic",
+                "Attachment Point": "Optic",
+                "Magnification": "8x",
+                "Size": "3"
+            },
+            "DescriptionText": "Designed for long distance precision shooting, the FarSight is carefully crafted to provide unparalleled fidelity of targets. VOLT's TruePicture lens technology provides high levels of light transmission, ensuring easy target acquisition and daylight illumination so you always get your mark.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "98bb2e9e-fcc7-46e5-9ba6-d34c42c414e0"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

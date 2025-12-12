@@ -2268,6 +2268,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "UILO_C",
         "stdItem": {
             "UUID": "175988aa-02b6-4866-8710-0cd76bfc275c",
@@ -2280,80 +2281,173 @@
             "Type": "Usable.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "UILO_C",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "23788dd9-6222-4a4a-b233-0f421afc8eb1"
             },
             "Ports": [
                 {
                     "PortName": "Control Panel",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Types": [
-                        "ControlPanel"
+                        "ControlPanel.AirlockPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ControlPanel",
+                            "sub_types": [
+                                "AirlockPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Door Exterior",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Types": [
-                        "Door"
+                        "Door.AirlockPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Door",
+                            "sub_types": [
+                                "AirlockPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Door Interior ",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Types": [
-                        "Door"
+                        "Door.AirlockPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Door",
+                            "sub_types": [
+                                "AirlockPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Lightgroup",
                     "Size": 25,
+                    "MinSize": 0,
+                    "MaxSize": 25,
                     "Types": [
-                        "Lightgroup"
+                        "Lightgroup.AirlockPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Lightgroup",
+                            "sub_types": [
+                                "AirlockPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Ext Status Screen A",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Types": [
-                        "StatusScreen"
+                        "StatusScreen.AirlockPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "StatusScreen",
+                            "sub_types": [
+                                "AirlockPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Ext Status Screen B",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Types": [
-                        "StatusScreen"
+                        "StatusScreen.AirlockPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "StatusScreen",
+                            "sub_types": [
+                                "AirlockPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Int Status Screen A",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Types": [
-                        "StatusScreen"
+                        "StatusScreen.AirlockPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "StatusScreen",
+                            "sub_types": [
+                                "AirlockPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Int Status Screen B",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Types": [
-                        "StatusScreen"
+                        "StatusScreen.AirlockPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "StatusScreen",
+                            "sub_types": [
+                                "AirlockPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "AirlockChipset",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Cycle",
+                "Opendoor",
+                "Opendoor",
+                "Cycledoor1",
+                "Cycledoor2",
+                "Closedoor1",
+                "Closedoor2"
             ],
             "PowerConnection": {
                 "PowerBase": 0,

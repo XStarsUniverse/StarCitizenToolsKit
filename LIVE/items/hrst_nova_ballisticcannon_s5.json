@@ -3788,6 +3788,7 @@
         "grade": 1,
         "name": "Slayer Cannon",
         "tags": "HRST BallisticCannon flightReady weaponMountUsable $TMBL_Nova ",
+        "required_tags": "TMBL_Nova",
         "manufacturer": "HRST",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -3801,9 +3802,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Slayer Cannon",
             "Description": "Manufacturer: Hurston Dynamics\\nItem Type: Ballistic Cannon\\nSize: 5\\n\\nDesigned specifically for the Nova tank, Hurston Dynamics' Slayer ballistic cannon earned its illustrious reputation through countless battlefield engagements during the Second Tevarin War. This battlefield beast excels against armored targets and fortified emplacements by firing large caliber artillery rounds with astounding accuracy and velocity. Hurston worked closely with Tumbril when the tank manufacturer decided to bring back the Nova. Though they painstakingly honored the original Slayer design, Hurston also updated it for the 30th century by improving the pivot speed, heat resistance, and associated software to provide a state-of-the-art gunner UI.",
+            "DescriptionData": {
+                "Manufacturer": "Hurston Dynamics",
+                "Item Type": "Ballistic Cannon",
+                "Size": "5"
+            },
+            "DescriptionText": "Designed specifically for the Nova tank, Hurston Dynamics' Slayer ballistic cannon earned its illustrious reputation through countless battlefield engagements during the Second Tevarin War. This battlefield beast excels against armored targets and fortified emplacements by firing large caliber artillery rounds with astounding accuracy and velocity. Hurston worked closely with Tumbril when the tank manufacturer decided to bring back the Nova. Though they painstakingly honored the original Slayer design, Hurston also updated it for the 30th century by improving the pivot speed, heat resistance, and associated software to provide a state-of-the-art gunner UI.",
             "Manufacturer": {
                 "Code": "HRST",
-                "Name": "Hurston Dynamics"
+                "Name": "Hurston Dynamics",
+                "UUID": "ee8b7bb3-d420-435c-924f-561e67e64588"
             },
             "Tags": [
                 "HRST",
@@ -3816,32 +3824,72 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -3875,8 +3923,37 @@
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 20000
+                "Health": 20000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

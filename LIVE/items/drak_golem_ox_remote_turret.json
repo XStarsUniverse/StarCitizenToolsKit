@@ -800,6 +800,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady $DRAK_Golem_OX_Remote_Turret",
+        "required_tags": "DRAK_Golem_OX_Remote_Turret",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "f627cdcb-5597-4d05-b96d-80129104aba2",
@@ -812,9 +813,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "flightReady",
@@ -824,14 +827,23 @@
                 {
                     "PortName": "hardpoint_tractor_beam",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "TractorBeam"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "TractorBeam"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 2500
+                "Health": 2500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -854,6 +866,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

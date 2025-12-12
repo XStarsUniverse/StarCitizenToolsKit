@@ -2009,6 +2009,7 @@
         "grade": 1,
         "name": "Citrus Blend Smoothie",
         "tags": "bottle_01 Stash_Water",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "785251ee-29d2-496e-920e-ea072ce8193f",
@@ -2021,9 +2022,16 @@
             "Type": "Drink.Bottle",
             "Name": "Citrus Blend Smoothie",
             "Description": "HEI: 35\\nNDR: 14\\nEffects: Immune Boosting\\n\\nA smoothie made with a fresh blend of citrus.",
+            "DescriptionData": {
+                "HEI": "35",
+                "NDR": "14",
+                "Effects": "Immune Boosting"
+            },
+            "DescriptionText": "A smoothie made with a fresh blend of citrus.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01",
@@ -2035,12 +2043,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 1,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "NutritionalDensityRating": "14",
+                "HydrationEfficacyIndex": "35",
+                "Effects": [
+                    "Immune Boosting"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 1,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

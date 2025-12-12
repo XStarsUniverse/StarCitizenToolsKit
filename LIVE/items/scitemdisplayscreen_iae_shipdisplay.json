@@ -1102,6 +1102,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "ce687d05-a24c-4f52-a8cf-8464c58b7ebd",
             "ClassName": "SCItemDisplayScreen_IAE_ShipDisplay",
@@ -1113,9 +1114,21 @@
             "Type": "Display.Default",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
-            "Durability": {
-                "Health": 50
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
             },
+            "Durability": {
+                "Health": 50,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Turnon",
+                "Turnoff"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,

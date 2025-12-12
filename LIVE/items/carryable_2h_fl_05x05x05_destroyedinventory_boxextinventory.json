@@ -1141,6 +1141,7 @@
         "grade": 1,
         "name": "Stor*All 1/8 SCU Storage Box",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c49c3aab-3499-4029-94d8-d305e542939a",
             "ClassName": "Carryable_2H_FL_05x05x05_DestroyedInventory_BoxExtInventory",
@@ -1152,11 +1153,24 @@
             "Type": "Container.Box",
             "Name": "Stor*All 1/8 SCU Storage Box",
             "Description": "Designed by one of the most trusted names in cargo pods, the Stor*All Storage Box provides a convenient place to keep any small items. Its durable impact-resistant construction is sealed to survive the vacuum of space.",
+            "DescriptionText": "Designed by one of the most trusted names in cargo pods, the Stor*All Storage Box provides a convenient place to keep any small items. Its durable impact-resistant construction is sealed to survive the vacuum of space.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "unit": 0,
                 "unitName": "SCU",

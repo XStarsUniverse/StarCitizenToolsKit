@@ -1852,6 +1852,7 @@
         "grade": 1,
         "name": "Big Benny's T-Shirt",
         "tags": "eld_shirt Set_04 Color_bennys",
+        "required_tags": "",
         "manufacturer": "ELD",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1865,9 +1866,11 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "Big Benny's T-Shirt",
             "Description": "This Big Benny's shirt embodies the joy of dining on their delicious kacho with an animated image that rotates between two versions of the brand's iconic logo. Wearing it is bound to remind everyone to grab and eat this tasty treat.",
+            "DescriptionText": "This Big Benny's shirt embodies the joy of dining on their delicious kacho with an animated image that rotates between two versions of the brand's iconic logo. Wearing it is bound to remind everyone to grab and eat this tasty treat.",
             "Manufacturer": {
                 "Code": "ELD",
-                "Name": "Escar Limited"
+                "Name": "Escar Limited",
+                "UUID": "190a2e0e-6d60-4719-8238-ac7e1c746626"
             },
             "Tags": [
                 "eld_shirt",
@@ -1878,11 +1881,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1892,9 +1902,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

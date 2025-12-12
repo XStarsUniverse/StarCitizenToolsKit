@@ -1802,6 +1802,7 @@
         "grade": 1,
         "name": "Samya Tank Rosewood",
         "tags": "hdh_shirt Set_01 Texture_01 Color_13",
+        "required_tags": "",
         "manufacturer": "HDH",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1815,9 +1816,11 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "Samya Tank Rosewood",
             "Description": "This Samya Tank is your perfect staple for hot weather. Made with soft and breathable fabric, it features moisture-wicking technology and reinforced binding at the openings to protect it from wear and tear. A detachable sleeve is included with each shirt.",
+            "DescriptionText": "This Samya Tank is your perfect staple for hot weather. Made with soft and breathable fabric, it features moisture-wicking technology and reinforced binding at the openings to protect it from wear and tear. A detachable sleeve is included with each shirt.",
             "Manufacturer": {
                 "Code": "HDH",
-                "Name": "Habidash"
+                "Name": "Habidash",
+                "UUID": "70ce6432-3a1e-45a1-8179-fe30a3ee54dc"
             },
             "Tags": [
                 "hdh_shirt",
@@ -1829,11 +1832,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1843,9 +1853,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 4,
                 "Maximum": 28
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

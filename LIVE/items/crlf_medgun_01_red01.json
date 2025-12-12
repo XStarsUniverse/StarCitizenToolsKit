@@ -8552,6 +8552,7 @@
         "grade": 1,
         "name": "ParaMed \"Oxide\" Medical Device",
         "tags": "crlf pistol",
+        "required_tags": "",
         "manufacturer": "CUR",
         "classification": "FPS.Weapon.Small",
         "stdItem": {
@@ -8565,9 +8566,15 @@
             "Type": "WeaponPersonal.Small",
             "Name": "ParaMed \"Oxide\" Medical Device",
             "Description": "Manufacturer: CureLife\\nItem Type: Medical Device\\n\\nThe ParaMed from CureLife is a professional-grade emergency medical device designed to stabilize patients suffering from possible life-threatening injuries. Offering extremely accurate diagnostics and dosing, the ParaMed can treat more patients and offer longer relief with less risk of overdose. The \"Oxide\" edition features a deep red color.",
+            "DescriptionData": {
+                "Manufacturer": "CureLife",
+                "Item Type": "Medical Device"
+            },
+            "DescriptionText": "The ParaMed from CureLife is a professional-grade emergency medical device designed to stabilize patients suffering from possible life-threatening injuries. Offering extremely accurate diagnostics and dosing, the ParaMed can treat more patients and offer longer relief with less risk of overdose. The \"Oxide\" edition features a deep red color.",
             "Manufacturer": {
                 "Code": "CUR",
-                "Name": "Curelife"
+                "Name": "Curelife",
+                "UUID": "f4a1ad63-43fb-483c-a90f-33dd50586e3a"
             },
             "Tags": [
                 "crlf",
@@ -8577,6 +8584,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "crlf_medgun_01"
                     ],
@@ -8584,13 +8593,24 @@
                         "crlf_medgun_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "f10cba0e-bb94-4438-a628-5128913bb995",
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -8649,14 +8669,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.6,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Bespokeplace"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 50,

@@ -2015,6 +2015,7 @@
         "grade": 1,
         "name": "Salvaged Skull Couch",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e64fbbd8-4562-4a4b-a9ab-afa65a808af3",
             "ClassName": "PlayerDeco_lt_couch_improvised_1_combined_a_pirate",
@@ -2026,11 +2027,23 @@
             "Type": "Usable.Cargo",
             "Name": "Salvaged Skull Couch",
             "Description": "Why risk your reputation as a serious outlaw by sitting on anything but the most hardcore of couches? Featuring hand-printed skulls and make-shift repairs, this couch will have your guests saying, \u201cthis person is definitely a criminal.\u201d",
+            "DescriptionText": "Why risk your reputation as a serious outlaw by sitting on anything but the most hardcore of couches? Featuring hand-printed skulls and make-shift repairs, this couch will have your guests saying, \u201cthis person is definitely a criminal.\u201d",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit_middle",
+                "Exit",
+                "Sit_right",
+                "Sit_left"
+            ]
         }
     }
 }

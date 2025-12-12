@@ -854,6 +854,7 @@
         "grade": 1,
         "name": "Aegis Vanguard Torpedo Rack",
         "tags": "flightReady ",
+        "required_tags": "AEGS_Vanguard_Base",
         "manufacturer": "AEG",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -867,9 +868,16 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "Aegis Vanguard Torpedo Rack",
             "Description": "Item Type: Torpedo Rack\\nManufacturer: Behring\\nSize: 5\\nTorpedoes: 3xS5\\n\\nAegis Dynamics and Behring worked together to develop this torpedo rack, which can carry and deploy three S5 torpedoes.",
+            "DescriptionData": {
+                "Item Type": "Torpedo Rack",
+                "Manufacturer": "Behring",
+                "Size": "5"
+            },
+            "DescriptionText": "Aegis Dynamics and Behring worked together to develop this torpedo rack, which can carry and deploy three S5 torpedoes.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "flightReady"
@@ -878,24 +886,54 @@
                 {
                     "PortName": "torpedo_tray_01_attach_node",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "torpedo_tray_02_attach_node",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "torpedo_tray_03_attach_node",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -906,7 +944,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.5,
@@ -946,6 +986,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

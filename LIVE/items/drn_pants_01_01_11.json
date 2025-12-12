@@ -2002,6 +2002,7 @@
         "grade": 1,
         "name": "LeMarque Pants Grey",
         "tags": "drn_pants Set_01 Color_11",
+        "required_tags": "",
         "manufacturer": "DRN",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2015,9 +2016,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "LeMarque Pants Grey",
             "Description": "Carrying Capacity: 0.5K \u00b5SCU\\n\\nClassic cuts never go out of style. A staple of any wardrobe, Derion's LeMarque are built for work or play and feature microseam pleats and wrinkle-free material that will guarantee that you'll get years out of this classic.\\n\\nWomen's sizes currently out of stock.",
+            "DescriptionData": {
+                "Carrying Capacity": "0.5K \u00b5SCU"
+            },
+            "DescriptionText": "Classic cuts never go out of style. A staple of any wardrobe, Derion's LeMarque are built for work or play and feature microseam pleats and wrinkle-free material that will guarantee that you'll get years out of this classic.\n\nWomen's sizes currently out of stock.",
             "Manufacturer": {
                 "Code": "DRN",
-                "Name": "Derion"
+                "Name": "Derion",
+                "UUID": "2ab62815-6273-44b9-bbc6-28d36fed6fd8"
             },
             "Tags": [
                 "drn_pants",
@@ -2028,19 +2034,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2050,7 +2068,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2060,6 +2086,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0005,
                 "unit": 6,
@@ -2075,6 +2110,10 @@
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

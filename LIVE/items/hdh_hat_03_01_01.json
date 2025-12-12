@@ -1777,6 +1777,7 @@
         "grade": 1,
         "name": "Sorel Hat",
         "tags": "hdh_hat Set_03 Texture_01 Color_01 Limp",
+        "required_tags": "Protos",
         "manufacturer": "HDH",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1790,9 +1791,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Sorel Hat",
             "Description": "The wide-brim bucket-style design of Habidash's Sorel hat provides the wearer with lots of cover from any overbearing rain or sunshine.",
+            "DescriptionText": "The wide-brim bucket-style design of Habidash's Sorel hat provides the wearer with lots of cover from any overbearing rain or sunshine.",
             "Manufacturer": {
                 "Code": "HDH",
-                "Name": "Habidash"
+                "Name": "Habidash",
+                "UUID": "70ce6432-3a1e-45a1-8179-fe30a3ee54dc"
             },
             "Tags": [
                 "hdh_hat",
@@ -1805,11 +1808,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1819,9 +1829,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 1,
                 "Maximum": 31
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

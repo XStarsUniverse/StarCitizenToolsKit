@@ -931,6 +931,7 @@
         "grade": 1,
         "name": "Turret",
         "tags": "",
+        "required_tags": "ANVL_Spartan",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "746fcb7a-2bec-4f19-87c2-d67f05362924",
@@ -943,33 +944,58 @@
             "Type": "Turret.BallTurret",
             "Name": "Turret",
             "Description": "Multitask on the battlefield with this remote turret system. Featuring precise controls and a wide field of fire, the turret allows pilots to add combat support to their resume.",
+            "DescriptionText": "Multitask on the battlefield with this remote turret system. Featuring precise controls and a wide field of fire, the turret allows pilots to add combat support to their resume.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_gunmount_left",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "left"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_gunmount_right",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "right"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Activate remote camera"
             ],
             "PowerConnection": {
                 "PowerBase": 0,

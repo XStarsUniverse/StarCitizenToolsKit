@@ -1628,6 +1628,7 @@
         "grade": 1,
         "name": "Bo-Go (Langoustine and Lamb)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "a18d85c0-4dc6-439a-a5c9-5b62b8e1c022",
@@ -1640,9 +1641,15 @@
             "Type": "Food.Tin",
             "Name": "Bo-Go (Langoustine and Lamb)",
             "Description": "NDR: 30\\nEffects: None\\n\\nCroshaw\u2019s signature meat and seafood stew is now available the Empire over! 'Langoustine and Lamb' flavor combines succulent langoustine tail meat with rich and hearty pieces of lamb in a lighter sauce that highlights them both.\\n",
+            "DescriptionData": {
+                "NDR": "30",
+                "Effects": "None"
+            },
+            "DescriptionText": "Croshaw's signature meat and seafood stew is now available the Empire over! 'Langoustine and Lamb' flavor combines succulent langoustine tail meat with rich and hearty pieces of lamb in a lighter sauce that highlights them both.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1650,12 +1657,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "tinCan"
-            }
+                "NutritionalDensityRating": "30",
+                "Effects": [
+                    "None"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "tinCan",
+                "ContainerTypeTag": "tinCan",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

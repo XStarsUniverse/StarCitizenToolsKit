@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "S71 Rifle Magazine (30 cap)",
         "tags": "gmni_rifle_ballistic_01",
+        "required_tags": "",
         "manufacturer": "GEM",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "S71 Rifle Magazine (30 cap)",
             "Description": "Item Type: Magazine\\nCapacity: 30\\n\\nThis magazine for the Gemini S71 rifle holds thirty 5mm rounds.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "30"
+            },
+            "DescriptionText": "This magazine for the Gemini S71 rifle holds thirty 5mm rounds.",
             "Manufacturer": {
                 "Code": "GEM",
-                "Name": "Gemini"
+                "Name": "Gemini",
+                "UUID": "b33050cd-6ca9-4c57-baf8-f4114eb85237"
             },
             "Tags": [
                 "gmni_rifle_ballistic_01"
@@ -1959,7 +1966,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

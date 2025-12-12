@@ -1523,6 +1523,7 @@
         "grade": 2,
         "name": "Impulse",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ARCC",
         "classification": "Ship.QuantumDrive",
         "stdItem": {
@@ -1536,19 +1537,38 @@
             "Type": "QuantumDrive.UNDEFINED",
             "Name": "Impulse",
             "Description": "Item Type: Quantum Drive\\nManufacturer: ArcCorp\\nSize: 3\\nGrade: B\\nClass: Civilian\\n\\nLegend claims an inaccurate lathe cut materials thinner than expected on the Impulse prototype. When its test performance exceeded expectations, engineers adopted the changes, and ArcCorp's premiere size three quantum drive was born.",
+            "DescriptionData": {
+                "Item Type": "Quantum Drive",
+                "Manufacturer": "ArcCorp",
+                "Size": "3",
+                "Grade": "B",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Legend claims an inaccurate lathe cut materials thinner than expected on the Impulse prototype. When its test performance exceeded expectations, engineers adopted the changes, and ArcCorp's premiere size three quantum drive was born.",
             "Manufacturer": {
                 "Code": "ARCC",
-                "Name": "ArcCorp"
+                "Name": "ArcCorp",
+                "UUID": "0ade6e45-ecdd-42a9-9046-3e96dbe4f5d0"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_Jump_Drive",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "dont_hide_entity"
                     ],
                     "Types": [
-                        "JumpDrive"
+                        "JumpDrive.JumpDrive"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "JumpDrive",
+                            "sub_types": [
+                                "JumpDrive"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1558,8 +1578,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 4.5,
+                "DecayRate": 1600,
+                "Maximum": 8000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1500
+                "Health": 1500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 2.5,
@@ -1582,6 +1613,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Engagequantumtravel",
+                "Disengagequantumtravel"
+            ],
             "PowerConnection": {
                 "PowerBase": 768,
                 "PowerDraw": 5000,
@@ -1596,6 +1631,59 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.21
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 8,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 8,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 36000
+                        }
+                    },
+                    {
+                        "Name": "Travelling",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 8,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "QuantumFuel",
+                                "Rate": 2.1e-5,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 8,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 36000
+                        }
+                    }
+                ]
             },
             "QuantumDrive": {
                 "JumpRange": 3.402823e+38,

@@ -961,6 +961,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady PDC",
+        "required_tags": "PDC",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "67b17d30-485b-48ba-b6cb-a6ef01a16e8e",
@@ -973,9 +974,11 @@
             "Type": "Turret.PDCTurret",
             "Name": "Remote Turret",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "flightReady",
@@ -985,28 +988,59 @@
                 {
                     "PortName": "turret_left",
                     "Size": 8,
+                    "MinSize": 8,
+                    "MaxSize": 8,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "turret_right",
                     "Size": 8,
+                    "MinSize": 8,
+                    "MaxSize": 8,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1500
+                "Health": 1500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1029,6 +1063,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,

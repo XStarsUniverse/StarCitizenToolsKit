@@ -755,6 +755,7 @@
         "grade": 1,
         "name": "",
         "tags": "$ORIG_100i_Missile",
+        "required_tags": "",
         "manufacturer": "ORIG",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -768,9 +769,11 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ORIG",
-                "Name": "Origin Jumpworks"
+                "Name": "Origin Jumpworks",
+                "UUID": "1e47a9ec-a3f0-431d-be0e-377712e1ed84"
             },
             "Tags": [
                 "$ORIG_100i_Missile"
@@ -779,16 +782,36 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_02_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -799,7 +822,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.5,
@@ -839,6 +864,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

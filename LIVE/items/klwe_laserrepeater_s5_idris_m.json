@@ -2819,6 +2819,7 @@
         "grade": 1,
         "name": "CF-557 Galdereen Repeater",
         "tags": "AEGS_Idris_M_PU",
+        "required_tags": "AEGS_Idris_M_PU",
         "manufacturer": "KLA",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2832,9 +2833,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "CF-557 Galdereen Repeater",
             "Description": "Manufacturer: Klaus & Werner\\nItem Type: Laser Repeater\\nSize: 5\\n\\nWith a bite as fearsome as its fanged namesake, the Klaus & Werner CF-557 Galdereen laser repeater is a solid choice for a wide range of vehicles thanks to its high rate of fire and consistent efficacy.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Item Type": "Laser Repeater",
+                "Size": "5"
+            },
+            "DescriptionText": "With a bite as fearsome as its fanged namesake, the Klaus & Werner CF-557 Galdereen laser repeater is a solid choice for a wide range of vehicles thanks to its high rate of fire and consistent efficacy.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "AEGS_Idris_M_PU"
@@ -2843,32 +2851,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2894,8 +2942,37 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 78000
+                "Health": 78000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.4,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

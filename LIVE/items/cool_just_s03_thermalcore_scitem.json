@@ -925,6 +925,7 @@
         "grade": 3,
         "name": "ThermalCore",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "JUST",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -938,9 +939,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "ThermalCore",
             "Description": "Item Type: Cooler\\nManufacturer: Juno Starwerk \\nSize: 3\\nGrade: C\\nClass: Industrial\\n\\nWhen you\u2019re in the middle of an important job, you don\u2019t want to waste time wondering if your cooler is doing its part. Now you don\u2019t have to. With the dependable mid-level ThermalCore cooler from Juno Starwerk onboard, you can take all the guesswork out of heat management.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Juno Starwerk",
+                "Size": "3",
+                "Grade": "C",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "When you're in the middle of an important job, you don't want to waste time wondering if your cooler is doing its part. Now you don't have to. With the dependable mid-level ThermalCore cooler from Juno Starwerk onboard, you can take all the guesswork out of heat management.",
             "Manufacturer": {
                 "Code": "JUST",
-                "Name": "Juno Starwerk"
+                "Name": "Juno Starwerk",
+                "UUID": "d7cc897f-b760-4a73-93c0-27e23c52db0a"
             },
             "Cooler": {
                 "CoolingRate": 16000000,
@@ -952,8 +962,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1300
+                "Health": 1300,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 20,
@@ -990,6 +1011,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.18
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 5,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 33,
+                                "MinimumFraction": 0.8,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 2480,
+                            "IR": 10900
+                        }
+                    }
+                ]
             }
         }
     }

@@ -2141,6 +2141,7 @@
         "grade": 1,
         "name": "GP-33 MOD Grenade Launcher Magazine (6 cap)",
         "tags": "behr_glauncher_ballistic_01",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -2154,9 +2155,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "GP-33 MOD Grenade Launcher Magazine (6 cap)",
             "Description": "Item Type: Magazine\\nCapacity: 6\\n\\nThis magazine for the GP-33 MOD holds six 40mm grenades.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "6"
+            },
+            "DescriptionText": "This magazine for the GP-33 MOD holds six 40mm grenades.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "behr_glauncher_ballistic_01"
@@ -2213,7 +2220,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

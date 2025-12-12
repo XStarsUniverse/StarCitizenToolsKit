@@ -800,6 +800,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady $DRAK_Cutlass_Remote_Turret",
+        "required_tags": "DRAK_Cutlass_Remote_Turret",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "c1c90b07-15f3-40c7-aafd-bf99c25654dd",
@@ -812,9 +813,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "flightReady",
@@ -824,14 +827,23 @@
                 {
                     "PortName": "turret_weapon",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "TractorBeam"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "TractorBeam"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -854,6 +866,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

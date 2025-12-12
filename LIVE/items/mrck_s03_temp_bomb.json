@@ -637,6 +637,7 @@
         "grade": 1,
         "name": "MSD-313 Missile Rack",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "BEH",
         "stdItem": {
             "UUID": "549964bb-a674-41ba-86d5-55a6d3c25931",
@@ -649,9 +650,17 @@
             "Type": "BombLauncher.BombRack",
             "Name": "MSD-313 Missile Rack",
             "Description": "Item Type: Missile Rack\\nManufacturer: Behring\\nSize: 3\\nMissiles: 1xS3\\n\\nBehring\u2019s MSD-313 \"Marsden\" is a complete ordnance storage and deployment system that can be mounted on any compatible size 3 hardpoint for the reliable and effective launch of one S3 missile.",
+            "DescriptionData": {
+                "Item Type": "Missile Rack",
+                "Manufacturer": "Behring",
+                "Size": "3",
+                "Missiles": "1xS3"
+            },
+            "DescriptionText": "Behring's MSD-313 \"Marsden\" is a complete ordnance storage and deployment system that can be mounted on any compatible size 3 hardpoint for the reliable and effective launch of one S3 missile.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "flightReady"
@@ -660,8 +669,18 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Types": [
-                        "Bomb"
+                        "Bomb.UNDEFINED"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Bomb",
+                            "sub_types": [
+                                "UNDEFINED"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -672,7 +691,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.5,
@@ -709,6 +730,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

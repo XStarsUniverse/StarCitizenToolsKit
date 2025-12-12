@@ -1559,6 +1559,7 @@
         "grade": 1,
         "name": "Carinite",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "0b83f4b2-1d15-4843-aa94-29f2b40a5cbe",
             "ClassName": "Harvestable_Mineral_1H_Carinite",
@@ -1570,13 +1571,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Carinite",
             "Description": "A rare mineral because the extreme pressure needed for its formation is very uncommon, it is in high demand thanks to its use in advanced computer processors and other cutting-edge electronics.",
+            "DescriptionText": "A rare mineral because the extreme pressure needed for its formation is very uncommon, it is in high demand thanks to its use in advanced computer processors and other cutting-edge electronics.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "d7d39082-ba27-470c-bc9a-d9e82ce838ae",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -2137,6 +2137,7 @@
         "grade": 1,
         "name": "Jericho XL",
         "tags": "flightReady ",
+        "required_tags": "",
         "manufacturer": "FSKI",
         "classification": "Ship.Weapon.Rocket",
         "stdItem": {
@@ -2150,9 +2151,16 @@
             "Type": "WeaponGun.Rocket",
             "Name": "Jericho XL",
             "Description": "Item Type: Rocket Pod\\nManufacturer: Hurston Dynamics\\nSize: 3\\nRockets: 18xS1\\n\\nThe Jericho XL rocket pod from Hurston Dynamics is compatible with any size three hardpoint and capable of carrying eighteen S1 rockets.",
+            "DescriptionData": {
+                "Item Type": "Rocket Pod",
+                "Manufacturer": "Hurston Dynamics",
+                "Size": "3"
+            },
+            "DescriptionText": "The Jericho XL rocket pod from Hurston Dynamics is compatible with any size three hardpoint and capable of carrying eighteen S1 rockets.",
             "Manufacturer": {
                 "Code": "FSKI",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "5f81335d-44e6-4104-841e-c5af9df06829"
             },
             "Tags": [
                 "flightReady"
@@ -2186,8 +2194,19 @@
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.4,

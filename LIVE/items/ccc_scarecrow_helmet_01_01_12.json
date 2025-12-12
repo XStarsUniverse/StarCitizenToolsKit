@@ -4653,6 +4653,7 @@
         "grade": 1,
         "name": "The Hill Horror Reborn Helmet",
         "tags": "SM_RestrictedWep Helmet",
+        "required_tags": "",
         "manufacturer": "CCC",
         "classification": "FPS.Armor.Helmet",
         "stdItem": {
@@ -4666,9 +4667,18 @@
             "Type": "Char_Armor_Helmet.UNDEFINED",
             "Name": "The Hill Horror Reborn Helmet",
             "Description": "Item Type: Flight Helmet\\nDamage Reduction: 10%\\nTemp. Rating: -30 / 60 \u00b0C\\nRadiation Protection: 15200 REM\\nRadiation Scrub Rate: 81 REM/s\\n\\nHaunt your friends with this custom, high-quality reproduction of the terrifying helmet from the popular slasher vid 'The Hill Horror Reborn.' Inspired by the terrifying appearance of notorious serial killer Neville Lott, this collector's edition space-safe helmet replicates the killer's look in the second vid of the series with a black gunny sack and neon green lights. Now you can celebrate Day of the Vara in sinister style, while standing apart from other menaces.",
+            "DescriptionData": {
+                "Item Type": "Flight Helmet",
+                "Damage Reduction": "10%",
+                "Temp. Rating": "-30 / 60 \u00b0C",
+                "Radiation Protection": "15200 REM",
+                "Radiation Scrub Rate": "81 REM/s"
+            },
+            "DescriptionText": "Haunt your friends with this custom, high-quality reproduction of the terrifying helmet from the popular slasher vid 'The Hill Horror Reborn.' Inspired by the terrifying appearance of notorious serial killer Neville Lott, this collector's edition space-safe helmet replicates the killer's look in the second vid of the series with a black gunny sack and neon green lights. Now you can celebrate Day of the Vara in sinister style, while standing apart from other menaces.",
             "Manufacturer": {
                 "Code": "CCC",
-                "Name": "CC's Conversions"
+                "Name": "CC's Conversions",
+                "UUID": "be4a26fd-0585-4aaf-bad9-d234091bd02e"
             },
             "Tags": [
                 "SM_RestrictedWep",
@@ -4678,77 +4688,129 @@
                 {
                     "PortName": "visor_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "long_range_radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Radar"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Radar"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "ping",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Ping"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Ping"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "scanner",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Avionics"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Avionics"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "flashlight",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
-                        "Suit"
+                        "Suit.Flashlight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Suit",
+                            "sub_types": [
+                                "Flashlight"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "holo_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -4758,14 +4820,63 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Helmet": {
+                "atmosphere_capacity": 0.0015,
+                "puncture_max_area": 0.0001,
+                "puncture_max_number": 10
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "ea721959-c3e2-4df8-9ef3-8831dc98c514"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -30,
                 "Maximum": 60
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 15200,
+                "RadiationDissipationRate": 81
             }
         }
     }

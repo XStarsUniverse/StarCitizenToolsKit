@@ -1142,6 +1142,7 @@
         "grade": 3,
         "name": "Fortitude",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "JUST",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1155,17 +1156,37 @@
             "Type": "PowerPlant.Power",
             "Name": "Fortitude",
             "Description": "Item Type: Power Plant\\nManufacturer: Juno Starwerk\\nSize: 1\\nGrade: C\\nClass: Industrial\\n\\nBeloved by haulers for centuries, the Fortitude lives up to its name by reliably producing power when needed most.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Juno Starwerk",
+                "Size": "1",
+                "Grade": "C",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "Beloved by haulers for centuries, the Fortitude lives up to its name by reliably producing power when needed most.",
             "Manufacturer": {
                 "Code": "JUST",
-                "Name": "Juno Starwerk"
+                "Name": "Juno Starwerk",
+                "UUID": "d7cc897f-b760-4a73-93c0-27e23c52db0a"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 20,
+                "Maximum": 6000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 470
+                "Health": 470,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.75,
@@ -1188,6 +1209,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 4207,
@@ -1205,6 +1230,39 @@
             },
             "PowerPlant": {
                 "Output": 4207
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 15,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 15,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 7430
+                        }
+                    }
+                ]
             }
         }
     }

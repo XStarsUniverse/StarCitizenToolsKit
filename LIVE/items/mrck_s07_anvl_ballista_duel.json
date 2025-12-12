@@ -652,6 +652,7 @@
         "grade": 1,
         "name": "Anvil Ballista S07 Missile Rack",
         "tags": "ANVL_Ballista",
+        "required_tags": "ANVL_Ballista",
         "manufacturer": "ANVL",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -665,9 +666,17 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "Anvil Ballista S07 Missile Rack",
             "Description": "Item Type: Missile Rack\\nManufacturer: Anvil Aerospace\\nSize: 7\\nMissiles: 1xS7 \\n\\nBespoke missile rack for the Anvil Ballista that fires an S7 missile capable of massive destruction.",
+            "DescriptionData": {
+                "Item Type": "Missile Rack",
+                "Manufacturer": "Anvil Aerospace",
+                "Size": "7",
+                "Missiles": "1xS7"
+            },
+            "DescriptionText": "Bespoke missile rack for the Anvil Ballista that fires an S7 missile capable of massive destruction.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Ballista"
@@ -676,11 +685,21 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "RequiredTags": [
                         "ANVL_Ballista"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -728,6 +747,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 20,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

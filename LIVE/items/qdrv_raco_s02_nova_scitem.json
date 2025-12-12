@@ -1525,6 +1525,7 @@
         "grade": 3,
         "name": "Nova",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RACO",
         "classification": "Ship.QuantumDrive",
         "stdItem": {
@@ -1538,19 +1539,38 @@
             "Type": "QuantumDrive.UNDEFINED",
             "Name": "Nova",
             "Description": "Item Type: Quantum Drive\\nManufacturer: RAMP Corporation\\nSize: 2\\nGrade: C \\nClass: Stealth\\n\\nDon't draw attention to yourself with the Nova, which is RAMP Corporation\u2019s base, medium-sized stealth quantum drive.",
+            "DescriptionData": {
+                "Item Type": "Quantum Drive",
+                "Manufacturer": "RAMP Corporation",
+                "Size": "2",
+                "Grade": "C",
+                "Class": "Stealth"
+            },
+            "DescriptionText": "Don't draw attention to yourself with the Nova, which is RAMP Corporation's base, medium-sized stealth quantum drive.",
             "Manufacturer": {
                 "Code": "RACO",
-                "Name": "RAMP Corporation"
+                "Name": "RAMP Corporation",
+                "UUID": "57432775-b421-45cc-8616-ac2d35018193"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_Jump_Drive",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "dont_hide_entity"
                     ],
                     "Types": [
-                        "JumpDrive"
+                        "JumpDrive.JumpDrive"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "JumpDrive",
+                            "sub_types": [
+                                "JumpDrive"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1560,8 +1580,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 3,
+                "DecayRate": 800,
+                "Maximum": 4000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 540
+                "Health": 540,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 2.5,
@@ -1584,6 +1615,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Engagequantumtravel",
+                "Disengagequantumtravel"
+            ],
             "PowerConnection": {
                 "PowerBase": 4.5,
                 "PowerDraw": 1000,
@@ -1598,6 +1633,59 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 15,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 5,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 5,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 12500
+                        }
+                    },
+                    {
+                        "Name": "Travelling",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 5,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "QuantumFuel",
+                                "Rate": 1.6e-5,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 5,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 12500
+                        }
+                    }
+                ]
             },
             "QuantumDrive": {
                 "JumpRange": 3.402823e+38,

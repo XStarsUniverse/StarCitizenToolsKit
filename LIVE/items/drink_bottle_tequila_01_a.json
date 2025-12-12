@@ -1840,6 +1840,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "bottle_01",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "32d0a2c9-81b3-4a15-ae03-3b35dfb2cf94",
@@ -1852,9 +1853,11 @@
             "Type": "Drink.Bottle",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01"
@@ -1865,12 +1868,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

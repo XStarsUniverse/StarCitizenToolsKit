@@ -2081,6 +2081,7 @@
         "grade": 1,
         "name": "TruBarrier Hazard Suit Slate",
         "tags": "grin_toxic_jumpsuit set_01 texture_01 color_11",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2094,9 +2095,15 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "TruBarrier Hazard Suit Slate",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\nTemp. Rating: -5 / 32 \u00b0C\\n\\nGuard yourself from toxic environmental hazards with the TruBarrier Hazard Suit, constructed from industrial-grade fabric and coated with a multi-layered, laminated polymer that offers a broad range of chemical protection without sacrificing mobility. The encapsulated design provides full-body protection from direct contact with dangerous materials when worn with its accompanying mask.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU",
+                "Temp. Rating": "-5 / 32 \u00b0C"
+            },
+            "DescriptionText": "Guard yourself from toxic environmental hazards with the TruBarrier Hazard Suit, constructed from industrial-grade fabric and coated with a multi-layered, laminated polymer that offers a broad range of chemical protection without sacrificing mobility. The encapsulated design provides full-body protection from direct contact with dangerous materials when worn with its accompanying mask.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_toxic_jumpsuit",
@@ -2108,11 +2115,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2122,6 +2136,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2137,6 +2160,10 @@
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

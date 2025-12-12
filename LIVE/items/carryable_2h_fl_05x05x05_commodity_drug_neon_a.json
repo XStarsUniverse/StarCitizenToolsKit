@@ -1307,6 +1307,7 @@
         "grade": 1,
         "name": "Neon",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "45b0953d-169b-4a78-b923-dba67ec5fe69",
@@ -1319,6 +1320,12 @@
             "Type": "Cargo.Small",
             "Name": "Neon",
             "Description": "A psychoactive designer drug known for increased energy, euphoria, and mild hallucinations (particularly how the body processes light). Due to its chemical complexity, it's much more expensive than other street drugs, but is very popular in club culture.",
+            "DescriptionText": "A psychoactive designer drug known for increased energy, euphoria, and mild hallucinations (particularly how the body processes light). Due to its chemical complexity, it's much more expensive than other street drugs, but is very popular in club culture.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1328,7 +1335,42 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 4
+                "Health": 4,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "ExclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "d3c3ec68-b4ac-4504-85b3-e860a70eb9a5",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

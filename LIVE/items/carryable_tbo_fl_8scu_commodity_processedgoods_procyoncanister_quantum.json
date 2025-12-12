@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Diluthermex",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "7df26686-8161-4978-b0db-6a98611eff65",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Diluthermex",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 8,
+                    "UnitName": "SCU",
+                    "SCU": 8
+                },
+                "InclusiveGroups": [
+                    "9379b129-8688-4777-9f65-9dc09ba935ee"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "47b8b3dc-5ad0-4780-8049-ad33f6a7d10b",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

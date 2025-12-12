@@ -9143,6 +9143,7 @@
         "grade": 1,
         "name": "GP-33 MOD Grenade Launcher",
         "tags": "stocked glauncher SM_RestrictedWep",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -9156,9 +9157,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "GP-33 MOD Grenade Launcher",
             "Description": "Manufacturer: Behring\\nItem Type: Grenade Launcher\\nClass: Ballistic\\n\\nMagazine Size: 6\\nRate Of Fire: 40 rpm\\nEffective Range: Variable (80m)\\n\\nAttachments: Optics (S1), Barrel (N/A), Underbarrel (S1)\\n\\nThe military-grade GP-33 MOD launcher fires 40mm grenades to clear rooms and flush out enemies behind cover thanks to Behring's precision design that primes each grenade to explode on impact.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Grenade Launcher",
+                "Class": "Ballistic",
+                "Magazine Size": "6",
+                "Rate Of Fire": "40 rpm",
+                "Effective Range": "Variable (80m)",
+                "Attachments": "Optics (S1), Barrel (N/A), Underbarrel (S1)"
+            },
+            "DescriptionText": "The military-grade GP-33 MOD launcher fires 40mm grenades to clear rooms and flush out enemies behind cover thanks to Behring's precision design that primes each grenade to explode on impact.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "stocked",
@@ -9169,6 +9181,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "behr_glauncher_ballistic_01"
                     ],
@@ -9176,35 +9190,66 @@
                         "behr_glauncher_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "aff2521e-2e7a-40d5-98a1-9a6a379a2f01",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9261,14 +9306,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

@@ -1763,6 +1763,7 @@
         "grade": 1,
         "name": "Baru Gloves Slate (Left Only)",
         "tags": "r6p_gloves Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "R6P",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -1776,9 +1777,11 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "Baru Gloves Slate (Left Only)",
             "Description": "Ensure you hands are always dry and at the right temperature with the Baru gloves. An advanced sensor system protected by a metal plate on the back of the hand monitors and regulates conditions within the glove. A patented synthetic leather woven with special microfibers works with the sensors and a strap cuff provides a snug fit.",
+            "DescriptionText": "Ensure you hands are always dry and at the right temperature with the Baru gloves. An advanced sensor system protected by a metal plate on the back of the hand monitors and regulates conditions within the glove. A patented synthetic leather woven with special microfibers works with the sensors and a strap cuff provides a snug fit.",
             "Manufacturer": {
                 "Code": "R6P",
-                "Name": "R6 Pro"
+                "Name": "R6 Pro",
+                "UUID": "1ddcadf0-7bb0-4fa9-94f0-6af19432631c"
             },
             "Tags": [
                 "r6p_gloves",
@@ -1789,11 +1792,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1803,9 +1813,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 36
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

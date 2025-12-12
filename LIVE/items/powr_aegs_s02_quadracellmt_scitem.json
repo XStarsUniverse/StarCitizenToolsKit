@@ -1134,6 +1134,7 @@
         "grade": 1,
         "name": "QuadraCell MT",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1147,17 +1148,37 @@
             "Type": "PowerPlant.Power",
             "Name": "QuadraCell MT",
             "Description": "Item Type: Power Plant\\nManufacturer: Aegis Dynamics\\nSize: 2\\nGrade: A \\nClass: Military\\n\\nAn Aegis intern crafted the initial design for the QuadraCell MT power plant, inspiring a phrase often heard around their office, \u201cFresh eyes bring fresh innovation.\u201d This military-grade component still outperforms any other medium power plant they make.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "2",
+                "Grade": "A",
+                "Class": "Military"
+            },
+            "DescriptionText": "An Aegis intern crafted the initial design for the QuadraCell MT power plant, inspiring a phrase often heard around their office, \u201cFresh eyes bring fresh innovation.\u201d This military-grade component still outperforms any other medium power plant they make.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 40,
+                "Maximum": 12000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 1500
+                "Health": 1500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1180,6 +1201,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 10625,
@@ -1197,6 +1222,39 @@
             },
             "PowerPlant": {
                 "Output": 10625
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 21,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 20,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 10400
+                        }
+                    }
+                ]
             }
         }
     }

@@ -736,6 +736,7 @@
         "grade": 1,
         "name": "Stor*All Big Box Model H",
         "tags": "$ANVL_Hornet_Base",
+        "required_tags": "ANVL_Hornet_Base",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "8661bcd6-9247-4376-8509-11af3d24a44c",
@@ -748,9 +749,14 @@
             "Type": "Module.UNDEFINED",
             "Name": "Stor*All Big Box Model H",
             "Description": "Manufacturer: Stor*All\\nItem Type: Storage\\n\\nDesigned exclusively for the Hornet F7C, the Stor*All Big Box model H replaces the void left by the turret system of the military-spec craft with a respectable cargo hold. Transforming the flagship fighter of the UEEN into a durable hauling ship.",
+            "DescriptionData": {
+                "Item Type": "Storage"
+            },
+            "DescriptionText": "Designed exclusively for the Hornet F7C, the Stor*All Big Box model H replaces the void left by the turret system of the military-spec craft with a respectable cargo hold. Transforming the flagship fighter of the UEEN into a durable hauling ship.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "$ANVL_Hornet_Base"
@@ -759,6 +765,8 @@
                 {
                     "PortName": "hardpoint_cargo_grid",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
@@ -766,6 +774,12 @@
                     "Types": [
                         "Cargo"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Cargo"
+                        }
+                    ],
+                    "EquippedItem": "4a08dec7-9544-4d3b-9e01-0e7ed83793cf",
                     "Uneditable": true
                 }
             ],
@@ -783,7 +797,9 @@
                 "damageConfiguration": "00000000-0000-0000-0000-000000000000"
             },
             "Durability": {
-                "Health": 250
+                "Health": 250,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.68,

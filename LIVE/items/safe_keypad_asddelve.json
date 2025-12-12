@@ -2032,6 +2032,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ASD",
         "classification": "Ship.CargoGrid",
         "stdItem": {
@@ -2045,24 +2046,35 @@
             "Type": "Cargo.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ASD",
-                "Name": "PH Associated Science and Development"
+                "Name": "PH Associated Science and Development",
+                "UUID": "bb5a8287-6bb7-4936-a898-4b1850e8112e"
             },
             "Ports": [
                 {
                     "PortName": "Screen",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 },
                 {
                     "PortName": "SpawnPoint",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "SpawnPoint"
                     ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Open",
+                "Close",
+                "Onunlocked"
             ]
         }
     }

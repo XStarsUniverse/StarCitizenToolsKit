@@ -1772,6 +1772,7 @@
         "grade": 1,
         "name": "Brace Mask",
         "tags": "vpw_mask Set_01 Color_01",
+        "required_tags": "Protos",
         "manufacturer": "VPW",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1785,9 +1786,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Brace Mask",
             "Description": "Ever dream of standing out in a crowd while remaining completely anonymous? Vaporwear's Brace hood offer total facial coverage that keeps the wearer's identity hidden. Small optical sensors woven into the hood and run through a digital interface on the back provides the wearer with a perfect view of their surroundings.",
+            "DescriptionText": "Ever dream of standing out in a crowd while remaining completely anonymous? Vaporwear's Brace hood offer total facial coverage that keeps the wearer's identity hidden. Small optical sensors woven into the hood and run through a digital interface on the back provides the wearer with a perfect view of their surroundings.",
             "Manufacturer": {
                 "Code": "VPW",
-                "Name": "Vaporwear"
+                "Name": "Vaporwear",
+                "UUID": "7dfff1b9-2bfa-4ace-86d9-30329a2a0f30"
             },
             "Tags": [
                 "vpw_mask",
@@ -1798,11 +1801,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1812,9 +1822,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -30,
                 "Maximum": 15
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

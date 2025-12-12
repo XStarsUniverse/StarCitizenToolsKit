@@ -1148,6 +1148,7 @@
         "grade": 1,
         "name": "Hair Care Product",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "4736171a-00c1-442e-8f6f-6f20d2d63c4a",
             "ClassName": "ht_spa_shampoo_1_a",
@@ -1159,11 +1160,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Hair Care Product",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

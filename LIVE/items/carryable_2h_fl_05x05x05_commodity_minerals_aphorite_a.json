@@ -1225,6 +1225,7 @@
         "grade": 1,
         "name": "Aphorite",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "86c53bbf-adea-44af-924b-039a840ad703",
@@ -1237,6 +1238,12 @@
             "Type": "Cargo.Small",
             "Name": "Aphorite",
             "Description": "Decorative jewel crystal prized for its multi-hued tones.",
+            "DescriptionText": "Decorative jewel crystal prized for its multi-hued tones.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1244,6 +1251,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "9b47bacf-8efa-42e2-8d84-dee64983a00a",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

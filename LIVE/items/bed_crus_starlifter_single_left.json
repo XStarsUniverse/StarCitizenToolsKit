@@ -1743,6 +1743,7 @@
         "grade": 1,
         "name": "Bed",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "cec46bef-7bfa-4bc2-a568-6a2b2d0954c9",
             "ClassName": "Bed_CRUS_Starlifter_Single_Left",
@@ -1754,23 +1755,46 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Bed",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Mattress",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Tags": [
                         "Sleep"
                     ],
                     "Types": [
                         "Seat"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Seat"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Pillow",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Liedown",
+                "Sit",
+                "Exit",
+                "Sleep",
+                "Situp",
+                "Savegamelogout"
             ]
         }
     }

@@ -1307,6 +1307,7 @@
         "grade": 1,
         "name": "Revenant Tree Pollen",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "97dd9f08-cfbd-4cf8-b838-007dade0c2c2",
@@ -1319,6 +1320,12 @@
             "Type": "Cargo.Small",
             "Name": "Revenant Tree Pollen",
             "Description": "The pollen of Revenant Tree (altrucia lacus).",
+            "DescriptionText": "The pollen of Revenant Tree (altrucia lacus).",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1328,7 +1335,42 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 4
+                "Health": 4,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "ExclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "ee845b46-a156-47f7-a58a-22f9b77b9c2b",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -2091,6 +2091,7 @@
         "grade": 1,
         "name": "Bannock Jumpsuit Green",
         "tags": "alb_jumpsuit Set_01 Material_01 Color_01 Texture_01",
+        "required_tags": "",
         "manufacturer": "ALB",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2104,9 +2105,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Bannock Jumpsuit Green",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nThe Bannock jumpsuit combines comfort and durability. It features reinforced padding in critical areas, plenty of storage, and an adjustable belt to ensure a snug fit. Its unique design also includes a built-in secondary layer, allowing the wearer to unzip and cool down without fear of damaging their everyday clothes.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "The Bannock jumpsuit combines comfort and durability. It features reinforced padding in critical areas, plenty of storage, and an adjustable belt to ensure a snug fit. Its unique design also includes a built-in secondary layer, allowing the wearer to unzip and cool down without fear of damaging their everyday clothes.",
             "Manufacturer": {
                 "Code": "ALB",
-                "Name": "Alejo Brothers"
+                "Name": "Alejo Brothers",
+                "UUID": "dd14fd7f-eead-4f7d-8057-2d95405a0183"
             },
             "Tags": [
                 "alb_jumpsuit",
@@ -2119,19 +2125,33 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Clothing_Torso2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Char_Clothing_Torso_2"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Torso_2"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2141,6 +2161,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2156,6 +2185,10 @@
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

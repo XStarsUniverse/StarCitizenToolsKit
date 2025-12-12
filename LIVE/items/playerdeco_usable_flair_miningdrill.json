@@ -458,6 +458,7 @@
         "grade": 1,
         "name": "Retired Drill Head",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "996ac70a-317e-4c86-949a-2a9cb0c130e8",
             "ClassName": "PlayerDeco_Usable_Flair_Miningdrill",
@@ -469,11 +470,20 @@
             "Type": "Usable.Cargo",
             "Name": "Retired Drill Head",
             "Description": "While this retired drill head may no longer be boring holes in asteroids, mounted on a secure frame, guests are sure to \"dig\" this conversation piece when displayed in your personal space.",
+            "DescriptionText": "While this retired drill head may no longer be boring holes in asteroids, mounted on a secure frame, guests are sure to \"dig\" this conversation piece when displayed in your personal space.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Play"
+            ]
         }
     }
 }

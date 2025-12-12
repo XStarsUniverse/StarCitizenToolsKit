@@ -1196,6 +1196,7 @@
         "grade": 1,
         "name": "Laranite",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "f7038211-9a4f-4741-a922-3917bd71773f",
@@ -1208,6 +1209,12 @@
             "Type": "Cargo.Small",
             "Name": "Laranite",
             "Description": "A somewhat radioactive, crystalline gemstone. Black with streaks of dark red, it can only be used as jewelry if shielded.",
+            "DescriptionText": "A somewhat radioactive, crystalline gemstone. Black with streaks of dark red, it can only be used as jewelry if shielded.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1215,6 +1222,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "7f4599b0-a2b2-4178-8c7e-13292054ab20",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

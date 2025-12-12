@@ -576,6 +576,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "43fd141c-7069-40fc-9b5e-4985d3b00a2e",
@@ -587,7 +588,17 @@
             "Length": 0.15,
             "Type": "Cargo.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Take",
+                "Place"
+            ]
         }
     }
 }

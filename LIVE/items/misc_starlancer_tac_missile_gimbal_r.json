@@ -750,6 +750,7 @@
         "grade": 1,
         "name": "PC2 Dual S4 Mount",
         "tags": "gimbalMount flightReady $MISC_Starlancer_TAC_Missile_Gimbal_R",
+        "required_tags": "MISC_Starlancer_TAC_Missile_Gimbal_R",
         "stdItem": {
             "UUID": "7cb20c3d-497c-4762-996e-e581acee3d4e",
             "ClassName": "MISC_Starlancer_TAC_Missile_Gimbal_R",
@@ -761,6 +762,12 @@
             "Type": "Turret.GunTurret",
             "Name": "PC2 Dual S4 Mount",
             "Description": "PC2 Dual S4 Mount",
+            "DescriptionText": "PC2 Dual S4 Mount",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "gimbalMount",
                 "flightReady",
@@ -770,6 +777,8 @@
                 {
                     "PortName": "turret_missile_rack",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Flags": [
                         "$uneditable"
                     ],
@@ -780,7 +789,15 @@
                         "$MISC_Starlancer_TAC_MRCK"
                     ],
                     "Types": [
-                        "MissileLauncher"
+                        "MissileLauncher.MissileRack"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MissileLauncher",
+                            "sub_types": [
+                                "MissileRack"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -791,7 +808,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 600
+                "Health": 600,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

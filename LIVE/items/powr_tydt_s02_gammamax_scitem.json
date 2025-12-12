@@ -1134,6 +1134,7 @@
         "grade": 2,
         "name": "GammaMax",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "TYDT",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1147,17 +1148,37 @@
             "Type": "PowerPlant.Power",
             "Name": "GammaMax",
             "Description": "Item Type: Power Plant\\nManufacturer: Tyler Design & Tech\\nSize: 2\\nGrade: B\\nClass: Stealth\\n\\nA complete overhaul of the materials in the heatsinks dramatically decreased the emission level of the GammaMax. Few medium power plants run as quiet at the same price point of this one from Tyler Design & Tech.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Tyler Design & Tech",
+                "Size": "2",
+                "Grade": "B",
+                "Class": "Stealth"
+            },
+            "DescriptionText": "A complete overhaul of the materials in the heatsinks dramatically decreased the emission level of the GammaMax. Few medium power plants run as quiet at the same price point of this one from Tyler Design & Tech.",
             "Manufacturer": {
                 "Code": "TYDT",
-                "Name": "Tyler Design & Tech"
+                "Name": "Tyler Design & Tech",
+                "UUID": "a2a97679-2a6e-4e89-80d8-439c88a01427"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 40,
+                "Maximum": 12000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 800
+                "Health": 800,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1180,6 +1201,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 4687.5,
@@ -1197,6 +1222,39 @@
             },
             "PowerPlant": {
                 "Output": 4687.5
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 17,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 17,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 4250
+                        }
+                    }
+                ]
             }
         }
     }

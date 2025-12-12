@@ -2786,6 +2786,7 @@
         "grade": 1,
         "name": "Okunis",
         "tags": "mining_gadget SHIN Okunis",
+        "required_tags": "",
         "manufacturer": "SHIN",
         "stdItem": {
             "UUID": "715a41ad-b297-44fa-b792-8561687e5220",
@@ -2798,9 +2799,18 @@
             "Type": "Gadget.Gadget",
             "Name": "Okunis",
             "Description": "Manufacturer: Shubin Interstellar\\nItem Type: Mining Gadget\\n\\nOptimal Charge Window Size: +50%\\nOptimal Charge Window Rate: +100%\\n\\nCluster Modifier: -20%\\n\\nIncrease the size and fill speed of the optimal charge window with the Okunis. While this powerful gadget makes it easier to work a deposit, some valuable resource will be lost when it shatters.  \\n\\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
+            "DescriptionData": {
+                "Manufacturer": "Shubin Interstellar",
+                "Item Type": "Mining Gadget",
+                "Optimal Charge Window Size": "+50%",
+                "Optimal Charge Window Rate": "+100%",
+                "Cluster Modifier": "-20%"
+            },
+            "DescriptionText": "Increase the size and fill speed of the optimal charge window with the Okunis. While this powerful gadget makes it easier to work a deposit, some valuable resource will be lost when it shatters.  \n\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
             "Manufacturer": {
                 "Code": "SHIN",
-                "Name": "Shubin Interstellar"
+                "Name": "Shubin Interstellar",
+                "UUID": "ab35f85f-919f-4457-8d58-4e885ea6c5c0"
             },
             "Tags": [
                 "mining_gadget",
@@ -2813,8 +2823,24 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 10
-            }
+                "Health": 10,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Activate",
+                "Deactivate",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Offhandequip",
+                "Prime",
+                "Unprime",
+                "Carrylowered"
+            ]
         }
     }
 }

@@ -1148,6 +1148,7 @@
         "grade": 1,
         "name": "Hair Care Product",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "2917d0b0-2695-4c4b-a9d4-8b57cba3308e",
             "ClassName": "ht_spa_aftershave_1_a",
@@ -1159,11 +1160,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Hair Care Product",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

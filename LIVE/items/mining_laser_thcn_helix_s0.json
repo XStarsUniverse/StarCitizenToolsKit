@@ -3917,6 +3917,7 @@
         "grade": 1,
         "name": "S0 Helix",
         "tags": "flightReady weaponMountUsable miningMount",
+        "required_tags": "miningMount",
         "manufacturer": "THCN",
         "classification": "Ship.Mining.Gun",
         "stdItem": {
@@ -3930,9 +3931,25 @@
             "Type": "WeaponMining.Gun",
             "Name": "S0 Helix",
             "Description": "Manufacturer: Thermyte Concern\\nItem Type: Mining Laser\\nSize: S0\\nGrade: B\\n \\nOptimal Range: 30 m\\nMaximum Range: 30 m\\nGather Radius: 1 m\\nExtraction Throughput: 5 cSCU/s\\n \\nPower Transfer: 50\\n \\nInstability: 0%\\nResistance: 0 %\\nOptimal Charge Window Size: -40 %\\nOptimal Charge Window Rate: +20 %\\nThrottle min: 15%\\n\\nMost powerful mining laser, strongest laser",
+            "DescriptionData": {
+                "Manufacturer": "Thermyte Concern",
+                "Item Type": "Mining Laser",
+                "Size": "S0",
+                "Grade": "B",
+                "Optimal Range": "30 m",
+                "Maximum Range": "30 m",
+                "Extraction Throughput": "5 cSCU/s",
+                "Power Transfer": "50",
+                "Instability": "0%",
+                "Resistance": "0 %",
+                "Optimal Charge Window Size": "-40 %",
+                "Optimal Charge Window Rate": "+20 %"
+            },
+            "DescriptionText": "Most powerful mining laser, strongest laser",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "flightReady",
@@ -3943,18 +3960,30 @@
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "Mining_Modifier_ATLS",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
@@ -3967,13 +3996,23 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "UNDEFINED"
+                        "UNDEFINED.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "UNDEFINED",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "Mining_Modifier_ROCds",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
@@ -3993,8 +4032,42 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Activate",
+                "Store",
+                "Deactivate"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

@@ -1977,6 +1977,7 @@
         "grade": 1,
         "name": "Pips A20",
         "tags": "pips a20",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "70da6ba9-4982-4eac-b56b-ce2155b29a77",
@@ -1989,9 +1990,15 @@
             "Type": "Drink.Can",
             "Name": "Pips A20",
             "Description": "HEI: 39\\nEffects: Energizing, Cognitive Boosting\\n\\nHeavily scientifically researched to provide optimal energy restoration and targeted thirst quenching, Pips is trusted the 'verse over. Pips A20 is specially formulated for long-haul pilots to provide sustained results.",
+            "DescriptionData": {
+                "HEI": "39",
+                "Effects": "Energizing, Cognitive Boosting"
+            },
+            "DescriptionText": "Heavily scientifically researched to provide optimal energy restoration and targeted thirst quenching, Pips is trusted the 'verse over. Pips A20 is specially formulated for long-haul pilots to provide sustained results.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "pips",
@@ -2003,12 +2010,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "39",
+                "Effects": [
+                    "Energizing",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

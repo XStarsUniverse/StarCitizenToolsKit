@@ -1993,6 +1993,7 @@
         "grade": 1,
         "name": "Tekaw Pants Crimson",
         "tags": "alb_pants Set_01 Texture_01 Color_13",
+        "required_tags": "",
         "manufacturer": "ALB",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2006,9 +2007,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Tekaw Pants Crimson",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nComfortable enough to wear all day yet designed to thrive under harsh conditions, the Tekaw pants are perfect whether you're on or off duty. Their stylish yet durable design includes a water-wicking coating and padded shins guards with wrappings that ensure a snug fit.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "Comfortable enough to wear all day yet designed to thrive under harsh conditions, the Tekaw pants are perfect whether you're on or off duty. Their stylish yet durable design includes a water-wicking coating and padded shins guards with wrappings that ensure a snug fit.",
             "Manufacturer": {
                 "Code": "ALB",
-                "Name": "Alejo Brothers"
+                "Name": "Alejo Brothers",
+                "UUID": "dd14fd7f-eead-4f7d-8057-2d95405a0183"
             },
             "Tags": [
                 "alb_pants",
@@ -2020,19 +2026,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2042,7 +2060,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2052,6 +2078,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.003,
                 "unit": 6,
@@ -2067,6 +2102,10 @@
             "TemperatureResistance": {
                 "Minimum": -10,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

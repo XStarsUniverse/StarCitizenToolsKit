@@ -1312,6 +1312,7 @@
         "grade": 1,
         "name": "Exodus",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "TARS",
         "stdItem": {
             "UUID": "59346c37-671d-4aae-9eff-d38e13caa9c0",
@@ -1324,12 +1325,32 @@
             "Type": "JumpDrive.UNDEFINED",
             "Name": "Exodus",
             "Description": "Item Type: Jump Module\\nManufacturer: Tarsus\\nSize: 3\\nGrade: C\\nClass: Civilian\\n\\nJourney across the \u2018verse with Tarsus\u2019 Exodus jump module, offering greater reliability to help take your wanderlust to new heights.",
+            "DescriptionData": {
+                "Item Type": "Jump Module",
+                "Manufacturer": "Tarsus",
+                "Size": "3",
+                "Grade": "C",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Journey across the 'verse with Tarsus' Exodus jump module, offering greater reliability to help take your wanderlust to new heights.",
             "Manufacturer": {
                 "Code": "TARS",
-                "Name": "Tarsus"
+                "Name": "Tarsus",
+                "UUID": "2b25a2dd-47ea-4ab0-8711-03d34be214b1"
+            },
+            "Distortion": {
+                "DecayDelay": 1,
+                "DecayRate": 288,
+                "Maximum": 1440,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
             },
             "Durability": {
-                "Health": 0
+                "Health": 0,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 40,
@@ -1345,6 +1366,34 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Transiting",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "QuantumFuel",
+                                "Rate": 0,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

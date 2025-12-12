@@ -866,6 +866,7 @@
         "grade": 1,
         "name": "Jumping Limes",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "337a03ef-5733-4253-9c9b-8c1f3ce71abd",
@@ -878,13 +879,43 @@
             "Type": "Cargo.Cargo",
             "Name": "Jumping Limes",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 24,
+                    "UnitName": "SCU",
+                    "SCU": 24
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "aaf46f4c-f8d8-4808-a39b-2b47de9b78fa",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

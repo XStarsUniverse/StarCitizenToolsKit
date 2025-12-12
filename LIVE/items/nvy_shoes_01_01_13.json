@@ -1870,6 +1870,7 @@
         "grade": 1,
         "name": "Waylite Shoes Crimson",
         "tags": "nvy_shoes Set_01 Texture_01 Color_13",
+        "required_tags": "",
         "manufacturer": "NVY",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1883,9 +1884,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Waylite Shoes Crimson",
             "Description": "Stay on your feet all day with Northstar's Waylite. These slip resistant shoes utilize comfortable memory foam and shock absorbent technology to make these casual sneakers perfect for the office or home.\\n\\nWomen's sizes currently out of stock.",
+            "DescriptionText": "Stay on your feet all day with Northstar's Waylite. These slip resistant shoes utilize comfortable memory foam and shock absorbent technology to make these casual sneakers perfect for the office or home.\n\nWomen's sizes currently out of stock.",
             "Manufacturer": {
                 "Code": "NVY",
-                "Name": "UEE Navy"
+                "Name": "UEE Navy",
+                "UUID": "d133f90d-bc69-4273-9867-6c03631f0c4b"
             },
             "Tags": [
                 "nvy_shoes",
@@ -1897,11 +1900,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1911,9 +1921,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -2138,6 +2138,7 @@
         "grade": 1,
         "name": "Scorpius TSB Flight Blade",
         "tags": "RSI_Scorpius_Base_Blade",
+        "required_tags": "RSI_Scorpius_Base_Blade",
         "manufacturer": "BRRA",
         "stdItem": {
             "UUID": "761c25cf-fac6-4ad3-aab3-7e000e977040",
@@ -2150,9 +2151,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Scorpius TSB Flight Blade",
             "Description": "Manufacturer: Broad & Rabiee\\nType: Flight Blade\\n\\nUnlock the potential of your RSI Scorpius with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
+            "DescriptionData": {
+                "Manufacturer": "Broad & Rabiee",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "Unlock the potential of your RSI Scorpius with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
             "Manufacturer": {
                 "Code": "BRRA",
-                "Name": "Broad & Rabiee"
+                "Name": "Broad & Rabiee",
+                "UUID": "ad865899-f5ba-4818-ae8c-fe80a55108b7"
             },
             "Tags": [
                 "RSI_Scorpius_Base_Blade"
@@ -2195,6 +2202,43 @@
                     "CapacitorRegenDelayAfterUse": 0.6,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist",
+                "Transformdeploy",
+                "Transformretract",
+                "Transformcycle"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

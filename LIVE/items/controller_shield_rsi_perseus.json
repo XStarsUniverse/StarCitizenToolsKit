@@ -196,6 +196,7 @@
         "grade": 1,
         "name": "SHIELDS",
         "tags": "flightReady",
+        "required_tags": "",
         "stdItem": {
             "UUID": "16d4329b-50fd-4623-9111-f9265e2e1f4b",
             "ClassName": "Controller_Shield_RSI_Perseus",
@@ -207,9 +208,33 @@
             "Type": "ShieldController.UNDEFINED",
             "Name": "SHIELDS",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Shield",
+                                "Rate": 1000000,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

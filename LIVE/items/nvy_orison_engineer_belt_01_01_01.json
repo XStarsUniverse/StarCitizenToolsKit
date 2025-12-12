@@ -1079,6 +1079,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "NVY",
         "stdItem": {
             "UUID": "59bc372e-a386-4d45-9ae4-1682c8091f2b",
@@ -1091,14 +1092,18 @@
             "Type": "Char_Clothing_Torso_2.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "NVY",
-                "Name": "UEE Navy"
+                "Name": "UEE Navy",
+                "UUID": "d133f90d-bc69-4273-9867-6c03631f0c4b"
             },
             "Ports": [
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -1108,13 +1113,23 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -1125,8 +1140,19 @@
                         "datapad"
                     ],
                     "Types": [
-                        "WeaponPersonal",
+                        "WeaponPersonal.Gadget",
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        },
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1136,9 +1162,21 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openexternalinventory"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

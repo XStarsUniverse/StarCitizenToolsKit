@@ -419,6 +419,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "Ship_Dock_Refuel",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e94255c4-4036-4805-82d7-a5dd836e8bf8",
             "ClassName": "DockingTube_Fuel_Ports_MISC_Fury",
@@ -430,6 +431,12 @@
             "Type": "DockingCollar.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Ship_Dock_Refuel"
             ],
@@ -437,17 +444,26 @@
                 {
                     "PortName": "itemport_vehicle_attach",
                     "Size": 8,
+                    "MinSize": 0,
+                    "MaxSize": 8,
                     "RequiredTags": [
                         "Ship_Dock_Refuel"
                     ],
                     "Types": [
                         "NOITEM_Vehicle"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "NOITEM_Vehicle"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 100
+                "Health": 100,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

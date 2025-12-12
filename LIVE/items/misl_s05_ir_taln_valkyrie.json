@@ -993,6 +993,7 @@
         "grade": 1,
         "name": "Valkyrie V Missile",
         "tags": "TALN IR flightReady",
+        "required_tags": "",
         "manufacturer": "TALN",
         "classification": "Ship.Missile.Torpedo",
         "stdItem": {
@@ -1006,9 +1007,16 @@
             "Type": "Missile.Torpedo",
             "Name": "Valkyrie V Missile",
             "Description": "Manufacturer: Talon\\nTracking Signal: Infrared\\nSize: 5\\n\\nTalon's torpedo design team pulled out all the stops for their latest Valkyrie strike torpedo by creating a multitiered thrust solution with state of the art infrared tracking capabilities.",
+            "DescriptionData": {
+                "Manufacturer": "Talon",
+                "Tracking Signal": "Infrared",
+                "Size": "5"
+            },
+            "DescriptionText": "Talon's torpedo design team pulled out all the stops for their latest Valkyrie strike torpedo by creating a multitiered thrust solution with state of the art infrared tracking capabilities.",
             "Manufacturer": {
                 "Code": "TALN",
-                "Name": "Talon"
+                "Name": "Talon",
+                "UUID": "587fcede-4fe9-4fb4-85ec-124abc8542b0"
             },
             "Tags": [
                 "TALN",
@@ -1020,8 +1028,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 50
+                "Health": 50,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

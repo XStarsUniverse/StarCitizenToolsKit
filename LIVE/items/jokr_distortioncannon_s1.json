@@ -4756,6 +4756,7 @@
         "grade": 1,
         "name": "Suckerpunch Cannon",
         "tags": "JOKR DistortionCannon flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "JOK",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4769,9 +4770,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Suckerpunch Cannon",
             "Description": "Manufacturer: Joker Engineering\\nItem Type: Distortion Cannon\\nSize: 1\\n\\nThe geniuses over at Joker have done it again. The Suckerpunch Distortion autocannon is a long-range weapon that drains your target's power supply rather than damaging the physical body of the ship, making it ideal for law-enforcement or other applications.",
+            "DescriptionData": {
+                "Manufacturer": "Joker Engineering",
+                "Item Type": "Distortion Cannon",
+                "Size": "1"
+            },
+            "DescriptionText": "The geniuses over at Joker have done it again. The Suckerpunch Distortion autocannon is a long-range weapon that drains your target's power supply rather than damaging the physical body of the ship, making it ideal for law-enforcement or other applications.",
             "Manufacturer": {
                 "Code": "JOK",
-                "Name": "Joker Engineering"
+                "Name": "Joker Engineering",
+                "UUID": "19fbaf6d-d6dc-4e15-8fdf-67101934ff3c"
             },
             "Tags": [
                 "JOKR",
@@ -4783,33 +4791,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "7f31d915-b0f2-4237-b2bd-13091b0fbf23",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "08ee6c17-ad99-43f4-ba80-4089f40601ca",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "59f24a20-d9cf-4615-b0d2-2cb9c26fe08b",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "6c06d2b8-58e1-49b2-8a99-59a37f4fbb15",
                     "Uneditable": false
                 }
             ],
@@ -4842,8 +4894,37 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 550
+                "Health": 550,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.9,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

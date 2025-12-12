@@ -1853,6 +1853,7 @@
         "grade": 1,
         "name": "Fuse",
         "tags": "relay fuse",
+        "required_tags": "",
         "stdItem": {
             "UUID": "8cf8dd1b-756e-496c-a1ae-e88ebbf999f7",
             "ClassName": "Fuse_subItem_standard",
@@ -1864,6 +1865,12 @@
             "Type": "Misc.Fuse",
             "Name": "Fuse",
             "Description": "This safety device provides protection to relays and other power systems from excessive current. Once tripped, fuses need to be replaced before normal operation can resume.",
+            "DescriptionText": "This safety device provides protection to relays and other power systems from excessive current. Once tripped, fuses need to be replaced before normal operation can resume.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "relay",
                 "fuse"
@@ -1874,8 +1881,18 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 225
-            }
+                "Health": 225,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ]
         }
     }
 }

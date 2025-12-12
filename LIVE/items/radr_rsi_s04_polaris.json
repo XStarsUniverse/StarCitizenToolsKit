@@ -2263,6 +2263,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.Radar.MidRangeRadar",
         "stdItem": {
@@ -2278,7 +2279,8 @@
             "Description": "<= PLACEHOLDER =>",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady"
@@ -2287,17 +2289,35 @@
                 {
                     "PortName": "BatteryPort",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "invisible"
                     ],
                     "Types": [
                         "Battery"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Battery"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 10,
+                "DecayRate": 1000,
+                "Maximum": 100000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 11000
+                "Health": 11000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 20,
@@ -2334,6 +2354,33 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 5,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 5,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 2480
+                        }
+                    }
+                ]
             },
             "Radar": {
                 "Cooldown": 2.5,

@@ -556,6 +556,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "VNC",
         "stdItem": {
             "UUID": "4b46925c-f76f-433c-9b27-8b18541a97cb",
@@ -568,13 +569,32 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

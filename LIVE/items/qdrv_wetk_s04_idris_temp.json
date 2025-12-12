@@ -1461,6 +1461,7 @@
         "grade": 1,
         "name": "Frontline",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.QuantumDrive",
         "stdItem": {
             "UUID": "02287bd1-e17b-4f73-bca2-0cded92a9423",
@@ -1473,16 +1474,37 @@
             "Type": "QuantumDrive.UNDEFINED",
             "Name": "Frontline",
             "Description": "Item Type: Quantum Drive\\nManufacturer: Aegis Dynamics\\nSize: 4\\n\\nThis capital-class quantum drive was designed specifically for the Idris frigate.",
+            "DescriptionData": {
+                "Item Type": "Quantum Drive",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "4"
+            },
+            "DescriptionText": "This capital-class quantum drive was designed specifically for the Idris frigate.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "hardpoint_Jump_Drive",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Flags": [
                         "dont_hide_entity",
                         "uneditable"
                     ],
                     "Types": [
-                        "JumpDrive"
+                        "JumpDrive.JumpDrive"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "JumpDrive",
+                            "sub_types": [
+                                "JumpDrive"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -1492,8 +1514,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 6.5,
+                "DecayRate": 3200,
+                "Maximum": 16000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 25000
+                "Health": 25000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 2.5,
@@ -1516,6 +1549,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Engagequantumtravel",
+                "Disengagequantumtravel"
+            ],
             "PowerConnection": {
                 "PowerBase": 768,
                 "PowerDraw": 768,
@@ -1530,6 +1567,59 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 11,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 11,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 41300
+                        }
+                    },
+                    {
+                        "Name": "Travelling",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 11,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "QuantumFuel",
+                                "Rate": 7.5e-5,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 11,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 41300
+                        }
+                    }
+                ]
             },
             "QuantumDrive": {
                 "JumpRange": 3.402823e+38,

@@ -922,6 +922,7 @@
         "grade": 3,
         "name": "Arctic",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Arctic",
             "Description": "Item Type: Cooler\\nManufacturer: Aegis Dynamics \\nSize: 2\\nGrade: C\\nClass: Military\\n\\nProviding the kind of durability that made Aegis products a mainstay with the military, the Arctic is an economic mil-spec cooler capable of withstanding the rigors of combat without sacrificing performance.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "2",
+                "Grade": "C",
+                "Class": "Military"
+            },
+            "DescriptionText": "Providing the kind of durability that made Aegis products a mainstay with the military, the Arctic is an economic mil-spec cooler capable of withstanding the rigors of combat without sacrificing performance.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Cooler": {
                 "CoolingRate": 5200000,
@@ -949,8 +959,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 750
+                "Health": 750,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 15,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.08,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.24
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 28.6,
+                                "MinimumFraction": 0.25,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1980,
+                            "IR": 9440
+                        }
+                    }
+                ]
             }
         }
     }

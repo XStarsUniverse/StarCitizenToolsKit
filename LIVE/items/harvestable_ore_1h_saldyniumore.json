@@ -1560,6 +1560,7 @@
         "grade": 1,
         "name": "Saldynium (Ore)",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "ee704f52-8794-434d-bcd7-47fec365ffbd",
             "ClassName": "Harvestable_Ore_1H_SaldyniumOre",
@@ -1571,13 +1572,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Saldynium (Ore)",
             "Description": "A rare metal that has traditionally been extremely difficult to find in large quantities owing to the particular environmental requirements for its formation. It is sought after for its use in the production of high-powered lasers.\u00a0It also shows some antimicrobial properties though its scarcity has seen it used less for medical purposes.",
+            "DescriptionText": "A rare metal that has traditionally been extremely difficult to find in large quantities owing to the particular environmental requirements for its formation. It is sought after for its use in the production of high-powered lasers. It also shows some antimicrobial properties though its scarcity has seen it used less for medical purposes.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "5fdfdea8-3d75-4287-85c7-f29a722ee351",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -1148,6 +1148,7 @@
         "grade": 1,
         "name": "Brush",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "7ca2ee1b-8c92-48e3-85a9-b4a4221e981a",
             "ClassName": "un_personal_brush_1_a",
@@ -1159,11 +1160,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Brush",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

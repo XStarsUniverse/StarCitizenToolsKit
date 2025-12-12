@@ -1130,6 +1130,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "7f16edfc-e165-4a4c-95a8-ed2ad51b5974",
             "ClassName": "SCItemDisplayScreen_NewsScreen_NewBabbage",
@@ -1141,9 +1142,21 @@
             "Type": "Display.Default",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
-            "Durability": {
-                "Health": 50
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
             },
+            "Durability": {
+                "Health": 50,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Turnon",
+                "Turnoff"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,

@@ -1000,6 +1000,7 @@
         "grade": 1,
         "name": "Picoball",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "2c6e2098-af0e-41a7-b166-34422ff6c60b",
             "ClassName": "Carryable_2H_CY_toy_volleyball_1_a_Triggerfish",
@@ -1011,11 +1012,22 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Picoball",
             "Description": "An athletic ball modified to resemble the famous microTech mascot Pico the Penguin.",
+            "DescriptionText": "An athletic ball modified to resemble the famous microTech mascot Pico the Penguin.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

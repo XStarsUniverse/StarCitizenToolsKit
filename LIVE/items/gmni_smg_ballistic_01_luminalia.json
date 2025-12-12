@@ -8836,6 +8836,7 @@
         "grade": 1,
         "name": "C54 \"Luminalia\" SMG",
         "tags": "stocked smg gmni_smg_ballistic_01",
+        "required_tags": "",
         "manufacturer": "GEM",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -8849,9 +8850,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "C54 \"Luminalia\" SMG",
             "Description": "Manufacturer: Gemini\\nItem Type: SMG\\nClass: Ballistic\\n\\nMagazine Size: 50\\nRate Of Fire: 1,100 rpm\\nEffective Range: 35m\\n\\nAttachments: Barrel (S1), Optics (S1), Underbarrel (S1)\\n\\nEasy to handle and a beauty to behold, the C54 is a sleek and precisely balanced SMG from Gemini. Its lightweight polymer frame and ergonomic design makes it ideal for close quarter engagements. The C54 is capable of firing 10mm rounds on full auto to provide maximum support and target saturation to ensure that any engagement ends quick. The Luminalia edition sports a festive red and green design.",
+            "DescriptionData": {
+                "Manufacturer": "Gemini",
+                "Item Type": "SMG",
+                "Class": "Ballistic",
+                "Magazine Size": "50",
+                "Rate Of Fire": "1,100 rpm",
+                "Effective Range": "35m",
+                "Attachments": "Barrel (S1), Optics (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "Easy to handle and a beauty to behold, the C54 is a sleek and precisely balanced SMG from Gemini. Its lightweight polymer frame and ergonomic design makes it ideal for close quarter engagements. The C54 is capable of firing 10mm rounds on full auto to provide maximum support and target saturation to ensure that any engagement ends quick. The Luminalia edition sports a festive red and green design.",
             "Manufacturer": {
                 "Code": "GEM",
-                "Name": "Gemini"
+                "Name": "Gemini",
+                "UUID": "b33050cd-6ca9-4c57-baf8-f4114eb85237"
             },
             "Tags": [
                 "stocked",
@@ -8862,6 +8874,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "gmni_smg_ballistic_01"
                     ],
@@ -8869,24 +8883,45 @@
                         "gmni_smg_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "3f4a69ef-0bcf-4cd6-a272-782f6641c242",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
@@ -8895,24 +8930,44 @@
                         "ballistic_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -8971,14 +9026,21 @@
                 "Length": 1.125,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

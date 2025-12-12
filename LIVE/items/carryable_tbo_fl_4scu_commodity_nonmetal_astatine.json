@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Astatine",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "0ac89842-959f-4b16-9245-ddf80fa015c3",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Astatine",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 4,
+                    "UnitName": "SCU",
+                    "SCU": 4
+                },
+                "InclusiveGroups": [
+                    "4d3f31f7-feab-488c-8f36-ac7c8c4012b8"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "e821252d-9d3f-479d-aea3-6ac6cb835784",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

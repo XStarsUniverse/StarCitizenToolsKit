@@ -1957,6 +1957,7 @@
         "grade": 1,
         "name": "Faction Jacket Red",
         "tags": "987_jacket set_05 Color_02",
+        "required_tags": "",
         "manufacturer": "987",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1970,9 +1971,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Faction Jacket Red",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nWhether you're coasting through outdoor adventures or cruising to exclusive afterparties, the Faction coat is sure to turn heads. Fusing sections of ultra-insulated brick quilting with 987's DuraBull ripstop reinforced fabric, you'll stay warm while still looking cool.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "Whether you're coasting through outdoor adventures or cruising to exclusive afterparties, the Faction coat is sure to turn heads. Fusing sections of ultra-insulated brick quilting with 987's DuraBull ripstop reinforced fabric, you'll stay warm while still looking cool.",
             "Manufacturer": {
                 "Code": "987",
-                "Name": 987
+                "Name": 987,
+                "UUID": "3b54a8cc-5700-45f1-940a-2436b213926f"
             },
             "Tags": [
                 "987_jacket",
@@ -1983,11 +1989,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1997,6 +2010,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2012,6 +2034,10 @@
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

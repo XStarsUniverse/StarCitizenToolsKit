@@ -1782,6 +1782,7 @@
         "grade": 1,
         "name": "Re-Authorizer",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1bdf2214-6e54-44f7-87bd-eef795513078",
             "ClassName": "loco_consumable_hackingchip_01",
@@ -1793,6 +1794,12 @@
             "Type": "FPS_Consumable.Hacking",
             "Name": "Re-Authorizer",
             "Description": "Released by Lortell Computing as a way to gain access to a system with a lost or forgotten password, the slow but reliable Re-Authorizer cryptokey is considered an affordable option for people who want to attempt to repair their system themselves.",
+            "DescriptionText": "Released by Lortell Computing as a way to gain access to a system with a lost or forgotten password, the slow but reliable Re-Authorizer cryptokey is considered an affordable option for people who want to attempt to repair their system themselves.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1802,8 +1809,22 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
-            }
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Equip",
+                "Offhandequip",
+                "Store",
+                "Offhandstore",
+                "Blinkinglight_notshown",
+                "Stopblinking_notshown"
+            ]
         }
     }
 }

@@ -1565,6 +1565,7 @@
         "grade": 1,
         "name": "Janalite",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e954d75e-fb1e-487e-90a8-170f0284b502",
             "ClassName": "Harvestable_Mineral_1H_Janalite",
@@ -1576,13 +1577,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Janalite",
             "Description": "This rare mineral is valued as an industrial anti-matter precursor. While more stable than other precursors like Feynmaline, it's tougher structure and energy resistance makes it much more difficult to utilize as well as collect.",
+            "DescriptionText": "This rare mineral is valued as an industrial anti-matter precursor. While more stable than other precursors like Feynmaline, it's tougher structure and energy resistance makes it much more difficult to utilize as well as collect.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "f3379bda-0520-4c75-920a-c29a50eb6b50",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

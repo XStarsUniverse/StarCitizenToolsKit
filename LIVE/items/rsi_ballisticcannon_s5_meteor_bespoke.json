@@ -3592,6 +3592,7 @@
         "grade": 1,
         "name": "Leonids Cannon",
         "tags": "RSI BallisticCannon flightReady weaponMountUsable $RSI_Meteor",
+        "required_tags": "RSI_Meteor",
         "manufacturer": "RSI",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -3605,9 +3606,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Leonids Cannon",
             "Description": "Manufacturer: RSI\\nItem Type: Ballistic Cannon\\nSize: 5\\n\\nBuilt specifically for the Meteor, the Leonids ballistic cannon provides formidable firepower designed to overwhelm aggressors that dare get within range. RSI expertly incorporated the cannon atop both sides of the ship to seamlessly integrate with the ship's components and provide full forward coverage.",
+            "DescriptionData": {
+                "Manufacturer": "RSI",
+                "Item Type": "Ballistic Cannon",
+                "Size": "5"
+            },
+            "DescriptionText": "Built specifically for the Meteor, the Leonids ballistic cannon provides formidable firepower designed to overwhelm aggressors that dare get within range. RSI expertly incorporated the cannon atop both sides of the ship to seamlessly integrate with the ship's components and provide full forward coverage.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "RSI",
@@ -3620,32 +3628,72 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -3671,8 +3719,37 @@
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 2500
+                "Health": 2500,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

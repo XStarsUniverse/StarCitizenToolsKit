@@ -1583,6 +1583,7 @@
         "grade": 1,
         "name": "OpioPen (Roxaphen)",
         "tags": "Stash_MediPen medical_injection",
+        "required_tags": "",
         "manufacturer": "CUR",
         "stdItem": {
             "UUID": "d99811fe-a60e-4f38-91a5-cfdb77ac3c97",
@@ -1595,9 +1596,15 @@
             "Type": "FPS_Consumable.Medical",
             "Name": "OpioPen (Roxaphen)",
             "Description": "Manufacturer: CureLife\\nItem Type: Medical Consumable\\n\\nFrom the Empire\u2019s most trusted medical company, the CureLife OpioPen can rapidly dispense doses of the pain reliever Roxaphen during emergency situations to help relieve symptoms associated with impaired mobility and partial paralysis. Use only as recommended.",
+            "DescriptionData": {
+                "Manufacturer": "CureLife",
+                "Item Type": "Medical Consumable"
+            },
+            "DescriptionText": "From the Empire's most trusted medical company, the CureLife OpioPen can rapidly dispense doses of the pain reliever Roxaphen during emergency situations to help relieve symptoms associated with impaired mobility and partial paralysis. Use only as recommended.",
             "Manufacturer": {
                 "Code": "CUR",
-                "Name": "Curelife"
+                "Name": "Curelife",
+                "UUID": "dd55bc19-5212-4365-bbc8-73474f0257ed"
             },
             "Tags": [
                 "Stash_MediPen",
@@ -1609,12 +1616,26 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 1,
-                "containerTypeTag": "injection"
+                "Type": "FPS_Consumable",
+                "ContainerClosed": 0,
+                "ContainerType": "injection",
+                "ContainerTypeTag": "injection",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 1
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Consume"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 0,
                 "canBlock": 0,

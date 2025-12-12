@@ -4108,6 +4108,7 @@
         "grade": 1,
         "name": "Door Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e250ed83-6226-4cf3-bea0-b59802cd96c1",
             "ClassName": "GAMA_Syulen_FuelArm",
@@ -4119,18 +4120,67 @@
             "Type": "Door.UNDEFINED",
             "Name": "Door Control",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "itemport_vehicle_attach",
                     "Size": 8,
+                    "MinSize": 0,
+                    "MaxSize": 8,
                     "RequiredTags": [
                         "Ship_Dock_Refuel"
                     ],
                     "Types": [
                         "NOITEM_Vehicle"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "NOITEM_Vehicle"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Open",
+                "Close",
+                "Lock",
+                "Override",
+                "Stepthrough",
+                "Toggle",
+                "Unlock",
+                "Overrideclose",
+                "Opencomplete",
+                "Closecomplete",
+                "Opentrigger",
+                "Openself",
+                "Allowopen",
+                "Locktrigger",
+                "Unlocktrigger",
+                "Lockself",
+                "Unlockself",
+                "Openrequest",
+                "Closerequest",
+                "Closetrigger",
+                "Closeself",
+                "Allowclose",
+                "Gate_close",
+                "Set_pressurenormalized",
+                "Set_pressuredifferential",
+                "Setstate_powered",
+                "Setstate_unpowered",
+                "Setstate_blocked",
+                "Setstate_unblocked",
+                "Setstate_noaccess",
+                "Setstate_access",
+                "Pressurecycle",
+                "Pressurecyclecomplete",
+                "Set_airlockconnected"
             ],
             "PowerConnection": {
                 "PowerBase": 0,

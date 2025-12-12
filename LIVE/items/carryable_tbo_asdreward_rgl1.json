@@ -819,6 +819,7 @@
         "grade": 1,
         "name": "RCMBNT-RGL-1",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "378ddc31-5d39-4511-9d77-48fc052df7b7",
             "ClassName": "Carryable_TBO_ASDReward_rgl1",
@@ -830,11 +831,23 @@
             "Type": "InventoryContainer.Cargo",
             "Name": "RCMBNT-RGL-1",
             "Description": "An imprint recombinant sample created from CTLST-RGL and REAGENT-01 as part of Dr. Logan Jorrit's Project Hyperion experiment.",
+            "DescriptionText": "An imprint recombinant sample created from CTLST-RGL and REAGENT-01 as part of Dr. Logan Jorrit's Project Hyperion experiment.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Open",
+                "Drop",
+                "Place",
+                "Openlootingui"
+            ]
         }
     }
 }

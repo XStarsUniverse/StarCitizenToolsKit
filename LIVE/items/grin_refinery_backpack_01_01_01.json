@@ -1501,6 +1501,7 @@
         "grade": 1,
         "name": "ThermoWeave Breathing Apparatus",
         "tags": "backpack Set_01 Color_01 SM_RestrictedArm",
+        "required_tags": "grin_refinery_01",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "a03c4c8e-e555-448a-a916-53c3af014635",
@@ -1513,9 +1514,14 @@
             "Type": "Char_Clothing_Backpack.UNDEFINED",
             "Name": "ThermoWeave Breathing Apparatus",
             "Description": "Carrying Capacity: 33.8K \u00b5SCU\\n\\nThe ThermoWeave breathing apparatus integrates with the hood to ensure a constant flow of breathable oxygen regardless of air quality conditions.",
+            "DescriptionData": {
+                "Carrying Capacity": "33.8K \u00b5SCU"
+            },
+            "DescriptionText": "The ThermoWeave breathing apparatus integrates with the hood to ensure a constant flow of breathable oxygen regardless of air quality conditions.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "backpack",
@@ -1528,6 +1534,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0338,
                 "unit": 6,
@@ -1543,6 +1558,10 @@
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

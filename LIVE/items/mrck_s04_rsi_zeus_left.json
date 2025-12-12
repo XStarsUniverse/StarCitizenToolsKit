@@ -953,6 +953,7 @@
         "grade": 1,
         "name": "RSI Zeus Missile Launcher",
         "tags": "$Zeus_Missile_Rack_Left",
+        "required_tags": "RSI_Zeus",
         "manufacturer": "RSI",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -966,9 +967,17 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "RSI Zeus Missile Launcher",
             "Description": "Item Type: Missile Launcher\\nManufacturer: MISC\\nSize: 5\\nMissiles: 8xS2 \\n\\nBespoke missile launcher built into the wings of the Tana to make this Reliant variant a deceptively deadly dogfighter.",
+            "DescriptionData": {
+                "Item Type": "Missile Launcher",
+                "Manufacturer": "MISC",
+                "Size": "5",
+                "Missiles": "8xS2"
+            },
+            "DescriptionText": "Bespoke missile launcher built into the wings of the Tana to make this Reliant variant a deceptively deadly dogfighter.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "$Zeus_Missile_Rack_Left"
@@ -977,32 +986,72 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_02_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_03_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_04_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "Missile"
+                        "Missile.Missile"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Missile"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1013,7 +1062,9 @@
                 "Height": 0.38
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.5,
@@ -1053,6 +1104,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

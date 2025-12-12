@@ -1980,6 +1980,7 @@
         "grade": 1,
         "name": "Pips Energy T17",
         "tags": "pips t17",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "63b1731c-c74c-45c2-aaa4-5a90b76150d0",
@@ -1992,9 +1993,15 @@
             "Type": "Drink.Can",
             "Name": "Pips Energy T17",
             "Description": "HEI: 39\\nEffects: Energizing, Cognitive Boosting\\n\\nHeavily scientifically researched to provide optimal energy restoration and targeted thirst quenching, Pips is trusted the 'verse over. Pips T17 is specially formulated with immuno-balanced ingredients to keep you going longer.",
+            "DescriptionData": {
+                "HEI": "39",
+                "Effects": "Energizing, Cognitive Boosting"
+            },
+            "DescriptionText": "Heavily scientifically researched to provide optimal energy restoration and targeted thirst quenching, Pips is trusted the 'verse over. Pips T17 is specially formulated with immuno-balanced ingredients to keep you going longer.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "pips",
@@ -2006,12 +2013,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "39",
+                "Effects": [
+                    "Energizing",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -1965,6 +1965,7 @@
         "grade": 1,
         "name": "Get Up Coffee (Black)",
         "tags": "guc black",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "be44e4bc-39e6-4bd1-a422-dc7d439bd9b1",
@@ -1977,9 +1978,15 @@
             "Type": "Drink.Can",
             "Name": "Get Up Coffee (Black)",
             "Description": "HEI: 15\\nEffects: Dehydrating, Cognitive Boosting\\n\\nGet Up Coffee is roasted with care to ensure a smooth blend of rich coffee flavor brewed to perfection. Served black and unsweetened, enjoy coffee in its purest expression.",
+            "DescriptionData": {
+                "HEI": "15",
+                "Effects": "Dehydrating, Cognitive Boosting"
+            },
+            "DescriptionText": "Get Up Coffee is roasted with care to ensure a smooth blend of rich coffee flavor brewed to perfection. Served black and unsweetened, enjoy coffee in its purest expression.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "guc",
@@ -1991,12 +1998,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "15",
+                "Effects": [
+                    "Dehydrating",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

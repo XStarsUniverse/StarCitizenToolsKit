@@ -1472,6 +1472,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "flightReady webcustom",
+        "required_tags": "ORIG_300i_Base",
         "manufacturer": "ORIG",
         "stdItem": {
             "UUID": "e9c1e3f1-a8f8-4dc8-a3e8-ff6787c90635",
@@ -1484,9 +1485,11 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ORIG",
-                "Name": "Origin Jumpworks"
+                "Name": "Origin Jumpworks",
+                "UUID": "1e47a9ec-a3f0-431d-be0e-377712e1ed84"
             },
             "Tags": [
                 "flightReady",
@@ -1496,6 +1499,8 @@
                 {
                     "PortName": "hardpoint_paint_seat",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable",
                         "webcustom"
@@ -1506,11 +1511,18 @@
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_paint_trim",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable",
                         "webcustom"
@@ -1521,9 +1533,34 @@
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": true
                 }
-            ]
+            ],
+            "Interactions": [
+                "Ejection"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Anvil Terrapin Nose Mount",
         "tags": "",
+        "required_tags": "ANVL_Terrapin_Base",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "7cc85c6b-5867-4437-b7c6-f9b1817baec0",
@@ -885,24 +886,46 @@
             "Type": "Turret.BallTurret",
             "Name": "Anvil Terrapin Nose Mount",
             "Description": "PC2 Dual S4 Mount",
+            "DescriptionText": "PC2 Dual S4 Mount",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_weapon_01",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_weapon_02",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -913,7 +936,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 3000
+                "Health": 3000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

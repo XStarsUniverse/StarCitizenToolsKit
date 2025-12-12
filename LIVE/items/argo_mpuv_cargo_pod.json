@@ -7428,6 +7428,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ARGO",
         "stdItem": {
             "UUID": "de9f06e9-3730-4b4c-b7a2-52d027ad4b0d",
@@ -7440,127 +7441,253 @@
             "Type": "Misc.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ARGO",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "9e1f5a35-edcc-4d19-bede-08e2730043c5"
             },
             "Ports": [
                 {
                     "PortName": "control_panel_a",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Tags": [
                         "Front"
                     ],
                     "Types": [
-                        "ControlPanel"
+                        "ControlPanel.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ControlPanel",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "control_panel_b",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Tags": [
                         "Back"
                     ],
                     "Types": [
-                        "ControlPanel"
+                        "ControlPanel.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ControlPanel",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "charge_handle_a",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Tags": [
                         "Front"
                     ],
                     "Types": [
-                        "Misc"
+                        "Misc.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "charge_handle_b",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Tags": [
                         "Back"
                     ],
                     "Types": [
-                        "Misc"
+                        "Misc.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "close_button_a",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Types": [
-                        "Button"
+                        "Button.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Button",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "close_button_b",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Types": [
-                        "Button"
+                        "Button.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Button",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "proximity_sensor",
                     "Size": 2,
+                    "MinSize": 0,
+                    "MaxSize": 2,
                     "Types": [
-                        "Sensor"
+                        "Sensor.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Sensor",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "light_group_a",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Types": [
-                        "Lightgroup"
+                        "Lightgroup.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Lightgroup",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "light_group_b",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Types": [
-                        "Lightgroup"
+                        "Lightgroup.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Lightgroup",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "decal_front",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
-                        "Decal"
+                        "Decal.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Decal",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "decal_rear",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
-                        "Decal"
+                        "Decal.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Decal",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "decal_screen",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
-                        "Decal"
+                        "Decal.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Decal",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_int",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 400
+                "Health": 400,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.92,
@@ -7619,6 +7746,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1.25,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

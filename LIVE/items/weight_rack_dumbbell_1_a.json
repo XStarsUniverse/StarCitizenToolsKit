@@ -1558,6 +1558,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "41bc7862-b115-4287-abc1-ea95b1369446",
             "ClassName": "Weight_Rack_Dumbbell_1_a",
@@ -1569,10 +1570,18 @@
             "Type": "Misc.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$slot_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1581,6 +1590,8 @@
                 {
                     "PortName": "$slot_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1589,6 +1600,8 @@
                 {
                     "PortName": "$slot_3",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1597,6 +1610,8 @@
                 {
                     "PortName": "$slot_4",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1605,6 +1620,8 @@
                 {
                     "PortName": "$slot_5",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1613,6 +1630,8 @@
                 {
                     "PortName": "$slot_6",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1621,6 +1640,8 @@
                 {
                     "PortName": "$slot_7",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1629,6 +1650,8 @@
                 {
                     "PortName": "$slot_8",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1637,6 +1660,8 @@
                 {
                     "PortName": "$slot_9",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1645,6 +1670,8 @@
                 {
                     "PortName": "$slot_10",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1653,6 +1680,8 @@
                 {
                     "PortName": "$slot_11",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
@@ -1661,11 +1690,18 @@
                 {
                     "PortName": "$slot_12",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "Dumbbell_a"
                     ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Use",
+                "Place",
+                "Placeonhook"
             ]
         }
     }

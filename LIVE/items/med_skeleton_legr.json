@@ -754,6 +754,7 @@
         "grade": 1,
         "name": "Body",
         "tags": "med_skeleton",
+        "required_tags": "",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
             "UUID": "665fa1e6-39c8-4d65-91d9-42f16bda1868",
@@ -766,6 +767,12 @@
             "Type": "Char_Clothing_Legs.Medical",
             "Name": "Body",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "med_skeleton"
             ],
@@ -773,6 +780,8 @@
                 {
                     "PortName": "restraint_attach_cosmetic",
                     "Size": 3,
+                    "MinSize": 0,
+                    "MaxSize": 3,
                     "Flags": [
                         "restraint_attach"
                     ],
@@ -782,12 +791,21 @@
                     "Types": [
                         "Gadget"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Gadget"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -955,6 +955,7 @@
         "grade": 1,
         "name": "Thunderball Bomb",
         "tags": "FSKI CS flightReady",
+        "required_tags": "",
         "manufacturer": "FSKI",
         "stdItem": {
             "UUID": "3c3f79ae-acb2-4472-a08d-2ddb1afcc700",
@@ -967,9 +968,16 @@
             "Type": "Bomb.Utility",
             "Name": "Thunderball Bomb",
             "Description": "Manufacturer: FireStorm Kinetics\\nItem Type: Explosive Bomb\\nSize: 3\\n\\nTarget ground forces from a safe distance above with the Thunderball. Despite the small size, these S3 bombs pack a powerful payload, allowing users to either deploy multiple bombs to overwhelm a stationary target or drop them at intervals to hit moving targets. The Thunderball uses FireStorm Kinetics' patented Atmo-Xact fins that deploy once dropped to provide additional guidance en route to target.",
+            "DescriptionData": {
+                "Manufacturer": "FireStorm Kinetics",
+                "Item Type": "Explosive Bomb",
+                "Size": "3"
+            },
+            "DescriptionText": "Target ground forces from a safe distance above with the Thunderball. Despite the small size, these S3 bombs pack a powerful payload, allowing users to either deploy multiple bombs to overwhelm a stationary target or drop them at intervals to hit moving targets. The Thunderball uses FireStorm Kinetics' patented Atmo-Xact fins that deploy once dropped to provide additional guidance en route to target.",
             "Manufacturer": {
                 "Code": "FSKI",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "5f81335d-44e6-4104-841e-c5af9df06829"
             },
             "Tags": [
                 "FSKI",
@@ -991,8 +999,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

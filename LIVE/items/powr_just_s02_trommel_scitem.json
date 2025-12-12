@@ -1134,6 +1134,7 @@
         "grade": 4,
         "name": "Trommel",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "JUST",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1147,17 +1148,37 @@
             "Type": "PowerPlant.Power",
             "Name": "Trommel",
             "Description": "Item Type: Power Plant\\nManufacturer: Juno Starwerk\\nSize: 2\\nGrade: D\\nClass: Industrial\\n\\nUtilitarian to its core, the Trommel\u2019s lack of frills has made the power plant a favorite of mechanics around the Empire.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Juno Starwerk",
+                "Size": "2",
+                "Grade": "D",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "Utilitarian to its core, the Trommel's lack of frills has made the power plant a favorite of mechanics around the Empire.",
             "Manufacturer": {
                 "Code": "JUST",
-                "Name": "Juno Starwerk"
+                "Name": "Juno Starwerk",
+                "UUID": "d7cc897f-b760-4a73-93c0-27e23c52db0a"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 40,
+                "Maximum": 12000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1180,6 +1201,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 11875,
@@ -1197,6 +1222,39 @@
             },
             "PowerPlant": {
                 "Output": 11875
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 19,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 19,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 9410
+                        }
+                    }
+                ]
             }
         }
     }

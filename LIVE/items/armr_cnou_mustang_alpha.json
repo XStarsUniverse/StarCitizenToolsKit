@@ -235,6 +235,7 @@
         "grade": 1,
         "name": "Mustang Alpha Ship Armor",
         "tags": "CNOU_Mustang_Base",
+        "required_tags": "",
         "manufacturer": "CNOU",
         "classification": "Ship.Armor.Medium",
         "stdItem": {
@@ -248,9 +249,11 @@
             "Type": "Armor.Medium",
             "Name": "Mustang Alpha Ship Armor",
             "Description": "Mustang Alpha Ship Armor",
+            "DescriptionText": "Mustang Alpha Ship Armor",
             "Manufacturer": {
                 "Code": "CNOU",
-                "Name": "Consolidated Outland"
+                "Name": "Consolidated Outland",
+                "UUID": "ec227ef3-fb08-4897-abdb-579eb4e87c25"
             },
             "Tags": [
                 "CNOU_Mustang_Base"
@@ -271,7 +274,9 @@
                 }
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

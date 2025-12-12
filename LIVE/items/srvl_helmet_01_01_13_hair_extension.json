@@ -2958,6 +2958,7 @@
         "grade": 1,
         "name": "Deadhead Helmet",
         "tags": "srvl_helmet_01_hair_extension srvl_helmet Set_01 Texture_01 Color_01  SM_RestrictedArm Helmet",
+        "required_tags": "srvl_helmet_01",
         "manufacturer": "UNKN",
         "classification": "FPS.Armor.Helmet",
         "stdItem": {
@@ -2971,9 +2972,16 @@
             "Type": "Char_Armor_Helmet.Medium",
             "Name": "Deadhead Helmet",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -50 / 80 \u00b0C\\n\\nRemind your enemies that death is coming with the Deadhead helmet. In place of a visor, the ghastly visage of a Human skull, lit from within by an infernal glow, is sure to send any opponent running.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-50 / 80 \u00b0C"
+            },
+            "DescriptionText": "Remind your enemies that death is coming with the Deadhead helmet. In place of a visor, the ghastly visage of a Human skull, lit from within by an infernal glow, is sure to send any opponent running.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": {
                 "0": "srvl_helmet_01_hair_extension",
@@ -2988,22 +2996,36 @@
                 {
                     "PortName": "holo_display",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Display"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
+                    ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -3013,14 +3035,64 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Helmet": {
+                "atmosphere_capacity": 0.0015,
+                "puncture_max_area": 0.0001,
+                "puncture_max_number": 10
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Attachtosuit"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "ea721959-c3e2-4df8-9ef3-8831dc98c514"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 6
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -63,
                 "Maximum": 93
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

@@ -1764,6 +1764,7 @@
         "grade": 1,
         "name": "",
         "tags": "",
+        "required_tags": "",
         "classification": "FPS.Weapon",
         "stdItem": {
             "UUID": "388e31b7-e82d-481e-9407-1bfed6353b3d",
@@ -1776,11 +1777,28 @@
             "Type": "WeaponPersonal.UNDEFINED",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place"
+            ]
         }
     }
 }

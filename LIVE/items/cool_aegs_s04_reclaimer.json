@@ -882,6 +882,7 @@
         "grade": 1,
         "name": "Algid",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.Cooler",
         "stdItem": {
             "UUID": "115aaff9-c8c5-4b93-bc14-9f22524fe8a8",
@@ -894,6 +895,19 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Algid",
             "Description": "Item Type: Cooler\\nManufacturer: Aegis Dynamics\\nSize: 4\\nGrade: Bespoke\\nClass: Industrial\\n\\nThe Reclaimer is a ship renowned for its ability to work long and hard. To help support even the most arduous salvaging projects, Aegis develop the bespoke Algid cooler.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "4",
+                "Grade": "Bespoke",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "The Reclaimer is a ship renowned for its ability to work long and hard. To help support even the most arduous salvaging projects, Aegis develop the bespoke Algid cooler.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Cooler": {
                 "CoolingRate": 16000000,
                 "SuppressionIRFactor": 0.1,
@@ -904,8 +918,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 3700
+                "Health": 3700,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -942,6 +967,31 @@
                 "OverclockPerformance": 0.5,
                 "PowerToEM": 3,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 6,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 43.2,
+                                "MinimumFraction": 0.8333333,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 2970,
+                            "IR": 14300
+                        }
+                    }
+                ]
             }
         }
     }

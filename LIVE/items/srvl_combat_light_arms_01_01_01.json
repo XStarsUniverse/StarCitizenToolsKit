@@ -1780,6 +1780,7 @@
         "grade": 1,
         "name": "Piecemeal Armor Arms",
         "tags": "SM_RestrictedArm",
+        "required_tags": "",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
             "UUID": "21e26536-0dfd-4d43-8247-679ce76ce06a",
@@ -1792,6 +1793,20 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "Piecemeal Armor Arms",
             "Description": "Item Type: Light Armor\\nDamage Reduction: 20%\\nTemp. Rating: -35 / 65 \u00b0C\\nRadiation Protection: 26000 REM\\nRadiation Scrub Rate: 145.8 REM/s\\nCarrying Capacity: 2.0 \u00b5SCU\\n\\nThis armor was created using repurposed parts from a Caldera armor set to provide the wearer with an extra layer of protection against aggressors and harsh environments.",
+            "DescriptionData": {
+                "Item Type": "Light Armor",
+                "Damage Reduction": "20%",
+                "Temp. Rating": "-35 / 65 \u00b0C",
+                "Radiation Protection": "26000 REM",
+                "Radiation Scrub Rate": "145.8 REM/s",
+                "Carrying Capacity": "2.0 \u00b5SCU"
+            },
+            "DescriptionText": "This armor was created using repurposed parts from a Caldera armor set to provide the wearer with an extra layer of protection against aggressors and harsh environments.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "SM_RestrictedArm"
             ],
@@ -1800,15 +1815,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -31,
                 "Maximum": 61
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

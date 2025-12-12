@@ -922,6 +922,7 @@
         "grade": 2,
         "name": "FullFrost",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "LPLT",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "FullFrost",
             "Description": "Item Type: Cooler\\nManufacturer: Lightning Power Ltd.\\nSize: 2\\nGrade: B\\nClass: Civilian\\n\\nProper thermal management and heat distribution is a concern for any pilot who cares about the longevity and performance of their ship. Now you can fly easy knowing you have the advanced FullFrost cooler by Lightning Power aboard.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Lightning Power Ltd.",
+                "Size": "2",
+                "Grade": "B",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Proper thermal management and heat distribution is a concern for any pilot who cares about the longevity and performance of their ship. Now you can fly easy knowing you have the advanced FullFrost cooler by Lightning Power aboard.",
             "Manufacturer": {
                 "Code": "LPLT",
-                "Name": "Lightning Power Ltd."
+                "Name": "Lightning Power Ltd.",
+                "UUID": "60d0f346-0c22-4869-81d3-1168b526a258"
             },
             "Cooler": {
                 "CoolingRate": 4400000,
@@ -949,8 +959,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 620
+                "Health": 620,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 15,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.28
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 22,
+                                "MinimumFraction": 0.6666667,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1130,
+                            "IR": 5500
+                        }
+                    }
+                ]
             }
         }
     }

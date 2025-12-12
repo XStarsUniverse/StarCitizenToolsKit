@@ -3262,6 +3262,7 @@
         "grade": 1,
         "name": "AcryliPlex Composite",
         "tags": "MissionQuestItem DamageCage",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "b29bfd7b-0efe-4915-bd7a-6b1216011b06",
@@ -3274,6 +3275,12 @@
             "Type": "Cargo.Small",
             "Name": "AcryliPlex Composite",
             "Description": "This composite is a moldable material used in the construction of explosives. In addition to being commonly used in demolition applications for heavy industry and mining, it is also used to create small potent warheads. Care must be taken while transporting larger quantities of the composite as it is impact and heat sensitive.",
+            "DescriptionText": "This composite is a moldable material used in the construction of explosives. In addition to being commonly used in demolition applications for heavy industry and mining, it is also used to create small potent warheads. Care must be taken while transporting larger quantities of the composite as it is impact and heat sensitive.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem",
                 "DamageCage"
@@ -3284,7 +3291,40 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 30
+                "Health": 30,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Locked",
+                "Unlocked"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 1,
+                    "UnitName": "SCU",
+                    "SCU": 1
+                },
+                "InclusiveResources": [
+                    "d32df14b-43f3-44dc-a39c-124217fac045"
+                ],
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "d32df14b-43f3-44dc-a39c-124217fac045",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

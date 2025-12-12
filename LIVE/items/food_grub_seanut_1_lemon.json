@@ -1699,6 +1699,7 @@
         "grade": 1,
         "name": "Fried Seanut with Sauce",
         "tags": "grub lemon",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "e52e45bc-99ea-4479-b0c3-bdf6e6342957",
@@ -1711,9 +1712,15 @@
             "Type": "Food.Consumable",
             "Name": "Fried Seanut with Sauce",
             "Description": "NDR: 15\\nEffects: Dehydrating\\n\\nEasy to grow and care for, these tubular sea creatures have become a popular food in the outer reaches of systems. This seanut has been fried and topped with a vinegar-based sauce for a salty, roasted and tangy taste.\\n",
+            "DescriptionData": {
+                "NDR": "15",
+                "Effects": "Dehydrating"
+            },
+            "DescriptionText": "Easy to grow and care for, these tubular sea creatures have become a popular food in the outer reaches of systems. This seanut has been fried and topped with a vinegar-based sauce for a salty, roasted and tangy taste.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "grub",
@@ -1725,12 +1732,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "hotdog"
-            }
+                "NutritionalDensityRating": "15",
+                "Effects": [
+                    "Dehydrating"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

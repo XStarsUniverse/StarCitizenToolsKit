@@ -658,6 +658,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "Archimedes",
+        "required_tags": "",
         "manufacturer": "KRI",
         "stdItem": {
             "UUID": "b149dd6b-207f-4e5b-8130-200a53133b91",
@@ -670,13 +671,35 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "KRI",
-                "Name": "Kruger Intergalatic"
+                "Name": "Kruger Intergalatic",
+                "UUID": "7b5d1ed3-11e7-49e6-9ed3-9d0cb52a3dc2"
             },
             "Tags": [
                 "Archimedes"
-            ]
+            ],
+            "Interactions": [
+                "Ejection"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

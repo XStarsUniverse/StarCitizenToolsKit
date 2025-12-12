@@ -1137,6 +1137,7 @@
         "grade": 3,
         "name": "FullForce Pro",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "LPLT",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1150,17 +1151,37 @@
             "Type": "PowerPlant.Power",
             "Name": "FullForce Pro",
             "Description": "Item Type: Power Plant\\nManufacturer: Lightning Power Ltd.\\nSize: 3\\nGrade: C\\nClass: Civilian\\n\\nEven though Lightning Power Ltd has updated the look of the FullForce Pro power plant, it still delivers that same balanced performance people have come to expect.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Lightning Power Ltd.",
+                "Size": "3",
+                "Grade": "C",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Even though Lightning Power Ltd has updated the look of the FullForce Pro power plant, it still delivers that same balanced performance people have come to expect.",
             "Manufacturer": {
                 "Code": "LPLT",
-                "Name": "Lightning Power Ltd."
+                "Name": "Lightning Power Ltd.",
+                "UUID": "60d0f346-0c22-4869-81d3-1168b526a258"
             },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 1.5,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 133.33,
+                "Maximum": 40000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 1700
+                "Health": 1700,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1183,6 +1204,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 25000,
@@ -1200,6 +1225,39 @@
             },
             "PowerPlant": {
                 "Output": 25000
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 22,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 22,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 8250
+                        }
+                    }
+                ]
             }
         }
     }

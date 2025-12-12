@@ -1996,6 +1996,7 @@
         "grade": 1,
         "name": "Chamar Pants",
         "tags": "dmc_pants Set_08 Texture_01 Color_01",
+        "required_tags": "",
         "manufacturer": "DMC",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2009,9 +2010,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Chamar Pants",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nDecades of design experience helped DMC make the Chamar pants ready for any adventure. The pants utilize a unique seam design to deliver durability while maintaining flexibility. A built-in belt ensures an ideal fit, while leather front pockets and a padded back-panel provide rugged reinforcement where needed most.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "Decades of design experience helped DMC make the Chamar pants ready for any adventure. The pants utilize a unique seam design to deliver durability while maintaining flexibility. A built-in belt ensures an ideal fit, while leather front pockets and a padded back-panel provide rugged reinforcement where needed most.",
             "Manufacturer": {
                 "Code": "DMC",
-                "Name": "DMC"
+                "Name": "DMC",
+                "UUID": "a53bbc2b-aa43-483d-967e-0cebc5600c04"
             },
             "Tags": [
                 "dmc_pants",
@@ -2023,19 +2029,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2045,7 +2063,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2055,6 +2081,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2070,6 +2105,10 @@
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

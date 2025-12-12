@@ -1346,6 +1346,7 @@
         "grade": 1,
         "name": "Cave Kopion Horn",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "9a906fca-8116-4334-9ac7-7b2fce486d8c",
             "ClassName": "Harvestable_Trophy_1H_KopionHorn_Cave",
@@ -1357,10 +1358,41 @@
             "Type": "Misc.Harvestable",
             "Name": "Cave Kopion Horn",
             "Description": "The horn of the kopion is made of a unique combination of bone and naturally-occurring carbon nanomaterials. When properly processed, it can be used to aid in bone regeneration with a far greater rate of success than lab-grown materials. This application has made it a valuable commodity.",
+            "DescriptionText": "The horn of the kopion is made of a unique combination of bone and naturally-occurring carbon nanomaterials. When properly processed, it can be used to aid in bone regeneration with a far greater rate of success than lab-grown materials. This application has made it a valuable commodity.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "1d4bce93-f0a3-47f2-8885-195f906a32d1",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

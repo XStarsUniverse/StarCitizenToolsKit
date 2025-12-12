@@ -1782,6 +1782,7 @@
         "grade": 1,
         "name": "icePick",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "stdItem": {
             "UUID": "f6912bc9-83d8-4424-8579-367f1b2856e3",
             "ClassName": "mite_consumable_hackingchip_01",
@@ -1793,6 +1794,12 @@
             "Type": "FPS_Consumable.Hacking",
             "Name": "icePick",
             "Description": "Initially made to allow microTech customer support technicians to access and diagnose security-locked systems, the icePick cryptokey was named by the team for its ability to \"quickly break through frozen code-blocks.\" Today, the powerful enterprise-level cryptokey has become available for direct purchase, allowing users and private IT professionals to problem solve issues themselves when they cannot be serviced by microTech technician.",
+            "DescriptionText": "Initially made to allow microTech customer support technicians to access and diagnose security-locked systems, the icePick cryptokey was named by the team for its ability to \"quickly break through frozen code-blocks.\" Today, the powerful enterprise-level cryptokey has become available for direct purchase, allowing users and private IT professionals to problem solve issues themselves when they cannot be serviced by microTech technician.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1802,8 +1809,22 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
-            }
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Equip",
+                "Offhandequip",
+                "Store",
+                "Offhandstore",
+                "Blinkinglight_notshown",
+                "Stopblinking_notshown"
+            ]
         }
     }
 }

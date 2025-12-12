@@ -712,6 +712,7 @@
         "grade": 1,
         "name": "Weapon Rack",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "43eac534-a397-4323-9682-8287c74fd5d1",
             "ClassName": "Weapon_Rack_RSI_Salvation",
@@ -723,15 +724,35 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Weapon Rack",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$IP_rifle_01",
                     "Size": 4,
+                    "MinSize": 2,
+                    "MaxSize": 4,
                     "Types": [
                         "WeaponPersonal"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Place",
+                "Open",
+                "Close",
+                "Opencomplete",
+                "Closecomplete"
             ]
         }
     }

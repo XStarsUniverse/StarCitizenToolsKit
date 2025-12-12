@@ -1421,6 +1421,7 @@
         "grade": 1,
         "name": "Access",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "28bd3ee1-be9c-42c3-9126-095cdafdbce0",
@@ -1433,10 +1434,28 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Access",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
-            }
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
+            },
+            "Interactions": [
+                "Seatenter",
+                "Seatexit",
+                "Opendoor",
+                "Closedoor",
+                "Radar_open",
+                "Radar_close",
+                "Components_rear_open",
+                "Components_rear_close",
+                "Cooler_open",
+                "Cooler_close",
+                "Avionics_open",
+                "Avionics_close",
+                "Fuel_open",
+                "Fuel_close"
+            ]
         }
     }
 }

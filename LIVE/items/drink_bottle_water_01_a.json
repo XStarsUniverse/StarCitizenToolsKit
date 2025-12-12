@@ -2012,6 +2012,7 @@
         "grade": 1,
         "name": "Water Bottle",
         "tags": "bottle_01 Stash_Water",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "d7ebbe21-e107-4aae-979e-00db7d3627d4",
@@ -2024,9 +2025,15 @@
             "Type": "Drink.Bottle",
             "Name": "Water Bottle",
             "Description": "HEI: 44\\nEffects: Hydrating\\n\\nWater filtered to the highest UEE standards.",
+            "DescriptionData": {
+                "HEI": "44",
+                "Effects": "Hydrating"
+            },
+            "DescriptionText": "Water filtered to the highest UEE standards.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01",
@@ -2038,12 +2045,26 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 1,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "44",
+                "Effects": [
+                    "Hydrating"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 1,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

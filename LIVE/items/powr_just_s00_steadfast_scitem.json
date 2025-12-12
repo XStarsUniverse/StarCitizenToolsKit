@@ -1143,6 +1143,7 @@
         "grade": 3,
         "name": "Steadfast",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "JUST",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1156,17 +1157,37 @@
             "Type": "PowerPlant.Power",
             "Name": "Steadfast",
             "Description": "Item Type: Power Plant\\nManufacturer: Juno Starwerk\\nSize: 0\\nGrade: C\\nClass: Industrial\\n\\nWhen the road ahead is long, Juno Starwerk\u2019s Steadfast power plant is there to see you and your vehicle through to the end by providing on-demand power and durability.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Juno Starwerk",
+                "Size": "0",
+                "Grade": "C",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "When the road ahead is long, Juno Starwerk's Steadfast power plant is there to see you and your vehicle through to the end by providing on-demand power and durability.",
             "Manufacturer": {
                 "Code": "JUST",
-                "Name": "Juno Starwerk"
+                "Name": "Juno Starwerk",
+                "UUID": "d7cc897f-b760-4a73-93c0-27e23c52db0a"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 6.66,
+                "Maximum": 2000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 220
+                "Health": 220,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.52,
@@ -1189,6 +1210,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 720,
@@ -1206,6 +1231,39 @@
             },
             "PowerPlant": {
                 "Output": 720
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 11,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 11,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 5450
+                        }
+                    }
+                ]
             }
         }
     }

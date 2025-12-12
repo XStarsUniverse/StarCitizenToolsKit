@@ -2067,6 +2067,7 @@
         "grade": 1,
         "name": "Prism Laser Shotgun Battery (20 cap)",
         "tags": "volt_shotgun_energy_01",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -2080,9 +2081,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Prism Laser Shotgun Battery (20 cap)",
             "Description": "Item Type: Battery\\nCapacity: 20\\n\\nThis battery for the Prism Laser Shotgun holds enough energy for 20 shots.",
+            "DescriptionData": {
+                "Item Type": "Battery",
+                "Capacity": "20"
+            },
+            "DescriptionText": "This battery for the Prism Laser Shotgun holds enough energy for 20 shots.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "e2787f3b-b892-4276-bb2e-eb2b4dc9666b"
             },
             "Tags": [
                 "volt_shotgun_energy_01"
@@ -2141,7 +2148,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

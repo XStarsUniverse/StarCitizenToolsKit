@@ -1373,6 +1373,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c12ee2f3-c49e-4dee-b697-71c46b46c538",
             "ClassName": "Seat_Stool_Animated_DRAK_Clipper_Hab",
@@ -1383,7 +1384,22 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit",
+                "Type",
+                "Order",
+                "Drink",
+                "Open",
+                "Close"
+            ]
         }
     }
 }

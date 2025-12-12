@@ -2067,6 +2067,7 @@
         "grade": 1,
         "name": "Killshot Rifle Magazine (45 Cap)",
         "tags": "none_rifle_multi_01",
+        "required_tags": "",
         "manufacturer": "UNKN",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -2080,9 +2081,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Killshot Rifle Magazine (45 Cap)",
             "Description": "Item Type: Magazine\\nCapacity: 45\\n\\nThis magazine for the Killshot rifle comes pre-loaded with forty-five rounds.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "45"
+            },
+            "DescriptionText": "This magazine for the Killshot rifle comes pre-loaded with forty-five rounds.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": [
                 "none_rifle_multi_01"
@@ -2141,7 +2148,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

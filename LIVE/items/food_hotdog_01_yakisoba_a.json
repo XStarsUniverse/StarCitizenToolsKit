@@ -1577,6 +1577,7 @@
         "grade": 1,
         "name": "Yakisoba Dog",
         "tags": "hotdog yakisoba",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "4fe49ee9-b1e9-4403-86c6-ada48b076142",
@@ -1589,9 +1590,15 @@
             "Type": "Food.Junk",
             "Name": "Yakisoba Dog",
             "Description": "NDR: 34\\nEffects: Dehydrating, Hyper-Metabolic\\n\\nSweet-sauced noodles and veggies are grilled crisp and then served a top of a classic hot dog.",
+            "DescriptionData": {
+                "NDR": "34",
+                "Effects": "Dehydrating, Hyper-Metabolic"
+            },
+            "DescriptionText": "Sweet-sauced noodles and veggies are grilled crisp and then served a top of a classic hot dog.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "hotdog",
@@ -1603,12 +1610,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "hotdog"
-            }
+                "NutritionalDensityRating": "34",
+                "Effects": [
+                    "Dehydrating",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

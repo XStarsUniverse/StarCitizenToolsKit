@@ -1772,6 +1772,7 @@
         "grade": 1,
         "name": "ThermoWeave Hood ASD Edition",
         "tags": "grin_refinery_helmet Set_02 Color_01 KeepsShape",
+        "required_tags": "Protos",
         "manufacturer": "GRIN",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1785,9 +1786,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "ThermoWeave Hood ASD Edition",
             "Description": "The ThermoWeave hood integrates a heat and impact resistant hard hat with a neck covering hood that includes a vapor barrier to keep moisture build-up to a minimum. A large faceplate provides a wide field of view and the built-in respirator features a state-of-the-art filter to help you breathe easy.\\n\\nWorn by employees who require an extra level of protection in their field, the ASD Edition showcases the reds and greens of the ASD branding.",
+            "DescriptionText": "The ThermoWeave hood integrates a heat and impact resistant hard hat with a neck covering hood that includes a vapor barrier to keep moisture build-up to a minimum. A large faceplate provides a wide field of view and the built-in respirator features a state-of-the-art filter to help you breathe easy.\n\nWorn by employees who require an extra level of protection in their field, the ASD Edition showcases the reds and greens of the ASD branding.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_refinery_helmet",
@@ -1799,11 +1802,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1813,9 +1823,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

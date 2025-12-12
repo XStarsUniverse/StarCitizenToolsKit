@@ -2263,6 +2263,7 @@
         "grade": 1,
         "name": "SNS-R6",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "NAVE",
         "classification": "Ship.Radar.MidRangeRadar",
         "stdItem": {
@@ -2276,9 +2277,18 @@
             "Type": "Radar.MidRangeRadar",
             "Name": "SNS-R6",
             "Description": "Item Type: Radar\\nManufacturer: Nav-E7\\nSize: 1\\nGrade: C\\nClass: Competition\\n\\nIncreased power and performance makes the SNS-R6 stand out from other radars in its class. Get yours today to see why pilots the Empire over love components from Nav-E7 Gadgets.",
+            "DescriptionData": {
+                "Item Type": "Radar",
+                "Manufacturer": "Nav-E7",
+                "Size": "1",
+                "Grade": "C",
+                "Class": "Competition"
+            },
+            "DescriptionText": "Increased power and performance makes the SNS-R6 stand out from other radars in its class. Get yours today to see why pilots the Empire over love components from Nav-E7 Gadgets.",
             "Manufacturer": {
                 "Code": "NAVE",
-                "Name": "Nav-E7 Gadgets"
+                "Name": "Nav-E7 Gadgets",
+                "UUID": "afff101e-eb2c-4f93-960f-cec9936b9f39"
             },
             "Tags": [
                 "flightReady"
@@ -2287,17 +2297,35 @@
                 {
                     "PortName": "BatteryPort",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "invisible"
                     ],
                     "Types": [
                         "Battery"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Battery"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 2.5,
+                "DecayRate": 150,
+                "Maximum": 3000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 240
+                "Health": 240,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -2334,6 +2362,33 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 5000,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 1,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 495
+                        }
+                    }
+                ]
             },
             "Radar": {
                 "Cooldown": 2.5,

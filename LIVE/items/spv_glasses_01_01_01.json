@@ -1397,6 +1397,7 @@
         "grade": 1,
         "name": "AvantX Glasses",
         "tags": "spv_glasses Set_01 Color_01",
+        "required_tags": "Protos",
         "manufacturer": "SPV",
         "stdItem": {
             "UUID": "eddd508a-ed10-4b07-bfc5-dad7ae6fa462",
@@ -1409,9 +1410,11 @@
             "Type": "Char_Accessory_Eyes.UNDEFINED",
             "Name": "AvantX Glasses",
             "Description": "A distinct one piece lens with a unique geometric design makes the AvantX glasses stand out from the crowd. SPV expertly blends cutting edge style and technology for a distinct look and feel that's fashion forward.",
+            "DescriptionText": "A distinct one piece lens with a unique geometric design makes the AvantX glasses stand out from the crowd. SPV expertly blends cutting edge style and technology for a distinct look and feel that's fashion forward.",
             "Manufacturer": {
                 "Code": "SPV",
-                "Name": "Spar Van Miles"
+                "Name": "Spar Van Miles",
+                "UUID": "e7c9f9ee-a1db-40ee-bfa8-a8ffead4ac1d"
             },
             "Tags": [
                 "spv_glasses",
@@ -1422,7 +1425,16 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Inspect"
+            ]
         }
     }
 }

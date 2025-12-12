@@ -2126,6 +2126,7 @@
         "grade": 1,
         "name": "Hammerhead TSB Flight Blade",
         "tags": "AEGS_Hammerhead_Blade",
+        "required_tags": "AEGS_Hammerhead_Blade",
         "manufacturer": "BRRA",
         "stdItem": {
             "UUID": "356013cd-1a32-4947-8ee4-4d123549ad6d",
@@ -2138,9 +2139,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Hammerhead TSB Flight Blade",
             "Description": "Manufacturer: Broad & Rabiee\\nType: Flight Blade\\n\\nUnlock the potential of your Aegis Hammerhead with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
+            "DescriptionData": {
+                "Manufacturer": "Broad & Rabiee",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "Unlock the potential of your Aegis Hammerhead with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
             "Manufacturer": {
                 "Code": "BRRA",
-                "Name": "Broad & Rabiee"
+                "Name": "Broad & Rabiee",
+                "UUID": "ad865899-f5ba-4818-ae8c-fe80a55108b7"
             },
             "Tags": [
                 "AEGS_Hammerhead_Blade"
@@ -2183,6 +2190,40 @@
                     "CapacitorRegenDelayAfterUse": 1.1,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 8,
+                                "MinimumFraction": 0.125
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

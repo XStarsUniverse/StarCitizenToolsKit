@@ -1602,6 +1602,7 @@
         "grade": 1,
         "name": "Gamma \"Black Op\" (1x Holographic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "NVTC",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1615,15 +1616,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "Gamma \"Black Op\" (1x Holographic)",
             "Description": "Manufacturer: NV-TAC\\nType: Projection \\nAttachment Point: Optic\\nMagnification: 1x\\nAim Time: +15%\\nSize: 1\\n\\nWhether under the blazing sun or on the dark side of a moon, the NV-TAC Gamma projects an easy to see reticle to help ensure your shot finds its mark.\\n\\nThe \"Black Op\" scope variant is black.",
+            "DescriptionData": {
+                "Manufacturer": "NV-TAC",
+                "Type": "Projection",
+                "Attachment Point": "Optic",
+                "Magnification": "1x",
+                "Size": "1"
+            },
+            "DescriptionText": "Whether under the blazing sun or on the dark side of a moon, the NV-TAC Gamma projects an easy to see reticle to help ensure your shot finds its mark.\n\nThe \"Black Op\" scope variant is black.",
             "Manufacturer": {
                 "Code": "NVTC",
-                "Name": "NV-TAC"
+                "Name": "NV-TAC",
+                "UUID": "f113387e-0905-489a-829d-8cebfdc19e66"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

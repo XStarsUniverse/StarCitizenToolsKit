@@ -7514,6 +7514,7 @@
         "grade": 1,
         "name": "XDL \"Mark I\" Monocular Rangefinder",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.Weapon.Gadget",
         "stdItem": {
@@ -7527,36 +7528,61 @@
             "Type": "WeaponPersonal.Gadget",
             "Name": "XDL \"Mark I\" Monocular Rangefinder",
             "Description": "The highly accurate XDL Monocular Rangefinder from Behring is as suitable on an expedition as it is on the battlefield. Ruggedly constructed with high-quality lenses, easy-to-read display, and a light-amplification mode, the XDL provides 10x magnification to reliably provide exact-distance laser measurements on faraway targets.\\n\\nThe Mark I edition features a grey and steel-blue finish.",
+            "DescriptionText": "The highly accurate XDL Monocular Rangefinder from Behring is as suitable on an expedition as it is on the battlefield. Ruggedly constructed with high-quality lenses, easy-to-read display, and a light-amplification mode, the XDL provides 10x magnification to reliably provide exact-distance laser measurements on faraway targets.\n\nThe Mark I edition features a grey and steel-blue finish.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Ports": [
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "grin_multitool_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "7b3e9ad7-45f2-4ee5-b17a-8b8b8bb0112c",
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -7565,6 +7591,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Bespokeplace"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 50,

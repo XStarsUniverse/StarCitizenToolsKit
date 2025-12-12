@@ -1280,6 +1280,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "RSI_Constellation_Base",
         "manufacturer": "RSI",
         "classification": "Ship.ManneuverThruster.JointThruster",
         "stdItem": {
@@ -1293,12 +1294,16 @@
             "Type": "ManneuverThruster.JointThruster",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Durability": {
-                "Health": 50000
+                "Health": 50000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1335,6 +1340,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Fuel",
+                                "Rate": 0.01,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Thruster": {
                 "thrustCapacity": 854906.6,

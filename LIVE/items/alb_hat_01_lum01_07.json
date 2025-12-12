@@ -1723,6 +1723,7 @@
         "grade": 1,
         "name": "One Light Cap Blue",
         "tags": "$hatHair+",
+        "required_tags": "Protos",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
             "UUID": "0ebc2c2d-7aae-40d1-abda-168688da4b1e",
@@ -1735,6 +1736,12 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "One Light Cap Blue",
             "Description": "Are you looking for the perfect Luminalia gift? City Lights has you covered with this soft and snug woven cap that not only keeps your head warm but shows off your holiday spirit.",
+            "DescriptionText": "Are you looking for the perfect Luminalia gift? City Lights has you covered with this soft and snug woven cap that not only keeps your head warm but shows off your holiday spirit.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "$hatHair+"
             ],
@@ -1742,11 +1749,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1756,9 +1770,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -567,6 +567,7 @@
         "grade": 1,
         "name": "Weapon Rack",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "XNAA",
         "stdItem": {
             "UUID": "cfc27314-3771-4b09-8ffc-d31103293091",
@@ -579,19 +580,31 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Weapon Rack",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "XNAA",
-                "Name": "Aopoa"
+                "Name": "Aopoa",
+                "UUID": "06370f79-4741-4781-be08-d5acc9e28047"
             },
             "Ports": [
                 {
                     "PortName": "$IP_rifle_01",
                     "Size": 4,
+                    "MinSize": 2,
+                    "MaxSize": 4,
                     "Types": [
                         "WeaponPersonal"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Place"
             ]
         }
     }

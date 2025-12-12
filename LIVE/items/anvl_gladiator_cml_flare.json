@@ -2006,6 +2006,7 @@
         "grade": 1,
         "name": "Anvil Gladiator - Decoy Launcher",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -2019,9 +2020,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "Anvil Gladiator - Decoy Launcher",
             "Description": "Anvil Gladiator - Decoy Launcher",
+            "DescriptionText": "Anvil Gladiator - Decoy Launcher",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Ammunition": {
                 "UUID": "9621efe3-86b7-4da3-ac4a-430394f53bf4",
@@ -2037,7 +2040,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,

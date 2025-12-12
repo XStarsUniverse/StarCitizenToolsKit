@@ -1424,6 +1424,7 @@
         "grade": 1,
         "name": "",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "b2ee4394-128e-433d-b3f7-25a5def524b4",
             "ClassName": "FPS_Deployable_2H_TEMPLATE",
@@ -1435,11 +1436,28 @@
             "Type": "FPS_Deployable.Medium",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place"
+            ]
         }
     }
 }

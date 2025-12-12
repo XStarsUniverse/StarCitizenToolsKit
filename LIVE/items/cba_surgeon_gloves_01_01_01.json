@@ -1769,6 +1769,7 @@
         "grade": 1,
         "name": "Ignaz Surgical Gloves",
         "tags": "cba_surgeon_gloves Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -1782,9 +1783,11 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "Ignaz Surgical Gloves",
             "Description": "The Ignaz surgical gloves are sterile and strong without sacrifice the manual dexterity necessary for delicate surgeries. Made with a special anti-puncture material and featuring a beaded cuff that guarantees a snug fit, the inside of the glove is also coated with a special gel to keep your hands from drying and cracking.",
+            "DescriptionText": "The Ignaz surgical gloves are sterile and strong without sacrifice the manual dexterity necessary for delicate surgeries. Made with a special anti-puncture material and featuring a beaded cuff that guarantees a snug fit, the inside of the glove is also coated with a special gel to keep your hands from drying and cracking.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_surgeon_gloves",
@@ -1795,11 +1798,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1809,9 +1819,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

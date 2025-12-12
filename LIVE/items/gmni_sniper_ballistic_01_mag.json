@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "A03 Sniper Rifle Magazine (15 cap)",
         "tags": "gmni_sniper_ballistic_01",
+        "required_tags": "",
         "manufacturer": "GEM",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "A03 Sniper Rifle Magazine (15 cap)",
             "Description": "Item Type: Magazine\\nCapacity: 15\\n\\nThis magazine for the Gemini A03 sniper rifle holds fifteen 7mm rounds.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "15"
+            },
+            "DescriptionText": "This magazine for the Gemini A03 sniper rifle holds fifteen 7mm rounds.",
             "Manufacturer": {
                 "Code": "GEM",
-                "Name": "Gemini"
+                "Name": "Gemini",
+                "UUID": "b33050cd-6ca9-4c57-baf8-f4114eb85237"
             },
             "Tags": [
                 "gmni_sniper_ballistic_01"
@@ -1959,7 +1966,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

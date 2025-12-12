@@ -922,6 +922,7 @@
         "grade": 2,
         "name": "ZeroRush",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ACOM",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "ZeroRush",
             "Description": "Item Type: Cooler\\nManufacturer: ACOM\\nSize: 1\\nGrade: B\\nClass: Competition\\n\\nFew things can push your ship to its limits like racing. Going faster and harder generates a lot of excess heat that can take a toll on your system if not properly managed. The ZeroRush cooler from ACOM has what it takes to get you across the finish line.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "ACOM",
+                "Size": "1",
+                "Grade": "B",
+                "Class": "Competition"
+            },
+            "DescriptionText": "Few things can push your ship to its limits like racing. Going faster and harder generates a lot of excess heat that can take a toll on your system if not properly managed. The ZeroRush cooler from ACOM has what it takes to get you across the finish line.",
             "Manufacturer": {
                 "Code": "ACOM",
-                "Name": "ACOM"
+                "Name": "ACOM",
+                "UUID": "5d616e6f-3257-4d19-90c3-11ab974f12e7"
             },
             "Cooler": {
                 "CoolingRate": 238000,
@@ -949,8 +959,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 160
+                "Health": 160,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 8.25,
                 "DecayRateOfEM": 0.16
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 21.6,
+                                "MinimumFraction": 1,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 818,
+                            "IR": 5890
+                        }
+                    }
+                ]
             }
         }
     }

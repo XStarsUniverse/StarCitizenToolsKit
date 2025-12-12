@@ -3927,6 +3927,7 @@
         "grade": 1,
         "name": "Arbor MHV Mining Laser",
         "tags": "flightReady weaponMountUsable miningMount",
+        "required_tags": "miningMount",
         "manufacturer": "GRIN",
         "classification": "Ship.Mining.Gun",
         "stdItem": {
@@ -3940,9 +3941,20 @@
             "Type": "WeaponMining.Gun",
             "Name": "Arbor MHV Mining Laser",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Laser \\nSize: 0\\n\\nOptimal Range: 15m\\nMaximum Range: 20m\\nCollection Throughput: 0.01 SCU/s\\nCollection Point Radius: 1m\\n\\nThe Arbor has became the universe's most heralded mining laser thanks to Greycat Industrial's exacting standards and business prowess. The MHV takes that same classic design and reimagines it for a more compact mining-rig while still delivering the solid and reliable performance that miners have come to rely on.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Laser",
+                "Size": "0",
+                "Optimal Range": "15m",
+                "Maximum Range": "20m",
+                "Collection Throughput": "0.01 SCU/s",
+                "Collection Point Radius": "1m"
+            },
+            "DescriptionText": "The Arbor has became the universe's most heralded mining laser thanks to Greycat Industrial's exacting standards and business prowess. The MHV takes that same classic design and reimagines it for a more compact mining-rig while still delivering the solid and reliable performance that miners have come to rely on.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "flightReady",
@@ -3953,18 +3965,30 @@
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "Mining_Modifier_ATLS",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
@@ -3977,13 +4001,23 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "UNDEFINED"
+                        "UNDEFINED.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "UNDEFINED",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "Mining_Modifier_ROCds",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible",
                         "uneditable"
@@ -4003,8 +4037,42 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Activate",
+                "Store",
+                "Deactivate"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

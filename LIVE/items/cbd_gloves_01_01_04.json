@@ -1759,6 +1759,7 @@
         "grade": 1,
         "name": "Grappler Gloves Veritas",
         "tags": "cbd_gloves_01 Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "CBD",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -1772,9 +1773,11 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "Grappler Gloves Veritas",
             "Description": "Originally made for open-canopy racers, the Grappler gloves became beloved for their versatility and durability. Their mix of leather and synthetic fabrics make for a lightweight and warm wear. They also feature an adjustable strap to guarantee the perfect fit, and a special tactile fingertip design so wearers don't have to remove the gloves to interact with screens.\\n\\nThe Veritas edition is a bloody red, with black belts and leather straps.",
+            "DescriptionText": "Originally made for open-canopy racers, the Grappler gloves became beloved for their versatility and durability. Their mix of leather and synthetic fabrics make for a lightweight and warm wear. They also feature an adjustable strap to guarantee the perfect fit, and a special tactile fingertip design so wearers don't have to remove the gloves to interact with screens.\n\nThe Veritas edition is a bloody red, with black belts and leather straps.",
             "Manufacturer": {
                 "Code": "CBD",
-                "Name": "CBD"
+                "Name": "CBD",
+                "UUID": "64eef2d9-5d3d-431d-a83b-ae077a16b4e2"
             },
             "Tags": [
                 "cbd_gloves_01",
@@ -1785,11 +1788,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1799,9 +1809,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 5,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -928,6 +928,7 @@
         "grade": 1,
         "name": "Salvaged Polaris Captain's Chair",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "7d89a1c6-c4e4-4814-a71c-fc288ecd771c",
@@ -940,15 +941,21 @@
             "Type": "Usable.Cargo",
             "Name": "Salvaged Polaris Captain's Chair",
             "Description": "Salvaged from the wreckage of a UEE Polaris ship, this mostly intact captain's seat makes for a good talking point inside your hangar.",
+            "DescriptionText": "Salvaged from the wreckage of a UEE Polaris ship, this mostly intact captain's seat makes for a good talking point inside your hangar.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

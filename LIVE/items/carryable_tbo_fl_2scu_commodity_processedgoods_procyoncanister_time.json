@@ -1410,6 +1410,7 @@
         "grade": 1,
         "name": "Zeta-Prolanide",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "3bd72e48-7d23-4aa8-bced-ab1c92b77e4b",
@@ -1422,14 +1423,27 @@
             "Type": "Cargo.Cargo",
             "Name": "Zeta-Prolanide",
             "Description": "This chemical is an industrial reactant that has found widespread use neutralizing irradiated materials. Because of how volatile it is, it must be kept in an electrically charged state or else a rapid exothermic reaction may occur before desired.",
+            "DescriptionText": "This chemical is an industrial reactant that has found widespread use neutralizing irradiated materials. Because of how volatile it is, it must be kept in an electrically charged state or else a rapid exothermic reaction may occur before desired.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 100
-            }
+                "Health": 100,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

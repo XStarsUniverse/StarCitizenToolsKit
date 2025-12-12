@@ -1765,6 +1765,7 @@
         "grade": 1,
         "name": "Mercury Gloves \"Voyager\"",
         "tags": "dmc_gloves Set_02 Color_01",
+        "required_tags": "",
         "manufacturer": "DMC",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -1778,9 +1779,11 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "Mercury Gloves \"Voyager\"",
             "Description": "Keep your hands warm and fingers nimble with Mercury gloves from DMC. Ideal for outdoor activities or colder work environments, the special Voyager edition comes in red with gold trim.",
+            "DescriptionText": "Keep your hands warm and fingers nimble with Mercury gloves from DMC. Ideal for outdoor activities or colder work environments, the special Voyager edition comes in red with gold trim.",
             "Manufacturer": {
                 "Code": "DMC",
-                "Name": "DMC"
+                "Name": "DMC",
+                "UUID": "a53bbc2b-aa43-483d-967e-0cebc5600c04"
             },
             "Tags": [
                 "dmc_gloves",
@@ -1791,11 +1794,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1805,9 +1815,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

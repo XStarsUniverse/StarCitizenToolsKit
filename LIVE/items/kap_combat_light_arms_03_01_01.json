@@ -1866,6 +1866,7 @@
         "grade": 1,
         "name": "Geist Armor Arms Golden Blossom",
         "tags": "kap_light Set_03 Color_01 ",
+        "required_tags": "",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
             "UUID": "4dc6c72f-5649-47d7-b686-8519d9207ac8",
@@ -1878,6 +1879,19 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "Geist Armor Arms Golden Blossom",
             "Description": "Item Type: Light Armor\\nDamage Reduction: 20%\\nTemp. Rating: -35 / 65 \u00b0C\\nRadiation Protection: 26000 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nAn ideal synthesis of strength and technology, the Geist Stealth Armor has been crafted from military-grade carbon silk sourced from the same manufacturers that protect the UEE's special forces. Hair-thin filaments woven into the fabric mask the wearer's emissions, making them undetectable via radar, and specialized tubing built into the soles of the boots dampens the sound of footsteps.\\n\\nThis matte black stealth armor is embellished with intricate golden flowers, giving your enemies one final glimpse of life before death.",
+            "DescriptionData": {
+                "Item Type": "Light Armor",
+                "Damage Reduction": "20%",
+                "Temp. Rating": "-35 / 65 \u00b0C",
+                "Radiation Protection": "26000 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "An ideal synthesis of strength and technology, the Geist Stealth Armor has been crafted from military-grade carbon silk sourced from the same manufacturers that protect the UEE's special forces. Hair-thin filaments woven into the fabric mask the wearer's emissions, making them undetectable via radar, and specialized tubing built into the soles of the boots dampens the sound of footsteps.\n\nThis matte black stealth armor is embellished with intricate golden flowers, giving your enemies one final glimpse of life before death.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "kap_light",
                 "Set_03",
@@ -1888,15 +1902,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -35,
                 "Maximum": 65
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

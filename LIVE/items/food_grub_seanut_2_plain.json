@@ -1612,6 +1612,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "grub plain",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "b55d0915-f8a3-4ee6-9ed0-b8d0fe67d105",
@@ -1626,7 +1627,8 @@
             "Description": "<= PLACEHOLDER =>",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "grub",
@@ -1638,12 +1640,22 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "hotdog"
-            }
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

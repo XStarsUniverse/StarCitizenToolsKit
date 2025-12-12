@@ -897,6 +897,7 @@
         "grade": 1,
         "name": "Turret",
         "tags": "ANVL_Ballista ANVL_Dunestalker ANVL_Snowblind $ANVL_Centurion_Turret",
+        "required_tags": "ANVL_Centurion_Turret",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "547ec8ba-89a6-49a8-8065-67349f179971",
@@ -909,9 +910,11 @@
             "Type": "Turret.BallTurret",
             "Name": "Turret",
             "Description": "Multitask on the battlefield with this remote turret system. Featuring precise controls and a wide field of fire, the turret allows pilots to add combat support to their resume.",
+            "DescriptionText": "Multitask on the battlefield with this remote turret system. Featuring precise controls and a wide field of fire, the turret allows pilots to add combat support to their resume.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Ballista",
@@ -923,15 +926,30 @@
                 {
                     "PortName": "hardpoint_gunmount",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
+            "Interactions": [
+                "Activate remote camera"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,

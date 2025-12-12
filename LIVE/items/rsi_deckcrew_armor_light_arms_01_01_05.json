@@ -1916,6 +1916,7 @@
         "grade": 1,
         "name": "MacFlex Arms Green",
         "tags": "DeckCrew Set_01 Color_05 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1929,9 +1930,18 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "MacFlex Arms Green",
             "Description": "Item Type: Light Armor\\nDamage Reduction: 20%\\nTemp. Rating: -37 / 67 \u00b0C\\nRadiation Protection: 26000 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nWhether you're planetside or in vacuum, RSI's MacFlex industrial armor set has your back. Reinforced plating keeps you safe from environmental hazards while the array of pouches keep your tools accessible.",
+            "DescriptionData": {
+                "Item Type": "Light Armor",
+                "Damage Reduction": "20%",
+                "Temp. Rating": "-37 / 67 \u00b0C",
+                "Radiation Protection": "26000 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Whether you're planetside or in vacuum, RSI's MacFlex industrial armor set has your back. Reinforced plating keeps you safe from environmental hazards while the array of pouches keep your tools accessible.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "DeckCrew",
@@ -1944,15 +1954,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -37,
                 "Maximum": 67
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

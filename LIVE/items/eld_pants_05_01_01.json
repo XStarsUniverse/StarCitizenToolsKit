@@ -1984,6 +1984,7 @@
         "grade": 1,
         "name": "55-GR Pants",
         "tags": "eld__pants Set_05 Color_01",
+        "required_tags": "",
         "manufacturer": "ELD",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -1997,9 +1998,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "55-GR Pants",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nWith the help of iconic designer Ubaid, Escar Limited created these crop pants for the fashion forward who don't want to be overly flashy. The 55-GR features a subtle tartan pattern and baggy cuffs.   \\n\\nWomen's sizes currently out of stock.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "With the help of iconic designer Ubaid, Escar Limited created these crop pants for the fashion forward who don't want to be overly flashy. The 55-GR features a subtle tartan pattern and baggy cuffs.   \n\nWomen's sizes currently out of stock.",
             "Manufacturer": {
                 "Code": "ELD",
-                "Name": "Escar Limited"
+                "Name": "Escar Limited",
+                "UUID": "190a2e0e-6d60-4719-8238-ac7e1c746626"
             },
             "Tags": [
                 "eld__pants",
@@ -2010,19 +2016,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2032,7 +2050,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2042,6 +2068,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2057,6 +2092,10 @@
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

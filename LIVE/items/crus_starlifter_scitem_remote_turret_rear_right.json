@@ -973,6 +973,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady CRUS_Starlifter",
+        "required_tags": "CRUS_Starlifter",
         "manufacturer": "CRUS",
         "stdItem": {
             "UUID": "ddef5a65-6ba0-458a-8345-077de298cd15",
@@ -985,9 +986,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "CRUS",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "63685f47-b0cc-4ebe-8f16-72793a5cd6e0"
             },
             "Tags": [
                 "flightReady",
@@ -997,24 +1000,58 @@
                 {
                     "PortName": "turret_left",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "turret_right",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 12500
+                "Health": 12500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1037,6 +1074,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

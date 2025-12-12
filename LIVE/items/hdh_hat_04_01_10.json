@@ -1773,6 +1773,7 @@
         "grade": 1,
         "name": "Keldur Hat and Midnight Goggles",
         "tags": "hdh_hat Set_04 Texture_01 Color_01 $hatHair+",
+        "required_tags": "Protos",
         "manufacturer": "HDH",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1786,9 +1787,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Keldur Hat and Midnight Goggles",
             "Description": "Blowing winds and blazing sun won't be an issue when wearing the Keldur hat and goggles. Insulated flaps keep the sun and elements off your neck, while a lightweight metal brim and scratch resistant, industrial-grade goggles protect your eyes.",
+            "DescriptionText": "Blowing winds and blazing sun won't be an issue when wearing the Keldur hat and goggles. Insulated flaps keep the sun and elements off your neck, while a lightweight metal brim and scratch resistant, industrial-grade goggles protect your eyes.",
             "Manufacturer": {
                 "Code": "HDH",
-                "Name": "Habidash"
+                "Name": "Habidash",
+                "UUID": "70ce6432-3a1e-45a1-8179-fe30a3ee54dc"
             },
             "Tags": [
                 "hdh_hat",
@@ -1801,11 +1804,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1815,9 +1825,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -10,
                 "Maximum": 26
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

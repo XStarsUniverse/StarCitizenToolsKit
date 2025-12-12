@@ -2223,6 +2223,7 @@
         "grade": 1,
         "name": "Norfield",
         "tags": "",
+        "required_tags": "MISC_Starfarer_Base",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "b46eae55-2ed3-4008-9635-8fe26a1a3a4c",
@@ -2235,14 +2236,22 @@
             "Type": "DockingCollar.UNDEFINED",
             "Name": "Norfield",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Fuel Nozzle\\nSafe Flow Rate: 0.3 SCU/s\\n\\nAllowing for a greatly increased overall flow rate, the Norfield fuel nozzle from Greycat prioritizes the fast and efficient transfer of fuel while only sacrificing some pod storage capacity.  \\n",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Fuel Nozzle"
+            },
+            "DescriptionText": "Allowing for a greatly increased overall flow rate, the Norfield fuel nozzle from Greycat prioritizes the fast and efficient transfer of fuel while only sacrificing some pod storage capacity.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Ports": [
                 {
                     "PortName": "itemport_vehicle_attach",
                     "Size": 8,
+                    "MinSize": 0,
+                    "MaxSize": 8,
                     "Flags": [
                         "Docking_Request_Accepting"
                     ],
@@ -2252,16 +2261,59 @@
                     "Types": [
                         "NOITEM_Vehicle"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "NOITEM_Vehicle"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "itemport_camera_test",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "26b49d9f-adab-41fb-9a34-e12c5077550c",
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 250
+                "Health": 250,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Extend",
+                "Retract"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Default",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Fuel",
+                                "Rate": 0,
+                                "MinimumFraction": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "QuantumFuel",
+                                "Rate": 0,
+                                "MinimumFraction": 0
+                            },
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

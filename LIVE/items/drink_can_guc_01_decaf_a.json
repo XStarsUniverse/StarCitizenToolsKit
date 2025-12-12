@@ -1965,6 +1965,7 @@
         "grade": 1,
         "name": "Get Up Coffee (Decaf)",
         "tags": "guc decaf",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "8186f14f-5872-40d8-8f43-10ea11077433",
@@ -1977,9 +1978,15 @@
             "Type": "Drink.Can",
             "Name": "Get Up Coffee (Decaf)",
             "Description": "HEI: 15\\nEffects: Dehydrating, Cognitive Boosting\\n\\nGet Up Coffee is roasted with care to ensure a smooth blend of rich coffee flavor brewed to perfection. Our decaf replaces the caffeine typically found in coffee with other natural and gentle stimulants.",
+            "DescriptionData": {
+                "HEI": "15",
+                "Effects": "Dehydrating, Cognitive Boosting"
+            },
+            "DescriptionText": "Get Up Coffee is roasted with care to ensure a smooth blend of rich coffee flavor brewed to perfection. Our decaf replaces the caffeine typically found in coffee with other natural and gentle stimulants.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "guc",
@@ -1991,12 +1998,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "15",
+                "Effects": [
+                    "Dehydrating",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

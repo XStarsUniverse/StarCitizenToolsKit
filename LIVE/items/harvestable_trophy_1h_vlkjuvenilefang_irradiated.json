@@ -1367,6 +1367,7 @@
         "grade": 1,
         "name": "Irradiated Valakkar Fang (Juvenile)",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "72eca4eb-23b8-43b0-94b0-72d31b6ba358",
             "ClassName": "Harvestable_Trophy_1H_vlkJuvenileFang_irradiated",
@@ -1378,10 +1379,41 @@
             "Type": "Misc.Harvestable",
             "Name": "Irradiated Valakkar Fang (Juvenile)",
             "Description": "The valakkar continually sheds its teeth throughout its lifetime. As the animal burrows through the sand and catches prey, its teeth are frequently damaged. Once a new tooth finishes forming, it severs the connective tissue that was holding the old tooth in place, causing it to break off and fall to the ground. The fangs of the valakkar can also be extracted from the animal's mouth after its death. This fang was exposed to radiation over a long period of time and has developed unusual coloration.",
+            "DescriptionText": "The valakkar continually sheds its teeth throughout its lifetime. As the animal burrows through the sand and catches prey, its teeth are frequently damaged. Once a new tooth finishes forming, it severs the connective tissue that was holding the old tooth in place, causing it to break off and fall to the ground. The fangs of the valakkar can also be extracted from the animal's mouth after its death. This fang was exposed to radiation over a long period of time and has developed unusual coloration.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "8ba78e89-0832-48c2-b8ab-4eaa7d4bba42",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -739,6 +739,7 @@
         "grade": 1,
         "name": "",
         "tags": "flightReady salvageMount",
+        "required_tags": "salvageMount",
         "stdItem": {
             "UUID": "78136407-7c2e-4ec4-ad13-6dd73b3e227f",
             "ClassName": "Mount_Gimbal_Salvage",
@@ -750,6 +751,12 @@
             "Type": "Turret.GunTurret",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady",
                 "salvageMount"
@@ -758,6 +765,8 @@
                 {
                     "PortName": "hardpoint_salvage_laser",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "salvageMount"
                     ],
@@ -765,7 +774,15 @@
                         "salvageMount"
                     ],
                     "Types": [
-                        "WeaponMining"
+                        "WeaponMining.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponMining",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -776,7 +793,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

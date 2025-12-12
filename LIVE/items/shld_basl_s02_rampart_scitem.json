@@ -1076,6 +1076,7 @@
         "grade": 1,
         "name": "Rampart",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BASL",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1089,17 +1090,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "Rampart",
             "Description": "Item Type: Shield Generator\\nManufacturer: Basilisk\\nSize: 2\\nGrade: A\\nClass: Industrial\\n\\nBasilisk understands that escape isn\u2019t always an option. That\u2019s why they built the Rampart industrial shield generator to take an incredible amount of damage before it\u2019s depleted.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Basilisk",
+                "Size": "2",
+                "Grade": "A",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "Basilisk understands that escape isn't always an option. That's why they built the Rampart industrial shield generator to take an incredible amount of damage before it's depleted.",
             "Manufacturer": {
                 "Code": "BASL",
-                "Name": "Basilisk"
+                "Name": "Basilisk",
+                "UUID": "2948496b-45d2-41f8-bdff-97587f1e6981"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 980
+                "Health": 980,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 3.5,
@@ -1136,6 +1157,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2.5,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 447,
+                                "MinimumFraction": 0.75,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 4,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1980
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 6170,

@@ -1707,6 +1707,7 @@
         "grade": 1,
         "name": "",
         "tags": "behr_timed_explosive_01",
+        "required_tags": "",
         "stdItem": {
             "UUID": "72a18256-f55c-4de7-b38b-5e69fde066c8",
             "ClassName": "behr_timed_explosive_01",
@@ -1718,6 +1719,12 @@
             "Type": "FPS_Deployable.Small",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "behr_timed_explosive_01"
             ],
@@ -1725,7 +1732,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place"
+            ]
         }
     }
 }

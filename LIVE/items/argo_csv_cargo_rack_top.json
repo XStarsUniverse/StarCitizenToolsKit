@@ -1184,6 +1184,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ARGO",
         "classification": "Ship.Container.Cargo",
         "stdItem": {
@@ -1197,36 +1198,55 @@
             "Type": "Container.Cargo",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ARGO",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "9e1f5a35-edcc-4d19-bede-08e2730043c5"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_cargogrid_main",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Cargo"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Cargo"
+                        }
+                    ],
+                    "EquippedItem": "ff3d2a64-2497-4a76-9cfe-d8415b062a78",
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_cargo_box_01",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Cargo"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Cargo"
+                        }
+                    ],
                     "Uneditable": true
                 }
             ],
             "Durability": {
-                "Health": 350
+                "Health": 350,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.92,

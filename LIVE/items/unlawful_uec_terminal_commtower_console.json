@@ -1258,6 +1258,7 @@
         "grade": 1,
         "name": "Console",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "a727b1bd-c5e1-44b1-8952-7c609cd9a36d",
             "ClassName": "Unlawful_UEC_Terminal_CommTower_Console",
@@ -1269,15 +1270,36 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Console",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Screen",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "$IP_screen"
                     ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Activate",
+                "Tap",
+                "Swipeleft",
+                "Swiperight",
+                "Swipeup",
+                "Swipedown",
+                "Openkeyboard",
+                "Starttyping",
+                "Stoptyping",
+                "Closekeyboard",
+                "Setwindowstate_closewindow"
             ]
         }
     }

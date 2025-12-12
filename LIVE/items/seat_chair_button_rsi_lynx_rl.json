@@ -1252,6 +1252,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "4dd5b7d3-8398-4e8f-bbc0-cb5ab47dca7c",
             "ClassName": "Seat_Chair_Button_RSI_Lynx_RL",
@@ -1262,7 +1263,19 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit",
+                "Activate",
+                "Deactivate"
+            ]
         }
     }
 }

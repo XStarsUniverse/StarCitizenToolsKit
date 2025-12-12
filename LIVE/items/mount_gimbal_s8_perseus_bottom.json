@@ -1008,6 +1008,7 @@
         "grade": 1,
         "name": "VariPuck S6 Gimbal Mount",
         "tags": "gimbalMount flightReady RSI_Perseus_Bespoke",
+        "required_tags": "RSI_Perseus_Bespoke",
         "manufacturer": "FFSY",
         "stdItem": {
             "UUID": "baa24284-b180-4dcb-a08f-2b279e4e7109",
@@ -1020,9 +1021,16 @@
             "Type": "Turret.GunTurret",
             "Name": "VariPuck S6 Gimbal Mount",
             "Description": "Manufacturer: Flashfire Systems\\nItem Type: Weapon Mount\\nSize: 6\\n\\nThe VariPuck fits between your weapon and the ship hardpoint to transform a fixed weapon mount into a gimballed mount, allowing the pilot to independently aim their weapon\u2019s fire. VariPucks will accept any weapon the same size as the hardpoint it is mounting to.",
+            "DescriptionData": {
+                "Manufacturer": "Flashfire Systems",
+                "Item Type": "Weapon Mount",
+                "Size": "6"
+            },
+            "DescriptionText": "The VariPuck fits between your weapon and the ship hardpoint to transform a fixed weapon mount into a gimballed mount, allowing the pilot to independently aim their weapon's fire. VariPucks will accept any weapon the same size as the hardpoint it is mounting to.",
             "Manufacturer": {
                 "Code": "FFSY",
-                "Name": "Flashfire Systems"
+                "Name": "Flashfire Systems",
+                "UUID": "b9b97673-c585-4e0a-b229-a0a3c79668c3"
             },
             "Tags": [
                 "gimbalMount",
@@ -1033,6 +1041,8 @@
                 {
                     "PortName": "hardpoint_class_2",
                     "Size": 8,
+                    "MinSize": 8,
+                    "MaxSize": 8,
                     "Flags": [
                         "uneditable"
                     ],
@@ -1043,7 +1053,15 @@
                         "RSI_Perseus_Bespoke"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -1054,7 +1072,9 @@
                 "Height": 0.38
             },
             "Durability": {
-                "Health": 10240
+                "Health": 10240,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

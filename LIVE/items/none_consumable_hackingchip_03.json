@@ -1782,6 +1782,7 @@
         "grade": 1,
         "name": "Ripper",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c4581d0e-20fe-47fd-ab9d-df22f17df9f5",
             "ClassName": "none_consumable_hackingchip_03",
@@ -1793,6 +1794,12 @@
             "Type": "FPS_Consumable.Hacking",
             "Name": "Ripper",
             "Description": "A modified version of the Tigersclaw cryptokey, the Ripper earned its name for being able to \"rip systems apart.' Incredibly fast, what it gains in speed, it also gains in instability as the extra draws on the processor results in greater error frequency.",
+            "DescriptionText": "A modified version of the Tigersclaw cryptokey, the Ripper earned its name for being able to \"rip systems apart.' Incredibly fast, what it gains in speed, it also gains in instability as the extra draws on the processor results in greater error frequency.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1802,8 +1809,22 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
-            }
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Equip",
+                "Offhandequip",
+                "Store",
+                "Offhandstore",
+                "Blinkinglight_notshown",
+                "Stopblinking_notshown"
+            ]
         }
     }
 }

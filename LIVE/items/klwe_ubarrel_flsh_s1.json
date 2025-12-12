@@ -2260,6 +2260,7 @@
         "grade": 1,
         "name": "Brightspot Flashlight Purple",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "NVTC",
         "classification": "FPS.WeaponAttachment.BottomAttachment",
         "stdItem": {
@@ -2273,25 +2274,49 @@
             "Type": "WeaponAttachment.BottomAttachment",
             "Name": "Brightspot Flashlight Purple",
             "Description": "Manufacturer: Klaus & Werner\\nType: Flashlight\\nAttachment Point: Underbarrel\\nSize: 1\\n\\nThe Brightspot flashlight embodies Klaus & Werner's engineering ethos. A simple and sturdy design built to withstand intense combat and environmental conditions means the Brightspot always works when you need it most. This special edition projects a purple circle that makes the beam less conspicuous from a distance.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Type": "Flashlight",
+                "Attachment Point": "Underbarrel",
+                "Size": "1"
+            },
+            "DescriptionText": "The Brightspot flashlight embodies Klaus & Werner's engineering ethos. A simple and sturdy design built to withstand intense combat and environmental conditions means the Brightspot always works when you need it most. This special edition projects a purple circle that makes the beam less conspicuous from a distance.",
             "Manufacturer": {
                 "Code": "NVTC",
-                "Name": "NV-TAC"
+                "Name": "NV-TAC",
+                "UUID": "f113387e-0905-489a-829d-8cebfdc19e66"
             },
             "Ports": [
                 {
                     "PortName": "light_1",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Types": [
                         "Light"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Light"
+                        }
+                    ],
+                    "EquippedItem": "18d0e506-c28f-48fb-820b-d0333ca25db5",
                     "Uneditable": false
                 },
                 {
                     "PortName": "light_2",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Types": [
                         "Light"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Light"
+                        }
+                    ],
+                    "EquippedItem": "b2c50bd4-bf09-42d2-b8ad-c2f8919c8192",
                     "Uneditable": false
                 }
             ],
@@ -2299,7 +2324,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

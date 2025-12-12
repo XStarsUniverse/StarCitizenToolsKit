@@ -1769,6 +1769,7 @@
         "grade": 1,
         "name": "Debnam Gloves Olive",
         "tags": "drn_gloves Set_01 Color_20",
+        "required_tags": "",
         "manufacturer": "DRN",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -1782,9 +1783,11 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "Debnam Gloves Olive",
             "Description": "Named after the influential Terran tailor, Debnam gloves incorporate that famous tailor's classic design to keep your hands comfortable in colder temperatures.",
+            "DescriptionText": "Named after the influential Terran tailor, Debnam gloves incorporate that famous tailor's classic design to keep your hands comfortable in colder temperatures.",
             "Manufacturer": {
                 "Code": "DRN",
-                "Name": "Derion"
+                "Name": "Derion",
+                "UUID": "2ab62815-6273-44b9-bbc6-28d36fed6fd8"
             },
             "Tags": [
                 "drn_gloves",
@@ -1795,11 +1798,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1809,9 +1819,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

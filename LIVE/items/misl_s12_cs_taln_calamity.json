@@ -1011,6 +1011,7 @@
         "grade": 1,
         "name": "Calamity XII-CS Torpedo",
         "tags": "TALN CS flightReady",
+        "required_tags": "",
         "manufacturer": "TALN",
         "classification": "Ship.Missile.Torpedo",
         "stdItem": {
@@ -1024,9 +1025,16 @@
             "Type": "Missile.Torpedo",
             "Name": "Calamity XII-CS Torpedo",
             "Description": "Manufacturer: Talon\\nTracking Signal: Cross Section\\nSize: 12\\n\\nDesigned by Talon, the Calamity heat seeking strike torpedo delivers a heavy payload sure to serve as a deterrent from any further hostile actions.",
+            "DescriptionData": {
+                "Manufacturer": "Talon",
+                "Tracking Signal": "Cross Section",
+                "Size": "12"
+            },
+            "DescriptionText": "Designed by Talon, the Calamity heat seeking strike torpedo delivers a heavy payload sure to serve as a deterrent from any further hostile actions.",
             "Manufacturer": {
                 "Code": "TALN",
-                "Name": "Talon"
+                "Name": "Talon",
+                "UUID": "587fcede-4fe9-4fb4-85ec-124abc8542b0"
             },
             "Tags": [
                 "TALN",
@@ -1038,8 +1046,19 @@
                 "Length": 3.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 667
+                "Health": 667,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

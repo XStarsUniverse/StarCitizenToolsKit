@@ -1758,6 +1758,7 @@
         "grade": 1,
         "name": "Pambada Knife",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "BANU",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1771,9 +1772,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "Pambada Knife",
             "Description": "Manufacturer: Banu\\nItem Type: Knife\\nClass: Melee\\n\\nSize: 16 cm\\n\\nHoned to a razor-fine edge, the Pambada knife has a wide range of applications. The serrated edge is great for cutting through soft and flexible materials like ropes or fabrics while the gut hook can be used to overcome materials with a tougher resistance. The sharpened angular point of the blade ensures the Pambada can still pierce, rounding out the weapon's versatile toolset. It is made with the same rust-resistant, ultra-sharp metal alloy found in other Banu knives and features an intricately detailed handle of distinctively Banu origin.",
+            "DescriptionData": {
+                "Manufacturer": "Banu",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "16 cm"
+            },
+            "DescriptionText": "Honed to a razor-fine edge, the Pambada knife has a wide range of applications. The serrated edge is great for cutting through soft and flexible materials like ropes or fabrics while the gut hook can be used to overcome materials with a tougher resistance. The sharpened angular point of the blade ensures the Pambada can still pierce, rounding out the weapon's versatile toolset. It is made with the same rust-resistant, ultra-sharp metal alloy found in other Banu knives and features an intricately detailed handle of distinctively Banu origin.",
             "Manufacturer": {
                 "Code": "BANU",
-                "Name": "Banu"
+                "Name": "Banu",
+                "UUID": "2b5ba252-e826-4356-ac0d-8d88007ea386"
             },
             "Tags": [
                 "knife"
@@ -1783,6 +1792,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

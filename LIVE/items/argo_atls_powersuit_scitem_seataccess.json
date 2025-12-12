@@ -576,6 +576,7 @@
         "grade": 1,
         "name": "Access",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "85291389-34d3-450e-a571-52384ed6bfc2",
             "ClassName": "ARGO_ATLS_PowerSuit_SCItem_SeatAccess",
@@ -586,7 +587,17 @@
             "Length": 0.15,
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Access",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Riderenter",
+                "Riderexit"
+            ]
         }
     }
 }

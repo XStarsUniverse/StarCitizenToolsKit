@@ -2006,6 +2006,7 @@
         "grade": 1,
         "name": "Vanduul Decoy Launcher",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "VNC",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -2019,9 +2020,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "Vanduul Decoy Launcher",
             "Description": "Vanduul Decoy Launcher",
+            "DescriptionText": "Vanduul Decoy Launcher",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
             "Ammunition": {
                 "UUID": "9621efe3-86b7-4da3-ac4a-430394f53bf4",
@@ -2037,7 +2040,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,

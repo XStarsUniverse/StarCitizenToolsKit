@@ -2018,6 +2018,7 @@
         "grade": 1,
         "name": "Reclaimed Water",
         "tags": "bottle_01 Stash_Water",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "7bc46fe2-756c-4093-b7b3-cb5e0a4ab9f5",
@@ -2030,9 +2031,15 @@
             "Type": "Drink.Bottle",
             "Name": "Reclaimed Water",
             "Description": "HEI: 44\\nEffects: Hydrating, Toxic\\n\\nFiltered water that has been reclaimed from various sources.",
+            "DescriptionData": {
+                "HEI": "44",
+                "Effects": "Hydrating, Toxic"
+            },
+            "DescriptionText": "Filtered water that has been reclaimed from various sources.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01",
@@ -2044,12 +2051,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 1,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "44",
+                "Effects": [
+                    "Hydrating",
+                    "Toxic"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 1,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

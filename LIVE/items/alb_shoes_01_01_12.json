@@ -1842,6 +1842,7 @@
         "grade": 1,
         "name": "Nivala Shoes Tactical",
         "tags": "alb_shoes Set_01 Texture_01 Color_12",
+        "required_tags": "",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
             "UUID": "66242a93-b551-4966-a73c-10d1360e3590",
@@ -1854,6 +1855,12 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Nivala Shoes Tactical",
             "Description": "The Alejo Brothers expertly engineered the Nivala shoes to provide high ankle support while remaining lightweight. The shoes mix the company's patented FullFlex rubber with synthetic nubuck leather for flexible yet strategic support, and feature cushioning on the heels and balls of the feet for supreme comfort.",
+            "DescriptionText": "The Alejo Brothers expertly engineered the Nivala shoes to provide high ankle support while remaining lightweight. The shoes mix the company's patented FullFlex rubber with synthetic nubuck leather for flexible yet strategic support, and feature cushioning on the heels and balls of the feet for supreme comfort.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "alb_shoes",
                 "Set_01",
@@ -1864,11 +1871,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1878,9 +1892,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -15,
                 "Maximum": 60
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

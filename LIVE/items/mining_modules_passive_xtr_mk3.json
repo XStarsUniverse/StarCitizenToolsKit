@@ -1999,6 +1999,7 @@
         "grade": 1,
         "name": "XTR-XL Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "a0595561-6252-4340-bd02-c9a748e2fe7b",
@@ -2011,9 +2012,17 @@
             "Type": "MiningModifier.Gun",
             "Name": "XTR-XL Module",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Module (Passive)\\n\\nOptimal Charge Window Size: +25%\\nInert Material Level: -6%\\n\\nExtraction Laser Power: 95%\\n\\nThe XTR-XL Module creates a wider mining window for deposits. It also makes the extraction laser less powerful so it can filter out more inert materials.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Module (Passive)",
+                "Optimal Charge Window Size": "+25%",
+                "Extraction Laser Power": "95%"
+            },
+            "DescriptionText": "The XTR-XL Module creates a wider mining window for deposits. It also makes the extraction laser less powerful so it can filter out more inert materials.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "miningConsumable",
@@ -2025,8 +2034,17 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

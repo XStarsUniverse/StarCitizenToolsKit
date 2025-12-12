@@ -1577,6 +1577,7 @@
         "grade": 1,
         "name": "Veggie Dog",
         "tags": "hotdog veggie",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "63817eec-15df-4121-9e62-011e8efcc7c5",
@@ -1589,9 +1590,15 @@
             "Type": "Food.Junk",
             "Name": "Veggie Dog",
             "Description": "NDR: 34\\nEffects: Dehydrating, Hyper-Metabolic\\n\\nA grilled veggie sausage topped with a spicy fermented hot sauce and sweet mustard .",
+            "DescriptionData": {
+                "NDR": "34",
+                "Effects": "Dehydrating, Hyper-Metabolic"
+            },
+            "DescriptionText": "A grilled veggie sausage topped with a spicy fermented hot sauce and sweet mustard .",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "hotdog",
@@ -1603,12 +1610,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "hotdog"
-            }
+                "NutritionalDensityRating": "34",
+                "Effects": [
+                    "Dehydrating",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

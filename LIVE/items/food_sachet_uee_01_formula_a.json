@@ -1635,6 +1635,7 @@
         "grade": 1,
         "name": "Special Operation Formula Combat Ration",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d1963c45-f9de-4a10-b034-128daedeb351",
             "ClassName": "Food_sachet_uee_01_formula_a",
@@ -1646,18 +1647,44 @@
             "Type": "Food.Sachet",
             "Name": "Special Operation Formula Combat Ration",
             "Description": "NDR: 80\\nEffects: Hypertrophic, Hypo-Metabolic, Cognitive Boosting\\n\\nA full meal combat ration specially formulated to provide complete high-performance nutrition for UEE Army personnel engaged in special operations.",
+            "DescriptionData": {
+                "NDR": "80",
+                "Effects": "Hypertrophic, Hypo-Metabolic, Cognitive Boosting"
+            },
+            "DescriptionText": "A full meal combat ration specially formulated to provide complete high-performance nutrition for UEE Army personnel engaged in special operations.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "sachet"
-            }
+                "NutritionalDensityRating": "80",
+                "Effects": [
+                    "Hypertrophic",
+                    "Hypo-Metabolic",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "sachet",
+                "ContainerTypeTag": "sachet",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

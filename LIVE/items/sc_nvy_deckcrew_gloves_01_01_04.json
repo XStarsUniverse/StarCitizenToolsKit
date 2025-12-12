@@ -790,6 +790,7 @@
         "grade": 1,
         "name": "",
         "tags": "nvy_gloves Deckcrew Set_01 Color_04",
+        "required_tags": "",
         "manufacturer": "NVY",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -803,9 +804,11 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "NVY",
-                "Name": "UEE Navy"
+                "Name": "UEE Navy",
+                "UUID": "d133f90d-bc69-4273-9867-6c03631f0c4b"
             },
             "Tags": [
                 "nvy_gloves",
@@ -813,9 +816,21 @@
                 "Set_01",
                 "Color_04"
             ],
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openexternalinventory"
+            ],
             "TemperatureResistance": {
                 "Minimum": -2,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

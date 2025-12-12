@@ -1068,6 +1068,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.Container.Cargo",
         "stdItem": {
             "UUID": "a3ea3ede-23a3-410d-a576-175d25949c17",
@@ -1080,9 +1081,23 @@
             "Type": "Container.Cargo",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
-            "Durability": {
-                "Health": 1000
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
             },
+            "Durability": {
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Openinventory",
+                "Loot",
+                "Opendoor",
+                "Closedoor"
+            ],
             "InventoryContainer": {
                 "SCU": 1.2,
                 "unit": 2,

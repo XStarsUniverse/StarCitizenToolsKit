@@ -1876,6 +1876,7 @@
         "grade": 1,
         "name": "Variable Service Shoes",
         "tags": "cba_chef_shoes Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1889,9 +1890,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Variable Service Shoes",
             "Description": "Code Blue Apparel's Variable Service Shoes are constructed from a rigid rubber-carbon splice that help provide protection from physical impacts or piercings. The exterior is sprayed with artileather for a professional finish and offers maximum ease-of-cleaning.",
+            "DescriptionText": "Code Blue Apparel's Variable Service Shoes are constructed from a rigid rubber-carbon splice that help provide protection from physical impacts or piercings. The exterior is sprayed with artileather for a professional finish and offers maximum ease-of-cleaning.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_chef_shoes",
@@ -1902,11 +1905,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1916,9 +1926,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

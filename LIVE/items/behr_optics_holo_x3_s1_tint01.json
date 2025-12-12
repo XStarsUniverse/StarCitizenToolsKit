@@ -1616,6 +1616,7 @@
         "grade": 1,
         "name": "PT3 \"Deadfall\" (3x Holographic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1629,15 +1630,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "PT3 \"Deadfall\" (3x Holographic)",
             "Description": "Manufacturer: Behring\\nType: Projection  \\nAttachment Point: Optic\\nMagnification: 3x\\nZoom: 3x-3.5x\\nAim Time: +15%\\nSize: 1\\n\\nGet up close and personal with this 3x magnifying optic from Behring. The PT3 projects a highly visible target marker allowing you to confidently cover your field of view across various lighting and environmental conditions.\\n\\nThe \"Deadfall\" variant of the scope is muted green.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Type": "Projection",
+                "Attachment Point": "Optic",
+                "Magnification": "3x",
+                "Size": "1"
+            },
+            "DescriptionText": "Get up close and personal with this 3x magnifying optic from Behring. The PT3 projects a highly visible target marker allowing you to confidently cover your field of view across various lighting and environmental conditions.\n\nThe \"Deadfall\" variant of the scope is muted green.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

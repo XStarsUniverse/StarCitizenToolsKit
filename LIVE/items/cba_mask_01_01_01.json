@@ -1774,6 +1774,7 @@
         "grade": 1,
         "name": "Col Head Cover Maroon",
         "tags": "cba_mask Set_01 Color_01 ",
+        "required_tags": "Protos",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1787,9 +1788,14 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Col Head Cover Maroon",
             "Description": "Temp. Rating: -30 / 15 \u00b0C\\n\\nThe Col is an insulated yet lightweight head cover that keeps heat from escaping. The large, chip-resistant faceplate features a cutting-edge GX coating to ensure the purest light quality for viewing the surrounding environs.",
+            "DescriptionData": {
+                "Temp. Rating": "-30 / 15 \u00b0C"
+            },
+            "DescriptionText": "The Col is an insulated yet lightweight head cover that keeps heat from escaping. The large, chip-resistant faceplate features a cutting-edge GX coating to ensure the purest light quality for viewing the surrounding environs.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_mask",
@@ -1800,11 +1806,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1814,9 +1827,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -30,
                 "Maximum": 15
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

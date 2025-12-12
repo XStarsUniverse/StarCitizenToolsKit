@@ -1172,6 +1172,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "4dcf2a6c-5db2-4c82-a8b5-0fd2c5d265c3",
             "ClassName": "EnvironmentScreen_KEGRFireExtinguisher",
@@ -1183,9 +1184,21 @@
             "Type": "Display.Default",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
-            "Durability": {
-                "Health": 50
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
             },
+            "Durability": {
+                "Health": 50,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Turnon",
+                "Turnoff"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,

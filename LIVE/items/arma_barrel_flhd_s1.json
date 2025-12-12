@@ -1571,6 +1571,7 @@
         "grade": 1,
         "name": "Veil Flash Hider1",
         "tags": "FPS_Barrel ballistic_attach energy_attach",
+        "required_tags": "",
         "manufacturer": "ARMA",
         "classification": "Ship.WeaponAttachment.Barrel",
         "stdItem": {
@@ -1584,9 +1585,17 @@
             "Type": "WeaponAttachment.Barrel",
             "Name": "Veil Flash Hider1",
             "Description": "Manufacturer: ArmaMod\\nType: Flash Hider\\nAttachment Point: Barrel\\nSize: 1\\n\\nRecoil Stability: +15%\\nRecoil Smoothness: +15%\\n\\nThe Veil Flash Hider1 is an S1 flash hider from ArmaMod. Designed to reduce muzzle flash, it will help keep your position hidden once the action begins.",
+            "DescriptionData": {
+                "Manufacturer": "ArmaMod",
+                "Type": "Flash Hider",
+                "Attachment Point": "Barrel",
+                "Size": "1"
+            },
+            "DescriptionText": "The Veil Flash Hider1 is an S1 flash hider from ArmaMod. Designed to reduce muzzle flash, it will help keep your position hidden once the action begins.",
             "Manufacturer": {
                 "Code": "ARMA",
-                "Name": "ArmaMod"
+                "Name": "ArmaMod",
+                "UUID": "f2ca879c-deb6-49bf-a4b1-dc3a9cf91e7a"
             },
             "Tags": [
                 "FPS_Barrel",
@@ -1597,7 +1606,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

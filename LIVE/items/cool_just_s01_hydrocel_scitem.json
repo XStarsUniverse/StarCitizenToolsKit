@@ -922,6 +922,7 @@
         "grade": 4,
         "name": "Hydrocel",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "JUST",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Hydrocel",
             "Description": "Item Type: Cooler\\nManufacturer: Juno Starwerk \\nSize: 1\\nGrade: D\\nClass: Industrial\\n\\nKeep your ship working harder for longer with the durable Hydrocel, an entry-level industrial cooler from respected manufacturer Juno Starwerk.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Juno Starwerk",
+                "Size": "1",
+                "Grade": "D",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "Keep your ship working harder for longer with the durable Hydrocel, an entry-level industrial cooler from respected manufacturer Juno Starwerk.",
             "Manufacturer": {
                 "Code": "JUST",
-                "Name": "Juno Starwerk"
+                "Name": "Juno Starwerk",
+                "UUID": "d7cc897f-b760-4a73-93c0-27e23c52db0a"
             },
             "Cooler": {
                 "CoolingRate": 380000,
@@ -949,8 +959,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 270
+                "Health": 270,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 8.25,
                 "DecayRateOfEM": 0.16
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 18,
+                                "MinimumFraction": 0.6666667,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1490,
+                            "IR": 5940
+                        }
+                    }
+                ]
             }
         }
     }

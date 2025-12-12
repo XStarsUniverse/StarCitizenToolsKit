@@ -4307,6 +4307,7 @@
         "grade": 1,
         "name": "Animus Missile Launcher Magazine (3 cap)",
         "tags": "apar_special_ballistic_02 SM_RestrictedWep",
+        "required_tags": "",
         "manufacturer": "APAR",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -4320,9 +4321,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Animus Missile Launcher Magazine (3 cap)",
             "Description": "Item Type: Magazine\\nCapacity: 3\\n\\nThis magazine for the Animus missile launcher holds three missiles.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "3"
+            },
+            "DescriptionText": "This magazine for the Animus missile launcher holds three missiles.",
             "Manufacturer": {
                 "Code": "APAR",
-                "Name": "Apocalypse Arms"
+                "Name": "Apocalypse Arms",
+                "UUID": "77f7999a-b23b-4812-94c2-09b5e15e1b0e"
             },
             "Tags": [
                 "apar_special_ballistic_02",
@@ -4332,16 +4339,25 @@
                 {
                     "PortName": "missile_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
+                    "EquippedItem": "ccaa28df-74dd-4ecb-87ae-40e04195a4aa",
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_02",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
+                    "EquippedItem": "ccaa28df-74dd-4ecb-87ae-40e04195a4aa",
                     "Uneditable": false
                 },
                 {
                     "PortName": "missile_03",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
+                    "EquippedItem": "ccaa28df-74dd-4ecb-87ae-40e04195a4aa",
                     "Uneditable": false
                 }
             ],
@@ -4374,6 +4390,17 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ],
             "Missile": {
                 "Damage": {
                     "Physical": 300,

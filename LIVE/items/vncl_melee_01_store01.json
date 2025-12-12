@@ -1803,6 +1803,7 @@
         "grade": 1,
         "name": "VCK-1 \"Payback\" Blade",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "UTFL",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1816,9 +1817,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "VCK-1 \"Payback\" Blade",
             "Description": "Manufacturer: UltiFlex\\nItem Type: Knife\\nClass: Melee\\n\\nSize: 16 cm\\n\\nRenowned as Humanity's fiercest enemy, the weapons wielded by the Vanduul are some of the most feared in the universe. Taking inspiration from those brutal knives, the VCK-1 from UltiFlex features a split blade, ceremonial detailing, and has been finished with a unique patina that closely resembles the Vanduul's own bespoke alloys.\\n\\nThe Payback edition features red 'X' markings.",
+            "DescriptionData": {
+                "Manufacturer": "UltiFlex",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "16 cm"
+            },
+            "DescriptionText": "Renowned as Humanity's fiercest enemy, the weapons wielded by the Vanduul are some of the most feared in the universe. Taking inspiration from those brutal knives, the VCK-1 from UltiFlex features a split blade, ceremonial detailing, and has been finished with a unique patina that closely resembles the Vanduul's own bespoke alloys.\n\nThe Payback edition features red 'X' markings.",
             "Manufacturer": {
                 "Code": "UTFL",
-                "Name": "UltiFlex"
+                "Name": "UltiFlex",
+                "UUID": "da264d7b-755b-48a2-9580-4adc17ff7ad5"
             },
             "Tags": [
                 "knife"
@@ -1828,6 +1837,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

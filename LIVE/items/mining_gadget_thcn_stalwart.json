@@ -2786,6 +2786,7 @@
         "grade": 1,
         "name": "Stalwart",
         "tags": "mining_gadget THCN Stalwart",
+        "required_tags": "",
         "manufacturer": "THCN",
         "stdItem": {
             "UUID": "14398612-495b-498b-90d1-e55a346be810",
@@ -2798,9 +2799,19 @@
             "Type": "Gadget.Gadget",
             "Name": "Stalwart",
             "Description": "Manufacturer: Thermyte Concern\\nItem Type: Mining Gadget\\n\\nLaser Instability: -35%\\nCluster Modifier: +30%\\nOptimal Charge Window Rate: +50%\\n\\nOptimal Charge Window Size: -30%\\n\\nThe Stalwart is for miners looking to wield power precisely. The gadget reduces the optimal charge window size, making miners skillfully manage conditions to find the sweet spot. Once there, the increased power will fill the optimal charge window faster while also keeping clusters of valuable ore together.  \\n\\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
+            "DescriptionData": {
+                "Manufacturer": "Thermyte Concern",
+                "Item Type": "Mining Gadget",
+                "Laser Instability": "-35%",
+                "Cluster Modifier": "+30%",
+                "Optimal Charge Window Rate": "+50%",
+                "Optimal Charge Window Size": "-30%"
+            },
+            "DescriptionText": "The Stalwart is for miners looking to wield power precisely. The gadget reduces the optimal charge window size, making miners skillfully manage conditions to find the sweet spot. Once there, the increased power will fill the optimal charge window faster while also keeping clusters of valuable ore together.  \n\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "mining_gadget",
@@ -2813,8 +2824,24 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 10
-            }
+                "Health": 10,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Activate",
+                "Deactivate",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Offhandequip",
+                "Prime",
+                "Unprime",
+                "Carrylowered"
+            ]
         }
     }
 }

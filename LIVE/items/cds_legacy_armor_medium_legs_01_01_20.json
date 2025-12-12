@@ -2657,6 +2657,7 @@
         "grade": 1,
         "name": "ORC-mkV Legs Desert",
         "tags": "Marine_Legacy_Medium Set_01 Color_20 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "CDS",
         "classification": "FPS.Armor.Legs",
         "stdItem": {
@@ -2670,9 +2671,19 @@
             "Type": "Char_Armor_Legs.Medium",
             "Name": "ORC-mkV Legs Desert",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -55 / 85 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\nCarrying Capacity: 4.0 \u00b5SCU\\n\\nDependable and durable armor never goes out of style. The ORC-mkV from Clark Defense Systems has been a battlefield staple for centuries. This highly regarded medium armor blends composite plating with a special fiber reinforced polymer to provide solid protection and a wide range of movement.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-55 / 85 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s",
+                "Carrying Capacity": "4.0 \u00b5SCU"
+            },
+            "DescriptionText": "Dependable and durable armor never goes out of style. The ORC-mkV from Clark Defense Systems has been a battlefield staple for centuries. This highly regarded medium armor blends composite plating with a special fiber reinforced polymer to provide solid protection and a wide range of movement.",
             "Manufacturer": {
                 "Code": "CDS",
-                "Name": "Clark Defense Systems"
+                "Name": "Clark Defense Systems",
+                "UUID": "8a7bd715-5b97-404f-b02e-0d0cc593f608"
             },
             "Tags": [
                 "Marine_Legacy_Medium",
@@ -2684,6 +2695,8 @@
                 {
                     "PortName": "medPen_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2691,12 +2704,19 @@
                     ],
                     "Types": [
                         "FPS_Consumable"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FPS_Consumable"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "medPen_attach_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2705,11 +2725,18 @@
                     "Types": [
                         "FPS_Consumable"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FPS_Consumable"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2719,14 +2746,32 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal",
-                        "RemovableChip"
+                        "WeaponPersonal.Gadget",
+                        "WeaponPersonal.Rocket",
+                        "RemovableChip.Hacking"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget",
+                                "Rocket"
+                            ]
+                        },
+                        {
+                            "type": "RemovableChip",
+                            "sub_types": [
+                                "Hacking"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2736,13 +2781,25 @@
                         "melee"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Knife",
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Knife",
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "oxyPen_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2750,12 +2807,19 @@
                     ],
                     "Types": [
                         "FPS_Consumable"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FPS_Consumable"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "oxyPen_attach_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2764,18 +2828,35 @@
                     "Types": [
                         "FPS_Consumable"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FPS_Consumable"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small",
+                        "WeaponPersonal.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2785,6 +2866,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0045,
                 "unit": 6,
@@ -2798,14 +2888,51 @@
                 "uuid": "80861382-f855-498b-94f2-2568b20a371b"
             },
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b8507c75-47b0-4119-9657-2e516f6959cb",
                     "a473c5da-487a-4a97-9356-99a0be1d4cbe"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 5
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -55,
                 "Maximum": 85
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

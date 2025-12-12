@@ -362,6 +362,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "flightReady",
+        "required_tags": "",
         "classification": "Ship.Scanner.Scanner",
         "stdItem": {
             "UUID": "08e5d4f5-5298-4909-84df-4d359ead0724",
@@ -374,6 +375,11 @@
             "Type": "Scanner.Scanner",
             "Name": "<= PLACEHOLDER =>",
             "Description": "<= PLACEHOLDER =>",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
             ],
@@ -381,17 +387,26 @@
                 {
                     "PortName": "BatteryPort",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "invisible"
                     ],
                     "Types": [
                         "Battery"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Battery"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

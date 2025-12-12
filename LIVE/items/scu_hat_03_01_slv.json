@@ -1766,6 +1766,7 @@
         "grade": 1,
         "name": "Hardline Hard Hat Chrome",
         "tags": "scu_hat Set_03 Color_slv KeepsShape $hatHair+",
+        "required_tags": "Protos",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1779,9 +1780,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Hardline Hard Hat Chrome",
             "Description": "Stegman's Hardline 7800 is the latest in a proud line of safety wear. The Hardline is constructed from the same high-density plastics used in some body armor.",
+            "DescriptionText": "Stegman's Hardline 7800 is the latest in a proud line of safety wear. The Hardline is constructed from the same high-density plastics used in some body armor.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_hat",
@@ -1794,11 +1797,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1808,9 +1818,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

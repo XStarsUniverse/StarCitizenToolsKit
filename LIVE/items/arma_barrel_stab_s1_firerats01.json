@@ -1525,6 +1525,7 @@
         "grade": 1,
         "name": "Emod \"Scorched\" Stabilizer1",
         "tags": "FPS_Barrel energy_attach",
+        "required_tags": "",
         "manufacturer": "ARMA",
         "classification": "Ship.WeaponAttachment.Barrel",
         "stdItem": {
@@ -1538,9 +1539,17 @@
             "Type": "WeaponAttachment.Barrel",
             "Name": "Emod \"Scorched\" Stabilizer1",
             "Description": "Manufacturer: ArmaMod\\nType: Energy Stabilizer\\nAttachment Point: Barrel\\nSize: 1\\n\\nRecoil Stability: +40%\\nRecoil Kick: +40%\\nSpread: -10%\\nProjectile Speed: -12.5%\\n\\nReduce energy weapon recoil with the Emod Stabilizer1. ArmaMod designed the attachment to improve both horizontal and vertical recoil to ensure a more precise shot. The Scorched edition features a unique flame patina.",
+            "DescriptionData": {
+                "Manufacturer": "ArmaMod",
+                "Type": "Energy Stabilizer",
+                "Attachment Point": "Barrel",
+                "Size": "1"
+            },
+            "DescriptionText": "Reduce energy weapon recoil with the Emod Stabilizer1. ArmaMod designed the attachment to improve both horizontal and vertical recoil to ensure a more precise shot. The Scorched edition features a unique flame patina.",
             "Manufacturer": {
                 "Code": "ARMA",
-                "Name": "ArmaMod"
+                "Name": "ArmaMod",
+                "UUID": "f2ca879c-deb6-49bf-a4b1-dc3a9cf91e7a"
             },
             "Tags": [
                 "FPS_Barrel",
@@ -1550,7 +1559,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

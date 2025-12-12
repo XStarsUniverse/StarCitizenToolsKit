@@ -928,6 +928,7 @@
         "grade": 1,
         "name": "Drake Ship Chair",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "d92f0f20-f67a-4ccd-877d-1a451bdf0a08",
@@ -940,15 +941,21 @@
             "Type": "Usable.Cargo",
             "Name": "Drake Ship Chair",
             "Description": "Chair Decoration",
+            "DescriptionText": "Chair Decoration",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

@@ -987,6 +987,7 @@
         "grade": 1,
         "name": "Stormburst Bomb",
         "tags": "FSKI CS flightReady",
+        "required_tags": "",
         "manufacturer": "FSKI",
         "stdItem": {
             "UUID": "1b95523e-e2de-4de9-9b41-2cf79bfae59a",
@@ -999,9 +1000,16 @@
             "Type": "Bomb.Utility",
             "Name": "Stormburst Bomb",
             "Description": "Manufacturer: FireStorm Kinetics\\nItem Type: Explosive Bomb\\nSize: 5\\n\\nWreak havoc on ground forces from the skies above, with the Stormburst. Designed by FireStorm Kinetics to maximize destructive impact at a more moderate size, these S5 bombs feature a mixed composite ordnance to decimate armored targets. The Stormburst also utilizes FireStorm Kinetics' patented Atmo-Xact fins to ensure the payload reaches its target.",
+            "DescriptionData": {
+                "Manufacturer": "FireStorm Kinetics",
+                "Item Type": "Explosive Bomb",
+                "Size": "5"
+            },
+            "DescriptionText": "Wreak havoc on ground forces from the skies above, with the Stormburst. Designed by FireStorm Kinetics to maximize destructive impact at a more moderate size, these S5 bombs feature a mixed composite ordnance to decimate armored targets. The Stormburst also utilizes FireStorm Kinetics' patented Atmo-Xact fins to ensure the payload reaches its target.",
             "Manufacturer": {
                 "Code": "FSKI",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "5f81335d-44e6-4104-841e-c5af9df06829"
             },
             "Tags": [
                 "FSKI",
@@ -1023,8 +1031,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

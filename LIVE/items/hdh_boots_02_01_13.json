@@ -1867,6 +1867,7 @@
         "grade": 1,
         "name": "Taftan Boots Mahogany",
         "tags": "hdh_boots Set_02 Texture_01 Color_13",
+        "required_tags": "",
         "manufacturer": "HDH",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1880,9 +1881,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Taftan Boots Mahogany",
             "Description": "Strong, practical, and stylish, these high-cut boots with reinforced straps will be just the thing you need for those long outdoor treks. The slip- and abrasion-resistant soles were constructed from a proprietary composite of recycled plastic and rubber to improve traction without sacrificing flexibility.",
+            "DescriptionText": "Strong, practical, and stylish, these high-cut boots with reinforced straps will be just the thing you need for those long outdoor treks. The slip- and abrasion-resistant soles were constructed from a proprietary composite of recycled plastic and rubber to improve traction without sacrificing flexibility.",
             "Manufacturer": {
                 "Code": "HDH",
-                "Name": "Habidash"
+                "Name": "Habidash",
+                "UUID": "70ce6432-3a1e-45a1-8179-fe30a3ee54dc"
             },
             "Tags": [
                 "hdh_boots",
@@ -1894,11 +1897,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1908,9 +1918,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 23
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

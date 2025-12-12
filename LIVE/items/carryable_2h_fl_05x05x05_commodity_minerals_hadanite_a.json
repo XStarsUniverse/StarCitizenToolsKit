@@ -1225,6 +1225,7 @@
         "grade": 1,
         "name": "Hadanite",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "b9f3755d-125e-4af0-8876-5630fb5fcd9b",
@@ -1237,6 +1238,12 @@
             "Type": "Cargo.Small",
             "Name": "Hadanite",
             "Description": "A crystal oscillator sought out for its extremely high frequency of vibration which makes it useful in various applications.",
+            "DescriptionText": "A crystal oscillator sought out for its extremely high frequency of vibration which makes it useful in various applications.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1244,6 +1251,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "3e5fdc37-cb59-4fd3-8168-e3c538ab9722",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

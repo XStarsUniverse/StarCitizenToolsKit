@@ -1193,6 +1193,7 @@
         "grade": 1,
         "name": "Diamond",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "4cf04241-eeb3-4550-9e20-c409ddea6afc",
@@ -1205,6 +1206,12 @@
             "Type": "Cargo.Small",
             "Name": "Diamond",
             "Description": "An allotrope of the element carbon, diamonds form over billions of years under high heat and pressure. Extremely hard and thermally conductive.",
+            "DescriptionText": "An allotrope of the element carbon, diamonds form over billions of years under high heat and pressure. Extremely hard and thermally conductive.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1212,6 +1219,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "935255d1-2eda-414b-bdd7-207e57c26e36",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

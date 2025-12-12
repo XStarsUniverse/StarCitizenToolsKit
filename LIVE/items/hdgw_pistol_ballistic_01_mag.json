@@ -1916,6 +1916,7 @@
         "grade": 1,
         "name": "Salvo Frag Pistol Magazine (8 cap)",
         "tags": "hdgw_pistol_ballistic_01",
+        "required_tags": "",
         "manufacturer": "HDGW",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1929,9 +1930,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Salvo Frag Pistol Magazine (8 cap)",
             "Description": "Item Type: Magazine\\nCapacity: 8\\n\\nThis magazine for the Salvo Frag Pistol holds eight .50 caliber rounds.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "8"
+            },
+            "DescriptionText": "This magazine for the Salvo Frag Pistol holds eight .50 caliber rounds.",
             "Manufacturer": {
                 "Code": "HDGW",
-                "Name": "Hedeby Gunworks"
+                "Name": "Hedeby Gunworks",
+                "UUID": "9d3ee727-bb52-4ed2-bacf-47d93d8bb0d5"
             },
             "Tags": [
                 "hdgw_pistol_ballistic_01"
@@ -1990,7 +1997,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

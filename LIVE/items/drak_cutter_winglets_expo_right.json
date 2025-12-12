@@ -355,6 +355,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "DRAK_Cutter",
+        "required_tags": "DRAK_Cutter",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "e81b8b5c-cd60-4682-8839-f0103742aa69",
@@ -367,15 +368,19 @@
             "Type": "Misc.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "DRAK_Cutter"
             ],
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

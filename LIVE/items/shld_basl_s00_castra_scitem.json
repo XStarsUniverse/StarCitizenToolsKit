@@ -1100,6 +1100,7 @@
         "grade": 3,
         "name": "Castra",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BASL",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1113,17 +1114,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "Castra",
             "Description": "Item Type: Shield Generator\\nManufacturer: Basilisk \\nSize: 0\\nGrade: C\\nClass: Industrial\\n\\nWhen performance meets price for vehicle shield generators, the Castra is the clear winner. It has been a Whitley\u2019s Guide \u201cBest Buy\u201d for five consecutive years.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Basilisk",
+                "Size": "0",
+                "Grade": "C",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "When performance meets price for vehicle shield generators, the Castra is the clear winner. It has been a Whitley's Guide \u201cBest Buy\u201d for five consecutive years.",
             "Manufacturer": {
                 "Code": "BASL",
-                "Name": "Basilisk"
+                "Name": "Basilisk",
+                "UUID": "2948496b-45d2-41f8-bdff-97587f1e6981"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 170
+                "Health": 170,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.104,
@@ -1160,6 +1181,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 7.384,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 56,
+                                "MinimumFraction": 0.5,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 2,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 990
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 762,

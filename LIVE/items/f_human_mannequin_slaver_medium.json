@@ -966,6 +966,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "5189a299-ec0e-40c3-8cd7-68a4d4ea0c6b",
             "ClassName": "f_human_mannequin_slaver_medium",
@@ -977,10 +978,18 @@
             "Type": "ShopDisplay.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Armor_Undersuit",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "Female"
                     ],
@@ -992,11 +1001,18 @@
                     "Types": [
                         "Char_Armor_Undersuit"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Undersuit"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Torso",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "Female"
                     ],
@@ -1008,11 +1024,18 @@
                     "Types": [
                         "Char_Armor_Torso"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Torso"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Arms",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "Female"
                     ],
@@ -1024,11 +1047,18 @@
                     "Types": [
                         "Char_Armor_Arms"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Arms"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Legs",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "Female"
                     ],
@@ -1040,11 +1070,18 @@
                     "Types": [
                         "Char_Armor_Legs"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Legs"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Helmet",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "Female"
                     ],
@@ -1056,11 +1093,18 @@
                     "Types": [
                         "Char_Armor_Helmet"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Helmet"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Body_ItemPort",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "Female",
                         "NotBundled"
@@ -1068,16 +1112,31 @@
                     "Types": [
                         "Char_Body"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Body"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Backpack",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "Female"
                     ],
                     "Types": [
-                        "Char_Armor_Backpack"
+                        "Char_Armor_Backpack.Personal"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Backpack",
+                            "sub_types": [
+                                "Personal"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }

@@ -9451,6 +9451,7 @@
         "grade": 1,
         "name": "Fresnel \"Elysium\" Energy LMG",
         "tags": "stocked lmg volt_lmg_energy_01",
+        "required_tags": "",
         "manufacturer": "KLA",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -9464,9 +9465,19 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Fresnel \"Elysium\" Energy LMG",
             "Description": "Manufacturer: Verified Offworld Laser Technologies\\nItem Type: LMG\\nClass: Energy (Electron)\\n\\nBattery Size: 165\\nRate of Fire: 550 rpm - 220 rpm\\nEffective Range: 50m\\n\\nAttachments: Optics (S3), Underbarrel (S3)\\n\\nThe engineers at VOLT crafted the Fresnel LMG to bring a powerful energy weapon to the frontlines, one that can initiate a fight with a rapid spray of deadly blasts. As the weapon heats up, the shots become slower and more powerful, but be careful of overheating. A weapon of this magnitude demands a strong foundation; operators are encouraged to fire from a crouching position to allow for better recoil management.\\n\\nThe Elysium edition combines bright gold detailings of winged skulls with a navy blue.",
+            "DescriptionData": {
+                "Manufacturer": "Verified Offworld Laser Technologies",
+                "Item Type": "LMG",
+                "Class": "Energy (Electron)",
+                "Size": "165",
+                "Effective Range": "50m",
+                "Attachments": "Optics (S3), Underbarrel (S3)"
+            },
+            "DescriptionText": "The engineers at VOLT crafted the Fresnel LMG to bring a powerful energy weapon to the frontlines, one that can initiate a fight with a rapid spray of deadly blasts. As the weapon heats up, the shots become slower and more powerful, but be careful of overheating. A weapon of this magnitude demands a strong foundation; operators are encouraged to fire from a crouching position to allow for better recoil management.\n\nThe Elysium edition combines bright gold detailings of winged skulls with a navy blue.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "stocked",
@@ -9477,6 +9488,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "volt_lmg_energy_01"
                     ],
@@ -9484,35 +9497,66 @@
                         "volt_lmg_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "923fcb3c-ad02-4a9a-96c2-1fb61fb6c794",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9571,14 +9615,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Ammunition": {
                     "UUID": "a0a7f1b1-2ea7-43b0-bf12-0fbf8985e5c5",

@@ -1225,6 +1225,7 @@
         "grade": 1,
         "name": "Dolivine",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "33377146-d4a7-4e68-8deb-41728b3ceb46",
@@ -1237,6 +1238,12 @@
             "Type": "Cargo.Small",
             "Name": "Dolivine",
             "Description": "A dull green gemstone that is used decoratively but also can be used for industrial purposes thanks to its resistance to weathering and high density.",
+            "DescriptionText": "A dull green gemstone that is used decoratively but also can be used for industrial purposes thanks to its resistance to weathering and high density.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1244,6 +1251,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "7e86e2f4-6c31-41f8-9438-0fd8ad037426",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

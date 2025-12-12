@@ -1612,6 +1612,7 @@
         "grade": 1,
         "name": "Tau Plus (4x Telescopic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "NVTC",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1625,15 +1626,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "Tau Plus (4x Telescopic)",
             "Description": "Manufacturer: NV-TAC \\nType: Telescopic\\nAttachment Point: Optic\u00a0\u00a0\\nMagnification: 4x\\nAim Time: +25%\\nSize: 2\\n\\nThe Tau Plus 4x telescopic sight from NV-TAC uses a proprietary optics coating to ensure a crystal clear image regardless of light levels and conditions, allowing you to precisely engage targets at medium range.",
+            "DescriptionData": {
+                "Manufacturer": "NV-TAC",
+                "Type": "Telescopic",
+                "Attachment Point": "Optic",
+                "Magnification": "4x",
+                "Size": "2"
+            },
+            "DescriptionText": "The Tau Plus 4x telescopic sight from NV-TAC uses a proprietary optics coating to ensure a crystal clear image regardless of light levels and conditions, allowing you to precisely engage targets at medium range.",
             "Manufacturer": {
                 "Code": "NVTC",
-                "Name": "NV-TAC"
+                "Name": "NV-TAC",
+                "UUID": "f113387e-0905-489a-829d-8cebfdc19e66"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

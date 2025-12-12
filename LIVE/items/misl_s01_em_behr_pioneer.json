@@ -1008,6 +1008,7 @@
         "grade": 1,
         "name": "Pioneer I Missile",
         "tags": "BEHR EM flightReady",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Missile.Missile",
         "stdItem": {
@@ -1021,9 +1022,16 @@
             "Type": "Missile.Missile",
             "Name": "Pioneer I Missile",
             "Description": "Manufacturer: Behring\\nTracking Signal: Electromagnetic\\nSize: 1\\n\\nBehring prides itself on dependability and the Pioneer is no exception. The updated Oracle EM tracking system has proven itself time and again in numerous consumer-testing reports against similarly classed proximity missiles.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Tracking Signal": "Electromagnetic",
+                "Size": "1"
+            },
+            "DescriptionText": "Behring prides itself on dependability and the Pioneer is no exception. The updated Oracle EM tracking system has proven itself time and again in numerous consumer-testing reports against similarly classed proximity missiles.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "BEHR",
@@ -1035,8 +1043,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 25
+                "Health": 25,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

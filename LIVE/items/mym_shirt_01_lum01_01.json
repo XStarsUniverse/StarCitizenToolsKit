@@ -1822,6 +1822,7 @@
         "grade": 1,
         "name": "One Light Shirt Red",
         "tags": "mym_shirt Set_01_lum01 Color_01",
+        "required_tags": "",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
             "UUID": "8dbec337-9a0b-400d-887f-790e53d0b2e2",
@@ -1834,6 +1835,12 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "One Light Shirt Red",
             "Description": "During Luminalia, we're all one family. Celebrate with your loved ones in immense joy with this festive shirt from City Lights, crafted with high-quality, ultra soft fabric that's made to last.",
+            "DescriptionText": "During Luminalia, we're all one family. Celebrate with your loved ones in immense joy with this festive shirt from City Lights, crafted with high-quality, ultra soft fabric that's made to last.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "mym_shirt",
                 "Set_01_lum01",
@@ -1843,11 +1850,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1857,9 +1871,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

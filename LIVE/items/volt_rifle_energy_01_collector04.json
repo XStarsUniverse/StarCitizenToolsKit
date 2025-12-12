@@ -10304,6 +10304,7 @@
         "grade": 1,
         "name": "Parallax \"Fun Military Tooth\" Energy Assault Rifle",
         "tags": "stocked volt_rifle_energy_01 rifle",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -10317,9 +10318,19 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Parallax \"Fun Military Tooth\" Energy Assault Rifle",
             "Description": "Manufacturer: Verified Offworld Laser Technologies\\nItem Type: Assault Rifle\\nClass: Energy (Electron)\\n\\nBattery Size: 80\\nRate of Fire: 200 rpm - Beam\\nEffective Range: 30 m\\n\\nAttachments: Optics (S2), Underbarrel (S2)\\n\\nWith the Parallax, VOLT offers consumers a rugged assault rifle design with features like a larger-than-average battery and a unique actuator that enables the weapon to scale up into a persistent beam as it fires.\\n\\nThis modified version of the original rifle consists of a lunar surface inspired camo pattern and a small kopion fang strapped to the muzzle.",
+            "DescriptionData": {
+                "Manufacturer": "Verified Offworld Laser Technologies",
+                "Item Type": "Assault Rifle",
+                "Class": "Energy (Electron)",
+                "Size": "80",
+                "Effective Range": "30 m",
+                "Attachments": "Optics (S2), Underbarrel (S2)"
+            },
+            "DescriptionText": "With the Parallax, VOLT offers consumers a rugged assault rifle design with features like a larger-than-average battery and a unique actuator that enables the weapon to scale up into a persistent beam as it fires.\n\nThis modified version of the original rifle consists of a lunar surface inspired camo pattern and a small kopion fang strapped to the muzzle.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "e2787f3b-b892-4276-bb2e-eb2b4dc9666b"
             },
             "Tags": [
                 "stocked",
@@ -10330,6 +10341,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "volt_rifle_energy_01"
                     ],
@@ -10337,35 +10350,66 @@
                         "volt_rifle_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "3efb1be1-8935-4124-8bf0-aec410297785",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -10424,14 +10468,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Ammunition": {
                     "UUID": "fe49042d-02d0-4089-9f8a-41748aaf0de2",

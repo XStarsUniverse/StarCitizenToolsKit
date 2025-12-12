@@ -479,6 +479,7 @@
         "grade": 1,
         "name": "Miner's Horn",
         "tags": "Plant",
+        "required_tags": "",
         "stdItem": {
             "UUID": "22a9f3ce-f741-49d1-9894-efab2c698819",
             "ClassName": "harvestable_base_Armillaria_Lev",
@@ -490,6 +491,12 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Miner's Horn",
             "Description": "First discovered in the sewer lines at the QV Mining Station built into the Delemar asteroid in Nyx, this quick growing fungus has become a useful manufacturing component for the settlers of Levski thanks to the strong mycelium fibers that can be dried and used in a variety of ways.",
+            "DescriptionText": "First discovered in the sewer lines at the QV Mining Station built into the Delemar asteroid in Nyx, this quick growing fungus has become a useful manufacturing component for the settlers of Levski thanks to the strong mycelium fibers that can be dried and used in a variety of ways.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Plant"
             ],
@@ -497,25 +504,42 @@
                 {
                     "PortName": "slot_01",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Tags": [
                         "slot_01"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "slot_02",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Tags": [
                         "slot_02"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Place"
             ]
         }
     }

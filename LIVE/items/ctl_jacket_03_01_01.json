@@ -1988,6 +1988,7 @@
         "grade": 1,
         "name": "Lanxi Jacket Gray",
         "tags": "ctl_jacket set_03 Color_01",
+        "required_tags": "",
         "manufacturer": "CTL",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2001,9 +2002,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Lanxi Jacket Gray",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nThis simple knit jacket from City Lights features a classic cut and chic microseam technology to create a thoroughly modern addition to any wardrobe. It also features a stand collar to help keep you warm.\\n\\nWomen's sizes currently out of stock.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "This simple knit jacket from City Lights features a classic cut and chic microseam technology to create a thoroughly modern addition to any wardrobe. It also features a stand collar to help keep you warm.\n\nWomen's sizes currently out of stock.",
             "Manufacturer": {
                 "Code": "CTL",
-                "Name": "City Lights"
+                "Name": "City Lights",
+                "UUID": "5ca8a669-44c2-40e4-89b2-7a5da790b832"
             },
             "Tags": [
                 "ctl_jacket",
@@ -2014,11 +2020,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2028,6 +2041,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2043,6 +2065,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 29
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

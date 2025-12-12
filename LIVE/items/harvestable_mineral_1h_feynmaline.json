@@ -1562,6 +1562,7 @@
         "grade": 1,
         "name": "Feynmaline",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d7a21cac-3c2b-4695-95b7-2042d8f5755e",
             "ClassName": "Harvestable_Mineral_1H_Feynmaline",
@@ -1573,13 +1574,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Feynmaline",
             "Description": "The paramorphic crystalline structure of this mineral is extremely volatile. When extra energy is introduced, as is typical with modern mining, the ore will often explosively degrade into the more stably structured Janalite. This instability makes Feynamline very dangerous to acquire but also extremely valuable as an industrial anti-matter precursor if it can be properly harvested.",
+            "DescriptionText": "The paramorphic crystalline structure of this mineral is extremely volatile. When extra energy is introduced, as is typical with modern mining, the ore will often explosively degrade into the more stably structured Janalite. This instability makes Feynamline very dangerous to acquire but also extremely valuable as an industrial anti-matter precursor if it can be properly harvested.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "7310c15d-359c-42b4-b61e-7da3d0da3384",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

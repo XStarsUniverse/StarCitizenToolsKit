@@ -1782,6 +1782,7 @@
         "grade": 1,
         "name": "Walesko",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "stdItem": {
             "UUID": "f3f3f5b2-c8d2-43bd-ad68-6871ad3b2a6b",
             "ClassName": "none_consumable_accesschip_level_2",
@@ -1793,6 +1794,12 @@
             "Type": "FPS_Consumable.Hacking",
             "Name": "Walesko",
             "Description": "Instructions for how to build this simple cryptokey were first published publicly in 2887 by political activist Aris Walesko who had hoped that it would lead to greater governmental transparency. Though not up to the standards of most modern security protocols, this slow and unreliable device it is still in use today owing to its ease of construction and wide availability from numerous small manufacturers.",
+            "DescriptionText": "Instructions for how to build this simple cryptokey were first published publicly in 2887 by political activist Aris Walesko who had hoped that it would lead to greater governmental transparency. Though not up to the standards of most modern security protocols, this slow and unreliable device it is still in use today owing to its ease of construction and wide availability from numerous small manufacturers.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1802,8 +1809,22 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
-            }
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Equip",
+                "Offhandequip",
+                "Store",
+                "Offhandstore",
+                "Blinkinglight_notshown",
+                "Stopblinking_notshown"
+            ]
         }
     }
 }

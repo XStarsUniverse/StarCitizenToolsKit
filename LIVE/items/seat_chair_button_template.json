@@ -1226,6 +1226,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1ba0ec61-9b2c-475b-ac2d-540cc5522a04",
             "ClassName": "Seat_Chair_Button_Template",
@@ -1236,7 +1237,19 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit",
+                "Activate",
+                "Deactivate"
+            ]
         }
     }
 }

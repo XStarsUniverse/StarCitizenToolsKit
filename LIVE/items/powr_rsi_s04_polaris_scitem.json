@@ -1174,6 +1174,7 @@
         "grade": 1,
         "name": "Stellate",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1187,17 +1188,37 @@
             "Type": "PowerPlant.Power",
             "Name": "Stellate",
             "Description": "Item Type: Power Plant\\nManufacturer: Sakura Sun\\nSize: 4\\nGrade: Bespoke\\nClass: Civilian\\n\\nSakura Sun worked with Origin to fine tune the Stellate into the perfect power plant for the 890 Jump, providing the power and performance necessary for a ship of such grand design.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Sakura Sun",
+                "Size": "4",
+                "Grade": "Bespoke",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Sakura Sun worked with Origin to fine tune the Stellate into the perfect power plant for the 890 Jump, providing the power and performance necessary for a ship of such grand design.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 100,
+                "Maximum": 27500,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 9900
+                "Health": 9900,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1220,6 +1241,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 337500,
@@ -1237,6 +1262,39 @@
             },
             "PowerPlant": {
                 "Output": 337500
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 27,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 27,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 12200
+                        }
+                    }
+                ]
             }
         }
     }

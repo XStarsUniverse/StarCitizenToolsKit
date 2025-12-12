@@ -1671,6 +1671,7 @@
         "grade": 1,
         "name": "Chicken Pesto Omni Pack",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "fed3908f-5c2f-4aa2-ba0b-2e7c9f830d98",
@@ -1683,9 +1684,15 @@
             "Type": "Food.Tin",
             "Name": "Chicken Pesto Omni Pack",
             "Description": "NDR: 56\\nEffects: Hypertrophic, Hypo-Metabolic\\n\\nOmni Packs use premium certified organic ingredients to create a complete balanced ready-to-eat meal with a premium taste.",
+            "DescriptionData": {
+                "NDR": "56",
+                "Effects": "Hypertrophic, Hypo-Metabolic"
+            },
+            "DescriptionText": "Omni Packs use premium certified organic ingredients to create a complete balanced ready-to-eat meal with a premium taste.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1693,12 +1700,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "tinCan"
-            }
+                "NutritionalDensityRating": "56",
+                "Effects": [
+                    "Hypertrophic",
+                    "Hypo-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "tinCan",
+                "ContainerTypeTag": "tinCan",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

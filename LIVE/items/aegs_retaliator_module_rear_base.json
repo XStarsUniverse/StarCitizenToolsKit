@@ -1105,6 +1105,7 @@
         "grade": 3,
         "name": "Retaliator Unladen Rear Module",
         "tags": "AEGS_Retaliator_Module_Rear",
+        "required_tags": "AEGS_Retaliator_Module_Rear",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "2085bd4c-f2f3-4630-aee6-da2d455e92ac",
@@ -1117,9 +1118,11 @@
             "Type": "Module.UNDEFINED",
             "Name": "Retaliator Unladen Rear Module",
             "Description": "This empty rear module comes equipped by default on the Retaliator's base chassis.",
+            "DescriptionText": "This empty rear module comes equipped by default on the Retaliator's base chassis.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Retaliator_Module_Rear"
@@ -1128,14 +1131,25 @@
                 {
                     "PortName": "hardpoint_module_oc",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "fe618466-492e-4c68-bd9d-e517a02434ec",
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_rear_bay_door",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
+                    "EquippedItem": "1d954c41-d91c-4791-aab6-8eac99aa6b5d",
                     "Uneditable": false
                 }
             ],
@@ -1145,7 +1159,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

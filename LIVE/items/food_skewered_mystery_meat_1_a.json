@@ -1482,6 +1482,7 @@
         "grade": 1,
         "name": "Meat Skewer",
         "tags": "mysterymeat",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "37bc36b8-3b35-461e-a553-3a83130fd2e7",
@@ -1494,9 +1495,15 @@
             "Type": "Food.Consumable",
             "Name": "Meat Skewer",
             "Description": "NDR: 20\\nEffects: Immune Suppressing\\n\\nChunks of what is most definitely meat that have been skewered and roasted.\\n",
+            "DescriptionData": {
+                "NDR": "20",
+                "Effects": "Immune Suppressing"
+            },
+            "DescriptionText": "Chunks of what is most definitely meat that have been skewered and roasted.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "mysterymeat"
@@ -1507,12 +1514,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "20",
+                "Effects": [
+                    "Immune Suppressing"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

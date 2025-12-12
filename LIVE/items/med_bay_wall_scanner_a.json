@@ -3631,6 +3631,7 @@
         "grade": 1,
         "name": "Medical Bed",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "63630a0c-9dbd-4e0d-8dfa-b89defc43dd2",
             "ClassName": "med_bay_wall_scanner_a",
@@ -3642,28 +3643,58 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Medical Bed",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Mattress",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Tags": [
                         "Sleep"
                     ],
                     "Types": [
                         "Seat"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Seat"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Pillow",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Uneditable": false
                 },
                 {
                     "PortName": "Console",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Liedown",
+                "Exit",
+                "Sleep",
+                "Proccliplowertoenter",
+                "Procclipraisetoenter",
+                "Openlootingui",
+                "Examine",
+                "Examinebody",
+                "Scanbody",
+                "Scanner_exit",
+                "Scanner_enter"
             ]
         }
     }

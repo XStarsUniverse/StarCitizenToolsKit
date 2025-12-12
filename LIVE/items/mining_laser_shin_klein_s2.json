@@ -2544,6 +2544,7 @@
         "grade": 1,
         "name": "Klein-S2 Mining Laser",
         "tags": "flightReady weaponMountUsable miningMount",
+        "required_tags": "miningMount",
         "manufacturer": "SHIN",
         "classification": "Ship.Mining.Gun",
         "stdItem": {
@@ -2557,9 +2558,24 @@
             "Type": "WeaponMining.Gun",
             "Name": "Klein-S2 Mining Laser",
             "Description": "Manufacturer: Shubin Interstellar\\nItem Type: Mining Laser \\nSize: 2\\n\\nOptimal Range: 60m\\nMaximum Range: 180m\\n\\nMining Laser Power: 720 - 3600\\nExtraction Laser Power: 2775\\n\\nModule Slots: 1\\n\\nResistance: -45%\\nOptimal Charge Window Size: +20%\\nInert Material Level: -40%\\n\\nLaser Instability: +35%\\n\\nShubin designed the Klein-S2 to generate a powerful laser that makes mining faster. This power incurs additional risk by boosting a laser's instability, but if used correctly, the Klein-S2 can quickly reap rewards for the careful miner.",
+            "DescriptionData": {
+                "Manufacturer": "Shubin Interstellar",
+                "Item Type": "Mining Laser",
+                "Size": "2",
+                "Optimal Range": "60m",
+                "Maximum Range": "180m",
+                "Mining Laser Power": "720 - 3600",
+                "Extraction Laser Power": "2775",
+                "Module Slots": "1",
+                "Resistance": "-45%",
+                "Optimal Charge Window Size": "+20%",
+                "Laser Instability": "+35%"
+            },
+            "DescriptionText": "Shubin designed the Klein-S2 to generate a powerful laser that makes mining faster. This power incurs additional risk by boosting a laser's instability, but if used correctly, the Klein-S2 can quickly reap rewards for the careful miner.",
             "Manufacturer": {
                 "Code": "SHIN",
-                "Name": "Shubin Interstellar"
+                "Name": "Shubin Interstellar",
+                "UUID": "ab35f85f-919f-4457-8d58-4e885ea6c5c0"
             },
             "Tags": [
                 "flightReady",
@@ -2570,6 +2586,8 @@
                 {
                     "PortName": "BONE_ItemPort_Consumable_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable1"
@@ -2578,15 +2596,33 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2596,8 +2632,37 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

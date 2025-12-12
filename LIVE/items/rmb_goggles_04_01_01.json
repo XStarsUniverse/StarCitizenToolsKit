@@ -1391,6 +1391,7 @@
         "grade": 1,
         "name": "XS-90 Explorer Goggles",
         "tags": "rmb_goggles Set_04 Texture_01 Color_01",
+        "required_tags": "Protos",
         "manufacturer": "RMB",
         "stdItem": {
             "UUID": "aa482baf-49f5-4d73-957a-cbf593d62a89",
@@ -1403,9 +1404,11 @@
             "Type": "Char_Accessory_Eyes.UNDEFINED",
             "Name": "XS-90 Explorer Goggles",
             "Description": "With a sleek design suitable for all face shapes, the XS-98 Explorer goggles ensure a fog-free view in any climate, and come with a patented coating that offers strong UV-protection and cuts down on unwanted glare.",
+            "DescriptionText": "With a sleek design suitable for all face shapes, the XS-98 Explorer goggles ensure a fog-free view in any climate, and come with a patented coating that offers strong UV-protection and cuts down on unwanted glare.",
             "Manufacturer": {
                 "Code": "RMB",
-                "Name": "Rambler"
+                "Name": "Rambler",
+                "UUID": "e7489831-23c1-4629-ab36-221bb9bad06f"
             },
             "Tags": [
                 "rmb_goggles",
@@ -1417,7 +1420,16 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Inspect"
+            ]
         }
     }
 }

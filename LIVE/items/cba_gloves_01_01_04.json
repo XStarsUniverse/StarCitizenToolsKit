@@ -1769,6 +1769,7 @@
         "grade": 1,
         "name": "Arcus Gloves Yellow",
         "tags": "cba_gloves Set_01 Color_04",
+        "required_tags": "",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -1782,9 +1783,14 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "Arcus Gloves Yellow",
             "Description": "Temp. Rating: -35 / 25 \u00b0C\\n\\nThe Arcus gloves are thin enough to wear on everyday excursions, yet capable of keeping your hands warm in frigid conditions. Textured touch fingertips even allow you to easily access your mobi and other touch screens without removing your gloves.",
+            "DescriptionData": {
+                "Temp. Rating": "-35 / 25 \u00b0C"
+            },
+            "DescriptionText": "The Arcus gloves are thin enough to wear on everyday excursions, yet capable of keeping your hands warm in frigid conditions. Textured touch fingertips even allow you to easily access your mobi and other touch screens without removing your gloves.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_gloves",
@@ -1795,11 +1801,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1809,9 +1822,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -30,
                 "Maximum": 25
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

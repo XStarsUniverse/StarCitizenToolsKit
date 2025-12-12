@@ -5794,6 +5794,7 @@
         "grade": 3,
         "name": "Retaliator Cargo Rear Module",
         "tags": "AEGS_Retaliator_Module_Rear",
+        "required_tags": "AEGS_Retaliator_Module_Rear",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "429ea43c-5157-4617-bc13-23ca093cc678",
@@ -5806,9 +5807,11 @@
             "Type": "Module.UNDEFINED",
             "Name": "Retaliator Cargo Rear Module",
             "Description": "Retaliator owners can equip their ship with this rear module to allow for storage of an additional 36 SCU of cargo.",
+            "DescriptionText": "Retaliator owners can equip their ship with this rear module to allow for storage of an additional 36 SCU of cargo.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Retaliator_Module_Rear"
@@ -5817,11 +5820,17 @@
                 {
                     "PortName": "hardpoint_module_oc",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "e4d7c029-8cf4-4f47-91a4-f6a571c1883b",
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_lift",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "9288c70c-cfdb-4e2e-8ac7-c4103897d06d",
                     "Uneditable": false
                 }
             ],
@@ -5831,7 +5840,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.68,
@@ -5890,6 +5901,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1.68,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 52,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

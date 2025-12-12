@@ -1925,6 +1925,7 @@
         "grade": 1,
         "name": "Bracewell Boots Blue and Grey",
         "tags": "oct_boots Set_01 Material_04 Color_01",
+        "required_tags": "",
         "manufacturer": "OCT",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1938,9 +1939,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Bracewell Boots Blue and Grey",
             "Description": "Durable, dependable, and comfortable. The Bracewell are high ankle boots designed to thrive amidst unpredictable weather conditions with a water-resistant finish, high-traction soles, and a toggle-locked top enclosure to help keep out any precipitation.",
+            "DescriptionText": "Durable, dependable, and comfortable. The Bracewell are high ankle boots designed to thrive amidst unpredictable weather conditions with a water-resistant finish, high-traction soles, and a toggle-locked top enclosure to help keep out any precipitation.",
             "Manufacturer": {
                 "Code": "OCT",
-                "Name": "Octagon"
+                "Name": "Octagon",
+                "UUID": "4a05001d-0511-415f-8e32-618fbd75242b"
             },
             "Tags": [
                 "oct_boots",
@@ -1952,11 +1955,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1966,9 +1976,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

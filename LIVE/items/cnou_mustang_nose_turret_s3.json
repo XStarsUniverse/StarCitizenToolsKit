@@ -916,6 +916,7 @@
         "grade": 1,
         "name": "Consolidated Outland Mustang Nose Turret",
         "tags": "flightReady",
+        "required_tags": "CNOU_Mustang_Base",
         "manufacturer": "CNOU",
         "stdItem": {
             "UUID": "ebc7badd-40a4-4fda-9d80-7c3b33c492c0",
@@ -928,9 +929,11 @@
             "Type": "Turret.BallTurret",
             "Name": "Consolidated Outland Mustang Nose Turret",
             "Description": "Consolidated Outland Mustang Nose Turret",
+            "DescriptionText": "Consolidated Outland Mustang Nose Turret",
             "Manufacturer": {
                 "Code": "CNOU",
-                "Name": "Consolidated Outland"
+                "Name": "Consolidated Outland",
+                "UUID": "ec227ef3-fb08-4897-abdb-579eb4e87c25"
             },
             "Tags": [
                 "flightReady"
@@ -939,16 +942,36 @@
                 {
                     "PortName": "hardpoint_class_1_left",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_class_1_right",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -959,7 +982,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

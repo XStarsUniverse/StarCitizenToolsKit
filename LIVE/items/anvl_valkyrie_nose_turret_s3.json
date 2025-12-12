@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "PC2 Dual S3 Mount",
         "tags": "",
+        "required_tags": "ANVL_Valkyrie",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "d2a6b563-5c2d-4334-b3b8-22ab4fc84c39",
@@ -885,24 +886,46 @@
             "Type": "Turret.GunTurret",
             "Name": "PC2 Dual S3 Mount",
             "Description": "PC2 Dual S3 Mount",
+            "DescriptionText": "PC2 Dual S3 Mount",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_left",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_right",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -913,7 +936,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

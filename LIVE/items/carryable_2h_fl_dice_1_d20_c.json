@@ -1003,6 +1003,7 @@
         "grade": 1,
         "name": "Twenty-Sided Plushie Blue",
         "tags": "plush dice",
+        "required_tags": "",
         "stdItem": {
             "UUID": "f9b203fe-3436-4ed5-a4db-4a7870e811cc",
             "ClassName": "Carryable_2H_FL_dice_1_d20_c",
@@ -1014,6 +1015,12 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Twenty-Sided Plushie Blue",
             "Description": "Ready to roll? Make your randomly generated numbers a little more squeezable with this plush icosahedron. Each surface of the large blue die features a different easy-to-read number.",
+            "DescriptionText": "Ready to roll? Make your randomly generated numbers a little more squeezable with this plush icosahedron. Each surface of the large blue die features a different easy-to-read number.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "plush",
                 "dice"
@@ -1022,7 +1029,12 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

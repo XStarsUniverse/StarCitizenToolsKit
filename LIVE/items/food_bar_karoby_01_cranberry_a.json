@@ -1676,6 +1676,7 @@
         "grade": 1,
         "name": "Karoby Energy Bar (Cranberry, Green Tea & Carob)",
         "tags": "karoby cranberry",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "b2497354-217a-4310-8ab8-d3c633d2e8a2",
@@ -1688,9 +1689,15 @@
             "Type": "Food.Bar",
             "Name": "Karoby Energy Bar (Cranberry, Green Tea & Carob)",
             "Description": "NDR: 18\\nEffects: Energizing\\n\\nMade with nutritious, wholesome ingredients, this great tasting bar is formulated to provide sustained energy to help you maintain your best performance.",
+            "DescriptionData": {
+                "NDR": "18",
+                "Effects": "Energizing"
+            },
+            "DescriptionText": "Made with nutritious, wholesome ingredients, this great tasting bar is formulated to provide sustained energy to help you maintain your best performance.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "karoby",
@@ -1702,12 +1709,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bar"
-            }
+                "NutritionalDensityRating": "18",
+                "Effects": [
+                    "Energizing"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "bar",
+                "ContainerTypeTag": "bar",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

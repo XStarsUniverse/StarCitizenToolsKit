@@ -1181,6 +1181,7 @@
         "grade": 1,
         "name": "",
         "tags": "Banu",
+        "required_tags": "",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
             "UUID": "8f5a3b7d-8bbb-461d-a9c6-5a4d23c1bb0b",
@@ -1193,6 +1194,12 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Banu"
             ],
@@ -1201,9 +1208,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

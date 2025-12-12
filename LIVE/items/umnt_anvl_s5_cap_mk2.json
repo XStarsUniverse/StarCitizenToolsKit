@@ -502,6 +502,7 @@
         "grade": 1,
         "name": "Anvil Hornet Ghost Mk II Center Cap",
         "tags": "flightReady $ANVL_Hornet_Mk2_Center",
+        "required_tags": "ANVL_Hornet_Mk2_Center",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "167138ef-b585-4a7b-8808-a70ba93d0390",
@@ -514,9 +515,11 @@
             "Type": "Module.UNDEFINED",
             "Name": "Anvil Hornet Ghost Mk II Center Cap",
             "Description": "This special center cap designed for the Hornet Ghost features additional faceted surfaces to potentially help mitigate incoming radar energy.",
+            "DescriptionText": "This special center cap designed for the Hornet Ghost features additional faceted surfaces to potentially help mitigate incoming radar energy.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "flightReady",
@@ -528,7 +531,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 100
+                "Health": 100,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

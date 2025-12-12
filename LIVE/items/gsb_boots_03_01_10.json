@@ -1873,6 +1873,7 @@
         "grade": 1,
         "name": "Toughlife Boots White",
         "tags": "gsb_boots Set_03 Color_10",
+        "required_tags": "",
         "manufacturer": "GSB",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1886,9 +1887,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Toughlife Boots White",
             "Description": "Grindstone's done it again. The Toughlife is an all-purpose workboot designed to provide comfort, durability and quality. Featuring a reinforced composite toe and lasercut sole to maximize traction on all surfaces, Toughlife is sure to be your dependable boot, day in and day out.",
+            "DescriptionText": "Grindstone's done it again. The Toughlife is an all-purpose workboot designed to provide comfort, durability and quality. Featuring a reinforced composite toe and lasercut sole to maximize traction on all surfaces, Toughlife is sure to be your dependable boot, day in and day out.",
             "Manufacturer": {
                 "Code": "GSB",
-                "Name": "GSB"
+                "Name": "GSB",
+                "UUID": "6d4b7375-8e0c-445a-a243-21f8f94f99cb"
             },
             "Tags": [
                 "gsb_boots",
@@ -1899,11 +1902,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1913,9 +1923,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -3,
                 "Maximum": 28
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

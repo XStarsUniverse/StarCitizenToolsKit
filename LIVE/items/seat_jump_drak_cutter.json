@@ -1133,6 +1133,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "6f759d3a-b80e-4db1-bd34-86ff20fb7a72",
             "ClassName": "Seat_Jump_DRAK_Cutter",
@@ -1143,7 +1144,19 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit",
+                "Open",
+                "Close"
+            ]
         }
     }
 }

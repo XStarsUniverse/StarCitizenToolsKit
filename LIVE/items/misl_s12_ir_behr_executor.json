@@ -1011,6 +1011,7 @@
         "grade": 1,
         "name": "EX-T12-IR \"Executor\" Torpedo",
         "tags": "BEHR IR flightReady",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Missile.Torpedo",
         "stdItem": {
@@ -1024,9 +1025,16 @@
             "Type": "Missile.Torpedo",
             "Name": "EX-T12-IR \"Executor\" Torpedo",
             "Description": "Manufacturer: Behring\\nTracking Signal: Infared\\nSize: 12\\n\\nBehring prides itself on crafting ordnance that is as dependable as it is powerful and the EX-T12 \"Executor\" is no exception. Designed as an anti-ship and anti-installation weapon, Behring engineers worked tirelessly to ensure this torpedo was a bold strategic statement.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Tracking Signal": "Infared",
+                "Size": "12"
+            },
+            "DescriptionText": "Behring prides itself on crafting ordnance that is as dependable as it is powerful and the EX-T12 \"Executor\" is no exception. Designed as an anti-ship and anti-installation weapon, Behring engineers worked tirelessly to ensure this torpedo was a bold strategic statement.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "BEHR",
@@ -1038,8 +1046,19 @@
                 "Length": 3.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 667
+                "Health": 667,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

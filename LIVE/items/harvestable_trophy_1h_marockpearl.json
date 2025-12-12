@@ -1343,6 +1343,7 @@
         "grade": 1,
         "name": "Marok Gem",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "680352e9-5541-44b9-983a-a1a2802223f4",
             "ClassName": "Harvestable_Trophy_1H_MarockPearl",
@@ -1354,10 +1355,41 @@
             "Type": "Misc.Harvestable",
             "Name": "Marok Gem",
             "Description": "The marok has a gizzard, which takes food that has been previously swallowed from the stomach and \"chews\" it before passing it back into the stomach to be digested. To help this process, the marok's body secretes a substance that hardens into a large crystalline stone that stays in the gizzard and helps food get pulverized more efficiently. The stone has unique conductive properties that make it sought-after for use in computer chips.",
+            "DescriptionText": "The marok has a gizzard, which takes food that has been previously swallowed from the stomach and \"chews\" it before passing it back into the stomach to be digested. To help this process, the marok's body secretes a substance that hardens into a large crystalline stone that stays in the gizzard and helps food get pulverized more efficiently. The stone has unique conductive properties that make it sought-after for use in computer chips.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "0f7378e2-2106-4c40-abd6-927cb91ba60d",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

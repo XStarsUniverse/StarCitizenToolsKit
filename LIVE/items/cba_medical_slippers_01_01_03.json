@@ -1834,6 +1834,7 @@
         "grade": 1,
         "name": "GME 240-15 Patient Slippers Primrose",
         "tags": "cba_medical_slippers Set_01 Color_03",
+        "required_tags": "",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1847,9 +1848,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "GME 240-15 Patient Slippers Primrose",
             "Description": "The standard GME 240-15 Patient Slippers offer necessary foot protection and comfort during a patient's visit to a medical facility. Constructed from the same antibacterial fabric as the GME 338-10 Medical Gown, the slippers feature an easy on/off design and an anti-slip coating on the sole.",
+            "DescriptionText": "The standard GME 240-15 Patient Slippers offer necessary foot protection and comfort during a patient's visit to a medical facility. Constructed from the same antibacterial fabric as the GME 338-10 Medical Gown, the slippers feature an easy on/off design and an anti-slip coating on the sole.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_medical_slippers",
@@ -1860,11 +1863,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1874,9 +1884,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 10,
                 "Maximum": 35
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

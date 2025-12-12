@@ -1806,6 +1806,7 @@
         "grade": 1,
         "name": "@item_Namevncl_melee_01_tint03",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "UTFL",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1819,9 +1820,11 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "@item_Namevncl_melee_01_tint03",
             "Description": "@item_Descvncl_melee_01_tint03",
+            "DescriptionText": "@item_Descvncl_melee_01_tint03",
             "Manufacturer": {
                 "Code": "UTFL",
-                "Name": "UltiFlex"
+                "Name": "UltiFlex",
+                "UUID": "da264d7b-755b-48a2-9580-4adc17ff7ad5"
             },
             "Tags": [
                 "knife"
@@ -1831,6 +1834,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

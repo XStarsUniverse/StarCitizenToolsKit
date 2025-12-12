@@ -1076,6 +1076,7 @@
         "grade": 4,
         "name": "RPEL",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SECO",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1089,17 +1090,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "RPEL",
             "Description": "Item Type: Shield Generator\\nManufacturer: Seal Corporation\\nSize: 2\\nGrade: D\\nClass: Civilian\\n\\nSee why more people trust Seal Corporation to protect their ship than any other company. With the RPEL shield generator you can be certain you\u2019ll be sealed off from danger.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Seal Corporation",
+                "Size": "2",
+                "Grade": "D",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "See why more people trust Seal Corporation to protect their ship than any other company. With the RPEL shield generator you can be certain you'll be sealed off from danger.",
             "Manufacturer": {
                 "Code": "SECO",
-                "Name": "Seal Corporation"
+                "Name": "Seal Corporation",
+                "UUID": "f91beb30-915c-42f6-9b1f-f5bd74633fd6"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 550
+                "Health": 550,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 3.5,
@@ -1136,6 +1157,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2.5,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 211,
+                                "MinimumFraction": 0.6666667,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 3,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1130
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 3840,

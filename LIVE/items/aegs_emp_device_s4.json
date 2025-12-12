@@ -822,6 +822,7 @@
         "grade": 1,
         "name": "REP-8 EMP Generator",
         "tags": "flightReady AEGS_EMP_Device",
+        "required_tags": "AEGS_EMP_Device",
         "classification": "Ship.EMP",
         "stdItem": {
             "UUID": "5b592245-58a7-4ce9-9c96-3145d0424da8",
@@ -834,6 +835,16 @@
             "Type": "EMP.UNDEFINED",
             "Name": "REP-8 EMP Generator",
             "Description": "Manufacturer: Behring\\nItem Type: EMP Generator\\n\\nThe REP-8 is a highly regarded EMP-focused burst generator from Behring. It balances a manageable charge time with a strong blast of distortion damage that knocks out electronic components caught within its radius. Solid engineering and centuries of use have made this a standard non-lethal deterrent across the Empire.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "EMP Generator"
+            },
+            "DescriptionText": "The REP-8 is a highly regarded EMP-focused burst generator from Behring. It balances a manageable charge time with a strong blast of distortion damage that knocks out electronic components caught within its radius. Solid engineering and centuries of use have made this a standard non-lethal deterrent across the Empire.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady",
                 "AEGS_EMP_Device"
@@ -843,8 +854,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 150
+                "Health": 150,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Emp": {
                 "chargeTime": 20,
@@ -904,6 +926,24 @@
                 "OverclockPerformance": 0.2,
                 "PowerToEM": 2,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

@@ -928,6 +928,7 @@
         "grade": 1,
         "name": "Drake Ship Chair",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "ecf0e75e-f5d1-4631-a7f6-90e75c8f8ecc",
@@ -940,15 +941,21 @@
             "Type": "Usable.Cargo",
             "Name": "Drake Ship Chair",
             "Description": "Chair Decoration",
+            "DescriptionText": "Chair Decoration",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

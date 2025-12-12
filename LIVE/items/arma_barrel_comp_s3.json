@@ -1571,6 +1571,7 @@
         "grade": 1,
         "name": "Sion Compensator3",
         "tags": "FPS_Barrel ballistic_attach",
+        "required_tags": "",
         "manufacturer": "ARMA",
         "classification": "Ship.WeaponAttachment.Barrel",
         "stdItem": {
@@ -1584,9 +1585,17 @@
             "Type": "WeaponAttachment.Barrel",
             "Name": "Sion Compensator3",
             "Description": "Manufacturer: ArmaMod\\nType: Ballistic Compensator\\nAttachment Point: Barrel\\nSize: 3\\n\\nAudible Range: +20%\\nRecoil Stability: +30%\\nRecoil Smoothness: +30% \\n\\nMaintain accuracy by countering muzzle rise with the Sion Compensator3. ArmaMod's expertly designed S3 barrel attachment efficiently expels gasses to keep every shot on target.",
+            "DescriptionData": {
+                "Manufacturer": "ArmaMod",
+                "Type": "Ballistic Compensator",
+                "Attachment Point": "Barrel",
+                "Size": "3"
+            },
+            "DescriptionText": "Maintain accuracy by countering muzzle rise with the Sion Compensator3. ArmaMod's expertly designed S3 barrel attachment efficiently expels gasses to keep every shot on target.",
             "Manufacturer": {
                 "Code": "ARMA",
-                "Name": "ArmaMod"
+                "Name": "ArmaMod",
+                "UUID": "f2ca879c-deb6-49bf-a4b1-dc3a9cf91e7a"
             },
             "Tags": [
                 "FPS_Barrel",
@@ -1596,7 +1605,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

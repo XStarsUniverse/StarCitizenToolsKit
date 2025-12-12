@@ -1480,6 +1480,7 @@
         "grade": 1,
         "name": "Year of the Pig Envelope",
         "tags": "HolidayBox",
+        "required_tags": "",
         "stdItem": {
             "UUID": "44e421c4-410b-4932-937f-8f1f48cbf5f7",
             "ClassName": "Harvestable_Special_HolidayLetter",
@@ -1491,6 +1492,12 @@
             "Type": "Misc.Harvestable",
             "Name": "Year of the Pig Envelope",
             "Description": "A gilded red envelope celebrating the Year of the Pig. Exchanging these envelopes is one of the most popular ways of celebrating Red Festival. Often the envelope may include a small amount of credits inside to help those you care about have a strong start in the upcoming cycle. Growing in popularity is the newer tradition of hiding the envelopes as a way of spreading good fortune and prosperity to those that fate has deemed in need.",
+            "DescriptionText": "A gilded red envelope celebrating the Year of the Pig. Exchanging these envelopes is one of the most popular ways of celebrating Red Festival. Often the envelope may include a small amount of credits inside to help those you care about have a strong start in the upcoming cycle. Growing in popularity is the newer tradition of hiding the envelopes as a way of spreading good fortune and prosperity to those that fate has deemed in need.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "HolidayBox"
             ],
@@ -1500,7 +1507,34 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 10000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.01
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "ff8c1dbd-5ced-4f0a-8c47-0cf3b751722f",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -235,6 +235,7 @@
         "grade": 1,
         "name": "Gladius Ship Armor",
         "tags": "AEGS_Gladius_Base AEGS_Gladius",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.Armor.Medium",
         "stdItem": {
@@ -248,9 +249,11 @@
             "Type": "Armor.Medium",
             "Name": "Gladius Ship Armor",
             "Description": "Gladius Ship Armor",
+            "DescriptionText": "Gladius Ship Armor",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Gladius_Base",
@@ -272,7 +275,9 @@
                 }
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

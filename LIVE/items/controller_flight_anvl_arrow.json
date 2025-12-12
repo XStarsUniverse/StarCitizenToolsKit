@@ -2062,6 +2062,7 @@
         "grade": 1,
         "name": "Arrow Standard Flight Blade",
         "tags": "ANVL_Arrow_Blade",
+        "required_tags": "ANVL_Arrow_Blade",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "909561b0-830a-4d74-8798-8de89e6f31a1",
@@ -2074,9 +2075,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Arrow Standard Flight Blade",
             "Description": "Manufacturer: Anvil Aerospace\\nType: Flight Blade\\n\\nThis is the standard issue flight blade for the Anvil Arrow.",
+            "DescriptionData": {
+                "Manufacturer": "Anvil Aerospace",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "This is the standard issue flight blade for the Anvil Arrow.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Arrow_Blade"
@@ -2119,6 +2126,40 @@
                     "CapacitorRegenDelayAfterUse": 0.2,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

@@ -2473,6 +2473,7 @@
         "grade": 1,
         "name": "Manned Turret",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "c6f9489b-7757-4ec3-8354-ff7abe692a18",
@@ -2485,9 +2486,11 @@
             "Type": "UtilityTurret.MannedTurret",
             "Name": "Manned Turret",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "flightReady"
@@ -2496,6 +2499,8 @@
                 {
                     "PortName": "hardpoint_mining_laser",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Flags": [
                         "$uneditable"
                     ],
@@ -2504,18 +2509,39 @@
                         "roc_ds"
                     ],
                     "Types": [
-                        "WeaponMining"
+                        "WeaponMining.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponMining",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "turret_screen",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 2000
+                "Health": 2000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 12,
@@ -2538,6 +2564,15 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Turret_fire_mode",
+                "Turret_gyro_mode",
+                "Turret_sensitivity_increase",
+                "Turret_sensitivity_decrease",
+                "Turret_sensitivity_reset",
+                "Turret_enter",
+                "Turret_exit"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,
@@ -2552,6 +2587,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

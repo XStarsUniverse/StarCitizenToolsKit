@@ -1137,6 +1137,7 @@
         "grade": 3,
         "name": "Centurion",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1150,17 +1151,37 @@
             "Type": "PowerPlant.Power",
             "Name": "Centurion",
             "Description": "Item Type: Power Plant\\nManufacturer: Aegis Dynamics\\nSize: 3\\nGrade: C\\nClass: Military\\n\\nThe Centurion stands ready to power your ship. This large power plant from Aegis Dynamics has been in service for centuries and has consistently proven to supply solid performance and durability.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Aegis Dynamics",
+                "Size": "3",
+                "Grade": "C",
+                "Class": "Military"
+            },
+            "DescriptionText": "The Centurion stands ready to power your ship. This large power plant from Aegis Dynamics has been in service for centuries and has consistently proven to supply solid performance and durability.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 1.5,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 133.33,
+                "Maximum": 40000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 2400
+                "Health": 2400,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1183,6 +1204,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 37500,
@@ -1200,6 +1225,39 @@
             },
             "PowerPlant": {
                 "Output": 37500
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 24,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 23,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 11900
+                        }
+                    }
+                ]
             }
         }
     }

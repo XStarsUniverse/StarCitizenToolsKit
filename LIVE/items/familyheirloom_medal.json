@@ -1199,6 +1199,7 @@
         "grade": 1,
         "name": "SLAM",
         "tags": "MissionQuestItem DeadDrop",
+        "required_tags": "",
         "stdItem": {
             "UUID": "919c3114-59b8-4bf8-b13c-ad53e592438f",
             "ClassName": "FamilyHeirloom_Medal",
@@ -1210,6 +1211,12 @@
             "Type": "Misc.Utility",
             "Name": "SLAM",
             "Description": "Most commonly ingested as a gas. Vials of SLAM are cracked and inhaled. Initially developed as a performance enhancer for athletes, SLAM targets the user's nervous system acting as a fear-inhibitor and painkiller. Once the severe physical side effects were discovered, the drug went underground and found popularity among mercs and outlaws who relied on it to provide that slight edge in combat. Unfortunately, SLAM is also heavily addictive, so many of these mercs ended up getting burned out on the drug. Heavy-duty SLAM junkies are easily identifiable in public; they have \u2018the shakes\u2019 -- involuntary muscle twitches. Important to note that this is not a sign of withdrawal, simply a side effect.",
+            "DescriptionText": "Most commonly ingested as a gas. Vials of SLAM are cracked and inhaled. Initially developed as a performance enhancer for athletes, SLAM targets the user's nervous system acting as a fear-inhibitor and painkiller. Once the severe physical side effects were discovered, the drug went underground and found popularity among mercs and outlaws who relied on it to provide that slight edge in combat. Unfortunately, SLAM is also heavily addictive, so many of these mercs ended up getting burned out on the drug. Heavy-duty SLAM junkies are easily identifiable in public; they have 'the shakes' -- involuntary muscle twitches. Important to note that this is not a sign of withdrawal, simply a side effect.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem",
                 "DeadDrop"
@@ -1218,6 +1225,30 @@
                 "Width": 0.25,
                 "Length": 0.25,
                 "Height": 0.25
+            },
+            "Interactions": [
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ],
+            "ResourceContainer": {
+                "Mass": 0.25,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 750,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.00075
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "8950d9c5-8a54-4e2c-87a2-c56c1b9edd3c",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

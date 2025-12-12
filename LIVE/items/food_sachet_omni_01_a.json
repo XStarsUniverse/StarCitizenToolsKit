@@ -1678,6 +1678,7 @@
         "grade": 1,
         "name": "Grilled Chicken Roll Omni Pack",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "0a7dcfec-eca5-4a82-b733-0ece20efc333",
@@ -1690,9 +1691,15 @@
             "Type": "Food.Sachet",
             "Name": "Grilled Chicken Roll Omni Pack",
             "Description": "NDR: 70\\nEffects: Hypertrophic, Hypo-Metabolic\\n\\nOmni Packs use premium certified organic ingredients to create a complete balanced ready-to-eat meal with a premium taste.",
+            "DescriptionData": {
+                "NDR": "70",
+                "Effects": "Hypertrophic, Hypo-Metabolic"
+            },
+            "DescriptionText": "Omni Packs use premium certified organic ingredients to create a complete balanced ready-to-eat meal with a premium taste.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1700,12 +1707,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "sachet"
-            }
+                "NutritionalDensityRating": "70",
+                "Effects": [
+                    "Hypertrophic",
+                    "Hypo-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "sachet",
+                "ContainerTypeTag": "sachet",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

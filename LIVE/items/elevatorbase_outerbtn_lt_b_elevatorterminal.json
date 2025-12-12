@@ -672,6 +672,7 @@
         "grade": 1,
         "name": "Elevator Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1d0fb02e-6794-413a-a959-acd7a67b13fc",
             "ClassName": "ElevatorBase_OuterBtn_Lt_B_ElevatorTerminal",
@@ -683,6 +684,17 @@
             "Type": "Elevator.UNDEFINED",
             "Name": "Elevator Control",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Request",
+                "Elevatorarrived",
+                "Unpoweredrequest"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 10,

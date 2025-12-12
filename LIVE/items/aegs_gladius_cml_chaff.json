@@ -1955,6 +1955,7 @@
         "grade": 1,
         "name": "Aegis Gladius - Noise Launcher",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -1968,9 +1969,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "Aegis Gladius - Noise Launcher",
             "Description": "Aegis Gladius - Noise Launcher",
+            "DescriptionText": "Aegis Gladius - Noise Launcher",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Ammunition": {
                 "UUID": "fba15492-1bee-4ef0-8efd-815e3c500ea9",
@@ -1986,7 +1989,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,

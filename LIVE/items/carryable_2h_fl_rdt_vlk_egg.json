@@ -17044,6 +17044,7 @@
         "grade": 1,
         "name": "Irradiated Valakkar Egg",
         "tags": "IrradiatedValakkarEgg",
+        "required_tags": "",
         "stdItem": {
             "UUID": "cb21d6fd-4599-4a65-bdba-da31d1470be6",
             "ClassName": "Carryable_2H_FL_Rdt_Vlk_Egg",
@@ -17055,6 +17056,12 @@
             "Type": "Misc.Harvestable",
             "Name": "Irradiated Valakkar Egg",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "IrradiatedValakkarEgg"
             ],
@@ -17062,41 +17069,65 @@
                 {
                     "PortName": "worm_alive",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "2f002275-e636-43b5-a671-a5238e569df1",
                     "Uneditable": false
                 },
                 {
                     "PortName": "worm_alive4",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "2f002275-e636-43b5-a671-a5238e569df1",
                     "Uneditable": false
                 },
                 {
                     "PortName": "worm_alive3",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "2f002275-e636-43b5-a671-a5238e569df1",
                     "Uneditable": false
                 },
                 {
                     "PortName": "worm_alive2",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "2f002275-e636-43b5-a671-a5238e569df1",
                     "Uneditable": false
                 },
                 {
                     "PortName": "worm_alive5",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "2f002275-e636-43b5-a671-a5238e569df1",
                     "Uneditable": false
                 },
                 {
                     "PortName": "worm_alive6",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "2f002275-e636-43b5-a671-a5238e569df1",
                     "Uneditable": false
                 },
                 {
                     "PortName": "worm_alive7",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "2f002275-e636-43b5-a671-a5238e569df1",
                     "Uneditable": false
                 },
                 {
                     "PortName": "worm_alive8",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "2f002275-e636-43b5-a671-a5238e569df1",
                     "Uneditable": false
                 }
             ],
@@ -17106,15 +17137,27 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 15000
+                "Health": 15000,
+                "Salvageable": 0,
+                "Repairable": 0
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "hotdog"
-            }
+                "Type": "Misc",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Stopradiation",
+                "Startdegradation",
+                "Initialize"
+            ]
         }
     }
 }

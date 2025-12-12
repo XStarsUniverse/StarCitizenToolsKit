@@ -2126,6 +2126,7 @@
         "grade": 1,
         "name": "Marias Suit",
         "tags": "fio_suit Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "FIO",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2139,9 +2140,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Marias Suit",
             "Description": "Carrying Capacity: 0.4K \u00b5SCU\\n\\nFiore elevates the three-piece suit with this modern and elegant interpretation. The Marias suit features a stylishly cropped white suit coat with gold accents. Underneath the jacket sits a grey shirt secured at the collar by two golden circular clasps and featuring an elongated, decorated front panel meant to be tucked under the unique lace waistband of the suit's black pants.",
+            "DescriptionData": {
+                "Carrying Capacity": "0.4K \u00b5SCU"
+            },
+            "DescriptionText": "Fiore elevates the three-piece suit with this modern and elegant interpretation. The Marias suit features a stylishly cropped white suit coat with gold accents. Underneath the jacket sits a grey shirt secured at the collar by two golden circular clasps and featuring an elongated, decorated front panel meant to be tucked under the unique lace waistband of the suit's black pants.",
             "Manufacturer": {
                 "Code": "FIO",
-                "Name": "Fiore"
+                "Name": "Fiore",
+                "UUID": "503b0974-5027-4c69-bce6-a38c42e87ebe"
             },
             "Tags": [
                 "fio_suit",
@@ -2152,19 +2158,33 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Clothing_Torso2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Char_Clothing_Torso_2"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Torso_2"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2174,6 +2194,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0004,
                 "unit": 6,
@@ -2189,6 +2218,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

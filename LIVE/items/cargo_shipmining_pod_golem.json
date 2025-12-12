@@ -688,6 +688,7 @@
         "grade": 1,
         "name": "Drake Ore Pod",
         "tags": "$DRAK_Golem",
+        "required_tags": "DRAK_Golem",
         "manufacturer": "DRAK",
         "classification": "Ship.Container.Cargo",
         "stdItem": {
@@ -701,15 +702,45 @@
             "Type": "Container.Cargo",
             "Name": "Drake Ore Pod",
             "Description": "Capacity: 16 SCU\\n\\nDurable and designed to work with any compatible mining ship, the Drake ore pod holds an impressive 16 SCU. Providing miners with the space to hold more ore than standard containers.",
+            "DescriptionData": {
+                "Capacity": "16 SCU"
+            },
+            "DescriptionText": "Durable and designed to work with any compatible mining ship, the Drake ore pod holds an impressive 16 SCU. Providing miners with the space to hold more ore than standard containers.",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "$DRAK_Golem"
             ],
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Ejectcargo"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 16,
+                    "UnitName": "SCU",
+                    "SCU": 16
+                },
+                "InclusiveResources": [
+                    "b8029480-f171-4a88-a44d-4323e021f82a",
+                    "d137b905-b3bc-4721-a790-830499263c0c",
+                    "d9653427-af7f-4fea-bbd6-ae89393524b7"
+                ],
+                "InclusiveGroups": [
+                    "81637dc5-e451-4e67-beb6-88d3c5db94e0",
+                    "36623177-cbc4-48a2-b95e-f893a861ca42"
+                ]
             }
         }
     }

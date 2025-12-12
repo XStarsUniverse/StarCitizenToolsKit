@@ -4960,6 +4960,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "CRUS",
         "stdItem": {
             "UUID": "d3141988-af62-45e4-9480-f9df56ae2e5a",
@@ -4972,75 +4973,139 @@
             "Type": "SeatDashboard.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "CRUS",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "63685f47-b0cc-4ebe-8f16-72793a5cd6e0"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_cockpit_radar",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Display_HUD",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Uneditable": false
                 },
                 {
                     "PortName": "rtt_mfd_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "rtt_mfd_right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "rtt_mfd_bottom_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "rtt_mfd_bottom_right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "rtt_annuciator_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "rtt_annuciator_right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 400,
+                "Maximum": 2000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.1,
@@ -5063,6 +5128,38 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Openaccesspoints",
+                "Closeaccesspoints",
+                "Flight_ready",
+                "Landinggear_deploy",
+                "Landinggear_retract",
+                "Ifcs_coupled_setcoupled",
+                "Ifcs_coupled_setdecoupled",
+                "Ifcs_gsafe_setactive",
+                "Ifcs_gsafe_setinactive",
+                "Ifcs_esp_setactive",
+                "Ifcs_esp_setinactive",
+                "Ifcs_cruisecontrol_setactive",
+                "Ifcs_cruisecontrol_setinactive",
+                "Ifcs_proximityassist_setactive",
+                "Ifcs_proximityassist_setinactive",
+                "Qdrv_spool_on",
+                "Qdrv_spool_off",
+                "Qdrv_travel_engage",
+                "Qdrv_travel_disengage",
+                "Scan_mode_enter",
+                "Scan_mode_exit",
+                "Scan_begin",
+                "Scan_end",
+                "Wpn_enable",
+                "Wpn_disable",
+                "Wpn_pip_setlead",
+                "Wpn_pip_setlag",
+                "Wpn_gimbal_setfixed",
+                "Wpn_gimbal_setgimbal",
+                "Wpn_gimbal_setaimassist"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,
@@ -5077,6 +5174,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

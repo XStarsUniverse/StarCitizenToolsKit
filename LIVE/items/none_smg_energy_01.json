@@ -8779,6 +8779,7 @@
         "grade": 1,
         "name": "Ripper SMG",
         "tags": "stocked smg none_smg_energy_01",
+        "required_tags": "",
         "manufacturer": "UNKN",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -8792,9 +8793,19 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Ripper SMG",
             "Description": "Manufacturer: Unknown\\nItem Type: SMG\\nClass: Energy (Laser)\\n\\nBattery Size: 60\\nRate Of Fire: 800 rpm\\nEffective Range: 30 m\\n\\nScrapped together from whatever parts and pieces were available, the Ripper SMG can probably do enough damage to get you out of a tight spot. Just be ready for things to get messy.",
+            "DescriptionData": {
+                "Manufacturer": "Unknown",
+                "Item Type": "SMG",
+                "Class": "Energy (Laser)",
+                "Size": "60",
+                "Rate Of Fire": "800 rpm",
+                "Effective Range": "30 m"
+            },
+            "DescriptionText": "Scrapped together from whatever parts and pieces were available, the Ripper SMG can probably do enough damage to get you out of a tight spot. Just be ready for things to get messy.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": [
                 "stocked",
@@ -8805,6 +8816,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "none_smg_energy_01"
                     ],
@@ -8812,35 +8825,66 @@
                         "none_smg_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "3468f853-8bcc-450c-a4fe-f70f6e391301",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -8899,14 +8943,21 @@
                 "Length": 1.125,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

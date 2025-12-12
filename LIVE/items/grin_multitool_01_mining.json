@@ -1852,6 +1852,7 @@
         "grade": 1,
         "name": "OreBit Mining Attachment",
         "tags": "grin_multitool_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.WeaponAttachment.Utility",
         "stdItem": {
@@ -1865,9 +1866,16 @@
             "Type": "WeaponAttachment.Utility",
             "Name": "OreBit Mining Attachment",
             "Description": "MUST BUY BASE MULTI-TOOL TO USE: \"Pyro RYT Multi-Tool\"\\n\\nManufacturer: Greycat Industrial\\nItem Type: Multi-Tool Attachment\\nClass: Mining\\n\\nThe OreBit attachment turns Greycat's Pyro RYT Multi-Tool into a handheld mining machine. It can scan rocks to find worthwhile deposits and then liberate the lode with its powerful mining laser. Next time you're planetside, be sure you bring this attachment or risk leaving easy credits behind.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Multi-Tool Attachment",
+                "Class": "Mining"
+            },
+            "DescriptionText": "The OreBit attachment turns Greycat's Pyro RYT Multi-Tool into a handheld mining machine. It can scan rocks to find worthwhile deposits and then liberate the lode with its powerful mining laser. Next time you're planetside, be sure you bring this attachment or risk leaving easy credits behind.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_multitool_01"
@@ -1876,7 +1884,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

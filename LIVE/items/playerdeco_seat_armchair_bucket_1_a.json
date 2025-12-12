@@ -903,6 +903,7 @@
         "grade": 1,
         "name": "High End Arm Chair",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e278be58-bdab-46f6-9494-edd8750af700",
             "ClassName": "PlayerDeco_Seat_Armchair_Bucket_1_a",
@@ -914,11 +915,21 @@
             "Type": "Usable.Cargo",
             "Name": "High End Arm Chair",
             "Description": "Arm Chair Decoration",
+            "DescriptionText": "Arm Chair Decoration",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

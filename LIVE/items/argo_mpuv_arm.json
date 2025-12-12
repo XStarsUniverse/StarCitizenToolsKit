@@ -409,6 +409,7 @@
         "grade": 1,
         "name": "Mining Arm",
         "tags": "miningMount",
+        "required_tags": "",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "a7da931d-98d9-4fb4-a37d-750c11d20432",
@@ -421,9 +422,11 @@
             "Type": "ToolArm.UNDEFINED",
             "Name": "Mining Arm",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "miningMount"
@@ -432,6 +435,8 @@
                 {
                     "PortName": "hardpoint_mining_laser",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "Uneditable"
                     ],
@@ -443,6 +448,11 @@
                     ],
                     "Types": [
                         "Turret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Turret"
+                        }
                     ],
                     "Uneditable": false
                 }

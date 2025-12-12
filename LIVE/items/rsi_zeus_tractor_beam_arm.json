@@ -485,6 +485,7 @@
         "grade": 1,
         "name": "Mining Arm",
         "tags": "miningMount",
+        "required_tags": "",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "b2b3b8f7-9e46-46fd-9318-d65223bcdabc",
@@ -497,9 +498,11 @@
             "Type": "ToolArm.UNDEFINED",
             "Name": "Mining Arm",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "miningMount"
@@ -508,17 +511,29 @@
                 {
                     "PortName": "hardpoint_tractor_beam_turret",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "$Uneditable"
                     ],
                     "Types": [
-                        "Turret"
+                        "Turret.Utility"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "Utility"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 4000
+                "Health": 4000,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

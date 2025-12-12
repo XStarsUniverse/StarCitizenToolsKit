@@ -800,6 +800,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady $RSI_Zeus_Turret",
+        "required_tags": "$RSI_Zeus_Turret",
         "manufacturer": "ARGO",
         "stdItem": {
             "UUID": "e4d17bcd-6b55-4e7e-b66d-0a53c710030a",
@@ -812,9 +813,11 @@
             "Type": "Turret.Utility",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "ARGO",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "9e1f5a35-edcc-4d19-bede-08e2730043c5"
             },
             "Tags": [
                 "flightReady",
@@ -824,14 +827,23 @@
                 {
                     "PortName": "hardpoint_tractor_beam_device",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
                         "TractorBeam"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "TractorBeam"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 500
+                "Health": 500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -854,6 +866,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

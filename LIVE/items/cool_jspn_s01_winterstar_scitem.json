@@ -922,6 +922,7 @@
         "grade": 4,
         "name": "Winter-Star",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "JSPN",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Winter-Star",
             "Description": "Item Type: Cooler\\nManufacturer: J-Span\u00a0\\nSize: 1\\nGrade: D\\nClass: Civilian\\n\\nJoin the J-Span family by snagging the Winter-Star cooler for your ship. This entry-level model lacks flash but its strong performance record and price point make it a popular choice for pilots across the UEE.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "J-Span",
+                "Size": "1",
+                "Grade": "D",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Join the J-Span family by snagging the Winter-Star cooler for your ship. This entry-level model lacks flash but its strong performance record and price point make it a popular choice for pilots across the UEE.",
             "Manufacturer": {
                 "Code": "JSPN",
-                "Name": "J-Span"
+                "Name": "J-Span",
+                "UUID": "6cf93625-789a-4e8f-a857-325d64a58c93"
             },
             "Cooler": {
                 "CoolingRate": 194000,
@@ -949,8 +959,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 220
+                "Health": 220,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 8.25,
                 "DecayRateOfEM": 0.19
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 14.5,
+                                "MinimumFraction": 0.5,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 750,
+                            "IR": 3630
+                        }
+                    }
+                ]
             }
         }
     }

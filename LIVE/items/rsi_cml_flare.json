@@ -2006,6 +2006,7 @@
         "grade": 1,
         "name": "RSI Decoy Launcher",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -2019,9 +2020,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "RSI Decoy Launcher",
             "Description": "RSI Decoy Launcher",
+            "DescriptionText": "RSI Decoy Launcher",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Ammunition": {
                 "UUID": "9621efe3-86b7-4da3-ac4a-430394f53bf4",
@@ -2037,7 +2040,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,

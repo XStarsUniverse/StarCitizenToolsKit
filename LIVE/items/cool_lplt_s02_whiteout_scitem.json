@@ -922,6 +922,7 @@
         "grade": 4,
         "name": "WhiteOut",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "LPLT",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "WhiteOut",
             "Description": "Item Type: Cooler\\nManufacturer: Lightning Power Ltd.\\nSize: 2\\nGrade: D\\nClass: Civilian\\n\\nYour ship faces a lot of extreme conditions while flying. From the coldness of space to the burning heat of a desert planet, the last thing you want to worry about is if your cooler can keep up. The entry-level WhiteOut from Lightning Power provides thermal management that can help make sure you get where you\u2019re going.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Lightning Power Ltd.",
+                "Size": "2",
+                "Grade": "D",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Your ship faces a lot of extreme conditions while flying. From the coldness of space to the burning heat of a desert planet, the last thing you want to worry about is if your cooler can keep up. The entry-level WhiteOut from Lightning Power provides thermal management that can help make sure you get where you're going.",
             "Manufacturer": {
                 "Code": "LPLT",
-                "Name": "Lightning Power Ltd."
+                "Name": "Lightning Power Ltd.",
+                "UUID": "60d0f346-0c22-4869-81d3-1168b526a258"
             },
             "Cooler": {
                 "CoolingRate": 3800000,
@@ -949,8 +959,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 470
+                "Health": 470,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 15,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.23
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 20,
+                                "MinimumFraction": 0.6666667,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1130,
+                            "IR": 5000
+                        }
+                    }
+                ]
             }
         }
     }

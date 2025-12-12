@@ -1134,6 +1134,7 @@
         "grade": 2,
         "name": "IonSurge",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "LPLT",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1147,17 +1148,37 @@
             "Type": "PowerPlant.Power",
             "Name": "IonSurge",
             "Description": "Item Type: Power Plant\\nManufacturer: Lighting Power Ltd.\\nSize: 2\\nGrade: B\\nClass: Civilian\\n\\nLightning Power Ltd.\u2019s line of medium power plants reach their pinnacle with the IonSurge. Design innovation and higher quality materials push this component's performance higher than others in its class.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Lighting Power Ltd.",
+                "Size": "2",
+                "Grade": "B",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Lightning Power Ltd.'s line of medium power plants reach their pinnacle with the IonSurge. Design innovation and higher quality materials push this component's performance higher than others in its class.",
             "Manufacturer": {
                 "Code": "LPLT",
-                "Name": "Lightning Power Ltd."
+                "Name": "Lightning Power Ltd.",
+                "UUID": "60d0f346-0c22-4869-81d3-1168b526a258"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 40,
+                "Maximum": 12000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 940
+                "Health": 940,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1180,6 +1201,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 6875,
@@ -1197,6 +1222,39 @@
             },
             "PowerPlant": {
                 "Output": 6875
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 18,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 18,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 6750
+                        }
+                    }
+                ]
             }
         }
     }

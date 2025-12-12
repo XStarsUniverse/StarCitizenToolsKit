@@ -1782,6 +1782,7 @@
         "grade": 1,
         "name": "Taos Balaclava and Goggles Ash",
         "tags": "alb_mask Set_01 Texture_01 Color_11",
+        "required_tags": "Protos",
         "manufacturer": "ALB",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1795,9 +1796,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Taos Balaclava and Goggles Ash",
             "Description": "Fearlessly face any weather with the Taos balaclava and goggles. An ultra-soft inner lining provides warmth and comfort while a special exterior coating repels precipitation. The adjustable headband ensures an ideal fit, and the padding of the anti-fog goggles is integrated directly into the fabric to seal out the elements.",
+            "DescriptionText": "Fearlessly face any weather with the Taos balaclava and goggles. An ultra-soft inner lining provides warmth and comfort while a special exterior coating repels precipitation. The adjustable headband ensures an ideal fit, and the padding of the anti-fog goggles is integrated directly into the fabric to seal out the elements.",
             "Manufacturer": {
                 "Code": "ALB",
-                "Name": "Alejo Brothers"
+                "Name": "Alejo Brothers",
+                "UUID": "dd14fd7f-eead-4f7d-8057-2d95405a0183"
             },
             "Tags": [
                 "alb_mask",
@@ -1809,11 +1812,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1823,9 +1833,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -10,
                 "Maximum": 60
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

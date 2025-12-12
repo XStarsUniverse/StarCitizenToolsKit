@@ -2790,6 +2790,7 @@
         "grade": 1,
         "name": "RSI Medusa Cannon",
         "tags": "ESP BallisticCannon flightReady weaponMountUsable RSI_Perseus_Bespoke",
+        "required_tags": "RSI_Perseus_Bespoke",
         "manufacturer": "RSI",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2803,9 +2804,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "RSI Medusa Cannon",
             "Description": "Manufacturer: RSI\\nItem Type: Ballistic Cannon\\nSize: 8\\n\\nBuilding on centuries of RSI weapon technology, the Perseus utilizes bespoke size 8 Medusa Cannons that deliver devastating salvos of ballistic fire, capable of starting fights just as easily as ending them. These custom made RSI cannons excel at punishing larger targets at long, making it a formidable battlefield equalizer.",
+            "DescriptionData": {
+                "Manufacturer": "RSI",
+                "Item Type": "Ballistic Cannon",
+                "Size": "8"
+            },
+            "DescriptionText": "Building on centuries of RSI weapon technology, the Perseus utilizes bespoke size 8 Medusa Cannons that deliver devastating salvos of ballistic fire, capable of starting fights just as easily as ending them. These custom made RSI cannons excel at punishing larger targets at long, making it a formidable battlefield equalizer.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "ESP",
@@ -2818,32 +2826,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2869,8 +2917,37 @@
                 "Length": 0.38,
                 "Height": 0.38
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 30000
+                "Health": 30000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

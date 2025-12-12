@@ -235,6 +235,7 @@
         "grade": 1,
         "name": "Argo MPUV Ship Armor",
         "tags": "ARGO_MPUV_Base",
+        "required_tags": "",
         "manufacturer": "ARGO",
         "classification": "Ship.Armor.Medium",
         "stdItem": {
@@ -248,9 +249,11 @@
             "Type": "Armor.Medium",
             "Name": "Argo MPUV Ship Armor",
             "Description": "Argo MPUV Ship Armor",
+            "DescriptionText": "Argo MPUV Ship Armor",
             "Manufacturer": {
                 "Code": "ARGO",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "9e1f5a35-edcc-4d19-bede-08e2730043c5"
             },
             "Tags": [
                 "ARGO_MPUV_Base"
@@ -271,7 +274,9 @@
                 }
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

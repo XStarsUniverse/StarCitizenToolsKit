@@ -2009,6 +2009,7 @@
         "grade": 1,
         "name": "Synergy",
         "tags": "bottle_01 Stash_Water synergy",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "8ad674de-d858-4a6e-aba7-1399e39fc76c",
@@ -2021,9 +2022,16 @@
             "Type": "Drink.Bottle",
             "Name": "Synergy",
             "Description": "HEI: 48\\nNDR: 06\\nEffects: Energizing, Hydrating\\n\\nSynergy is formulated to deliver balanced active rehydration to replenish your body's essential harmony.",
+            "DescriptionData": {
+                "HEI": "48",
+                "NDR": "06",
+                "Effects": "Energizing, Hydrating"
+            },
+            "DescriptionText": "Synergy is formulated to deliver balanced active rehydration to replenish your body's essential harmony.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01",
@@ -2036,12 +2044,28 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 1,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "NutritionalDensityRating": "06",
+                "HydrationEfficacyIndex": "48",
+                "Effects": [
+                    "Energizing",
+                    "Hydrating"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 1,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

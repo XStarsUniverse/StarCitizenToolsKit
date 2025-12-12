@@ -1990,6 +1990,7 @@
         "grade": 1,
         "name": "Big Benny's Mug",
         "tags": "Mug",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "6259d9a0-b449-4427-924a-e7713c5e15ee",
@@ -2002,9 +2003,11 @@
             "Type": "Drink.UNDEFINED",
             "Name": "Big Benny's Mug",
             "Description": "Grab Drink! \\n\\nThis playful Big Benny's mug features the brand's iconic mascot. Its unique dual layer design features a chip and fade proof ceramic that feels comfortable in the hand with special plastic coating on the lip and handle to ensure it's never too hot to touch.",
+            "DescriptionText": "Grab Drink! \n\nThis playful Big Benny's mug features the brand's iconic mascot. Its unique dual layer design features a chip and fade proof ceramic that feels comfortable in the hand with special plastic coating on the lip and handle to ensure it's never too hot to touch.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "Mug"
@@ -2013,11 +2016,18 @@
                 {
                     "PortName": "slot_garnish",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "slot_garnish"
                     ],
                     "Types": [
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2028,12 +2038,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 0,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

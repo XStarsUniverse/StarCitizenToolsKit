@@ -977,6 +977,7 @@
         "grade": 1,
         "name": "shipment",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "stdItem": {
             "UUID": "f00d1588-4b04-4e95-981d-9bd1d6bfb0c7",
             "ClassName": "Carryable_2H_FL_MissionItem_DeliveryBox_Generic_a_156",
@@ -988,6 +989,12 @@
             "Type": "Misc.UNDEFINED",
             "Name": "shipment",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -995,7 +1002,12 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

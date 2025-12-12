@@ -2076,6 +2076,7 @@
         "grade": 1,
         "name": "Yebira II",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "FSKI",
         "classification": "Ship.Weapon.Rocket",
         "stdItem": {
@@ -2089,9 +2090,16 @@
             "Type": "WeaponGun.Rocket",
             "Name": "Yebira II",
             "Description": "Item Type: Rocket Pod\\nManufacturer: Firestorm Kinetics\\nSize: 2\\nRockets: 6xS3\\n\\nThe Yebira II rocket pod is the perfect system for efficient deployment of S3 ordnance. Manufactured by Firestorm Kinetics, this rocket pod carries six rockets and attaches to any size two hardpoint.",
+            "DescriptionData": {
+                "Item Type": "Rocket Pod",
+                "Manufacturer": "Firestorm Kinetics",
+                "Size": "2"
+            },
+            "DescriptionText": "The Yebira II rocket pod is the perfect system for efficient deployment of S3 ordnance. Manufactured by Firestorm Kinetics, this rocket pod carries six rockets and attaches to any size two hardpoint.",
             "Manufacturer": {
                 "Code": "FSKI",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "5f81335d-44e6-4104-841e-c5af9df06829"
             },
             "Tags": [
                 "flightReady"
@@ -2125,8 +2133,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 750
+                "Health": 750,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.4,

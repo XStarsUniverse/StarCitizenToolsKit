@@ -578,6 +578,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "a962a30e-dbcb-4d78-9eee-29388338e39b",
@@ -590,9 +591,31 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Mirai"
+                "Name": "Mirai",
+                "UUID": "cdf6ea1e-7de3-4b58-bf9d-13c5fbafc49a"
+            },
+            "Interactions": [
+                "Ejection"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

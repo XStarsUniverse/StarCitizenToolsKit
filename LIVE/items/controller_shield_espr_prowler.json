@@ -196,6 +196,7 @@
         "grade": 1,
         "name": "SHIELDS",
         "tags": "flightReady",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d92c8588-1f7f-4a40-a839-f9066bcc31a6",
             "ClassName": "Controller_Shield_ESPR_Prowler",
@@ -207,9 +208,33 @@
             "Type": "ShieldController.UNDEFINED",
             "Name": "SHIELDS",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Shield",
+                                "Rate": 1000000,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

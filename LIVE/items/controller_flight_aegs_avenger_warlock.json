@@ -2062,6 +2062,7 @@
         "grade": 1,
         "name": "Avenger Warlock Standard Flight Blade",
         "tags": "AEGS_Avenger_Warlock_Blade",
+        "required_tags": "AEGS_Avenger_Warlock_Blade",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "8a2675e7-839a-462d-845b-009f3527a7d5",
@@ -2074,9 +2075,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Avenger Warlock Standard Flight Blade",
             "Description": "Manufacturer: Aegis Dynamics\\nType: Flight Blade\\n\\nThis is the standard issue flight blade for the Aegis Avenger Warlock.",
+            "DescriptionData": {
+                "Manufacturer": "Aegis Dynamics",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "This is the standard issue flight blade for the Aegis Avenger Warlock.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Avenger_Warlock_Blade"
@@ -2119,6 +2126,40 @@
                     "CapacitorRegenDelayAfterUse": 0.2,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

@@ -993,6 +993,7 @@
         "grade": 1,
         "name": "Ignite II Missile",
         "tags": "FSKI IR flightReady",
+        "required_tags": "",
         "manufacturer": "FSKI",
         "classification": "Ship.Missile.Missile",
         "stdItem": {
@@ -1006,9 +1007,16 @@
             "Type": "Missile.Missile",
             "Name": "Ignite II Missile",
             "Description": "Manufacturer: Firestorm Kinetics\\nTracking Signal: Infrared\\nSize: 2\\n\\nThe Ignite is Firestorm's premier brand of heat-seeking strike missile that is the definition of Fire and Forget. Simply let it fly and enjoy the show.",
+            "DescriptionData": {
+                "Manufacturer": "Firestorm Kinetics",
+                "Tracking Signal": "Infrared",
+                "Size": "2"
+            },
+            "DescriptionText": "The Ignite is Firestorm's premier brand of heat-seeking strike missile that is the definition of Fire and Forget. Simply let it fly and enjoy the show.",
             "Manufacturer": {
                 "Code": "FSKI",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "5f81335d-44e6-4104-841e-c5af9df06829"
             },
             "Tags": [
                 "FSKI",
@@ -1020,8 +1028,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 25
+                "Health": 25,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

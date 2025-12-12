@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Cosmetics",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "b1907ea3-e80d-4fb0-a56c-f661fe872c92",
             "ClassName": "un_personal_pot_TEMPLATE",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Cosmetics",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

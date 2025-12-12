@@ -452,6 +452,7 @@
         "grade": 1,
         "name": "MSD-683 Missile Rack",
         "tags": "flightReady $ESPR_Talon_Base",
+        "required_tags": "ESPR_Talon_Base",
         "manufacturer": "ESPR",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -465,9 +466,17 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "MSD-683 Missile Rack",
             "Description": "Item Type: Missile Rack\\nManufacturer: Behring\\nSize: 6\\nMissiles: 8xS3\\n\\nBehring\u2019s MSD-683 \"Marsden\" is a complete ordnance storage and deployment system that can be mounted on any compatible size 6 hardpoint for the reliable and effective launch of eight S3 missiles.",
+            "DescriptionData": {
+                "Item Type": "Missile Rack",
+                "Manufacturer": "Behring",
+                "Size": "6",
+                "Missiles": "8xS3"
+            },
+            "DescriptionText": "Behring's MSD-683 \"Marsden\" is a complete ordnance storage and deployment system that can be mounted on any compatible size 6 hardpoint for the reliable and effective launch of eight S3 missiles.",
             "Manufacturer": {
                 "Code": "ESPR",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "4ecc1a24-d228-4dd5-8857-21ba6145a1d3"
             },
             "Tags": [
                 "flightReady",
@@ -479,10 +488,29 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "MissileRack": {
                 "Count": 6
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

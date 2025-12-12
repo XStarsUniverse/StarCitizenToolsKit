@@ -870,6 +870,7 @@
         "grade": 1,
         "name": "Ranta Dung",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "22568282-4d5c-48ae-855b-7e0e56147ab0",
@@ -882,13 +883,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Ranta Dung",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3.75,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 32,
+                    "UnitName": "SCU",
+                    "SCU": 32
+                },
+                "InclusiveGroups": [
+                    "32a1c43c-ffdf-4b02-82a8-1d8b2d9f6666"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "5cc98bf3-8edd-4184-9e47-2ff40e4c556b",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

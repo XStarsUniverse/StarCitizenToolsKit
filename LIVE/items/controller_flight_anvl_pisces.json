@@ -2037,6 +2037,7 @@
         "grade": 1,
         "name": "Pisces Standard Flight Blade",
         "tags": "ANVL_Pisces_Base_Blade",
+        "required_tags": "ANVL_Pisces_Base_Blade",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "a2a8fc05-772e-4b2d-ad27-34fd97b499ba",
@@ -2049,9 +2050,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Pisces Standard Flight Blade",
             "Description": "Manufacturer: Anvil Aerospace\\nType: Flight Blade\\n\\nThis is the standard issue flight blade for the Anvil Pisces.",
+            "DescriptionData": {
+                "Manufacturer": "Anvil Aerospace",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "This is the standard issue flight blade for the Anvil Pisces.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Pisces_Base_Blade"
@@ -2094,6 +2101,40 @@
                     "CapacitorRegenDelayAfterUse": 1.1,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

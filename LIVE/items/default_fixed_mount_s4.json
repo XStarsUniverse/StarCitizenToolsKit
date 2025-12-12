@@ -521,6 +521,7 @@
         "grade": 1,
         "name": "Size 4 Fixed Mount",
         "tags": "turretMount flightReady",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "c2af3f67-3ad7-4214-b502-4d00bb3df0b8",
@@ -533,9 +534,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Size 4 Fixed Mount",
             "Description": "Size 4 Fixed Mount",
+            "DescriptionText": "Size 4 Fixed Mount",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "turretMount",
@@ -545,8 +548,18 @@
                 {
                     "PortName": "hardpoint_size_4",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -557,7 +570,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 400
+                "Health": 400,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

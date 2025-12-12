@@ -1994,6 +1994,7 @@
         "grade": 1,
         "name": "Vaux-C3 Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "SHIN",
         "stdItem": {
             "UUID": "e40337f2-7f52-4160-95eb-0e96752bc3c2",
@@ -2006,9 +2007,17 @@
             "Type": "MiningModifier.Gun",
             "Name": "Vaux-C3 Module",
             "Description": "Manufacturer: Shubin Interstellar\\nItem Type: Mining Module (Passive)\\n\\nExtraction Laser Power: 125%\\n\\nOptimal Charge Rate: -5%\\n\\nThe Vaux-C3 Module from Shubin Interstellar reduces the charge rate when mining but makes extracting valuable ore faster.",
+            "DescriptionData": {
+                "Manufacturer": "Shubin Interstellar",
+                "Item Type": "Mining Module (Passive)",
+                "Extraction Laser Power": "125%",
+                "Optimal Charge Rate": "-5%"
+            },
+            "DescriptionText": "The Vaux-C3 Module from Shubin Interstellar reduces the charge rate when mining but makes extracting valuable ore faster.",
             "Manufacturer": {
                 "Code": "SHIN",
-                "Name": "Shubin Interstellar"
+                "Name": "Shubin Interstellar",
+                "UUID": "ab35f85f-919f-4457-8d58-4e885ea6c5c0"
             },
             "Tags": [
                 "miningConsumable",
@@ -2020,8 +2029,17 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

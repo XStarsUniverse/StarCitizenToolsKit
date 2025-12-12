@@ -2019,6 +2019,7 @@
         "grade": 1,
         "name": "Synergy+",
         "tags": "bottle_01 Stash_Water synergy_plus",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "e07fa2c7-e2f2-4041-a898-d73f1f51eb06",
@@ -2031,9 +2032,16 @@
             "Type": "Drink.Bottle",
             "Name": "Synergy+",
             "Description": "HEI: 48\\nNDR: 06\\nEffects: Energizing, Hydrating\\n\\nSynergy+ is formulated to deliver balanced active rehydration for an extended duration, allowing for continued harmony in motion.",
+            "DescriptionData": {
+                "HEI": "48",
+                "NDR": "06",
+                "Effects": "Energizing, Hydrating"
+            },
+            "DescriptionText": "Synergy+ is formulated to deliver balanced active rehydration for an extended duration, allowing for continued harmony in motion.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01",
@@ -2046,12 +2054,28 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 1,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "NutritionalDensityRating": "06",
+                "HydrationEfficacyIndex": "48",
+                "Effects": [
+                    "Energizing",
+                    "Hydrating"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 1,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

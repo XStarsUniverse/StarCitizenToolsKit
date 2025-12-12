@@ -9866,6 +9866,7 @@
         "grade": 1,
         "name": "Custodian \"Boneyard\" SMG",
         "tags": "stocked smg ksar_smg_energy_01",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -9879,9 +9880,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Custodian \"Boneyard\" SMG",
             "Description": "Manufacturer: Kastak Arms\\nItem Type: SMG\\nClass: Energy\u00a0(Laser)\\n\\nBattery Size: 60\\nRate Of Fire: 800 rpm\\nEffective Range: 30 m\\n\\nAttachments: Optics (S1), Barrel (S1), Underbarrel (S1)\\n\\nThe Custodian SMG from Kastak Arms focuses on a high rate of fire over damage and accuracy making it an ideal choice for sweeping through tight environments and close quarters combat.",
+            "DescriptionData": {
+                "Manufacturer": "Kastak Arms",
+                "Item Type": "SMG",
+                "Class": "Energy (Laser)",
+                "Size": "60",
+                "Rate Of Fire": "800 rpm",
+                "Effective Range": "30 m",
+                "Attachments": "Optics (S1), Barrel (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "The Custodian SMG from Kastak Arms focuses on a high rate of fire over damage and accuracy making it an ideal choice for sweeping through tight environments and close quarters combat.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "stocked",
@@ -9892,6 +9904,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "ksar_smg_energy_01"
                     ],
@@ -9899,24 +9913,45 @@
                         "ksar_smg_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "31b73bfe-da55-4cb0-a19d-1c6543ca1fb9",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory",
                         "energy_barrel"
@@ -9926,24 +9961,44 @@
                         "energy_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -10002,14 +10057,21 @@
                 "Length": 1.125,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

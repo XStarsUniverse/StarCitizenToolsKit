@@ -9821,6 +9821,7 @@
         "grade": 1,
         "name": "Scourge Railgun",
         "tags": "shouldered SM_RestrictedWep",
+        "required_tags": "",
         "manufacturer": "APAR",
         "classification": "FPS.Weapon.Large",
         "stdItem": {
@@ -9834,9 +9835,20 @@
             "Type": "WeaponPersonal.Large",
             "Name": "Scourge Railgun",
             "Description": "Manufacturer:\u00a0Apocalypse Arms\\nItem Type: Railgun\\nClass: Ballistic\\n\\nMagazine Size: 5\\nRate Of Fire: 60 rpm\\nEffective Range: 200 m\\n\\nAttachments: Optics (N/A), Barrel (N/A), Underbarrel (S4)\\n\\nEqually devastating to larger threats and hostile vehicles, this shoulder mounted railgun from Apocalypse Arms uses electromagnets to deliver its payload accurately over great distances, making it the Scourge of land, air and space.",
+            "DescriptionData": {
+                "Manufacturer": "Apocalypse Arms",
+                "Item Type": "Railgun",
+                "Class": "Ballistic",
+                "Magazine Size": "5",
+                "Rate Of Fire": "60 rpm",
+                "Effective Range": "200 m",
+                "Attachments": "Optics (N/A), Barrel (N/A), Underbarrel (S4)"
+            },
+            "DescriptionText": "Equally devastating to larger threats and hostile vehicles, this shoulder mounted railgun from Apocalypse Arms uses electromagnets to deliver its payload accurately over great distances, making it the Scourge of land, air and space.",
             "Manufacturer": {
                 "Code": "APAR",
-                "Name": "Apocalypse Arms"
+                "Name": "Apocalypse Arms",
+                "UUID": "77f7999a-b23b-4812-94c2-09b5e15e1b0e"
             },
             "Tags": [
                 "shouldered",
@@ -9846,17 +9858,30 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "apar_special_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "92f958c7-71c5-4997-a575-d6ea3a6e304b",
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9923,14 +9948,20 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.85,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

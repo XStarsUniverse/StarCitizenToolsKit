@@ -1374,6 +1374,7 @@
         "grade": 1,
         "name": "ROC Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "THCN",
         "stdItem": {
             "UUID": "e17408e8-e1ad-4402-9cd9-3e05425a291a",
@@ -1386,9 +1387,15 @@
             "Type": "MiningModifier.Gun",
             "Name": "ROC Module",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Module (Passive)\\n\\nThis bespoke mining module was designed specifically for use with the ROC.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Module (Passive)"
+            },
+            "DescriptionText": "This bespoke mining module was designed specifically for use with the ROC.",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "miningConsumable",
@@ -1400,8 +1407,15 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Activate",
+                "Store",
+                "Deactivate"
+            ]
         }
     }
 }

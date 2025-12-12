@@ -1769,6 +1769,7 @@
         "grade": 1,
         "name": "Ketchum Beanie Dark Red",
         "tags": "alb_hat Set_01 Color_13 Limp $hatHair+",
+        "required_tags": "Protos",
         "manufacturer": "ALB",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1782,9 +1783,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Ketchum Beanie Dark Red",
             "Description": "Complete your cool-weather wardrobe with the classic Ketchum beanie from Alejo Brothers.",
+            "DescriptionText": "Complete your cool-weather wardrobe with the classic Ketchum beanie from Alejo Brothers.",
             "Manufacturer": {
                 "Code": "ALB",
-                "Name": "Alejo Brothers"
+                "Name": "Alejo Brothers",
+                "UUID": "dd14fd7f-eead-4f7d-8057-2d95405a0183"
             },
             "Tags": [
                 "alb_hat",
@@ -1797,11 +1800,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1811,9 +1821,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

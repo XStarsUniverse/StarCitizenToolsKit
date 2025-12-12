@@ -1583,6 +1583,7 @@
         "grade": 1,
         "name": "Ramp Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d9969d5f-cd44-4644-aab4-ab5f36c4d215",
             "ClassName": "MISC_Starlancer_TAC_Switch_Template",
@@ -1593,7 +1594,28 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Ramp Control",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Hack",
+                "Repair",
+                "Syncopen",
+                "Syncclose",
+                "Opencomplete",
+                "Closecomplete",
+                "Deploy",
+                "Retract",
+                "Syncdeploy",
+                "Syncretract",
+                "Retractclose"
+            ]
         }
     }
 }

@@ -819,6 +819,7 @@
         "grade": 1,
         "name": "RCMBNT-XTL-3",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1b4efba7-c395-4c46-b2e5-ebeae4961f24",
             "ClassName": "Carryable_TBO_ASDReward_xtl3",
@@ -830,11 +831,23 @@
             "Type": "InventoryContainer.Cargo",
             "Name": "RCMBNT-XTL-3",
             "Description": "An imprint recombinant sample created from CTLST-XTL and REAGENT-03 as part of Dr. Logan Jorrit's Project Hyperion experiment.",
+            "DescriptionText": "An imprint recombinant sample created from CTLST-XTL and REAGENT-03 as part of Dr. Logan Jorrit's Project Hyperion experiment.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Open",
+                "Drop",
+                "Place",
+                "Openlootingui"
+            ]
         }
     }
 }

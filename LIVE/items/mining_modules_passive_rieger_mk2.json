@@ -1994,6 +1994,7 @@
         "grade": 1,
         "name": "Rieger-C2 Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "SHIN",
         "stdItem": {
             "UUID": "369d2b1b-d42e-41b4-aff4-74de9712ab68",
@@ -2006,9 +2007,17 @@
             "Type": "MiningModifier.Gun",
             "Name": "Rieger-C2 Module",
             "Description": "Manufacturer: Shubin Interstellar\\nItem Type: Mining Module (Passive)\\n\\nMining Laser Power: 120%\\n\\nOptimal Charge Window Size: -3%\\n\\nThe Rieger-C2 Module boosts laser power but requires more precision to find an effective mining area.",
+            "DescriptionData": {
+                "Manufacturer": "Shubin Interstellar",
+                "Item Type": "Mining Module (Passive)",
+                "Mining Laser Power": "120%",
+                "Optimal Charge Window Size": "-3%"
+            },
+            "DescriptionText": "The Rieger-C2 Module boosts laser power but requires more precision to find an effective mining area.",
             "Manufacturer": {
                 "Code": "SHIN",
-                "Name": "Shubin Interstellar"
+                "Name": "Shubin Interstellar",
+                "UUID": "ab35f85f-919f-4457-8d58-4e885ea6c5c0"
             },
             "Tags": [
                 "miningConsumable",
@@ -2020,8 +2029,17 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

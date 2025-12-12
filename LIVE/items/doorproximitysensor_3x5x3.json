@@ -600,6 +600,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "66951cf0-e39c-4ef4-878b-c613fbee0aab",
             "ClassName": "DoorProximitySensor_3x5x3",
@@ -611,9 +612,23 @@
             "Type": "Sensor.DoorPart",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
-            "Durability": {
-                "Health": 99
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
             },
+            "Durability": {
+                "Health": 99,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Enableproximitysensor",
+                "Disableproximitysensor"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,

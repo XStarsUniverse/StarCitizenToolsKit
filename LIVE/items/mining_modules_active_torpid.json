@@ -2144,6 +2144,7 @@
         "grade": 1,
         "name": "Torpid Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "47ba04b0-010b-47cd-9f7d-209e2ec190b9",
@@ -2156,9 +2157,20 @@
             "Type": "MiningModifier.Gun",
             "Name": "Torpid Module",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Module (Active)\\n\\nOptimal Charge Rate: +60%\\nCatastrophic Charge Rate: -60%\\n\\nShatter Damage: +40%\\n\\nDuration: 60 seconds\\nUses: 5\\n\\nThe Torpid Module is a must for any ambitious miner. It makes mining more efficient by dramatically increasing the optimal charge rate while also reducing the catastrophic charge rate. The module does have a downside as a shattering deposit may prove more hazardous.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Module (Active)",
+                "Optimal Charge Rate": "+60%",
+                "Catastrophic Charge Rate": "-60%",
+                "Shatter Damage": "+40%",
+                "Duration": "60 seconds",
+                "Uses": "5"
+            },
+            "DescriptionText": "The Torpid Module is a must for any ambitious miner. It makes mining more efficient by dramatically increasing the optimal charge rate while also reducing the catastrophic charge rate. The module does have a downside as a shattering deposit may prove more hazardous.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "miningConsumable",
@@ -2170,8 +2182,18 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Activate",
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

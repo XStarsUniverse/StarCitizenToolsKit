@@ -6875,6 +6875,7 @@
         "grade": 1,
         "name": "YellowJacket GT-210 Gatling",
         "tags": "GATS BallisticGatling flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "GAT",
         "stdItem": {
             "UUID": "1ac2d0ab-61bf-4068-98f8-f19f3325dc71",
@@ -6887,9 +6888,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "YellowJacket GT-210 Gatling",
             "Description": "Manufacturer: Gallenson Tactical Systems\\nItem Type: Ballistic Gatling\\nSize: 1\\n\\nWhile the GT-210 YellowJacket may be small, it packs a mighty sting. This high-speed ballistic weapon is perfect for targeting smaller, more mobile targets and its DTX-8 ammo supply system almost completely eliminates weapon jams due to bad rounds.",
+            "DescriptionData": {
+                "Manufacturer": "Gallenson Tactical Systems",
+                "Item Type": "Ballistic Gatling",
+                "Size": "1"
+            },
+            "DescriptionText": "While the GT-210 YellowJacket may be small, it packs a mighty sting. This high-speed ballistic weapon is perfect for targeting smaller, more mobile targets and its DTX-8 ammo supply system almost completely eliminates weapon jams due to bad rounds.",
             "Manufacturer": {
                 "Code": "GAT",
-                "Name": "Gallenson Tactical Systems"
+                "Name": "Gallenson Tactical Systems",
+                "UUID": "a834198a-3465-4b02-86a5-887e922ec06d"
             },
             "Tags": [
                 "DRAK_Cutlass_Steel"
@@ -6898,32 +6906,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -6949,8 +6997,51 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 550
+                "Health": 550,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Grip",
+                "Release",
+                "Deploy",
+                "Retract",
+                "Deploycomplete",
+                "Retractcomplete",
+                "Deploytrigger",
+                "Retracttrigger",
+                "Deployrequest",
+                "Retractrequest",
+                "Gatedeploy",
+                "Allowdeploy"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

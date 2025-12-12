@@ -814,6 +814,7 @@
         "grade": 1,
         "name": "",
         "tags": "salvageMount",
+        "required_tags": "salvageMount",
         "stdItem": {
             "UUID": "160cf776-33cd-402e-a126-b8858d81efd5",
             "ClassName": "DRAK_Vulture_Salvage_Arm_Right",
@@ -825,6 +826,12 @@
             "Type": "ToolArm.UNDEFINED",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "salvageMount"
             ],
@@ -832,6 +839,8 @@
                 {
                     "PortName": "hardpoint_salvage_laser",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Tags": [
                         "salvageMount"
                     ],
@@ -840,6 +849,11 @@
                     ],
                     "Types": [
                         "SalvageHead"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SalvageHead"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -850,7 +864,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

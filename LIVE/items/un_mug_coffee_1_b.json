@@ -2514,6 +2514,7 @@
         "grade": 1,
         "name": "Mug",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "6b628df2-a2a1-446c-9d52-9fe2b7e6d63e",
             "ClassName": "un_mug_coffee_1_b",
@@ -2525,13 +2526,22 @@
             "Type": "Drink.UNDEFINED",
             "Name": "Mug",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$slot_drink_1",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "drink_1"
                     ],
+                    "EquippedItem": "4402ed9f-d1c6-46f4-92c3-0a794934ddd4",
                     "Uneditable": false
                 }
             ],
@@ -2541,12 +2551,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": ""
-            }
+                "Type": "Drink",
+                "ContainerClosed": 0,
+                "ContainerTypeTag": "",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Drink",
+                "Fill"
+            ]
         }
     }
 }

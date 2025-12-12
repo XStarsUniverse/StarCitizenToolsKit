@@ -1788,6 +1788,7 @@
         "grade": 1,
         "name": "Jumping Limes",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "eb1bc678-53dd-4c2d-90c5-6bfe1310fc6e",
@@ -1800,9 +1801,16 @@
             "Type": "Misc.Harvestable",
             "Name": "Jumping Limes",
             "Description": "NDR: 09\\nHEI: 06\\nEffects: Dehydrating\\n\\nGrows on a cactus in the deserts of Yar (Centauri II). A local variant that developed naturally after terraformation was complete, the spiny fruit start off purple and turn green when they are ripe.\\n\\nThey acquired their name because of the ease in which they fall off the cactus and attach themselves to clothing and skin, as if they \"jumped\" there.\\n\\nThe leathery, barbed skin must be peeled back to reveal the juicy flesh of the interior. The taste is sweet, extremely tart and astringent.\\n\\nLocals warn that if you become lost in the dessert you should be careful using jumping limes for hydration as they can make you feel even more thirsty.",
+            "DescriptionData": {
+                "NDR": "09",
+                "HEI": "06",
+                "Effects": "Dehydrating"
+            },
+            "DescriptionText": "Grows on a cactus in the deserts of Yar (Centauri II). A local variant that developed naturally after terraformation was complete, the spiny fruit start off purple and turn green when they are ripe.\n\nThey acquired their name because of the ease in which they fall off the cactus and attach themselves to clothing and skin, as if they \"jumped\" there.\n\nThe leathery, barbed skin must be peeled back to reveal the juicy flesh of the interior. The taste is sweet, extremely tart and astringent.\n\nLocals warn that if you become lost in the dessert you should be careful using jumping limes for hydration as they can make you feel even more thirsty.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
@@ -1810,14 +1818,49 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 1,
-                "containerTypeTag": "fruit"
+                "NutritionalDensityRating": "09",
+                "HydrationEfficacyIndex": "06",
+                "Effects": [
+                    "Dehydrating"
+                ],
+                "Type": "Misc",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Consume"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 350,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.00035
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "aaf46f4c-f8d8-4808-a39b-2b47de9b78fa",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

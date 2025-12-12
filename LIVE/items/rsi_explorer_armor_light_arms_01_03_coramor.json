@@ -1909,6 +1909,7 @@
         "grade": 1,
         "name": "Venture Arms Starcrossed",
         "tags": "Explorer Set_01 Texture_03 Color_coramor SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1922,9 +1923,18 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "Venture Arms Starcrossed",
             "Description": "Item Type: Light Armor\\nDamage Reduction: 20%\\nTemp. Rating: -38 / 68 \u00b0C\\nRadiation Protection: 26000 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nRobert Space Industries\u2019 Venture Explorer Suit provides exceptional protection against the dangers of space. Designed for those who don't know where their next adventure might go, the suit combines comfort and safety without sacrificing mobility. This special Starcrossed edition is modeled after the armor worn by Yuri Ilyin in the famous 25th century vid, Coramor, which inspired the eponymous lovers' festival.",
+            "DescriptionData": {
+                "Item Type": "Light Armor",
+                "Damage Reduction": "20%",
+                "Temp. Rating": "-38 / 68 \u00b0C",
+                "Radiation Protection": "26000 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Robert Space Industries' Venture Explorer Suit provides exceptional protection against the dangers of space. Designed for those who don't know where their next adventure might go, the suit combines comfort and safety without sacrificing mobility. This special Starcrossed edition is modeled after the armor worn by Yuri Ilyin in the famous 25th century vid, Coramor, which inspired the eponymous lovers' festival.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "Explorer",
@@ -1938,15 +1948,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -38,
                 "Maximum": 68
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

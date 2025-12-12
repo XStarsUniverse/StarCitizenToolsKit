@@ -1767,6 +1767,7 @@
         "grade": 1,
         "name": "Invictus Hat Olive Green",
         "tags": "cbd_hat Set_03 Color_15 Color_expo KeepsShape $hatHair+",
+        "required_tags": "Protos",
         "manufacturer": "CBD",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1780,9 +1781,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Invictus Hat Olive Green",
             "Description": "Show your support for the Navy and the brave souls that serve the Empire with this classic cadet hat commemorating Invictus Launch Week.",
+            "DescriptionText": "Show your support for the Navy and the brave souls that serve the Empire with this classic cadet hat commemorating Invictus Launch Week.",
             "Manufacturer": {
                 "Code": "CBD",
-                "Name": "CBD"
+                "Name": "CBD",
+                "UUID": "64eef2d9-5d3d-431d-a83b-ae077a16b4e2"
             },
             "Tags": [
                 "cbd_hat",
@@ -1796,11 +1799,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1810,9 +1820,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

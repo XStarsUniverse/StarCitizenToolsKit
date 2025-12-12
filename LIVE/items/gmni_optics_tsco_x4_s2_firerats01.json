@@ -1778,6 +1778,7 @@
         "grade": 1,
         "name": "OT4-RF \"Scorched\" (4x Telescopic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GEM",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1791,15 +1792,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "OT4-RF \"Scorched\" (4x Telescopic)",
             "Description": "Manufacturer: Gemini\u00a0\\nType: Telescopic\\nAttachment Point: Optic\u00a0 \u00a0\\nMagnification: 2x - 4x\\nAim Time: +5%\\nRecoil Smoothness: +10%\\nSize: 2\\n\\nCombining a premium 4x telescopic sight with Gemini's innovative echoburst rangefinder, the OT4-RF model allows you to accurately gauge the distance to your target; vital for effective precision shooting. When paired with the Gemini S71 or other compatible weapon, the OT4-RF is engineered to impress in a variety of situations and engagements. The Scorched edition features a unique flame patina.",
+            "DescriptionData": {
+                "Manufacturer": "Gemini",
+                "Type": "Telescopic",
+                "Attachment Point": "Optic",
+                "Magnification": "2x - 4x",
+                "Size": "2"
+            },
+            "DescriptionText": "Combining a premium 4x telescopic sight with Gemini's innovative echoburst rangefinder, the OT4-RF model allows you to accurately gauge the distance to your target; vital for effective precision shooting. When paired with the Gemini S71 or other compatible weapon, the OT4-RF is engineered to impress in a variety of situations and engagements. The Scorched edition features a unique flame patina.",
             "Manufacturer": {
                 "Code": "GEM",
-                "Name": "Gemini"
+                "Name": "Gemini",
+                "UUID": "b33050cd-6ca9-4c57-baf8-f4114eb85237"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

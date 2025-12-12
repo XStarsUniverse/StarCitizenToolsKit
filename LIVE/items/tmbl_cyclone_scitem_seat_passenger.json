@@ -524,6 +524,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "TMBL",
         "stdItem": {
             "UUID": "fb084195-0ac2-48f0-923f-0d407182d912",
@@ -536,9 +537,28 @@
             "Type": "Seat.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "TMBL",
-                "Name": "Tumbril Land Systems"
+                "Name": "Tumbril Land Systems",
+                "UUID": "bb1024bc-b82e-491c-820c-36662c36feb3"
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

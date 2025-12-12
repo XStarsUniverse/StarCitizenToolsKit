@@ -870,6 +870,7 @@
         "grade": 1,
         "name": "Sunset Berries",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "49572fb8-c079-4c61-a119-eff392f7e015",
@@ -882,13 +883,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Sunset Berries",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3.75,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 32,
+                    "UnitName": "SCU",
+                    "SCU": 32
+                },
+                "InclusiveGroups": [
+                    "32a1c43c-ffdf-4b02-82a8-1d8b2d9f6666"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "306f93e6-a500-415b-b71b-631e8c93721c",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

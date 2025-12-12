@@ -235,6 +235,7 @@
         "grade": 1,
         "name": "Avenger Titan Ship Armor",
         "tags": "AEGS_Avenger_Base",
+        "required_tags": "",
         "manufacturer": "AEG",
         "classification": "Ship.Armor.Medium",
         "stdItem": {
@@ -248,9 +249,11 @@
             "Type": "Armor.Medium",
             "Name": "Avenger Titan Ship Armor",
             "Description": "Avenger Titan Ship Armor",
+            "DescriptionText": "Avenger Titan Ship Armor",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Avenger_Base"
@@ -271,7 +274,9 @@
                 }
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

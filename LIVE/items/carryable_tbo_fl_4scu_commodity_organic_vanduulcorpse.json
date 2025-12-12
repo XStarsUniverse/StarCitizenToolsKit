@@ -1250,6 +1250,7 @@
         "grade": 1,
         "name": "CryoPod (Vanduul)",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "e72cbc1d-c35c-4f4e-b78c-8a3719f7dc83",
@@ -1262,14 +1263,27 @@
             "Type": "Cargo.Cargo",
             "Name": "CryoPod (Vanduul)",
             "Description": "A Vanduul corpse preserved within a CryoPod.",
+            "DescriptionText": "A Vanduul corpse preserved within a CryoPod.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
-            }
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

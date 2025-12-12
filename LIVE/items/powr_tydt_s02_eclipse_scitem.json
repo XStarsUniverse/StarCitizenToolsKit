@@ -1134,6 +1134,7 @@
         "grade": 1,
         "name": "Eclipse",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "TYDT",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1147,17 +1148,37 @@
             "Type": "PowerPlant.Power",
             "Name": "Eclipse",
             "Description": "Item Type: Power Plant\\nManufacturer: Tyler Design & Tech\\nSize: 2\\nGrade: A\\nClass: Stealth \\n\\nCompeting medium power plants struggle to match the heat and signature reduction of the Eclipse. Tyler Design & Tech\u2019s mastery of stealth tech makes this component a must own by those who prefer to go unnoticed.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Tyler Design & Tech",
+                "Size": "2",
+                "Grade": "A",
+                "Class": "Stealth"
+            },
+            "DescriptionText": "Competing medium power plants struggle to match the heat and signature reduction of the Eclipse. Tyler Design & Tech's mastery of stealth tech makes this component a must own by those who prefer to go unnoticed.",
             "Manufacturer": {
                 "Code": "TYDT",
-                "Name": "Tyler Design & Tech"
+                "Name": "Tyler Design & Tech",
+                "UUID": "a2a97679-2a6e-4e89-80d8-439c88a01427"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 40,
+                "Maximum": 12000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 900
+                "Health": 900,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1180,6 +1201,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 5312.5,
@@ -1197,6 +1222,39 @@
             },
             "PowerPlant": {
                 "Output": 5312.5
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 18,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 18,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 4500
+                        }
+                    }
+                ]
             }
         }
     }

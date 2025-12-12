@@ -1383,6 +1383,7 @@
         "grade": 1,
         "name": "@item_s42_lever",
         "tags": "DoorInteractionPanel",
+        "required_tags": "",
         "stdItem": {
             "UUID": "b25e32d4-7fdd-44d8-bbd2-85df0483f91a",
             "ClassName": "Lever_Template",
@@ -1394,6 +1395,12 @@
             "Type": "ControlPanel.DoorPart",
             "Name": "@item_s42_lever",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "DoorInteractionPanel"
             ],
@@ -1401,8 +1408,18 @@
                 {
                     "PortName": "Panel",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Open panel",
+                "Pump",
+                "Exit",
+                "Lock",
+                "Unlock",
+                "Hidden_enable"
             ]
         }
     }

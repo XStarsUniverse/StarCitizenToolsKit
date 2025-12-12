@@ -1090,6 +1090,7 @@
         "grade": 1,
         "name": "Waste",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "4069cad8-66c2-47c2-94f5-5864e3f7b297",
@@ -1102,6 +1103,12 @@
             "Type": "Cargo.Small",
             "Name": "Waste",
             "Description": "Rock",
+            "DescriptionText": "Rock",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1109,6 +1116,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "b999ef65-35be-45bf-908a-5eac6e06ba12",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

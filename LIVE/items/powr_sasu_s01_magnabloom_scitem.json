@@ -1142,6 +1142,7 @@
         "grade": 2,
         "name": "MagnaBloom",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SASU",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1155,17 +1156,37 @@
             "Type": "PowerPlant.Power",
             "Name": "MagnaBloom",
             "Description": "Item Type: Power Plant\\nManufacturer: Sakura Sun\\nSize: 1\\nGrade: B\\nClass: Civilian\\n\\nThe MagnaBloom power plant achieves above average performance and durability with minimal excess emissions, making it another exquisitely designed component from Sakura Sun.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Sakura Sun",
+                "Size": "1",
+                "Grade": "B",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "The MagnaBloom power plant achieves above average performance and durability with minimal excess emissions, making it another exquisitely designed component from Sakura Sun.",
             "Manufacturer": {
                 "Code": "SASU",
-                "Name": "Sakura Sun"
+                "Name": "Sakura Sun",
+                "UUID": "40c59850-8fb5-4a0e-ab61-7fd3871a632a"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 20,
+                "Maximum": 6000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 390
+                "Health": 390,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.75,
@@ -1188,6 +1209,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2208.68,
@@ -1205,6 +1230,39 @@
             },
             "PowerPlant": {
                 "Output": 2208.68
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 14,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 14,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 5780
+                        }
+                    }
+                ]
             }
         }
     }

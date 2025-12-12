@@ -2675,6 +2675,7 @@
         "grade": 1,
         "name": "Tigerstrike T-19P",
         "tags": "KRIG BallisticGatling flightReady weaponMountUsable Merlin_Nose",
+        "required_tags": "Merlin_Nose",
         "manufacturer": "KRI",
         "classification": "Ship.Weapon.NoseMounted",
         "stdItem": {
@@ -2688,9 +2689,16 @@
             "Type": "WeaponGun.NoseMounted",
             "Name": "Tigerstrike T-19P",
             "Description": "Manufacturer: Kruger Intergalactic\\nItem Type: Ballistic Gatling\\nSize: 2\\n\\nA custom variant on Kruger Intergalactic\u2019s Tigerstrike line of rotary cannons, this powerful gun was designed in conjunction with the team working on the P-52 Merlin to ensure that it fit seamlessly with the graceful lines of light fighter\u2019s hull while still rapidly delivering round after round with the dependability that one expects from a Kruger weapon.",
+            "DescriptionData": {
+                "Manufacturer": "Kruger Intergalactic",
+                "Item Type": "Ballistic Gatling",
+                "Size": "2"
+            },
+            "DescriptionText": "A custom variant on Kruger Intergalactic's Tigerstrike line of rotary cannons, this powerful gun was designed in conjunction with the team working on the P-52 Merlin to ensure that it fit seamlessly with the graceful lines of light fighter's hull while still rapidly delivering round after round with the dependability that one expects from a Kruger weapon.",
             "Manufacturer": {
                 "Code": "KRI",
-                "Name": "Kruger Intergalatic"
+                "Name": "Kruger Intergalatic",
+                "UUID": "7b5d1ed3-11e7-49e6-9ed3-9d0cb52a3dc2"
             },
             "Tags": [
                 "KRIG",
@@ -2703,32 +2711,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2754,8 +2802,37 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

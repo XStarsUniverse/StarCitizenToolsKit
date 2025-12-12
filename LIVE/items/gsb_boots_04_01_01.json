@@ -1870,6 +1870,7 @@
         "grade": 1,
         "name": "Landlite Boots",
         "tags": "gsb_boots Set_04 Color_01",
+        "required_tags": "",
         "manufacturer": "GSB",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1883,9 +1884,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Landlite Boots",
             "Description": "Who says work boots can't be comfortable? Grindstone's Landlite boots are built with a breathable synth-leather material to keep your feet dry, a contoured, memory footbed, and a slip-resistant outsole, making it perfect for whatever worksite you throw at it.",
+            "DescriptionText": "Who says work boots can't be comfortable? Grindstone's Landlite boots are built with a breathable synth-leather material to keep your feet dry, a contoured, memory footbed, and a slip-resistant outsole, making it perfect for whatever worksite you throw at it.",
             "Manufacturer": {
                 "Code": "GSB",
-                "Name": "GSB"
+                "Name": "GSB",
+                "UUID": "6d4b7375-8e0c-445a-a243-21f8f94f99cb"
             },
             "Tags": [
                 "gsb_boots",
@@ -1896,11 +1899,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1910,9 +1920,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 25
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

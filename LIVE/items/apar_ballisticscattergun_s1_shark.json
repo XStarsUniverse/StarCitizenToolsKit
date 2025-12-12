@@ -2581,6 +2581,7 @@
         "grade": 1,
         "name": "Havoc Scattergun Sharkmouth Edition",
         "tags": "APAR ScatterGun flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "APAR",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2594,9 +2595,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Havoc Scattergun Sharkmouth Edition",
             "Description": "Manufacturer: Apocalypse Arms\\nItem Type: Ballistic Scattergun\\nSize: 1\\n\\nSow dread across the battlefield with the Havoc from Apocalypse Arms. This size one scattergun deals massive damage at close range, making it the perfect weapon for finishing a fight.",
+            "DescriptionData": {
+                "Manufacturer": "Apocalypse Arms",
+                "Item Type": "Ballistic Scattergun",
+                "Size": "1"
+            },
+            "DescriptionText": "Sow dread across the battlefield with the Havoc from Apocalypse Arms. This size one scattergun deals massive damage at close range, making it the perfect weapon for finishing a fight.",
             "Manufacturer": {
                 "Code": "APAR",
-                "Name": "Apocalypse Arms"
+                "Name": "Apocalypse Arms",
+                "UUID": "77f7999a-b23b-4812-94c2-09b5e15e1b0e"
             },
             "Tags": [
                 "APAR",
@@ -2608,32 +2616,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2659,8 +2707,37 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1550
+                "Health": 1550,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

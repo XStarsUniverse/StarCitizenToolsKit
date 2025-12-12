@@ -2296,6 +2296,7 @@
         "grade": 1,
         "name": "FSK-8 \"Bloodline\" Combat Knife\u00a0",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "UTFL",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -2309,9 +2310,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "FSK-8 \"Bloodline\" Combat Knife\u00a0",
             "Description": "Manufacturer: UltiFlex\\nItem Type: Knife\\nClass: Melee\\n\\nSize: 16 cm\\n\\nThe FSK-8 Combat Knife from UltiFlex is as sparse a weapon as you can get. While many become enamored with dazzling tech of modern weaponry, UltiFlex has focused on making a simple effective combat tool. Featuring a balanced 1055 carbon steel blade honed to a razor's edge, this knife is capable of handling all the abuse you can throw at it.",
+            "DescriptionData": {
+                "Manufacturer": "UltiFlex",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "16 cm"
+            },
+            "DescriptionText": "The FSK-8 Combat Knife from UltiFlex is as sparse a weapon as you can get. While many become enamored with dazzling tech of modern weaponry, UltiFlex has focused on making a simple effective combat tool. Featuring a balanced 1055 carbon steel blade honed to a razor's edge, this knife is capable of handling all the abuse you can throw at it.",
             "Manufacturer": {
                 "Code": "UTFL",
-                "Name": "UltiFlex"
+                "Name": "UltiFlex",
+                "UUID": "da264d7b-755b-48a2-9580-4adc17ff7ad5"
             },
             "Tags": [
                 "knife"
@@ -2320,22 +2329,42 @@
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2345,6 +2374,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

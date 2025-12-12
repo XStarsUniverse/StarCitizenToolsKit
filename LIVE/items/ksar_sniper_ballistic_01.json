@@ -10691,6 +10691,7 @@
         "grade": 1,
         "name": "Scalpel Sniper Rifle",
         "tags": "stocked sniper",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -10704,9 +10705,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Scalpel Sniper Rifle",
             "Description": "Manufacturer: Kastak Arms\\nItem Type: Sniper Rifle\\nClass: Ballistic\\n\\nMagazine Size: 8\\nRate Of Fire: 30 rpm\\nEffective Range: 120 m\\n\\nAttachments: Optics (S3), Barrel (N/A), Underbarrel (S2)\\n\\nThe Scalpel is a unique and versatile sniper rifle from Kastak Arms. Designed with two barrels stacked atop of each other, it has two fire modes so you can adapt your shot to the situation. It can deliver a single, powerful shot from a long distance, or fire both barrels in quick succession to create a double-shot burst.",
+            "DescriptionData": {
+                "Manufacturer": "Kastak Arms",
+                "Item Type": "Sniper Rifle",
+                "Class": "Ballistic",
+                "Magazine Size": "8",
+                "Rate Of Fire": "30 rpm",
+                "Effective Range": "120 m",
+                "Attachments": "Optics (S3), Barrel (N/A), Underbarrel (S2)"
+            },
+            "DescriptionText": "The Scalpel is a unique and versatile sniper rifle from Kastak Arms. Designed with two barrels stacked atop of each other, it has two fire modes so you can adapt your shot to the situation. It can deliver a single, powerful shot from a long distance, or fire both barrels in quick succession to create a double-shot burst.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "stocked",
@@ -10716,6 +10728,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "ksar_sniper_ballistic_01"
                     ],
@@ -10723,35 +10737,67 @@
                         "ksar_sniper_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d84a7601-c246-4384-88c3-b3be0fe10680",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "71aac893-8957-42e2-8956-61985ab2c4a5",
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -10810,14 +10856,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

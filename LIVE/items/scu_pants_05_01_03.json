@@ -1999,6 +1999,7 @@
         "grade": 1,
         "name": "DuraWork Pants Ochre",
         "tags": "scu_pants Set_05 Texture_01 Color_03",
+        "required_tags": "",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2012,9 +2013,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "DuraWork Pants Ochre",
             "Description": "Carrying Capacity: 2000 \u00b5SCU\\n\\nMade of a durable synthetic material, Stegman's designed the DuraWork to provide a comfortable and reliable clothing option to workers around the 'verse.",
+            "DescriptionData": {
+                "Carrying Capacity": "2000 \u00b5SCU"
+            },
+            "DescriptionText": "Made of a durable synthetic material, Stegman's designed the DuraWork to provide a comfortable and reliable clothing option to workers around the 'verse.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_pants",
@@ -2026,19 +2032,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2048,7 +2066,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2058,6 +2084,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.002,
                 "unit": 6,
@@ -2073,6 +2108,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

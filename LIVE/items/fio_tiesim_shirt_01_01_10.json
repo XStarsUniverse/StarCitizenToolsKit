@@ -1956,6 +1956,7 @@
         "grade": 1,
         "name": "Concept Shirt",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "FIO",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1969,19 +1970,28 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Concept Shirt",
             "Description": "This crisp, versatile button-front shirt from Fiore is made with cutting edge stain resistant and wrinkle-free technology, guaranteeing that you stay professional at all times.",
+            "DescriptionText": "This crisp, versatile button-front shirt from Fiore is made with cutting edge stain resistant and wrinkle-free technology, guaranteeing that you stay professional at all times.",
             "Manufacturer": {
                 "Code": "FIO",
-                "Name": "Fiore"
+                "Name": "Fiore",
+                "UUID": "503b0974-5027-4c69-bce6-a38c42e87ebe"
             },
             "Ports": [
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1991,6 +2001,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2006,6 +2025,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

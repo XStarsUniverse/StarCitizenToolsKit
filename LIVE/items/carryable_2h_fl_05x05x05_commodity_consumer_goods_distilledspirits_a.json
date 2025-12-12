@@ -1207,6 +1207,7 @@
         "grade": 1,
         "name": "Distilled Spirits",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "ab06ffca-50db-45d1-aaa1-bab4090a700d",
@@ -1219,6 +1220,12 @@
             "Type": "Cargo.Small",
             "Name": "Distilled Spirits",
             "Description": "A purified beverage produced through the distillation of fermented substances. Possesses at least 20 percent of alcohol by volume.",
+            "DescriptionText": "A purified beverage produced through the distillation of fermented substances. Possesses at least 20 percent of alcohol by volume.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1226,6 +1233,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "e938ab24-2af8-48b5-9af7-8e82fb26dcb3",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

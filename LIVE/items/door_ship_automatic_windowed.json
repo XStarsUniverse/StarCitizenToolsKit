@@ -4302,6 +4302,7 @@
         "grade": 1,
         "name": "Door Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1846dd91-7cc5-42cb-a863-273e698d2967",
             "ClassName": "Door_Ship_Automatic_Windowed",
@@ -4313,116 +4314,277 @@
             "Type": "Door.UNDEFINED",
             "Name": "Door Control",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "control_panel_a",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Tags": [
                         "Front"
                     ],
                     "Types": [
-                        "ControlPanel"
+                        "ControlPanel.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ControlPanel",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "control_panel_b",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Tags": [
                         "Back"
                     ],
                     "Types": [
-                        "ControlPanel"
+                        "ControlPanel.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ControlPanel",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "charge_handle_a",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Tags": [
                         "Front"
                     ],
                     "Types": [
-                        "Misc"
+                        "Misc.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "charge_handle_b",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Tags": [
                         "Back"
                     ],
                     "Types": [
-                        "Misc"
+                        "Misc.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "close_button_a",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Types": [
-                        "Button"
+                        "Button.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Button",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "close_button_b",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Types": [
-                        "Button"
+                        "Button.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Button",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "proximity_sensor",
                     "Size": 2,
+                    "MinSize": 0,
+                    "MaxSize": 2,
                     "Types": [
-                        "Sensor"
+                        "Sensor.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Sensor",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "light_group_a",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Types": [
-                        "Lightgroup"
+                        "Lightgroup.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Lightgroup",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "light_group_b",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Types": [
-                        "Lightgroup"
+                        "Lightgroup.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Lightgroup",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "decal_front",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
-                        "Decal"
+                        "Decal.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Decal",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "decal_rear",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
-                        "Decal"
+                        "Decal.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Decal",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "decal_screen",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
-                        "Decal"
+                        "Decal.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Decal",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Interactions": {
+                "0": "Open",
+                "1": "Close",
+                "2": "Lock",
+                "3": "Override",
+                "4": "Stepthrough",
+                "5": "Overrideclose",
+                "6": "Unlock",
+                "8": "Opencomplete",
+                "9": "Closecomplete",
+                "10": "Opentrigger",
+                "11": "Openself",
+                "12": "Allowopen",
+                "13": "Locktrigger",
+                "14": "Unlocktrigger",
+                "15": "Lockself",
+                "16": "Unlockself",
+                "17": "Openrequest",
+                "18": "Closerequest",
+                "19": "Closetrigger",
+                "20": "Closeself",
+                "21": "Allowclose",
+                "22": "Gate_close",
+                "23": "Set_pressurenormalized",
+                "24": "Set_pressuredifferential",
+                "25": "Setstate_powered",
+                "26": "Setstate_unpowered",
+                "27": "Setstate_blocked",
+                "28": "Setstate_unblocked",
+                "29": "Setstate_noaccess",
+                "30": "Setstate_access",
+                "31": "Pressurecycle",
+                "32": "Pressurecyclecomplete",
+                "33": "Set_airlockconnected"
+            },
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,

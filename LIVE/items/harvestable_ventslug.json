@@ -1852,6 +1852,7 @@
         "grade": 1,
         "name": "Vent Slug",
         "tags": "Fosil",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "bfa3fb80-fd27-4c56-a51e-f068798b530e",
@@ -1864,9 +1865,16 @@
             "Type": "Food.Harvestable",
             "Name": "Vent Slug",
             "Description": "NDR: 19\\nHEI: 05\\nEffects: Toxic, Cognitive Impairing\\n\\nThese slugs live in moist environments and eat mold that grows there. They can frequently be found inside and near life support vents where condensation can accumulate and are often brought aboard stations to help keep systems clean. Can be consumed, but they often can be mildly toxic to Humans owing to their diet. \\n",
+            "DescriptionData": {
+                "NDR": "19",
+                "HEI": "05",
+                "Effects": "Toxic, Cognitive Impairing"
+            },
+            "DescriptionText": "These slugs live in moist environments and eat mold that grows there. They can frequently be found inside and near life support vents where condensation can accumulate and are often brought aboard stations to help keep systems clean. Can be consumed, but they often can be mildly toxic to Humans owing to their diet.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "Fosil"
@@ -1877,14 +1885,44 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 1,
-                "containerTypeTag": "hotdog"
+                "NutritionalDensityRating": "19",
+                "HydrationEfficacyIndex": "05",
+                "Effects": [
+                    "Toxic",
+                    "Cognitive Impairing"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Consume"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 1.0e-6
+                }
             }
         }
     }

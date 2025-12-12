@@ -1989,6 +1989,7 @@
         "grade": 1,
         "name": "Tumbler Glass",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "430571e7-7b36-4251-90c5-a124c93ac4cd",
@@ -2001,19 +2002,28 @@
             "Type": "Drink.UNDEFINED",
             "Name": "Tumbler Glass",
             "Description": "A short and wide drinking vessel made from tempered glassware.",
+            "DescriptionText": "A short and wide drinking vessel made from tempered glassware.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Ports": [
                 {
                     "PortName": "$slot_garnish",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "garnish"
                     ],
                     "Types": [
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2024,12 +2034,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 0,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

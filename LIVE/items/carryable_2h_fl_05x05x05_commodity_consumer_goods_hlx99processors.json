@@ -1207,6 +1207,7 @@
         "grade": 1,
         "name": "HLX99 Hyperprocessors",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "d763bdc1-0866-49dd-8a81-1f87ce83f8a5",
@@ -1219,6 +1220,12 @@
             "Type": "Cargo.Small",
             "Name": "HLX99 Hyperprocessors",
             "Description": "Commonly known as \"Helixes\" these Banu manufactured processing chips were designed for fullcore crypto-cracking and are used in the manufacture of computer system infiltration devices.",
+            "DescriptionText": "Commonly known as \"Helixes\" these Banu manufactured processing chips were designed for fullcore crypto-cracking and are used in the manufacture of computer system infiltration devices.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1226,6 +1233,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "5e079d07-630a-41d5-a314-16381f07e2c3",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

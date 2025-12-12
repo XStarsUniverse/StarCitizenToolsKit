@@ -1199,6 +1199,7 @@
         "grade": 1,
         "name": "Gold",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "739c6b5a-69e5-45a6-bd6f-64913f644907",
@@ -1211,6 +1212,12 @@
             "Type": "Cargo.Small",
             "Name": "Gold",
             "Description": "A commonly found ductile metal favored for its conductivity. Though it falls in and out of fashion, it is often used for decorative purposes as well.\\n",
+            "DescriptionText": "A commonly found ductile metal favored for its conductivity. Though it falls in and out of fashion, it is often used for decorative purposes as well.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1218,6 +1225,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "21825507-7923-4683-9bf3-9cfe316940e3",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

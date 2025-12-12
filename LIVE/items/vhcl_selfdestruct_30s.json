@@ -258,6 +258,7 @@
         "grade": 1,
         "name": "RSI Self Destruct Long",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.SelfDestruct",
         "stdItem": {
@@ -271,13 +272,36 @@
             "Type": "SelfDestruct.UNDEFINED",
             "Name": "RSI Self Destruct Long",
             "Description": "RSI Self Destruct Long",
+            "DescriptionText": "RSI Self Destruct Long",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "Interactions": [
+                "Selfdestruct_engaged",
+                "Selfdestruct_disengaged"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

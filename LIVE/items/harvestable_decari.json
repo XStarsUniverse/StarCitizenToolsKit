@@ -1570,6 +1570,7 @@
         "grade": 1,
         "name": "Decari Pod",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "46ca075c-afe4-406d-b4d2-e1323025c582",
             "ClassName": "Harvestable_Decari",
@@ -1581,13 +1582,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Decari Pod",
             "Description": "A large spore pod harvested from the decari that can be collected and used as a food source. However, the decari pod cannot be consumed directly. It must have its thick out layer and spiny filaments removed, and the fibrous hymenium cooked for a long time before it can be safely digested by Humans.",
+            "DescriptionText": "A large spore pod harvested from the decari that can be collected and used as a food source. However, the decari pod cannot be consumed directly. It must have its thick out layer and spiny filaments removed, and the fibrous hymenium cooked for a long time before it can be safely digested by Humans.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 600,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.0006
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "469a34fe-2e37-4269-82eb-490eaed361a1",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

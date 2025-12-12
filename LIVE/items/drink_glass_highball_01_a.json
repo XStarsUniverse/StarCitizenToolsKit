@@ -1999,6 +1999,7 @@
         "grade": 1,
         "name": "Highball Glass",
         "tags": "glass_highball_01",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "5a83fd87-c7e4-4011-8b11-e45ecf86b227",
@@ -2011,9 +2012,11 @@
             "Type": "Drink.UNDEFINED",
             "Name": "Highball Glass",
             "Description": "A tall and narrow drinking vessel made from tempered glassware.",
+            "DescriptionText": "A tall and narrow drinking vessel made from tempered glassware.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "glass_highball_01"
@@ -2022,11 +2025,18 @@
                 {
                     "PortName": "$slot_garnish",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "garnish"
                     ],
                     "Types": [
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2037,12 +2047,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 0,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -540,6 +540,7 @@
         "grade": 1,
         "name": "@item_NameFlair_Vehicle",
         "tags": "GenericModel",
+        "required_tags": "",
         "manufacturer": "SASU",
         "stdItem": {
             "UUID": "727ba1fb-f426-49af-a5fe-841789d95e95",
@@ -552,9 +553,11 @@
             "Type": "Flair_Cockpit.Flair_Hanging",
             "Name": "@item_NameFlair_Vehicle",
             "Description": "@itemDescFlair_Vehicle",
+            "DescriptionText": "@itemDescFlair_Vehicle",
             "Manufacturer": {
                 "Code": "SASU",
-                "Name": "Sakura Sun"
+                "Name": "Sakura Sun",
+                "UUID": "40c59850-8fb5-4a0e-ab61-7fd3871a632a"
             },
             "Tags": [
                 "GenericModel"
@@ -563,11 +566,15 @@
                 {
                     "PortName": "slot01",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 },
                 {
                     "PortName": "slot02",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],

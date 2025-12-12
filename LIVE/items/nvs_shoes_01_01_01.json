@@ -1864,6 +1864,7 @@
         "grade": 1,
         "name": "Cuesta Shoes",
         "tags": "nvs_shoes Set_01 Texture_01 Color_01",
+        "required_tags": "",
         "manufacturer": "NVS",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1877,9 +1878,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Cuesta Shoes",
             "Description": "An all-season ankle boot, the Cuesta features a practical design that can stand up to all kinds of weather and terrain, while the supportive insole provides comfort to last through your shift and beyond.",
+            "DescriptionText": "An all-season ankle boot, the Cuesta features a practical design that can stand up to all kinds of weather and terrain, while the supportive insole provides comfort to last through your shift and beyond.",
             "Manufacturer": {
                 "Code": "NVS",
-                "Name": "Navy Surplus"
+                "Name": "Navy Surplus",
+                "UUID": "f8efa046-7f79-4e09-b2fc-35d0df2429cf"
             },
             "Tags": [
                 "nvs_shoes",
@@ -1891,11 +1894,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1905,9 +1915,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 25
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

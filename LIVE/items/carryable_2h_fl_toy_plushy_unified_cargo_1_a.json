@@ -1031,6 +1031,7 @@
         "grade": 1,
         "name": "UDM Cargo Plushie",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "6490c0b0-b7ba-4ea0-abb0-7f1b4fbe897a",
             "ClassName": "Carryable_2H_FL_toy_plushy_unified_cargo_1_a",
@@ -1042,11 +1043,24 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "UDM Cargo Plushie",
             "Description": "Here's a haul you can hug. This plushie shaped like a cargo container features Unified Distribution Management branding with the company's logo and white and purple color scheme.",
+            "DescriptionText": "Here's a haul you can hug. This plushie shaped like a cargo container features Unified Distribution Management branding with the company's logo and white and purple color scheme.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

@@ -589,6 +589,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "c76831a2-7eb6-479b-9749-e5b38df7a09d",
@@ -601,12 +602,20 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Seat",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady"
+            ],
+            "Interactions": [
+                "Copilotenter",
+                "Copilotexit",
+                "Copilotdeploydashboard",
+                "Copilotretractdashboard"
             ]
         }
     }

@@ -258,6 +258,7 @@
         "grade": 1,
         "name": "MISC Self Destruct",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "MIS",
         "classification": "Ship.SelfDestruct",
         "stdItem": {
@@ -271,13 +272,36 @@
             "Type": "SelfDestruct.UNDEFINED",
             "Name": "MISC Self Destruct",
             "Description": "MISC Self Destruct",
+            "DescriptionText": "MISC Self Destruct",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "Interactions": [
+                "Selfdestruct_engaged",
+                "Selfdestruct_disengaged"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

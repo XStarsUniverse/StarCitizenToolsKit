@@ -1031,6 +1031,7 @@
         "grade": 1,
         "name": "Red Wind Cargo Plushie",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "0f9f484f-ebe6-401a-a280-3a4dbe2b7279",
             "ClassName": "Carryable_2H_FL_toy_plushy_redwind_cargo_1_a",
@@ -1042,11 +1043,24 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "Red Wind Cargo Plushie",
             "Description": "Here's a haul you can hug. This plushie shaped like a cargo container features Red Wind Linehaul branding with the company's logo and grey and red color scheme.",
+            "DescriptionText": "Here's a haul you can hug. This plushie shaped like a cargo container features Red Wind Linehaul branding with the company's logo and grey and red color scheme.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

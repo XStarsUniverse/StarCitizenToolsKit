@@ -1999,6 +1999,7 @@
         "grade": 1,
         "name": "Waldron Pants Black",
         "tags": "ops_pants Set_06 Color_12",
+        "required_tags": "",
         "manufacturer": "OPS",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2012,9 +2013,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Waldron Pants Black",
             "Description": "Carrying Capacity: 0.5K \u00b5SCU\\n\\nThe Waldron suit fuses classic style with contemporary flourishes in a way that's become definitively OpalSky. The repeating geometric pattern travels the length of the jacket and pants to create a cutting edge look that will turn heads wherever you go.",
+            "DescriptionData": {
+                "Carrying Capacity": "0.5K \u00b5SCU"
+            },
+            "DescriptionText": "The Waldron suit fuses classic style with contemporary flourishes in a way that's become definitively OpalSky. The repeating geometric pattern travels the length of the jacket and pants to create a cutting edge look that will turn heads wherever you go.",
             "Manufacturer": {
                 "Code": "OPS",
-                "Name": "OpalSky"
+                "Name": "OpalSky",
+                "UUID": "6f5af1a4-a50d-41e5-8bb0-c1acd89d4b9e"
             },
             "Tags": [
                 "ops_pants",
@@ -2025,19 +2031,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2047,7 +2065,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2057,6 +2083,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0005,
                 "unit": 6,
@@ -2072,6 +2107,10 @@
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -1073,6 +1073,7 @@
         "grade": 1,
         "name": "",
         "tags": "",
+        "required_tags": "",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
             "UUID": "76eff75d-bd5b-46cd-a2ab-3690583017f0",
@@ -1085,22 +1086,47 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openexternalinventory"
             ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

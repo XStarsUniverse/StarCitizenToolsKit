@@ -1996,6 +1996,7 @@
         "grade": 1,
         "name": "K7 Pants Olive",
         "tags": "dmc_pants Set_04 Color_20",
+        "required_tags": "",
         "manufacturer": "DMC",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2009,9 +2010,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "K7 Pants Olive",
             "Description": "Carrying Capacity: 3K \u00b5SCU\\n\\nDMC's K7 are an all-purpose cargo pants. Four easy access pockets provide extra storage while the triple-stitched polymer weave fabric is designed to withstand all kinds of weather conditions.",
+            "DescriptionData": {
+                "Carrying Capacity": "3K \u00b5SCU"
+            },
+            "DescriptionText": "DMC's K7 are an all-purpose cargo pants. Four easy access pockets provide extra storage while the triple-stitched polymer weave fabric is designed to withstand all kinds of weather conditions.",
             "Manufacturer": {
                 "Code": "DMC",
-                "Name": "DMC"
+                "Name": "DMC",
+                "UUID": "a53bbc2b-aa43-483d-967e-0cebc5600c04"
             },
             "Tags": [
                 "dmc_pants",
@@ -2022,19 +2028,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2044,7 +2062,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2054,6 +2080,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.003,
                 "unit": 6,
@@ -2069,6 +2104,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

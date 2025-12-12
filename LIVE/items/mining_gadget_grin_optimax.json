@@ -2781,6 +2781,7 @@
         "grade": 1,
         "name": "OptiMax",
         "tags": "mining_gadget GRIN OptiMax",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "1a6b9b13-d3f8-4f32-b7db-146b90aad2da",
@@ -2793,9 +2794,18 @@
             "Type": "Gadget.Gadget",
             "Name": "OptiMax",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Gadget\\n\\nResistance: -30%\\nCluster Modifier: +60%\\n\\nOptimal Charge Window Size: -30%\\n\\nCommonly found on industrial sites across the empire, the OptiMax reduces the loss of valuable resource through a special process that keeps them clustered together. This technology does impose drawbacks on the gadget though, most notably a reduced optimal charge window. \\n\\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Gadget",
+                "Resistance": "-30%",
+                "Cluster Modifier": "+60%",
+                "Optimal Charge Window Size": "-30%"
+            },
+            "DescriptionText": "Commonly found on industrial sites across the empire, the OptiMax reduces the loss of valuable resource through a special process that keeps them clustered together. This technology does impose drawbacks on the gadget though, most notably a reduced optimal charge window. \n\nManufacturer Warning! Using more than one mining gadget per deposit can result in a catastrophic explosion.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "mining_gadget",
@@ -2808,8 +2818,24 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 10
-            }
+                "Health": 10,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Activate",
+                "Deactivate",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Offhandequip",
+                "Prime",
+                "Unprime",
+                "Carrylowered"
+            ]
         }
     }
 }

@@ -1430,6 +1430,7 @@
         "grade": 1,
         "name": "Ramp Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1fd940c8-ecce-4854-919d-90f6b97ddb3d",
             "ClassName": "DRAK_Cutlass_Steel_Switch_Ramp_Ext",
@@ -1440,7 +1441,23 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Ramp Control",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Hack",
+                "Repair",
+                "Syncopen",
+                "Syncclose",
+                "Opencomplete",
+                "Closecomplete"
+            ]
         }
     }
 }

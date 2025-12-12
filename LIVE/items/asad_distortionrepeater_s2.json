@@ -4767,6 +4767,7 @@
         "grade": 1,
         "name": "DR Model-XJ2 Repeater",
         "tags": "ASAD DistortionRepeater flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "ASD",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4780,9 +4781,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "DR Model-XJ2 Repeater",
             "Description": "Manufacturer: Associated Science & Development\\nItem Type: Distortion Repeater\\nSize: 2\\n\\nAdvancing the field of distortion weapons, the DR Model-XJ2 repeater from ASD provides tactical energy disruption that will severely limit any targeted ships operational capacity.",
+            "DescriptionData": {
+                "Manufacturer": "Associated Science & Development",
+                "Item Type": "Distortion Repeater",
+                "Size": "2"
+            },
+            "DescriptionText": "Advancing the field of distortion weapons, the DR Model-XJ2 repeater from ASD provides tactical energy disruption that will severely limit any targeted ships operational capacity.",
             "Manufacturer": {
                 "Code": "ASD",
-                "Name": "PH Associated Science and Development"
+                "Name": "PH Associated Science and Development",
+                "UUID": "055fe7c5-2e02-4e3a-aacb-f289563fabbd"
             },
             "Tags": [
                 "ASAD",
@@ -4794,33 +4802,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "748bba37-0b33-4d68-a7d9-5c39bc87ffd1",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "8e0a1b4f-5bca-4a81-8b2f-c6ae7dd2ef0b",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "1ca2ffb7-915a-43e4-ab8e-0d84a15a92ac",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "a007f0bf-ab4b-43dc-9fc7-aae884a32c9c",
                     "Uneditable": false
                 }
             ],
@@ -4853,8 +4905,37 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.05,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

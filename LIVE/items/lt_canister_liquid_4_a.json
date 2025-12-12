@@ -1236,6 +1236,7 @@
         "grade": 1,
         "name": "WiDoW",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "576ece7e-0c17-4d1a-ac6b-374caaeaf3dc",
@@ -1248,6 +1249,12 @@
             "Type": "Cargo.Small",
             "Name": "WiDoW",
             "Description": "Thick, ink-black synthetic opioid commonly used as a recreational drug. WiDoW has spread like wildfire throughout the Empire thanks to the fact that it's relatively easy to produce. This also creates a wide variety of quality between batches of the drug. Designed to be injected as a liquid directly into the bloodstream, the name derived from one of the main side effects from extensive use, the drug stains the veins black, creating web-like subcutaneous patterns through the body. Illegal inside the UEE.",
+            "DescriptionText": "Thick, ink-black synthetic opioid commonly used as a recreational drug. WiDoW has spread like wildfire throughout the Empire thanks to the fact that it's relatively easy to produce. This also creates a wide variety of quality between batches of the drug. Designed to be injected as a liquid directly into the bloodstream, the name derived from one of the main side effects from extensive use, the drug stains the veins black, creating web-like subcutaneous patterns through the body. Illegal inside the UEE.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1257,7 +1264,42 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 4
+                "Health": 4,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "ExclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "a69c19f9-f33e-4c87-bfd2-09663585d158",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

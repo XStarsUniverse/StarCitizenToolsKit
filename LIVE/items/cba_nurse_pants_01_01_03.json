@@ -1976,6 +1976,7 @@
         "grade": 1,
         "name": "Mahoney Nurse Scrub Pants Primrose",
         "tags": "cba_nurse_pants Set_01 Color_03",
+        "required_tags": "",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -1989,9 +1990,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Mahoney Nurse Scrub Pants Primrose",
             "Description": "Carrying Capacity: 0.5K \u00b5SCU\\n\\nThe Mahoney Nurse Scrub Pants are made for medical professionals looking for a comfortable but durable fit. They feature two front pockets and a stretch waistband. Moisture wicking and anti-stain fabric makes these pants ready to withstand long shifts and repeated washing.",
+            "DescriptionData": {
+                "Carrying Capacity": "0.5K \u00b5SCU"
+            },
+            "DescriptionText": "The Mahoney Nurse Scrub Pants are made for medical professionals looking for a comfortable but durable fit. They feature two front pockets and a stretch waistband. Moisture wicking and anti-stain fabric makes these pants ready to withstand long shifts and repeated washing.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_nurse_pants",
@@ -2002,19 +2008,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2024,7 +2042,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2034,6 +2060,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0005,
                 "unit": 6,
@@ -2049,6 +2084,10 @@
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

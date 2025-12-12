@@ -467,6 +467,7 @@
         "grade": 1,
         "name": "WillsOp Long Look Radar",
         "tags": "ANVL_Hornet_Center flightReady ANVL_Hornet_Base",
+        "required_tags": "ANVL_Hornet_Base",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "02934e18-0210-4789-887c-1efcc8fc5008",
@@ -479,9 +480,16 @@
             "Type": "Module.UNDEFINED",
             "Name": "WillsOp Long Look Radar",
             "Description": "Manufacturer: WillsOp\\nItem Type: Radar\\nSize: 5\\n\\nWhen the UEEN came to Anvil needing a ship to handle mobile C&C, Anvil turned to WillsOp, one of the most trusted names in scanning and deep-space radar. Together they developed the Long Look Radar (LLR) system as a way to upgrade the modern Hornets rather than developing an entirely new ship. Fully loaded with WillsOp\u2019s suite of scan systems, the LLR now brings its raw analytical power to the civilian market, turning an already dependable vessel into a perfect scanning fighter.",
+            "DescriptionData": {
+                "Manufacturer": "WillsOp",
+                "Item Type": "Radar",
+                "Size": "5"
+            },
+            "DescriptionText": "When the UEEN came to Anvil needing a ship to handle mobile C&C, Anvil turned to WillsOp, one of the most trusted names in scanning and deep-space radar. Together they developed the Long Look Radar (LLR) system as a way to upgrade the modern Hornets rather than developing an entirely new ship. Fully loaded with WillsOp's suite of scan systems, the LLR now brings its raw analytical power to the civilian market, turning an already dependable vessel into a perfect scanning fighter.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Hornet_Center",
@@ -494,7 +502,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 100
+                "Health": 100,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

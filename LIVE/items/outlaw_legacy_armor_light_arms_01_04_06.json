@@ -1826,6 +1826,7 @@
         "grade": 1,
         "name": "Lynx Arms Seagreen",
         "tags": "Outlaw_Legacy_Light Set_01 Texture_04 Color_06 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1839,9 +1840,18 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "Lynx Arms Seagreen",
             "Description": "Item Type: Light Armor\\nDamage Reduction: 20%\\nTemp. Rating: -31 / 61 \u00b0C\\nRadiation Protection: 26000 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nMaintain your mobility with the Lynx combat armor. A high tech polymer weave allows the wearer to withstand enough damage to quickly escape danger. The suit's striking look became famous after being worn by the Seeker in the widely popular \"Fire and Fury\" vids of the mid-2800s.",
+            "DescriptionData": {
+                "Item Type": "Light Armor",
+                "Damage Reduction": "20%",
+                "Temp. Rating": "-31 / 61 \u00b0C",
+                "Radiation Protection": "26000 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Maintain your mobility with the Lynx combat armor. A high tech polymer weave allows the wearer to withstand enough damage to quickly escape danger. The suit's striking look became famous after being worn by the Seeker in the widely popular \"Fire and Fury\" vids of the mid-2800s.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "Outlaw_Legacy_Light",
@@ -1855,15 +1865,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -31,
                 "Maximum": 61
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

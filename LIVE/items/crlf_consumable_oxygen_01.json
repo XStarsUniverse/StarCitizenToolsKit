@@ -1586,6 +1586,7 @@
         "grade": 1,
         "name": "OxyPen",
         "tags": "Stash_Oxygen medical_injection",
+        "required_tags": "",
         "manufacturer": "CUR",
         "stdItem": {
             "UUID": "54143614-a946-4964-9587-fb4d0ce7aed1",
@@ -1598,9 +1599,14 @@
             "Type": "FPS_Consumable.OxygenCap",
             "Name": "OxyPen",
             "Description": "Manufacturer: CureLife\\n\\nThis easy-to-carry disposable first-aid system is designed to refill pressure suit oxygen reserves in emergency situations. Compatible with most standard suits, the Curelife OxyPen is an ideal solution for preventing hypoxia and providing immediate access to lifesaving oxygen.",
+            "DescriptionData": {
+                "Manufacturer": "CureLife"
+            },
+            "DescriptionText": "This easy-to-carry disposable first-aid system is designed to refill pressure suit oxygen reserves in emergency situations. Compatible with most standard suits, the Curelife OxyPen is an ideal solution for preventing hypoxia and providing immediate access to lifesaving oxygen.",
             "Manufacturer": {
                 "Code": "CUR",
-                "Name": "Curelife"
+                "Name": "Curelife",
+                "UUID": "dd55bc19-5212-4365-bbc8-73474f0257ed"
             },
             "Tags": [
                 "Stash_Oxygen",
@@ -1612,12 +1618,26 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 1,
-                "containerTypeTag": "injection"
+                "Type": "FPS_Consumable",
+                "ContainerClosed": 0,
+                "ContainerType": "injection",
+                "ContainerTypeTag": "injection",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 1
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Consume"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 0,
                 "canBlock": 0,

@@ -1573,6 +1573,7 @@
         "grade": 1,
         "name": "Pingala Seeds",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "ea165f19-e4a6-4ee4-86d3-a0364a6307bd",
             "ClassName": "Harvestable_Pingala",
@@ -1584,13 +1585,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Pingala Seeds",
             "Description": "Every aspect of the pingala follows the golden ratio resulting a visually arresting plant. This include its seeds which are highly sought after by plant collectors. Especially since attempts to cultivate the pingala in greenhouse environments has proven extremely difficult.",
+            "DescriptionText": "Every aspect of the pingala follows the golden ratio resulting a visually arresting plant. This include its seeds which are highly sought after by plant collectors. Especially since attempts to cultivate the pingala in greenhouse environments has proven extremely difficult.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 600,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.0006
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "b442105e-6eeb-46b7-b50b-15cb39918d09",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

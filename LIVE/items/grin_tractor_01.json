@@ -8974,6 +8974,7 @@
         "grade": 1,
         "name": "MaxLift Tractor Beam",
         "tags": "stocked grin_tractor_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.Weapon.Gadget",
         "stdItem": {
@@ -8987,9 +8988,18 @@
             "Type": "WeaponPersonal.Gadget",
             "Name": "MaxLift Tractor Beam",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Tractor Beam\\nClass: Gadget\\n\\nMagazine Size: Integrated Battery\\nRate of Fire: N / A (Beam)\\nEffective Range: 10-20 m\\n\\nGreycat's heavy duty tractor beam boasts industrial performance at a consumer-friendly price. With its longer-lasting battery and wider beam emitter, the MaxLift can easily manipulate heavier and bulkier items making it the perfect tool for long days of hauling cargo.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Tractor Beam",
+                "Class": "Gadget",
+                "Magazine Size": "Integrated Battery",
+                "Effective Range": "10-20 m"
+            },
+            "DescriptionText": "Greycat's heavy duty tractor beam boasts industrial performance at a consumer-friendly price. With its longer-lasting battery and wider beam emitter, the MaxLift can easily manipulate heavier and bulkier items making it the perfect tool for long days of hauling cargo.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "d8eca6d3-b40c-46c0-953e-ef5840c1fa63"
             },
             "Tags": [
                 "stocked",
@@ -8999,6 +9009,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "grin_tractor_01"
                     ],
@@ -9006,13 +9018,24 @@
                         "grin_tractor_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "c3ba088f-3a92-412b-90a8-de468d76ec2c",
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9071,14 +9094,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

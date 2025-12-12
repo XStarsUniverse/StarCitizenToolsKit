@@ -1683,6 +1683,7 @@
         "grade": 1,
         "name": "Cal-O-Meal \"Vanilla\" Protein Bar",
         "tags": "cal-o vanilla",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "1270bfd1-f22f-4f48-8a23-e626db5cb668",
@@ -1695,9 +1696,15 @@
             "Type": "Food.Bar",
             "Name": "Cal-O-Meal \"Vanilla\" Protein Bar",
             "Description": "NDR: 20\\nEffects: Hypertrophic\\n\\nCal-O-Meal bars are loaded with high quality protein and packed with a concentrated dose of vitamins, minerals, and rich vanilla flavor, making it a convenient way to maintain nutrition and lean muscle mass on the go.",
+            "DescriptionData": {
+                "NDR": "20",
+                "Effects": "Hypertrophic"
+            },
+            "DescriptionText": "Cal-O-Meal bars are loaded with high quality protein and packed with a concentrated dose of vitamins, minerals, and rich vanilla flavor, making it a convenient way to maintain nutrition and lean muscle mass on the go.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "cal-o",
@@ -1709,12 +1716,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bar"
-            }
+                "NutritionalDensityRating": "20",
+                "Effects": [
+                    "Hypertrophic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "bar",
+                "ContainerTypeTag": "bar",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

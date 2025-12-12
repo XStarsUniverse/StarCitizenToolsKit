@@ -1634,6 +1634,7 @@
         "grade": 1,
         "name": "Carinite",
         "tags": "Mineral",
+        "required_tags": "",
         "stdItem": {
             "UUID": "43090a6d-e2e4-4678-8be1-e893c3a96788",
             "ClassName": "MineableRock_GroundVehicle_Beradom",
@@ -1645,6 +1646,12 @@
             "Type": "Misc.Mineable",
             "Name": "Carinite",
             "Description": "A rare mineral because the extreme pressure needed for its formation is very uncommon, it is in high demand thanks to its use in advanced computer processors and other cutting-edge electronics.",
+            "DescriptionText": "A rare mineral because the extreme pressure needed for its formation is very uncommon, it is in high demand thanks to its use in advanced computer processors and other cutting-edge electronics.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Mineral"
             ],
@@ -1652,6 +1659,31 @@
                 "Width": 0.25,
                 "Length": 0.25,
                 "Height": 0.25
+            },
+            "Interactions": [
+                "Store",
+                "Offhandstore",
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "c339897c-d682-48ad-a16f-daf145bc0f4d",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

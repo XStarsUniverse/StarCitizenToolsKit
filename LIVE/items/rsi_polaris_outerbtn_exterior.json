@@ -469,6 +469,7 @@
         "grade": 1,
         "name": "Elevator",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "5258bf09-3c5f-40f7-ad34-58317a355db4",
             "ClassName": "RSI_Polaris_OuterBtn_Exterior",
@@ -479,7 +480,17 @@
             "Length": 0.15,
             "Type": "Elevator.UNDEFINED",
             "Name": "Elevator",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Request",
+                "Elevatorarrived"
+            ]
         }
     }
 }

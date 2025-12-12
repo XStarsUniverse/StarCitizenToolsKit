@@ -2162,6 +2162,7 @@
         "grade": 1,
         "name": "Optimum Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "688d8f8b-b3ca-4f5c-acc5-f71dfaf2f5bd",
@@ -2174,9 +2175,20 @@
             "Type": "MiningModifier.Gun",
             "Name": "Optimum Module",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Module (Active)\\n\\nLaser Instability: -10%\\nCatastrophic Charge Rate: -80%\\n\\nMining Laser Power: 85%\\n\\nDuration: 60 seconds\\nUses: 5\\n\\nThe Optimum makes mining safer by improving laser stability and dramatically decreasing the catastrophic charge rate. To achieve this increased safety, the module reduces the overall power of the mining laser.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Module (Active)",
+                "Laser Instability": "-10%",
+                "Catastrophic Charge Rate": "-80%",
+                "Mining Laser Power": "85%",
+                "Duration": "60 seconds",
+                "Uses": "5"
+            },
+            "DescriptionText": "The Optimum makes mining safer by improving laser stability and dramatically decreasing the catastrophic charge rate. To achieve this increased safety, the module reduces the overall power of the mining laser.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "miningConsumable",
@@ -2188,8 +2200,18 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Activate",
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

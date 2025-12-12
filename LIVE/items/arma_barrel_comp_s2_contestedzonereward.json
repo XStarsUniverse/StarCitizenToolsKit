@@ -1568,6 +1568,7 @@
         "grade": 1,
         "name": "Sion \"Tweaker\" Compensator2",
         "tags": "FPS_Barrel ballistic_attach",
+        "required_tags": "",
         "manufacturer": "ARMA",
         "classification": "Ship.WeaponAttachment.Barrel",
         "stdItem": {
@@ -1581,9 +1582,17 @@
             "Type": "WeaponAttachment.Barrel",
             "Name": "Sion \"Tweaker\" Compensator2",
             "Description": "Manufacturer: ArmaMod\\nType: Ballistic Compensator\\nAttachment Point: Barrel\\nSize: 2\\n\\nRecoil Stability: +70%\\nRecoil Smoothness: +50%\\nADS Time: +25%\\nSpread: +25%\\n\\nMaintain accuracy by countering muzzle rise with the Sion Compensator2. ArmaMod's expertly designed S2 barrel attachment efficiently expels gasses to keep every shot on target. This \"Tweaker\" version has been unofficially modified for a smoother firing experience.",
+            "DescriptionData": {
+                "Manufacturer": "ArmaMod",
+                "Type": "Ballistic Compensator",
+                "Attachment Point": "Barrel",
+                "Size": "2"
+            },
+            "DescriptionText": "Maintain accuracy by countering muzzle rise with the Sion Compensator2. ArmaMod's expertly designed S2 barrel attachment efficiently expels gasses to keep every shot on target. This \"Tweaker\" version has been unofficially modified for a smoother firing experience.",
             "Manufacturer": {
                 "Code": "ARMA",
-                "Name": "ArmaMod"
+                "Name": "ArmaMod",
+                "UUID": "f2ca879c-deb6-49bf-a4b1-dc3a9cf91e7a"
             },
             "Tags": [
                 "FPS_Barrel",
@@ -1593,7 +1602,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

@@ -993,6 +993,7 @@
         "grade": 1,
         "name": "Raptor IV Missile",
         "tags": "TALN EM flightReady",
+        "required_tags": "",
         "manufacturer": "TALN",
         "classification": "Ship.Missile.Missile",
         "stdItem": {
@@ -1006,9 +1007,16 @@
             "Type": "Missile.Missile",
             "Name": "Raptor IV Missile",
             "Description": "Manufacturer: Talon\\nTracking Signal: Electromagnetic\\nSize: 4\\n\\nUtilizing advanced electromagnetic tracking and balanced precision flight, the Talon Raptor strike missile is a fierce addition to any ship's arsenal.",
+            "DescriptionData": {
+                "Manufacturer": "Talon",
+                "Tracking Signal": "Electromagnetic",
+                "Size": "4"
+            },
+            "DescriptionText": "Utilizing advanced electromagnetic tracking and balanced precision flight, the Talon Raptor strike missile is a fierce addition to any ship's arsenal.",
             "Manufacturer": {
                 "Code": "TALN",
-                "Name": "Talon"
+                "Name": "Talon",
+                "UUID": "587fcede-4fe9-4fb4-85ec-124abc8542b0"
             },
             "Tags": [
                 "TALN",
@@ -1020,8 +1028,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 25
+                "Health": 25,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

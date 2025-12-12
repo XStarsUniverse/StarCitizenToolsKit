@@ -1587,6 +1587,7 @@
         "grade": 1,
         "name": "Locked-on Lentil Burrito",
         "tags": "burrito torpedo",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "ddd58477-b505-4093-a0a0-7a83f67ed55f",
@@ -1599,9 +1600,15 @@
             "Type": "Food.Junk",
             "Name": "Locked-on Lentil Burrito",
             "Description": "NDR: 49\\nEffects: Hypertrophic, Hyper-Metabolic\\n\\nTorpedo Burrito crams a full payload of flavor into their hearty and healthy Locked-On Lentil burrito, featuring a blend of lentils and vegetables wrapped in their signature size-4 multi-grain tortilla.",
+            "DescriptionData": {
+                "NDR": "49",
+                "Effects": "Hypertrophic, Hyper-Metabolic"
+            },
+            "DescriptionText": "Torpedo Burrito crams a full payload of flavor into their hearty and healthy Locked-On Lentil burrito, featuring a blend of lentils and vegetables wrapped in their signature size-4 multi-grain tortilla.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "burrito",
@@ -1613,12 +1620,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "49",
+                "Effects": [
+                    "Hypertrophic",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -1104,6 +1104,7 @@
         "grade": 1,
         "name": "RS1 Odysey Spacesuits",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "166bbd92-b7a6-4bf3-8b6c-a9a3d9f17492",
@@ -1116,6 +1117,12 @@
             "Type": "Cargo.Small",
             "Name": "RS1 Odysey Spacesuits",
             "Description": "These imitation RSI Odyssey undersuits are cheaply made counterfeits that are hazardous to use.",
+            "DescriptionText": "These imitation RSI Odyssey undersuits are cheaply made counterfeits that are hazardous to use.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1123,6 +1130,39 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "ExclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "03a947b5-8cb9-412e-908e-19ff41df4504",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

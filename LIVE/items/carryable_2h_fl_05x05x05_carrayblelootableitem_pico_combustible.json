@@ -1253,6 +1253,7 @@
         "grade": 1,
         "name": "Container",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "eda18cee-b767-49f0-878d-d3ac23e9e828",
             "ClassName": "Carryable_2H_FL_05x05x05_CarraybleLootableItem_Pico_Combustible",
@@ -1264,14 +1265,29 @@
             "Type": "Misc.Personal",
             "Name": "Container",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 0,
+                "Repairable": 0
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0123,
                 "unit": 6,

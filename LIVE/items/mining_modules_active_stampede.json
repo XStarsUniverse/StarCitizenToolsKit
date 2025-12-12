@@ -2166,6 +2166,7 @@
         "grade": 1,
         "name": "Stampede Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "THCN",
         "stdItem": {
             "UUID": "1bb6ee6d-3930-4c03-b6c6-38aad3a4703b",
@@ -2178,9 +2179,21 @@
             "Type": "MiningModifier.Gun",
             "Name": "Stampede Module",
             "Description": "Manufacturer: Thermyte Concern\\nItem Type: Mining Module (Active)\\n\\nLaser Instability: -10\\nMining Laser Power: 135%\\nShatter Damage: -10%\\n\\nExtraction Laser Power: 85%\\n\\nDuration: 30 seconds\\nUses: 6\\n\\nThe Stampede uses a state of the art lens to increase mining laser power and reduce potential hazard associated with the deposit shattering. These improvements do come at the expense of a less powerful extraction laser.",
+            "DescriptionData": {
+                "Manufacturer": "Thermyte Concern",
+                "Item Type": "Mining Module (Active)",
+                "Laser Instability": "-10",
+                "Mining Laser Power": "135%",
+                "Shatter Damage": "-10%",
+                "Extraction Laser Power": "85%",
+                "Duration": "30 seconds",
+                "Uses": "6"
+            },
+            "DescriptionText": "The Stampede uses a state of the art lens to increase mining laser power and reduce potential hazard associated with the deposit shattering. These improvements do come at the expense of a less powerful extraction laser.",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "miningConsumable",
@@ -2192,8 +2205,18 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Activate",
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

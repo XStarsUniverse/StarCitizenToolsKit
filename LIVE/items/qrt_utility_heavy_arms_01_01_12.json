@@ -1835,6 +1835,7 @@
         "grade": 1,
         "name": "Palatino Arms Necropolis",
         "tags": "SM_RestrictedArm qrt_utility_heavy Set_01 Color_03",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1848,9 +1849,18 @@
             "Type": "Char_Armor_Arms.Heavy",
             "Name": "Palatino Arms Necropolis",
             "Description": "Item Type: Heavy Armor\\nDamage Reduction: 40%\\nTemp. Rating: -70 / 100 \u00b0C\\nRadiation Protection: 26800 REM\\nRadiation Scrub Rate: 145.8 REM/s \\n\\nElegant design meets innovation with the Palatino armor from Quirinus Tech. This armor set masterfully mixes reinforced plating with patented new materials that are light-weight and flexible, yet rated to withstand heavy damage allowing the wearer to be fashionable, light on their feet, and able to withstand serious firepower.",
+            "DescriptionData": {
+                "Item Type": "Heavy Armor",
+                "Damage Reduction": "40%",
+                "Temp. Rating": "-70 / 100 \u00b0C",
+                "Radiation Protection": "26800 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Elegant design meets innovation with the Palatino armor from Quirinus Tech. This armor set masterfully mixes reinforced plating with patented new materials that are light-weight and flexible, yet rated to withstand heavy damage allowing the wearer to be fashionable, light on their feet, and able to withstand serious firepower.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Quirinus Tech"
+                "Name": "Quirinus Tech",
+                "UUID": "64f8b397-8c0d-40b0-96a0-52bbeb41e5ad"
             },
             "Tags": [
                 "SM_RestrictedArm",
@@ -1863,15 +1873,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.65,
+                    "Physical": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.6,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.4,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 20
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -70,
                 "Maximum": 100
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26800,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

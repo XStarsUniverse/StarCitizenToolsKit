@@ -3690,6 +3690,7 @@
         "grade": 1,
         "name": "Medical Bed",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1e13ee6d-3cff-4c66-b152-536b870e942b",
             "ClassName": "DRAK_Cutlass_Red_Med_Bed_AI",
@@ -3701,28 +3702,55 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Medical Bed",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Mattress",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Tags": [
                         "Sleep"
                     ],
                     "Types": [
                         "Seat"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Seat"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Pillow",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Uneditable": false
                 },
                 {
                     "PortName": "StandingScreen",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Liedown",
+                "Exit",
+                "Finishsurgery",
+                "Openinventoryui",
+                "Placeotherinbed",
+                "Kioskactivate",
+                "Proccliplowertoenter",
+                "Openlootingui"
             ],
             "InventoryContainer": {
                 "SCU": 0.8,
@@ -3735,6 +3763,26 @@
                 "isExternalContainer": false,
                 "isClosedContainer": true,
                 "uuid": "8cd7263b-ec9e-4a2f-910e-c0db6160603b"
+            },
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 200,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.00019999999999999998
+                },
+                "InclusiveResources": [
+                    "83101c4a-baea-429f-b5db-2a439dabe963"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "83101c4a-baea-429f-b5db-2a439dabe963",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

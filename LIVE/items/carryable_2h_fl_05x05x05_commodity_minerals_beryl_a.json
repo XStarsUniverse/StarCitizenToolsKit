@@ -1196,6 +1196,7 @@
         "grade": 1,
         "name": "Beryl",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "43893991-e1b5-49ee-aa48-61375e11ce83",
@@ -1208,6 +1209,12 @@
             "Type": "Cargo.Small",
             "Name": "Beryl",
             "Description": "A mineral that creates natural hexagonal crystals. Colorless in its pure form, its impure forms include the gems emerald and aquamarine.",
+            "DescriptionText": "A mineral that creates natural hexagonal crystals. Colorless in its pure form, its impure forms include the gems emerald and aquamarine.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1215,6 +1222,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "93c8b7df-d6ac-4b4f-a115-b0e3afc238b8",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

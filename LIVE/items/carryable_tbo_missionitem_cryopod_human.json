@@ -666,6 +666,7 @@
         "grade": 1,
         "name": "CryoPod",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "a6ee7365-ea4c-420e-b91a-51958a8dc013",
             "ClassName": "Carryable_TBO_MissionItem_CryoPod_Human",
@@ -677,10 +678,18 @@
             "Type": "Misc.UNDEFINED",
             "Name": "CryoPod",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$IP_corpse_01",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -688,7 +697,12 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

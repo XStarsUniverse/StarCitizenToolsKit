@@ -803,6 +803,7 @@
         "grade": 1,
         "name": "Reliant Cernan Camera Package",
         "tags": "MISC_Reliant_Mount",
+        "required_tags": "MISC_Reliant_Base",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "0de812e9-3003-4d7d-858c-51d16cfdb0de",
@@ -815,9 +816,16 @@
             "Type": "Turret.GunTurret",
             "Name": "Reliant Cernan Camera Package",
             "Description": "Item Type: Camera Package\\nManufacturer: MISC\\nSize: 4\\n\\nCapture heart-pounding action and the splendor of the stars with the Cernan camera package. Standard to the Reliant Mako, this state-of-the-art image enhancement suite is popular among news crews across the universe.",
+            "DescriptionData": {
+                "Item Type": "Camera Package",
+                "Manufacturer": "MISC",
+                "Size": "4"
+            },
+            "DescriptionText": "Capture heart-pounding action and the splendor of the stars with the Cernan camera package. Standard to the Reliant Mako, this state-of-the-art image enhancement suite is popular among news crews across the universe.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "MISC_Reliant_Mount"
@@ -828,7 +836,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -851,6 +861,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 15,

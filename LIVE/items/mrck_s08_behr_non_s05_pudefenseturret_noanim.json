@@ -555,6 +555,7 @@
         "grade": 1,
         "name": "Freelancer Stock Missile Rack",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -568,9 +569,17 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "Freelancer Stock Missile Rack",
             "Description": "Item Type: Missile Rack\\nManufacturer: Behring\\nSize: 4\\nMissiles: 8xS1\\n\\nBehring\u2019s MSD-481 \"Marsden\" is a complete ordnance storage and deployment system that can be mounted on any compatible size 4 hardpoint for the reliable and effective launch of eight S1 missiles.",
+            "DescriptionData": {
+                "Item Type": "Missile Rack",
+                "Manufacturer": "Behring",
+                "Size": "4",
+                "Missiles": "8xS1"
+            },
+            "DescriptionText": "Behring's MSD-481 \"Marsden\" is a complete ordnance storage and deployment system that can be mounted on any compatible size 4 hardpoint for the reliable and effective launch of eight S1 missiles.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "flightReady"
@@ -581,7 +590,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1,
@@ -621,6 +632,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

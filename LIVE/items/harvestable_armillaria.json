@@ -1469,6 +1469,7 @@
         "grade": 1,
         "name": "Bluemoon Fungus",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "f0e84bd5-6205-491c-ab80-9cf377032c14",
             "ClassName": "Harvestable_Armillaria",
@@ -1480,13 +1481,40 @@
             "Type": "Misc.Harvestable",
             "Name": "Bluemoon Fungus",
             "Description": "Preferring to spore in the depths of dark caves, the fruiting mushrooms of the Bluemoon fungus are often collected as a highly-valued petroleum-free lubricant used across a wide-variety of industries.",
+            "DescriptionText": "Preferring to spore in the depths of dark caves, the fruiting mushrooms of the Bluemoon fungus are often collected as a highly-valued petroleum-free lubricant used across a wide-variety of industries.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                }
             }
         }
     }

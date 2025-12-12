@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "Fresnel Energy LMG Battery (165 Cap)",
         "tags": "volt_lmg_energy_01",
+        "required_tags": "",
         "manufacturer": "KLA",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Fresnel Energy LMG Battery (165 Cap)",
             "Description": "Item Type: Battery\\nCapacity: 165\\n\\nThis battery for the Fresnel Energy LMG holds enough energy for 165 shots.",
+            "DescriptionData": {
+                "Item Type": "Battery",
+                "Capacity": "165"
+            },
+            "DescriptionText": "This battery for the Fresnel Energy LMG holds enough energy for 165 shots.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "volt_lmg_energy_01"
@@ -1959,7 +1966,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

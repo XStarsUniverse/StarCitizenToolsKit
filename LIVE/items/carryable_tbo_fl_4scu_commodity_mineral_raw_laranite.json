@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Laranite (Raw)",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "3822d6fb-d38a-4b28-9577-18d6b3f8d484",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Laranite (Raw)",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 4,
+                    "UnitName": "SCU",
+                    "SCU": 4
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "7b7178c1-b0f0-4760-89de-9a3e3851e7a8",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

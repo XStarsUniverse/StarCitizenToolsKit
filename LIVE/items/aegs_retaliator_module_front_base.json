@@ -1110,6 +1110,7 @@
         "grade": 3,
         "name": "Retaliator Unladen Front Module",
         "tags": "AEGS_Retaliator_Module_Front",
+        "required_tags": "AEGS_Retaliator_Module_Front",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "1d9f2186-2465-4b62-a5cb-f1bc8e3dd390",
@@ -1122,9 +1123,11 @@
             "Type": "Module.UNDEFINED",
             "Name": "Retaliator Unladen Front Module",
             "Description": "This empty front module comes equipped by default on the Retaliator's base chassis.",
+            "DescriptionText": "This empty front module comes equipped by default on the Retaliator's base chassis.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Retaliator_Module_Front"
@@ -1133,14 +1136,25 @@
                 {
                     "PortName": "hardpoint_module_oc",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "215e992a-0bb6-4bf2-9f74-b0e880fd447d",
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_front_bay_door",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
+                    "EquippedItem": "bab56126-c1ae-4c0d-98ba-dd8d93ee6092",
                     "Uneditable": false
                 }
             ],
@@ -1150,7 +1164,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

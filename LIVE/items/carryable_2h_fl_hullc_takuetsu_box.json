@@ -887,6 +887,7 @@
         "grade": 1,
         "name": "Hull C Model Box",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "173aa575-32bc-4689-b7ef-b868611f922d",
             "ClassName": "Carryable_2H_FL_hullc_takuetsu_box",
@@ -898,11 +899,23 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Hull C Model Box",
             "Description": "A collector's edition box for Takuetsu's Hull C Model, featuring an image of the iconic ship on the front along with details about the model.",
+            "DescriptionText": "A collector's edition box for Takuetsu's Hull C Model, featuring an image of the iconic ship on the front along with details about the model.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

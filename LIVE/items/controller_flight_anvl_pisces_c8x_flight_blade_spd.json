@@ -2037,6 +2037,7 @@
         "grade": 1,
         "name": "C8X Pisces TSB Flight Blade",
         "tags": "ANVL_Pisces_C8X_Blade",
+        "required_tags": "ANVL_Pisces_C8X_Blade",
         "manufacturer": "BRRA",
         "stdItem": {
             "UUID": "7a9eab58-3244-4719-98b3-8f8ec573d754",
@@ -2049,9 +2050,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "C8X Pisces TSB Flight Blade",
             "Description": "Manufacturer: Broad & Rabiee\\nType: Flight Blade\\n\\nUnlock the potential of your Anvil C8X Pisces Expedition with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
+            "DescriptionData": {
+                "Manufacturer": "Broad & Rabiee",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "Unlock the potential of your Anvil C8X Pisces Expedition with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
             "Manufacturer": {
                 "Code": "BRRA",
-                "Name": "Broad & Rabiee"
+                "Name": "Broad & Rabiee",
+                "UUID": "ad865899-f5ba-4818-ae8c-fe80a55108b7"
             },
             "Tags": [
                 "ANVL_Pisces_C8X_Blade"
@@ -2094,6 +2101,40 @@
                     "CapacitorRegenDelayAfterUse": 1.1,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

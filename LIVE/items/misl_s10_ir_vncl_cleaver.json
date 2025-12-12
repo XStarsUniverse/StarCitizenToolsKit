@@ -996,6 +996,7 @@
         "grade": 1,
         "name": "Vanduul Cleaver",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "VNC",
         "classification": "Ship.Missile.Torpedo",
         "stdItem": {
@@ -1009,17 +1010,30 @@
             "Type": "Missile.Torpedo",
             "Name": "Vanduul Cleaver",
             "Description": "Vanduul Cleaver",
+            "DescriptionText": "Vanduul Cleaver",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 667
+                "Health": 667,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

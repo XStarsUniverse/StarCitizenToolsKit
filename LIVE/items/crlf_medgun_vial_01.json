@@ -1900,6 +1900,7 @@
         "grade": 1,
         "name": "ParaMed Refill",
         "tags": "crlf_medgun_01",
+        "required_tags": "",
         "manufacturer": "CUR",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1913,9 +1914,14 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "ParaMed Refill",
             "Description": "Item Type: MedGel Refill\\n\\nThis vial is used to refill the ParaMed Medical Device with CureLife Pancea MedGel.\\n",
+            "DescriptionData": {
+                "Item Type": "MedGel Refill"
+            },
+            "DescriptionText": "This vial is used to refill the ParaMed Medical Device with CureLife Pancea MedGel.",
             "Manufacturer": {
                 "Code": "CUR",
-                "Name": "Curelife"
+                "Name": "Curelife",
+                "UUID": "dd55bc19-5212-4365-bbc8-73474f0257ed"
             },
             "Tags": [
                 "crlf_medgun_01"
@@ -1974,7 +1980,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

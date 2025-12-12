@@ -899,6 +899,7 @@
         "grade": 1,
         "name": "Anvil Lightning F8C Turret",
         "tags": "gimbalMount",
+        "required_tags": "ANVL_Lightning_F8",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "537e8385-4679-41e1-9fe3-b5cfc0f48a93",
@@ -911,9 +912,11 @@
             "Type": "Turret.BallTurret",
             "Name": "Anvil Lightning F8C Turret",
             "Description": "This remote turret provides mounts for two Size 2 weapons, an expansive field of fire, and precise control to give F8C pilots a comprehensive weapon system to get out of any situation.",
+            "DescriptionText": "This remote turret provides mounts for two Size 2 weapons, an expansive field of fire, and precise control to give F8C pilots a comprehensive weapon system to get out of any situation.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "gimbalMount"
@@ -922,16 +925,36 @@
                 {
                     "PortName": "hardpoint_weapon_01",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_weapon_02",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -942,7 +965,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 3500
+                "Health": 3500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

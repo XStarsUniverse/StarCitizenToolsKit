@@ -922,6 +922,7 @@
         "grade": 3,
         "name": "CoolCore",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "JUST",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "CoolCore",
             "Description": "Item Type: Cooler\\nManufacturer: Juno Starwerk \\nSize: 2\\nGrade: C\\nClass: Industrial\\n\\nThe name CoolCore says it all. Designed by Juno Starwerk to be as hardworking as you are, this cooler helps ensure that your entire ship operates well within desired temperature parameters.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Juno Starwerk",
+                "Size": "2",
+                "Grade": "C",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "The name CoolCore says it all. Designed by Juno Starwerk to be as hardworking as you are, this cooler helps ensure that your entire ship operates well within desired temperature parameters.",
             "Manufacturer": {
                 "Code": "JUST",
-                "Name": "Juno Starwerk"
+                "Name": "Juno Starwerk",
+                "UUID": "d7cc897f-b760-4a73-93c0-27e23c52db0a"
             },
             "Cooler": {
                 "CoolingRate": 8000000,
@@ -949,8 +959,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 640
+                "Health": 640,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 15,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.22
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 26.4,
+                                "MinimumFraction": 0.75,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1980,
+                            "IR": 8710
+                        }
+                    }
+                ]
             }
         }
     }

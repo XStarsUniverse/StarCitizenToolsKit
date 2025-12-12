@@ -2675,6 +2675,7 @@
         "grade": 1,
         "name": "Draugar Gatling",
         "tags": "APAR BallisticGatling flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "APAR",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2688,9 +2689,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Draugar Gatling",
             "Description": "Manufacturer: Apocalypse Arms\\nItem Type: Ballistic Gatling\\nSize: 6\\n\\nReminiscent of a bygone era of space combat, this brutal size six ballistic Gatling from Apocalypse Arms is a very deliberate weapon. Take a moment as the Draugar's drum spins up to speed to savor the ruin and destruction that you are about unleash.",
+            "DescriptionData": {
+                "Manufacturer": "Apocalypse Arms",
+                "Item Type": "Ballistic Gatling",
+                "Size": "6"
+            },
+            "DescriptionText": "Reminiscent of a bygone era of space combat, this brutal size six ballistic Gatling from Apocalypse Arms is a very deliberate weapon. Take a moment as the Draugar's drum spins up to speed to savor the ruin and destruction that you are about unleash.",
             "Manufacturer": {
                 "Code": "APAR",
-                "Name": "Apocalypse Arms"
+                "Name": "Apocalypse Arms",
+                "UUID": "77f7999a-b23b-4812-94c2-09b5e15e1b0e"
             },
             "Tags": [
                 "APAR",
@@ -2702,32 +2710,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2753,8 +2801,37 @@
                 "Length": 3.75,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 4224
+                "Health": 4224,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

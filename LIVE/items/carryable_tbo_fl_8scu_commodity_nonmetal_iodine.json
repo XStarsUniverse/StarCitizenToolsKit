@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Iodine",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "fb219d2e-4a77-4dfb-91c3-a1df01b3e8ac",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Iodine",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 8,
+                    "UnitName": "SCU",
+                    "SCU": 8
+                },
+                "InclusiveGroups": [
+                    "4d3f31f7-feab-488c-8f36-ac7c8c4012b8"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "a0db59ab-1497-47e4-b0cd-d205c0a4d2f5",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

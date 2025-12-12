@@ -1830,6 +1830,7 @@
         "grade": 1,
         "name": "PAB-1 Arms Blue",
         "tags": "Marine_Legacy_Light Set_01 Color_07 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "CDS",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1843,9 +1844,18 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "PAB-1 Arms Blue",
             "Description": "Item Type: Light Armor\\nDamage Reduction: 20%\\nTemp. Rating: -37 / 67 \u00b0C\\nRadiation Protection: 26000 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nClark Defense Systems built the PAB-1 light but strong enough to stay in a fight. The first CDS suit to utilize their proprietary nano-weave, this light armor became a favorite of those who needed a little extra protection while remaining agile.",
+            "DescriptionData": {
+                "Item Type": "Light Armor",
+                "Damage Reduction": "20%",
+                "Temp. Rating": "-37 / 67 \u00b0C",
+                "Radiation Protection": "26000 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Clark Defense Systems built the PAB-1 light but strong enough to stay in a fight. The first CDS suit to utilize their proprietary nano-weave, this light armor became a favorite of those who needed a little extra protection while remaining agile.",
             "Manufacturer": {
                 "Code": "CDS",
-                "Name": "Clark Defense Systems"
+                "Name": "Clark Defense Systems",
+                "UUID": "8a7bd715-5b97-404f-b02e-0d0cc593f608"
             },
             "Tags": [
                 "Marine_Legacy_Light",
@@ -1858,15 +1868,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -37,
                 "Maximum": 67
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

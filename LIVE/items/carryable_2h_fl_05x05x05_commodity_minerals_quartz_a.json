@@ -1196,6 +1196,7 @@
         "grade": 1,
         "name": "Quartz",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "91b33006-bc9c-45eb-8cb6-b4de57940a5c",
@@ -1208,6 +1209,12 @@
             "Type": "Cargo.Small",
             "Name": "Quartz",
             "Description": "A chiral crystal composed of silicon and oxygen that can be found in a wide variety of forms and colors.",
+            "DescriptionText": "A chiral crystal composed of silicon and oxygen that can be found in a wide variety of forms and colors.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1215,6 +1222,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "8e17c99b-1bf6-49cb-838e-e7eb72a9088f"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "35121003-f1af-481a-b16f-7f48d8af0efb",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

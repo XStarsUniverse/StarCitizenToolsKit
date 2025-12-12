@@ -2398,6 +2398,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "4f191c66-88c5-4e6a-9762-7a5a5a67d6a2",
@@ -2410,14 +2411,18 @@
             "Type": "SalvageFillerStation.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_salvage_refill_right",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "CraftingDispenserSpawn"
                     ],
@@ -2426,6 +2431,8 @@
                 {
                     "PortName": "hardpoint_salvage_crate_right",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "CargoBoxSpawn"
                     ],
@@ -2434,14 +2441,19 @@
                 {
                     "PortName": "port_controls_screen",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "FillerStationControlsScreen"
                     ],
+                    "EquippedItem": "8306db02-ce5b-4019-99df-ed67ef2b5b84",
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_cargo_grid_right",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -2466,6 +2478,16 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Dispenseropen",
+                "Dispenserclose",
+                "Ejectcargobox",
+                "Conveyorreset",
+                "Onconveyordeployed",
+                "Onconveyorretracted",
+                "Resourcetobusy",
+                "Resourcetoidle"
+            ],
             "InventoryContainer": {
                 "SCU": 6,
                 "unit": 0,

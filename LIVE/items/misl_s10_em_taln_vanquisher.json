@@ -1027,6 +1027,7 @@
         "grade": 1,
         "name": "Vanquisher X-EM Torpedo",
         "tags": "TALN EM flightReady",
+        "required_tags": "",
         "manufacturer": "TALN",
         "classification": "Ship.Missile.Torpedo",
         "stdItem": {
@@ -1040,9 +1041,16 @@
             "Type": "Missile.Torpedo",
             "Name": "Vanquisher X-EM Torpedo",
             "Description": "Manufacturer: Talon\\nTracking Signal: Electromagnetic\\nSize: 10\\n\\nDesigned by Talon, the Vanquisher heat seeking strike torpedo delivers a heavy payload sure to serve as a deterrent from any further hostile actions.",
+            "DescriptionData": {
+                "Manufacturer": "Talon",
+                "Tracking Signal": "Electromagnetic",
+                "Size": "10"
+            },
+            "DescriptionText": "Designed by Talon, the Vanquisher heat seeking strike torpedo delivers a heavy payload sure to serve as a deterrent from any further hostile actions.",
             "Manufacturer": {
                 "Code": "TALN",
-                "Name": "Talon"
+                "Name": "Talon",
+                "UUID": "587fcede-4fe9-4fb4-85ec-124abc8542b0"
             },
             "Tags": [
                 "TALN",
@@ -1054,8 +1062,19 @@
                 "Length": 1.5,
                 "Height": 0.38
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 667
+                "Health": 667,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

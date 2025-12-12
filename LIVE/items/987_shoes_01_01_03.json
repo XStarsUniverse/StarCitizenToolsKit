@@ -1879,6 +1879,7 @@
         "grade": 1,
         "name": "UrbEx Boots Scarlet",
         "tags": "987_shoes Set_01 Color_03",
+        "required_tags": "",
         "manufacturer": "987",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1892,9 +1893,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "UrbEx Boots Scarlet",
             "Description": "From bustling backstreets to crowded clubs, the UrbEx boots will make your next step a bold one. The boots blend a stylish design with reinforced high ankle support and ultra durable outsoles.",
+            "DescriptionText": "From bustling backstreets to crowded clubs, the UrbEx boots will make your next step a bold one. The boots blend a stylish design with reinforced high ankle support and ultra durable outsoles.",
             "Manufacturer": {
                 "Code": "987",
-                "Name": 987
+                "Name": 987,
+                "UUID": "3b54a8cc-5700-45f1-940a-2436b213926f"
             },
             "Tags": [
                 "987_shoes",
@@ -1905,11 +1908,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1919,9 +1929,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 25
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

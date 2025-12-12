@@ -11828,6 +11828,7 @@
         "grade": 1,
         "name": "Arrowhead \"Stormfall\" Sniper Rifle",
         "tags": "stocked klwe_sniper_energy_01 sniper",
+        "required_tags": "",
         "manufacturer": "KLA",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -11841,9 +11842,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Arrowhead \"Stormfall\" Sniper Rifle",
             "Description": "Manufacturer: Klaus & Werner\\nItem Type: Sniper Rifle\\nClass: Energy (Laser)\\n\\nBattery Size: 20\\nRate Of Fire: 50 rpm\\nEffective Range: 100 m\\n\\nAttachments: Optics (S3), Barrel (S2), Underbarrel (S2)\\n\\nKlaus & Werner\u2019s Arrowhead Model VI long-range energy rifle features a fiberglass composite body capable of withstanding any number of rigorous environments both in atmosphere and out. Built with a precision stock, compound scope and built-in bipod, the Arrowhead offers a stable and devastating weapon for operators who want to keep their distance, but stay in the fight.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Item Type": "Sniper Rifle",
+                "Class": "Energy (Laser)",
+                "Size": "20",
+                "Rate Of Fire": "50 rpm",
+                "Effective Range": "100 m",
+                "Attachments": "Optics (S3), Barrel (S2), Underbarrel (S2)"
+            },
+            "DescriptionText": "Klaus & Werner's Arrowhead Model VI long-range energy rifle features a fiberglass composite body capable of withstanding any number of rigorous environments both in atmosphere and out. Built with a precision stock, compound scope and built-in bipod, the Arrowhead offers a stable and devastating weapon for operators who want to keep their distance, but stay in the fight.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "stocked",
@@ -11854,6 +11866,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "klwe_sniper_energy_01"
                     ],
@@ -11861,24 +11875,46 @@
                         "klwe_sniper_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "66f0410b-bcd9-4be5-96ed-aab6f65f3420",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "c75282e6-8b92-4398-ac27-bd6f56d627b2",
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory",
                         "energy_barrel"
@@ -11888,24 +11924,44 @@
                         "energy_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -11964,14 +12020,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

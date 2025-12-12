@@ -14772,6 +14772,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "CRUS",
         "stdItem": {
             "UUID": "be2c8dd0-e27a-48d6-8104-1a73539029a0",
@@ -14784,43 +14785,79 @@
             "Type": "SeatDashboard.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "CRUS",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "63685f47-b0cc-4ebe-8f16-72793a5cd6e0"
             },
             "Ports": [
                 {
                     "PortName": "Radar_Helper",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Display_HUD",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Uneditable": false
                 },
                 {
                     "PortName": "rtt_screen_left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "rtt_screen_right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 400,
+                "Maximum": 2000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.1,
@@ -14843,6 +14880,69 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Openaccesspoints",
+                "Closeaccesspoints",
+                "Flight_ready",
+                "Dummyinteraction",
+                "Commsinteraction",
+                "Opencanopy",
+                "Closecanopy",
+                "Landinggear_deploy",
+                "Landinggear_retract",
+                "Coupled_setcoupled",
+                "Coupled_setdecoupled",
+                "Gsafe_setactive",
+                "Gsafe_setinactive",
+                "Esp_setactive",
+                "Esp_setinactive",
+                "Quantumspool_setactive",
+                "Quantumspool_setinactive",
+                "Quantumtravel_setactive",
+                "Quantumtravel_setinactive",
+                "Weaponcontroller_setactive",
+                "Weaponcontroller_setinactive",
+                "Gimbaltype_setfixed",
+                "Gimbaltype_setgimbal",
+                "Gimbaltype_setaimassist",
+                "Firepattern_setstaggered",
+                "Firepattern_setsynchronized",
+                "Piptype_setlead",
+                "Piptype_setlag",
+                "Landinggear_invalid",
+                "Selfdestruct_engage",
+                "Selfdestruct_disengage",
+                "Hailtarget_start",
+                "Hailtarget_stop",
+                "Sensors_on",
+                "Sensors_off",
+                "Scan_enable",
+                "Scan_disable",
+                "Shields_on",
+                "Shields_off",
+                "Missiles_armmissile",
+                "Missiles_disarmmissiles",
+                "Missiles_cyclemissiles",
+                "Missiles_firemissiles",
+                "Weapons_on",
+                "Weapons_off",
+                "Countermeasures_fire",
+                "Headlights_on",
+                "Headlights_off",
+                "Vtol_setactive",
+                "Vtol_setinactive",
+                "Proximityassist_setactive",
+                "Proximityassist_setinactive",
+                "Flighthud_invalid",
+                "Scanninghud_invalid",
+                "Comms_acceptcall",
+                "Comms_declinecall",
+                "Shiptransformextend",
+                "Shiptransformretract",
+                "Bottomtotop",
+                "Toptobottom",
+                "Activate remote camera"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,
@@ -14857,6 +14957,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

@@ -860,6 +860,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady RSI_Polaris",
+        "required_tags": "RSI_Polaris",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "14555c7c-c84b-4cb7-80d9-a228cea01d01",
@@ -872,9 +873,11 @@
             "Type": "Turret.MissileTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady",
@@ -884,6 +887,8 @@
                 {
                     "PortName": "hardpoint_missile",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Flags": [
                         "$uneditable"
                     ],
@@ -894,13 +899,23 @@
                         "$RSI_Polaris"
                     ],
                     "Types": [
-                        "MissileLauncher"
+                        "MissileLauncher.MissileRack"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MissileLauncher",
+                            "sub_types": [
+                                "MissileRack"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 }
             ],
             "Durability": {
-                "Health": 10000
+                "Health": 10000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -923,6 +938,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

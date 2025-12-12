@@ -372,6 +372,7 @@
         "grade": 1,
         "name": "WEAPONS",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "db243441-69d5-4a8a-85e3-4be82e107e22",
             "ClassName": "Controller_Weapon_XIAN_Nox",
@@ -382,7 +383,26 @@
             "Length": 0.15,
             "Type": "WeaponController.UNDEFINED",
             "Name": "WEAPONS",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Enableweapons",
+                "Disableweapons",
+                "Setlagpips",
+                "Setleadpips",
+                "Setgimballock",
+                "Setfreegimbal",
+                "Setaimassist",
+                "Setstaggeredfire",
+                "Setsynchronousfire",
+                "Fireweapongroup1",
+                "Fireweapongroup2"
+            ]
         }
     }
 }

@@ -870,6 +870,7 @@
         "grade": 1,
         "name": "Revenant Tree Pollen",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "a5fa8f0d-622f-404d-9502-45bb3590674d",
@@ -882,13 +883,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Revenant Tree Pollen",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 2,
+                    "UnitName": "SCU",
+                    "SCU": 2
+                },
+                "InclusiveGroups": [
+                    "32a1c43c-ffdf-4b02-82a8-1d8b2d9f6666"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "ee845b46-a156-47f7-a58a-22f9b77b9c2b",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

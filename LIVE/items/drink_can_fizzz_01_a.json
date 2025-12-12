@@ -1974,6 +1974,7 @@
         "grade": 1,
         "name": "Fizzz Cola",
         "tags": "fizzz cola",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "1c02d6b2-da89-4ca2-bbbe-16397ba9808f",
@@ -1986,9 +1987,15 @@
             "Type": "Drink.Can",
             "Name": "Fizzz Cola",
             "Description": "HEI: 16\\nEffects: Energizing, Hyper-Metabolic\\n\\nA refreshing burst of fizzzy cola flavor!",
+            "DescriptionData": {
+                "HEI": "16",
+                "Effects": "Energizing, Hyper-Metabolic"
+            },
+            "DescriptionText": "A refreshing burst of fizzzy cola flavor!",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "fizzz",
@@ -2000,12 +2007,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "16",
+                "Effects": [
+                    "Energizing",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

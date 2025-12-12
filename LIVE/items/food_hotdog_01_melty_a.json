@@ -1577,6 +1577,7 @@
         "grade": 1,
         "name": "Melty Dog",
         "tags": "hotdog melty",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "859ee528-a8ea-4cd7-a8bb-ae69adbba264",
@@ -1589,9 +1590,15 @@
             "Type": "Food.Junk",
             "Name": "Melty Dog",
             "Description": "NDR: 34\\nEffects: Dehydrating, Hyper-Metabolic\\n\\nA hefty dousing in melted 'cheese' takes this hot dog to the next level.",
+            "DescriptionData": {
+                "NDR": "34",
+                "Effects": "Dehydrating, Hyper-Metabolic"
+            },
+            "DescriptionText": "A hefty dousing in melted 'cheese' takes this hot dog to the next level.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "hotdog",
@@ -1603,12 +1610,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "hotdog"
-            }
+                "NutritionalDensityRating": "34",
+                "Effects": [
+                    "Dehydrating",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

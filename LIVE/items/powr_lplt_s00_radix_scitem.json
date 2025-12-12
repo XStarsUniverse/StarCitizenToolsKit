@@ -1143,6 +1143,7 @@
         "grade": 3,
         "name": "Radix",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "LPLT",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1156,17 +1157,37 @@
             "Type": "PowerPlant.Power",
             "Name": "Radix",
             "Description": "Item Type: Power Plant\\nManufacturer: Lightning Power Ltd.\\nSize: 0\\nGrade: C\\nClass: Civilian\\n\\nWith more than enough get up and go to handle your vehicle\u2019s daily energy needs, the Radix from Lightning Power Ltd. is a power plant you can count on to get you where you\u2019re going.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Lightning Power Ltd.",
+                "Size": "0",
+                "Grade": "C",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "With more than enough get up and go to handle your vehicle's daily energy needs, the Radix from Lightning Power Ltd. is a power plant you can count on to get you where you're going.",
             "Manufacturer": {
                 "Code": "LPLT",
-                "Name": "Lightning Power Ltd."
+                "Name": "Lightning Power Ltd.",
+                "UUID": "60d0f346-0c22-4869-81d3-1168b526a258"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 6.66,
+                "Maximum": 2000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 190
+                "Health": 190,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.52,
@@ -1189,6 +1210,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 610,
@@ -1206,6 +1231,39 @@
             },
             "PowerPlant": {
                 "Output": 610
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 10,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 10,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 3750
+                        }
+                    }
+                ]
             }
         }
     }

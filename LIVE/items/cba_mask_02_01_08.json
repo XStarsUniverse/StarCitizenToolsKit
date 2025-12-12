@@ -1777,6 +1777,7 @@
         "grade": 1,
         "name": "Gale Head Cover Purple",
         "tags": "cba_mask Set_02 Color_08 ",
+        "required_tags": "Protos",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1790,9 +1791,14 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Gale Head Cover Purple",
             "Description": "Temp. Rating: -30 / 15 \u00b0C\\n\\nProtect your head from the wind and cold with the Gale. Code Blue Apparel paired a wide-view visor with a dynamic synthetic fabric to create an excellent thermal barrier to keep heat from escaping without sacrificing your visibility.",
+            "DescriptionData": {
+                "Temp. Rating": "-30 / 15 \u00b0C"
+            },
+            "DescriptionText": "Protect your head from the wind and cold with the Gale. Code Blue Apparel paired a wide-view visor with a dynamic synthetic fabric to create an excellent thermal barrier to keep heat from escaping without sacrificing your visibility.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_mask",
@@ -1803,11 +1809,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1817,9 +1830,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -30,
                 "Maximum": 15
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

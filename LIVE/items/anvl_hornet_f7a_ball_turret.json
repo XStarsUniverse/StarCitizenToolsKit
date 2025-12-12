@@ -916,6 +916,7 @@
         "grade": 1,
         "name": "C5-173f S5 Hornet Mk II Ball Turret",
         "tags": "flightReady $ANVL_Hornet_Mk2_Center",
+        "required_tags": "ANVL_Hornet_Mk2_Center",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "ea532b81-bbe5-4cc1-aede-4566ab44607e",
@@ -928,9 +929,11 @@
             "Type": "Turret.BallTurret",
             "Name": "C5-173f S5 Hornet Mk II Ball Turret",
             "Description": "Give your Hornet Mk II a boost in firepower with the C5-173f ball turret. Designed by Anvil specifically for its F7 Mk II series, this S5 ball turret can equip two S3 ship weapons.",
+            "DescriptionText": "Give your Hornet Mk II a boost in firepower with the C5-173f ball turret. Designed by Anvil specifically for its F7 Mk II series, this S5 ball turret can equip two S3 ship weapons.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "flightReady",
@@ -940,24 +943,44 @@
                 {
                     "PortName": "hardpoint_weapon_S3_left",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "turret",
                         "left"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_weapon_S3_right",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "turret",
                         "right"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -968,7 +991,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1350
+                "Health": 1350,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

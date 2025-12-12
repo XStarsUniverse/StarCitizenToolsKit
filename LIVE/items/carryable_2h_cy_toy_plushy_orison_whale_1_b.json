@@ -1208,6 +1208,7 @@
         "grade": 1,
         "name": "Francis the Stormwal Large Plushie",
         "tags": "plush 2H",
+        "required_tags": "",
         "manufacturer": "CRUS",
         "stdItem": {
             "UUID": "d39fbbd5-1f33-4047-a75b-161889229bd2",
@@ -1220,9 +1221,11 @@
             "Type": "Misc.Personal",
             "Name": "Francis the Stormwal Large Plushie",
             "Description": "Francis the Stormwal loves sailing through the clouds in Crusader's atmosphere. Much like Crusader's ships, Francis is big, graceful, and quite the sight to behold. Now this majestic purple stormwal can accompany you on a journey through the stars with this large, soft, and squeezable plushie.",
+            "DescriptionText": "Francis the Stormwal loves sailing through the clouds in Crusader's atmosphere. Much like Crusader's ships, Francis is big, graceful, and quite the sight to behold. Now this majestic purple stormwal can accompany you on a journey through the stars with this large, soft, and squeezable plushie.",
             "Manufacturer": {
                 "Code": "CRUS",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "63685f47-b0cc-4ebe-8f16-72793a5cd6e0"
             },
             "Tags": [
                 "plush",
@@ -1232,7 +1235,14 @@
                 "Width": 0.3,
                 "Length": 0.5,
                 "Height": 0.25
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Inspect",
+                "Store"
+            ]
         }
     }
 }

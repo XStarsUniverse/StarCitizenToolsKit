@@ -1495,6 +1495,7 @@
         "grade": 1,
         "name": "Amiant Pod",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "8788316d-ccdb-4ca3-a1e0-9e6e11a0496f",
             "ClassName": "Harvestable_Amiant",
@@ -1506,13 +1507,40 @@
             "Type": "Misc.Harvestable",
             "Name": "Amiant Pod",
             "Description": "Harvested from the amiant tree, the fibrous husks of these seed pods are used to make heat resistant textitles. Once removed, the husks must first be soaked in a chemical solution before the fibers can be seperated out.",
+            "DescriptionText": "Harvested from the amiant tree, the fibrous husks of these seed pods are used to make heat resistant textitles. Once removed, the husks must first be soaked in a chemical solution before the fibers can be seperated out.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                }
             }
         }
     }

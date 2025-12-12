@@ -726,6 +726,7 @@
         "grade": 1,
         "name": "Stash",
         "tags": "LootableContainer",
+        "required_tags": "",
         "stdItem": {
             "UUID": "734a71b5-5c4a-48df-bfe7-0fe03cb9fa68",
             "ClassName": "Lootable_PreGenerated_Container_PrisonStash",
@@ -737,8 +738,19 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Stash",
             "Description": "A hidden cache of various items.",
+            "DescriptionText": "A hidden cache of various items.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "LootableContainer"
+            ],
+            "Interactions": [
+                "Open",
+                "Close",
+                "Openlootingui"
             ],
             "InventoryContainer": {
                 "SCU": 0.0927,

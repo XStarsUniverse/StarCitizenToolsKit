@@ -1988,6 +1988,7 @@
         "grade": 1,
         "name": "Mountaintop Jacket Dune",
         "tags": "dmc_jacket Set_01 Color_20",
+        "required_tags": "",
         "manufacturer": "DMC",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2001,9 +2002,15 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Mountaintop Jacket Dune",
             "Description": "Temp. Rating: -20 / 10 \u00b0C\\nCarrying Capacity: 1K \u00b5SCU\\n\\nThese insulated, water-resistant jackets are perfect for any jobsite where temperature can be a factor. The Mountaintop from DMC features secure pockets and is made with a vinyl-weave exterior, guaranteeing that rough environments won't compromise your warmth.\\n\\nWomen's sizes currently out of stock.",
+            "DescriptionData": {
+                "Temp. Rating": "-20 / 10 \u00b0C",
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "These insulated, water-resistant jackets are perfect for any jobsite where temperature can be a factor. The Mountaintop from DMC features secure pockets and is made with a vinyl-weave exterior, guaranteeing that rough environments won't compromise your warmth.\n\nWomen's sizes currently out of stock.",
             "Manufacturer": {
                 "Code": "DMC",
-                "Name": "DMC"
+                "Name": "DMC",
+                "UUID": "a53bbc2b-aa43-483d-967e-0cebc5600c04"
             },
             "Tags": [
                 "dmc_jacket",
@@ -2014,11 +2021,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2028,6 +2042,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2043,6 +2066,10 @@
             "TemperatureResistance": {
                 "Minimum": -10,
                 "Maximum": 20
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

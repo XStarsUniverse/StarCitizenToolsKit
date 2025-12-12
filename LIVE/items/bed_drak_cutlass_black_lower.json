@@ -878,6 +878,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "51cc5bb9-827d-4b22-bb37-0689108f1287",
@@ -890,33 +891,54 @@
             "Type": "Usable.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Ports": [
                 {
                     "PortName": "Bunk_Mattress",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "Sleep"
                     ],
                     "Types": [
                         "Seat"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Seat"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Bunk_Mattress_2",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Tags": [
                         "Sleep"
                     ],
                     "Types": [
                         "Seat"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Seat"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Enter",
+                "Exit",
+                "Savegamelogout"
             ]
         }
     }

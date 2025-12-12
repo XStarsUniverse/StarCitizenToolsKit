@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Comb",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "35dfd8fe-361e-4eec-aa74-9e59beaad3c7",
             "ClassName": "un_personal_comb_6_a",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Comb",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

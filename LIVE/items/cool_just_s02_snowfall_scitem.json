@@ -922,6 +922,7 @@
         "grade": 2,
         "name": "Snowfall",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "JUST",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Snowfall",
             "Description": "Item Type: Cooler\\nManufacturer: Juno Starwerk\\nSize: 2\\nGrade: B\\nClass: Industrial\\n\\nFew things can be as damaging to your ship over time as excess heat build up. The Juno Starwerk Snowfall cooler helps ensure that your ship stays the right temperature for longer, which means that you can keep flying for longer.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Juno Starwerk",
+                "Size": "2",
+                "Grade": "B",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "Few things can be as damaging to your ship over time as excess heat build up. The Juno Starwerk Snowfall cooler helps ensure that your ship stays the right temperature for longer, which means that you can keep flying for longer.",
             "Manufacturer": {
                 "Code": "JUST",
-                "Name": "Juno Starwerk"
+                "Name": "Juno Starwerk",
+                "UUID": "d7cc897f-b760-4a73-93c0-27e23c52db0a"
             },
             "Cooler": {
                 "CoolingRate": 8400000,
@@ -949,8 +959,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 740
+                "Health": 740,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 15,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.23
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 26.4,
+                                "MinimumFraction": 0.75,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1980,
+                            "IR": 8710
+                        }
+                    }
+                ]
             }
         }
     }

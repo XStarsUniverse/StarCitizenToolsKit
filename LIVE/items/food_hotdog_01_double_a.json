@@ -1577,6 +1577,7 @@
         "grade": 1,
         "name": "Double Dog",
         "tags": "hotdog double",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "aa514342-dc16-44ce-afc7-34b962228b5e",
@@ -1589,9 +1590,15 @@
             "Type": "Food.Junk",
             "Name": "Double Dog",
             "Description": "NDR: 34\\nEffects: Dehydrating, Hyper-Metabolic\\n\\nTwo dogs perfectly grilled before being stacked together on a bun.",
+            "DescriptionData": {
+                "NDR": "34",
+                "Effects": "Dehydrating, Hyper-Metabolic"
+            },
+            "DescriptionText": "Two dogs perfectly grilled before being stacked together on a bun.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "hotdog",
@@ -1603,12 +1610,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "34",
+                "Effects": [
+                    "Dehydrating",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

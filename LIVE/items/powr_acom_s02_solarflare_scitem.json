@@ -1134,6 +1134,7 @@
         "grade": 3,
         "name": "SolarFlare",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ACOM",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1147,17 +1148,37 @@
             "Type": "PowerPlant.Power",
             "Name": "SolarFlare",
             "Description": "Item Type: Power Plant\\nManufacturer: ACOM\\nSize: 2\\nGrade: C\\nClass: Competition\\n\\nThe ACOM team took their years of experience in the racing world and applied it to their component designs. That focus has helped make the SolarFlare a popular power plant among pilots that want to prioritize performance.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "ACOM",
+                "Size": "2",
+                "Grade": "C",
+                "Class": "Competition"
+            },
+            "DescriptionText": "The ACOM team took their years of experience in the racing world and applied it to their component designs. That focus has helped make the SolarFlare a popular power plant among pilots that want to prioritize performance.",
             "Manufacturer": {
                 "Code": "ACOM",
-                "Name": "ACOM"
+                "Name": "ACOM",
+                "UUID": "5d616e6f-3257-4d19-90c3-11ab974f12e7"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 40,
+                "Maximum": 12000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 440
+                "Health": 440,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1180,6 +1201,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 3125,
@@ -1197,6 +1222,39 @@
             },
             "PowerPlant": {
                 "Output": 3125
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 20,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 21,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 8180
+                        }
+                    }
+                ]
             }
         }
     }

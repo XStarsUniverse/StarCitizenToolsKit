@@ -6799,6 +6799,7 @@
         "grade": 1,
         "name": "APX Fire Extinguisher",
         "tags": "stocked kegr_fire_extinguisher_01",
+        "required_tags": "",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
             "UUID": "1b6a6b76-f3fc-402c-a24a-204f2eeae6f7",
@@ -6811,6 +6812,19 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "APX Fire Extinguisher",
             "Description": "Manufacturer: KE Group\\nItem Type: Fire Extinguisher\\nClass: Gadget\\n\\nMagazine Size: Gas Canister\\nRate of Fire: Constant\\nEffective Range: 3-4 m\\n\\nThe KE Group's APX Fire Extinguisher has been rated a best-in-class consumer grade safety equipment for well-over a decade making it the industry standard in fire prevention. Filled with a patented gaseous cooling compound, the extinguisher can rapidly smother any fire in sight. The digital screen on the device allows you to monitor the local temperature to help you contain and eliminate fire hazards.",
+            "DescriptionData": {
+                "Manufacturer": "KE Group",
+                "Item Type": "Fire Extinguisher",
+                "Class": "Gadget",
+                "Magazine Size": "Gas Canister",
+                "Effective Range": "3-4 m"
+            },
+            "DescriptionText": "The KE Group's APX Fire Extinguisher has been rated a best-in-class consumer grade safety equipment for well-over a decade making it the industry standard in fire prevention. Filled with a patented gaseous cooling compound, the extinguisher can rapidly smother any fire in sight. The digital screen on the device allows you to monitor the local temperature to help you contain and eliminate fire hazards.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "stocked",
                 "kegr_fire_extinguisher_01"
@@ -6819,6 +6833,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "kegr_fire_extinguisher_01"
                     ],
@@ -6826,18 +6842,31 @@
                         "kegr_fire_extinguisher_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "a205d0b4-7157-4e5a-9e40-57bb6b4fbb55",
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 },
                 {
                     "PortName": "root",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "kegr_fire_extinguisher_01"
                     ],
@@ -6845,7 +6874,15 @@
                         "kegr_fire_extinguisher_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -6905,14 +6942,17 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ],
             "Weapon": {
                 "Ammunition": {
                     "UUID": "aa91d4f3-6bb4-426a-8a6b-e70717690221",

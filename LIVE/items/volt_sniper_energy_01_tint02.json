@@ -11287,6 +11287,7 @@
         "grade": 1,
         "name": "Zenith Laser Sniper Rifle",
         "tags": "stocked volt_sniper_energy_01 sniper",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -11300,9 +11301,19 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Zenith Laser Sniper Rifle",
             "Description": "Manufacturer: Verified Offworld Laser Technologies\\nItem Type: Sniper Rifle\\nClass: Energy (Laser)\\n \\nBattery Size: 22\\nRate of Fire: 60-300 rpm\\nEffective Range: 80 m\\n \\nAttachments: Optics (S3), Underbarrel (S2)\\n \\nThe Zenith Laser Sniper Rifle from VOLT offers operational flexibility on the battlefield as it can fire lower-energy shots rapidly, or be allowed time to automatically charge to fire a much more powerful energy blast that also generates significantly more noise and heat.",
+            "DescriptionData": {
+                "Manufacturer": "Verified Offworld Laser Technologies",
+                "Item Type": "Sniper Rifle",
+                "Class": "Energy (Laser)",
+                "Size": "22",
+                "Effective Range": "80 m",
+                "Attachments": "Optics (S3), Underbarrel (S2)"
+            },
+            "DescriptionText": "The Zenith Laser Sniper Rifle from VOLT offers operational flexibility on the battlefield as it can fire lower-energy shots rapidly, or be allowed time to automatically charge to fire a much more powerful energy blast that also generates significantly more noise and heat.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "e2787f3b-b892-4276-bb2e-eb2b4dc9666b"
             },
             "Tags": [
                 "stocked",
@@ -11313,6 +11324,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "volt_sniper_energy_01"
                     ],
@@ -11320,35 +11333,67 @@
                         "volt_sniper_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "fa12a7a5-6fdd-4e7b-9237-1f2e131a43c4",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "32eba44b-1373-4843-b797-d19f4d28b539",
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -11407,14 +11452,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

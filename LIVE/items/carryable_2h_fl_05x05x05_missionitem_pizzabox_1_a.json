@@ -949,6 +949,7 @@
         "grade": 1,
         "name": "Pizza Box",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "stdItem": {
             "UUID": "42218328-771d-49fd-920a-e6507b0be399",
             "ClassName": "Carryable_2H_FL_05x05x05_MissionItem_pizzabox_1_a",
@@ -960,6 +961,12 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Pizza Box",
             "Description": "Keep your oven-fresh pizza piping hot while transporting.",
+            "DescriptionText": "Keep your oven-fresh pizza piping hot while transporting.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -967,7 +974,12 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

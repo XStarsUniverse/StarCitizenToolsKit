@@ -6868,6 +6868,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "04ee5a77-e1a5-48b3-87f0-049ecf749982",
             "ClassName": "Table_Template_Standard_4_Seater_a",
@@ -6879,10 +6880,18 @@
             "Type": "Usable.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Drink_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys"
                     ],
@@ -6891,6 +6900,8 @@
                 {
                     "PortName": "Drink_02",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys"
                     ],
@@ -6899,72 +6910,108 @@
                 {
                     "PortName": "Seat_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys"
                     ],
                     "Tags": [
                         "Seat_01"
                     ],
+                    "EquippedItem": "81f73691-0f22-455a-a526-89006a45da73",
                     "Uneditable": false
                 },
                 {
                     "PortName": "Seat_02",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys"
                     ],
                     "Tags": [
                         "Seat_02"
                     ],
+                    "EquippedItem": "a909241e-3142-4563-b475-c416d0b5fe9b",
                     "Uneditable": false
                 },
                 {
                     "PortName": "Tray_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "Tray_01"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Tray_02",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "Tray_02"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Plate_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "table_plate_01"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Plate_02",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "table_plate_02"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Utensil_Left_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys"
                     ],
@@ -6974,77 +7021,123 @@
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Utensil_Left_02",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "table_utensil_1_02"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Utensil_Right_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "table_utensil_2_01"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Utensil_Right_02",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "table_utensil_2_02"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Utensil_Top_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "table_utensil_3_01"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Utensil_Top_02",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "table_utensil_3_02"
                     ],
                     "Types": [
                         "Misc"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$slot_seat_03",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "Seat_03"
                     ],
+                    "EquippedItem": "a909241e-3142-4563-b475-c416d0b5fe9b",
                     "Uneditable": false
                 },
                 {
                     "PortName": "$slot_seat_04",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "Seat_04"
                     ],
+                    "EquippedItem": "81f73691-0f22-455a-a526-89006a45da73",
                     "Uneditable": false
                 }
             ]

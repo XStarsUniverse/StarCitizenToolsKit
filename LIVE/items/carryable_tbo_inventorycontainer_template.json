@@ -778,6 +778,7 @@
         "grade": 1,
         "name": "Stor*All 1 SCU Self-Storage Container",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "b2f5ff20-00bf-495e-b07e-8a2422b87917",
@@ -790,11 +791,23 @@
             "Type": "Cargo.Cargo",
             "Name": "Stor*All 1 SCU Self-Storage Container",
             "Description": "Designed by one of the most trusted names in cargo pods, the Stor*All Self-Storage Container provides a convenient place to keep anything too cumbersome to carry on your person. Its durable impact-resistant construction is sealed to survive the vacuum of space.",
+            "DescriptionText": "Designed by one of the most trusted names in cargo pods, the Stor*All Self-Storage Container provides a convenient place to keep anything too cumbersome to carry on your person. Its durable impact-resistant construction is sealed to survive the vacuum of space.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Open",
+                "Drop",
+                "Place",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "unit": 0,
                 "unitName": "SCU",

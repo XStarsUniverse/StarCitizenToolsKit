@@ -1397,6 +1397,7 @@
         "grade": 1,
         "name": "Avalos Scout Goggles",
         "tags": "rmb_goggles Set_01 Color_01",
+        "required_tags": "Protos",
         "manufacturer": "RMB",
         "stdItem": {
             "UUID": "a07f1766-b043-40a7-a6f1-232544bfdfd1",
@@ -1409,9 +1410,11 @@
             "Type": "Char_Accessory_Eyes.UNDEFINED",
             "Name": "Avalos Scout Goggles",
             "Description": "Tech meets tough with the Avalos Scout goggles. Their unique and sturdy frame ensures that the lenses remain intact even after unexpected impacts or sudden atmospheric changes. Built for harsh environments but bold enough to be worn anywhere.",
+            "DescriptionText": "Tech meets tough with the Avalos Scout goggles. Their unique and sturdy frame ensures that the lenses remain intact even after unexpected impacts or sudden atmospheric changes. Built for harsh environments but bold enough to be worn anywhere.",
             "Manufacturer": {
                 "Code": "RMB",
-                "Name": "Rambler"
+                "Name": "Rambler",
+                "UUID": "e7489831-23c1-4629-ab36-221bb9bad06f"
             },
             "Tags": [
                 "rmb_goggles",
@@ -1422,7 +1425,16 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Inspect"
+            ]
         }
     }
 }

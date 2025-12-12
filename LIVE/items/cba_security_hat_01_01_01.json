@@ -1762,6 +1762,7 @@
         "grade": 1,
         "name": "Ajax Security Uniform Hat",
         "tags": "cba_security_hat Set_01 Color_01 KeepsShape $hatHair+",
+        "required_tags": "Protos",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1775,9 +1776,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Ajax Security Uniform Hat",
             "Description": "This black soft-domed, billed hat from Code Blue Apparel features eye-catching bronze accents and is imprinted boldly with \"Security\" across the front. Comfortable and distinct, it makes for an ideal accessory to any security professional's uniform.",
+            "DescriptionText": "This black soft-domed, billed hat from Code Blue Apparel features eye-catching bronze accents and is imprinted boldly with \"Security\" across the front. Comfortable and distinct, it makes for an ideal accessory to any security professional's uniform.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_security_hat",
@@ -1790,11 +1793,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1804,9 +1814,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

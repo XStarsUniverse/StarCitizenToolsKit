@@ -1583,6 +1583,7 @@
         "grade": 1,
         "name": "BoostPen Xtra",
         "tags": "Stash_MediPen medical_injection",
+        "required_tags": "",
         "manufacturer": "CUR",
         "stdItem": {
             "UUID": "b1b015dd-2ecb-4988-8cc3-9702914e246d",
@@ -1595,9 +1596,15 @@
             "Type": "FPS_Consumable.Medical",
             "Name": "BoostPen Xtra",
             "Description": "Manufacturer: CureLife\\nItem Type: Medical Consumable\\n\\nFrom the Empire\u2019s most trusted medical company, the CureLife BoostPen Xtra delivers a high dose of the potent stimulant Modamphetamine to greatly increase wakefulness and diminish awareness of pain in emergency situations.",
+            "DescriptionData": {
+                "Manufacturer": "CureLife",
+                "Item Type": "Medical Consumable"
+            },
+            "DescriptionText": "From the Empire's most trusted medical company, the CureLife BoostPen Xtra delivers a high dose of the potent stimulant Modamphetamine to greatly increase wakefulness and diminish awareness of pain in emergency situations.",
             "Manufacturer": {
                 "Code": "CUR",
-                "Name": "Curelife"
+                "Name": "Curelife",
+                "UUID": "dd55bc19-5212-4365-bbc8-73474f0257ed"
             },
             "Tags": [
                 "Stash_MediPen",
@@ -1609,12 +1616,26 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 1,
-                "containerTypeTag": "injection"
+                "Type": "FPS_Consumable",
+                "ContainerClosed": 0,
+                "ContainerType": "injection",
+                "ContainerTypeTag": "injection",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 1
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Consume"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 0,
                 "canBlock": 0,

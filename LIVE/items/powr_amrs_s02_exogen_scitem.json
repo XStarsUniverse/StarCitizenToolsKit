@@ -1134,6 +1134,7 @@
         "grade": 4,
         "name": "ExoGen",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AMRS",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1147,17 +1148,37 @@
             "Type": "PowerPlant.Power",
             "Name": "ExoGen",
             "Description": "Item Type: Power Plant\\nManufacturer: Amon & Reese Co.\u00a0\\nSize: 2\\nGrade: D\\nClass: Military\\n\\nSimple and direct, the ExoGen generates power in traditional A&R style: no fuss, just solid craftsmanship.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Amon & Reese Co.",
+                "Size": "2",
+                "Grade": "D",
+                "Class": "Military"
+            },
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "AMRS",
-                "Name": "Amon & Reese Co."
+                "Name": "Amon & Reese Co.",
+                "UUID": "eccba58a-f6d9-42e8-95c6-d0a65763e583"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 40,
+                "Maximum": 12000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1180,6 +1201,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 8750,
@@ -1197,6 +1222,39 @@
             },
             "PowerPlant": {
                 "Output": 8750
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 20,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 19,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 9900
+                        }
+                    }
+                ]
             }
         }
     }

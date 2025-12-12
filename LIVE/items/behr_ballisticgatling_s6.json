@@ -4801,6 +4801,7 @@
         "grade": 1,
         "name": "AD6B Ballistic Gatling",
         "tags": "BEHR BallisticGatling flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4814,9 +4815,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "AD6B Ballistic Gatling",
             "Description": "Manufacturer: Behring\\nItem Type: Ballistic Gatling\\nSize: 6\\n\\nThe AD6B, Behring's take on the classic ballistic gatling, includes a crystal cycle firing mechanism in the the high speed rotary system to maximize efficiency for sustained engagements with minimal misfires. Next time an aggressor escalates a hostile situation, make them regret the decision by spinning up this overwhelming and effective weapon.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Ballistic Gatling",
+                "Size": "6"
+            },
+            "DescriptionText": "The AD6B, Behring's take on the classic ballistic gatling, includes a crystal cycle firing mechanism in the the high speed rotary system to maximize efficiency for sustained engagements with minimal misfires. Next time an aggressor escalates a hostile situation, make them regret the decision by spinning up this overwhelming and effective weapon.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "BEHR",
@@ -4828,33 +4836,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "8e760f65-9e60-47b5-b760-2d006083d4c0",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "c482ad77-f1da-4e74-938f-43f796bd6426",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "9f29019f-3ecf-4867-ad32-c1886973b4a7",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "3260477b-ff8a-43a4-81bd-7f60323cc6c0",
                     "Uneditable": false
                 }
             ],
@@ -4879,8 +4931,37 @@
                 "Length": 3.75,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1650
+                "Health": 1650,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

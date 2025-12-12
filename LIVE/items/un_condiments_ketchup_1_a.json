@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Ketchup",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "70380ee7-e0b5-45f1-a0b8-90b20fe6ccb0",
             "ClassName": "un_condiments_ketchup_1_a",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Ketchup",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

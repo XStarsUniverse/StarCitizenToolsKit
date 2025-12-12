@@ -337,6 +337,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "4ae5a636-ab5a-427d-9e74-16c72e881b69",
             "ClassName": "ShipSelectorDisplay_Outposts",
@@ -348,12 +349,28 @@
             "Type": "Display.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "screen_01",
                     "Size": 2,
+                    "MinSize": 0,
+                    "MaxSize": 2,
                     "Types": [
-                        "Display"
+                        "Display.UNDEFINED"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display",
+                            "sub_types": [
+                                "UNDEFINED"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }

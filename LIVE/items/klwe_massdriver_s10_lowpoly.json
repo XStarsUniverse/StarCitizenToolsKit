@@ -3280,6 +3280,7 @@
         "grade": 1,
         "name": "Destroyer Mass Driver Cannon",
         "tags": "KLWE MassDriver flightReady weaponMountUsable $AEGS_Idris_Nose",
+        "required_tags": "AEGS_Idris_Nose",
         "manufacturer": "KLA",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -3293,9 +3294,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Destroyer Mass Driver Cannon",
             "Description": "Manufacturer: Klaus & Werner\\nItem Type: Mass Driver Cannon\\nSize: 10\\n\\nMade for the Aegis Idris utilizing railgun technology to accurately fire high damage ballistic projectiles over long distances, the Destroyer mass driver from Klaus & Werner has made it's presence known on the battlefield time and again with devastating impact.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Item Type": "Mass Driver Cannon",
+                "Size": "10"
+            },
+            "DescriptionText": "Made for the Aegis Idris utilizing railgun technology to accurately fire high damage ballistic projectiles over long distances, the Destroyer mass driver from Klaus & Werner has made it's presence known on the battlefield time and again with devastating impact.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "KLWE",
@@ -3308,32 +3316,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -3359,8 +3407,37 @@
                 "Length": 3.75,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 727680
+                "Health": 727680,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4.8,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

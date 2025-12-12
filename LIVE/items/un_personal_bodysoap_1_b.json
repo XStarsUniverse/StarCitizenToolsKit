@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Soap",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "8035316b-8048-4644-9a52-1445c6199c5f",
             "ClassName": "un_personal_bodysoap_1_b",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Soap",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

@@ -4700,6 +4700,7 @@
         "grade": 1,
         "name": "Deadbolt III Cannon",
         "tags": "ESP BallisticCannon flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "ESPR",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4713,9 +4714,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Deadbolt III Cannon",
             "Description": "Manufacturer: Esperia\\nItem Type: Ballistic Cannon \\nSize: 3\\n\\nSpread dread with the Deadbolt III ballistic cannon. Feared for its firepower at short range, this notorious Tevarin weapon earned its intimidating reputation during the First Tevarin War as part of the Tevarin fleet's devastating arsenal. Esperia has painstakingly recreated the Deadbolt III out of respect to the original weapon and warriors who used it so effectively.",
+            "DescriptionData": {
+                "Manufacturer": "Esperia",
+                "Item Type": "Ballistic Cannon",
+                "Size": "3"
+            },
+            "DescriptionText": "Spread dread with the Deadbolt III ballistic cannon. Feared for its firepower at short range, this notorious Tevarin weapon earned its intimidating reputation during the First Tevarin War as part of the Tevarin fleet's devastating arsenal. Esperia has painstakingly recreated the Deadbolt III out of respect to the original weapon and warriors who used it so effectively.",
             "Manufacturer": {
                 "Code": "ESPR",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "4ecc1a24-d228-4dd5-8857-21ba6145a1d3"
             },
             "Tags": [
                 "ESP",
@@ -4727,33 +4735,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "978a32c2-3868-45b4-9ff4-9add9e56e8db",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "05f81f1b-28d1-4681-8eed-c9f20a1998ec",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "aba67d74-1e55-4248-9c7a-6c3cb960b85e",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "e5f181c5-8170-4062-872a-02b82c9a0d22",
                     "Uneditable": false
                 }
             ],
@@ -4778,8 +4830,37 @@
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 550
+                "Health": 550,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

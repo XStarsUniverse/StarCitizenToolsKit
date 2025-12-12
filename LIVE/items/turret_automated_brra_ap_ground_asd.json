@@ -14215,6 +14215,7 @@
         "grade": 1,
         "name": "AAT-34 Turret",
         "tags": "",
+        "required_tags": "NOPE",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "638eb0ee-251a-48f5-99d8-5d274c584ecd",
@@ -14227,9 +14228,15 @@
             "Type": "Turret.MannedTurret",
             "Name": "AAT-34 Turret",
             "Description": "Manufacturer: Behring\\nItem Type: Anti-Aircraft Turret\\n\\nMaintain order with the AAT-34 anti-aircraft turret. This rugged design is ideal for perimeter protection and can survive long exposure to the elements with minimal maintenance while still providing first class defensive fire from its S10 weapon and dual S7 missile launchers. Its custom targeting software also helps to maximize area coverage while keeping placement numbers reasonable; protecting more sky with fewer turrets.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Anti-Aircraft Turret"
+            },
+            "DescriptionText": "Maintain order with the AAT-34 anti-aircraft turret. This rugged design is ideal for perimeter protection and can survive long exposure to the elements with minimal maintenance while still providing first class defensive fire from its S10 weapon and dual S7 missile launchers. Its custom targeting software also helps to maximize area coverage while keeping placement numbers reasonable; protecting more sky with fewer turrets.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Ammunition": {
                 "UUID": "83012f36-2428-430c-93c0-798ed61bebd1",
@@ -14252,8 +14259,19 @@
                 "Length": 1.5,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 133.33,
+                "Maximum": 40000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 2800
+                "Health": 2800,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -14276,6 +14294,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 40000,
@@ -14290,6 +14312,39 @@
                 "OverclockPerformance": 0.357,
                 "PowerToEM": 0.15,
                 "DecayRateOfEM": 0.18
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 24,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 23,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 11900
+                        }
+                    }
+                ]
             },
             "Radar": {
                 "Cooldown": 0,

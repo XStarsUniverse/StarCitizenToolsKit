@@ -2014,6 +2014,7 @@
         "grade": 1,
         "name": "Restored Pants Green",
         "tags": "srvl_pants Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "UNKN",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2027,9 +2028,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Restored Pants Green",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nThese pants may have seen better days, but they've got a lot of life left in them yet. Years of use have made them more comfortable than the day they were purchased.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "These pants may have seen better days, but they've got a lot of life left in them yet. Years of use have made them more comfortable than the day they were purchased.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": [
                 "srvl_pants",
@@ -2040,19 +2046,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2062,7 +2080,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2072,6 +2098,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2087,6 +2122,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

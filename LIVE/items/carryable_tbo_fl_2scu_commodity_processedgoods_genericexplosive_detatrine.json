@@ -1162,6 +1162,7 @@
         "grade": 1,
         "name": "Detatrine",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "1e18d292-a2bc-4df3-9680-c64c7afc272b",
@@ -1174,13 +1175,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Detatrine",
             "Description": "Refined from the natural toxin found within the rare detatium fruit, this chemical has numerous medical applications.",
+            "DescriptionText": "Refined from the natural toxin found within the rare detatium fruit, this chemical has numerous medical applications.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 100
+                "Health": 100,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 2,
+                    "UnitName": "SCU",
+                    "SCU": 2
+                },
+                "InclusiveGroups": [
+                    "9379b129-8688-4777-9f65-9dc09ba935ee"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "8bc60017-e4b6-47b1-bbe0-f2eb944fdeaf",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

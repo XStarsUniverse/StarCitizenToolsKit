@@ -1775,6 +1775,7 @@
         "grade": 1,
         "name": "Ventra Gloves Red",
         "tags": "fio_gloves Set_01 Color_02",
+        "required_tags": "",
         "manufacturer": "FIO",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -1788,9 +1789,11 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "Ventra Gloves Red",
             "Description": "Keep your hands warm and dry with Fiore's Ventra gloves. Microstitching creates a snug, tailored fit to keep you looking stylish and warm.",
+            "DescriptionText": "Keep your hands warm and dry with Fiore's Ventra gloves. Microstitching creates a snug, tailored fit to keep you looking stylish and warm.",
             "Manufacturer": {
                 "Code": "FIO",
-                "Name": "Fiore"
+                "Name": "Fiore",
+                "UUID": "503b0974-5027-4c69-bce6-a38c42e87ebe"
             },
             "Tags": [
                 "fio_gloves",
@@ -1801,11 +1804,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1815,9 +1825,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

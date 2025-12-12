@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Xa'Pyen",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "0efb6b6c-aa74-45c6-a0c5-c937e5c6d210",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Xa'Pyen",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3.75,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 32,
+                    "UnitName": "SCU",
+                    "SCU": 32
+                },
+                "InclusiveGroups": [
+                    "9b28b2e4-7df3-43f3-a69a-d82b119e25bf"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "91e0d004-ecd2-48b5-af06-5dbeed33460d",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

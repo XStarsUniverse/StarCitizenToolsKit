@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Bottle",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "02be5ce1-2720-4cbd-9421-1c2b7f566f13",
             "ClassName": "un_bottle_spray_TEMPLATE",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Bottle",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

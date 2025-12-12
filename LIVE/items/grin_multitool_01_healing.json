@@ -1843,6 +1843,7 @@
         "grade": 1,
         "name": "LifeGuard Medical Attachment",
         "tags": "grin_multitool_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.WeaponAttachment.Utility",
         "stdItem": {
@@ -1856,9 +1857,16 @@
             "Type": "WeaponAttachment.Utility",
             "Name": "LifeGuard Medical Attachment",
             "Description": "MUST BUY BASE MULTI-TOOL TO USE: \"Pyro RYT Multi-Tool\"\\n\\nManufacturer: Greycat Industrial / CureLife\\nItem Type: Multi-Tool Attachment\\nClass: Medical\\n\\nCrafted as a joint effort between Greycat Industrial and leading medical device manufacturer CureLife, the LifeGuard attachment is a compact and light-weight emergency medical treatment option powered by the Pyro RYT Multi-Tool. It is perfect for handling jobsite emergencies and temporarily alleviating symptoms until professional medical care can be sought.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial / CureLife",
+                "Item Type": "Multi-Tool Attachment",
+                "Class": "Medical"
+            },
+            "DescriptionText": "Crafted as a joint effort between Greycat Industrial and leading medical device manufacturer CureLife, the LifeGuard attachment is a compact and light-weight emergency medical treatment option powered by the Pyro RYT Multi-Tool. It is perfect for handling jobsite emergencies and temporarily alleviating symptoms until professional medical care can be sought.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_multitool_01"
@@ -1867,7 +1875,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

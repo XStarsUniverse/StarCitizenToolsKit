@@ -4634,6 +4634,7 @@
         "grade": 1,
         "name": "Yeng\u2019tu Repeater",
         "tags": "TOAG LaserRepeater flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4647,9 +4648,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Yeng\u2019tu Repeater",
             "Description": "Item Type: Laser Repeater\\nManufacturer: Torral Aggregate\\nSize: 3\\n\\nInspired by Xi'an mil-tech and tailor-made by Torral Aggregate exclusively for the Aopoa San'tok.y\u0101i, the Yeng'tu laser repeater accentuates the ship's dexterity with a fighter's edge.",
+            "DescriptionData": {
+                "Item Type": "Laser Repeater",
+                "Manufacturer": "Torral Aggregate",
+                "Size": "3"
+            },
+            "DescriptionText": "Inspired by Xi'an mil-tech and tailor-made by Torral Aggregate exclusively for the Aopoa San'tok.y\u0101i, the Yeng'tu laser repeater accentuates the ship's dexterity with a fighter's edge.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Aopoa"
+                "Name": "Aopoa",
+                "UUID": "70ac7035-10a0-4bbb-90b0-9bddf047b504"
             },
             "Tags": [
                 "TOAG",
@@ -4661,33 +4669,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "03cc2a73-1401-44b5-a751-a519b8d42496",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "7b603122-7c41-4053-921f-5fbcfb263877",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "6f39210f-f5c9-4cd7-bafe-bebb8c27d3fa",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "b4a260ff-114d-4d60-8112-1c8e3d5cb501",
                     "Uneditable": false
                 }
             ],
@@ -4712,8 +4764,37 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1024
+                "Health": 1024,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.25,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

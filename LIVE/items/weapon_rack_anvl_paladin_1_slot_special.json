@@ -1040,6 +1040,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "37af384c-6db5-4673-8b5a-498c28d1e74e",
@@ -1052,22 +1053,38 @@
             "Type": "Usable.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Ports": [
                 {
                     "PortName": "$proxy_weapon_01",
                     "Size": 5,
+                    "MinSize": 4,
+                    "MaxSize": 5,
                     "Tags": [
                         "weapon_port_01"
                     ],
                     "Types": [
                         "WeaponPersonal"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Place",
+                "Open",
+                "Close",
+                "Opencomplete",
+                "Closecomplete"
             ]
         }
     }

@@ -1597,6 +1597,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "backpack SM_RestrictedArm",
+        "required_tags": "",
         "classification": "FPS.Armor.Backpack",
         "stdItem": {
             "UUID": "f3fe3607-97d4-4453-86ff-f1f387935c80",
@@ -1609,6 +1610,11 @@
             "Type": "Char_Armor_Backpack.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "<= PLACEHOLDER =>",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "backpack",
                 "SM_RestrictedArm"
@@ -1618,9 +1624,22 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -235,6 +235,7 @@
         "grade": 1,
         "name": "Aurora LX Ship Armor",
         "tags": "RSI_Aurora_Base",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.Armor.Medium",
         "stdItem": {
@@ -248,9 +249,11 @@
             "Type": "Armor.Medium",
             "Name": "Aurora LX Ship Armor",
             "Description": "Aurora LX Ship Armor",
+            "DescriptionText": "Aurora LX Ship Armor",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "RSI_Aurora_Base"
@@ -271,7 +274,9 @@
                 }
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

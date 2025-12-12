@@ -1170,6 +1170,7 @@
         "grade": 1,
         "name": "Pepper",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "8a1d093a-901d-4059-826c-c16a8661b24f",
             "ClassName": "un_condiments_pepper_1_a",
@@ -1181,11 +1182,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Pepper",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

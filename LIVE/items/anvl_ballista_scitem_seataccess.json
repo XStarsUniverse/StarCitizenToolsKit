@@ -495,6 +495,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "772d12a7-351b-4298-b01b-81acf7ea41c6",
@@ -507,10 +508,16 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Seat",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
-            }
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
+            },
+            "Interactions": [
+                "Pilotenter",
+                "Pilotexit"
+            ]
         }
     }
 }

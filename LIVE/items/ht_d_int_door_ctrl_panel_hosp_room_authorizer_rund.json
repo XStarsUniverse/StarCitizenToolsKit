@@ -1463,6 +1463,7 @@
         "grade": 1,
         "name": "Door Control",
         "tags": "DoorInteractionPanel",
+        "required_tags": "",
         "stdItem": {
             "UUID": "5dc87377-45b5-461a-808a-fcab5f1de771",
             "ClassName": "Ht_D_Int_Door_Ctrl_Panel_Hosp_Room_Authorizer_Rund",
@@ -1474,6 +1475,12 @@
             "Type": "ControlPanel.DoorPart",
             "Name": "Door Control",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "DoorInteractionPanel"
             ],
@@ -1481,8 +1488,19 @@
                 {
                     "PortName": "Screen",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
+                    "EquippedItem": "9571e795-b0ba-4d1c-8f45-0112f6b3f0e4",
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Open",
+                "Close",
+                "Open panel",
+                "Close panel",
+                "Override",
+                "Pump"
             ]
         }
     }

@@ -2948,6 +2948,7 @@
         "grade": 1,
         "name": "mobiGlas Steel Casing",
         "tags": "grey",
+        "required_tags": "",
         "manufacturer": "MIT",
         "stdItem": {
             "UUID": "58588b34-014a-4ec3-a1b9-3265e14c0b56",
@@ -2960,9 +2961,11 @@
             "Type": "MobiGlas.Personal",
             "Name": "mobiGlas Steel Casing",
             "Description": "Apply your own style to your mobiGlas with this custom paint casing.",
+            "DescriptionText": "Apply your own style to your mobiGlas with this custom paint casing.",
             "Manufacturer": {
                 "Code": "MIT",
-                "Name": "microTech"
+                "Name": "microTech",
+                "UUID": "9f0f7735-d389-4c7d-95f1-c4d0c57f7214"
             },
             "Tags": [
                 "grey"
@@ -2971,6 +2974,8 @@
                 {
                     "PortName": "mobiglas_screen_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys",
                         "uneditable"
@@ -2979,13 +2984,24 @@
                         "MobiGlas_Screen"
                     ],
                     "Types": [
-                        "Display"
+                        "Display.Personal"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display",
+                            "sub_types": [
+                                "Personal"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "f92ef99d-1488-4001-89c7-82d713be0587",
                     "Uneditable": true
                 },
                 {
                     "PortName": "legacy_mobiglas_screen_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys",
                         "uneditable"
@@ -2994,10 +3010,28 @@
                         "MobiGlas_Screen"
                     ],
                     "Types": [
-                        "Display"
+                        "Display.Personal"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display",
+                            "sub_types": [
+                                "Personal"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "f5a0d2f6-74fb-4247-aa3f-1fc61bcc2f49",
                     "Uneditable": true
                 }
+            ],
+            "Interactions": [
+                "Carry",
+                "Store",
+                "Offhandstore",
+                "Place",
+                "Equip",
+                "Inspect",
+                "Drop"
             ]
         }
     }

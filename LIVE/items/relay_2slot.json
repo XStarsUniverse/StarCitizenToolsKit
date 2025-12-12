@@ -2930,6 +2930,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "609b087d-bdfe-401d-b9fe-526af4d52d09",
             "ClassName": "RELAY_2slot",
@@ -2941,20 +2942,46 @@
             "Type": "Relay.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$slot_fuse_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
-                        "Misc"
+                        "Misc.Fuse"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "Fuse"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$slot_fuse_02",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
-                        "Misc"
+                        "Misc.Fuse"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "Fuse"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2965,7 +2992,17 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 600
+                "Health": 600,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Place"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": true,
+                "DefaultPriority": 50
             }
         }
     }

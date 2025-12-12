@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Nitrogen",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "e0514667-75fc-4f4d-95bd-dc0305671e03",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Nitrogen",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 3.75,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 32,
+                    "UnitName": "SCU",
+                    "SCU": 32
+                },
+                "InclusiveGroups": [
+                    "3a31ccbf-bb2d-4a26-9b21-2f7d0222f4a6"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "8ee121cc-aabb-4394-87dd-02552d228d0b",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

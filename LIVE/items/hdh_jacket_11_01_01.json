@@ -1892,6 +1892,7 @@
         "grade": 1,
         "name": "Sharud Wrap and Arm Bands",
         "tags": "hdh_jacket Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "HDH",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1905,9 +1906,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Sharud Wrap and Arm Bands",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nThe Sharud is an ideal top for staying cool in hot weather. Advanced production techniques allow Habidash to make a light yet absorbent shawl that looks and feels like handspun natural cotton but at a fraction of the cost. The three arm band pieces provide stylish accents and come embedded with microchips that tracks body temperature and other vitals.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "The Sharud is an ideal top for staying cool in hot weather. Advanced production techniques allow Habidash to make a light yet absorbent shawl that looks and feels like handspun natural cotton but at a fraction of the cost. The three arm band pieces provide stylish accents and come embedded with microchips that tracks body temperature and other vitals.",
             "Manufacturer": {
                 "Code": "HDH",
-                "Name": "Habidash"
+                "Name": "Habidash",
+                "UUID": "70ce6432-3a1e-45a1-8179-fe30a3ee54dc"
             },
             "Tags": [
                 "hdh_jacket",
@@ -1918,11 +1924,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1932,6 +1945,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -1947,6 +1969,10 @@
             "TemperatureResistance": {
                 "Minimum": 5,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

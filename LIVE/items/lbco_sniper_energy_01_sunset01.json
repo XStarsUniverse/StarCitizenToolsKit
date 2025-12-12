@@ -11353,6 +11353,7 @@
         "grade": 1,
         "name": "Atzkav \"Igniter\" Sniper Rifle",
         "tags": "stocked lbco_sniper_energy_01 sniper",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -11366,9 +11367,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Atzkav \"Igniter\" Sniper Rifle",
             "Description": "Manufacturer: Lightning Bolt Co. \\nItem Type: Sniper Rifle\\nClass: Electron\\n\\nBattery Size: 5\\nRate Of Fire: 30 rpm\\nEffective Range: 150m+\\n\\nAttachments: Optics (S3), Underbarrel (S2)\\n\\nThe Atzkav is a unique precision sniper rifle from Lightning Bolt Co. Once the charging handle is engaged, it accurately fires a charged electron to deal significant energy damage that spreads to nearby conductive targets. This special pulse effect also leaves a residual charge in the strike area that increases damage delivered by subsequent electron shots. Alongside the rifle's special firing capabilities, the Atzkav is best known for its distinct barrel that crackles with energy when powering its next shot. A lustrous orange coating makes the Igniter edition a colorful addition to any loadout.",
+            "DescriptionData": {
+                "Manufacturer": "Lightning Bolt Co.",
+                "Item Type": "Sniper Rifle",
+                "Class": "Electron",
+                "Size": "5",
+                "Rate Of Fire": "30 rpm",
+                "Effective Range": "150m+",
+                "Attachments": "Optics (S3), Underbarrel (S2)"
+            },
+            "DescriptionText": "The Atzkav is a unique precision sniper rifle from Lightning Bolt Co. Once the charging handle is engaged, it accurately fires a charged electron to deal significant energy damage that spreads to nearby conductive targets. This special pulse effect also leaves a residual charge in the strike area that increases damage delivered by subsequent electron shots. Alongside the rifle's special firing capabilities, the Atzkav is best known for its distinct barrel that crackles with energy when powering its next shot. A lustrous orange coating makes the Igniter edition a colorful addition to any loadout.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "98bb2e9e-fcc7-46e5-9ba6-d34c42c414e0"
             },
             "Tags": [
                 "stocked",
@@ -11379,6 +11391,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "lbco_sniper_energy_01"
                     ],
@@ -11386,35 +11400,67 @@
                         "lbco_sniper_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "8177489f-ed83-44ac-afd4-2b32a80fa0a6",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "713a8022-1cf8-4c21-a216-d536df291e99",
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -11494,14 +11540,21 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

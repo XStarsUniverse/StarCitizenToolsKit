@@ -702,6 +702,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady RSI_Scorpius",
+        "required_tags": "RSI_Scorpius",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "b854cb5f-38f1-435c-9d7a-3335a75f861f",
@@ -714,16 +715,20 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady",
                 "RSI_Scorpius"
             ],
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -746,6 +751,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

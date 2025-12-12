@@ -1780,6 +1780,7 @@
         "grade": 1,
         "name": "Carrion Arms Maniac",
         "tags": "SM_RestrictedArm",
+        "required_tags": "",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
             "UUID": "f5a0c671-44b4-4940-91e7-3f6ba0c2d84b",
@@ -1792,6 +1793,19 @@
             "Type": "Char_Armor_Arms.Medium",
             "Name": "Carrion Arms Maniac",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -50 / 80 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nForged from scavenged metals and ragged clothes, the Carrion armor is a crude concoction of repurposed materials that demonstrates you'll do anything it takes to survive.\\n\\nThe Maniac variant comes with a mid-length cape and integrates bones prominently into several pieces.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-50 / 80 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Forged from scavenged metals and ragged clothes, the Carrion armor is a crude concoction of repurposed materials that demonstrates you'll do anything it takes to survive.\n\nThe Maniac variant comes with a mid-length cape and integrates bones prominently into several pieces.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "SM_RestrictedArm"
             ],
@@ -1800,15 +1814,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 5
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -50,
                 "Maximum": 80
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

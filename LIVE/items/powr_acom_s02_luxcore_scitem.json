@@ -1134,6 +1134,7 @@
         "grade": 1,
         "name": "LuxCore",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ACOM",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1147,17 +1148,37 @@
             "Type": "PowerPlant.Power",
             "Name": "LuxCore",
             "Description": "Item Type: Power Plant\\nManufacturer: ACOM\\nSize: 2\\nGrade: A \\nClass: Competition\\n\\nFamous for performance that laps the competition, the LuxCore provides all the speed your ship needs. You'll leave other medium power plants in the dust with this first-class component from the racing experts at ACOM.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "ACOM",
+                "Size": "2",
+                "Grade": "A",
+                "Class": "Competition"
+            },
+            "DescriptionText": "Famous for performance that laps the competition, the LuxCore provides all the speed your ship needs. You'll leave other medium power plants in the dust with this first-class component from the racing experts at ACOM.",
             "Manufacturer": {
                 "Code": "ACOM",
-                "Name": "ACOM"
+                "Name": "ACOM",
+                "UUID": "5d616e6f-3257-4d19-90c3-11ab974f12e7"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 40,
+                "Maximum": 12000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 570
+                "Health": 570,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1180,6 +1201,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 4375,
@@ -1197,6 +1222,39 @@
             },
             "PowerPlant": {
                 "Output": 4375
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 20,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 21,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 8180
+                        }
+                    }
+                ]
             }
         }
     }

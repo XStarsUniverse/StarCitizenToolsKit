@@ -1852,6 +1852,7 @@
         "grade": 1,
         "name": "IAE 2950 T-Shirt",
         "tags": "eld_shirt Set_04 Color_expo",
+        "required_tags": "",
         "manufacturer": "ELD",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1865,9 +1866,11 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "IAE 2950 T-Shirt",
             "Description": "When Audrey Timmerman and friends gathered in 2670 to test her ship's experimental thrusters no one could have predicted the event would evolve into the Intergalactic Aerospace Expo. Nearly three centuries later, this grey t-shirt with white ribbing commemorates the 2950 IAE. Featuring the event's logo on the front and back, all proceeds from the shirt's sale will go to Simpods Pals, a charity founded by Timmerman to help underprivileged children learn to fly.",
+            "DescriptionText": "When Audrey Timmerman and friends gathered in 2670 to test her ship's experimental thrusters no one could have predicted the event would evolve into the Intergalactic Aerospace Expo. Nearly three centuries later, this grey t-shirt with white ribbing commemorates the 2950 IAE. Featuring the event's logo on the front and back, all proceeds from the shirt's sale will go to Simpods Pals, a charity founded by Timmerman to help underprivileged children learn to fly.",
             "Manufacturer": {
                 "Code": "ELD",
-                "Name": "Escar Limited"
+                "Name": "Escar Limited",
+                "UUID": "190a2e0e-6d60-4719-8238-ac7e1c746626"
             },
             "Tags": [
                 "eld_shirt",
@@ -1878,11 +1881,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1892,9 +1902,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

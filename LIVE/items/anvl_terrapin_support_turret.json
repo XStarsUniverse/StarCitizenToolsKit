@@ -2375,6 +2375,7 @@
         "grade": 1,
         "name": "Manned Turret",
         "tags": "ANVL_Terrapin_Base",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "5699babb-fb1b-49ca-b8b1-272fdf37d195",
@@ -2387,9 +2388,11 @@
             "Type": "Turret.TopTurret",
             "Name": "Manned Turret",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Terrapin_Base"
@@ -2398,22 +2401,47 @@
                 {
                     "PortName": "Screen_Center",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_scanner",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
                         "Seat"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Seat"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 2500
+                "Health": 2500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -2436,6 +2464,18 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Power_on",
+                "Power_off",
+                "Turret_sensitivity_increase",
+                "Turret_sensitivity_decrease",
+                "Turret_sensitivity_reset",
+                "Enterturret",
+                "Turret_gyro_mode",
+                "Turret_fire_mode",
+                "Activatespotlight",
+                "Deactivatespotlight"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,
@@ -2450,6 +2490,11 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50
             }
         }
     }

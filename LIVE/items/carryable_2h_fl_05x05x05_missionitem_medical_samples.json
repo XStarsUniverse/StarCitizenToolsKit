@@ -977,6 +977,7 @@
         "grade": 1,
         "name": "medical supplies",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d2678727-91e0-470f-b640-a12b4ad909c1",
             "ClassName": "Carryable_2H_FL_05x05x05_MissionItem_medical_samples",
@@ -988,6 +989,12 @@
             "Type": "Misc.UNDEFINED",
             "Name": "medical supplies",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -995,7 +1002,12 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

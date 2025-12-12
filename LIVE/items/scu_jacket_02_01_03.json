@@ -1979,6 +1979,7 @@
         "grade": 1,
         "name": "IndVest Jacket Orange",
         "tags": "scu_jacket set_02 Color_03",
+        "required_tags": "",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1992,9 +1993,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "IndVest Jacket Orange",
             "Description": "Carrying Capacity: 5K \u00b5SCU\\n\\nKeep your tools within easy reach with Stegman's IndVest. Made from industrial strength materials, this is a rare jacket that's both stylish and sensible.",
+            "DescriptionData": {
+                "Carrying Capacity": "5K \u00b5SCU"
+            },
+            "DescriptionText": "Keep your tools within easy reach with Stegman's IndVest. Made from industrial strength materials, this is a rare jacket that's both stylish and sensible.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_jacket",
@@ -2005,11 +2011,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2019,6 +2032,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.01,
                 "unit": 6,
@@ -2034,6 +2056,10 @@
             "TemperatureResistance": {
                 "Minimum": -1,
                 "Maximum": 29
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

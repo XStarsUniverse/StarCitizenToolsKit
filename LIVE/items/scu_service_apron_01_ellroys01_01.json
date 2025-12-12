@@ -1871,6 +1871,7 @@
         "grade": 1,
         "name": "Artisan Apron Ellroy's",
         "tags": "scu_service_apron Set_01 Texture_ellroys01 Color_01",
+        "required_tags": "",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1884,9 +1885,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Artisan Apron Ellroy's",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nWith a reinforced front pocket and colorful accent piping, Stegman's Artisan apron is a reliable choice for your next shift.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "With a reinforced front pocket and colorful accent piping, Stegman's Artisan apron is a reliable choice for your next shift.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_service_apron",
@@ -1898,11 +1904,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1912,6 +1925,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -1927,6 +1949,10 @@
             "TemperatureResistance": {
                 "Minimum": 10,
                 "Maximum": 29
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

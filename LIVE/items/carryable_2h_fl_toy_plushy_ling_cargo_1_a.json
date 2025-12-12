@@ -1031,6 +1031,7 @@
         "grade": 1,
         "name": "Ling Family Cargo Plushie",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "fafba6b0-cd78-4a6d-ba89-6fd9af6b70a4",
             "ClassName": "Carryable_2H_FL_toy_plushy_ling_cargo_1_a",
@@ -1042,11 +1043,24 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "Ling Family Cargo Plushie",
             "Description": "Here's a haul you can hug. This plushie shaped like a cargo container features Ling Family Hauling branding with the company's logo and red, blue, and white color scheme.",
+            "DescriptionText": "Here's a haul you can hug. This plushie shaped like a cargo container features Ling Family Hauling branding with the company's logo and red, blue, and white color scheme.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

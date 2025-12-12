@@ -1076,6 +1076,7 @@
         "grade": 4,
         "name": "INK",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SECO",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1089,17 +1090,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "INK",
             "Description": "Item Type: Shield Generator\\nManufacturer: Seal Corporation\\nSize: 1\\nGrade: D\\nClass: Civilian\\n\\nWhen you\u2019re looking for a dependable shield, why not trust the company that\u2019s been doing it longer than anyone else? Seal Corporation\u2019s original INK shield generator has been a staple around the Empire for generations.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Seal Corporation",
+                "Size": "1",
+                "Grade": "D",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "When you're looking for a dependable shield, why not trust the company that's been doing it longer than anyone else? Seal Corporation's original INK shield generator has been a staple around the Empire for generations.",
             "Manufacturer": {
                 "Code": "SECO",
-                "Name": "Seal Corporation"
+                "Name": "Seal Corporation",
+                "UUID": "f91beb30-915c-42f6-9b1f-f5bd74633fd6"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 260
+                "Health": 260,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 4,
@@ -1136,6 +1157,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 84.8,
+                                "MinimumFraction": 0,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 2,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 750
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 1400,

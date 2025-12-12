@@ -5203,6 +5203,7 @@
         "grade": 1,
         "name": "Singe Cannon (S3)",
         "tags": "BANU_TachyonCannon flightReady weaponMountUsable",
+        "required_tags": "BANU_TachyonCannon",
         "manufacturer": "BANU",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -5216,9 +5217,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Singe Cannon (S3)",
             "Description": "Manufacturer: Banu\\nItem Type: Tachyon Cannon\\nSize: 3\\n\\nMade popular by a Banu souli, the Singe tachyon cannon consistently delivers devastating energy damage across vast distances. Though slow to fire, the lightning-fast tachyon projectile strikes targets almost instantaneously, making the Singe a favorite choice for Banu security ships. Although the Banu have long forgotten the origin of this high tech weapon, several unique design choices have led scholars to suspect that the Banu might have appropriated the tech into their culture, instead of inventing it themselves.",
+            "DescriptionData": {
+                "Manufacturer": "Banu",
+                "Item Type": "Tachyon Cannon",
+                "Size": "3"
+            },
+            "DescriptionText": "Made popular by a Banu souli, the Singe tachyon cannon consistently delivers devastating energy damage across vast distances. Though slow to fire, the lightning-fast tachyon projectile strikes targets almost instantaneously, making the Singe a favorite choice for Banu security ships. Although the Banu have long forgotten the origin of this high tech weapon, several unique design choices have led scholars to suspect that the Banu might have appropriated the tech into their culture, instead of inventing it themselves.",
             "Manufacturer": {
                 "Code": "BANU",
-                "Name": "Banu"
+                "Name": "Banu",
+                "UUID": "2b5ba252-e826-4356-ac0d-8d88007ea386"
             },
             "Tags": [
                 "BANU_TachyonCannon",
@@ -5229,33 +5237,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "2da7c4b6-21ab-4f4b-bd9d-e73e04306510",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "17974c89-fc2d-4eae-bd8d-70c2509e80e8",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "b434af83-1dbe-4466-b9a5-e7dbc5a18db7",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d4174667-0469-45eb-be45-da6a1069854f",
                     "Uneditable": false
                 }
             ],
@@ -5280,8 +5332,37 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1024
+                "Health": 1024,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.88,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

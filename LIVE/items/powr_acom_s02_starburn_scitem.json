@@ -1134,6 +1134,7 @@
         "grade": 2,
         "name": "StarBurn",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ACOM",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1147,17 +1148,37 @@
             "Type": "PowerPlant.Power",
             "Name": "StarBurn",
             "Description": "Item Type: Power Plant\\nManufacturer: ACOM\\nSize: 2\\nGrade: B\\nClass: Competition \\n\\nThe StarBurn power plant is another excellent addition to the ACOM line of components. This medium-sized component delivers solid performance without overheating, so you won't risk burning your hands while making important repairs on the fly.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "ACOM",
+                "Size": "2",
+                "Grade": "B",
+                "Class": "Competition"
+            },
+            "DescriptionText": "The StarBurn power plant is another excellent addition to the ACOM line of components. This medium-sized component delivers solid performance without overheating, so you won't risk burning your hands while making important repairs on the fly.",
             "Manufacturer": {
                 "Code": "ACOM",
-                "Name": "ACOM"
+                "Name": "ACOM",
+                "UUID": "5d616e6f-3257-4d19-90c3-11ab974f12e7"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 40,
+                "Maximum": 12000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 500
+                "Health": 500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1180,6 +1201,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 3750,
@@ -1197,6 +1222,39 @@
             },
             "PowerPlant": {
                 "Output": 3750
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 20,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 21,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 8180
+                        }
+                    }
+                ]
             }
         }
     }

@@ -822,6 +822,7 @@
         "grade": 1,
         "name": "Weapon Rack",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e8fa39f9-2078-4836-b87d-ed50941b5253",
             "ClassName": "Weapon_Rack_Animated_Grin_MTC",
@@ -833,15 +834,35 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Weapon Rack",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$IP_launcher_1 ",
                     "Size": 5,
+                    "MinSize": 4,
+                    "MaxSize": 5,
                     "Types": [
                         "WeaponPersonal"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Place",
+                "Open",
+                "Close",
+                "Opencomplete",
+                "Closecomplete"
             ]
         }
     }

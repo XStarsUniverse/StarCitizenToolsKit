@@ -1587,6 +1587,7 @@
         "grade": 1,
         "name": "Strog-N-Off Burrito",
         "tags": "burrito torpedo",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "07c9d587-6da6-4c21-82d0-bd718e3ccb20",
@@ -1599,9 +1600,15 @@
             "Type": "Food.Junk",
             "Name": "Strog-N-Off Burrito",
             "Description": "NDR: 38\\nEffects: Dehydrating\\n\\nTorpedo Burrito crams a full payload of flavor into their newest creation, the Strog-N-Off burrito, featuring rich and meaty high-grade roasted protein encased in a creamy mushroom sauce, drenched over springy spaetzle and wrapped in their signature size-4 multi-grain tortilla.",
+            "DescriptionData": {
+                "NDR": "38",
+                "Effects": "Dehydrating"
+            },
+            "DescriptionText": "Torpedo Burrito crams a full payload of flavor into their newest creation, the Strog-N-Off burrito, featuring rich and meaty high-grade roasted protein encased in a creamy mushroom sauce, drenched over springy spaetzle and wrapped in their signature size-4 multi-grain tortilla.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "burrito",
@@ -1613,12 +1620,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "38",
+                "Effects": [
+                    "Dehydrating"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

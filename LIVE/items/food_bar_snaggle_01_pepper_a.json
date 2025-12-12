@@ -1672,6 +1672,7 @@
         "grade": 1,
         "name": "Snaggle Protein Stick (Pepper^3)",
         "tags": "snaggle pepper",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "4a1d5697-fb73-45e0-99ee-59afddbe1bb3",
@@ -1684,9 +1685,15 @@
             "Type": "Food.Bar",
             "Name": "Snaggle Protein Stick (Pepper^3)",
             "Description": "NDR: 14\\nEffects: Hypertrophic, Dehydrating\\n\\nSnag one of these premium protein sticks and experience the ultimate in \"real meat\" snacking. Pepper Pepper Pepper Snaggle sticks deliver a triple blast of intense pepper flavor guaranteed to wangjangle your taste buds.",
+            "DescriptionData": {
+                "NDR": "14",
+                "Effects": "Hypertrophic, Dehydrating"
+            },
+            "DescriptionText": "Snag one of these premium protein sticks and experience the ultimate in \"real meat\" snacking. Pepper Pepper Pepper Snaggle sticks deliver a triple blast of intense pepper flavor guaranteed to wangjangle your taste buds.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "snaggle",
@@ -1698,12 +1705,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bar"
-            }
+                "NutritionalDensityRating": "14",
+                "Effects": [
+                    "Hypertrophic",
+                    "Dehydrating"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "bar",
+                "ContainerTypeTag": "bar",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

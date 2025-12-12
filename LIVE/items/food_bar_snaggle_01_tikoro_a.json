@@ -1672,6 +1672,7 @@
         "grade": 1,
         "name": "Snaggle Stick (Tikoro Bite)",
         "tags": "snaggle tikoro",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "92ef1f8b-0fb4-49cc-9f7b-b9bd023c1e6b",
@@ -1684,9 +1685,15 @@
             "Type": "Food.Bar",
             "Name": "Snaggle Stick (Tikoro Bite)",
             "Description": "NDR: 14\\nEffects: Hypertrophic, Dehydrating\\n\\nSnag one of these premium protein sticks and experience the ultimate in \"real meat\" snacking. Tikoro Bite Snaggle sticks up the heat with a signature spice blend that'll have you sweating through your helmet.",
+            "DescriptionData": {
+                "NDR": "14",
+                "Effects": "Hypertrophic, Dehydrating"
+            },
+            "DescriptionText": "Snag one of these premium protein sticks and experience the ultimate in \"real meat\" snacking. Tikoro Bite Snaggle sticks up the heat with a signature spice blend that'll have you sweating through your helmet.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "snaggle",
@@ -1698,12 +1705,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bar"
-            }
+                "NutritionalDensityRating": "14",
+                "Effects": [
+                    "Hypertrophic",
+                    "Dehydrating"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "bar",
+                "ContainerTypeTag": "bar",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

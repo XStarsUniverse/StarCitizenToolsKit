@@ -1966,6 +1966,7 @@
         "grade": 1,
         "name": "WowBlast Desperado Toy Pistol Magazine (10 cap)",
         "tags": "sasu_pistol_toy_01",
+        "required_tags": "",
         "manufacturer": "SASU",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1979,9 +1980,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "WowBlast Desperado Toy Pistol Magazine (10 cap)",
             "Description": "Item Type: Magazine \\nCapacity: 10\\n\\nThis magazine for the WowBlast Desperado holds ten darts.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "10"
+            },
+            "DescriptionText": "This magazine for the WowBlast Desperado holds ten darts.",
             "Manufacturer": {
                 "Code": "SASU",
-                "Name": "Sakura Sun"
+                "Name": "Sakura Sun",
+                "UUID": "40c59850-8fb5-4a0e-ab61-7fd3871a632a"
             },
             "Tags": [
                 "sasu_pistol_toy_01"
@@ -2030,7 +2037,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

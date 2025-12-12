@@ -339,6 +339,7 @@
         "grade": 1,
         "name": "SureGrip TH2 Tractor Beam",
         "tags": "Taurus_TractorBeam",
+        "required_tags": "Taurus_TractorBeam",
         "manufacturer": "GRIN",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -352,15 +353,23 @@
             "Type": "WeaponGun.Gun",
             "Name": "SureGrip TH2 Tractor Beam",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Tractor Beam\\n\\nGreycat\u2019s latest addition to their field-tested tractor beam line is a dependable addition to their catalog. Aside from a more efficient pull/draw ratio, the latest model does little to advance from the previous models. The SureGrip has settings to target and extract everything from asteroid fragments to drifting crewmen, backed by Greycat\u2019s certified Soft-Touch\u00ae guarantee.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Tractor Beam"
+            },
+            "DescriptionText": "Greycat's latest addition to their field-tested tractor beam line is a dependable addition to their catalog. Aside from a more efficient pull/draw ratio, the latest model does little to advance from the previous models. The SureGrip has settings to target and extract everything from asteroid fragments to drifting crewmen, backed by Greycat's certified Soft-Touch\u00ae guarantee.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "Taurus_TractorBeam"
             ],
             "Durability": {
-                "Health": 50
+                "Health": 50,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

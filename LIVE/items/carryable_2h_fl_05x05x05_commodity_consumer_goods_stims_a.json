@@ -1207,6 +1207,7 @@
         "grade": 1,
         "name": "Stims",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "921e1e5d-c2ee-4dc8-8133-92574a15e96d",
@@ -1219,6 +1220,12 @@
             "Type": "Cargo.Small",
             "Name": "Stims",
             "Description": "Composed of various combinations of tobacco, caffeine, and mood-enhancer, stims are smoked as a cigarette.",
+            "DescriptionText": "Composed of various combinations of tobacco, caffeine, and mood-enhancer, stims are smoked as a cigarette.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1226,6 +1233,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "f4c68747-fa77-4c42-aff5-c3d72b8c8388",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -1391,6 +1391,7 @@
         "grade": 1,
         "name": "Theaters of War: Supreme Glasses",
         "tags": "evl_glasses Set_01 Color_01",
+        "required_tags": "Protos",
         "manufacturer": "EVL",
         "stdItem": {
             "UUID": "6cedf8cd-51e3-4be2-9daf-8a30612329eb",
@@ -1403,9 +1404,11 @@
             "Type": "Char_Accessory_Eyes.UNDEFINED",
             "Name": "Theaters of War: Supreme Glasses",
             "Description": "Inspired by the infamous Nexus-based outlaw group featured in the Star Marine game mode Theaters of War (Working Title), this intimidating and ostentatious limited-run eyewear is made with impact resistant red lens set in an intricately designed metal frame with gold plating.",
+            "DescriptionText": "Inspired by the infamous Nexus-based outlaw group featured in the Star Marine game mode Theaters of War (Working Title), this intimidating and ostentatious limited-run eyewear is made with impact resistant red lens set in an intricately designed metal frame with gold plating.",
             "Manufacturer": {
                 "Code": "EVL",
-                "Name": "Evalight"
+                "Name": "Evalight",
+                "UUID": "c0635984-4973-41c6-ac27-0c9a39ae051d"
             },
             "Tags": [
                 "evl_glasses",
@@ -1416,7 +1419,16 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Inspect"
+            ]
         }
     }
 }

@@ -922,6 +922,7 @@
         "grade": 2,
         "name": "Taiga",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "WCPR",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "Taiga",
             "Description": "Item Type: Cooler\\nManufacturer: Wen/Cassel Propulsion\\nSize: 2\\nGrade: B\\nClass: Civilian\\n\\nWen/Cassel has worked long and hard to develop quality coolers like the latest edition Taiga, which can process and manage excess heat while consistently maintaining the high standards that they have become known for.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Wen/Cassel Propulsion",
+                "Size": "2",
+                "Grade": "B",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Wen/Cassel has worked long and hard to develop quality coolers like the latest edition Taiga, which can process and manage excess heat while consistently maintaining the high standards that they have become known for.",
             "Manufacturer": {
                 "Code": "WCPR",
-                "Name": "Wen/Cassel Propulsion"
+                "Name": "Wen/Cassel Propulsion",
+                "UUID": "d8ef0f35-e196-4d18-affa-750f6cdf8cb4"
             },
             "Cooler": {
                 "CoolingRate": 3920000,
@@ -949,8 +959,19 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 620
+                "Health": 620,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 15,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.28
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 22,
+                                "MinimumFraction": 0.6666667,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1130,
+                            "IR": 5500
+                        }
+                    }
+                ]
             }
         }
     }

@@ -637,6 +637,7 @@
         "grade": 1,
         "name": "Drink Dispenser",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "68976743-c0f0-4393-953a-5f8fbc7a156a",
@@ -649,12 +650,23 @@
             "Type": "Cargo.UNDEFINED",
             "Name": "Drink Dispenser",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Mug",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Makecoffee"
             ]
         }
     }

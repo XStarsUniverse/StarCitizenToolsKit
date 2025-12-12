@@ -1148,6 +1148,7 @@
         "grade": 1,
         "name": "Plastic Cup",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e503db84-56bc-44fc-ba7d-021cc44bf027",
             "ClassName": "un_cup_plastic_1_c",
@@ -1159,11 +1160,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Plastic Cup",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

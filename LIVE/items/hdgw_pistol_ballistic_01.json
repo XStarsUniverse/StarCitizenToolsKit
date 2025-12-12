@@ -9230,6 +9230,7 @@
         "grade": 1,
         "name": "Salvo Frag Pistol",
         "tags": "pistol",
+        "required_tags": "",
         "manufacturer": "HDGW",
         "classification": "FPS.Weapon.Small",
         "stdItem": {
@@ -9243,9 +9244,20 @@
             "Type": "WeaponPersonal.Small",
             "Name": "Salvo Frag Pistol",
             "Description": "Manufacturer: Hedeby Gunworks\\nItem Type: Frag Pistol\\nClass: Ballistic\\n\\nMagazine Size: 8\\nRate Of Fire: 140 rpm\\nEffective Range: 80 m / 10 m (Charged)\\n\\nAttachments: Optics (S1), Barrel (S1), Underbarrel (S1)\\n\\nWhile the Salvo can be used as a normal pistol, Hedeby didn\u2019t stop there. With a longer trigger pull, a freezing primer is injected into the chamber and when released, the heavy firing pin hits with enough force to pulverize the supercooled casing. Accidentally developed as an attempt to mitigate overheating, this charged fire option discharges a deadly spray of high-velocity fragments followed by an ear-shattering boom.",
+            "DescriptionData": {
+                "Manufacturer": "Hedeby Gunworks",
+                "Item Type": "Frag Pistol",
+                "Class": "Ballistic",
+                "Magazine Size": "8",
+                "Rate Of Fire": "140 rpm",
+                "Effective Range": "80 m / 10 m (Charged)",
+                "Attachments": "Optics (S1), Barrel (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "While the Salvo can be used as a normal pistol, Hedeby didn't stop there. With a longer trigger pull, a freezing primer is injected into the chamber and when released, the heavy firing pin hits with enough force to pulverize the supercooled casing. Accidentally developed as an attempt to mitigate overheating, this charged fire option discharges a deadly spray of high-velocity fragments followed by an ear-shattering boom.",
             "Manufacturer": {
                 "Code": "HDGW",
-                "Name": "Hedeby Gunworks"
+                "Name": "Hedeby Gunworks",
+                "UUID": "9d3ee727-bb52-4ed2-bacf-47d93d8bb0d5"
             },
             "Tags": [
                 "pistol"
@@ -9254,28 +9266,51 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "hdgw_pistol_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "aa9edf82-8a45-4088-b5de-14c646252f79",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
@@ -9284,24 +9319,44 @@
                         "ballistic_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9360,14 +9415,21 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.6,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

@@ -1098,6 +1098,7 @@
         "grade": 1,
         "name": "Mug",
         "tags": "Mug",
+        "required_tags": "",
         "stdItem": {
             "UUID": "4402ed9f-d1c6-46f4-92c3-0a794934ddd4",
             "ClassName": "Drink_mug_coffee_fluid_1_b",
@@ -1109,6 +1110,12 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Mug",
             "Description": "A small, handled drinking vessel made from insulating ceramic to help keep bevarages warm.",
+            "DescriptionText": "A small, handled drinking vessel made from insulating ceramic to help keep bevarages warm.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Mug"
             ],
@@ -1116,7 +1123,11 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

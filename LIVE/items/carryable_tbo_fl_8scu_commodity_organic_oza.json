@@ -870,6 +870,7 @@
         "grade": 1,
         "name": "Oza",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "047b4989-d570-43fa-ad08-fc8296834e95",
@@ -882,13 +883,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Oza",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 8,
+                    "UnitName": "SCU",
+                    "SCU": 8
+                },
+                "InclusiveGroups": [
+                    "32a1c43c-ffdf-4b02-82a8-1d8b2d9f6666"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "fc107c3a-6776-4b7d-bac2-f9ab869391a9",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

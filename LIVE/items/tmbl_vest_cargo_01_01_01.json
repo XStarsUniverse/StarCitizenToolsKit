@@ -1879,6 +1879,7 @@
         "grade": 1,
         "name": "Renegade Vest Cargo",
         "tags": "tmbl_vest_cargo Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "TMBL",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1892,9 +1893,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Renegade Vest Cargo",
             "Description": "Carrying Capacity: 3K \u00b5SCU\\n\\nEnjoy the open road and courier goods with the Renegade Cargo vest. A special synthetic weave bestows the vest with incredible tensile strength that can support the custom 0.375 SCU pannier, while reinforced straps keep it secured to your back even while traversing rugged terrain.",
+            "DescriptionData": {
+                "Carrying Capacity": "3K \u00b5SCU"
+            },
+            "DescriptionText": "Enjoy the open road and courier goods with the Renegade Cargo vest. A special synthetic weave bestows the vest with incredible tensile strength that can support the custom 0.375 SCU pannier, while reinforced straps keep it secured to your back even while traversing rugged terrain.",
             "Manufacturer": {
                 "Code": "TMBL",
-                "Name": "Tumbril Land Systems"
+                "Name": "Tumbril Land Systems",
+                "UUID": "bb1024bc-b82e-491c-820c-36662c36feb3"
             },
             "Tags": [
                 "tmbl_vest_cargo",
@@ -1905,11 +1911,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1919,6 +1932,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.003,
                 "unit": 6,
@@ -1934,6 +1956,10 @@
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

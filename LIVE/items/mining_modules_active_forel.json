@@ -2157,6 +2157,7 @@
         "grade": 1,
         "name": "Forel Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "SHIN",
         "stdItem": {
             "UUID": "6c072263-8f32-4ca1-b64b-37d820b0786f",
@@ -2169,9 +2170,20 @@
             "Type": "MiningModifier.Gun",
             "Name": "Forel Module",
             "Description": "Manufacturer: Shubin Interstellar\\nItem Type: Mining Module (Active)\\n\\nExtraction Laser Power: 150%\\nCatastrophic Charge Rate: -60%\\n\\nResistance: +15%\\n\\nDuration: 60 seconds\\nUses: 6\\n\\nShubin developed the Forel Module to provide a safer mining experience by significantly lowering the rate at which the catastrophic charge window fills. Though deposits will be more resistant, the module provides more power to the extraction laser to help it collect ore faster.",
+            "DescriptionData": {
+                "Manufacturer": "Shubin Interstellar",
+                "Item Type": "Mining Module (Active)",
+                "Extraction Laser Power": "150%",
+                "Catastrophic Charge Rate": "-60%",
+                "Resistance": "+15%",
+                "Duration": "60 seconds",
+                "Uses": "6"
+            },
+            "DescriptionText": "Shubin developed the Forel Module to provide a safer mining experience by significantly lowering the rate at which the catastrophic charge window fills. Though deposits will be more resistant, the module provides more power to the extraction laser to help it collect ore faster.",
             "Manufacturer": {
                 "Code": "SHIN",
-                "Name": "Shubin Interstellar"
+                "Name": "Shubin Interstellar",
+                "UUID": "ab35f85f-919f-4457-8d58-4e885ea6c5c0"
             },
             "Tags": [
                 "miningConsumable",
@@ -2183,8 +2195,18 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Activate",
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

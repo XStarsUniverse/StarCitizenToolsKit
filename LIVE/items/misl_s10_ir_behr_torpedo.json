@@ -1012,6 +1012,7 @@
         "grade": 1,
         "name": "VT-T10 \"Veritas\" Torpedo",
         "tags": "BEHR IR Torpedo flightReady",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Missile.Torpedo",
         "stdItem": {
@@ -1025,9 +1026,16 @@
             "Type": "Missile.Torpedo",
             "Name": "VT-T10 \"Veritas\" Torpedo",
             "Description": "Manufacturer: Behring\\nTracking Signal: Infrared\\nSize: 10\\n\\nBring Behring's expert engineering to bear with the VT-T10 \"Veritas\" Torpedo. Originally designed for the Polaris, this size 10 torpedo has earned a reputation as a dependable and incredibly powerful ordnance.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Tracking Signal": "Infrared",
+                "Size": "10"
+            },
+            "DescriptionText": "Bring Behring's expert engineering to bear with the VT-T10 \"Veritas\" Torpedo. Originally designed for the Polaris, this size 10 torpedo has earned a reputation as a dependable and incredibly powerful ordnance.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "BEHR",
@@ -1040,8 +1048,19 @@
                 "Length": 1.5,
                 "Height": 0.38
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 667
+                "Health": 667,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

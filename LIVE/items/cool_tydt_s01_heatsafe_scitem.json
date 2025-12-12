@@ -922,6 +922,7 @@
         "grade": 3,
         "name": "HeatSafe",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "TYDT",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,17 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "HeatSafe",
             "Description": "Item Type: Cooler\\nManufacturer: Tyler Design & Tech\t\\nSize: 1\\nGrade: C\\nClass: Stealth\\n\\nPilots looking to keep their IR signature low rely on Tyler Design & Tech. As an entry level cooler, the HeatSafe not only limits emissions, it is built with Tyler\u2019s satisfaction guarantee.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Size": "1",
+                "Grade": "C",
+                "Class": "Stealth"
+            },
+            "DescriptionText": "Pilots looking to keep their IR signature low rely on Tyler Design & Tech. As an entry level cooler, the HeatSafe not only limits emissions, it is built with Tyler's satisfaction guarantee.",
             "Manufacturer": {
                 "Code": "TYDT",
-                "Name": "Tyler Design & Tech"
+                "Name": "Tyler Design & Tech",
+                "UUID": "a2a97679-2a6e-4e89-80d8-439c88a01427"
             },
             "Cooler": {
                 "CoolingRate": 130000,
@@ -949,8 +958,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 220
+                "Health": 220,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -987,6 +1007,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 8.25,
                 "DecayRateOfEM": 0.24
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 14,
+                                "MinimumFraction": 1,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 250,
+                            "IR": 2330
+                        }
+                    }
+                ]
             }
         }
     }

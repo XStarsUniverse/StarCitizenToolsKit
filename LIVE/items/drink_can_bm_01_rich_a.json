@@ -1965,6 +1965,7 @@
         "grade": 1,
         "name": "Black Mountain Sujin Tea (Rich)",
         "tags": "bm rich",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "b294db83-221c-4165-ab88-71d29dde50f9",
@@ -1977,9 +1978,15 @@
             "Type": "Drink.Can",
             "Name": "Black Mountain Sujin Tea (Rich)",
             "Description": "HEI: 21\\nEffects: Immune Boosting, Cognitive Boosting\\n\\nSujin root tea, native to Elysium IV, is a traditional Tevarin beverage and has been produced for thousands of years. Black Mountain steeps only premium roots to make their delicious brew.",
+            "DescriptionData": {
+                "HEI": "21",
+                "Effects": "Immune Boosting, Cognitive Boosting"
+            },
+            "DescriptionText": "Sujin root tea, native to Elysium IV, is a traditional Tevarin beverage and has been produced for thousands of years. Black Mountain steeps only premium roots to make their delicious brew.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bm",
@@ -1991,12 +1998,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "21",
+                "Effects": [
+                    "Immune Boosting",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

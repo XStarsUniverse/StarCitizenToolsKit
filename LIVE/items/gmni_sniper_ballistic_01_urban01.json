@@ -10849,6 +10849,7 @@
         "grade": 1,
         "name": "A03 \"Lodestone\" Sniper Rifle",
         "tags": "stocked gmni_sniper_ballistic_01 Color_urban",
+        "required_tags": "",
         "manufacturer": "GEM",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -10862,9 +10863,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "A03 \"Lodestone\" Sniper Rifle",
             "Description": "Manufacturer: Gemini\\nItem Type: Sniper Rifle\\nClass: Ballistic\\n\\nMagazine Size: 15\\nRate Of Fire: 120 rpm\\nEffective Range: 80 m\\n\\nAttachments: Optics (S3), Barrel (S2), Underbarrel (S2)\\n\\nDevastate at distance with the A03 sniper rifle. Masterfully designed by Gemini's Tevarin co-founder Clem, the weapon balances a stylish and ergonomic design with a powerful ballistic punch. The A03 delivers an impressive rate of fire for a sniper rifle that sacrifices accuracy for urgency when successive shots are required. Considering its renowned design and unique features, it's easy to see why the A03 has become a favorite of security professionals across the empire.",
+            "DescriptionData": {
+                "Manufacturer": "Gemini",
+                "Item Type": "Sniper Rifle",
+                "Class": "Ballistic",
+                "Magazine Size": "15",
+                "Rate Of Fire": "120 rpm",
+                "Effective Range": "80 m",
+                "Attachments": "Optics (S3), Barrel (S2), Underbarrel (S2)"
+            },
+            "DescriptionText": "Devastate at distance with the A03 sniper rifle. Masterfully designed by Gemini's Tevarin co-founder Clem, the weapon balances a stylish and ergonomic design with a powerful ballistic punch. The A03 delivers an impressive rate of fire for a sniper rifle that sacrifices accuracy for urgency when successive shots are required. Considering its renowned design and unique features, it's easy to see why the A03 has become a favorite of security professionals across the empire.",
             "Manufacturer": {
                 "Code": "GEM",
-                "Name": "Gemini"
+                "Name": "Gemini",
+                "UUID": "b33050cd-6ca9-4c57-baf8-f4114eb85237"
             },
             "Tags": [
                 "stocked",
@@ -10875,6 +10887,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "gmni_sniper_ballistic_01"
                     ],
@@ -10882,24 +10896,46 @@
                         "gmni_sniper_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "c12a76b1-80b2-4db5-9648-20a1cd0f4d67",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "278fafef-c4e3-44d5-9b85-a225f6e97cb2",
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
@@ -10908,24 +10944,44 @@
                         "ballistic_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -10984,14 +11040,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

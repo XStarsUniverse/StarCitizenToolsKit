@@ -3297,6 +3297,7 @@
         "grade": 1,
         "name": "Baler Salvage Head",
         "tags": "flightReady salvageMount",
+        "required_tags": "salvageMount",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "f8aabcb1-83b9-4b08-8846-acc77082cd4d",
@@ -3309,9 +3310,17 @@
             "Type": "SalvageHead.UNDEFINED",
             "Name": "Baler Salvage Head",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Salvage Head\\nSize: 2\\n\\nModule Capacity: 3\\n\\nGreycat Industrial has spent centuries refining the Baler salvage head into its current form that's both durable and precise even under the harshest of conditions. Designed to swap between three modules, the Baler will be ready to rip apart whatever hull you find. Experience why it's the standard salvage head for countless personal and large-scale industrial operations across the universe.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Salvage Head",
+                "Size": "2",
+                "Capacity": "3"
+            },
+            "DescriptionText": "Greycat Industrial has spent centuries refining the Baler salvage head into its current form that's both durable and precise even under the harshest of conditions. Designed to swap between three modules, the Baler will be ready to rip apart whatever hull you find. Experience why it's the standard salvage head for countless personal and large-scale industrial operations across the universe.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "flightReady",
@@ -3321,6 +3330,8 @@
                 {
                     "PortName": "hardpoint_salvage_subItem01",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible"
                     ],
@@ -3332,12 +3343,19 @@
                     ],
                     "Types": [
                         "SalvageModifier"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SalvageModifier"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_salvage_subItem02",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "invisible"
                     ],
@@ -3349,6 +3367,11 @@
                     ],
                     "Types": [
                         "SalvageModifier"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SalvageModifier"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -3409,7 +3432,9 @@
                 "Height": 0.38
             },
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -3446,6 +3471,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

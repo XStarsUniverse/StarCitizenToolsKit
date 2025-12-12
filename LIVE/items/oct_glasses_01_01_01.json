@@ -1391,6 +1391,7 @@
         "grade": 1,
         "name": "Apex Glasses",
         "tags": "",
+        "required_tags": "Protos",
         "manufacturer": "OCT",
         "stdItem": {
             "UUID": "ff0582a1-5a7d-40b4-b7bc-b1e9ead8f83f",
@@ -1403,15 +1404,26 @@
             "Type": "Char_Accessory_Eyes.UNDEFINED",
             "Name": "Apex Glasses",
             "Description": "Tough but stylish, these all-purpose performance glasses utilize scratch-resitant lens technology to keep your vision clear during training or competition.",
+            "DescriptionText": "Tough but stylish, these all-purpose performance glasses utilize scratch-resitant lens technology to keep your vision clear during training or competition.",
             "Manufacturer": {
                 "Code": "OCT",
-                "Name": "Octagon"
+                "Name": "Octagon",
+                "UUID": "4a05001d-0511-415f-8e32-618fbd75242b"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Inspect"
+            ]
         }
     }
 }

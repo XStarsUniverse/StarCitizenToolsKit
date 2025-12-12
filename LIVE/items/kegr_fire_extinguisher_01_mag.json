@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "APX Fire Extinguisher Canister",
         "tags": "kegr_fire_extinguisher_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,14 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "APX Fire Extinguisher Canister",
             "Description": "Item Type: Extinguisher Refill\\n\\nThis canister refills the APX Fire Extinguisher with a full tank of the KE Group's patented cooling compound.",
+            "DescriptionData": {
+                "Item Type": "Extinguisher Refill"
+            },
+            "DescriptionText": "This canister refills the APX Fire Extinguisher with a full tank of the KE Group's patented cooling compound.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "kegr_fire_extinguisher_01"
@@ -1959,7 +1965,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

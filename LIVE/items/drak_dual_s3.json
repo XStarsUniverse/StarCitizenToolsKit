@@ -830,6 +830,7 @@
         "grade": 1,
         "name": "Drake Caterpillar Weapon Mount",
         "tags": "gimbalMount flightReady",
+        "required_tags": "DRAK_Caterpillar_Base",
         "stdItem": {
             "UUID": "31f31a22-aea8-4805-ac25-1f19b5740646",
             "ClassName": "DRAK_Dual_S3",
@@ -841,6 +842,12 @@
             "Type": "Turret.GunTurret",
             "Name": "Drake Caterpillar Weapon Mount",
             "Description": "Drake Caterpillar Weapon Mount",
+            "DescriptionText": "Drake Caterpillar Weapon Mount",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "gimbalMount",
                 "flightReady"
@@ -849,16 +856,36 @@
                 {
                     "PortName": "hardpoint_weapon_01",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_weapon_02",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -869,7 +896,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 100
+                "Health": 100,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

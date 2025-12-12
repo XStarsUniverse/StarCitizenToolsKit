@@ -4656,6 +4656,7 @@
         "grade": 1,
         "name": "SW16BR1 \u201cBuzzsaw\u201d Repeater",
         "tags": "BEHR BallisticRepeater flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4669,9 +4670,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "SW16BR1 \u201cBuzzsaw\u201d Repeater",
             "Description": "Manufacturer: Behring\\nItem Type: Ballistic Repeater\\nSize: 1\\n\\nFiring from two barrels, the SW16BR1 \"Buzzsaw\" can overwhelm aggressors at medium to close range. Behring's expert craftsmanship allows the weapon to engage in sustained firefights before needing a cooldown, making it an excellent entry level ballistic repeater.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Ballistic Repeater",
+                "Size": "1"
+            },
+            "DescriptionText": "Firing from two barrels, the SW16BR1 \"Buzzsaw\" can overwhelm aggressors at medium to close range. Behring's expert craftsmanship allows the weapon to engage in sustained firefights before needing a cooldown, making it an excellent entry level ballistic repeater.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "BEHR",
@@ -4683,33 +4691,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "5d94d9c1-d7ee-4864-8996-34293249773e",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "bda5e109-4463-4c5f-90fd-f953ab97550e",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "94483882-6057-44e5-b640-c8d15b607926",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "92d32493-a96f-4e95-a30b-d026fa37021f",
                     "Uneditable": false
                 }
             ],
@@ -4734,8 +4786,37 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 525
+                "Health": 525,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

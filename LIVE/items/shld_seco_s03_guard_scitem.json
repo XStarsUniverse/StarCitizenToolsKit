@@ -1080,6 +1080,7 @@
         "grade": 3,
         "name": "GUARD",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SECO",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1093,17 +1094,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "GUARD",
             "Description": "Item Type: Shield Generator\\nManufacturer: Seal Corporation\\nSize: 3\\nGrade: C\\nClass: Civilian\\n\\nDon\u2019t be afraid to go up against the unknown with Seal Corp\u2019s GUARD. This shield generator balances performance, durability, and stealth to allow the user to utilize the shield in whatever way suits them best.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Seal Corporation",
+                "Size": "3",
+                "Grade": "C",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Don't be afraid to go up against the unknown with Seal Corp's GUARD. This shield generator balances performance, durability, and stealth to allow the user to utilize the shield in whatever way suits them best.",
             "Manufacturer": {
                 "Code": "SECO",
-                "Name": "Seal Corporation"
+                "Name": "Seal Corporation",
+                "UUID": "f91beb30-915c-42f6-9b1f-f5bd74633fd6"
             },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1300
+                "Health": 1300,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 4,
@@ -1140,6 +1161,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 2490,
+                                "MinimumFraction": 0,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 4,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1500
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 45400,

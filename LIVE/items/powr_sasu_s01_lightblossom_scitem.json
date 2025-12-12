@@ -1142,6 +1142,7 @@
         "grade": 3,
         "name": "LightBlossom",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SASU",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1155,17 +1156,37 @@
             "Type": "PowerPlant.Power",
             "Name": "LightBlossom",
             "Description": "Item Type: Power Plant\\nManufacturer: Sakura Sun\\nSize: 1\\nGrade: C\\nClass: Civilian\\n\\nFeaturing stylish design and strong performance, the LightBlossom is a worthy addition to Sakura Sun\u2019s line-up, continuing the reputation the conglomerate has for making everything and making it well.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Sakura Sun",
+                "Size": "1",
+                "Grade": "C",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Featuring stylish design and strong performance, the LightBlossom is a worthy addition to Sakura Sun's line-up, continuing the reputation the conglomerate has for making everything and making it well.",
             "Manufacturer": {
                 "Code": "SASU",
-                "Name": "Sakura Sun"
+                "Name": "Sakura Sun",
+                "UUID": "40c59850-8fb5-4a0e-ab61-7fd3871a632a"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 20,
+                "Maximum": 6000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 340
+                "Health": 340,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.75,
@@ -1188,6 +1209,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1998.33,
@@ -1205,6 +1230,39 @@
             },
             "PowerPlant": {
                 "Output": 1998.33
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 14,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 14,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 5780
+                        }
+                    }
+                ]
             }
         }
     }

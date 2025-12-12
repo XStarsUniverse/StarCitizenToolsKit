@@ -16148,6 +16148,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "06243d54-5f4d-4633-bd42-17b3d0d6c1e2",
@@ -16160,75 +16161,139 @@
             "Type": "SeatDashboard.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Ports": [
                 {
                     "PortName": "radar_helper",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Display_HUD",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Top_Left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Top_Right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Bottom_Left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Bottom_Right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Annunciator_Left",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Screen_Annunciator_Right",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 400,
+                "Maximum": 2000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.1,
@@ -16251,6 +16316,95 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": {
+                "0": "Openaccesspoints",
+                "1": "Closeaccesspoints",
+                "2": "Flight_ready",
+                "3": "Dummyinteraction",
+                "4": "Commsinteraction",
+                "5": "Opencanopy",
+                "6": "Closecanopy",
+                "7": "Deployladder",
+                "8": "Retractladder",
+                "9": "Landinggear_deploy",
+                "10": "Landinggear_retract",
+                "11": "Coupled_setcoupled",
+                "12": "Coupled_setdecoupled",
+                "13": "Gsafe_setactive",
+                "14": "Gsafe_setinactive",
+                "15": "Esp_setactive",
+                "16": "Esp_setinactive",
+                "17": "Quantumspool_setactive",
+                "18": "Quantumspool_setinactive",
+                "19": "Quantumtravel_setactive",
+                "20": "Quantumtravel_setinactive",
+                "21": "Weaponcontroller_setactive",
+                "22": "Weaponcontroller_setinactive",
+                "23": "Gimbaltype_setfixed",
+                "24": "Gimbaltype_setgimbal",
+                "25": "Gimbaltype_setaimassist",
+                "26": "Firepattern_setstaggered",
+                "27": "Firepattern_setsynchronized",
+                "28": "Piptype_setlead",
+                "29": "Piptype_setlag",
+                "30": "Landinggear_invalid",
+                "31": "Selfdestruct_engage",
+                "32": "Selfdestruct_disengage",
+                "33": "Hailtarget_start",
+                "34": "Hailtarget_stop",
+                "35": "Sensors_on",
+                "36": "Sensors_off",
+                "37": "Scan_enable",
+                "38": "Scan_disable",
+                "39": "Shields_on",
+                "40": "Shields_off",
+                "41": "Missiles_armmissile",
+                "42": "Missiles_disarmmissiles",
+                "43": "Missiles_cyclemissiles",
+                "44": "Missiles_firemissiles",
+                "45": "Weapons_on",
+                "46": "Weapons_off",
+                "47": "Countermeasures_chaff",
+                "48": "Countermeasures_flare",
+                "49": "Countermeasures_fire",
+                "50": "Headlights_on",
+                "51": "Headlights_off",
+                "52": "Vtol_setactive",
+                "53": "Vtol_setinactive",
+                "54": "Proximityassist_setactive",
+                "55": "Proximityassist_setinactive",
+                "56": "Flighthud_invalid",
+                "57": "Scanninghud_invalid",
+                "58": "Comms_acceptcall",
+                "59": "Comms_declinecall",
+                "60": "Subtarget_cycle",
+                "62": "Subtarget_setnone",
+                "63": "Subtarget_setengines",
+                "64": "Subtarget_setturrets",
+                "71": "Transponder_on",
+                "72": "Transponder_off",
+                "73": "Suppression_on",
+                "74": "Suppression_off",
+                "75": "Screens_on",
+                "76": "Screens_off",
+                "77": "Darkfilter_on",
+                "78": "Darkfilter_off",
+                "79": "Convergencerange_setlong",
+                "80": "Convergencerange_setmid",
+                "81": "Convergencerange_setshort",
+                "82": "Powersafety_on",
+                "83": "Powersafety_off",
+                "87": "Markhostile",
+                "88": "Markfriendly",
+                "89": "Pintarget",
+                "90": "Unpintarget",
+                "91": "Scanrange_setlong",
+                "92": "Scanrange_setmedium",
+                "93": "Scanrange_setshort",
+                "105": "Navfilter_isnone",
+                "106": "Autoland_setactive",
+                "107": "Autoland_setinactive"
+            },
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,
@@ -16265,6 +16419,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

@@ -1307,6 +1307,7 @@
         "grade": 1,
         "name": "Uncut SLAM",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "5b656b7e-e462-4b96-9971-8de5d76564a1",
@@ -1319,6 +1320,12 @@
             "Type": "Cargo.Small",
             "Name": "Uncut SLAM",
             "Description": "Initially developed for athletes before being outlawed, SLAM acts as a combat performance enhancer, targeting the user's nervous system as a fear-inhibitor and painkiller. Uncut SLAM is the concentrated form of the drug, and must be diluted to non-lethal dosages before it can be packaged into dispersal vials and consumed.",
+            "DescriptionText": "Initially developed for athletes before being outlawed, SLAM acts as a combat performance enhancer, targeting the user's nervous system as a fear-inhibitor and painkiller. Uncut SLAM is the concentrated form of the drug, and must be diluted to non-lethal dosages before it can be packaged into dispersal vials and consumed.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1328,7 +1335,42 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 4
+                "Health": 4,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 5.31,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "ExclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "8950d9c5-8a54-4e2c-87a2-c56c1b9edd3c",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

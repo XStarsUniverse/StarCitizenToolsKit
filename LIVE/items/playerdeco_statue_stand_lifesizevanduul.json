@@ -1734,6 +1734,7 @@
         "grade": 1,
         "name": "Enemy of the Empire Statue",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "96a7c83d-ff8c-4fb1-9d44-c12c608a1103",
             "ClassName": "PlayerDeco_Statue_Stand_LifesizeVanduul",
@@ -1745,10 +1746,18 @@
             "Type": "Usable.Cargo",
             "Name": "Enemy of the Empire Statue",
             "Description": "Based on the original model used as military propaganda after the UEE's first encounter with the Vanduul in 2681, this towering figure serves as a sombre reminder of the unrelenting destructive nature of the Vanduul species.",
+            "DescriptionText": "Based on the original model used as military propaganda after the UEE's first encounter with the Vanduul in 2681, this towering figure serves as a sombre reminder of the unrelenting destructive nature of the Vanduul species.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "StatueGeo",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],

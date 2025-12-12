@@ -1928,6 +1928,7 @@
         "grade": 1,
         "name": "Aztalan Arms",
         "tags": "thp_light Set_01 Color_01 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "THP",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1941,9 +1942,18 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "Aztalan Arms",
             "Description": "Item Type: Light Armor\\nDamage Reduction: 20%\\nTemp. Rating: -38 / 68 \u00b0C\\nRadiation Protection: 26000 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nFear no frontier while wearing the Aztalan armor. This mixture of armor plating and reinforced fabrics will keep you safe yet swift on your feet. Tehachapi's masterful design gives the armor a subtle yet unmistakable frontier style that also providing ample storage. Suitable for everything from sand dunes to bustling backstreets, the Aztalan is the ideal choice for your next adventure.",
+            "DescriptionData": {
+                "Item Type": "Light Armor",
+                "Damage Reduction": "20%",
+                "Temp. Rating": "-38 / 68 \u00b0C",
+                "Radiation Protection": "26000 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Fear no frontier while wearing the Aztalan armor. This mixture of armor plating and reinforced fabrics will keep you safe yet swift on your feet. Tehachapi's masterful design gives the armor a subtle yet unmistakable frontier style that also providing ample storage. Suitable for everything from sand dunes to bustling backstreets, the Aztalan is the ideal choice for your next adventure.",
             "Manufacturer": {
                 "Code": "THP",
-                "Name": "Tehachapi"
+                "Name": "Tehachapi",
+                "UUID": "c0bc7b2d-9c1a-4029-9715-f28b81122863"
             },
             "Tags": [
                 "thp_light",
@@ -1956,15 +1966,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -38,
                 "Maximum": 68
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

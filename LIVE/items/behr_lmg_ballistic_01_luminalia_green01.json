@@ -8806,6 +8806,7 @@
         "grade": 1,
         "name": "FS-9 \"Evergreen\" LMG",
         "tags": "stocked lmg behr_lmg_ballistic_01",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -8819,9 +8820,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "FS-9 \"Evergreen\" LMG",
             "Description": "Manufacturer: Behring\\nItem Type: LMG\\nClass: Ballistic\\n\\nMagazine Size: 75\\nRate Of Fire: 800 rpm\\nEffective Range: 40 m\\n\\nAttachments: Optics (S2), Barrel (S2), Underbarrel (S3)\\n\\nBehring designed the FS-9 to be an overwhelming battlefield force. This light machine gun features a full auto mode that makes it ideal for laying down covering fire or holding back advancing enemies. The FS-9 is also acclaimed for its ability to maintain accuracy while unleashing sustained fire. The Evergreen edition embraces the Luminalia spirit by using a tradition holiday color with its vibrant green tint.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "LMG",
+                "Class": "Ballistic",
+                "Magazine Size": "75",
+                "Rate Of Fire": "800 rpm",
+                "Effective Range": "40 m",
+                "Attachments": "Optics (S2), Barrel (S2), Underbarrel (S3)"
+            },
+            "DescriptionText": "Behring designed the FS-9 to be an overwhelming battlefield force. This light machine gun features a full auto mode that makes it ideal for laying down covering fire or holding back advancing enemies. The FS-9 is also acclaimed for its ability to maintain accuracy while unleashing sustained fire. The Evergreen edition embraces the Luminalia spirit by using a tradition holiday color with its vibrant green tint.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "stocked",
@@ -8832,6 +8844,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "behr_lmg_ballistic_01"
                     ],
@@ -8839,24 +8853,45 @@
                         "behr_lmg_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "b5f37920-ba9a-4a07-85e9-4d09f8e2f5ad",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
@@ -8865,24 +8900,44 @@
                         "ballistic_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 3,
+                    "MinSize": 1,
+                    "MaxSize": 3,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -8941,14 +8996,21 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

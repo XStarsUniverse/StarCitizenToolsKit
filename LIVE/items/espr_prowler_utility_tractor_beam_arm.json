@@ -485,6 +485,7 @@
         "grade": 1,
         "name": "Mining Arm",
         "tags": "miningMount",
+        "required_tags": "",
         "manufacturer": "ESPR",
         "stdItem": {
             "UUID": "d2185125-70a1-4f51-a149-527828e9df9e",
@@ -497,9 +498,11 @@
             "Type": "ToolArm.UNDEFINED",
             "Name": "Mining Arm",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ESPR",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "4ecc1a24-d228-4dd5-8857-21ba6145a1d3"
             },
             "Tags": [
                 "miningMount"
@@ -508,17 +511,29 @@
                 {
                     "PortName": "hardpoint_tractor_beam_turret",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "$Uneditable"
                     ],
                     "Types": [
-                        "Turret"
+                        "Turret.Utility"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "Utility"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 4000
+                "Health": 4000,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

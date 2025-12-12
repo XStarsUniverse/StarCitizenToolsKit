@@ -1736,6 +1736,7 @@
         "grade": 1,
         "name": "Sizi Knife",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "BANU",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1749,9 +1750,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "Sizi Knife",
             "Description": "Manufacturer: Banu\\nItem Type: Knife\\nClass: Melee\\n\\nSize: 16 cm\\n\\nWith its trailing point tip, curved belly, and sturdy spine, the Sizi knife was crafted with meticulous attention to detail, balance, and usability. Featuring an intricate Banu design, additional chromium was added to the metal to ensure long-term resistance against corrosion.",
+            "DescriptionData": {
+                "Manufacturer": "Banu",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "16 cm"
+            },
+            "DescriptionText": "With its trailing point tip, curved belly, and sturdy spine, the Sizi knife was crafted with meticulous attention to detail, balance, and usability. Featuring an intricate Banu design, additional chromium was added to the metal to ensure long-term resistance against corrosion.",
             "Manufacturer": {
                 "Code": "BANU",
-                "Name": "Banu"
+                "Name": "Banu",
+                "UUID": "2b5ba252-e826-4356-ac0d-8d88007ea386"
             },
             "Tags": [
                 "knife"
@@ -1761,6 +1770,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

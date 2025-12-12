@@ -2680,6 +2680,7 @@
         "grade": 1,
         "name": "9-Series Longsword Cannon",
         "tags": "KBAR BallisticCannon flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "KBAR",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2693,9 +2694,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "9-Series Longsword Cannon",
             "Description": "Manufacturer: KnightBridge Arms\\nItem Type: Ballistic Cannon\\nSize: 1\\n\\nThe entry level autocannon of the KnightBridge Arms Sword-line, the 9-Series Longsword fires a ballistic round designed for use against a variety of armored hostiles while allowing pilots to keep a healthy distance from targets.",
+            "DescriptionData": {
+                "Manufacturer": "KnightBridge Arms",
+                "Item Type": "Ballistic Cannon",
+                "Size": "1"
+            },
+            "DescriptionText": "The entry level autocannon of the KnightBridge Arms Sword-line, the 9-Series Longsword fires a ballistic round designed for use against a variety of armored hostiles while allowing pilots to keep a healthy distance from targets.",
             "Manufacturer": {
                 "Code": "KBAR",
-                "Name": "KnightBridge Arms"
+                "Name": "KnightBridge Arms",
+                "UUID": "7b4402a1-f17f-4125-afcc-4a159dcd29e0"
             },
             "Tags": [
                 "KBAR",
@@ -2707,32 +2715,72 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2758,8 +2806,37 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

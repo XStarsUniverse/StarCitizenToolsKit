@@ -9811,6 +9811,7 @@
         "grade": 1,
         "name": "Prism \"Bonedust\" Laser Shotgun",
         "tags": "stocked volt_shotgun_energy_01 shotgun",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -9824,9 +9825,19 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Prism \"Bonedust\" Laser Shotgun",
             "Description": "Manufacturer: Verified Offworld Laser Technologies\\nItem Type: Shotgun\\nClass: Energy (Laser)\\n \\nBattery Size: 20\\nRate of Fire: 200 - 450 rpm\\nEffective Range: 10m\\n \\nAttachments: Optics (S2), Underbarrel (S2)\\n \\nFiring powerful shortrange bursts of energy, engineers at Verified Offworld Laser Technologies have developed the Prism laser shotgun so that as the weapon's heat-levels rise, the pellets begin fusing together into slug-like projectiles that inflict higher damage on targets. The Bonedust Edition is tan with violet and blue highlights.",
+            "DescriptionData": {
+                "Manufacturer": "Verified Offworld Laser Technologies",
+                "Item Type": "Shotgun",
+                "Class": "Energy (Laser)",
+                "Size": "20",
+                "Effective Range": "10m",
+                "Attachments": "Optics (S2), Underbarrel (S2)"
+            },
+            "DescriptionText": "Firing powerful shortrange bursts of energy, engineers at Verified Offworld Laser Technologies have developed the Prism laser shotgun so that as the weapon's heat-levels rise, the pellets begin fusing together into slug-like projectiles that inflict higher damage on targets. The Bonedust Edition is tan with violet and blue highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "e2787f3b-b892-4276-bb2e-eb2b4dc9666b"
             },
             "Tags": [
                 "stocked",
@@ -9837,6 +9848,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "volt_shotgun_energy_01"
                     ],
@@ -9844,35 +9857,66 @@
                         "volt_shotgun_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "14e12fed-37fd-4c75-b61e-1b21d1bbade7",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9931,14 +9975,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Ammunition": {
                     "UUID": "0ee593b8-fe20-4d4a-b518-1be534034b80",

@@ -1133,6 +1133,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "RSI_Perseus_Remote_Turret_Top",
+        "required_tags": "RSI_Perseus_Remote_Turret_Top",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "e0dfadbd-97e7-450a-8a5e-ec3df3452962",
@@ -1145,9 +1146,11 @@
             "Type": "Turret.TopTurret",
             "Name": "Remote Turret",
             "Description": "Multitask on the battlefield with this remote turret system. Featuring precise controls and a wide field of fire, the turret allows pilots to add combat support to their resume.",
+            "DescriptionText": "Multitask on the battlefield with this remote turret system. Featuring precise controls and a wide field of fire, the turret allows pilots to add combat support to their resume.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "RSI_Perseus_Remote_Turret_Top"
@@ -1156,24 +1159,56 @@
                 {
                     "PortName": "hardpoint_gimbal_left",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "left"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_gimbal_right",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "right"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1184,7 +1219,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 15000
+                "Health": 15000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1207,6 +1244,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 10,

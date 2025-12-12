@@ -235,6 +235,7 @@
         "grade": 1,
         "name": "Stinger Ship Armor",
         "tags": "VNCL_Stinger_Base",
+        "required_tags": "",
         "manufacturer": "VNC",
         "classification": "Ship.Armor.Medium",
         "stdItem": {
@@ -248,9 +249,11 @@
             "Type": "Armor.Medium",
             "Name": "Stinger Ship Armor",
             "Description": "Stinger Ship Armor",
+            "DescriptionText": "Stinger Ship Armor",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
             "Tags": [
                 "VNCL_Stinger_Base"
@@ -271,7 +274,9 @@
                 }
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

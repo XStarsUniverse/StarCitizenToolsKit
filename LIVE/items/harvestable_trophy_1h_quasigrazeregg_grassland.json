@@ -1366,6 +1366,7 @@
         "grade": 1,
         "name": "Grassland Quasi Grazer Egg",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c685ec4c-a44b-4283-a713-4c8c1485a60f",
             "ClassName": "Harvestable_Trophy_1H_QuasigrazerEgg_Grassland",
@@ -1377,10 +1378,41 @@
             "Type": "Misc.Harvestable",
             "Name": "Grassland Quasi Grazer Egg",
             "Description": "A gourmet egg that is renowned for its complex flavor, it is always in demand from restauranteurs and gourmands alike. The flavor of the egg can vary depending on diet and environment. After the eggs are laid, their shells chemically bond to specialized pouches located on the Quasi grazer's belly, where they are carried until they hatch.",
+            "DescriptionText": "A gourmet egg that is renowned for its complex flavor, it is always in demand from restauranteurs and gourmands alike. The flavor of the egg can vary depending on diet and environment. After the eggs are laid, their shells chemically bond to specialized pouches located on the Quasi grazer's belly, where they are carried until they hatch.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "48bf58e1-8cba-469b-92ae-09dbc0acc645",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

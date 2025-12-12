@@ -1402,6 +1402,7 @@
         "grade": 1,
         "name": "Fluorine",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "abcc1be0-5507-4a1e-938b-63fea40e7f52",
@@ -1414,6 +1415,12 @@
             "Type": "Cargo.Small",
             "Name": "Fluorine",
             "Description": "A toxic and highly reactive gas that appears pale yellow in its natural state. Very easily forms compounds with almost all other elements.",
+            "DescriptionText": "A toxic and highly reactive gas that appears pale yellow in its natural state. Very easily forms compounds with almost all other elements.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1423,7 +1430,31 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 5
+                "Health": 5,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "0e49f648-a7d0-4e5c-80e6-9636bd9a8ed6",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

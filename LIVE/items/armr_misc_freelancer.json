@@ -235,6 +235,7 @@
         "grade": 1,
         "name": "Freelancer Ship Armor",
         "tags": "MISC_Freelancer_Base",
+        "required_tags": "",
         "manufacturer": "MIS",
         "classification": "Ship.Armor.Medium",
         "stdItem": {
@@ -248,9 +249,11 @@
             "Type": "Armor.Medium",
             "Name": "Freelancer Ship Armor",
             "Description": "Freelancer Ship Armor",
+            "DescriptionText": "Freelancer Ship Armor",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "MISC_Freelancer_Base"
@@ -271,7 +274,9 @@
                 }
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 0,
+                "Repairable": 0
             }
         }
     }

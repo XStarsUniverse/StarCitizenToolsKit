@@ -2138,6 +2138,7 @@
         "grade": 1,
         "name": "Scorpius Standard Flight Blade",
         "tags": "RSI_Scorpius_Base_Blade",
+        "required_tags": "RSI_Scorpius_Base_Blade",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "cdec504b-22e9-4193-9e90-764204cd23c9",
@@ -2150,9 +2151,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Scorpius Standard Flight Blade",
             "Description": "Manufacturer: Roberts Space Industries\\nType: Flight Blade\\n\\nThis is the standard issue flight blade for the RSI Scorpius.",
+            "DescriptionData": {
+                "Manufacturer": "Roberts Space Industries",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "This is the standard issue flight blade for the RSI Scorpius.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "RSI_Scorpius_Base_Blade"
@@ -2195,6 +2202,43 @@
                     "CapacitorRegenDelayAfterUse": 0.6,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist",
+                "Transformdeploy",
+                "Transformretract",
+                "Transformcycle"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

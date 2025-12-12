@@ -1968,6 +1968,7 @@
         "grade": 1,
         "name": "Cordimon Jacket Blue",
         "tags": "scu_jacket set_03 Color_07",
+        "required_tags": "",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1981,9 +1982,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Cordimon Jacket Blue",
             "Description": "Carrying Capacity: 3K \u00b5SCU\\n\\nStegman's classic worker's jacket has been a staple of job sites for over seventy years. This duotone pattern is cut from the toughest material meaning you can wear it anywhere, anytime. It may not be armor, but it damn sure feels like it.",
+            "DescriptionData": {
+                "Carrying Capacity": "3K \u00b5SCU"
+            },
+            "DescriptionText": "Stegman's classic worker's jacket has been a staple of job sites for over seventy years. This duotone pattern is cut from the toughest material meaning you can wear it anywhere, anytime. It may not be armor, but it damn sure feels like it.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_jacket",
@@ -1994,11 +2000,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2008,6 +2021,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.003,
                 "unit": 6,
@@ -2023,6 +2045,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

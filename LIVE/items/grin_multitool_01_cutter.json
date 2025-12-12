@@ -1713,6 +1713,7 @@
         "grade": 1,
         "name": "OxyTorch Cutter Attachment",
         "tags": "grin_multitool_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.WeaponAttachment.Utility",
         "stdItem": {
@@ -1726,9 +1727,16 @@
             "Type": "WeaponAttachment.Utility",
             "Name": "OxyTorch Cutter Attachment",
             "Description": "MUST BUY BASE MULTI-TOOL TO USE: \"Pyro RYT Multi-Tool\"\\n\\nManufacturer: Greycat Industrial\\nItem Type: Multi-Tool Attachment\\nClass: Cutter\\n\\nTransform Greycat's Pyro RYT Multi-Tool into a precision cutter with the OxyTorch attachment. Built to quickly and easily slice through appropriate materials, the OxyTorch harnesses the power of the multi-tool to deliver accurate cuts with clean edges, making it a convenient attachment ideal for both professionals and hobbyists.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Multi-Tool Attachment",
+                "Class": "Cutter"
+            },
+            "DescriptionText": "Transform Greycat's Pyro RYT Multi-Tool into a precision cutter with the OxyTorch attachment. Built to quickly and easily slice through appropriate materials, the OxyTorch harnesses the power of the multi-tool to deliver accurate cuts with clean edges, making it a convenient attachment ideal for both professionals and hobbyists.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_multitool_01"
@@ -1737,7 +1745,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

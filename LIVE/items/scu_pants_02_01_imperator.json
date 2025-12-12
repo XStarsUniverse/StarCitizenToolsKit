@@ -2024,6 +2024,7 @@
         "grade": 1,
         "name": "Edgewear Pants \"Pathfinder\"",
         "tags": "scu_pants Set_02 Color_01",
+        "required_tags": "",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2037,9 +2038,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Edgewear Pants \"Pathfinder\"",
             "Description": "Carrying Capacity: 4K \u00b5SCU\\n\\nA reinforced nylon weave and temperature-rated quilted technology make Edgewear pants ideal for any jobsite. This staple of Stegman's line of utility clothes comes with double knees, reinforced joint pads, and extra pockets. The exclusive Pathfinder edition comes in purple with black and silver accents.",
+            "DescriptionData": {
+                "Carrying Capacity": "4K \u00b5SCU"
+            },
+            "DescriptionText": "A reinforced nylon weave and temperature-rated quilted technology make Edgewear pants ideal for any jobsite. This staple of Stegman's line of utility clothes comes with double knees, reinforced joint pads, and extra pockets. The exclusive Pathfinder edition comes in purple with black and silver accents.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_pants",
@@ -2050,19 +2056,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2072,7 +2090,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2082,6 +2108,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.004,
                 "unit": 6,
@@ -2097,6 +2132,10 @@
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 31
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

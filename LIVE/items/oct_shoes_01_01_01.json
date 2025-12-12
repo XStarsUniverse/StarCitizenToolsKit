@@ -1876,6 +1876,7 @@
         "grade": 1,
         "name": "Treadlight Shoes",
         "tags": "oct_shoes Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "OCT",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1889,9 +1890,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Treadlight Shoes",
             "Description": "Make business casual with Octagon's elite Treadlight line of shoes. Elegant but unassuming for the truly independent operator, the Treadlight's premium construction looks as at home in the boardroom as it does at the spaceport. Extremely durable rubber-mesh soles and an easy-to-clean artificial leather exterior allow for extended use without the usual wear and tear.",
+            "DescriptionText": "Make business casual with Octagon's elite Treadlight line of shoes. Elegant but unassuming for the truly independent operator, the Treadlight's premium construction looks as at home in the boardroom as it does at the spaceport. Extremely durable rubber-mesh soles and an easy-to-clean artificial leather exterior allow for extended use without the usual wear and tear.",
             "Manufacturer": {
                 "Code": "OCT",
-                "Name": "Octagon"
+                "Name": "Octagon",
+                "UUID": "4a05001d-0511-415f-8e32-618fbd75242b"
             },
             "Tags": [
                 "oct_shoes",
@@ -1902,11 +1905,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1916,9 +1926,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 25
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

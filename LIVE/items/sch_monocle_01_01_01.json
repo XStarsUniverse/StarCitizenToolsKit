@@ -1351,6 +1351,7 @@
         "grade": 1,
         "name": "Jacopo Monocle",
         "tags": "",
+        "required_tags": "Protos",
         "stdItem": {
             "UUID": "f9c45e20-1522-4f87-9f9c-932d089514e0",
             "ClassName": "sch_monocle_01_01_01",
@@ -1362,11 +1363,26 @@
             "Type": "Char_Accessory_Eyes.UNDEFINED",
             "Name": "Jacopo Monocle",
             "Description": "As part of their Dafne collection, Derion is proud to present the Jacopo monocle. This diamond-laminate accessory features a tungsten chain and features the latest upgradable optiVis interface for unmatched comfort.",
+            "DescriptionText": "As part of their Dafne collection, Derion is proud to present the Jacopo monocle. This diamond-laminate accessory features a tungsten chain and features the latest upgradable optiVis interface for unmatched comfort.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Inspect"
+            ]
         }
     }
 }

@@ -1891,6 +1891,7 @@
         "grade": 1,
         "name": "Yubarev Pistol Battery (10 cap)",
         "tags": "lbco_pistol_energy_01",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1904,9 +1905,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Yubarev Pistol Battery (10 cap)",
             "Description": "Item Type: Battery\\nCapacity: 10\\n\\nThis battery for the Yubarev Pistol holds enough electron energy for 10 shots.",
+            "DescriptionData": {
+                "Item Type": "Battery",
+                "Capacity": "10"
+            },
+            "DescriptionText": "This battery for the Yubarev Pistol holds enough electron energy for 10 shots.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "98bb2e9e-fcc7-46e5-9ba6-d34c42c414e0"
             },
             "Tags": [
                 "lbco_pistol_energy_01"
@@ -1965,7 +1972,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

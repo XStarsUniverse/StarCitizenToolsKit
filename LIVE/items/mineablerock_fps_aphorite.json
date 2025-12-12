@@ -1640,6 +1640,7 @@
         "grade": 1,
         "name": "Aphorite",
         "tags": "Mineral",
+        "required_tags": "",
         "stdItem": {
             "UUID": "ac63f486-e582-473c-b08b-57e446092af0",
             "ClassName": "MineableRock_FPS_Aphorite",
@@ -1651,6 +1652,12 @@
             "Type": "Misc.Mineable",
             "Name": "Aphorite",
             "Description": "Decorative jewel crystal prized for its multi-hued tones.",
+            "DescriptionText": "Decorative jewel crystal prized for its multi-hued tones.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Mineral"
             ],
@@ -1658,6 +1665,31 @@
                 "Width": 0.25,
                 "Length": 0.25,
                 "Height": 0.25
+            },
+            "Interactions": [
+                "Store",
+                "Offhandstore",
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "9b47bacf-8efa-42e2-8d84-dee64983a00a",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

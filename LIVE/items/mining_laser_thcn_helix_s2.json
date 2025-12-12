@@ -2747,6 +2747,7 @@
         "grade": 1,
         "name": "Helix II Mining Laser",
         "tags": "flightReady weaponMountUsable miningMount",
+        "required_tags": "miningMount",
         "manufacturer": "THCN",
         "classification": "Ship.Mining.Gun",
         "stdItem": {
@@ -2760,9 +2761,23 @@
             "Type": "WeaponMining.Gun",
             "Name": "Helix II Mining Laser",
             "Description": "Manufacturer: Thermyte Concern\\nItem Type: Mining Laser \\nSize: 2\\n\\nOptimal Range: 30m\\nMaximum Range: 90m\\n\\nMining Laser Power: 1020 - 4080\\nExtraction Laser Power: 2590\\n\\nModule Slots: 3\\n\\nResistance: -30%\\nInert Material Level: -40%\\n\\nOptimal Charge Window Size: -40%\\n\\nTo some, the effective use of the Helix II has become a sign of a true mining professional. Thermyte Concern gave the laser impressive power that can bypass a deposit's resistance but also requires precision handling to hit the optimal charge window. Best deployed at close range, Helix II features three module slots so miners can tailor the laser to their liking.",
+            "DescriptionData": {
+                "Manufacturer": "Thermyte Concern",
+                "Item Type": "Mining Laser",
+                "Size": "2",
+                "Optimal Range": "30m",
+                "Maximum Range": "90m",
+                "Mining Laser Power": "1020 - 4080",
+                "Extraction Laser Power": "2590",
+                "Module Slots": "3",
+                "Resistance": "-30%",
+                "Optimal Charge Window Size": "-40%"
+            },
+            "DescriptionText": "To some, the effective use of the Helix II has become a sign of a true mining professional. Thermyte Concern gave the laser impressive power that can bypass a deposit's resistance but also requires precision handling to hit the optimal charge window. Best deployed at close range, Helix II features three module slots so miners can tailor the laser to their liking.",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "flightReady",
@@ -2773,6 +2788,8 @@
                 {
                     "PortName": "BONE_ItemPort_Consumable_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable1"
@@ -2781,13 +2798,23 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "BONE_ItemPort_Consumable_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable2"
@@ -2796,13 +2823,23 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "BONE_ItemPort_Consumable_3",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable3"
@@ -2811,15 +2848,33 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2829,8 +2884,37 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

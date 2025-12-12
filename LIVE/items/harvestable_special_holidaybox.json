@@ -1481,6 +1481,7 @@
         "grade": 1,
         "name": "Luminalia Gift",
         "tags": "HolidayBox",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d8b59f64-677d-48f6-945b-d770f82f4d8d",
             "ClassName": "Harvestable_Special_HolidayBox",
@@ -1492,6 +1493,12 @@
             "Type": "Misc.Harvestable",
             "Name": "Luminalia Gift",
             "Description": "A small, wrapped package meant to get you in the Luminalia spirit. Banu merchants celebrating the holiday used to hide small gifts aboard their ship to encourage revelers to explore all their wares. As the holiday grew in popularity within the UEE, Human merchants modified this tradition by hiding empty gift-wrapped packages around a space station or landing zone that could be exchanged for credits if returned unopened. The increased foot traffic into their stores spurned holiday sales and became a tradition in its own right. \\n\\nStow this gift for sentimental value, or sell it at a commodities terminal and spend the credits on a holiday gift for yourself.",
+            "DescriptionText": "A small, wrapped package meant to get you in the Luminalia spirit. Banu merchants celebrating the holiday used to hide small gifts aboard their ship to encourage revelers to explore all their wares. As the holiday grew in popularity within the UEE, Human merchants modified this tradition by hiding empty gift-wrapped packages around a space station or landing zone that could be exchanged for credits if returned unopened. The increased foot traffic into their stores spurned holiday sales and became a tradition in its own right. \n\nStow this gift for sentimental value, or sell it at a commodities terminal and spend the credits on a holiday gift for yourself.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "HolidayBox"
             ],
@@ -1501,7 +1508,34 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "167d6564-7325-49de-bc0a-406dbb54f5dc",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

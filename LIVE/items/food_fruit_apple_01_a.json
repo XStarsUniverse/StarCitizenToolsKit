@@ -1630,6 +1630,7 @@
         "grade": 1,
         "name": "Vermillion Apple",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "96c4cbe8-61a1-4de3-b624-453bfd576bdd",
@@ -1642,9 +1643,16 @@
             "Type": "Food.Plant",
             "Name": "Vermillion Apple",
             "Description": "NDR: 18\\nHEI: 06\\nEffects: Hydrating\\n\\nThis crisp and sweet apple can be stored for long periods of time without significant loss in quality, texture, or taste.",
+            "DescriptionData": {
+                "NDR": "18",
+                "HEI": "06",
+                "Effects": "Hydrating"
+            },
+            "DescriptionText": "This crisp and sweet apple can be stored for long periods of time without significant loss in quality, texture, or taste.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1652,12 +1660,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "18",
+                "HydrationEfficacyIndex": "06",
+                "Effects": [
+                    "Hydrating"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -11536,6 +11536,7 @@
         "grade": 1,
         "name": "Pyro RYT \"ArcCorp\" Multi-Tool",
         "tags": "stocked multitool SM_RestrictedWep",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.Weapon.Gadget",
         "stdItem": {
@@ -11549,9 +11550,18 @@
             "Type": "WeaponPersonal.Gadget",
             "Name": "Pyro RYT \"ArcCorp\" Multi-Tool",
             "Description": "ATTACHMENTS SOLD SEPARATELY!\\n\\nManufacturer: Greycat Industrial\\nItem Type: Utility\\nClass: Gadget\\n\\nMagazine Size: Integrated Battery\\nRate of Fire: N / A (Beam)\\nEffective Range: 0.5 m\\n\\nThe Pyro from Greycat Industrial is a pistol-sized power tool for the modern space engineer that is capable of charging, cutting and patching; achieving a multitude of uses thanks to its wide assortment of attachments. Perfect for making a tough job a little bit easier. This special edition features ArcCorp branding.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Utility",
+                "Class": "Gadget",
+                "Magazine Size": "Integrated Battery",
+                "Effective Range": "0.5 m"
+            },
+            "DescriptionText": "ATTACHMENTS SOLD SEPARATELY!\n\nThe Pyro from Greycat Industrial is a pistol-sized power tool for the modern space engineer that is capable of charging, cutting and patching; achieving a multitude of uses thanks to its wide assortment of attachments. Perfect for making a tough job a little bit easier. This special edition features ArcCorp branding.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "d8eca6d3-b40c-46c0-953e-ef5840c1fa63"
             },
             "Tags": [
                 "stocked",
@@ -11562,30 +11572,55 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "grin_multitool_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "f1073c2c-900c-4c62-a866-46aa402ee1b2",
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 },
                 {
                     "PortName": "weapon_action_attachment",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Personal"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Personal"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "module_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
@@ -11596,18 +11631,36 @@
                         "grin_multitool_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Utility"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Utility"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "canister_attach",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "multitool_resource"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -11667,14 +11720,21 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.6,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 50,

@@ -1909,6 +1909,7 @@
         "grade": 1,
         "name": "Sawtooth \"Squall\" Combat Knife",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1922,9 +1923,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "Sawtooth \"Squall\" Combat Knife",
             "Description": "Manufacturer: Kastak Arms\\nItem Type: Knife\\nClass: Melee\\n\\nSize: 16 cm\\n\\nDon't end up on the wrong side of the Sawtooth combat knife. The blade embodies Kastak Arms' aggressive styling and was designed to stab, slice, or saw. It features a strong tip for piercing, a straight edge for slicing, and a unique serrated edge with microblades for when you really need to rip through something. The blade is also made with a special ceramic polymer coating that enhances its strength and overall wear resistance. For the special Squall edition, a light blue color was added to the coating to make it even more visually distinct.",
+            "DescriptionData": {
+                "Manufacturer": "Kastak Arms",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "16 cm"
+            },
+            "DescriptionText": "Don't end up on the wrong side of the Sawtooth combat knife. The blade embodies Kastak Arms' aggressive styling and was designed to stab, slice, or saw. It features a strong tip for piercing, a straight edge for slicing, and a unique serrated edge with microblades for when you really need to rip through something. The blade is also made with a special ceramic polymer coating that enhances its strength and overall wear resistance. For the special Squall edition, a light blue color was added to the coating to make it even more visually distinct.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "knife"
@@ -1934,6 +1943,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

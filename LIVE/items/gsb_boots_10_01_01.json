@@ -1821,6 +1821,7 @@
         "grade": 1,
         "name": "Desert Cat Boots",
         "tags": "gsb_boots Set_01 Texture_01 Color_01",
+        "required_tags": "",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
             "UUID": "3928915d-8985-48b9-ab55-43afb14b7075",
@@ -1833,6 +1834,12 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Desert Cat Boots",
             "Description": "When you walk on untamed worlds, dirt is just a part of the job. These Desert Cat Boots are coated with a thin membrane that helps repel grime while allowing heat and sweat to escape.",
+            "DescriptionText": "When you walk on untamed worlds, dirt is just a part of the job. These Desert Cat Boots are coated with a thin membrane that helps repel grime while allowing heat and sweat to escape.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "gsb_boots",
                 "Set_01",
@@ -1843,11 +1850,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1857,9 +1871,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -15,
                 "Maximum": 60
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

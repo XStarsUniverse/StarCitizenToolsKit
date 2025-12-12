@@ -1613,6 +1613,7 @@
         "grade": 1,
         "name": "PT2 (2x Holographic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1626,15 +1627,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "PT2 (2x Holographic)",
             "Description": "Manufacturer: Behring\\nType: Projection  \\nAttachment Point: Optic\\nMagnification: 2x\\nZoom: 2x-2.5x\\nAim Time: +15%\\nSize: 1\\n\\n\\nImprove your combat accuracy with this 2x magnifying sight from Behring. Built with meticulous care and craftsmanship, the PT2 has become an essential optic for everyone from sport shooters to law enforcement professionals.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Type": "Projection",
+                "Attachment Point": "Optic",
+                "Magnification": "2x",
+                "Size": "1"
+            },
+            "DescriptionText": "Improve your combat accuracy with this 2x magnifying sight from Behring. Built with meticulous care and craftsmanship, the PT2 has become an essential optic for everyone from sport shooters to law enforcement professionals.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

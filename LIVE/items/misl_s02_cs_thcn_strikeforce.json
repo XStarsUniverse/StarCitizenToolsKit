@@ -993,6 +993,7 @@
         "grade": 1,
         "name": "StrikeForce II Missile",
         "tags": "THCN CS flightReady",
+        "required_tags": "",
         "manufacturer": "THCN",
         "classification": "Ship.Missile.Missile",
         "stdItem": {
@@ -1006,9 +1007,16 @@
             "Type": "Missile.Missile",
             "Name": "StrikeForce II Missile",
             "Description": "Manufacturer: Thermyte Concern\\nTracking Signal: Cross Section\\nSize: 2\\n\\nThe StrikeForce is the latest culmination of Thermyte Concern's expansion into the missile industry, showcasing notable design and cross-section targeting improvements.",
+            "DescriptionData": {
+                "Manufacturer": "Thermyte Concern",
+                "Tracking Signal": "Cross Section",
+                "Size": "2"
+            },
+            "DescriptionText": "The StrikeForce is the latest culmination of Thermyte Concern's expansion into the missile industry, showcasing notable design and cross-section targeting improvements.",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "THCN",
@@ -1020,8 +1028,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 25
+                "Health": 25,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

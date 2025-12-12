@@ -1925,6 +1925,7 @@
         "grade": 1,
         "name": "ORC-mkX Arms (XenoThreat v2)",
         "tags": "Xenothreat Marine_Medium Set_04 Color_01",
+        "required_tags": "",
         "manufacturer": "CDS",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1938,9 +1939,18 @@
             "Type": "Char_Armor_Arms.Medium",
             "Name": "ORC-mkX Arms (XenoThreat v2)",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -61 / 91 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nThis version of CDS' ORC-mkX combat armor has been modified from its original form. The mark X is the latest in CDS\u2019 award-winning Omni-Role Combat armor series. This EVA-rated suit features new EdgeCore composite weave technology, maximizing protection against projectiles, explosives and the elements while minimizing operator agility.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-61 / 91 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "This version of CDS' ORC-mkX combat armor has been modified from its original form. The mark X is the latest in CDS' award-winning Omni-Role Combat armor series. This EVA-rated suit features new EdgeCore composite weave technology, maximizing protection against projectiles, explosives and the elements while minimizing operator agility.",
             "Manufacturer": {
                 "Code": "CDS",
-                "Name": "Clark Defense Systems"
+                "Name": "Clark Defense Systems",
+                "UUID": "8a7bd715-5b97-404f-b02e-0d0cc593f608"
             },
             "Tags": [
                 "Xenothreat",
@@ -1953,15 +1963,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 5
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -61,
                 "Maximum": 91
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

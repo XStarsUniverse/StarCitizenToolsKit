@@ -1916,6 +1916,7 @@
         "grade": 1,
         "name": "Microid Battle Suit Arms Badland",
         "tags": "Sand_Nomad Set_01 Texture_03 Color_01 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1929,9 +1930,18 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "Microid Battle Suit Arms Badland",
             "Description": "Item Type: Light Armor\\nDamage Reduction: 20%\\nTemp. Rating: -33 / 63 \u00b0C\\nRadiation Protection: 26000 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nWho'd have thought a suit of armor could be affordable and effective? Kastak Arms' Microid Battle Suit is a perfect entry-level armor set. Ceramic plates protect vital areas while a microweave covers the rest, allowing you to stay light, mobile and protected.",
+            "DescriptionData": {
+                "Item Type": "Light Armor",
+                "Damage Reduction": "20%",
+                "Temp. Rating": "-33 / 63 \u00b0C",
+                "Radiation Protection": "26000 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Who'd have thought a suit of armor could be affordable and effective? Kastak Arms' Microid Battle Suit is a perfect entry-level armor set. Ceramic plates protect vital areas while a microweave covers the rest, allowing you to stay light, mobile and protected.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "Sand_Nomad",
@@ -1945,15 +1955,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -33,
                 "Maximum": 63
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

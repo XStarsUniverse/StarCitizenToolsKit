@@ -1864,6 +1864,7 @@
         "grade": 1,
         "name": "Barrymore Pumps",
         "tags": "dyl_shoes Set_02 Color_01",
+        "required_tags": "",
         "manufacturer": "DYL",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1877,9 +1878,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Barrymore Pumps",
             "Description": "The Barrymore pumps are part of the Dyna Lei essentials collection. The shoes feature classic yet subtle curves and supportive insoles for an ultra-comfortable fit ideal for all day wear.\\n\\nMen sizes are currently unavailable.",
+            "DescriptionText": "The Barrymore pumps are part of the Dyna Lei essentials collection. The shoes feature classic yet subtle curves and supportive insoles for an ultra-comfortable fit ideal for all day wear.\n\nMen sizes are currently unavailable.",
             "Manufacturer": {
                 "Code": "DYL",
-                "Name": "Dyna Lei"
+                "Name": "Dyna Lei",
+                "UUID": "92b20988-dbf3-4e95-b4a9-7e5e22112516"
             },
             "Tags": [
                 "dyl_shoes",
@@ -1890,11 +1893,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1904,9 +1914,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

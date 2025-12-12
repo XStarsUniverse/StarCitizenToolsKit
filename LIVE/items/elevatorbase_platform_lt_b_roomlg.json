@@ -512,6 +512,7 @@
         "grade": 1,
         "name": "Elevator Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "95fdaf3e-ad7a-4ba4-9b3e-21fc229b5d11",
             "ClassName": "ElevatorBase_Platform_Lt_B_Roomlg",
@@ -523,6 +524,18 @@
             "Type": "Elevator.UNDEFINED",
             "Name": "Elevator Control",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Openinnerdoor",
+                "Closealldoors",
+                "Openinnerdoorfinished",
+                "Closeinnerdoorfinished"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,

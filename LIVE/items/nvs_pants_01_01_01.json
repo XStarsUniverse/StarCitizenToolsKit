@@ -1996,6 +1996,7 @@
         "grade": 1,
         "name": "Second Tevarin War Service Trousers",
         "tags": "nvs_pants Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "NVS",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2009,9 +2010,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Second Tevarin War Service Trousers",
             "Description": "Carrying Capacity: 0.5K \u00b5SCU\\n\\nHonor the heroes that served in the Second Tevarin War by wearing a replica Navy uniform. Historically accurate down to every last stitch, period appropriate materials were used to make these uniforms match military specifications of the era. The Service Trousers are blue with red piping and worn with the matching jacket.",
+            "DescriptionData": {
+                "Carrying Capacity": "0.5K \u00b5SCU"
+            },
+            "DescriptionText": "Honor the heroes that served in the Second Tevarin War by wearing a replica Navy uniform. Historically accurate down to every last stitch, period appropriate materials were used to make these uniforms match military specifications of the era. The Service Trousers are blue with red piping and worn with the matching jacket.",
             "Manufacturer": {
                 "Code": "NVS",
-                "Name": "Navy Surplus"
+                "Name": "Navy Surplus",
+                "UUID": "f8efa046-7f79-4e09-b2fc-35d0df2429cf"
             },
             "Tags": [
                 "nvs_pants",
@@ -2022,19 +2028,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2044,7 +2062,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2054,6 +2080,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0005,
                 "unit": 6,
@@ -2069,6 +2104,10 @@
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

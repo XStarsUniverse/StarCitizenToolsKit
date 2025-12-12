@@ -853,6 +853,7 @@
         "grade": 1,
         "name": "Greycat ROC-DS Ore Pod",
         "tags": "GRIN_ROC_DS",
+        "required_tags": "GRIN_ROC_DS",
         "manufacturer": "GRIN",
         "classification": "Ship.Container.Cargo",
         "stdItem": {
@@ -866,9 +867,14 @@
             "Type": "Container.Cargo",
             "Name": "Greycat ROC-DS Ore Pod",
             "Description": "Capacity: 3.4 SCU\\n\\nProduced by Greycat for their ROC-DS mining vehicle, this ore pod features tough construction able to withstand the rigors of the job.",
+            "DescriptionData": {
+                "Capacity": "3.4 SCU"
+            },
+            "DescriptionText": "Produced by Greycat for their ROC-DS mining vehicle, this ore pod features tough construction able to withstand the rigors of the job.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "GRIN_ROC_DS"
@@ -879,8 +885,16 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 3000
+                "Health": 3000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
+            "Interactions": [
+                "Ejectcargo",
+                "Openinventory",
+                "Recv_openmech",
+                "Recv_closemech"
+            ],
             "InventoryContainer": {
                 "SCU": 3.4,
                 "unit": 2,
@@ -892,6 +906,26 @@
                 "isExternalContainer": false,
                 "isClosedContainer": true,
                 "uuid": "c766ff12-e7d0-4fbf-ab68-87c074b7601e"
+            },
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 3.4,
+                    "UnitName": "SCU",
+                    "SCU": 3.4
+                },
+                "InclusiveResources": [
+                    "b8029480-f171-4a88-a44d-4323e021f82a",
+                    "d137b905-b3bc-4721-a790-830499263c0c",
+                    "d9653427-af7f-4fea-bbd6-ae89393524b7"
+                ],
+                "InclusiveGroups": [
+                    "81637dc5-e451-4e67-beb6-88d3c5db94e0",
+                    "36623177-cbc4-48a2-b95e-f893a861ca42"
+                ]
             }
         }
     }

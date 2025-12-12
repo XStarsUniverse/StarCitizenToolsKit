@@ -869,6 +869,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "87a9dc2b-c52b-4ac3-8a6a-976c71877494",
@@ -881,9 +882,22 @@
             "Type": "Cargo.Small",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
-            "Durability": {
-                "Health": 500
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
             },
+            "Durability": {
+                "Health": 500,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Pickup",
+                "Place",
+                "Drop"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 9,

@@ -1874,6 +1874,7 @@
         "grade": 1,
         "name": "Atavi Shirt White Gold",
         "tags": "mym_shirt Set_02 Color_10",
+        "required_tags": "",
         "manufacturer": "MYM",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1887,9 +1888,11 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "Atavi Shirt White Gold",
             "Description": "MuyMuy's Atavi line of casual shirts are comfortable enough to wear at home, but stylish enough for a night out. They are made with EasyCare technology to maintain the colors during repeated washes.",
+            "DescriptionText": "MuyMuy's Atavi line of casual shirts are comfortable enough to wear at home, but stylish enough for a night out. They are made with EasyCare technology to maintain the colors during repeated washes.",
             "Manufacturer": {
                 "Code": "MYM",
-                "Name": "MYM"
+                "Name": "MYM",
+                "UUID": "cc1731c4-8156-4750-a138-96838df79117"
             },
             "Tags": [
                 "mym_shirt",
@@ -1900,11 +1903,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1914,9 +1924,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

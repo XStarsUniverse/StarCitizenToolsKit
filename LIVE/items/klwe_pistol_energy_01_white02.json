@@ -9300,6 +9300,7 @@
         "grade": 1,
         "name": "Arclight \"Boneyard\" Pistol",
         "tags": "pistol",
+        "required_tags": "",
         "manufacturer": "KLA",
         "classification": "FPS.Weapon.Small",
         "stdItem": {
@@ -9313,9 +9314,20 @@
             "Type": "WeaponPersonal.Small",
             "Name": "Arclight \"Boneyard\" Pistol",
             "Description": "Manufacturer: Klaus & Werner\\nItem Type: Pistol\\nClass: Energy (Laser)\\n\\nBattery Size: 30\\nRate Of Fire: 300 rpm\\nEffective Range: 30 m\\n\\nAttachments: Optics (S1), Barrel (S1), Underbarrel (S1)\\n\\nA handheld laser made famous as Kyle Fenris\u2019 sidearm on the hit vid show The Frontier, the Klaus & Werner Model II Arclight has become extremely popular on the civilian market. Despite its media appeal, the Model II offers a higher rate of fire than any of its ballistic counterparts. While that may diminish the weapon's stopping power, its power cell offers more than enough shots to finish the job.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Item Type": "Pistol",
+                "Class": "Energy (Laser)",
+                "Size": "30",
+                "Rate Of Fire": "300 rpm",
+                "Effective Range": "30 m",
+                "Attachments": "Optics (S1), Barrel (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "A handheld laser made famous as Kyle Fenris' sidearm on the hit vid show The Frontier, the Klaus & Werner Model II Arclight has become extremely popular on the civilian market. Despite its media appeal, the Model II offers a higher rate of fire than any of its ballistic counterparts. While that may diminish the weapon's stopping power, its power cell offers more than enough shots to finish the job.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "pistol"
@@ -9324,28 +9336,51 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "klwe_pistol_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "e15e874d-a0c1-4f91-939b-b04bf7a9e839",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory",
                         "energy_barrel"
@@ -9355,24 +9390,44 @@
                         "energy_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9431,14 +9486,21 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.6,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

@@ -1635,6 +1635,7 @@
         "grade": 1,
         "name": "ReadyMeal (Chicken Dinner)",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "be45144f-da39-4897-a695-7a7a7712fb6b",
             "ClassName": "Food_sachet_uee_01_a",
@@ -1646,18 +1647,42 @@
             "Type": "Food.Sachet",
             "Name": "ReadyMeal (Chicken Dinner)",
             "Description": "NDR: 60\\nEffects: None\\n\\nThe classic taste that's all you need, this Chicken Dinner from ReadyMeal features roast-flavor chicken paired with ferns and cassava mash all ready-to-eat in seconds.",
+            "DescriptionData": {
+                "NDR": "60",
+                "Effects": "None"
+            },
+            "DescriptionText": "The classic taste that's all you need, this Chicken Dinner from ReadyMeal features roast-flavor chicken paired with ferns and cassava mash all ready-to-eat in seconds.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "sachet"
-            }
+                "NutritionalDensityRating": "60",
+                "Effects": [
+                    "None"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "sachet",
+                "ContainerTypeTag": "sachet",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

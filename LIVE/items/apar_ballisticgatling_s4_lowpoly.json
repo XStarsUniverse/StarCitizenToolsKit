@@ -2675,6 +2675,7 @@
         "grade": 1,
         "name": "Revenant Gatling",
         "tags": "APAR BallisticGatling flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "APAR",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2688,9 +2689,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Revenant Gatling",
             "Description": "Manufacturer: Apocalypse Arms\\nItem Type: Ballistic Gatling\\nSize: 4\\n\\nIf it ain\u2019t broke, don\u2019t fix it. And if you want it broke, aim a Revenant at it. Solidly built on a foundation of centuries-old tech, Apocalypse Arms puts an innovative spin on battle-tested designs to create a rugged ballistic Gatling that can steadily hurtle death across the void. Though it\u2019s slow to spin up and cool down, the Revenant\u2019s dependability makes it a favorite for those expecting to find trouble.",
+            "DescriptionData": {
+                "Manufacturer": "Apocalypse Arms",
+                "Item Type": "Ballistic Gatling",
+                "Size": "4"
+            },
+            "DescriptionText": "If it ain't broke, don't fix it. And if you want it broke, aim a Revenant at it. Solidly built on a foundation of centuries-old tech, Apocalypse Arms puts an innovative spin on battle-tested designs to create a rugged ballistic Gatling that can steadily hurtle death across the void. Though it's slow to spin up and cool down, the Revenant's dependability makes it a favorite for those expecting to find trouble.",
             "Manufacturer": {
                 "Code": "APAR",
-                "Name": "Apocalypse Arms"
+                "Name": "Apocalypse Arms",
+                "UUID": "77f7999a-b23b-4812-94c2-09b5e15e1b0e"
             },
             "Tags": [
                 "APAR",
@@ -2702,32 +2710,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2753,8 +2801,37 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1650
+                "Health": 1650,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

@@ -855,6 +855,7 @@
         "grade": 1,
         "name": "Personal Storage",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "d658f2ad-9527-4c2e-9ebe-43973f028efe",
@@ -867,9 +868,26 @@
             "Type": "Cargo.UNDEFINED",
             "Name": "Personal Storage",
             "Description": "",
-            "Durability": {
-                "Health": 1000
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
             },
+            "Durability": {
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Openinventoryui",
+                "Close",
+                "Accesscargogrid",
+                "Open",
+                "Lock",
+                "Unlock",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "unit": 0,
                 "unitName": "SCU",

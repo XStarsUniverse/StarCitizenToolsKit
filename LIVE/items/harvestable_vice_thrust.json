@@ -1503,6 +1503,7 @@
         "grade": 1,
         "name": "Thrust",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "45ea9ad6-79d4-4088-806d-963c261f5ebe",
             "ClassName": "Harvestable_Vice_Thrust",
@@ -1514,13 +1515,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Thrust",
             "Description": "This cocktail of chemicals provides the user with a massive boost of energy, increased sociability, euphoria, and heightened tactile sensitivity. Rumored to have been developed as an energy drink base, this drug has proven popular among those wishing for extra energy or to \"party longer.\" However, owing to the risk of heart attack, deadly dehydration, and seizures, the mix has been banned in most areas. Users can be identified by their stuttering, rambling speech, flushed skin, and sweating.",
+            "DescriptionText": "This cocktail of chemicals provides the user with a massive boost of energy, increased sociability, euphoria, and heightened tactile sensitivity. Rumored to have been developed as an energy drink base, this drug has proven popular among those wishing for extra energy or to \"party longer.\" However, owing to the risk of heart attack, deadly dehydration, and seizures, the mix has been banned in most areas. Users can be identified by their stuttering, rambling speech, flushed skin, and sweating.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 750,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.00075
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "4b904eb5-7e6b-4c18-914e-7735a4e8ed67",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

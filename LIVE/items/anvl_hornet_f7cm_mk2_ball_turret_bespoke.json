@@ -7916,6 +7916,7 @@
         "grade": 1,
         "name": "TMSB-5 Ball Turret",
         "tags": "flightReady $ANVL_Hornet_Mk2_Center",
+        "required_tags": "ANVL_Hornet_Mk2_Center",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "4b2e4ce4-ac79-4923-bfdd-ccce02129b27",
@@ -7928,9 +7929,16 @@
             "Type": "Turret.BallTurret",
             "Name": "TMSB-5 Ball Turret",
             "Description": "Manufacturer: Behring\\nItem Type: Ball Turret\\nSize: 5\\n\\nDesigned in conjunction with Anvil Aerospace for use on the F7C Hornet Mk II, this turret featuring a fully integrated gimbal mount to allow for adaptive targeting and is fitted with bespoke twin ballistic gatling guns.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Ball Turret",
+                "Size": "5"
+            },
+            "DescriptionText": "Designed in conjunction with Anvil Aerospace for use on the F7C Hornet Mk II, this turret featuring a fully integrated gimbal mount to allow for adaptive targeting and is fitted with bespoke twin ballistic gatling guns.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "flightReady",
@@ -7940,6 +7948,8 @@
                 {
                     "PortName": "hardpoint_weapon_left",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Flags": [
                         "turret",
                         "left"
@@ -7951,14 +7961,30 @@
                         "ANVL_BallisticGatling_Bespoke"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_weapon_right",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Flags": [
                         "turret",
                         "right"
@@ -7970,8 +7996,22 @@
                         "ANVL_BallisticGatling_Bespoke"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -7997,8 +8037,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1500
+                "Health": 1500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -8021,6 +8072,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,
@@ -8035,6 +8090,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 40,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

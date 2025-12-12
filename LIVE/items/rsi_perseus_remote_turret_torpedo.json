@@ -630,6 +630,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady RSI_Perseus",
+        "required_tags": "RSI_Perseus",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "dbd219ff-eca1-4e6b-8426-783f119e102a",
@@ -642,9 +643,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady",
@@ -671,6 +674,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

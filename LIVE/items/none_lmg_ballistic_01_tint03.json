@@ -8588,6 +8588,7 @@
         "grade": 1,
         "name": "Pulverizer \"Bleach\" LMG",
         "tags": "stocked lmg none_lmg_ballistic_01",
+        "required_tags": "",
         "manufacturer": "UNKN",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -8601,9 +8602,19 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Pulverizer \"Bleach\" LMG",
             "Description": "Manufacturer: Unknown\\nItem Type: LMG\\nClass: Ballistic\\n\\nMagazine Size: 120\\nRate Of Fire: 355 rpm\\nEffective Range: 100 m\\n\\nNothing like ripping through a huge mag of 50 cal bullets to scare away unwanted guests. Based on a modified FS9, the Pulverizer LMG wastes no time with pleasantries, instead lends itself to a more direct confrontational approach. \\n\\nThe Bleach version features a white paintjob.",
+            "DescriptionData": {
+                "Manufacturer": "Unknown",
+                "Item Type": "LMG",
+                "Class": "Ballistic",
+                "Magazine Size": "120",
+                "Rate Of Fire": "355 rpm",
+                "Effective Range": "100 m"
+            },
+            "DescriptionText": "Nothing like ripping through a huge mag of 50 cal bullets to scare away unwanted guests. Based on a modified FS9, the Pulverizer LMG wastes no time with pleasantries, instead lends itself to a more direct confrontational approach. \n\nThe Bleach version features a white paintjob.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": [
                 "stocked",
@@ -8614,6 +8625,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "none_lmg_ballistic_01"
                     ],
@@ -8621,24 +8634,45 @@
                         "none_lmg_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "b4df80a2-7aa6-412c-b1ff-67467bcf43ec",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -8697,14 +8731,21 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

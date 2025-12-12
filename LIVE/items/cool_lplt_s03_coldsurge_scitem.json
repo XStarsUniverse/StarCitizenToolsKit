@@ -925,6 +925,7 @@
         "grade": 4,
         "name": "ColdSurge",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "LPLT",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -938,9 +939,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "ColdSurge",
             "Description": "Item Type: Cooler\\nManufacturer: Lighting Power Ltd.\\nSize: 3\\nGrade: D \\nClass: Civilian \\n\\nMake no mistake, the ColdSurge may not win any awards, but this large cooler from Lighting Power Ltd provides a good entry-level option for most civilian ships without breaking the bank.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Lighting Power Ltd.",
+                "Size": "3",
+                "Grade": "D",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Make no mistake, the ColdSurge may not win any awards, but this large cooler from Lighting Power Ltd provides a good entry-level option for most civilian ships without breaking the bank.",
             "Manufacturer": {
                 "Code": "LPLT",
-                "Name": "Lightning Power Ltd."
+                "Name": "Lightning Power Ltd.",
+                "UUID": "60d0f346-0c22-4869-81d3-1168b526a258"
             },
             "Cooler": {
                 "CoolingRate": 7600000,
@@ -952,8 +962,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 980
+                "Health": 980,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 20,
@@ -990,6 +1011,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 10,
                 "DecayRateOfEM": 0.18
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 25.5,
+                                "MinimumFraction": 0.5,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1500,
+                            "IR": 6380
+                        }
+                    }
+                ]
             }
         }
     }

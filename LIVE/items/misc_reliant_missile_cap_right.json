@@ -402,6 +402,7 @@
         "grade": 1,
         "name": "Reliant Missile Launcher Cap",
         "tags": "Reliant_MissileRack",
+        "required_tags": "MISC_Reliant_Base",
         "manufacturer": "MIS",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -415,15 +416,24 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "Reliant Missile Launcher Cap",
             "Description": "Item Type: Missile Launcher Cap\\nManufacturer: MISC\\nSize: 5 \\n\\nBespoke missile launcher cap used by the MISC Reliant.",
+            "DescriptionData": {
+                "Item Type": "Missile Launcher Cap",
+                "Manufacturer": "MISC",
+                "Size": "5"
+            },
+            "DescriptionText": "Bespoke missile launcher cap used by the MISC Reliant.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "Reliant_MissileRack"
             ],
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "MissileRack": {
                 "Count": 6

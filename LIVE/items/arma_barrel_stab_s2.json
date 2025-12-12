@@ -1537,6 +1537,7 @@
         "grade": 1,
         "name": "Emod Stabilizer2",
         "tags": "FPS_Barrel energy_attach",
+        "required_tags": "",
         "manufacturer": "ARMA",
         "classification": "Ship.WeaponAttachment.Barrel",
         "stdItem": {
@@ -1550,9 +1551,17 @@
             "Type": "WeaponAttachment.Barrel",
             "Name": "Emod Stabilizer2",
             "Description": "Manufacturer: ArmaMod\\nType: Energy Stabilizer\\nAttachment Point: Barrel\\nSize: 2\\n\\nReduce energy weapon recoil with the Emod Stabilizer2. ArmaMod designed the attachment to improve both horizontal and vertical recoil to ensure a more precise shot.",
+            "DescriptionData": {
+                "Manufacturer": "ArmaMod",
+                "Type": "Energy Stabilizer",
+                "Attachment Point": "Barrel",
+                "Size": "2"
+            },
+            "DescriptionText": "Reduce energy weapon recoil with the Emod Stabilizer2. ArmaMod designed the attachment to improve both horizontal and vertical recoil to ensure a more precise shot.",
             "Manufacturer": {
                 "Code": "ARMA",
-                "Name": "ArmaMod"
+                "Name": "ArmaMod",
+                "UUID": "f2ca879c-deb6-49bf-a4b1-dc3a9cf91e7a"
             },
             "Tags": [
                 "FPS_Barrel",
@@ -1562,7 +1571,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

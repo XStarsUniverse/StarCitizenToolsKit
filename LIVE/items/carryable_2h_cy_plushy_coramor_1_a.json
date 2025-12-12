@@ -1199,6 +1199,7 @@
         "grade": 1,
         "name": "Red Heart Plushie",
         "tags": "plush",
+        "required_tags": "",
         "manufacturer": "MITE",
         "stdItem": {
             "UUID": "00e0682f-61b2-4aa4-ab79-b17c8e8dd9b0",
@@ -1211,9 +1212,11 @@
             "Type": "Misc.Personal",
             "Name": "Red Heart Plushie",
             "Description": "Huggable, lovable, and thoroughly squashable, this red heart plushie will fill your heart with joy. With a firm but springy filling, this plush cushion consist of a synthetic leather casing dyed with a passionate scarlet coloring.",
+            "DescriptionText": "Huggable, lovable, and thoroughly squashable, this red heart plushie will fill your heart with joy. With a firm but springy filling, this plush cushion consist of a synthetic leather casing dyed with a passionate scarlet coloring.",
             "Manufacturer": {
                 "Code": "MITE",
-                "Name": "Casaba Outlet"
+                "Name": "Casaba Outlet",
+                "UUID": "dcfca4a3-180e-4190-9a7e-820e747e1ad9"
             },
             "Tags": [
                 "plush"
@@ -1222,7 +1225,14 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.65
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Inspect",
+                "Store"
+            ]
         }
     }
 }

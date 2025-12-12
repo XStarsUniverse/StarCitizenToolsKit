@@ -1770,6 +1770,7 @@
         "grade": 1,
         "name": "Ready-Up Helmet Red",
         "tags": "gys_helmet Set_01 Color_02 KeepsShape ",
+        "required_tags": "Protos",
         "manufacturer": "GYS",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1783,9 +1784,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Ready-Up Helmet Red",
             "Description": "The Ready-Up is a dependable, affordable softshell helmet alternative. Built from space-age plastic, the Ready-Up provides a vacuum-ready seal to keep you breathing for longer.",
+            "DescriptionText": "The Ready-Up is a dependable, affordable softshell helmet alternative. Built from space-age plastic, the Ready-Up provides a vacuum-ready seal to keep you breathing for longer.",
             "Manufacturer": {
                 "Code": "GYS",
-                "Name": "Gyson Inc."
+                "Name": "Gyson Inc.",
+                "UUID": "d56a3985-2f29-4095-b2f2-542376cc74f4"
             },
             "Tags": [
                 "gys_helmet",
@@ -1797,11 +1800,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1811,9 +1821,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

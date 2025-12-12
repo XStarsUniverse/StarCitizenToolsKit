@@ -1080,6 +1080,7 @@
         "grade": 4,
         "name": "SecureScreen",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GODI",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1093,17 +1094,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "SecureScreen",
             "Description": "Item Type: Shield Generator\\nManufacturer: Gorgon Defender Industries\\nSize: 3\\nGrade: D\\nClass: Military\\n\\nGorgon Defender Industries brings military might to their entry-level, large shield generator. Featuring best-in-class durability, the SecureScreen was built to take a beating and survive.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Gorgon Defender Industries",
+                "Size": "3",
+                "Grade": "D",
+                "Class": "Military"
+            },
+            "DescriptionText": "Gorgon Defender Industries brings military might to their entry-level, large shield generator. Featuring best-in-class durability, the SecureScreen was built to take a beating and survive.",
             "Manufacturer": {
                 "Code": "GODI",
-                "Name": "Gorgon Defender Industries"
+                "Name": "Gorgon Defender Industries",
+                "UUID": "57bfcf3d-13f6-4c2c-b7c7-6bf8eacb8a24"
             },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1600
+                "Health": 1600,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 4,
@@ -1140,6 +1161,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 5,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 2110,
+                                "MinimumFraction": 0.4,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 5,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 2060
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 48500,

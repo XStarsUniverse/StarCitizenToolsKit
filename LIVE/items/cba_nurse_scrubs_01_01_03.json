@@ -1920,6 +1920,7 @@
         "grade": 1,
         "name": "Mahoney Nurse Scrub Top Primrose",
         "tags": "cba_nurse_scrubs Set_01 Color_03",
+        "required_tags": "",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1933,9 +1934,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Mahoney Nurse Scrub Top Primrose",
             "Description": "Carrying Capacity: 0.4K \u00b5SCU\\n\\nThe Mahoney Nurse Scrub shirt is made for medical professionals looking an accommodating and comfortable fit. This top has a pocket and strips of fabric forming subtle geometric patterns on the right shoulder. It's also made with moisture wicking and anti-stain fabric ready to withstand long shifts and repeated washing.",
+            "DescriptionData": {
+                "Carrying Capacity": "0.4K \u00b5SCU"
+            },
+            "DescriptionText": "The Mahoney Nurse Scrub shirt is made for medical professionals looking an accommodating and comfortable fit. This top has a pocket and strips of fabric forming subtle geometric patterns on the right shoulder. It's also made with moisture wicking and anti-stain fabric ready to withstand long shifts and repeated washing.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_nurse_scrubs",
@@ -1946,11 +1952,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1960,6 +1973,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0004,
                 "unit": 6,
@@ -1975,6 +1997,10 @@
             "TemperatureResistance": {
                 "Minimum": 10,
                 "Maximum": 28
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

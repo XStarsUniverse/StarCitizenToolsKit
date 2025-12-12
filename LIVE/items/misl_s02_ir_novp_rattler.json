@@ -8626,6 +8626,7 @@
         "grade": 1,
         "name": "Rattler II Missile",
         "tags": "NOVP IR flightReady",
+        "required_tags": "",
         "manufacturer": "NOVP",
         "classification": "Ship.Missile.Missile",
         "stdItem": {
@@ -8639,9 +8640,16 @@
             "Type": "Missile.Missile",
             "Name": "Rattler II Missile",
             "Description": "Manufacturer: Nova Pyrotechnica\\nTracking Signal: Infrared\\nSize: 2\\n\\nThe Rattler is a cost-effective cluster missile that will no doubt appeal to a wide variety of pilots. When fired, the Rattler will track the opponent\u2019s IR signature and create an opening barrage that weakens the armor or shields, leaving the target vulnerable to the full payload that follows.",
+            "DescriptionData": {
+                "Manufacturer": "Nova Pyrotechnica",
+                "Tracking Signal": "Infrared",
+                "Size": "2"
+            },
+            "DescriptionText": "The Rattler is a cost-effective cluster missile that will no doubt appeal to a wide variety of pilots. When fired, the Rattler will track the opponent's IR signature and create an opening barrage that weakens the armor or shields, leaving the target vulnerable to the full payload that follows.",
             "Manufacturer": {
                 "Code": "NOVP",
-                "Name": "Nova Pyrotechnica"
+                "Name": "Nova Pyrotechnica",
+                "UUID": "67fd3077-ee8c-4a7c-8bad-91500b2a9509"
             },
             "Tags": [
                 "NOVP",
@@ -8652,6 +8660,8 @@
                 {
                     "PortName": "cluster1",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Flags": [
                         "uneditable"
                     ],
@@ -8662,13 +8672,24 @@
                         "NOVA_Rocket"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Rocket"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Rocket"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d0562627-1838-4fe7-bea7-788d6b8c4055",
                     "Uneditable": true
                 },
                 {
                     "PortName": "cluster2",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Flags": [
                         "uneditable"
                     ],
@@ -8679,13 +8700,24 @@
                         "NOVA_Rocket"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Rocket"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Rocket"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d0562627-1838-4fe7-bea7-788d6b8c4055",
                     "Uneditable": true
                 },
                 {
                     "PortName": "cluster3",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Flags": [
                         "uneditable"
                     ],
@@ -8696,13 +8728,24 @@
                         "NOVA_Rocket"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Rocket"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Rocket"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d0562627-1838-4fe7-bea7-788d6b8c4055",
                     "Uneditable": true
                 },
                 {
                     "PortName": "cluster4",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Flags": [
                         "uneditable"
                     ],
@@ -8713,13 +8756,24 @@
                         "NOVA_Rocket"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Rocket"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Rocket"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d0562627-1838-4fe7-bea7-788d6b8c4055",
                     "Uneditable": true
                 },
                 {
                     "PortName": "cluster5",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Flags": [
                         "uneditable"
                     ],
@@ -8730,13 +8784,24 @@
                         "NOVA_Rocket"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Rocket"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Rocket"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d0562627-1838-4fe7-bea7-788d6b8c4055",
                     "Uneditable": true
                 },
                 {
                     "PortName": "cluster6",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Flags": [
                         "uneditable"
                     ],
@@ -8747,13 +8812,24 @@
                         "NOVA_Rocket"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Rocket"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Rocket"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d0562627-1838-4fe7-bea7-788d6b8c4055",
                     "Uneditable": true
                 },
                 {
                     "PortName": "cluster7",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Flags": [
                         "uneditable"
                     ],
@@ -8764,8 +8840,17 @@
                         "NOVA_Rocket"
                     ],
                     "Types": [
-                        "Missile"
+                        "Missile.Rocket"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Rocket"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d0562627-1838-4fe7-bea7-788d6b8c4055",
                     "Uneditable": true
                 }
             ],
@@ -8774,8 +8859,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 25
+                "Health": 25,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

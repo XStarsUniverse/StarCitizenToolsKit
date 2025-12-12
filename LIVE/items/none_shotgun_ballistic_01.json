@@ -8415,6 +8415,7 @@
         "grade": 1,
         "name": "Deadrig Shotgun",
         "tags": "stocked glsn_shotgun_ballistic_01 shotgun",
+        "required_tags": "",
         "manufacturer": "UNKN",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -8428,9 +8429,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Deadrig Shotgun",
             "Description": "Manufacturer: Unknown\\nItem Type: Shotgun\\nClass: Ballistic\\n\\nMagazine Size: 8\\nRate Of Fire: 120 rpm\\nEffective Range: 0-10 m\\n\\nAttachments: N/A\\n\\nThe Deadrig is a high powered, double-barreled shotgun with a simple design pieced together from junkyard scraps. Prioritizing power above all else, the Deadrig lacks the refinement of mass-produced weapons and suffers from heavy recoil.",
+            "DescriptionData": {
+                "Manufacturer": "Unknown",
+                "Item Type": "Shotgun",
+                "Class": "Ballistic",
+                "Magazine Size": "8",
+                "Rate Of Fire": "120 rpm",
+                "Effective Range": "0-10 m",
+                "Attachments": "N/A"
+            },
+            "DescriptionText": "The Deadrig is a high powered, double-barreled shotgun with a simple design pieced together from junkyard scraps. Prioritizing power above all else, the Deadrig lacks the refinement of mass-produced weapons and suffers from heavy recoil.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": [
                 "stocked",
@@ -8441,6 +8453,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "none_shotgun_ballistic_01"
                     ],
@@ -8448,13 +8462,24 @@
                         "none_shotgun_ballistic_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "1b00b884-79eb-4b3b-916f-1b3ebe4c7c76",
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -8513,14 +8538,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

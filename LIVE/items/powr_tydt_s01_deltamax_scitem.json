@@ -1142,6 +1142,7 @@
         "grade": 2,
         "name": "DeltaMax",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "TYDT",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1155,17 +1156,37 @@
             "Type": "PowerPlant.Power",
             "Name": "DeltaMax",
             "Description": "Item Type: Power Plant\\nManufacturer: Tyler Design & Tech\\nSize: 1\\nGrade: B\\nClass: Stealth\\n\\nExpert engineering made significant breakthroughs possible when designing the DeltaMax, resulting in a stealth signature even lower than originally estimated by the team at Tyler Design and Tech.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Tyler Design & Tech",
+                "Size": "1",
+                "Grade": "B",
+                "Class": "Stealth"
+            },
+            "DescriptionText": "Expert engineering made significant breakthroughs possible when designing the DeltaMax, resulting in a stealth signature even lower than originally estimated by the team at Tyler Design and Tech.",
             "Manufacturer": {
                 "Code": "TYDT",
-                "Name": "Tyler Design & Tech"
+                "Name": "Tyler Design & Tech",
+                "UUID": "a2a97679-2a6e-4e89-80d8-439c88a01427"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 20,
+                "Maximum": 6000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 380
+                "Health": 380,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.75,
@@ -1188,6 +1209,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1577.63,
@@ -1205,6 +1230,39 @@
             },
             "PowerPlant": {
                 "Output": 1577.63
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 13,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 13,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 3250
+                        }
+                    }
+                ]
             }
         }
     }

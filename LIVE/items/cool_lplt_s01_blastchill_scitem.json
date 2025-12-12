@@ -922,6 +922,7 @@
         "grade": 4,
         "name": "BlastChill",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "LPLT",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "BlastChill",
             "Description": "Item Type: Cooler\\nManufacturer: Lightning Power Ltd. \\nSize: 1\\nGrade: D\\nClass: Civilian\\n\\nThe BlastChill is a consumer-grade cooler from Lightning Power Ltd. It keeps your ship running without straining its signature, but is best known for a much mocked 2945 ad campaign that promised it was \u201cBuilt to bring the chill.\u201d",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "Lightning Power Ltd.",
+                "Size": "1",
+                "Grade": "D",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "The BlastChill is a consumer-grade cooler from Lightning Power Ltd. It keeps your ship running without straining its signature, but is best known for a much mocked 2945 ad campaign that promised it was \u201cBuilt to bring the chill.\u201d",
             "Manufacturer": {
                 "Code": "LPLT",
-                "Name": "Lightning Power Ltd."
+                "Name": "Lightning Power Ltd.",
+                "UUID": "60d0f346-0c22-4869-81d3-1168b526a258"
             },
             "Cooler": {
                 "CoolingRate": 190000,
@@ -949,8 +959,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 220
+                "Health": 220,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 8.25,
                 "DecayRateOfEM": 0.18
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 14.5,
+                                "MinimumFraction": 0.5,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 750,
+                            "IR": 3630
+                        }
+                    }
+                ]
             }
         }
     }

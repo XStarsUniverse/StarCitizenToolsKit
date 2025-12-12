@@ -1975,6 +1975,7 @@
         "grade": 1,
         "name": "Clean and Clear Work Apron",
         "tags": "scu_apron set_01 Texture_01 Color_01",
+        "required_tags": "",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1988,9 +1989,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Clean and Clear Work Apron",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nDon't let your clothes suffer when you're just doing your job. Designed to be waterproof, stain resistant and easy to clean, the Clean and Clear work apron is ideal protection for your clothes when your job requires getting down and dirty.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "Don't let your clothes suffer when you're just doing your job. Designed to be waterproof, stain resistant and easy to clean, the Clean and Clear work apron is ideal protection for your clothes when your job requires getting down and dirty.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_apron",
@@ -2002,19 +2008,33 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Clothing_Torso2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Char_Clothing_Torso_2"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Torso_2"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2024,6 +2044,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2039,6 +2068,10 @@
             "TemperatureResistance": {
                 "Minimum": 10,
                 "Maximum": 29
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

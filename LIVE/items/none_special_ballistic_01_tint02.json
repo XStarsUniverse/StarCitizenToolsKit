@@ -9885,6 +9885,7 @@
         "grade": 1,
         "name": "Boomtube \"Mean Green\" Rocket Launcher",
         "tags": "shouldered none_special_ballistic_01",
+        "required_tags": "",
         "manufacturer": "UNKN",
         "classification": "FPS.Weapon.Large",
         "stdItem": {
@@ -9898,9 +9899,19 @@
             "Type": "WeaponPersonal.Large",
             "Name": "Boomtube \"Mean Green\" Rocket Launcher",
             "Description": "Manufacturer: Unknown\\nItem Type: Launcher\\nClass: Rocket\\n \\nMagazine Size: 1\\nRate Of Fire: 20 rpm\\nEffective Range: 100 m\\n\\nWho's got time to aim? Once you got enough room to clear the arming distance, just point the Boomtube launcher at whatever you don't like, squeeze the trigger, and watch the triple-grenade rocket thingy take care of the rest.  Sometimes simple is best.\\n\\nThe Mean Green version features a green tint.",
+            "DescriptionData": {
+                "Manufacturer": "Unknown",
+                "Item Type": "Launcher",
+                "Class": "Rocket",
+                "Magazine Size": "1",
+                "Rate Of Fire": "20 rpm",
+                "Effective Range": "100 m"
+            },
+            "DescriptionText": "Who's got time to aim? Once you got enough room to clear the arming distance, just point the Boomtube launcher at whatever you don't like, squeeze the trigger, and watch the triple-grenade rocket thingy take care of the rest.  Sometimes simple is best.\n\nThe Mean Green version features a green tint.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": [
                 "shouldered",
@@ -9910,17 +9921,30 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "none_special_ballistic_01_rocket"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "2f4ed822-21bb-4b47-8d9b-ef75114222f6",
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9987,14 +10011,20 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.85,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Bespokeplace"
+            ],
             "Missile": {
                 "Damage": {
                     "Physical": 1000,

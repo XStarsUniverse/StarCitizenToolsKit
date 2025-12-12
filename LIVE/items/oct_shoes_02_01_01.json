@@ -1872,6 +1872,7 @@
         "grade": 1,
         "name": "Laska Shoes",
         "tags": "oct_shoes Set_02 Color_01",
+        "required_tags": "",
         "manufacturer": "OCT",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1885,9 +1886,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Laska Shoes",
             "Description": "The Laska are two-toned dress shoes that deliver both comfort and style. A dynamic diagonal color separation makes the shoes black in front and white in the back and accentuates the slight rise to the heel. An ideal complement to any outfit, Laska shoes also features supremely comfortable padded insoles and can be easily slipped off and on thanks to side zippers.",
+            "DescriptionText": "The Laska are two-toned dress shoes that deliver both comfort and style. A dynamic diagonal color separation makes the shoes black in front and white in the back and accentuates the slight rise to the heel. An ideal complement to any outfit, Laska shoes also features supremely comfortable padded insoles and can be easily slipped off and on thanks to side zippers.",
             "Manufacturer": {
                 "Code": "OCT",
-                "Name": "Octagon"
+                "Name": "Octagon",
+                "UUID": "4a05001d-0511-415f-8e32-618fbd75242b"
             },
             "Tags": [
                 "oct_shoes",
@@ -1898,11 +1901,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1912,9 +1922,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 25
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

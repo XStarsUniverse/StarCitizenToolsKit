@@ -1272,6 +1272,7 @@
         "grade": 1,
         "name": "Ammunition Crate",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "stdItem": {
             "UUID": "205da803-629d-4eea-ae56-032b1f93ff46",
             "ClassName": "Carryable_2H_FL_05x05x05_MissionItem_AmmoCrate",
@@ -1283,6 +1284,12 @@
             "Type": "Misc.Mission",
             "Name": "Ammunition Crate",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1290,7 +1297,15 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Close",
+                "Opened",
+                "Closed"
+            ]
         }
     }
 }

@@ -1645,6 +1645,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "KRIG_Merlin_Base",
         "manufacturer": "KRI",
         "classification": "Ship.MainThruster.FixedThruster",
         "stdItem": {
@@ -1658,12 +1659,16 @@
             "Type": "MainThruster.FixedThruster",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "KRI",
-                "Name": "Kruger Intergalatic"
+                "Name": "Kruger Intergalatic",
+                "UUID": "7b5d1ed3-11e7-49e6-9ed3-9d0cb52a3dc2"
             },
             "Durability": {
-                "Health": 6500
+                "Health": 6500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 11,
@@ -1700,6 +1705,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 50,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Fuel",
+                                "Rate": 0.01,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Thruster": {
                 "thrustCapacity": 978500,

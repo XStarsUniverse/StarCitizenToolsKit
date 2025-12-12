@@ -1319,6 +1319,7 @@
         "grade": 1,
         "name": "Console",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "7656770d-bf2a-4231-97db-011582873176",
             "ClassName": "Unlawful_UEC_Terminal_Console",
@@ -1330,15 +1331,31 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Console",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Screen",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "$IP_screen"
                     ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Transfer",
+                "Activate",
+                "Changeuser",
+                "Proceedwithdraw",
+                "Cancelwithdraw",
+                "Proceedchangeuser"
             ]
         }
     }

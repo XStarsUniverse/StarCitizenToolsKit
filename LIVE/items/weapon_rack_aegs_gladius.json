@@ -1335,6 +1335,7 @@
         "grade": 1,
         "name": "Weapon Rack",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d0ee4854-10cb-423a-9639-750c384e2b4c",
             "ClassName": "Weapon_Rack_AEGS_Gladius",
@@ -1346,51 +1347,102 @@
             "Type": "Door.UNDEFINED",
             "Name": "Weapon Rack",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$IP_rifle_01",
                     "Size": 4,
+                    "MinSize": 2,
+                    "MaxSize": 4,
                     "Types": [
                         "WeaponPersonal"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$IP_rifle_02",
                     "Size": 4,
+                    "MinSize": 2,
+                    "MaxSize": 4,
                     "Types": [
                         "WeaponPersonal"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$IP_rack_addon_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "WeaponAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$IP_rack_addon_02",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
                         "WeaponAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$IP_multitool",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 1000
-            }
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Place",
+                "Open",
+                "Close"
+            ]
         }
     }
 }

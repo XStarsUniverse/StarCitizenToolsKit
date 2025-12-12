@@ -8975,6 +8975,7 @@
         "grade": 1,
         "name": "Lumin V \"Valor\" SMG",
         "tags": "stocked smg klwe_smg_energy_01",
+        "required_tags": "",
         "manufacturer": "KLA",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -8988,9 +8989,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Lumin V \"Valor\" SMG",
             "Description": "Manufacturer: Klaus & Werner\\nItem Type: SMG\\nClass: Laser\\n\\nBattery Size: 45\\nRate Of Fire: 562.5 rpm\\nEffective Range: 25m\\n\\nAttachments: Optics (S1), Barrel (S1), Underbarrel (S1)\\n\\nKlaus & Werner's expert craftsmanship is once again on full display to make the Lumin V laser compact energy rifle even more deadly and dependable. A new \"interval autofire\" mode blasts five-round barrages when the trigger is held down, utilizing the target saturation that comes with autofire while providing breaks to recompensate aim. Even when constantly on the attack, the gun's excellent design provides low recoil and a tight spread. The bold blue and gold color scheme gives the Valor edition a valiant and dignified appeal.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Item Type": "SMG",
+                "Class": "Laser",
+                "Size": "45",
+                "Rate Of Fire": "562.5 rpm",
+                "Effective Range": "25m",
+                "Attachments": "Optics (S1), Barrel (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "Klaus & Werner's expert craftsmanship is once again on full display to make the Lumin V laser compact energy rifle even more deadly and dependable. A new \"interval autofire\" mode blasts five-round barrages when the trigger is held down, utilizing the target saturation that comes with autofire while providing breaks to recompensate aim. Even when constantly on the attack, the gun's excellent design provides low recoil and a tight spread. The bold blue and gold color scheme gives the Valor edition a valiant and dignified appeal.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "stocked",
@@ -9001,6 +9013,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "klwe_smg_energy_01"
                     ],
@@ -9008,24 +9022,45 @@
                         "klwe_smg_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "1d1e4e17-9258-4ee8-8461-fc866b6d332f",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory",
                         "energy_barrel"
@@ -9035,24 +9070,44 @@
                         "energy_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9111,14 +9166,21 @@
                 "Length": 1.125,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

@@ -1383,6 +1383,7 @@
         "grade": 1,
         "name": "Door Control",
         "tags": "DoorInteractionPanel",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c2d0e3b0-cbfc-4522-bf01-2f6015ad90bd",
             "ClassName": "Util_ASD_Door_Ctrl_Panel_A",
@@ -1394,6 +1395,12 @@
             "Type": "ControlPanel.DoorPart",
             "Name": "Door Control",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "DoorInteractionPanel"
             ],
@@ -1401,8 +1408,19 @@
                 {
                     "PortName": "Screen",
                     "Size": 5,
+                    "MinSize": 0,
+                    "MaxSize": 5,
+                    "EquippedItem": "16331b48-e872-486a-b622-474b78744de1",
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Open",
+                "Close",
+                "Open panel",
+                "Close panel",
+                "Override",
+                "Pump"
             ]
         }
     }

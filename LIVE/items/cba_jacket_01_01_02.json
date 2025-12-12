@@ -1994,6 +1994,7 @@
         "grade": 1,
         "name": "Cumulus Jacket Red",
         "tags": "cba_jacket Set_01 Color_02",
+        "required_tags": "",
         "manufacturer": "CBA",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2007,9 +2008,15 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Cumulus Jacket Red",
             "Description": "Temp. Rating: -35 / 10 \u00b0C\\nCarrying Capacity: 5K \u00b5SCU\\n\\nBe bold and brave the cold in frigid conditions up to -35 \u00b0C with the Cumulus's special thermal lining. An oversized, insulated hood provides additional protection around the head, while the distinct quilted torso stops snow, ice, and wind from seeping in, ensuring the wearer remains warm and dry.",
+            "DescriptionData": {
+                "Temp. Rating": "-35 / 10 \u00b0C",
+                "Carrying Capacity": "5K \u00b5SCU"
+            },
+            "DescriptionText": "Be bold and brave the cold in frigid conditions up to -35 \u00b0C with the Cumulus's special thermal lining. An oversized, insulated hood provides additional protection around the head, while the distinct quilted torso stops snow, ice, and wind from seeping in, ensuring the wearer remains warm and dry.",
             "Manufacturer": {
                 "Code": "CBA",
-                "Name": "CBA"
+                "Name": "CBA",
+                "UUID": "d9179d05-55be-4eed-8b1b-93bb8450ff04"
             },
             "Tags": [
                 "cba_jacket",
@@ -2020,11 +2027,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2034,6 +2048,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.01,
                 "unit": 6,
@@ -2049,6 +2072,10 @@
             "TemperatureResistance": {
                 "Minimum": -35,
                 "Maximum": 10
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

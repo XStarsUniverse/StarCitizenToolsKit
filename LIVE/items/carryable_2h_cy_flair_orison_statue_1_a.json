@@ -1663,6 +1663,7 @@
         "grade": 1,
         "name": "Stormwal Sculpture Replica",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1e2778c1-6b2e-4c19-9198-dbca796ae538",
             "ClassName": "Carryable_2H_CY_flair_orison_statue_1_a",
@@ -1674,11 +1675,22 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "Stormwal Sculpture Replica",
             "Description": "With careful attention to detail, this scaled down version of the famed \"Until Again\" sculpture that graces Orison's skyline captures the majesty and grace of the endangered stormwal.",
+            "DescriptionText": "With careful attention to detail, this scaled down version of the famed \"Until Again\" sculpture that graces Orison's skyline captures the majesty and grace of the endangered stormwal.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.25,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

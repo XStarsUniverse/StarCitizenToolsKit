@@ -223,6 +223,7 @@
         "grade": 1,
         "name": "Internal Tank",
         "tags": "flightReady",
+        "required_tags": "",
         "classification": "Ship.FuelTank.Fuel",
         "stdItem": {
             "UUID": "6b5e5a09-582d-4df3-b04f-753ebd7584ce",
@@ -235,11 +236,57 @@
             "Type": "FuelTank.Fuel",
             "Name": "Internal Tank",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
             ],
             "FuelTank": {
                 "Capacity": 0
+            },
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 6,
+                    "UnitName": "SCU",
+                    "SCU": 6
+                },
+                "InclusiveResources": [
+                    "de9f4d03-6b60-429d-9b26-9f2308bae973"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "de9f4d03-6b60-429d-9b26-9f2308bae973",
+                        "Weight": 1
+                    }
+                ]
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 100,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Storage",
+                                "Resource": "Fuel",
+                                "Rate": 10,
+                                "GeneratedResource": "Fuel",
+                                "GeneratedRate": 10,
+                                "Discharge": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

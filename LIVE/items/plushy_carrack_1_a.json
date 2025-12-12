@@ -1153,6 +1153,7 @@
         "grade": 1,
         "name": "Carrack Plushie",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "7b6db9c4-826f-4d39-bc32-3b39d82e6aff",
             "ClassName": "plushy_carrack_1_a",
@@ -1164,11 +1165,24 @@
             "Type": "Misc.Personal",
             "Name": "Carrack Plushie",
             "Description": "Encourage an adventurous spirit with this soft and squeezable Carrack plushie modeled after Anvil's classic exploration ship.",
+            "DescriptionText": "Encourage an adventurous spirit with this soft and squeezable Carrack plushie modeled after Anvil's classic exploration ship.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

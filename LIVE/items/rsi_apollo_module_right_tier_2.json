@@ -657,6 +657,7 @@
         "grade": 3,
         "name": "Apollo Tier 2 Module Right",
         "tags": "RSI_Apollo_Module_Right",
+        "required_tags": "RSI_Apollo_Module_Right",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "4f374a14-98ec-5481-2c07-dd369c257dbe",
@@ -669,9 +670,11 @@
             "Type": "Module.UNDEFINED",
             "Name": "Apollo Tier 2 Module Right",
             "Description": "This module contains 2x Tier 2 medical beds.",
+            "DescriptionText": "This module contains 2x Tier 2 medical beds.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "RSI_Apollo_Module_Right"
@@ -680,11 +683,15 @@
                 {
                     "PortName": "hardpoint_module_oc",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

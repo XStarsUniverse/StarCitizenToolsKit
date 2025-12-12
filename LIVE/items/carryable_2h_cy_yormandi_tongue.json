@@ -985,6 +985,7 @@
         "grade": 1,
         "name": "Yormandi Tongue",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "2845e7ee-2f52-471b-a0a7-05ca11908fe6",
             "ClassName": "Carryable_2H_CY_yormandi_tongue",
@@ -996,11 +997,23 @@
             "Type": "Misc.Harvestable",
             "Name": "Yormandi Tongue",
             "Description": "The yormandi uses its sensitive tongue to taste its surroundings and detect prey from great distances. Renowned for its complex, subtle flavor, the tip of this organ is sought after by culinary enthusiasts throughout the Empire.",
+            "DescriptionText": "The yormandi uses its sensitive tongue to taste its surroundings and detect prey from great distances. Renowned for its complex, subtle flavor, the tip of this organ is sought after by culinary enthusiasts throughout the Empire.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

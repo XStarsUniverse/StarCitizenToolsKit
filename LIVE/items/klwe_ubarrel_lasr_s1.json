@@ -1638,6 +1638,7 @@
         "grade": 1,
         "name": "Tracer Laser Pointer Orange",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "NVTC",
         "classification": "FPS.WeaponAttachment.BottomAttachment",
         "stdItem": {
@@ -1651,15 +1652,32 @@
             "Type": "WeaponAttachment.BottomAttachment",
             "Name": "Tracer Laser Pointer Orange",
             "Description": "Manufacturer: Klaus & Werner\\nType: Laser Pointer\\nAttachment Point: Underbarrel\\nSize: 1\\n\\nSpread: -12.5%\\n\\nTrust Klaus & Werner to manufacture a tactical laser pointer that always hits the mark. The Tracer features a rust and impact resistant casing for an advanced laser diode that produces an efficient and stable beam. This special edition generates an orange beam that's easy to see and identify.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Type": "Laser Pointer",
+                "Attachment Point": "Underbarrel",
+                "Size": "1"
+            },
+            "DescriptionText": "Trust Klaus & Werner to manufacture a tactical laser pointer that always hits the mark. The Tracer features a rust and impact resistant casing for an advanced laser diode that produces an efficient and stable beam. This special edition generates an orange beam that's easy to see and identify.",
             "Manufacturer": {
                 "Code": "NVTC",
-                "Name": "NV-TAC"
+                "Name": "NV-TAC",
+                "UUID": "f113387e-0905-489a-829d-8cebfdc19e66"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

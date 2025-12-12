@@ -996,6 +996,7 @@
         "grade": 1,
         "name": "Argos IX Torpedo",
         "tags": "TALN CS flightReady",
+        "required_tags": "",
         "manufacturer": "TALN",
         "classification": "Ship.Missile.Torpedo",
         "stdItem": {
@@ -1009,9 +1010,16 @@
             "Type": "Missile.Torpedo",
             "Name": "Argos IX Torpedo",
             "Description": "Manufacturer: Talon\\nTracking Signal: Cross Section\\nSize: 9\\n\\nThe Talon Argos strike torpedo features a classic, straightforward design that relies on exacting manufacturing standards and a classic cross section targeting system.",
+            "DescriptionData": {
+                "Manufacturer": "Talon",
+                "Tracking Signal": "Cross Section",
+                "Size": "9"
+            },
+            "DescriptionText": "The Talon Argos strike torpedo features a classic, straightforward design that relies on exacting manufacturing standards and a classic cross section targeting system.",
             "Manufacturer": {
                 "Code": "TALN",
-                "Name": "Talon"
+                "Name": "Talon",
+                "UUID": "587fcede-4fe9-4fb4-85ec-124abc8542b0"
             },
             "Tags": [
                 "TALN",
@@ -1023,8 +1031,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 667
+                "Health": 667,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

@@ -1086,6 +1086,7 @@
         "grade": 1,
         "name": "Medical Supplies",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "dc9ad624-c31f-4451-8046-7b6a1c871e3e",
@@ -1098,6 +1099,12 @@
             "Type": "Cargo.Small",
             "Name": "Medical Supplies",
             "Description": "A variety of items produced primarily to treat injury or illness.",
+            "DescriptionText": "A variety of items produced primarily to treat injury or illness.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1105,6 +1112,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "d5506a24-5729-4354-81fb-0959173357c4",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

@@ -851,6 +851,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "ESPR_Talon_Base",
+        "required_tags": "",
         "manufacturer": "ESPR",
         "stdItem": {
             "UUID": "582568b7-79c2-4ad4-8cfe-93644b6cbf01",
@@ -863,9 +864,11 @@
             "Type": "Misc.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ESPR",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "4ecc1a24-d228-4dd5-8857-21ba6145a1d3"
             },
             "Tags": [
                 "ESPR_Talon_Base"
@@ -874,6 +877,8 @@
                 {
                     "PortName": "hardpoint_glass",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "uneditable"
                     ],
@@ -881,7 +886,9 @@
                 }
             ],
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             }
         }
     }

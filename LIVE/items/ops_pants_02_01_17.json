@@ -1996,6 +1996,7 @@
         "grade": 1,
         "name": "Mivaldi Pants Aqua",
         "tags": "ops_pants Set_02 Color_17",
+        "required_tags": "",
         "manufacturer": "OPS",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2009,9 +2010,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Mivaldi Pants Aqua",
             "Description": "Carrying Capacity: 0.5K \u00b5SCU\\n\\nCut to a narrow fit, OpalSky's Mivaldi pants feature bold asymmetrical design with smart yet casual dual material styling, making it the perfect addition to any wardrobe.\\n\\nWomen's sizes currently out of stock.",
+            "DescriptionData": {
+                "Carrying Capacity": "0.5K \u00b5SCU"
+            },
+            "DescriptionText": "Cut to a narrow fit, OpalSky's Mivaldi pants feature bold asymmetrical design with smart yet casual dual material styling, making it the perfect addition to any wardrobe.\n\nWomen's sizes currently out of stock.",
             "Manufacturer": {
                 "Code": "OPS",
-                "Name": "OpalSky"
+                "Name": "OpalSky",
+                "UUID": "6f5af1a4-a50d-41e5-8bb0-c1acd89d4b9e"
             },
             "Tags": [
                 "ops_pants",
@@ -2022,19 +2028,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2044,7 +2062,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2054,6 +2080,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0005,
                 "unit": 6,
@@ -2069,6 +2104,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

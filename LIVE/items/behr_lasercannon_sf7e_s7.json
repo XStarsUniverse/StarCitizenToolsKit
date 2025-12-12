@@ -5664,6 +5664,7 @@
         "grade": 1,
         "name": "SF7E Cannon",
         "tags": "BEHR LaserCannon flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -5677,9 +5678,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "SF7E Cannon",
             "Description": "Manufacturer: Behring\\nItem Type: Laser Cannon\\nSize: 7\\n\\nEngineers from Behring and Crusader collaborated to make the SF7E laser cannon the ideal weapon for the Ares Ion Star Fighter. A custom shell allows the massive weapon to seamlessly integrate into the body of the ship. Ideal for long-range engagements involving large and capital-class spacecraft, the SF7E's impressive accuracy and high damage-per-round make it a devastating weapon in the hands of a skilled shooter.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Laser Cannon",
+                "Size": "7"
+            },
+            "DescriptionText": "Engineers from Behring and Crusader collaborated to make the SF7E laser cannon the ideal weapon for the Ares Ion Star Fighter. A custom shell allows the massive weapon to seamlessly integrate into the body of the ship. Ideal for long-range engagements involving large and capital-class spacecraft, the SF7E's impressive accuracy and high damage-per-round make it a devastating weapon in the hands of a skilled shooter.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "BEHR",
@@ -5691,33 +5699,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "7973ac14-c707-485a-abdc-5178ec9cf798",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "6418c288-bbb5-4688-bb91-d6764c8c55ef",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "0004adde-8c6e-41b6-b053-49f7be705a81",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "f796a210-e6cd-4aae-a63f-4d681cb947e7",
                     "Uneditable": false
                 }
             ],
@@ -5742,8 +5794,37 @@
                 "Length": 3.75,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 6750
+                "Health": 6750,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 2.2,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

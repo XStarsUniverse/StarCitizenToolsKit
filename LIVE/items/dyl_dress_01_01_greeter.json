@@ -1958,6 +1958,7 @@
         "grade": 1,
         "name": "Martel Dress",
         "tags": "dyl_dress Set_01 Color_greeter",
+        "required_tags": "",
         "manufacturer": "DYL",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1971,9 +1972,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Martel Dress",
             "Description": "Carrying Capacity: 2K \u00b5SCU\\n\\nThis open-front grey dress from Dyna Lei reveals a draped, checkered layer offset by gold trim beneath its wide cinched belt. The finished look is paired with black bodysuit and a fetching handkerchief to complete the ensemble.\\n\\nMen's sizes currently not available.",
+            "DescriptionData": {
+                "Carrying Capacity": "2K \u00b5SCU"
+            },
+            "DescriptionText": "This open-front grey dress from Dyna Lei reveals a draped, checkered layer offset by gold trim beneath its wide cinched belt. The finished look is paired with black bodysuit and a fetching handkerchief to complete the ensemble.\n\nMen's sizes currently not available.",
             "Manufacturer": {
                 "Code": "DYL",
-                "Name": "Dyna Lei"
+                "Name": "Dyna Lei",
+                "UUID": "92b20988-dbf3-4e95-b4a9-7e5e22112516"
             },
             "Tags": [
                 "dyl_dress",
@@ -1984,11 +1990,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1998,6 +2011,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.002,
                 "unit": 6,
@@ -2013,6 +2035,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

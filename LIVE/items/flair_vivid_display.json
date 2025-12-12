@@ -342,6 +342,7 @@
         "grade": 4,
         "name": "viVid Display",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "835f06e0-e6fe-481f-8115-a592285e0bd6",
             "ClassName": "Flair_viVid_Display",
@@ -353,12 +354,28 @@
             "Type": "Flair_Floor.Default",
             "Name": "viVid Display",
             "Description": "From microTech, the makers of mobiGlas and VI Specs, comes the latest generation multi-viewer, the viVid display, featuring full spectrum color-bleed and first-in-class holo-optics to bring a wide array of visuals to vivid life.",
+            "DescriptionText": "From microTech, the makers of mobiGlas and VI Specs, comes the latest generation multi-viewer, the viVid display, featuring full spectrum color-bleed and first-in-class holo-optics to bring a wide array of visuals to vivid life.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "StationPort",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "Flair_Surface"
+                        "Flair_Surface.Default"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Flair_Surface",
+                            "sub_types": [
+                                "Default"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }

@@ -1098,6 +1098,7 @@
         "grade": 1,
         "name": "C4-163f S5 Hornet Mk I Ball Turret",
         "tags": "$ANVL_Hornet_F7A_Base",
+        "required_tags": "ANVL_Hornet_F7A_Base",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "a68472d0-ba22-4fd9-9287-10bdc6c0fe08",
@@ -1110,9 +1111,11 @@
             "Type": "Turret.BallTurret",
             "Name": "C4-163f S5 Hornet Mk I Ball Turret",
             "Description": "Give your Hornet's firepower a boost with the C4-163f. Designed by Anvil specifically for its F7 Mk I series, this S5 ball turret can equip two S3 ship weapons.",
+            "DescriptionText": "Give your Hornet's firepower a boost with the C4-163f. Designed by Anvil specifically for its F7 Mk I series, this S5 ball turret can equip two S3 ship weapons.",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "$ANVL_Hornet_F7A_Base"
@@ -1121,24 +1124,56 @@
                 {
                     "PortName": "turret_left",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "left"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "turret_right",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "right"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1149,7 +1184,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1300
+                "Health": 1300,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1172,6 +1209,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 15,

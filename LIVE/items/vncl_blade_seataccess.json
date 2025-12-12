@@ -881,6 +881,7 @@
         "grade": 1,
         "name": "Access",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "VNC",
         "stdItem": {
             "UUID": "31b7455a-ce30-48df-ad3b-4636dda4826b",
@@ -893,10 +894,22 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Access",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
+            "Interactions": [
+                "Seatenterground",
+                "Seatexitground",
+                "Seatenterzerog",
+                "Seatexitzerog",
+                "Canopyopen",
+                "Canopyclose",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "unit": 0,
                 "unitName": "SCU",

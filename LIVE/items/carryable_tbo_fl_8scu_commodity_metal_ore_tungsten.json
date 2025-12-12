@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Tungsten (Ore)",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "33b9ed09-e0f4-4986-ae02-5c9f4dc4cd8a",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Tungsten (Ore)",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 8,
+                    "UnitName": "SCU",
+                    "SCU": 8
+                },
+                "InclusiveGroups": [
+                    "9b28b2e4-7df3-43f3-a69a-d82b119e25bf"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "addc9aa4-5d2d-4c0d-b01b-ad2b2e50a5d6",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

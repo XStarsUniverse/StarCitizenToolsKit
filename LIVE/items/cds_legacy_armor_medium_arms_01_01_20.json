@@ -1833,6 +1833,7 @@
         "grade": 1,
         "name": "ORC-mkV Arms Desert",
         "tags": "Marine_Legacy_Medium Set_01 Color_20 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "CDS",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1846,9 +1847,18 @@
             "Type": "Char_Armor_Arms.Medium",
             "Name": "ORC-mkV Arms Desert",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -55 / 85 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nDependable and durable armor never goes out of style. The ORC-mkV from Clark Defense Systems has been a battlefield staple for centuries. This highly regarded medium armor blends composite plating with a special fiber reinforced polymer to provide solid protection and a wide range of movement.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-55 / 85 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Dependable and durable armor never goes out of style. The ORC-mkV from Clark Defense Systems has been a battlefield staple for centuries. This highly regarded medium armor blends composite plating with a special fiber reinforced polymer to provide solid protection and a wide range of movement.",
             "Manufacturer": {
                 "Code": "CDS",
-                "Name": "Clark Defense Systems"
+                "Name": "Clark Defense Systems",
+                "UUID": "8a7bd715-5b97-404f-b02e-0d0cc593f608"
             },
             "Tags": [
                 "Marine_Legacy_Medium",
@@ -1861,15 +1871,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 5
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -55,
                 "Maximum": 85
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

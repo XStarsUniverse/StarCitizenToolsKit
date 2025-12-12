@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "Custodian SMG Magazine (60 cap)",
         "tags": "ksar_smg_energy_01",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Custodian SMG Magazine (60 cap)",
             "Description": "Item Type: Battery\\nCapacity: 60\\n\\nReplacement battery for the Custodian, Kastak Arms' compact energy snub rifle.",
+            "DescriptionData": {
+                "Item Type": "Battery",
+                "Capacity": "60"
+            },
+            "DescriptionText": "Replacement battery for the Custodian, Kastak Arms' compact energy snub rifle.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "ksar_smg_energy_01"
@@ -1959,7 +1966,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

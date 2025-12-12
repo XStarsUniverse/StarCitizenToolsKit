@@ -1090,6 +1090,7 @@
         "grade": 1,
         "name": "Drake Cutlass Steel Remote Turret",
         "tags": "DRAK_Cutlass_Steel_Mount",
+        "required_tags": "DRAK_Cutlass_Base DRAK_Cutlass_Steel_Mount",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "f3c73f6d-f497-4f21-a5b5-cef56d52ae96",
@@ -1102,9 +1103,16 @@
             "Type": "Turret.TopTurret",
             "Name": "Drake Cutlass Steel Remote Turret",
             "Description": "Item Type: Turret\\nManufacturer: Drake Interplanetary\\nSize: 2 \\n\\nThis remote-operated turret comes factory-equipped with two Klaus & Werner laser repeaters.",
+            "DescriptionData": {
+                "Item Type": "Turret",
+                "Manufacturer": "Drake Interplanetary",
+                "Size": "2"
+            },
+            "DescriptionText": "This remote-operated turret comes factory-equipped with two Klaus & Werner laser repeaters.",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "DRAK_Cutlass_Steel_Mount"
@@ -1113,24 +1121,56 @@
                 {
                     "PortName": "turret_left",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "left"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "turret_right",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "right"
                     ],
                     "Types": [
-                        "WeaponGun",
-                        "Turret"
+                        "WeaponGun.Gun",
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        },
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1141,7 +1181,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 3500
+                "Health": 3500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1164,6 +1206,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 15,

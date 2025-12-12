@@ -919,6 +919,7 @@
         "grade": 1,
         "name": "ROC Mining Arm",
         "tags": "gimbalMount flightReady miningMount",
+        "required_tags": "GRIN_ROC",
         "stdItem": {
             "UUID": "32c630dd-03e7-4c36-8587-9de4160c7d43",
             "ClassName": "GRIN_ROC_Mining_Turret",
@@ -930,6 +931,15 @@
             "Type": "UtilityTurret.BallTurret",
             "Name": "ROC Mining Arm",
             "Description": "Manufacturer: Greycat Industrial\\n\\nWith a wide range of motion and smooth movement, this highly precise mining arm was designed by Greycat Industrial to allow the operator full gimbaled control of the mining laser head when deployed.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial"
+            },
+            "DescriptionText": "With a wide range of motion and smooth movement, this highly precise mining arm was designed by Greycat Industrial to allow the operator full gimbaled control of the mining laser head when deployed.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "gimbalMount",
                 "flightReady",
@@ -939,6 +949,8 @@
                 {
                     "PortName": "hardpoint_mining_laser",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "miningMount"
                     ],
@@ -946,7 +958,15 @@
                         "miningMount"
                     ],
                     "Types": [
-                        "WeaponMining"
+                        "WeaponMining.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponMining",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -957,7 +977,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 12,

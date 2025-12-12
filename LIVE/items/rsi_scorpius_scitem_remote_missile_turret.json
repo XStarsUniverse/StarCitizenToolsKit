@@ -21359,6 +21359,7 @@
         "grade": 1,
         "name": "RSI Lesath Missile Turret",
         "tags": "$RSI_Scorpius_Turret",
+        "required_tags": "RSI_Scorpius_Turret",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "3abc1038-9870-472f-af95-073a98cbbc60",
@@ -21371,9 +21372,15 @@
             "Type": "Turret.MissileTurret",
             "Name": "RSI Lesath Missile Turret",
             "Description": "Item Type: Missile Turret\\nManufacturer: RSI\\n\\nPerfect for producing a wave of rapid-fire destruction, this bespoke RSI Scorpius missile turret, the Lesath, holds up to sixteen S2 missiles and offers a powerful alternative to the gun turret that comes as standard.",
+            "DescriptionData": {
+                "Item Type": "Missile Turret",
+                "Manufacturer": "RSI"
+            },
+            "DescriptionText": "Perfect for producing a wave of rapid-fire destruction, this bespoke RSI Scorpius missile turret, the Lesath, holds up to sixteen S2 missiles and offers a powerful alternative to the gun turret that comes as standard.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "$RSI_Scorpius_Turret"
@@ -21382,6 +21389,8 @@
                 {
                     "PortName": "turret_middle_right",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
@@ -21392,13 +21401,23 @@
                         "$RSI_Scorpius_Turret_Missile_Right"
                     ],
                     "Types": [
-                        "MissileLauncher"
+                        "MissileLauncher.MissileRack"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MissileLauncher",
+                            "sub_types": [
+                                "MissileRack"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "turret_middle_left",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "$uneditable"
                     ],
@@ -21409,7 +21428,15 @@
                         "$RSI_Scorpius_Turret_Missile_Left"
                     ],
                     "Types": [
-                        "MissileLauncher"
+                        "MissileLauncher.MissileRack"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MissileLauncher",
+                            "sub_types": [
+                                "MissileRack"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -21419,8 +21446,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -21443,6 +21481,15 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode",
+                "Toptobottom",
+                "Bottomtotop",
+                "Snaptobottomstate",
+                "Snaptotopstate",
+                "Cycleturretposition"
+            ],
             "Missile": {
                 "Damage": {
                     "Physical": 1670.246,
@@ -21467,6 +21514,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

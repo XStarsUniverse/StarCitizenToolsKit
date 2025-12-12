@@ -996,6 +996,7 @@
         "grade": 1,
         "name": "Hellion VII Missile",
         "tags": "TALN IR ANVL_Ballista",
+        "required_tags": "",
         "manufacturer": "TALN",
         "classification": "Ship.Missile.Missile",
         "stdItem": {
@@ -1009,9 +1010,16 @@
             "Type": "Missile.Missile",
             "Name": "Hellion VII Missile",
             "Description": "Manufacturer: Talon\\nTracking Signal: Infrared\\nSize: 7\\n\\nCarrying a sizable payload and an advanced heat-seeking sensor suite, the Hellion missile from Talon can be effective against aggressors of all sizes.",
+            "DescriptionData": {
+                "Manufacturer": "Talon",
+                "Tracking Signal": "Infrared",
+                "Size": "7"
+            },
+            "DescriptionText": "Carrying a sizable payload and an advanced heat-seeking sensor suite, the Hellion missile from Talon can be effective against aggressors of all sizes.",
             "Manufacturer": {
                 "Code": "TALN",
-                "Name": "Talon"
+                "Name": "Talon",
+                "UUID": "587fcede-4fe9-4fb4-85ec-124abc8542b0"
             },
             "Tags": [
                 "TALN",
@@ -1023,8 +1031,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

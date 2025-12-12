@@ -12102,6 +12102,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "aa481cf0-992b-44f5-8d48-beef15bbae6e",
@@ -12114,9 +12115,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "flightReady"
@@ -12125,58 +12128,95 @@
                 {
                     "PortName": "turret_left",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_weapon_right_outer",
                     "Size": 12,
+                    "MinSize": 12,
+                    "MaxSize": 12,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "a1ea51dd-1665-41cf-923a-d6a42a7130ce",
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_weapon_right_inner",
                     "Size": 12,
+                    "MinSize": 12,
+                    "MaxSize": 12,
                     "Flags": [
                         "$uneditable"
                     ],
+                    "EquippedItem": "a1ea51dd-1665-41cf-923a-d6a42a7130ce",
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_weapon_left_inner",
                     "Size": 12,
+                    "MinSize": 12,
+                    "MaxSize": 12,
                     "Flags": [
                         "$uneditable"
                     ],
+                    "EquippedItem": "a1ea51dd-1665-41cf-923a-d6a42a7130ce",
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_weapon_left_outer",
                     "Size": 12,
+                    "MinSize": 12,
+                    "MaxSize": 12,
                     "Flags": [
                         "$uneditable"
                     ],
+                    "EquippedItem": "a1ea51dd-1665-41cf-923a-d6a42a7130ce",
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_aimodule",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Flags": [
                         "invisible",
                         "uneditable"
                     ],
                     "Types": [
                         "AIModule"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "AIModule"
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -12202,8 +12242,19 @@
                 "Length": 3.75,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 2000
+                "Health": 2000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -12226,6 +12277,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,
@@ -12240,6 +12295,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4.93,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

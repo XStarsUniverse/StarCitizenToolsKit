@@ -413,6 +413,7 @@
         "grade": 1,
         "name": "Mining Arm",
         "tags": "miningMount",
+        "required_tags": "",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "4e5b552a-8023-4b59-8282-c27b58a4c2c6",
@@ -425,9 +426,11 @@
             "Type": "ToolArm.UNDEFINED",
             "Name": "Mining Arm",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "miningMount"
@@ -436,6 +439,8 @@
                 {
                     "PortName": "hardpoint_mining_laser",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningMount"
                     ],
@@ -443,7 +448,15 @@
                         "miningMount"
                     ],
                     "Types": [
-                        "WeaponMining"
+                        "WeaponMining.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponMining",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }

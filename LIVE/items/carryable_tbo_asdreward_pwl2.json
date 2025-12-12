@@ -819,6 +819,7 @@
         "grade": 1,
         "name": "RCMBNT-PWL-2",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "ea2cddb5-2c04-4e0c-9fa2-76a4748c9398",
             "ClassName": "Carryable_TBO_ASDReward_pwl2",
@@ -830,11 +831,23 @@
             "Type": "InventoryContainer.Cargo",
             "Name": "RCMBNT-PWL-2",
             "Description": "An imprint recombinant sample created from CTLST-PWL and REAGENT-02 as part of Dr. Logan Jorrit's Project Hyperion experiment.",
+            "DescriptionText": "An imprint recombinant sample created from CTLST-PWL and REAGENT-02 as part of Dr. Logan Jorrit's Project Hyperion experiment.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Open",
+                "Drop",
+                "Place",
+                "Openlootingui"
+            ]
         }
     }
 }

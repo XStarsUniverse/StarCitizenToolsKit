@@ -2399,6 +2399,7 @@
         "grade": 1,
         "name": "Filler Station",
         "tags": "",
+        "required_tags": "RSI_Salvation",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "7b52235d-c4da-4520-891e-00201e1ea277",
@@ -2411,14 +2412,18 @@
             "Type": "SalvageFillerStation.UNDEFINED",
             "Name": "Filler Station",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Ports": [
                 {
                     "PortName": "hardpoint_salvage_refill",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "CraftingDispenserSpawn"
                     ],
@@ -2427,6 +2432,8 @@
                 {
                     "PortName": "hardpoint_salvage_crate",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "CargoBoxSpawn"
                     ],
@@ -2435,6 +2442,8 @@
                 {
                     "PortName": "port_controls_screen",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "FillerStationControlsScreen"
                     ],
@@ -2443,11 +2452,15 @@
                 {
                     "PortName": "hardpoint_cargo_grid",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 3.36,
@@ -2470,6 +2483,16 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Ejectcargobox",
+                "Conveyorreset",
+                "Onconveyordeployed",
+                "Onconveyorretracted",
+                "Resourcetobusy",
+                "Resourcetoidle",
+                "Cargodeploy",
+                "Cargoretract"
+            ],
             "InventoryContainer": {
                 "SCU": 6,
                 "unit": 0,

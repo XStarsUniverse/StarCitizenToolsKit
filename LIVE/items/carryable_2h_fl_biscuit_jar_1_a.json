@@ -897,6 +897,7 @@
         "grade": 1,
         "name": "Luminalia Cookie Jar",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "d14abc21-4ce8-49b2-aecc-a5d0efa0d4cb",
             "ClassName": "Carryable_2H_FL_Biscuit_Jar_1_a",
@@ -908,11 +909,23 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Luminalia Cookie Jar",
             "Description": "The perfect place to stash all your favorite holiday treats, this cookie jar features Luminalia greetings along with red and green trim.",
+            "DescriptionText": "The perfect place to stash all your favorite holiday treats, this cookie jar features Luminalia greetings along with red and green trim.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

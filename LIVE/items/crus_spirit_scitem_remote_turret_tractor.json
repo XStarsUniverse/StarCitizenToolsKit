@@ -1811,6 +1811,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "CRUS_Spirit_Turret",
+        "required_tags": "CRUS_Spirit_Turret",
         "manufacturer": "CRUS",
         "stdItem": {
             "UUID": "86da0491-010a-41c6-9cd1-0e676814ce2a",
@@ -1823,9 +1824,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "CRUS",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "63685f47-b0cc-4ebe-8f16-72793a5cd6e0"
             },
             "Tags": [
                 "CRUS_Spirit_Turret"
@@ -1834,14 +1837,23 @@
                 {
                     "PortName": "turret_left",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
                         "TractorBeam"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "TractorBeam"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 3000
+                "Health": 3000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1864,6 +1876,15 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode",
+                "Toptobottom",
+                "Bottomtotop",
+                "Snaptobottomstate",
+                "Snaptotopstate",
+                "Cycleturretposition"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 2,

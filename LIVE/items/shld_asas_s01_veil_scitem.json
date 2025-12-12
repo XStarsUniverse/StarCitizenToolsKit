@@ -1076,6 +1076,7 @@
         "grade": 2,
         "name": "Veil",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ASAS",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1089,17 +1090,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "Veil",
             "Description": "Item Type: Shield Generator\\nManufacturer: Ascension Astro\\nSize: 1\\nGrade: B\\nClass: Stealth\\n\\nAn advanced cooling system significantly reduces the heat produced by the Veil stealth shield generator. No other component in its class even comes close to rivaling its heat suppression technology.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Ascension Astro",
+                "Size": "1",
+                "Grade": "B",
+                "Class": "Stealth"
+            },
+            "DescriptionText": "An advanced cooling system significantly reduces the heat produced by the Veil stealth shield generator. No other component in its class even comes close to rivaling its heat suppression technology.",
             "Manufacturer": {
                 "Code": "ASAS",
-                "Name": "Ascension Astro"
+                "Name": "Ascension Astro",
+                "UUID": "abca0ae0-a819-4aeb-a1a7-f8f1d7e277cf"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 290
+                "Health": 290,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 4,
@@ -1136,6 +1157,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 110,
+                                "MinimumFraction": 1,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 1,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 250
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 1050,

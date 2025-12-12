@@ -266,6 +266,7 @@
         "grade": 3,
         "name": "Internal Tank",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.FuelTank.Fuel",
         "stdItem": {
@@ -279,15 +280,57 @@
             "Type": "FuelTank.Fuel",
             "Name": "Internal Tank",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady"
             ],
             "FuelTank": {
                 "Capacity": 0
+            },
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 400,
+                    "UnitName": "SCU",
+                    "SCU": 400
+                },
+                "InclusiveResources": [
+                    "de9f4d03-6b60-429d-9b26-9f2308bae973"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "de9f4d03-6b60-429d-9b26-9f2308bae973",
+                        "Weight": 1
+                    }
+                ]
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 100,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Storage",
+                                "Resource": "Fuel",
+                                "Rate": 10,
+                                "GeneratedResource": "Fuel",
+                                "GeneratedRate": 10,
+                                "Discharge": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

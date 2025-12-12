@@ -1635,6 +1635,7 @@
         "grade": 1,
         "name": "Lamb Tagine Combat Ration",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1f55bacf-8182-44ae-be1c-ca72c6f0cc03",
             "ClassName": "Food_sachet_uee_01_lamb_a",
@@ -1646,18 +1647,44 @@
             "Type": "Food.Sachet",
             "Name": "Lamb Tagine Combat Ration",
             "Description": "NDR: 80\\nEffects: Hypertrophic, Hypo-Metabolic, Cognitive Boosting\\n\\nA full meal combat ration specially formulated to provide complete high-performance nutrition for UEE Army personnel.",
+            "DescriptionData": {
+                "NDR": "80",
+                "Effects": "Hypertrophic, Hypo-Metabolic, Cognitive Boosting"
+            },
+            "DescriptionText": "A full meal combat ration specially formulated to provide complete high-performance nutrition for UEE Army personnel.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "sachet"
-            }
+                "NutritionalDensityRating": "80",
+                "Effects": [
+                    "Hypertrophic",
+                    "Hypo-Metabolic",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "sachet",
+                "ContainerTypeTag": "sachet",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

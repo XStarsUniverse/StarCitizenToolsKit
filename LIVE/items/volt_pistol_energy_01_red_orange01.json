@@ -9284,6 +9284,7 @@
         "grade": 1,
         "name": "Pulse \"Shubin\" Laser Pistol",
         "tags": "pistol",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.Weapon.Small",
         "stdItem": {
@@ -9297,9 +9298,19 @@
             "Type": "WeaponPersonal.Small",
             "Name": "Pulse \"Shubin\" Laser Pistol",
             "Description": "Manufacturer: Verified Offworld Laser Technologies\\nItem Type: Pistol\\nClass: Energy (Laser)\\n\\nBattery Size: 60\\nRate of Fire: 500 rpm (1000 rpm rapid)\\nEffective Range: 15m\\n\\nAttachments: Optics (S1), Underbarrel (S1)\\n\\nThe Pulse Laser Pistol is a fully automatic pistol intended for close quarter combat. VOLT designed the weapon with a unique capacitor that condenses the pistol's laser energy, increasing its rate of fire at the cost of greater inaccuracy and a higher risk of overheating. This special edition features Shubin branding.",
+            "DescriptionData": {
+                "Manufacturer": "Verified Offworld Laser Technologies",
+                "Item Type": "Pistol",
+                "Class": "Energy (Laser)",
+                "Size": "60",
+                "Effective Range": "15m",
+                "Attachments": "Optics (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "The Pulse Laser Pistol is a fully automatic pistol intended for close quarter combat. VOLT designed the weapon with a unique capacitor that condenses the pistol's laser energy, increasing its rate of fire at the cost of greater inaccuracy and a higher risk of overheating. This special edition features Shubin branding.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "e2787f3b-b892-4276-bb2e-eb2b4dc9666b"
             },
             "Tags": [
                 "pistol"
@@ -9308,39 +9319,72 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "RequiredTags": [
                         "volt_pistol_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "b76f9795-28fe-40a3-9a60-ffdbc4e8c713",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9399,14 +9443,21 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.6,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

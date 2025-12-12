@@ -577,6 +577,7 @@
         "grade": 1,
         "name": "Door",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "1a6113e2-cf54-47a0-9f6d-8149c7409e20",
@@ -588,7 +589,17 @@
             "Length": 0.15,
             "Type": "Cargo.UNDEFINED",
             "Name": "Door",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Open",
+                "Close"
+            ]
         }
     }
 }

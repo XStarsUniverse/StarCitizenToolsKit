@@ -1891,6 +1891,7 @@
         "grade": 1,
         "name": "Bibiana Shirt",
         "tags": "fio_shirt Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "FIO",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1904,9 +1905,11 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "Bibiana Shirt",
             "Description": "Part of their Essential Professional line, Fiore designed the Bibiana for those who want that retro look but with modern durability. The top features a refined pinpoint Oxford long sleeve shirt woven into a dark grey vest and suspenders adorned with gold clips as colorful accents. Additional eye-catching accessories include a black bow tie and sleeve garters.",
+            "DescriptionText": "Part of their Essential Professional line, Fiore designed the Bibiana for those who want that retro look but with modern durability. The top features a refined pinpoint Oxford long sleeve shirt woven into a dark grey vest and suspenders adorned with gold clips as colorful accents. Additional eye-catching accessories include a black bow tie and sleeve garters.",
             "Manufacturer": {
                 "Code": "FIO",
-                "Name": "Fiore"
+                "Name": "Fiore",
+                "UUID": "503b0974-5027-4c69-bce6-a38c42e87ebe"
             },
             "Tags": [
                 "fio_shirt",
@@ -1917,11 +1920,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1931,9 +1941,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

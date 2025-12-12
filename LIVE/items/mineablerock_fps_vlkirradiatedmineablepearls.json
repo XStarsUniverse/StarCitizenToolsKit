@@ -1413,6 +1413,7 @@
         "grade": 1,
         "name": "Irradiated Valakkar Hide",
         "tags": "Mineral",
+        "required_tags": "",
         "stdItem": {
             "UUID": "44ab70fa-e488-4aa7-b6db-202b0ac13af8",
             "ClassName": "MineableRock_FPS_VlkIrradiatedMineablePearls",
@@ -1424,6 +1425,12 @@
             "Type": "Misc.Mineable",
             "Name": "Irradiated Valakkar Hide",
             "Description": "Thick skin that the grows over a forming valakkar pearl.",
+            "DescriptionText": "Thick skin that the grows over a forming valakkar pearl.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Mineral"
             ],
@@ -1431,11 +1438,21 @@
                 {
                     "PortName": "pearlSlot",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Tags": [
                         "pearl"
                     ],
                     "Types": [
-                        "Misc"
+                        "Misc.Harvestable"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "Harvestable"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1444,6 +1461,31 @@
                 "Width": 0.25,
                 "Length": 0.25,
                 "Height": 0.25
+            },
+            "Interactions": [
+                "Store",
+                "Offhandstore",
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "272539c8-e211-4c82-8bd0-6ecaabbc9c10",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

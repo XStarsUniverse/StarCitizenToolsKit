@@ -672,6 +672,7 @@
         "grade": 1,
         "name": "Quantity",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SASU",
         "stdItem": {
             "UUID": "fc2314d7-ead4-4e2f-a879-0c0a91f74f28",
@@ -684,10 +685,18 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Quantity",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "SASU",
-                "Name": "Sakura Sun"
-            }
+                "Name": "Sakura Sun",
+                "UUID": "40c59850-8fb5-4a0e-ab61-7fd3871a632a"
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place"
+            ]
         }
     }
 }

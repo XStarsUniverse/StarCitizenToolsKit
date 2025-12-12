@@ -1868,6 +1868,7 @@
         "grade": 1,
         "name": "Chada Collar and Panniers Shale",
         "tags": "hdh_jacket Set_07 Texture_01 Color_15",
+        "required_tags": "",
         "manufacturer": "HDH",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1881,9 +1882,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Chada Collar and Panniers Shale",
             "Description": "Carrying Capacity: 400 \u00b5SCU\\n\\nNeed extra inventory? We've got you covered. Designed for hands-free carrying, the Chada Panniers by Habidash come with an adjustable strap that lets you securely attach them around your hips. Each set of panniers comes with a fashionable steel and leather gorget.",
+            "DescriptionData": {
+                "Carrying Capacity": "400 \u00b5SCU"
+            },
+            "DescriptionText": "Need extra inventory? We've got you covered. Designed for hands-free carrying, the Chada Panniers by Habidash come with an adjustable strap that lets you securely attach them around your hips. Each set of panniers comes with a fashionable steel and leather gorget.",
             "Manufacturer": {
                 "Code": "HDH",
-                "Name": "Habidash"
+                "Name": "Habidash",
+                "UUID": "70ce6432-3a1e-45a1-8179-fe30a3ee54dc"
             },
             "Tags": [
                 "hdh_jacket",
@@ -1895,11 +1901,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1909,6 +1922,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0004,
                 "unit": 6,
@@ -1924,6 +1946,10 @@
             "TemperatureResistance": {
                 "Minimum": 1,
                 "Maximum": 28
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

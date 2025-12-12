@@ -2651,6 +2651,7 @@
         "grade": 1,
         "name": "Helix I Mining Laser",
         "tags": "flightReady weaponMountUsable miningMount",
+        "required_tags": "miningMount",
         "manufacturer": "THCN",
         "classification": "Ship.Mining.Gun",
         "stdItem": {
@@ -2664,9 +2665,23 @@
             "Type": "WeaponMining.Gun",
             "Name": "Helix I Mining Laser",
             "Description": "Manufacturer: Thermyte Concern\\nItem Type: Mining Laser \\nSize: 1\\n\\nOptimal Range: 15m\\nMaximum Range: 45m\\n\\nMining Laser Power: 630 - 3150\\nExtraction Laser Power: 1850\\n\\nModule Slots: 2\\n\\nResistance: -30%\\nInert Material Level: -30%\\n\\nOptimal Charge Window Size: -40%\\n\\nTo some, the effective use of the Helix I has become a sign of a true mining professional. Thermyte Concern gave the laser impressive power that can bypass a deposit's resistance but also requires precision handling to hit the optimal charge window. Best deployed at close range, Helix I features two module slots so miners can tailor the laser to their liking.",
+            "DescriptionData": {
+                "Manufacturer": "Thermyte Concern",
+                "Item Type": "Mining Laser",
+                "Size": "1",
+                "Optimal Range": "15m",
+                "Maximum Range": "45m",
+                "Mining Laser Power": "630 - 3150",
+                "Extraction Laser Power": "1850",
+                "Module Slots": "2",
+                "Resistance": "-30%",
+                "Optimal Charge Window Size": "-40%"
+            },
+            "DescriptionText": "To some, the effective use of the Helix I has become a sign of a true mining professional. Thermyte Concern gave the laser impressive power that can bypass a deposit's resistance but also requires precision handling to hit the optimal charge window. Best deployed at close range, Helix I features two module slots so miners can tailor the laser to their liking.",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "flightReady",
@@ -2677,6 +2692,8 @@
                 {
                     "PortName": "BONE_ItemPort_Consumable_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable1"
@@ -2685,13 +2702,23 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "BONE_ItemPort_Consumable_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable2"
@@ -2700,15 +2727,33 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2718,8 +2763,37 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

@@ -988,6 +988,7 @@
         "grade": 1,
         "name": "Evidence",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "e48394f4-96ab-42a1-a3e0-b569124118a5",
@@ -1000,6 +1001,12 @@
             "Type": "Cargo.Small",
             "Name": "Evidence",
             "Description": "This box is specifically designed for use with evidence in order to help prevent tampering and properly ensure the chain of custody.",
+            "DescriptionText": "This box is specifically designed for use with evidence in order to help prevent tampering and properly ensure the chain of custody.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1007,6 +1014,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "91ad8b9e-426e-462a-a7f5-cf06eb79971a",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

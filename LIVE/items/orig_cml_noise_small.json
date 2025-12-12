@@ -1868,6 +1868,7 @@
         "grade": 1,
         "name": "Origin Jumpworks Noise Launcher",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ORIG",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -1881,9 +1882,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "Origin Jumpworks Noise Launcher",
             "Description": "Origin Jumpworks Noise Launcher",
+            "DescriptionText": "Origin Jumpworks Noise Launcher",
             "Manufacturer": {
                 "Code": "ORIG",
-                "Name": "Origin Jumpworks"
+                "Name": "Origin Jumpworks",
+                "UUID": "1e47a9ec-a3f0-431d-be0e-377712e1ed84"
             },
             "Ammunition": {
                 "UUID": "fba15492-1bee-4ef0-8efd-815e3c500ea9",
@@ -1899,7 +1902,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,

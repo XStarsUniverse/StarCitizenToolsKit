@@ -1458,6 +1458,7 @@
         "grade": 1,
         "name": "Allegro",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.QuantumDrive",
         "stdItem": {
             "UUID": "70163f66-522d-4161-824e-18eb08299258",
@@ -1470,15 +1471,38 @@
             "Type": "QuantumDrive.UNDEFINED",
             "Name": "Allegro",
             "Description": "Item Type: Quantum Drive\\nManufacturer: ArcCorp\u00a0\\nSize: 4\\nGrade: Bespoke\\nClass: Civilian\\n\\nDesigned specifically for the 890 Jump, the Allegro quantum drive blends ArcCorp's expertise with Origin's exceptionally high standards, making it the ideal companion for a luxury cruise through the stars.",
+            "DescriptionData": {
+                "Item Type": "Quantum Drive",
+                "Manufacturer": "ArcCorp",
+                "Size": "4",
+                "Grade": "Bespoke",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "Designed specifically for the 890 Jump, the Allegro quantum drive blends ArcCorp's expertise with Origin's exceptionally high standards, making it the ideal companion for a luxury cruise through the stars.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "hardpoint_Jump_Drive",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Flags": [
                         "dont_hide_entity"
                     ],
                     "Types": [
-                        "JumpDrive"
+                        "JumpDrive.JumpDrive"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "JumpDrive",
+                            "sub_types": [
+                                "JumpDrive"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1488,8 +1512,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 6.5,
+                "DecayRate": 3200,
+                "Maximum": 16000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 6700
+                "Health": 6700,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 2.5,
@@ -1512,6 +1547,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Engagequantumtravel",
+                "Disengagequantumtravel"
+            ],
             "PowerConnection": {
                 "PowerBase": 768,
                 "PowerDraw": 9600,
@@ -1526,6 +1565,59 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 10,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 10,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 41300
+                        }
+                    },
+                    {
+                        "Name": "Travelling",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 10,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "QuantumFuel",
+                                "Rate": 4.7e-5,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 10,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 41300
+                        }
+                    }
+                ]
             },
             "QuantumDrive": {
                 "JumpRange": 3.402823e+38,

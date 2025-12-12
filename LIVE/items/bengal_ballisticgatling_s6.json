@@ -4778,6 +4778,7 @@
         "grade": 1,
         "name": "Revenant Gatling",
         "tags": "BEHR BallisticGatling flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4791,9 +4792,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Revenant Gatling",
             "Description": "Manufacturer: Apocalypse Arms\\nItem Type: Ballistic Gatling\\nSize: 4\\n\\nIf it ain\u2019t broke, don\u2019t fix it. And if you want it broke, aim a Revenant at it. Solidly built on a foundation of centuries-old tech, Apocalypse Arms puts an innovative spin on battle-tested designs to create a rugged ballistic Gatling that can steadily hurtle death across the void. Though it\u2019s slow to spin up and cool down, the Revenant\u2019s dependability makes it a favorite for those expecting to find trouble.",
+            "DescriptionData": {
+                "Manufacturer": "Apocalypse Arms",
+                "Item Type": "Ballistic Gatling",
+                "Size": "4"
+            },
+            "DescriptionText": "If it ain't broke, don't fix it. And if you want it broke, aim a Revenant at it. Solidly built on a foundation of centuries-old tech, Apocalypse Arms puts an innovative spin on battle-tested designs to create a rugged ballistic Gatling that can steadily hurtle death across the void. Though it's slow to spin up and cool down, the Revenant's dependability makes it a favorite for those expecting to find trouble.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "BEHR",
@@ -4805,33 +4813,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "a4da0ade-47dd-4a9d-b1b6-3d66a1db67b9",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "cf7b01ad-9a1d-4fa7-88c2-1090072e9921",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "d0f8adfb-acb4-4704-b6d0-a587ed3cce40",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "68cde8c8-3b09-496c-b9c6-4153a18f4a7e",
                     "Uneditable": false
                 }
             ],
@@ -4856,8 +4908,37 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 16500
+                "Health": 16500,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

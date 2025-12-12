@@ -1867,6 +1867,7 @@
         "grade": 1,
         "name": "De Leon Shoes Black",
         "tags": "hwk_shoes Set_02 Color_01",
+        "required_tags": "",
         "manufacturer": "HWK",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1880,9 +1881,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "De Leon Shoes Black",
             "Description": "Hawksworth's De Leon take the classic cap toed Oxford design but incorporate a laceless slip-on design to create an exciting new addition to the world of formal footwear.",
+            "DescriptionText": "Hawksworth's De Leon take the classic cap toed Oxford design but incorporate a laceless slip-on design to create an exciting new addition to the world of formal footwear.",
             "Manufacturer": {
                 "Code": "HWK",
-                "Name": "Hawksworth's"
+                "Name": "Hawksworth's",
+                "UUID": "d7a8b196-8778-4e18-8c8c-38229eef01f1"
             },
             "Tags": [
                 "hwk_shoes",
@@ -1893,11 +1896,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1907,9 +1917,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

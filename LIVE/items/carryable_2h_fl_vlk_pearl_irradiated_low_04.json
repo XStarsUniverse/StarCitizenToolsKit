@@ -1072,6 +1072,7 @@
         "grade": 1,
         "name": "Irradiated Valakkar Pearl (Grade B)",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e738c605-8ef7-4238-8170-5ab0c4f9c15d",
             "ClassName": "Carryable_2H_FL_Vlk_Pearl_Irradiated_Low_04",
@@ -1083,11 +1084,23 @@
             "Type": "Misc.Harvestable",
             "Name": "Irradiated Valakkar Pearl (Grade B)",
             "Description": "The valakkar pearl is harvested from the skin of the valakkar. As the valakkar moves through its environment, a large piece of grit will sometimes penetrate its thick hide. If the grit is unable to be expelled on its own, the valakkar's skin will grow to encase it. Layers of organic matter will then coat the piece of grit, isolating it from the valakkar's vulnerable dermis, thus ensuring that it will not cause infection. These \"pearls\" can become substantial in size over time. Because the valakkar that grew this pearl was exposed to radiation over a long period of time, it has developed unusual properties.",
+            "DescriptionText": "The valakkar pearl is harvested from the skin of the valakkar. As the valakkar moves through its environment, a large piece of grit will sometimes penetrate its thick hide. If the grit is unable to be expelled on its own, the valakkar's skin will grow to encase it. Layers of organic matter will then coat the piece of grit, isolating it from the valakkar's vulnerable dermis, thus ensuring that it will not cause infection. These \"pearls\" can become substantial in size over time. Because the valakkar that grew this pearl was exposed to radiation over a long period of time, it has developed unusual properties.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

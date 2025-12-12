@@ -1869,6 +1869,7 @@
         "grade": 1,
         "name": "FSK-8 Combat Knife",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "UTFL",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1882,9 +1883,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "FSK-8 Combat Knife",
             "Description": "Manufacturer: UltiFlex\\nItem Type: Knife\\nClass: Melee\\n\\nSize: 16 cm\\n\\nThe FSK-8 Combat Knife from UltiFlex is as sparse a weapon as you can get. While many become enamored with dazzling tech of modern weaponry, UltiFlex has focused on making a simple effective combat tool. Featuring a balanced 1055 carbon steel blade honed to a razor's edge, this knife is capable of handling all the abuse you can throw at it.",
+            "DescriptionData": {
+                "Manufacturer": "UltiFlex",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "16 cm"
+            },
+            "DescriptionText": "The FSK-8 Combat Knife from UltiFlex is as sparse a weapon as you can get. While many become enamored with dazzling tech of modern weaponry, UltiFlex has focused on making a simple effective combat tool. Featuring a balanced 1055 carbon steel blade honed to a razor's edge, this knife is capable of handling all the abuse you can throw at it.",
             "Manufacturer": {
                 "Code": "UTFL",
-                "Name": "UltiFlex"
+                "Name": "UltiFlex",
+                "UUID": "da264d7b-755b-48a2-9580-4adc17ff7ad5"
             },
             "Tags": [
                 "knife"
@@ -1894,6 +1903,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

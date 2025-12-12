@@ -5689,6 +5689,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "1f05a4cd-cc0e-4fef-af9e-eeb5d70b50df",
             "ClassName": "Door_RN_RoomConnector_Exterior_MISC_Starlancer_TAC_Hangar",
@@ -5700,32 +5701,113 @@
             "Type": "Door.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "control_panel_a",
                     "Size": 10,
+                    "MinSize": 1,
+                    "MaxSize": 10,
                     "Tags": [
                         "Front"
                     ],
                     "Types": [
-                        "ControlPanel"
+                        "ControlPanel.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ControlPanel",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "control_panel_b",
                     "Size": 10,
+                    "MinSize": 0,
+                    "MaxSize": 10,
                     "Tags": [
                         "Back"
                     ],
                     "Types": [
-                        "ControlPanel"
+                        "ControlPanel.DoorPart"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "ControlPanel",
+                            "sub_types": [
+                                "DoorPart"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
             "Durability": {
-                "Health": 2000
+                "Health": 2000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Lock",
+                "Override",
+                "Stepthrough",
+                "Toggle",
+                "Unlock",
+                "Overrideclose",
+                "Opencomplete",
+                "Closecomplete",
+                "Opentrigger",
+                "Openself",
+                "Allowopen",
+                "Locktrigger",
+                "Unlocktrigger",
+                "Lockself",
+                "Unlockself",
+                "Openrequest",
+                "Closerequest",
+                "Closetrigger",
+                "Closeself",
+                "Allowclose",
+                "Gate_close",
+                "Set_pressurenormalized",
+                "Set_pressuredifferential",
+                "Setstate_powered",
+                "Setstate_unpowered",
+                "Setstate_blocked",
+                "Setstate_unblocked",
+                "Setstate_noaccess",
+                "Setstate_access",
+                "Pressurecycle",
+                "Pressurecyclecomplete",
+                "Set_airlockconnected"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 52,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

@@ -2006,6 +2006,7 @@
         "grade": 1,
         "name": "WorkLife Pants Blue",
         "tags": "scu_pants Set_01 Color_18",
+        "required_tags": "",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2019,9 +2020,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "WorkLife Pants Blue",
             "Description": "Carrying Capacity: 2K \u00b5SCU\\n\\nWith Stegman's, you know you're getting clothes made for workers, by workers. Featuring multiple external pockets with easy access tabs, WorkLife pants are rugged, functional and professional. Just like you.",
+            "DescriptionData": {
+                "Carrying Capacity": "2K \u00b5SCU"
+            },
+            "DescriptionText": "With Stegman's, you know you're getting clothes made for workers, by workers. Featuring multiple external pockets with easy access tabs, WorkLife pants are rugged, functional and professional. Just like you.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_pants",
@@ -2032,19 +2038,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2054,7 +2072,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2064,6 +2090,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.002,
                 "unit": 6,
@@ -2079,6 +2114,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 33
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

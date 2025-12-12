@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Iron (Ore)",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "74e6a101-3bd0-4fb1-990e-f0e70adbfc72",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Iron (Ore)",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 8,
+                    "UnitName": "SCU",
+                    "SCU": 8
+                },
+                "InclusiveGroups": [
+                    "9b28b2e4-7df3-43f3-a69a-d82b119e25bf"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "32c57a12-5de5-49b1-827a-9fd80278fbc4",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

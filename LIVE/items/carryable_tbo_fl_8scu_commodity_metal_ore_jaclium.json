@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Jaclium (Ore)",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "51e840e4-6b02-42bd-be46-af9a23a1ed4e",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Jaclium (Ore)",
             "Description": "A naturally occurring rare metal form of jahlium, it is used in the production of extremely strong alloys with incredible tensile strength. Originally confused with common jahlium when first discovered, the above average results when used lead to researchers to realize its value.",
+            "DescriptionText": "A naturally occurring rare metal form of jahlium, it is used in the production of extremely strong alloys with incredible tensile strength. Originally confused with common jahlium when first discovered, the above average results when used lead to researchers to realize its value.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 8,
+                    "UnitName": "SCU",
+                    "SCU": 8
+                },
+                "InclusiveGroups": [
+                    "9b28b2e4-7df3-43f3-a69a-d82b119e25bf"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "2c1e1693-4d19-446c-8224-ebad36feb618",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

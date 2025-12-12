@@ -808,6 +808,7 @@
         "grade": 1,
         "name": "Access",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "09b3a66a-6ccf-4c80-b750-2f82d5b34b3b",
@@ -820,10 +821,20 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Access",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
-            }
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
+            },
+            "Interactions": [
+                "Rear_component_door_left_open",
+                "Rear_component_door_left_close",
+                "Rear_component_door_right_open",
+                "Rear_component_door_right_close",
+                "Fuelfiller_door_open",
+                "Fuelfiller_door_close"
+            ]
         }
     }
 }

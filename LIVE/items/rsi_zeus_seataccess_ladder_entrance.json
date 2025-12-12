@@ -970,6 +970,7 @@
         "grade": 1,
         "name": "Access",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "87f7ad10-125b-4fe8-9296-30ca94ef1df9",
@@ -982,10 +983,20 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Access",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
-            }
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
+            },
+            "Interactions": [
+                "Ladderdeploy",
+                "Ladderretract",
+                "Ladderenter",
+                "Ladderexit",
+                "Opengate",
+                "Closegate"
+            ]
         }
     }
 }

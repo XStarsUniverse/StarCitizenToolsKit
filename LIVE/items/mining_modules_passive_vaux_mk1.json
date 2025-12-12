@@ -1994,6 +1994,7 @@
         "grade": 1,
         "name": "Vaux Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "SHIN",
         "stdItem": {
             "UUID": "586a6f24-c94f-4cfc-9370-0df8a5ed3fe2",
@@ -2006,9 +2007,17 @@
             "Type": "MiningModifier.Gun",
             "Name": "Vaux Module",
             "Description": "Manufacturer: Shubin Interstellar\\nItem Type: Mining Module (Passive)\\n\\nExtraction Laser Power: 115%\\n\\nOptimal Charge Rate: -20%\\n\\nThe Vaux Module from Shubin Interstellar reduces the charge rate when mining but makes extracting valuable ore faster.",
+            "DescriptionData": {
+                "Manufacturer": "Shubin Interstellar",
+                "Item Type": "Mining Module (Passive)",
+                "Extraction Laser Power": "115%",
+                "Optimal Charge Rate": "-20%"
+            },
+            "DescriptionText": "The Vaux Module from Shubin Interstellar reduces the charge rate when mining but makes extracting valuable ore faster.",
             "Manufacturer": {
                 "Code": "SHIN",
-                "Name": "Shubin Interstellar"
+                "Name": "Shubin Interstellar",
+                "UUID": "ab35f85f-919f-4457-8d58-4e885ea6c5c0"
             },
             "Tags": [
                 "miningConsumable",
@@ -2020,8 +2029,17 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

@@ -1669,6 +1669,7 @@
         "grade": 1,
         "name": "Seanut",
         "tags": "grub",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "032829bc-5eab-4fd5-81cd-95fa8e93eaef",
@@ -1681,9 +1682,16 @@
             "Type": "Food.Consumable",
             "Name": "Seanut",
             "Description": "NDR: 17\\nHEI: 07\\nEffects: None\\n\\nEasy to grow and care for, these tubular sea creatures have become a popular food in the outer reaches of systems. When eaten raw, seanuts have a chewy and crisp texture with a bright briny and nutty flavor.\\n",
+            "DescriptionData": {
+                "NDR": "17",
+                "HEI": "07",
+                "Effects": "None"
+            },
+            "DescriptionText": "Easy to grow and care for, these tubular sea creatures have become a popular food in the outer reaches of systems. When eaten raw, seanuts have a chewy and crisp texture with a bright briny and nutty flavor.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "grub"
@@ -1694,12 +1702,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "hotdog"
-            }
+                "NutritionalDensityRating": "17",
+                "HydrationEfficacyIndex": "07",
+                "Effects": [
+                    "None"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

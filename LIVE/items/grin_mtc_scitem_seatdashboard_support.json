@@ -11496,6 +11496,7 @@
         "grade": 1,
         "name": "TRGT. STATUS",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "2224702e-8c6a-49aa-a7ee-14f7329be8e3",
@@ -11508,22 +11509,42 @@
             "Type": "Seat.UNDEFINED",
             "Name": "TRGT. STATUS",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Ports": [
                 {
                     "PortName": "Screen_MFD_top",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Display"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Display"
+                        }
                     ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 400,
+                "Maximum": 2000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.1,
@@ -11546,6 +11567,70 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Openaccesspoints",
+                "Closeaccesspoints",
+                "Flight_ready",
+                "Dummyinteraction",
+                "Commsinteraction",
+                "Opencanopy",
+                "Closecanopy",
+                "Landinggear_deploy",
+                "Landinggear_retract",
+                "Coupled_setcoupled",
+                "Coupled_setdecoupled",
+                "Gsafe_setactive",
+                "Gsafe_setinactive",
+                "Esp_setactive",
+                "Esp_setinactive",
+                "Quantumspool_setactive",
+                "Quantumspool_setinactive",
+                "Quantumtravel_setactive",
+                "Quantumtravel_setinactive",
+                "Weaponcontroller_setactive",
+                "Weaponcontroller_setinactive",
+                "Gimbaltype_setfixed",
+                "Gimbaltype_setgimbal",
+                "Gimbaltype_setaimassist",
+                "Firepattern_setstaggered",
+                "Firepattern_setsynchronized",
+                "Piptype_setlead",
+                "Piptype_setlag",
+                "Landinggear_invalid",
+                "Selfdestruct_engage",
+                "Selfdestruct_disengage",
+                "Hailtarget_start",
+                "Hailtarget_stop",
+                "Sensors_on",
+                "Sensors_off",
+                "Scan_enable",
+                "Scan_disable",
+                "Shields_on",
+                "Shields_off",
+                "Missiles_armmissile",
+                "Missiles_disarmmissiles",
+                "Missiles_cyclemissiles",
+                "Missiles_firemissiles",
+                "Weapons_on",
+                "Weapons_off",
+                "Countermeasures_fire",
+                "Headlights_on",
+                "Headlights_off",
+                "Vtol_setactive",
+                "Vtol_setinactive",
+                "Proximityassist_setactive",
+                "Proximityassist_setinactive",
+                "Flighthud_invalid",
+                "Comms_acceptcall",
+                "Comms_declinecall",
+                "Ejection",
+                "Enterdefaultmode",
+                "Enterscanmode",
+                "Enterquantummode",
+                "Screendeploy",
+                "Screenretract",
+                "Exitseat"
+            ],
             "PowerConnection": {
                 "PowerBase": 1,
                 "PowerDraw": 1,
@@ -11560,6 +11645,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

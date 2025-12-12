@@ -2015,6 +2015,7 @@
         "grade": 1,
         "name": "Rust (Bottle)",
         "tags": "bottle_01 Stash_Water",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "01ebc178-d028-452b-8c9f-4cb9a91fd494",
@@ -2027,9 +2028,15 @@
             "Type": "Drink.Bottle",
             "Name": "Rust (Bottle)",
             "Description": "HEI: 07\\nEffects: Cognitive Impairment, Dehydrating\\n\\nRumored to be so potent that it can be used to strip rust off ship components, those who regularly drink this harsh, strong-tasting alcohol swear by it, claiming everything else tastes weak by comparison.",
+            "DescriptionData": {
+                "HEI": "07",
+                "Effects": "Cognitive Impairment, Dehydrating"
+            },
+            "DescriptionText": "Rumored to be so potent that it can be used to strip rust off ship components, those who regularly drink this harsh, strong-tasting alcohol swear by it, claiming everything else tastes weak by comparison.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01",
@@ -2041,12 +2048,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 1,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "07",
+                "Effects": [
+                    "Cognitive Impairment",
+                    "Dehydrating"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 1,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

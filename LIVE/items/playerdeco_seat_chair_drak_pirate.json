@@ -928,6 +928,7 @@
         "grade": 1,
         "name": "Salvaged Skull Lounge Chair",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "c483816f-1e03-4bf8-82a7-4dc63b928643",
@@ -940,15 +941,21 @@
             "Type": "Usable.Cargo",
             "Name": "Salvaged Skull Lounge Chair",
             "Description": "Ripped out of a busted ship and ready for lounging, this former cockpit seat has been tagged with a vivid skull print to make for an aggressive seating addition to your hideout.",
+            "DescriptionText": "Ripped out of a busted ship and ready for lounging, this former cockpit seat has been tagged with a vivid skull print to make for an aggressive seating addition to your hideout.",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

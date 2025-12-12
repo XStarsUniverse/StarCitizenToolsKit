@@ -1958,6 +1958,7 @@
         "grade": 1,
         "name": "Giotto Jacket Crusader Edition Teal",
         "tags": "fio_executive_jacket set_01 Color_06",
+        "required_tags": "",
         "manufacturer": "FIO",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1971,9 +1972,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Giotto Jacket Crusader Edition Teal",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nFiore elevates the typical suit jacket with the Giotto. Subtle and stylish flourishes include light lines running down the left lapel and a strip of accent fabric along the arm seams that connect across the back of the jacket. The end result is an elegant and inspired addition to any wardrobe.\\n\\nThe Crusader Edition was made specifically for employees of Crusader Industries.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "Fiore elevates the typical suit jacket with the Giotto. Subtle and stylish flourishes include light lines running down the left lapel and a strip of accent fabric along the arm seams that connect across the back of the jacket. The end result is an elegant and inspired addition to any wardrobe.\n\nThe Crusader Edition was made specifically for employees of Crusader Industries.",
             "Manufacturer": {
                 "Code": "FIO",
-                "Name": "Fiore"
+                "Name": "Fiore",
+                "UUID": "503b0974-5027-4c69-bce6-a38c42e87ebe"
             },
             "Tags": [
                 "fio_executive_jacket",
@@ -1984,11 +1990,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1998,6 +2011,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2013,6 +2035,10 @@
             "TemperatureResistance": {
                 "Minimum": 1,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -1587,6 +1587,7 @@
         "grade": 1,
         "name": "Tilapia Verde Burrito",
         "tags": "burrito",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "0f7ea96f-c501-4a35-b3e5-2066c3de469b",
@@ -1599,9 +1600,15 @@
             "Type": "Food.Junk",
             "Name": "Tilapia Verde Burrito",
             "Description": "NDR: 45\\nEffects: Hypertrophic, Hypo-Metabolic\\n\\nThis healthy and light  burrito features a tortilla wrapper filled with flakey fish in a bright herbal sauce.",
+            "DescriptionData": {
+                "NDR": "45",
+                "Effects": "Hypertrophic, Hypo-Metabolic"
+            },
+            "DescriptionText": "This healthy and light  burrito features a tortilla wrapper filled with flakey fish in a bright herbal sauce.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "burrito"
@@ -1612,12 +1619,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "45",
+                "Effects": [
+                    "Hypertrophic",
+                    "Hypo-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

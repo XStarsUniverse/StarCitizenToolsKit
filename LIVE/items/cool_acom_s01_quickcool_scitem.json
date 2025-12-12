@@ -922,6 +922,7 @@
         "grade": 4,
         "name": "QuikCool",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "ACOM",
         "classification": "Ship.Cooler",
         "stdItem": {
@@ -935,9 +936,18 @@
             "Type": "Cooler.UNDEFINED",
             "Name": "QuikCool",
             "Description": "Item Type: Cooler\\nManufacturer: ACOM\\nSize: 1\\nGrade: D\\nClass:\u00a0Competition\\n\\nThe QuikCool provides superior performance over other coolers in its class. This competition grade component from ACOM sacrifices stealth and some durability to be one of the most powerful entry-level coolers around.",
+            "DescriptionData": {
+                "Item Type": "Cooler",
+                "Manufacturer": "ACOM",
+                "Size": "1",
+                "Grade": "D",
+                "Class": "Competition"
+            },
+            "DescriptionText": "The QuikCool provides superior performance over other coolers in its class. This competition grade component from ACOM sacrifices stealth and some durability to be one of the most powerful entry-level coolers around.",
             "Manufacturer": {
                 "Code": "ACOM",
-                "Name": "ACOM"
+                "Name": "ACOM",
+                "UUID": "5d616e6f-3257-4d19-90c3-11ab974f12e7"
             },
             "Cooler": {
                 "CoolingRate": 228000,
@@ -949,8 +959,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 120
+                "Health": 120,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -987,6 +1008,31 @@
                 "OverclockPerformance": 0.05,
                 "PowerToEM": 8.25,
                 "DecayRateOfEM": 0.13
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "GeneratedResource": "Coolant",
+                                "GeneratedRate": 19.8,
+                                "MinimumFraction": 1,
+                                "NoOverGeneration": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 818,
+                            "IR": 5400
+                        }
+                    }
+                ]
             }
         }
     }

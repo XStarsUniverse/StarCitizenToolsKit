@@ -993,6 +993,7 @@
         "grade": 1,
         "name": "'Arrow' I Missile",
         "tags": "VNCL IR flightReady",
+        "required_tags": "",
         "manufacturer": "VNC",
         "classification": "Ship.Missile.Missile",
         "stdItem": {
@@ -1006,9 +1007,16 @@
             "Type": "Missile.Missile",
             "Name": "'Arrow' I Missile",
             "Description": "Manufacturer: Vanduul\\nTracking Signal: Infrared\\nSize: 1\\n\\nCommonly known by its military designation, the Arrow is a small infrared strike missile that has become a mainstay of the Vanduul armory.",
+            "DescriptionData": {
+                "Manufacturer": "Vanduul",
+                "Tracking Signal": "Infrared",
+                "Size": "1"
+            },
+            "DescriptionText": "Commonly known by its military designation, the Arrow is a small infrared strike missile that has become a mainstay of the Vanduul armory.",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
             "Tags": [
                 "VNCL",
@@ -1020,8 +1028,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 25
+                "Health": 25,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

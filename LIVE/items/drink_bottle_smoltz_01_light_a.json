@@ -2018,6 +2018,7 @@
         "grade": 1,
         "name": "Smoltz Light (Bottle)",
         "tags": "bottle_01 smoltz light_beer",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "0017de29-f080-4ae0-b2dc-e6dca13b287e",
@@ -2030,9 +2031,15 @@
             "Type": "Drink.Bottle",
             "Name": "Smoltz Light (Bottle)",
             "Description": "HEI: 18\\nEffects: Cognitive Impairment, Dehydrating\\n\\nCrafted from select rice and barley for a traditional flavor passed down by generations of brewmasters. That\u2019s the taste of Smoltz Light.",
+            "DescriptionData": {
+                "HEI": "18",
+                "Effects": "Cognitive Impairment, Dehydrating"
+            },
+            "DescriptionText": "Crafted from select rice and barley for a traditional flavor passed down by generations of brewmasters. That's the taste of Smoltz Light.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01",
@@ -2045,12 +2052,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 1,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "18",
+                "Effects": [
+                    "Cognitive Impairment",
+                    "Dehydrating"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 1,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

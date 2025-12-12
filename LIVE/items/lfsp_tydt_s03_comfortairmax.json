@@ -3263,6 +3263,7 @@
         "grade": 3,
         "name": "<= PLACEHOLDER =>",
         "tags": "EnergySource",
+        "required_tags": "",
         "manufacturer": "TYDT",
         "classification": "Ship.LifeSupportGenerator",
         "stdItem": {
@@ -3276,9 +3277,11 @@
             "Type": "LifeSupportGenerator.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "TYDT",
-                "Name": "Tyler Design & Tech"
+                "Name": "Tyler Design & Tech",
+                "UUID": "a2a97679-2a6e-4e89-80d8-439c88a01427"
             },
             "Tags": [
                 "EnergySource"
@@ -3287,6 +3290,8 @@
                 {
                     "PortName": "$slot_01",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "filter"
                     ],
@@ -3294,13 +3299,23 @@
                         "filter"
                     ],
                     "Types": [
-                        "Misc"
+                        "Misc.Utility"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "Utility"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$slot_02",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "filter"
                     ],
@@ -3308,13 +3323,23 @@
                         "filter"
                     ],
                     "Types": [
-                        "Misc"
+                        "Misc.Utility"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "Utility"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$slot_03",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "filter"
                     ],
@@ -3322,7 +3347,15 @@
                         "filter"
                     ],
                     "Types": [
-                        "Misc"
+                        "Misc.Utility"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc",
+                            "sub_types": [
+                                "Utility"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -3332,8 +3365,52 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1300
+                "Health": 1300,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Place"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "GeneratedResource": "LifeSupport",
+                                "GeneratedRate": 1.13,
+                                "MinimumFraction": 0.6666667,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 3,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 938
+                        }
+                    }
+                ]
             }
         }
     }

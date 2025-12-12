@@ -1705,6 +1705,7 @@
         "grade": 1,
         "name": "Carafi Noodles",
         "tags": "noodles",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "81af2e1b-7776-4142-bed4-be9c8c3789ce",
@@ -1717,9 +1718,15 @@
             "Type": "Food.Tin",
             "Name": "Carafi Noodles",
             "Description": "NDR: 35\\nEffects: Fatiguing, Hypometabolic\\n\\nThick starch noodles tossed with oil and pieces of carafi, an flavorless jelly, for extra nutrition. \\n",
+            "DescriptionData": {
+                "NDR": "35",
+                "Effects": "Fatiguing, Hypometabolic"
+            },
+            "DescriptionText": "Thick starch noodles tossed with oil and pieces of carafi, an flavorless jelly, for extra nutrition.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "noodles"
@@ -1730,12 +1737,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "tinCan"
-            }
+                "NutritionalDensityRating": "35",
+                "Effects": [
+                    "Fatiguing",
+                    "Hypometabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "tinCan",
+                "ContainerTypeTag": "tinCan",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

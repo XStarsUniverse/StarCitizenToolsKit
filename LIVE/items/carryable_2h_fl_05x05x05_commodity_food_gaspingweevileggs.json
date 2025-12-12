@@ -1290,6 +1290,7 @@
         "grade": 1,
         "name": "Gasping Weevil Eggs",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "3b46d984-2422-4d79-81cb-a855ba01c6d9",
@@ -1302,6 +1303,12 @@
             "Type": "Cargo.Small",
             "Name": "Gasping Weevil Eggs",
             "Description": "The eggs of this small beetle are commonly held to be an aphrodisiac, but when allowed to hatch the weevils themselves will eat through sealants used in space station construction. Transport of the insect or its eggs is banned in the UEE.",
+            "DescriptionText": "The eggs of this small beetle are commonly held to be an aphrodisiac, but when allowed to hatch the weevils themselves will eat through sealants used in space station construction. Transport of the insect or its eggs is banned in the UEE.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1311,7 +1318,31 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 4
+                "Health": 4,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "3871740a-f82f-445d-a2e5-8163d1405733",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

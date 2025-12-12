@@ -4877,6 +4877,7 @@
         "grade": 1,
         "name": "FL-11 Cannon",
         "tags": "KRON LaserCannon flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "KRON",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4890,9 +4891,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "FL-11 Cannon",
             "Description": "Manufacturer: Kroneg\\nItem Type: Laser Cannon\\nSize: 1\\n\\nDeliver massive damage from a distance with Kroneg's FL line of laser cannons. The FL-11 might shoot slow but provides considerable firepower for a size one weapon.",
+            "DescriptionData": {
+                "Manufacturer": "Kroneg",
+                "Item Type": "Laser Cannon",
+                "Size": "1"
+            },
+            "DescriptionText": "Deliver massive damage from a distance with Kroneg's FL line of laser cannons. The FL-11 might shoot slow but provides considerable firepower for a size one weapon.",
             "Manufacturer": {
                 "Code": "KRON",
-                "Name": "Kroneg"
+                "Name": "Kroneg",
+                "UUID": "2a64f92e-8f6d-47ac-a6ed-643465e91d4b"
             },
             "Tags": [
                 "KRON",
@@ -4904,33 +4912,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "aca75369-d3d4-439e-a34e-a2ab6936e637",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "18908398-4f9d-44c6-90f4-243a3e636fe9",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "46481c5e-1b4c-46cc-9fc0-995092216993",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "8cca33e2-1618-4335-ad7a-012db8c9dfa5",
                     "Uneditable": false
                 }
             ],
@@ -4955,8 +5007,37 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 550
+                "Health": 550,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.9,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

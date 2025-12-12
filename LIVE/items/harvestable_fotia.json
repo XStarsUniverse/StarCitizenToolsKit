@@ -1524,6 +1524,7 @@
         "grade": 1,
         "name": "Fotia Seedpod",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "18dd9c97-e5eb-42fd-9266-1bb4255c532c",
             "ClassName": "Harvestable_Fotia",
@@ -1535,13 +1536,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Fotia Seedpod",
             "Description": "The fotia scrub relies on solar flares for its reproduction. Rather than having traditional stamen and pollen, it allows radiation from flares to mutate its genetics before releasing its seedpod. Some enterprising individuals seek out and collect the seedpods because of their natural radiological properties that can be utilized in various ways.",
+            "DescriptionText": "The fotia scrub relies on solar flares for its reproduction. Rather than having traditional stamen and pollen, it allows radiation from flares to mutate its genetics before releasing its seedpod. Some enterprising individuals seek out and collect the seedpods because of their natural radiological properties that can be utilized in various ways.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 600,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.0006
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "def044a7-a56a-4f99-a497-ef6022113922",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

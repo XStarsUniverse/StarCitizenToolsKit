@@ -9422,6 +9422,7 @@
         "grade": 1,
         "name": "Gallant \"Stormfall\" Rifle",
         "tags": "stocked klwe_rifle_energy_01 rifle",
+        "required_tags": "",
         "manufacturer": "KLA",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -9435,9 +9436,20 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Gallant \"Stormfall\" Rifle",
             "Description": "Manufacturer: Klaus & Werner\\nItem Type: Assault Rifle\\nClass: Energy (Laser)\\n\\nBattery Size: 45\\nRate Of Fire: 450 rpm\\nEffective Range: 50 m\\n\\nAttachments: Optics (S2), Barrel (S2), Underbarrel (S2)\\n\\nDependable assault weapons never go out of style. Klaus & Werner maintains that tradition by unveiling the Gallant. This energy-based assault rifle is capable of providing accurate and sustained fire at targets up to medium range, while its high-capacity power system allows operators to fire considerably more shots per battery.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Item Type": "Assault Rifle",
+                "Class": "Energy (Laser)",
+                "Size": "45",
+                "Rate Of Fire": "450 rpm",
+                "Effective Range": "50 m",
+                "Attachments": "Optics (S2), Barrel (S2), Underbarrel (S2)"
+            },
+            "DescriptionText": "Dependable assault weapons never go out of style. Klaus & Werner maintains that tradition by unveiling the Gallant. This energy-based assault rifle is capable of providing accurate and sustained fire at targets up to medium range, while its high-capacity power system allows operators to fire considerably more shots per battery.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "stocked",
@@ -9448,6 +9460,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "klwe_rifle_energy_01"
                     ],
@@ -9455,24 +9469,45 @@
                         "klwe_rifle_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "0988e9ce-5f5d-4eb8-83a7-dc70f187579d",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "barrel_attach",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory",
                         "energy_barrel"
@@ -9482,24 +9517,44 @@
                         "energy_attach"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9558,14 +9613,21 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

@@ -1882,6 +1882,7 @@
         "grade": 1,
         "name": "Wan Shoes",
         "tags": "ops_shoes Set_02 Color_01",
+        "required_tags": "",
         "manufacturer": "OPS",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1895,9 +1896,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Wan Shoes",
             "Description": "The Wan are synthetic leather loafers that perfectly balance a classic but modern style. Equally appropriate for work or casual wear, OpalSky designed these supremely comfortable slip-ons with an anti-scuff coating so there's no need for a polish and shine to keep them looking pristine.",
+            "DescriptionText": "The Wan are synthetic leather loafers that perfectly balance a classic but modern style. Equally appropriate for work or casual wear, OpalSky designed these supremely comfortable slip-ons with an anti-scuff coating so there's no need for a polish and shine to keep them looking pristine.",
             "Manufacturer": {
                 "Code": "OPS",
-                "Name": "OpalSky"
+                "Name": "OpalSky",
+                "UUID": "6f5af1a4-a50d-41e5-8bb0-c1acd89d4b9e"
             },
             "Tags": [
                 "ops_shoes",
@@ -1908,11 +1911,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1922,9 +1932,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

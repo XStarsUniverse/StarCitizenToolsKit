@@ -1790,6 +1790,7 @@
         "grade": 1,
         "name": "Flight Recorder",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "dd3df180-9aa4-4ee8-adaf-29f934674505",
@@ -1802,6 +1803,12 @@
             "Type": "Cargo.Small",
             "Name": "Flight Recorder",
             "Description": "Device used to record a vehicle's final moments during an attack or accident.",
+            "DescriptionText": "Device used to record a vehicle's final moments during an attack or accident.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1809,7 +1816,12 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ]
         }
     }
 }

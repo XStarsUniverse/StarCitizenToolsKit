@@ -1814,6 +1814,7 @@
         "grade": 1,
         "name": "Shoyu Lapsha",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "cd3138d2-674b-4663-bb06-73b3b710de55",
@@ -1826,14 +1827,22 @@
             "Type": "Food.Box",
             "Name": "Shoyu Lapsha",
             "Description": "NDR: 40\\nEffects: Dehydrating, Hyper-Metabolic\\n\\nA soy sauce based home-style chicken noodles. Perfect for warming up those cold berths.",
+            "DescriptionData": {
+                "NDR": "40",
+                "Effects": "Dehydrating, Hyper-Metabolic"
+            },
+            "DescriptionText": "A soy sauce based home-style chicken noodles. Perfect for warming up those cold berths.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Ports": [
                 {
                     "PortName": "cutlery_chopsticks_set_1_a",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -1843,12 +1852,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": ""
-            }
+                "NutritionalDensityRating": "40",
+                "Effects": [
+                    "Dehydrating",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerTypeTag": "",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -521,6 +521,7 @@
         "grade": 1,
         "name": "Cutlass Flashfire Specialty Mount",
         "tags": "fixedMount flightReady",
+        "required_tags": "DRAK_Cutlass_Base",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "06056515-2d92-4697-a432-0c1e158bacff",
@@ -533,9 +534,11 @@
             "Type": "TurretBase.MannedTurret",
             "Name": "Cutlass Flashfire Specialty Mount",
             "Description": "Cutlass Flashfire Specialty Mount Description",
+            "DescriptionText": "Cutlass Flashfire Specialty Mount Description",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "fixedMount",
@@ -545,11 +548,21 @@
                 {
                     "PortName": "hardpoint_size_4",
                     "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
                     "Flags": [
                         "top"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -560,7 +573,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 400
+                "Health": 400,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

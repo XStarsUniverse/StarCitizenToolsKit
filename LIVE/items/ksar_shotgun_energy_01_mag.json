@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "Devastator Shotgun Battery (12 cap)",
         "tags": "ksar_shotgun_energy_01",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Devastator Shotgun Battery (12 cap)",
             "Description": "Item Type: Battery\\nCapacity: 12\\n\\nThis high-voltage plasma capacitor allows the Kastak Arms Devastator shotgun to fire twelve standard shots, or fewer over-charged shots.\u00a0",
+            "DescriptionData": {
+                "Item Type": "Battery",
+                "Capacity": "12"
+            },
+            "DescriptionText": "This high-voltage plasma capacitor allows the Kastak Arms Devastator shotgun to fire twelve standard shots, or fewer over-charged shots.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "ksar_shotgun_energy_01"
@@ -1959,7 +1966,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

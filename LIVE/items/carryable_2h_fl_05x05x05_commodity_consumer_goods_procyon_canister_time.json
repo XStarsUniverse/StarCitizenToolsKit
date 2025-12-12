@@ -2813,6 +2813,7 @@
         "grade": 1,
         "name": "Zeta-Prolanide",
         "tags": "MissionQuestItem TimeCage",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "8307759d-b418-49c9-b161-44dec27f2386",
@@ -2825,6 +2826,12 @@
             "Type": "Cargo.Small",
             "Name": "Zeta-Prolanide",
             "Description": "This chemical is an industrial reactant that has found widespread use neutralizing irradiated materials. Because of how volatile it is, it must be kept in an electrically charged state or else a rapid exothermic reaction may occur before desired.",
+            "DescriptionText": "This chemical is an industrial reactant that has found widespread use neutralizing irradiated materials. Because of how volatile it is, it must be kept in an electrically charged state or else a rapid exothermic reaction may occur before desired.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem",
                 "TimeCage"
@@ -2833,6 +2840,8 @@
                 {
                     "PortName": "screen",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -2842,7 +2851,40 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 45
+                "Health": 45,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Locked",
+                "Unlocked"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SCentiCargoUnit",
+                    "Value": 1,
+                    "UnitName": "cSCU",
+                    "SCU": 0.01
+                },
+                "InclusiveResources": [
+                    "1396faad-eb0c-4ed1-be34-571ca7ca159e"
+                ],
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "1396faad-eb0c-4ed1-be34-571ca7ca159e",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

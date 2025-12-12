@@ -995,6 +995,7 @@
         "grade": 1,
         "name": "Nova Pyrotechnica Venom Rocket",
         "tags": "flightReady NOVA_Rocket",
+        "required_tags": "NOVA_Rocket",
         "manufacturer": "NOVP",
         "classification": "Ship.Missile.Rocket",
         "stdItem": {
@@ -1008,9 +1009,11 @@
             "Type": "Missile.Rocket",
             "Name": "Nova Pyrotechnica Venom Rocket",
             "Description": "Nova Pyrotechnica Venom Rocket",
+            "DescriptionText": "Nova Pyrotechnica Venom Rocket",
             "Manufacturer": {
                 "Code": "NOVP",
-                "Name": "Nova Pyrotechnica"
+                "Name": "Nova Pyrotechnica",
+                "UUID": "67fd3077-ee8c-4a7c-8bad-91500b2a9509"
             },
             "Tags": [
                 "flightReady",
@@ -1021,8 +1024,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

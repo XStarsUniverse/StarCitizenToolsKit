@@ -928,6 +928,7 @@
         "grade": 1,
         "name": "RSI Ship Arm Chair",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "stdItem": {
             "UUID": "03a1874b-98ae-4637-873d-90278e05d577",
@@ -940,15 +941,21 @@
             "Type": "Usable.Cargo",
             "Name": "RSI Ship Arm Chair",
             "Description": "Chair Decoration",
+            "DescriptionText": "Chair Decoration",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

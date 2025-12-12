@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "PC2 Dual S3 Mount",
         "tags": "$anvl_asgard",
+        "required_tags": "anvl_asgard",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "500a82b0-3c76-443d-b302-1b0ccf15071f",
@@ -885,9 +886,11 @@
             "Type": "Turret.GunTurret",
             "Name": "PC2 Dual S3 Mount",
             "Description": "PC2 Dual S3 Mount",
+            "DescriptionText": "PC2 Dual S3 Mount",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "$anvl_asgard"
@@ -896,22 +899,42 @@
                 {
                     "PortName": "hardpoint_left",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "Turret"
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_right",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "Turret"
+                        "Turret.GunTurret"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Turret",
+                            "sub_types": [
+                                "GunTurret"
+                            ]
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -922,7 +945,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

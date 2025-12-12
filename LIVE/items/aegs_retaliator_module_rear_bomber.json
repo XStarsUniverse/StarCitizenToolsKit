@@ -7984,6 +7984,7 @@
         "grade": 3,
         "name": "Retaliator Torpedo Rear Module",
         "tags": "AEGS_Retaliator_Module_Rear",
+        "required_tags": "AEGS_Retaliator_Module_Rear",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "130ea15f-d075-403d-89c9-60d303fc25f0",
@@ -7996,9 +7997,11 @@
             "Type": "Module.UNDEFINED",
             "Name": "Retaliator Torpedo Rear Module",
             "Description": "Standard equipment for most UEE military Retaliators, this rear module can carry 2x S9 torpedoes.",
+            "DescriptionText": "Standard equipment for most UEE military Retaliators, this rear module can carry 2x S9 torpedoes.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Retaliator_Module_Rear"
@@ -8007,23 +8010,40 @@
                 {
                     "PortName": "hardpoint_module_oc",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "0d8dc578-3099-42ab-99ca-e9d3131e4048",
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_torpedo_launcher_rear",
                     "Size": 9,
+                    "MinSize": 9,
+                    "MaxSize": 9,
                     "Flags": [
                         "$uneditable",
                         "lower"
                     ],
                     "Types": [
-                        "MissileLauncher"
+                        "MissileLauncher.MissileRack"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MissileLauncher",
+                            "sub_types": [
+                                "MissileRack"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "2a1bedaa-53e5-4059-b979-275ac50eb4d5",
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_rear_bay_door",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "3157a45d-c6a0-4704-a776-12b3feccce15",
                     "Uneditable": false
                 }
             ],
@@ -8032,8 +8052,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.5,
@@ -8080,6 +8111,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

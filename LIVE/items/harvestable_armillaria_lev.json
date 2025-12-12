@@ -1469,6 +1469,7 @@
         "grade": 1,
         "name": "Miner's Horn",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "332b51c6-d1da-476f-960c-f76154c0cf5f",
             "ClassName": "Harvestable_Armillaria_Lev",
@@ -1480,13 +1481,40 @@
             "Type": "Misc.Harvestable",
             "Name": "Miner's Horn",
             "Description": "First discovered in the sewer lines at the QV Mining Station built into the Delemar asteroid in Nyx, this quick growing fungus has become a useful manufacturing component for the settlers of Levski thanks to the strong mycelium fibers that can be dried and used in a variety of ways.",
+            "DescriptionText": "First discovered in the sewer lines at the QV Mining Station built into the Delemar asteroid in Nyx, this quick growing fungus has become a useful manufacturing component for the settlers of Levski thanks to the strong mycelium fibers that can be dried and used in a variety of ways.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1000,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.001
+                }
             }
         }
     }

@@ -1176,6 +1176,7 @@
         "grade": 1,
         "name": "Book",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "562099e9-2f9b-45cc-94d3-39b96f1e5e10",
             "ClassName": "un_literature_book_3_e",
@@ -1187,11 +1188,24 @@
             "Type": "Misc.UNDEFINED",
             "Name": "Book",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

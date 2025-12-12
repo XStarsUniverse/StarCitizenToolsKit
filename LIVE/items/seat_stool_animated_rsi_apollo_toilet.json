@@ -1332,6 +1332,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "4c271ea8-5b37-cf76-cc4c-8837cd8ab7a6",
             "ClassName": "Seat_Stool_Animated_RSI_Apollo_Toilet",
@@ -1342,7 +1343,21 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Exit",
+                "Type",
+                "Order",
+                "Drink",
+                "Open",
+                "Close"
+            ]
         }
     }
 }

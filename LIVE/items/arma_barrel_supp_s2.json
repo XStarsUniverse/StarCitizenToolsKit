@@ -1583,6 +1583,7 @@
         "grade": 1,
         "name": "Tacit Suppressor2",
         "tags": "FPS_Barrel ballistic_attach energy_attach",
+        "required_tags": "",
         "manufacturer": "ARMA",
         "classification": "Ship.WeaponAttachment.Barrel",
         "stdItem": {
@@ -1596,9 +1597,17 @@
             "Type": "WeaponAttachment.Barrel",
             "Name": "Tacit Suppressor2",
             "Description": "Manufacturer: ArmaMod\\nType: Suppressor\\nAttachment Point: Barrel\\nSize: 2\\n\\nDamage: -8%\\nAudible Range: -60%\\n\\nStrike silently with the Tacit Supressor2. ArmaMod uses a proprietary ceramic coating inside the suppressor to ensure the sound of gunfire remains minimal.",
+            "DescriptionData": {
+                "Manufacturer": "ArmaMod",
+                "Type": "Suppressor",
+                "Attachment Point": "Barrel",
+                "Size": "2"
+            },
+            "DescriptionText": "Strike silently with the Tacit Supressor2. ArmaMod uses a proprietary ceramic coating inside the suppressor to ensure the sound of gunfire remains minimal.",
             "Manufacturer": {
                 "Code": "ARMA",
-                "Name": "ArmaMod"
+                "Name": "ArmaMod",
+                "UUID": "f2ca879c-deb6-49bf-a4b1-dc3a9cf91e7a"
             },
             "Tags": [
                 "FPS_Barrel",
@@ -1609,7 +1618,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

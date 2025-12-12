@@ -1191,6 +1191,7 @@
         "grade": 1,
         "name": "Glacis",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1204,17 +1205,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "Glacis",
             "Description": "Item Type: Shield Generator\\nManufacturer: Basilisk\\nSize: 4\\nGrade: Bespoke\\nClass: Industrial\\n\\nOrigin turned to the experts at Basilisk to build a bespoke shield generator for the 890 Jump. The Glacis blends centuries of cutting edge innovation to produce a strong and stable shield capable of defending the valuable ship and passengers aboard.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Basilisk",
+                "Size": "4",
+                "Grade": "Bespoke",
+                "Class": "Industrial"
+            },
+            "DescriptionText": "Origin turned to the experts at Basilisk to build a bespoke shield generator for the 890 Jump. The Glacis blends centuries of cutting edge innovation to produce a strong and stable shield capable of defending the valuable ship and passengers aboard.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 9100
+                "Health": 9100,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 4.5,
@@ -1251,6 +1272,36 @@
                 "OverclockPerformance": 0.3,
                 "PowerToEM": 1.75,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 6,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 52400,
+                                "MinimumFraction": 0.8333333,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 6,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 2970
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 1026000,

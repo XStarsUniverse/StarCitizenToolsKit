@@ -1873,6 +1873,7 @@
         "grade": 1,
         "name": "Tona Shoes Dark Red",
         "tags": "r6p_shoes Set_02 Color_13",
+        "required_tags": "",
         "manufacturer": "R6P",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -1886,9 +1887,11 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "Tona Shoes Dark Red",
             "Description": "Perfect for hiking or fieldwork, the Tona from R6 Pro is a low-top sneaker built out of breathable Cheofreme materials which not only provide extra protection against impacts, but keep your feet dry.",
+            "DescriptionText": "Perfect for hiking or fieldwork, the Tona from R6 Pro is a low-top sneaker built out of breathable Cheofreme materials which not only provide extra protection against impacts, but keep your feet dry.",
             "Manufacturer": {
                 "Code": "R6P",
-                "Name": "R6 Pro"
+                "Name": "R6 Pro",
+                "UUID": "1ddcadf0-7bb0-4fa9-94f0-6af19432631c"
             },
             "Tags": [
                 "r6p_shoes",
@@ -1899,11 +1902,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1913,9 +1923,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

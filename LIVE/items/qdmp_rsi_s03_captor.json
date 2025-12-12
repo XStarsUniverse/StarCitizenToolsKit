@@ -2013,6 +2013,7 @@
         "grade": 3,
         "name": "Captor QD",
         "tags": "flightReady ",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.QuantumInterdictionGenerator",
         "stdItem": {
@@ -2026,15 +2027,24 @@
             "Type": "QuantumInterdictionGenerator.UNDEFINED",
             "Name": "Captor QD",
             "Description": "Item Type: Quantum Dampener\\nManufacturer: RSI\\nSize: 3\\n\\nDesigned by Roberts Space Industries in partnership with Mirai exclusively for the Guardian QI, the carefully crafted Captor Quantum Dampener generates a field that prevents quantum drive activation.\\n",
+            "DescriptionData": {
+                "Item Type": "Quantum Dampener",
+                "Manufacturer": "RSI",
+                "Size": "3"
+            },
+            "DescriptionText": "Designed by Roberts Space Industries in partnership with Mirai exclusively for the Guardian QI, the carefully crafted Captor Quantum Dampener generates a field that prevents quantum drive activation.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "flightReady"
             ],
             "Durability": {
-                "Health": 1100
+                "Health": 1100,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 2.3,
@@ -2057,6 +2067,12 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Maindeviceswitchon",
+                "Maindeviceswitchoff",
+                "Setjammerswitchon",
+                "Setjammerswitchoff"
+            ],
             "PowerConnection": {
                 "PowerBase": 500,
                 "PowerDraw": 1100,
@@ -2071,6 +2087,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 3,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "QuantumInterdiction": {
                 "basePowerDrawFraction": 0.2,

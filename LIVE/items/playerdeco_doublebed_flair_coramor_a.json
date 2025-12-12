@@ -2448,6 +2448,7 @@
         "grade": 1,
         "name": "Heartseeker Double Bed",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "985e9b52-e12b-40c6-a186-ac5e4e101c18",
             "ClassName": "PlayerDeco_DoubleBed_Flair_Coramor_a",
@@ -2459,21 +2460,36 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Heartseeker Double Bed",
             "Description": "With a luxurious bedspread featuring the iconic image of a spacesuit clad pilot that can be found on the Anvil Hornet Heartseeker, this opulent bed is framed by a red velvet, heart-shaped headboard that is sure to make every night a bit more pleasurable.",
+            "DescriptionText": "With a luxurious bedspread featuring the iconic image of a spacesuit clad pilot that can be found on the Anvil Hornet Heartseeker, this opulent bed is framed by a red velvet, heart-shaped headboard that is sure to make every night a bit more pleasurable.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "Mattress",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Tags": [
                         "Sleep"
                     ],
                     "Types": [
                         "Seat"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Seat"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Pillow",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Uneditable": false
                 }
             ],
@@ -2481,7 +2497,14 @@
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
-            }
+            },
+            "Interactions": [
+                "Liedown",
+                "Sit",
+                "Exit",
+                "Sleep",
+                "Situp"
+            ]
         }
     }
 }

@@ -999,6 +999,7 @@
         "grade": 1,
         "name": "@item_NameMISL_S09_CS_TALN_Argos_2",
         "tags": "TALN CS flightReady",
+        "required_tags": "",
         "manufacturer": "TALN",
         "classification": "Ship.Missile.Torpedo",
         "stdItem": {
@@ -1012,9 +1013,11 @@
             "Type": "Missile.Torpedo",
             "Name": "@item_NameMISL_S09_CS_TALN_Argos_2",
             "Description": "@item_DescMISL_S09_CS_TALN_Argos_2",
+            "DescriptionText": "@item_DescMISL_S09_CS_TALN_Argos_2",
             "Manufacturer": {
                 "Code": "TALN",
-                "Name": "Talon"
+                "Name": "Talon",
+                "UUID": "587fcede-4fe9-4fb4-85ec-124abc8542b0"
             },
             "Tags": [
                 "TALN",
@@ -1026,8 +1029,19 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 667
+                "Health": 667,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Missile": {
                 "Damage": {

@@ -5065,6 +5065,7 @@
         "grade": 1,
         "name": "Sledge III Mass Driver Cannon",
         "tags": "KLWE MassDriver flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "KLA",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -5078,9 +5079,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Sledge III Mass Driver Cannon",
             "Description": "Manufacturer: Klaus & Werner\\nItem Type: Mass Driver Cannon\\nSize: 3\\n\\nThe Sledge III is the size three variant of Klaus & Werner's popular mass driver cannon series. Though slow to fire, the weapon successfully blends the company's philosophy of simple design with cutting edge railgun technology to fire ballistic projectiles with surgical precision at range.",
+            "DescriptionData": {
+                "Manufacturer": "Klaus & Werner",
+                "Item Type": "Mass Driver Cannon",
+                "Size": "3"
+            },
+            "DescriptionText": "The Sledge III is the size three variant of Klaus & Werner's popular mass driver cannon series. Though slow to fire, the weapon successfully blends the company's philosophy of simple design with cutting edge railgun technology to fire ballistic projectiles with surgical precision at range.",
             "Manufacturer": {
                 "Code": "KLA",
-                "Name": "Klaus & Werner"
+                "Name": "Klaus & Werner",
+                "UUID": "1aa076d5-ac29-4c61-a905-d3ea39cf167a"
             },
             "Tags": [
                 "KLWE",
@@ -5092,33 +5100,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "9771e843-52f7-45df-8911-152d0513a8ed",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "eb5e4b66-2b7f-4d7d-a4ab-d3298a34c09d",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "06391919-f026-4e93-9acd-31dc6d7b72a8",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "c69ad780-94d8-49ba-9cc6-68e307c539a8",
                     "Uneditable": false
                 }
             ],
@@ -5143,8 +5195,37 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 3050
+                "Health": 3050,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

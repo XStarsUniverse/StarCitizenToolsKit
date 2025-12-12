@@ -4756,6 +4756,7 @@
         "grade": 1,
         "name": "Tarantula GT-870 Mark 2 Cannon",
         "tags": "GATS BallisticCannon flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "GAT",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4769,9 +4770,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Tarantula GT-870 Mark 2 Cannon",
             "Description": "Manufacturer: Gallenson Tactical Systems\\nItem Type: Ballistic Cannon\\nSize: 2\\n\\nFed by Gallenson Tactical\u2019s patented SpinGlide drum ammunition system, the Tarantula GT-870 Mk2 can smoothly and accurately deliver a consistent stream of ballistic shells. Though it only has a moderate rate of fire, its trustworthy durability makes it a dependable addition to any fight.",
+            "DescriptionData": {
+                "Manufacturer": "Gallenson Tactical Systems",
+                "Item Type": "Ballistic Cannon",
+                "Size": "2"
+            },
+            "DescriptionText": "Fed by Gallenson Tactical's patented SpinGlide drum ammunition system, the Tarantula GT-870 Mk2 can smoothly and accurately deliver a consistent stream of ballistic shells. Though it only has a moderate rate of fire, its trustworthy durability makes it a dependable addition to any fight.",
             "Manufacturer": {
                 "Code": "GAT",
-                "Name": "Gallenson Tactical Systems"
+                "Name": "Gallenson Tactical Systems",
+                "UUID": "a834198a-3465-4b02-86a5-887e922ec06d"
             },
             "Tags": [
                 "GATS",
@@ -4783,33 +4791,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "a2dac8c7-296b-4960-ac91-b0431bc9f824",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "4a9f9853-49b5-4b00-96e7-86ae9291b6c8",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "2c1502e1-138c-443c-85d2-2ad0a326ba28",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "a736f0bf-155b-4c7f-988d-902a51096759",
                     "Uneditable": false
                 }
             ],
@@ -4834,8 +4886,37 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

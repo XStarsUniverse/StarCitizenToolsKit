@@ -2003,6 +2003,7 @@
         "grade": 1,
         "name": "Calister Pants",
         "tags": "hdh_pants Set_04 Texture_01 Color_01",
+        "required_tags": "",
         "manufacturer": "HDH",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2016,9 +2017,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Calister Pants",
             "Description": "Carrying Capacity: 1000 \u00b5SCU\\n\\nThe Calister Pants by Habidash are made with thick synthetic fabric intended to ensure coverage of the wearer's legs even in adverse environmental conditions.",
+            "DescriptionData": {
+                "Carrying Capacity": "1000 \u00b5SCU"
+            },
+            "DescriptionText": "The Calister Pants by Habidash are made with thick synthetic fabric intended to ensure coverage of the wearer's legs even in adverse environmental conditions.",
             "Manufacturer": {
                 "Code": "HDH",
-                "Name": "Habidash"
+                "Name": "Habidash",
+                "UUID": "70ce6432-3a1e-45a1-8179-fe30a3ee54dc"
             },
             "Tags": [
                 "hdh_pants",
@@ -2030,19 +2036,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2052,7 +2070,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2062,6 +2088,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.002,
                 "unit": 6,
@@ -2077,6 +2112,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

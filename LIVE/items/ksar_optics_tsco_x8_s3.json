@@ -1762,6 +1762,7 @@
         "grade": 1,
         "name": "Black Prism (8x Telescopic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1775,15 +1776,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "Black Prism (8x Telescopic)",
             "Description": "Manufacturer: Kastak Arms\\nType: Telescopic  \\nAttachment Point:\u00a0Optic \\nMagnification: 8x\\nAim Time: +0%\\nSize: 3\\n\\nDelivering accurate fire at long distances is a skill that comes with practice \u2013 and the use of a proper scope like Kastak Arms' Black Prism. Crafted with rugged, multi-coated crystalens to deliver bright, clear visuals, this 8x telescopic sight is completely at home on your favorite rifle.",
+            "DescriptionData": {
+                "Manufacturer": "Kastak Arms",
+                "Type": "Telescopic",
+                "Attachment Point": "Optic",
+                "Magnification": "8x",
+                "Size": "3"
+            },
+            "DescriptionText": "Delivering accurate fire at long distances is a skill that comes with practice \u2013 and the use of a proper scope like Kastak Arms' Black Prism. Crafted with rugged, multi-coated crystalens to deliver bright, clear visuals, this 8x telescopic sight is completely at home on your favorite rifle.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

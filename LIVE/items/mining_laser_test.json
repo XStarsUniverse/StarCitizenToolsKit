@@ -2716,6 +2716,7 @@
         "grade": 1,
         "name": "Impact II Mining Laser",
         "tags": "flightReady weaponMountUsable miningMount",
+        "required_tags": "miningMount",
         "manufacturer": "THCN",
         "classification": "Ship.Mining.Gun",
         "stdItem": {
@@ -2729,9 +2730,25 @@
             "Type": "WeaponMining.Gun",
             "Name": "Impact II Mining Laser",
             "Description": "Manufacturer: Thermyte Concern\\nItem Type: Mining Laser \\nSize: 2\\n\\nOptimal Range: 60m\\nMaximum Range: 180m\\n\\nMining Laser Power: 840 - 3360\\nExtraction Laser Power: 3145\\n\\nModule Slots: 3\\n\\nLaser Instability: -10%\\nOptimal Charge Window Size: +20%\\nInert Material Level: -40%\\n\\nResistance: +10%\\nOptimal Charge Window Rate: -40%\\n\\nThe Impact II excels in a variety of mining situations. Special focus lenses make it easier to work a deposit by stabilizing the laser and increasing the optimal charge window. There are drawbacks, including increased deposit resistance and a slower filling optimal charge window, but Thermyte Concern also provided three module slots to allow miners to better customize the laser to the task at hand.",
+            "DescriptionData": {
+                "Manufacturer": "Thermyte Concern",
+                "Item Type": "Mining Laser",
+                "Size": "2",
+                "Optimal Range": "60m",
+                "Maximum Range": "180m",
+                "Mining Laser Power": "840 - 3360",
+                "Extraction Laser Power": "3145",
+                "Module Slots": "3",
+                "Laser Instability": "-10%",
+                "Optimal Charge Window Size": "+20%",
+                "Resistance": "+10%",
+                "Optimal Charge Window Rate": "-40%"
+            },
+            "DescriptionText": "The Impact II excels in a variety of mining situations. Special focus lenses make it easier to work a deposit by stabilizing the laser and increasing the optimal charge window. There are drawbacks, including increased deposit resistance and a slower filling optimal charge window, but Thermyte Concern also provided three module slots to allow miners to better customize the laser to the task at hand.",
             "Manufacturer": {
                 "Code": "THCN",
-                "Name": "Thermyte Concern"
+                "Name": "Thermyte Concern",
+                "UUID": "d1a1bf03-89d9-4eae-ac34-11eeb8e45d8f"
             },
             "Tags": [
                 "flightReady",
@@ -2742,6 +2759,8 @@
                 {
                     "PortName": "BONE_ItemPort_Consumable_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable1"
@@ -2750,13 +2769,23 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "BONE_ItemPort_Consumable_2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable2"
@@ -2765,13 +2794,23 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "BONE_ItemPort_Consumable_3",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "miningConsumable",
                         "Consumable3"
@@ -2780,15 +2819,33 @@
                         "miningConsumable"
                     ],
                     "Types": [
-                        "MiningModifier"
+                        "MiningModifier.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MiningModifier",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2798,8 +2855,37 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 8000
+                "Health": 8000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

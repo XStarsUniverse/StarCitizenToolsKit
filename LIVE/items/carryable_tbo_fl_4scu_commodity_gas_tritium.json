@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Tritium",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "101cd280-4910-4e85-89a5-556ae13540c9",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Tritium",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 1.5,
                 "Height": 1.5
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 4,
+                    "UnitName": "SCU",
+                    "SCU": 4
+                },
+                "InclusiveGroups": [
+                    "3a31ccbf-bb2d-4a26-9b21-2f7d0222f4a6"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "2fdf6809-4eba-4bed-b75c-09c9207fbc37",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

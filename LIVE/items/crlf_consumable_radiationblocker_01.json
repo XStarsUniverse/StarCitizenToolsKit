@@ -1577,6 +1577,7 @@
         "grade": 1,
         "name": "DeconPen (Canoiodide)",
         "tags": "Stash_MediPen medical_injection",
+        "required_tags": "",
         "manufacturer": "CUR",
         "stdItem": {
             "UUID": "e2b95094-e441-4865-a2ec-e4db0b64064f",
@@ -1589,9 +1590,15 @@
             "Type": "FPS_Consumable.Medical",
             "Name": "DeconPen (Canoiodide)",
             "Description": "Manufacturer: CureLife\\nItem Type: Medical Consumable\\n\\nThe DeconPen from CureLife delivers a rapid injection of Canoiodide, a proprietary medicinal compound that treats radiation exposure.",
+            "DescriptionData": {
+                "Manufacturer": "CureLife",
+                "Item Type": "Medical Consumable"
+            },
+            "DescriptionText": "The DeconPen from CureLife delivers a rapid injection of Canoiodide, a proprietary medicinal compound that treats radiation exposure.",
             "Manufacturer": {
                 "Code": "CUR",
-                "Name": "Curelife"
+                "Name": "Curelife",
+                "UUID": "dd55bc19-5212-4365-bbc8-73474f0257ed"
             },
             "Tags": [
                 "Stash_MediPen",
@@ -1603,12 +1610,26 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 1,
-                "containerTypeTag": "injection"
+                "Type": "FPS_Consumable",
+                "ContainerClosed": 0,
+                "ContainerType": "injection",
+                "ContainerTypeTag": "injection",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 1
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Consume"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 0,
                 "canBlock": 0,

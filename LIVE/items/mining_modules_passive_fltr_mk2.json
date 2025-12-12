@@ -1994,6 +1994,7 @@
         "grade": 1,
         "name": "FLTR-L Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "e2647306-e5d7-452a-8af6-d7141b540a6b",
@@ -2006,9 +2007,16 @@
             "Type": "MiningModifier.Gun",
             "Name": "FLTR-L Module",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Module (Passive)\\n\\nInert Material Level: -23%\\n\\nExtraction Laser Power: 90%\\n\\nReduce the amount of inert material collected from deposits with the FLTR-L Module. Though it reduces the laser's extraction power, the FLTR-L's patented filtration system screens out inert material to leave more storage space for valuable ore.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Module (Passive)",
+                "Extraction Laser Power": "90%"
+            },
+            "DescriptionText": "Reduce the amount of inert material collected from deposits with the FLTR-L Module. Though it reduces the laser's extraction power, the FLTR-L's patented filtration system screens out inert material to leave more storage space for valuable ore.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "miningConsumable",
@@ -2020,8 +2028,17 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

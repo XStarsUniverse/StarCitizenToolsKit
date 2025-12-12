@@ -1742,6 +1742,7 @@
         "grade": 1,
         "name": "Njakte Knife",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "BANU",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1755,9 +1756,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "Njakte Knife",
             "Description": "Manufacturer: Banu\\nItem Type: Knife\\nClass: Melee\\n\\nSize: 16 cm\\n\\nBanu engineering and ingenuity combine in the Njakte knife. Its distinct curved blade and serrated edge is rust resistant and remains ultra-sharp even after extensive use thanks to a proprietary metal alloy that's a trade secret of the souli that manufacturers it. The intricately detailed handle gives it a distinctly Banu visual style and provides texture to ensure a great grip.",
+            "DescriptionData": {
+                "Manufacturer": "Banu",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "16 cm"
+            },
+            "DescriptionText": "Banu engineering and ingenuity combine in the Njakte knife. Its distinct curved blade and serrated edge is rust resistant and remains ultra-sharp even after extensive use thanks to a proprietary metal alloy that's a trade secret of the souli that manufacturers it. The intricately detailed handle gives it a distinctly Banu visual style and provides texture to ensure a great grip.",
             "Manufacturer": {
                 "Code": "BANU",
-                "Name": "Banu"
+                "Name": "Banu",
+                "UUID": "2b5ba252-e826-4356-ac0d-8d88007ea386"
             },
             "Tags": [
                 "knife"
@@ -1767,6 +1776,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

@@ -1976,6 +1976,7 @@
         "grade": 1,
         "name": "Strata Arms Greycat Edition",
         "tags": "grin_medium Set_01 Color_01 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1989,9 +1990,18 @@
             "Type": "Char_Armor_Arms.Medium",
             "Name": "Strata Arms Greycat Edition",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -61 / 91 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nMade for miners but ready for any adventure, Greycat Industrial's Strata armor provides premium protection and convenient features. Each piece features an angular and precise design to deliver coverage where it's most needed most. A toolbelt with convenient pouches and a reinforced backpack offers plenty of storage. The award-winning helmet design has been copied by other manufacturers, but the original still reigns supreme with its high quality materials and next-gen air filtration system that enables clean breathing whether in a deep mine or hostile atmospheres. The Greycat Edition features the colors and logo of the company.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-61 / 91 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Made for miners but ready for any adventure, Greycat Industrial's Strata armor provides premium protection and convenient features. Each piece features an angular and precise design to deliver coverage where it's most needed most. A toolbelt with convenient pouches and a reinforced backpack offers plenty of storage. The award-winning helmet design has been copied by other manufacturers, but the original still reigns supreme with its high quality materials and next-gen air filtration system that enables clean breathing whether in a deep mine or hostile atmospheres. The Greycat Edition features the colors and logo of the company.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_medium",
@@ -2004,15 +2014,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 5
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -61,
                 "Maximum": 91
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

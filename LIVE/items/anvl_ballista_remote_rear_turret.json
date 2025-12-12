@@ -1250,6 +1250,7 @@
         "grade": 1,
         "name": "Turret",
         "tags": "ANVL_Ballista ANVL_Dunestalker ANVL_Snowblind",
+        "required_tags": "ANVL_Ballista",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "8fafec28-467a-4672-a455-5b68997e9d86",
@@ -1262,9 +1263,11 @@
             "Type": "Turret.MissileTurret",
             "Name": "Turret",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Tags": [
                 "ANVL_Ballista",
@@ -1275,28 +1278,50 @@
                 {
                     "PortName": "hardpoint_missile_rack_S05_left",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "Left"
                     ],
                     "Types": [
-                        "MissileLauncher"
+                        "MissileLauncher.MissileRack"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MissileLauncher",
+                            "sub_types": [
+                                "MissileRack"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_missile_rack_S05_right",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Flags": [
                         "Right"
                     ],
                     "Types": [
-                        "MissileLauncher"
+                        "MissileLauncher.MissileRack"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MissileLauncher",
+                            "sub_types": [
+                                "MissileRack"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_missile_rack_S07_left",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Flags": [
                         "left1"
                     ],
@@ -1305,6 +1330,8 @@
                 {
                     "PortName": "hardpoint_missile_rack_S07_right",
                     "Size": 7,
+                    "MinSize": 7,
+                    "MaxSize": 7,
                     "Flags": [
                         "right2"
                     ],
@@ -1312,8 +1339,13 @@
                 }
             ],
             "Durability": {
-                "Health": 2000
+                "Health": 2000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
+            "Interactions": [
+                "Activate remote camera"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1,

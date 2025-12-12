@@ -9098,6 +9098,7 @@
         "grade": 1,
         "name": "Yubarev \"Venom\" Pistol",
         "tags": "pistol",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.Weapon.Small",
         "stdItem": {
@@ -9111,9 +9112,20 @@
             "Type": "WeaponPersonal.Small",
             "Name": "Yubarev \"Venom\" Pistol",
             "Description": "Manufacturer: Lightning Bolt Co. \\nItem Type: Pistol\\nClass: Electron\\n\\nBattery Size: 10\\nRate Of Fire: 350 rpm\\nEffective Range: 35m\\n\\nAttachments: Optics (S1), Underbarrel (S1)\\n\\nEngineering excellence only scratches the surface of the distinct Yubarev pistol. Former merc turned weapon manufacturing mogul Irina Arkadova oversaw every aspect of the weapon, imbuing it with power, practicality, and panache. Featuring a classic woodgrain grip and cutting edge barrel design, the Yubarev fires a charged electron shot that impacts not only your target, amplifying the charge with each hit, but can spread to additional conductive targets in range. The Venom edition integrates a vibrant green coating into the weapon.",
+            "DescriptionData": {
+                "Manufacturer": "Lightning Bolt Co.",
+                "Item Type": "Pistol",
+                "Class": "Electron",
+                "Size": "10",
+                "Rate Of Fire": "350 rpm",
+                "Effective Range": "35m",
+                "Attachments": "Optics (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "Engineering excellence only scratches the surface of the distinct Yubarev pistol. Former merc turned weapon manufacturing mogul Irina Arkadova oversaw every aspect of the weapon, imbuing it with power, practicality, and panache. Featuring a classic woodgrain grip and cutting edge barrel design, the Yubarev fires a charged electron shot that impacts not only your target, amplifying the charge with each hit, but can spread to additional conductive targets in range. The Venom edition integrates a vibrant green coating into the weapon.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "98bb2e9e-fcc7-46e5-9ba6-d34c42c414e0"
             },
             "Tags": [
                 "pistol"
@@ -9122,6 +9134,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "lbco_pistol_energy_01"
                     ],
@@ -9129,35 +9143,66 @@
                         "lbco_pistol_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "9dc383ba-2686-46d0-abf9-1bc764aec0b6",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9216,14 +9261,21 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.6,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

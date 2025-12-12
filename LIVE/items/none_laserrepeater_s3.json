@@ -4783,6 +4783,7 @@
         "grade": 1,
         "name": "Ardor-3 Salvaged Repeater",
         "tags": "HRST LaserRepeater flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "HRST",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4796,9 +4797,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Ardor-3 Salvaged Repeater",
             "Description": "Manufacturer: Hurston Dynamics\\nItem Type: Laser Repeater\\nSize: 3\\n\\nThis Ardor-3 laser repeater was salvaged in the Pyro system. First manufactured in 2724, the Ardor series became popular for its split barrel design that helped mitigate heat when sustaining fire. Hurston eventually stopped manufacturing the weapon in favor of the Attrition line of laser repeaters. Despite the effects of time and constant usage, the weapon is still sought after because of the consistent performance delivered by Hurston Dynamic's expert design and solid construction.",
+            "DescriptionData": {
+                "Manufacturer": "Hurston Dynamics",
+                "Item Type": "Laser Repeater",
+                "Size": "3"
+            },
+            "DescriptionText": "This Ardor-3 laser repeater was salvaged in the Pyro system. First manufactured in 2724, the Ardor series became popular for its split barrel design that helped mitigate heat when sustaining fire. Hurston eventually stopped manufacturing the weapon in favor of the Attrition line of laser repeaters. Despite the effects of time and constant usage, the weapon is still sought after because of the consistent performance delivered by Hurston Dynamic's expert design and solid construction.",
             "Manufacturer": {
                 "Code": "HRST",
-                "Name": "Hurston Dynamics"
+                "Name": "Hurston Dynamics",
+                "UUID": "ee8b7bb3-d420-435c-924f-561e67e64588"
             },
             "Tags": [
                 "HRST",
@@ -4810,33 +4818,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "eb00eacc-04c3-415a-afe8-4cc0872f23ed",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "a0c5c42a-4aa2-4784-83d3-f06d1adfaa12",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "ee533664-b2fa-4fa3-a2bd-132026259d81",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "06bf9021-aae5-4ecc-b066-c83538bc20dd",
                     "Uneditable": false
                 }
             ],
@@ -4861,8 +4913,37 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1024
+                "Health": 1024,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.25,
+                                "MinimumFraction": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

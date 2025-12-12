@@ -900,6 +900,7 @@
         "grade": 1,
         "name": "Baltazar Stool",
         "tags": "barstool Col",
+        "required_tags": "",
         "stdItem": {
             "UUID": "55609386-251c-45d8-a7f3-60237ffb268f",
             "ClassName": "PlayerDeco_Seat_Barstool_Col_1_a",
@@ -911,6 +912,12 @@
             "Type": "Usable.Cargo",
             "Name": "Baltazar Stool",
             "Description": "Popularized by famed furniture designer Aldean Baltazar, the iconic Baltazar Stool has seen little iteration in its design since its inception fifty years ago.",
+            "DescriptionText": "Popularized by famed furniture designer Aldean Baltazar, the iconic Baltazar Stool has seen little iteration in its design since its inception fifty years ago.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "barstool",
                 "Col"
@@ -919,7 +926,11 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

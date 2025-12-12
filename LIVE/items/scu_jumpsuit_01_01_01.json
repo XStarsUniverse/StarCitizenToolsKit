@@ -2129,6 +2129,7 @@
         "grade": 1,
         "name": "Ambit Coverall",
         "tags": "Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "SCU",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2142,9 +2143,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Ambit Coverall",
             "Description": "Carrying Capacity: 0.4K \u00b5SCU\\n\\nThe Ambit Coverall is ideal jobsite attire with its multiple pockets, special super-stain resistant fabric, and a generous cut to allow for unrestricted movement. Step in, zip up, and work all day in comfort thanks to Stegman's.",
+            "DescriptionData": {
+                "Carrying Capacity": "0.4K \u00b5SCU"
+            },
+            "DescriptionText": "The Ambit Coverall is ideal jobsite attire with its multiple pockets, special super-stain resistant fabric, and a generous cut to allow for unrestricted movement. Step in, zip up, and work all day in comfort thanks to Stegman's.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "Set_01",
@@ -2154,19 +2160,33 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Clothing_Torso2",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
                         "Char_Clothing_Torso_2"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Torso_2"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2176,6 +2196,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0004,
                 "unit": 6,
@@ -2191,6 +2220,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

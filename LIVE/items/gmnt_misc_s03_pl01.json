@@ -843,6 +843,7 @@
         "grade": 1,
         "name": "Reliant Gilroy Gimbal",
         "tags": "MISC_Reliant_Mount",
+        "required_tags": "MISC_Reliant_Base",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "433251b0-f28d-4aa3-83f1-4ae45a1a0137",
@@ -855,9 +856,16 @@
             "Type": "Turret.GunTurret",
             "Name": "Reliant Gilroy Gimbal",
             "Description": "Item Type: Weapon Mount (Reliant Exclusive)\\nManufacturer: MISC\\nSize: 4\u00a0\\n\\nMISC built the Gilroy as a custom wing mounted gimbal for use exclusively with the Reliant. Standard on the Tana, it allows a S4 weapon better movement when tracking targets.",
+            "DescriptionData": {
+                "Item Type": "Weapon Mount (Reliant Exclusive)",
+                "Manufacturer": "MISC",
+                "Size": "4"
+            },
+            "DescriptionText": "MISC built the Gilroy as a custom wing mounted gimbal for use exclusively with the Reliant. Standard on the Tana, it allows a S4 weapon better movement when tracking targets.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "MISC_Reliant_Mount"
@@ -866,8 +874,18 @@
                 {
                     "PortName": "Hardpoint_Weapon_S2",
                     "Size": 3,
+                    "MinSize": 3,
+                    "MaxSize": 3,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -878,7 +896,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 150
+                "Health": 150,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -901,6 +921,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 30,

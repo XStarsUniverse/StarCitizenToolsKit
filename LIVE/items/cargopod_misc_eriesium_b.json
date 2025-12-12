@@ -928,6 +928,7 @@
         "grade": 1,
         "name": "CR-60",
         "tags": "flightReady",
+        "required_tags": "MISC_Starfarer_Base",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "7dc3f399-6659-4d62-919d-be21c4990581",
@@ -940,15 +941,98 @@
             "Type": "ExternalFuelTank.UNDEFINED",
             "Name": "CR-60",
             "Description": "Manufacturer: MISC\\nItem Type: Fuel Pod\\nFlow Rate: 1.15 SCU/s\\nCapacity: 60 SCU\\n\\nThe standard fuel pod of the Starfarer, the CR-60 was designed by MISC to be a well balanced fuel storage option ready to tackle a wide variety of jobs.\\n",
+            "DescriptionData": {
+                "Manufacturer": "MISC",
+                "Item Type": "Fuel Pod",
+                "Capacity": "60 SCU"
+            },
+            "DescriptionText": "The standard fuel pod of the Starfarer, the CR-60 was designed by MISC to be a well balanced fuel storage option ready to tackle a wide variety of jobs.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "flightReady"
             ],
             "Durability": {
-                "Health": 10000
+                "Health": 10000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Activate pump"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 60,
+                    "UnitName": "SCU",
+                    "SCU": 60
+                },
+                "InclusiveResources": [
+                    "de9f4d03-6b60-429d-9b26-9f2308bae973",
+                    "f4846780-182f-49d1-a711-f08c0172735e"
+                ]
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Closed",
+                        "LinkedInteractionStates": [
+                            {
+                                "linkedInteractionState": "StateTypes.SInteractionStateType.States[0]",
+                                "changeInteractionState": 0
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Open",
+                        "Deltas": [
+                            {
+                                "Type": "Storage",
+                                "Resource": "Fuel",
+                                "Rate": 0,
+                                "GeneratedResource": "Fuel",
+                                "GeneratedRate": 1.15,
+                                "Discharge": 1
+                            }
+                        ],
+                        "LinkedInteractionStates": [
+                            {
+                                "linkedInteractionState": "StateTypes.SInteractionStateType.States[1]",
+                                "changeInteractionState": 0
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Pumping",
+                        "Deltas": [
+                            {
+                                "Type": "Storage",
+                                "Resource": "Fuel",
+                                "Rate": 1.15,
+                                "GeneratedResource": "Fuel",
+                                "GeneratedRate": 0,
+                                "Discharge": 0
+                            }
+                        ],
+                        "LinkedInteractionStates": [
+                            {
+                                "linkedInteractionState": "StateTypes.SInteractionStateType.States[2]",
+                                "changeInteractionState": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

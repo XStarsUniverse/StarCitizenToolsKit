@@ -1142,6 +1142,7 @@
         "grade": 3,
         "name": "SonicLite",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "TYDT",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1155,17 +1156,37 @@
             "Type": "PowerPlant.Power",
             "Name": "SonicLite",
             "Description": "Item Type: Power Plant\\nManufacturer: Tyler Design & Tech\\nSize: 1\\nGrade: C\\nClass: Stealth\\n\\nConstructed from the ground up to minimize your heat signature, Tyler Design\u2019s SonicLite power plant has gained a following among pilots who appreciate a subtler approach.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Tyler Design & Tech",
+                "Size": "1",
+                "Grade": "C",
+                "Class": "Stealth"
+            },
+            "DescriptionText": "Constructed from the ground up to minimize your heat signature, Tyler Design's SonicLite power plant has gained a following among pilots who appreciate a subtler approach.",
             "Manufacturer": {
                 "Code": "TYDT",
-                "Name": "Tyler Design & Tech"
+                "Name": "Tyler Design & Tech",
+                "UUID": "a2a97679-2a6e-4e89-80d8-439c88a01427"
             },
             "DimensionOverrides": {
                 "Width": 1.5,
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 20,
+                "Maximum": 6000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 330
+                "Health": 330,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.75,
@@ -1188,6 +1209,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 1367.28,
@@ -1205,6 +1230,39 @@
             },
             "PowerPlant": {
                 "Output": 1367.28
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 13,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 13,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 3250
+                        }
+                    }
+                ]
             }
         }
     }

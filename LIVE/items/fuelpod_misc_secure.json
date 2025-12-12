@@ -885,6 +885,7 @@
         "grade": 1,
         "name": "GSX-HP",
         "tags": "flightReady",
+        "required_tags": "MISC_Starfarer_Base",
         "stdItem": {
             "UUID": "19e17c79-b73b-4a8c-b0a8-6ed4d134ffdc",
             "ClassName": "FuelPod_MISC_Secure",
@@ -896,11 +897,97 @@
             "Type": "ExternalFuelTank.UNDEFINED",
             "Name": "GSX-HP",
             "Description": "Manufacturer: Stor*All\\nItem Type: Fuel Pod\\nFlow Rate: 0.9 SCU/s\\nCapacity: 70 SCU\\n\\nBy using a triple reinforced outer plating rated far above industry standards, the GSX-HP fuel pod from Stor*All can handle higher pressures than your typical storage options. This allows you to transport more fuel and improves the safe flow rates of whichever nozzle you use.\\n",
+            "DescriptionData": {
+                "Item Type": "Fuel Pod",
+                "Capacity": "70 SCU"
+            },
+            "DescriptionText": "By using a triple reinforced outer plating rated far above industry standards, the GSX-HP fuel pod from Stor*All can handle higher pressures than your typical storage options. This allows you to transport more fuel and improves the safe flow rates of whichever nozzle you use.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
             ],
             "Durability": {
-                "Health": 15000
+                "Health": 15000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Activate pump"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 60,
+                    "UnitName": "SCU",
+                    "SCU": 60
+                },
+                "InclusiveResources": [
+                    "de9f4d03-6b60-429d-9b26-9f2308bae973",
+                    "f4846780-182f-49d1-a711-f08c0172735e"
+                ]
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Closed",
+                        "LinkedInteractionStates": [
+                            {
+                                "linkedInteractionState": "StateTypes.SInteractionStateType.States[0]",
+                                "changeInteractionState": 0
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Open",
+                        "Deltas": [
+                            {
+                                "Type": "Storage",
+                                "Resource": "Fuel",
+                                "Rate": 0,
+                                "GeneratedResource": "Fuel",
+                                "GeneratedRate": 1.15,
+                                "Discharge": 1
+                            }
+                        ],
+                        "LinkedInteractionStates": [
+                            {
+                                "linkedInteractionState": "StateTypes.SInteractionStateType.States[1]",
+                                "changeInteractionState": 0
+                            }
+                        ]
+                    },
+                    {
+                        "Name": "Pumping",
+                        "Deltas": [
+                            {
+                                "Type": "Storage",
+                                "Resource": "Fuel",
+                                "Rate": 1.15,
+                                "GeneratedResource": "Fuel",
+                                "GeneratedRate": 0,
+                                "Discharge": 0
+                            }
+                        ],
+                        "LinkedInteractionStates": [
+                            {
+                                "linkedInteractionState": "StateTypes.SInteractionStateType.States[2]",
+                                "changeInteractionState": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

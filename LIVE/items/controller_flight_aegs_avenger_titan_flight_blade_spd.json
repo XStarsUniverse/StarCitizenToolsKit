@@ -2062,6 +2062,7 @@
         "grade": 1,
         "name": "Avenger Titan TSB Flight Blade",
         "tags": "AEGS_Avenger_Titan_Blade",
+        "required_tags": "AEGS_Avenger_Titan_Blade",
         "manufacturer": "BRRA",
         "stdItem": {
             "UUID": "3f6cbda6-6ad5-4c64-b8ab-52adb2c5951b",
@@ -2074,9 +2075,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Avenger Titan TSB Flight Blade",
             "Description": "Manufacturer: Broad & Rabiee\\nType: Flight Blade\\n\\nUnlock the potential of your Aegis Avenger Titan with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
+            "DescriptionData": {
+                "Manufacturer": "Broad & Rabiee",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "Unlock the potential of your Aegis Avenger Titan with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
             "Manufacturer": {
                 "Code": "BRRA",
-                "Name": "Broad & Rabiee"
+                "Name": "Broad & Rabiee",
+                "UUID": "ad865899-f5ba-4818-ae8c-fe80a55108b7"
             },
             "Tags": [
                 "AEGS_Avenger_Titan_Blade"
@@ -2119,6 +2126,40 @@
                     "CapacitorRegenDelayAfterUse": 0.2,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

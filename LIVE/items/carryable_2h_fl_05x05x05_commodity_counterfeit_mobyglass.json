@@ -1104,6 +1104,7 @@
         "grade": 1,
         "name": "mobyGlass Personal Computers",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "3f888e3a-90c6-4f2c-8ecd-923c2652226a",
@@ -1116,6 +1117,12 @@
             "Type": "Cargo.Small",
             "Name": "mobyGlass Personal Computers",
             "Description": "These knock-off mobiGlas use pirated software and are often infected with spyware and malicious programming.",
+            "DescriptionText": "These knock-off mobiGlas use pirated software and are often infected with spyware and malicious programming.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1123,6 +1130,39 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "ExclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "460e7516-8162-4d02-bcbb-09deec89df1f",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

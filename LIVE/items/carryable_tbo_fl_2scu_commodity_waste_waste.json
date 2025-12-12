@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Waste",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "72fa0dc2-4d1a-4fa6-bc29-4777e995905c",
@@ -885,13 +886,46 @@
             "Type": "Cargo.Cargo",
             "Name": "Waste",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 2,
+                    "UnitName": "SCU",
+                    "SCU": 2
+                },
+                "InclusiveGroups": [
+                    "3492ff58-bd82-41f2-9af0-b13569e22ce6"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "b999ef65-35be-45bf-908a-5eac6e06ba12",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

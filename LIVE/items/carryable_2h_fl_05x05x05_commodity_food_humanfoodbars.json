@@ -1086,6 +1086,7 @@
         "grade": 1,
         "name": "Human Food Bars",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "172e5211-6eed-4dc7-8fa6-1e7cabd0460f",
@@ -1098,6 +1099,12 @@
             "Type": "Cargo.Small",
             "Name": "Human Food Bars",
             "Description": "Despite what the label on the packaging declares, the Banu manufactured \"Human Food Bars\" have been shown to contain multiple additives deemed unsafe for Human consumption.",
+            "DescriptionText": "Despite what the label on the packaging declares, the Banu manufactured \"Human Food Bars\" have been shown to contain multiple additives deemed unsafe for Human consumption.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1105,6 +1112,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "ea78052a-11b2-484e-a7ee-d19ed906a037",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

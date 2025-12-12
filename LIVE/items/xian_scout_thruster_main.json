@@ -1849,6 +1849,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "XIAN_Scout_Base",
         "manufacturer": "",
         "classification": "Ship.MainThruster.JointThruster",
         "stdItem": {
@@ -1862,12 +1863,16 @@
             "Type": "MainThruster.JointThruster",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Aopoa"
+                "Name": "Aopoa",
+                "UUID": "70ac7035-10a0-4bbb-90b0-9bddf047b504"
             },
             "Durability": {
-                "Health": 15000
+                "Health": 15000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 11,
@@ -1904,6 +1909,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 50,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Fuel",
+                                "Rate": 0.01,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Thruster": {
                 "thrustCapacity": 738000,

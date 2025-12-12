@@ -1628,6 +1628,7 @@
         "grade": 1,
         "name": "Bo-Go (Crawdad)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "cd647532-f57d-49ff-80d1-714feef1c9c1",
@@ -1640,9 +1641,15 @@
             "Type": "Food.Tin",
             "Name": "Bo-Go (Crawdad)",
             "Description": "NDR: 30\\nEffects: None\\n\\nCroshaw\u2019s signature meat and seafood stew is now available the Empire over! 'Crawdad' flavor puts front and center the delicious crustacean loved by the people of Angeli.",
+            "DescriptionData": {
+                "NDR": "30",
+                "Effects": "None"
+            },
+            "DescriptionText": "Croshaw's signature meat and seafood stew is now available the Empire over! 'Crawdad' flavor puts front and center the delicious crustacean loved by the people of Angeli.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1650,12 +1657,26 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "tinCan"
-            }
+                "NutritionalDensityRating": "30",
+                "Effects": [
+                    "None"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "tinCan",
+                "ContainerTypeTag": "tinCan",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

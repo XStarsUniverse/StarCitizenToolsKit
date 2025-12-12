@@ -954,6 +954,7 @@
         "grade": 1,
         "name": "Weapon Rack",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "747296ea-5e9c-49c5-a984-3c70b934cd95",
             "ClassName": "Weapon_Rack_AEGS_Retaliator",
@@ -965,31 +966,61 @@
             "Type": "Usable.UNDEFINED",
             "Name": "Weapon Rack",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$proxy_weapon_01",
                     "Size": 3,
+                    "MinSize": 2,
+                    "MaxSize": 3,
                     "Types": [
                         "WeaponPersonal"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$proxy_weapon_02",
                     "Size": 3,
+                    "MinSize": 2,
+                    "MaxSize": 3,
                     "Types": [
                         "WeaponPersonal"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "$proxy_weapon_03",
                     "Size": 3,
+                    "MinSize": 2,
+                    "MaxSize": 3,
                     "Types": [
                         "WeaponPersonal"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal"
+                        }
+                    ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Place"
             ]
         }
     }

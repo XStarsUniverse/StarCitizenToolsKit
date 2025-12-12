@@ -1671,6 +1671,7 @@
         "grade": 1,
         "name": "Sag Paneer Combat Ration",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "ff07c63e-3963-4733-8497-22956cbf2fbc",
@@ -1683,9 +1684,15 @@
             "Type": "Food.Tin",
             "Name": "Sag Paneer Combat Ration",
             "Description": "NDR: 64\\nEffects: Hypertrophic, Hypo-Metabolic, Cognitive Boosting\\n\\nA single serving combat ration specially formulated to provide complete high-performance nutrition for UEE Army personnel.",
+            "DescriptionData": {
+                "NDR": "64",
+                "Effects": "Hypertrophic, Hypo-Metabolic, Cognitive Boosting"
+            },
+            "DescriptionText": "A single serving combat ration specially formulated to provide complete high-performance nutrition for UEE Army personnel.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1693,12 +1700,28 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "tinCan"
-            }
+                "NutritionalDensityRating": "64",
+                "Effects": [
+                    "Hypertrophic",
+                    "Hypo-Metabolic",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "tinCan",
+                "ContainerTypeTag": "tinCan",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

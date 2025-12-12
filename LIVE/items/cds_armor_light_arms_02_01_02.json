@@ -1915,6 +1915,7 @@
         "grade": 1,
         "name": "FBL-8a Arms Imperial Red",
         "tags": "Marine_Light Set_02 Color_02 SM_Marine",
+        "required_tags": "",
         "manufacturer": "CDS",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1928,9 +1929,18 @@
             "Type": "Char_Armor_Arms.Light",
             "Name": "FBL-8a Arms Imperial Red",
             "Description": "Item Type: Light Armor\\nDamage Reduction: 20%\\nTemp. Rating: -35 / 65 \u00b0C\\nRadiation Protection: 26000 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nCDS's quest to create the ideal light armor continues with the FBL-8a. This light armor will keep you fast on your feet with its strategic mix of protective plating and reinforced nano-weave fabrics. While the armor works with any undersuit, it was specifically designed to match the FBL-8u undersuit with special attention given to how the two fit together to make the set as streamlined and responsive as possible.",
+            "DescriptionData": {
+                "Item Type": "Light Armor",
+                "Damage Reduction": "20%",
+                "Temp. Rating": "-35 / 65 \u00b0C",
+                "Radiation Protection": "26000 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "CDS's quest to create the ideal light armor continues with the FBL-8a. This light armor will keep you fast on your feet with its strategic mix of protective plating and reinforced nano-weave fabrics. While the armor works with any undersuit, it was specifically designed to match the FBL-8u undersuit with special attention given to how the two fit together to make the set as streamlined and responsive as possible.",
             "Manufacturer": {
                 "Code": "CDS",
-                "Name": "Clark Defense Systems"
+                "Name": "Clark Defense Systems",
+                "UUID": "8a7bd715-5b97-404f-b02e-0d0cc593f608"
             },
             "Tags": [
                 "Marine_Light",
@@ -1943,15 +1953,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.9,
+                    "Physical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.8,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 2
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -35,
                 "Maximum": 65
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26000,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

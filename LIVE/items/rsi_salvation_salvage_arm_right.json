@@ -858,6 +858,7 @@
         "grade": 1,
         "name": "Salvage Arm Right",
         "tags": "salvageMount",
+        "required_tags": "salvageMount RSI_Salvation",
         "stdItem": {
             "UUID": "cf24865f-5073-4fd4-bcc3-a6e50f757ed8",
             "ClassName": "RSI_Salvation_Salvage_Arm_Right",
@@ -869,6 +870,12 @@
             "Type": "ToolArm.UNDEFINED",
             "Name": "Salvage Arm Right",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "salvageMount"
             ],
@@ -876,6 +883,8 @@
                 {
                     "PortName": "hardpoint_salvage_arm_head",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Tags": [
                         "salvageMount"
                     ],
@@ -884,6 +893,11 @@
                     ],
                     "Types": [
                         "SalvageHead"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SalvageHead"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -894,7 +908,9 @@
                 "Height": 0.38
             },
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

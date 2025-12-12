@@ -2050,6 +2050,7 @@
         "grade": 1,
         "name": "Mining Modules",
         "tags": "miningConsumable",
+        "required_tags": "miningConsumable",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "c771d921-e4b1-4e45-85fa-8b517aca3d70",
@@ -2062,9 +2063,11 @@
             "Type": "MiningModifier.Gun",
             "Name": "Mining Modules",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "miningConsumable"
@@ -2075,8 +2078,18 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Activate",
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

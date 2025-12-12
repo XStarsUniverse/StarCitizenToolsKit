@@ -914,6 +914,7 @@
         "grade": 1,
         "name": "Remote Turret",
         "tags": "",
+        "required_tags": "ANVL_Terrapin_Base",
         "manufacturer": "ANVL",
         "stdItem": {
             "UUID": "43d95e9f-143c-c8c5-073e-2e4bb6a98cae",
@@ -926,13 +927,24 @@
             "Type": "Turret.TopTurret",
             "Name": "Remote Turret",
             "Description": "Remote Turret",
+            "DescriptionText": "Remote Turret",
             "Manufacturer": {
                 "Code": "ANVL",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "b922abdb-0634-4358-9eee-60118f3cf3a7"
             },
             "Durability": {
-                "Health": 1500
-            }
+                "Health": 1500,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode",
+                "Turret_sensitivity_increase",
+                "Turret_sensitivity_decrease",
+                "Turret_sensitivity_reset"
+            ]
         }
     }
 }

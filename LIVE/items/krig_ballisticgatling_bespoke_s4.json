@@ -2675,6 +2675,7 @@
         "grade": 1,
         "name": "Relentless L-21 Gatling",
         "tags": "BEHR BallisticGatling flightReady weaponMountUsable Wolf_Gun",
+        "required_tags": "Wolf_Gun",
         "manufacturer": "KRI",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2688,9 +2689,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Relentless L-21 Gatling",
             "Description": "Manufacturer: Kruger Intergalactic\\nItem Type: Ballistic Gatling\\nSize: 4\\n\\nEnemies will regret getting within range of the L-21 Wolf and its bespoke Relentless L-21 gatling. Kruger's expert engineering allows this rotary cannon to fire rounds at a head spinning speed with little worry of a misfire.",
+            "DescriptionData": {
+                "Manufacturer": "Kruger Intergalactic",
+                "Item Type": "Ballistic Gatling",
+                "Size": "4"
+            },
+            "DescriptionText": "Enemies will regret getting within range of the L-21 Wolf and its bespoke Relentless L-21 gatling. Kruger's expert engineering allows this rotary cannon to fire rounds at a head spinning speed with little worry of a misfire.",
             "Manufacturer": {
                 "Code": "KRI",
-                "Name": "Kruger Intergalatic"
+                "Name": "Kruger Intergalatic",
+                "UUID": "7b5d1ed3-11e7-49e6-9ed3-9d0cb52a3dc2"
             },
             "Tags": [
                 "BEHR",
@@ -2703,32 +2711,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2754,8 +2802,37 @@
                 "Length": 3.75,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 2000
+                "Health": 2000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

@@ -3758,6 +3758,7 @@
         "grade": 1,
         "name": "Sol-III Flight Suit Aviator",
         "tags": "nvy_flightsuit Set_01 Texture_01 Color_01 $invis_mobi++ SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "NVY",
         "classification": "FPS.Armor.Undersuit",
         "stdItem": {
@@ -3771,9 +3772,18 @@
             "Type": "Char_Armor_Undersuit.UNDEFINED",
             "Name": "Sol-III Flight Suit Aviator",
             "Description": "Item Type: Flight Suit\\nDamage Reduction: 10%\\nTemp. Rating: -30 / 60 \u00b0C\\nRadiation Protection: 15200 REM\\nRadiation Scrub Rate: 81 REM/s\\n\\nInspired by the original flight suits worn by Earth's Air Force, this replica stays true to the historical design while incorporating modern comforts.\\n\\nThe Aviator edition is primarily green-beige with light green accents.",
+            "DescriptionData": {
+                "Item Type": "Flight Suit",
+                "Damage Reduction": "10%",
+                "Temp. Rating": "-30 / 60 \u00b0C",
+                "Radiation Protection": "15200 REM",
+                "Radiation Scrub Rate": "81 REM/s"
+            },
+            "DescriptionText": "Inspired by the original flight suits worn by Earth's Air Force, this replica stays true to the historical design while incorporating modern comforts.\n\nThe Aviator edition is primarily green-beige with light green accents.",
             "Manufacturer": {
                 "Code": "NVY",
-                "Name": "UEE Navy"
+                "Name": "UEE Navy",
+                "UUID": "d133f90d-bc69-4273-9867-6c03631f0c4b"
             },
             "Tags": [
                 "nvy_flightsuit",
@@ -3787,6 +3797,8 @@
                 {
                     "PortName": "magazine_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -3794,13 +3806,25 @@
                         "transferable"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine",
+                        "WeaponAttachment.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "medPen_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -3810,11 +3834,18 @@
                     "Types": [
                         "FPS_Consumable"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FPS_Consumable"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -3825,14 +3856,32 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal",
-                        "RemovableChip"
+                        "WeaponPersonal.Gadget",
+                        "WeaponPersonal.Rocket",
+                        "RemovableChip.Hacking"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget",
+                                "Rocket"
+                            ]
+                        },
+                        {
+                            "type": "RemovableChip",
+                            "sub_types": [
+                                "Hacking"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "oxyPen_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -3842,11 +3891,18 @@
                     "Types": [
                         "FPS_Consumable"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "FPS_Consumable"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -3854,13 +3910,25 @@
                         "transferable"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small",
+                        "WeaponPersonal.Rocket"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small",
+                                "Rocket"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Torso",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nontransferable",
@@ -3873,13 +3941,23 @@
                         "$nvy_flightsuit_01_01_01"
                     ],
                     "Types": [
-                        "Char_Armor_Torso"
+                        "Char_Armor_Torso.Light"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Torso",
+                            "sub_types": [
+                                "Light"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "Armor_Helmet",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nophys",
                         "unlootable",
@@ -3890,11 +3968,18 @@
                     "Types": [
                         "Char_Armor_Helmet"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Helmet"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "helmethook_attach_PLACEHOLDER",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -3905,6 +3990,11 @@
                     "Types": [
                         "Char_Armor_Helmet"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Armor_Helmet"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
@@ -3913,18 +4003,87 @@
                 "Length": 0.75,
                 "Height": 1.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equip",
+                "Openlootingui"
+            ],
+            "ResourceContainer": {
+                "Mass": 0.2,
+                "Immutable": false,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 100,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 9.999999999999999e-5
+                },
+                "InclusiveResources": [
+                    "12181a14-034b-4deb-92b7-2faf2cfd182b"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "12181a14-034b-4deb-92b7-2faf2cfd182b",
+                        "Weight": 1
+                    }
+                ]
+            },
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 1,
+                    "Physical": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.9,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.85,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "cbe3a3e8-5035-4772-acb7-014617c6b03a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013",
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "a473c5da-487a-4a97-9356-99a0be1d4cbe",
                     "b8507c75-47b0-4119-9657-2e516f6959cb"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Infrared",
+                        "Emission": 0
+                    },
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 0
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -30,
                 "Maximum": 60
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 15200,
+                "RadiationDissipationRate": 81
             }
         }
     }

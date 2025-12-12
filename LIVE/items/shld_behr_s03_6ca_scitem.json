@@ -1080,6 +1080,7 @@
         "grade": 2,
         "name": "6CA 'Bila'",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1093,17 +1094,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "6CA 'Bila'",
             "Description": "Item Type: Shield Generator\\nManufacturer: Behring\\nSize: 3\\nGrade: B\\nClass: Civilian\\n\\n\u201cBuilt by Behring\u201d is a phrase synonymous with quality. That\u2019s why so many around the Empire trust their 6CA \u2018Bila\u2019 large shield generator to provide them with solid performance, impressive durable, and an acceptable degree of stealth.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Behring",
+                "Size": "3",
+                "Grade": "B",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "\u201cBuilt by Behring\u201d is a phrase synonymous with quality. That's why so many around the Empire trust their 6CA 'Bila' large shield generator to provide them with solid performance, impressive durable, and an acceptable degree of stealth.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 3,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1500
+                "Health": 1500,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 4,
@@ -1140,6 +1161,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 2960,
+                                "MinimumFraction": 0,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 4,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1800
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 48800,

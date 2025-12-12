@@ -1891,6 +1891,7 @@
         "grade": 1,
         "name": "Parallax Rifle Battery (80 Cap)",
         "tags": "volt_rifle_energy_01",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1904,9 +1905,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Parallax Rifle Battery (80 Cap)",
             "Description": "Item Type: Battery\\nCapacity: 80\\n\\nThis battery for the Parallax Energy Assault Rifle holds enough energy for 80 shots.",
+            "DescriptionData": {
+                "Item Type": "Battery",
+                "Capacity": "80"
+            },
+            "DescriptionText": "This battery for the Parallax Energy Assault Rifle holds enough energy for 80 shots.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "e2787f3b-b892-4276-bb2e-eb2b4dc9666b"
             },
             "Tags": [
                 "volt_rifle_energy_01"
@@ -1965,7 +1972,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

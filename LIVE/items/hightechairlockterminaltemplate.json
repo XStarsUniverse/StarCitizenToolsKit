@@ -512,6 +512,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "AirlockTerminal AirlockControlUI",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c4eb30b3-6e30-4f1d-8831-4261c688f2c4",
             "ClassName": "HighTechAirlockTerminalTemplate",
@@ -523,9 +524,20 @@
             "Type": "ControlPanel.AirlockPart",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "AirlockTerminal",
                 "AirlockControlUI"
+            ],
+            "Interactions": [
+                "Open panel",
+                "Close panel",
+                "Cycle"
             ]
         }
     }

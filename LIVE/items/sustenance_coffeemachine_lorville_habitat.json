@@ -847,6 +847,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "3b48df9e-3f33-4f6e-941b-dff2c8fe639e",
@@ -859,10 +860,18 @@
             "Type": "Cargo.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "$slot_mug",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "Mug"
                     ],
@@ -871,6 +880,10 @@
                     ],
                     "Uneditable": false
                 }
+            ],
+            "Interactions": [
+                "Activate",
+                "Place"
             ]
         }
     }

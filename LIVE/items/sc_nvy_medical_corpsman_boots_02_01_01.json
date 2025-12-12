@@ -939,6 +939,7 @@
         "grade": 1,
         "name": "",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "NVY",
         "classification": "FPS.Clothing.Shoes",
         "stdItem": {
@@ -952,19 +953,28 @@
             "Type": "Char_Clothing_Feet.UNDEFINED",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "NVY",
-                "Name": "UEE Navy"
+                "Name": "UEE Navy",
+                "UUID": "d133f90d-bc69-4273-9867-6c03631f0c4b"
             },
             "Ports": [
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -972,6 +982,10 @@
             "TemperatureResistance": {
                 "Minimum": -5,
                 "Maximum": 50
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

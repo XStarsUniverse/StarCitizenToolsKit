@@ -9704,6 +9704,7 @@
         "grade": 1,
         "name": "Quartz \"Piconalia\" Energy SMG",
         "tags": "stocked smg volt_smg_energy_01",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.Weapon.Medium",
         "stdItem": {
@@ -9717,9 +9718,19 @@
             "Type": "WeaponPersonal.Medium",
             "Name": "Quartz \"Piconalia\" Energy SMG",
             "Description": "Manufacturer: Verified Offworld Laser Technologies\\nItem Type: SMG\\nClass: Energy (Electron)\\n\\nBattery Size: 50\\nRate of Fire: Beam\\nEffective Range: 15-20 m\\n\\nAttachments: Optics (S1), Underbarrel (S1)\\n\\nManufacturer VOLT's Quartz SMG utilizes exciting new weapon technology that fires a short range beam that fractures into multiple beams the longer it fires, making it an extremely effective close quarter weapon.\\n\\nLight up the night this Luminalia with a little help from Pico the Penguin who adorns the side of this blue Piconalia edition.",
+            "DescriptionData": {
+                "Manufacturer": "Verified Offworld Laser Technologies",
+                "Item Type": "SMG",
+                "Class": "Energy (Electron)",
+                "Size": "50",
+                "Effective Range": "15-20 m",
+                "Attachments": "Optics (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "Manufacturer VOLT's Quartz SMG utilizes exciting new weapon technology that fires a short range beam that fractures into multiple beams the longer it fires, making it an extremely effective close quarter weapon.\n\nLight up the night this Luminalia with a little help from Pico the Penguin who adorns the side of this blue Piconalia edition.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "e2787f3b-b892-4276-bb2e-eb2b4dc9666b"
             },
             "Tags": [
                 "stocked",
@@ -9730,6 +9741,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "volt_smg_energy_01"
                     ],
@@ -9737,35 +9750,66 @@
                         "volt_smg_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "83ac5196-05d0-45a1-8982-aa549650f9d9",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9824,14 +9868,21 @@
                 "Length": 1.125,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.775,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

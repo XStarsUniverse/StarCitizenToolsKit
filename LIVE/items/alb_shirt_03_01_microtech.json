@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "Harlowe Shirt microTech",
         "tags": "alb_shirt Set_03 Color_01",
+        "required_tags": "",
         "manufacturer": "ALB",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1898,9 +1899,11 @@
             "Type": "Char_Clothing_Torso_0.UNDEFINED",
             "Name": "Harlowe Shirt microTech",
             "Description": "Capable as being worn on its own or as a base for layers, this long-sleeve henley style shirt decked out in microTech colors and branding keeps you stylish but comfortable.",
+            "DescriptionText": "Capable as being worn on its own or as a base for layers, this long-sleeve henley style shirt decked out in microTech colors and branding keeps you stylish but comfortable.",
             "Manufacturer": {
                 "Code": "ALB",
-                "Name": "Alejo Brothers"
+                "Name": "Alejo Brothers",
+                "UUID": "dd14fd7f-eead-4f7d-8057-2d95405a0183"
             },
             "Tags": [
                 "alb_shirt",
@@ -1911,11 +1914,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1925,9 +1935,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 3,
                 "Maximum": 34
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

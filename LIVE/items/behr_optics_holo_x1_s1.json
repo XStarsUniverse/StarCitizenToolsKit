@@ -1613,6 +1613,7 @@
         "grade": 1,
         "name": "PT1 (1x Holographic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1626,15 +1627,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "PT1 (1x Holographic)",
             "Description": "Manufacturer: Behring\\nType: Projection  \\nAttachment Point: Optic\\nMagnification: 1x\\nZoom: 1x-1.5x\\nAim Time: +15%\\nSize: 1\\n\\n\\nExperience Behring precision with this non-magnifying projection sight. Featuring a highly visible target marker, the PT1 provides ultimate target acquisition to find and lock onto hostiles with ease.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Type": "Projection",
+                "Attachment Point": "Optic",
+                "Magnification": "1x",
+                "Size": "1"
+            },
+            "DescriptionText": "Experience Behring precision with this non-magnifying projection sight. Featuring a highly visible target marker, the PT1 provides ultimate target acquisition to find and lock onto hostiles with ease.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

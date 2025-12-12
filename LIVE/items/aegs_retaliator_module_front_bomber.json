@@ -10178,6 +10178,7 @@
         "grade": 3,
         "name": "Retaliator Torpedo Front Module",
         "tags": "AEGS_Retaliator_Module_Front",
+        "required_tags": "AEGS_Retaliator_Module_Front",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "e336f444-1d23-4707-8ec1-570b7205e83b",
@@ -10190,9 +10191,11 @@
             "Type": "Module.UNDEFINED",
             "Name": "Retaliator Torpedo Front Module",
             "Description": "Standard equipment for most UEE military Retaliators, this front module can carry 4x S9 torpedoes.",
+            "DescriptionText": "Standard equipment for most UEE military Retaliators, this front module can carry 4x S9 torpedoes.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Retaliator_Module_Front"
@@ -10201,25 +10204,47 @@
                 {
                     "PortName": "hardpoint_module_oc",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "EquippedItem": "555db475-75d0-4048-b701-81b9a7fd98dc",
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_torpedo_launcher_fore",
                     "Size": 9,
+                    "MinSize": 9,
+                    "MaxSize": 9,
                     "Flags": [
                         "$uneditable"
                     ],
                     "Types": [
-                        "MissileLauncher"
+                        "MissileLauncher.MissileRack"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "MissileLauncher",
+                            "sub_types": [
+                                "MissileRack"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "a1148caf-247d-4415-a402-0d4bee0bbc1e",
                     "Uneditable": true
                 },
                 {
                     "PortName": "hardpoint_front_bay_door",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Types": [
                         "Door"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Door"
+                        }
+                    ],
+                    "EquippedItem": "c86d2aa5-e826-45b1-bc92-02a657fb791c",
                     "Uneditable": false
                 }
             ],
@@ -10228,8 +10253,19 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 1.5,
+                "DecayRate": 40,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.5,
@@ -10276,6 +10312,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

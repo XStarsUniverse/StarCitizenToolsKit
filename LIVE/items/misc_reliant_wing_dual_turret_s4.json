@@ -996,6 +996,7 @@
         "grade": 1,
         "name": "Reliant Toshima Turret",
         "tags": "MISC_Reliant_Mount",
+        "required_tags": "MISC_Reliant_Base",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "1139b69c-c5b3-4f58-8ecb-64f1585e2bdb",
@@ -1008,9 +1009,16 @@
             "Type": "Turret.GunTurret",
             "Name": "Reliant Toshima Turret",
             "Description": "Item Type: Turret (Reliant Exclusive)\\nManufacturer: MISC\\nSize: 4\\n\\nSpecifically built to be used exclusively on the MISC Reliant, the Toshima turret system comes with a camera that can be remoted into while providing a wide range of motion for two Size-2 weapons.",
+            "DescriptionData": {
+                "Item Type": "Turret (Reliant Exclusive)",
+                "Manufacturer": "MISC",
+                "Size": "4"
+            },
+            "DescriptionText": "Specifically built to be used exclusively on the MISC Reliant, the Toshima turret system comes with a camera that can be remoted into while providing a wide range of motion for two Size-2 weapons.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Tags": [
                 "MISC_Reliant_Mount"
@@ -1019,22 +1027,42 @@
                 {
                     "PortName": "turret_left",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "left"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "turret_right",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Flags": [
                         "right"
                     ],
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1045,7 +1073,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,
@@ -1068,6 +1098,10 @@
                 "MisfireMinTemperature": 370,
                 "MisfireMaxTemperature": 600
             },
+            "Interactions": [
+                "Activate remote camera",
+                "Turret_gyro_mode"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 15,

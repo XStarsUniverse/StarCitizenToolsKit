@@ -1919,6 +1919,7 @@
         "grade": 1,
         "name": "Vanduul Decoy Launcher",
         "tags": "flightReady",
+        "required_tags": "VNCL_Stinger_Base",
         "manufacturer": "VNC",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -1932,9 +1933,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "Vanduul Decoy Launcher",
             "Description": "Vanduul Decoy Launcher",
+            "DescriptionText": "Vanduul Decoy Launcher",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
             "Tags": [
                 "flightReady"
@@ -1953,7 +1956,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,

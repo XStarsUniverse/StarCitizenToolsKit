@@ -1062,6 +1062,7 @@
         "grade": 1,
         "name": "Seat",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "b37d435b-2be4-44d6-b086-de56c4aa6b9f",
             "ClassName": "Seat_Bench_NoBack_AEGS_Messhall_Left",
@@ -1072,7 +1073,18 @@
             "Length": 0.15,
             "Type": "Usable.UNDEFINED",
             "Name": "Seat",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Sit",
+                "Exit",
+                "Sit_withtray"
+            ]
         }
     }
 }

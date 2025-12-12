@@ -1307,6 +1307,7 @@
         "grade": 1,
         "name": "Altruciatoxin",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "f33385af-1229-4943-bb5b-7523a0dc95e5",
@@ -1319,6 +1320,12 @@
             "Type": "Cargo.Small",
             "Name": "Altruciatoxin",
             "Description": "Created by chemically processing the pollen of Revenant Tree (altrucia lacus), common effects of ingesting or smoking altruciatoxin include relaxing of the muscles, sensory enhancement, and lethargy. Heavy usage can cause staining of the tongue.",
+            "DescriptionText": "Created by chemically processing the pollen of Revenant Tree (altrucia lacus), common effects of ingesting or smoking altruciatoxin include relaxing of the muscles, sensory enhancement, and lethargy. Heavy usage can cause staining of the tongue.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1328,7 +1335,42 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 4
+                "Health": 4,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "ExclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "6fc6df10-0267-4097-8233-67983e594669",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

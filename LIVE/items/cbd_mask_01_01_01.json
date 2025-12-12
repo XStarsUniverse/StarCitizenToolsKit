@@ -1772,6 +1772,7 @@
         "grade": 1,
         "name": "Chrome Dome Head Gear",
         "tags": "cbd_mask_01 Set_01 Color_01 $maskFacialHair+",
+        "required_tags": "",
         "manufacturer": "CBD",
         "classification": "FPS.Clothing.Hat",
         "stdItem": {
@@ -1785,9 +1786,11 @@
             "Type": "Char_Clothing_Hat.UNDEFINED",
             "Name": "Chrome Dome Head Gear",
             "Description": "The Chrome Dome was designed to make hostile environments manageable. This unique head gear features a lightweight and reflective hat with a sloped brim, goggles that automatically adjust to lighting conditions, large ear flaps, and a neck gaiter to cover the face. Whether trudging through snow or sand, the Chrome Dome is ready to brave the elements with you.",
+            "DescriptionText": "The Chrome Dome was designed to make hostile environments manageable. This unique head gear features a lightweight and reflective hat with a sloped brim, goggles that automatically adjust to lighting conditions, large ear flaps, and a neck gaiter to cover the face. Whether trudging through snow or sand, the Chrome Dome is ready to brave the elements with you.",
             "Manufacturer": {
                 "Code": "CBD",
-                "Name": "CBD"
+                "Name": "CBD",
+                "UUID": "64eef2d9-5d3d-431d-a83b-ae077a16b4e2"
             },
             "Tags": [
                 "cbd_mask_01",
@@ -1799,11 +1802,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1813,9 +1823,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": -30,
                 "Maximum": 15
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

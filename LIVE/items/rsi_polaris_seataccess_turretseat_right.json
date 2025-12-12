@@ -508,6 +508,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "MIS",
         "stdItem": {
             "UUID": "dd774851-4cca-4610-8e5d-7dc8decffb4c",
@@ -520,10 +521,16 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
-            }
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
+            },
+            "Interactions": [
+                "Seatenter",
+                "Seatexit"
+            ]
         }
     }
 }

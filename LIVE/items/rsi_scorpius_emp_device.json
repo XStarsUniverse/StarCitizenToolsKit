@@ -1017,6 +1017,7 @@
         "grade": 1,
         "name": "Magstrand EMP Generator",
         "tags": "flightReady ",
+        "required_tags": "Scorpius_EMP",
         "classification": "Ship.EMP",
         "stdItem": {
             "UUID": "3d521e8c-4249-4987-b544-d32634ab0d2a",
@@ -1029,6 +1030,17 @@
             "Type": "EMP.UNDEFINED",
             "Name": "Magstrand EMP Generator",
             "Description": "Item Type: Burst Generator\\nManufacturer: RSI\\nSize: 4\\n\\nThe Magstrand from RSI is an EMP burst generator designed specifically for the Scorpius Antares. When fully charged, the device creates a powerful wave of distortion damage that can disable electric components within its blast radius.",
+            "DescriptionData": {
+                "Item Type": "Burst Generator",
+                "Manufacturer": "RSI",
+                "Size": "4"
+            },
+            "DescriptionText": "The Magstrand from RSI is an EMP burst generator designed specifically for the Scorpius Antares. When fully charged, the device creates a powerful wave of distortion damage that can disable electric components within its blast radius.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
             ],
@@ -1037,8 +1049,19 @@
                 "Length": 1.5,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 150
+                "Health": 150,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "Emp": {
                 "chargeTime": 22,
@@ -1098,6 +1121,24 @@
                 "OverclockPerformance": 0.2,
                 "PowerToEM": 2,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

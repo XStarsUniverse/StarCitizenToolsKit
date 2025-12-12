@@ -1897,6 +1897,7 @@
         "grade": 1,
         "name": "Small Container",
         "tags": "LootableContainer",
+        "required_tags": "",
         "stdItem": {
             "UUID": "eb935401-8c7c-4291-8d68-e8d70efedf23",
             "ClassName": "Lootable_Generated_Container_Derelict_Common",
@@ -1908,8 +1909,21 @@
             "Type": "Container.UNDEFINED",
             "Name": "Small Container",
             "Description": "A small container used to hold various items.",
+            "DescriptionText": "A small container used to hold various items.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "LootableContainer"
+            ],
+            "Interactions": [
+                "Open",
+                "Close",
+                "Openlootingui",
+                "Carry",
+                "Drop"
             ],
             "InventoryContainer": {
                 "SCU": 0.0973,

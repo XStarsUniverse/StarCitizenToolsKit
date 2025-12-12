@@ -1598,6 +1598,7 @@
         "grade": 1,
         "name": "Watermelon (Slice)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "4382c1cb-16f9-4649-8b2d-f902e2590a15",
@@ -1610,9 +1611,16 @@
             "Type": "Food.Plant",
             "Name": "Watermelon (Slice)",
             "Description": "NDR: 14\\nHEI: 10\\nEffects: Hydrating, Hyper-Metabolic\\n\\nDeliciously refreshing and juicy melon that makes a perfect treat on warmer days.",
+            "DescriptionData": {
+                "NDR": "14",
+                "HEI": "10",
+                "Effects": "Hydrating, Hyper-Metabolic"
+            },
+            "DescriptionText": "Deliciously refreshing and juicy melon that makes a perfect treat on warmer days.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1620,12 +1628,28 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "14",
+                "HydrationEfficacyIndex": "10",
+                "Effects": [
+                    "Hydrating",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

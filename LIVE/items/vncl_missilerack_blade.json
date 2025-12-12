@@ -540,6 +540,7 @@
         "grade": 1,
         "name": "Ramming Blade",
         "tags": "flightReady VNCL_Blade",
+        "required_tags": "VNCL_Scythe_Base VNCL_Blade",
         "manufacturer": "VNC",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -553,9 +554,11 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "Ramming Blade",
             "Description": "Blade component that can be used for ramming.",
+            "DescriptionText": "Blade component that can be used for ramming.",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
             "Tags": [
                 "flightReady",
@@ -567,7 +570,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.5,
@@ -607,6 +612,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2.5,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Idle",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

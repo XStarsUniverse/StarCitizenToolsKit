@@ -873,6 +873,7 @@
         "grade": 1,
         "name": "Drake Buccaneer Spinal Mount",
         "tags": "gimbalMount flightReady",
+        "required_tags": "DRAK_Buccaneer_Base",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "02bb4650-7c20-4e42-b3d8-1ca7bb4b76bf",
@@ -885,9 +886,11 @@
             "Type": "Turret.GunTurret",
             "Name": "Drake Buccaneer Spinal Mount",
             "Description": "Ward off attacks from any angle by installing this gimballed spinal mount. Designed by Drake for the Buccaneer, this S4 turret can equip two S2 weapons to keep the heat on aggressors.",
+            "DescriptionText": "Ward off attacks from any angle by installing this gimballed spinal mount. Designed by Drake for the Buccaneer, this S4 turret can equip two S2 weapons to keep the heat on aggressors.",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "gimbalMount",
@@ -897,16 +900,36 @@
                 {
                     "PortName": "hardpoint_weapon_01",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_weapon_02",
                     "Size": 2,
+                    "MinSize": 2,
+                    "MaxSize": 2,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -917,7 +940,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1200
+                "Health": 1200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

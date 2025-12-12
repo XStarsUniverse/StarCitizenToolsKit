@@ -15828,6 +15828,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "cdd10d0a-ccd7-440b-8549-9ef8ae1f507d",
@@ -15840,10 +15841,18 @@
             "Type": "Cargo.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Ports": [
                 {
                     "PortName": "screen",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -15853,7 +15862,66 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 45
+                "Health": 45,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Tray01_open",
+                "Tray01_close",
+                "Tray01_lock",
+                "Tray01_unlock",
+                "Tray01_animationcomplete",
+                "Tray02_open",
+                "Tray02_close",
+                "Tray02_lock",
+                "Tray02_unlock",
+                "Tray02_animationcomplete",
+                "Tray03_open",
+                "Tray03_close",
+                "Tray03_lock",
+                "Tray03_unlock",
+                "Tray03_animationcomplete",
+                "Tray04_open",
+                "Tray04_close",
+                "Tray04_lock",
+                "Tray04_unlock",
+                "Tray04_animationcomplete",
+                "Column01_opentop",
+                "Column01_openbottom",
+                "Column01_switchtotop",
+                "Column01_switchtobottom",
+                "Column02_opentop",
+                "Column02_openbottom",
+                "Column02_switchtotop",
+                "Column02_switchtobottom",
+                "Column01_allclosed",
+                "Column02_allclosed",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SCentiCargoUnit",
+                    "Value": 1,
+                    "UnitName": "cSCU",
+                    "SCU": 0.01
+                },
+                "InclusiveResources": [
+                    "1396faad-eb0c-4ed1-be34-571ca7ca159e"
+                ],
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "1396faad-eb0c-4ed1-be34-571ca7ca159e",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

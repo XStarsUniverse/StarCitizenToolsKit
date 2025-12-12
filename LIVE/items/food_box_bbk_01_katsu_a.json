@@ -1602,6 +1602,7 @@
         "grade": 1,
         "name": "Katsu Kar\u0113 Kacho",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "021bdeb1-cd67-4c42-a013-fabd38acaa3a",
@@ -1614,9 +1615,15 @@
             "Type": "Food.Box",
             "Name": "Katsu Kar\u0113 Kacho",
             "Description": "NDR: 30\\nEffects: None\\n\\nBig Benny's kacho is based on traditional family recipes straight from Corel, combining springy noodles and a rich, warm broth to create a taste enjoyed the 'verse over. The Katsu Kar\u0113 flavor marries crispy fried protein pieces with a harmoniously mellow curry sauce.",
+            "DescriptionData": {
+                "NDR": "30",
+                "Effects": "None"
+            },
+            "DescriptionText": "Big Benny's kacho is based on traditional family recipes straight from Corel, combining springy noodles and a rich, warm broth to create a taste enjoyed the 'verse over. The Katsu Kar\u0113 flavor marries crispy fried protein pieces with a harmoniously mellow curry sauce.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1624,12 +1631,25 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": ""
-            }
+                "NutritionalDensityRating": "30",
+                "Effects": [
+                    "None"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerTypeTag": "",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

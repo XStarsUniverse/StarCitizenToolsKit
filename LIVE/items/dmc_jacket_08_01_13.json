@@ -1985,6 +1985,7 @@
         "grade": 1,
         "name": "Carbide Jacket Outback",
         "tags": "dmc_jacket Set_08 Texture_01 Color_01",
+        "required_tags": "",
         "manufacturer": "DMC",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1998,9 +1999,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Carbide Jacket Outback",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nThe rugged, all-weather Carbide jacket from DMC features diamond-quilt detailing, stretch-comfort cuffs, and numerous attachment points for versatile storage options.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "The rugged, all-weather Carbide jacket from DMC features diamond-quilt detailing, stretch-comfort cuffs, and numerous attachment points for versatile storage options.",
             "Manufacturer": {
                 "Code": "DMC",
-                "Name": "DMC"
+                "Name": "DMC",
+                "UUID": "a53bbc2b-aa43-483d-967e-0cebc5600c04"
             },
             "Tags": [
                 "dmc_jacket",
@@ -2012,11 +2018,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2026,6 +2039,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.005,
                 "unit": 6,
@@ -2041,6 +2063,10 @@
             "TemperatureResistance": {
                 "Minimum": -10,
                 "Maximum": 20
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

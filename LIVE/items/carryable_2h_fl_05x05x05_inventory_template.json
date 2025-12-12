@@ -1246,6 +1246,7 @@
         "grade": 1,
         "name": "MISC Ore Pod",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "MIS",
         "classification": "Ship.Container.Cargo",
         "stdItem": {
@@ -1259,13 +1260,27 @@
             "Type": "Container.Cargo",
             "Name": "MISC Ore Pod",
             "Description": "Capacity: 8 SCU\\n\\nMade to work with any compatible mining ship, the MISC Ore Pod boasts several unique features, including anti-abrasion paint inside the pod that ensures it can withstand hefty payloads for years to come.",
+            "DescriptionData": {
+                "Capacity": "8 SCU"
+            },
+            "DescriptionText": "Made to work with any compatible mining ship, the MISC Ore Pod boasts several unique features, including anti-abrasion paint inside the pod that ensures it can withstand hefty payloads for years to come.",
             "Manufacturer": {
                 "Code": "MIS",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "b28a5c61-63a4-478b-8047-5fba545d5b8a"
             },
             "Durability": {
-                "Health": 5000
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Ejectcargo",
+                "Open"
+            ],
             "InventoryContainer": {
                 "SCU": 1.2,
                 "unit": 2,

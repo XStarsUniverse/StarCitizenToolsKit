@@ -1965,6 +1965,7 @@
         "grade": 1,
         "name": "Flood Energy",
         "tags": "flood",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "5d2b02eb-51e4-4b3a-9efb-7f3c63a3d97d",
@@ -1977,9 +1978,15 @@
             "Type": "Drink.Can",
             "Name": "Flood Energy",
             "Description": "HEI: 18\\nEffects: Dehydrating, Cognitive Boosting\\n\\nRelease a Flood of stimulants throughout your body with each swallow of this scientifically crafted formula of enhancing ingredients and energizing flavors designed to take you 'Beyond Normal.'",
+            "DescriptionData": {
+                "HEI": "18",
+                "Effects": "Dehydrating, Cognitive Boosting"
+            },
+            "DescriptionText": "Release a Flood of stimulants throughout your body with each swallow of this scientifically crafted formula of enhancing ingredients and energizing flavors designed to take you 'Beyond Normal.'",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "flood"
@@ -1990,12 +1997,27 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "HydrationEfficacyIndex": "18",
+                "Effects": [
+                    "Dehydrating",
+                    "Cognitive Boosting"
+                ],
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

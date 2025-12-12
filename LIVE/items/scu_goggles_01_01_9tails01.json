@@ -1400,6 +1400,7 @@
         "grade": 1,
         "name": "Haruspec Goggles (Modified)",
         "tags": "scu_goggles Set_01 Color_01",
+        "required_tags": "Protos",
         "manufacturer": "SCU",
         "stdItem": {
             "UUID": "a5875f59-acb5-40ed-9d1d-2dcd26c1c55d",
@@ -1412,9 +1413,11 @@
             "Type": "Char_Accessory_Eyes.UNDEFINED",
             "Name": "Haruspec Goggles (Modified)",
             "Description": "This version of Stegman's Haruspec goggles has been modified from its original form. Supremely comfortable yet light as a feather, the Haruspec goggles also provide excellent protection against the elements thanks to their sturdy side shields. Stegman's fitted the goggles with polycarbonate performance lenses and a special slip-resistant nose pad to ensure they stay in place.",
+            "DescriptionText": "This version of Stegman's Haruspec goggles has been modified from its original form. Supremely comfortable yet light as a feather, the Haruspec goggles also provide excellent protection against the elements thanks to their sturdy side shields. Stegman's fitted the goggles with polycarbonate performance lenses and a special slip-resistant nose pad to ensure they stay in place.",
             "Manufacturer": {
                 "Code": "SCU",
-                "Name": "SCU"
+                "Name": "SCU",
+                "UUID": "20121812-97a6-4ce1-a6a4-88a5ed646c58"
             },
             "Tags": [
                 "scu_goggles",
@@ -1425,7 +1428,16 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Inspect"
+            ]
         }
     }
 }

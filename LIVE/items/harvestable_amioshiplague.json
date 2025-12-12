@@ -1631,6 +1631,7 @@
         "grade": 1,
         "name": "Amioshi Plague",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "96e0eec0-d989-4093-9405-2a1577d689b4",
             "ClassName": "Harvestable_AmioshiPlague",
@@ -1642,13 +1643,46 @@
             "Type": "Misc.Harvestable",
             "Name": "Amioshi Plague",
             "Description": "Not nearly as ominous as its name, the Amioshi Plague is an invasive lichen that grows in the cracks of rocks. While the core of the lichen burrows out of sight to try and absorb as much moisture as it can find, the part near the surface sprouts hooded scales that eject spores to spread to other rocks. It's relatively short maturation period is the origin of its name.\\n",
+            "DescriptionText": "Not nearly as ominous as its name, the Amioshi Plague is an invasive lichen that grows in the cracks of rocks. While the core of the lichen burrows out of sight to try and absorb as much moisture as it can find, the part near the surface sprouts hooded scales that eject spores to spread to other rocks. It's relatively short maturation period is the origin of its name.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1
+                "Health": 1,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SMicroCargoUnit",
+                    "Value": 1200,
+                    "UnitName": "\u00b5SCU",
+                    "SCU": 0.0012
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "6c45b24e-bb2d-45f1-9622-f7ef9359dc77",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

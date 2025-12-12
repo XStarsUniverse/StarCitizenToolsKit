@@ -1199,6 +1199,7 @@
         "grade": 1,
         "name": "Agricium",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "ad671bda-e44f-44b5-b5a6-de0bacccd61e",
@@ -1211,6 +1212,12 @@
             "Type": "Cargo.Small",
             "Name": "Agricium",
             "Description": "A rare and valuable silvery metal with a blue-green sheen. Malleable, ductile, and largely non-reactive.",
+            "DescriptionText": "A rare and valuable silvery metal with a blue-green sheen. Malleable, ductile, and largely non-reactive.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1218,6 +1225,28 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "DefaultComposition": [
+                    {
+                        "Entry": "dc6fbcbb-5990-4ed5-82ee-93152dab7845",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

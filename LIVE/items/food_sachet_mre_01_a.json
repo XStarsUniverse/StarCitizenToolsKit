@@ -1678,6 +1678,7 @@
         "grade": 1,
         "name": "Ma's Ready to Eat Traveler's Day Dinner",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "2fff6a4a-2dd2-4748-a91e-e9ea851ff450",
@@ -1690,9 +1691,15 @@
             "Type": "Food.Sachet",
             "Name": "Ma's Ready to Eat Traveler's Day Dinner",
             "Description": "NDR: 40\\nEffects: Dehydrating, Hyper-Metabolic\\n\\nMa's Ready to Eat Traveler's Day Dinner has the traditional taste of this festive meal with all the favorites you love and the convenience your busy life demands.",
+            "DescriptionData": {
+                "NDR": "40",
+                "Effects": "Dehydrating, Hyper-Metabolic"
+            },
+            "DescriptionText": "Ma's Ready to Eat Traveler's Day Dinner has the traditional taste of this festive meal with all the favorites you love and the convenience your busy life demands.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1700,12 +1707,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "sachet"
-            }
+                "NutritionalDensityRating": "40",
+                "Effects": [
+                    "Dehydrating",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "sachet",
+                "ContainerTypeTag": "sachet",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -1547,6 +1547,7 @@
         "grade": 1,
         "name": "Nomo Grub Packet",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "b830a23a-d949-431b-a4bd-042969f39762",
@@ -1559,9 +1560,15 @@
             "Type": "Food.Sachet",
             "Name": "Nomo Grub Packet",
             "Description": "NDR: 15 \\nEffects: Energizing, Hypermetabolic\\n\\nA package of dried, protein rich nomo grubs that have a savory and slightly bitter taste.\\n",
+            "DescriptionData": {
+                "NDR": "15",
+                "Effects": "Energizing, Hypermetabolic"
+            },
+            "DescriptionText": "A package of dried, protein rich nomo grubs that have a savory and slightly bitter taste.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1569,12 +1576,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 1,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "sachet"
-            }
+                "NutritionalDensityRating": "15",
+                "Effects": [
+                    "Energizing",
+                    "Hypermetabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 1,
+                "ContainerType": "sachet",
+                "ContainerTypeTag": "sachet",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -1098,6 +1098,7 @@
         "grade": 1,
         "name": "CK13-GID Seed Blend",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "d0bd43ef-f448-47ec-a373-98d251bd687f",
@@ -1110,6 +1111,12 @@
             "Type": "Cargo.Small",
             "Name": "CK13-GID Seed Blend",
             "Description": "These genetically-modified barley seeds were banned because of their aggressive growth and high-levels of cross-pollination that has frequently ravaged any neighboring plant life. However, the plant's high yield and ease of growth have continued to make it a sought-after commodity.",
+            "DescriptionText": "These genetically-modified barley seeds were banned because of their aggressive growth and high-levels of cross-pollination that has frequently ravaged any neighboring plant life. However, the plant's high yield and ease of growth have continued to make it a sought-after commodity.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1117,6 +1124,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "2ed08e8e-7d46-4056-b877-42809af9905b",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

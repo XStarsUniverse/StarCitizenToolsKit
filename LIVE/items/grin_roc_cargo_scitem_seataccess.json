@@ -786,6 +786,7 @@
         "grade": 1,
         "name": "Access",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "44fc2bd8-2797-4689-b3b4-081e3e988b0d",
@@ -798,10 +799,18 @@
             "Type": "SeatAccess.UNDEFINED",
             "Name": "Access",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
-            }
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
+            },
+            "Interactions": [
+                "Opencargodoor",
+                "Closecargodoor",
+                "Opencargomech",
+                "Closecargomech"
+            ]
         }
     }
 }

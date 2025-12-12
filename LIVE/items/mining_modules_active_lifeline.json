@@ -2162,6 +2162,7 @@
         "grade": 1,
         "name": "Lifeline Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "a133320c-1cd0-4622-99dd-715924d6f928",
@@ -2174,9 +2175,20 @@
             "Type": "MiningModifier.Gun",
             "Name": "Lifeline Module",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Module (Active)\\n\\nLaser Instability: -20\\nResistance: -15%\\n\\nCatastrophic Charge Rate: +60%\\n\\nDuration: 15 seconds\\nUses: 3\\n\\nThe Lifeline makes a miner's work easier by reducing laser instability and lessening resistance within a deposit. Yet, a higher catastrophic charge rate means the process must be carefully managed to avoid an accident.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Module (Active)",
+                "Laser Instability": "-20",
+                "Resistance": "-15%",
+                "Catastrophic Charge Rate": "+60%",
+                "Duration": "15 seconds",
+                "Uses": "3"
+            },
+            "DescriptionText": "The Lifeline makes a miner's work easier by reducing laser instability and lessening resistance within a deposit. Yet, a higher catastrophic charge rate means the process must be carefully managed to avoid an accident.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "miningConsumable",
@@ -2188,8 +2200,18 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Activate",
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

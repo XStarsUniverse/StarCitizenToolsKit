@@ -1076,6 +1076,7 @@
         "grade": 3,
         "name": "5SA 'Rhada'",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1089,17 +1090,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "5SA 'Rhada'",
             "Description": "Item Type: Shield Generator\\nManufacturer: Behring\\nSize: 1\\nGrade: C\\nClass: Civilian\\n\\nThe 5SA \u2018Rhada\u2019 delivers Behring\u2019s expert engineering and trusted performance to make\u00a0it a worthy shield generator for any commercial ship.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Behring",
+                "Size": "1",
+                "Grade": "C",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "The 5SA 'Rhada' delivers Behring's expert engineering and trusted performance to make it a worthy shield generator for any commercial ship.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 300
+                "Health": 300,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 4,
@@ -1136,6 +1157,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 3,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 2,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 107,
+                                "MinimumFraction": 0,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 2,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 900
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 1610,

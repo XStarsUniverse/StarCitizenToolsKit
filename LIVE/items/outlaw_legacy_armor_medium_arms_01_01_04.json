@@ -1910,6 +1910,7 @@
         "grade": 1,
         "name": "Inquisitor Arms Yellow",
         "tags": "Outlaw_Legacy_Medium Set_01 Color_04 SM_RestrictedArm",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.Armor.Arms",
         "stdItem": {
@@ -1923,9 +1924,18 @@
             "Type": "Char_Armor_Arms.Medium",
             "Name": "Inquisitor Arms Yellow",
             "Description": "Item Type: Medium Armor\\nDamage Reduction: 30%\\nTemp. Rating: -56 / 86 \u00b0C\\nRadiation Protection: 26400 REM\\nRadiation Scrub Rate: 145.8 REM/s\\n\\nStrength and speed combine with the new Inquisitor armor set. Strong yet lightweight alloy plating works alongside reinforced polyfiber weaving to save your skin, but not slow you down. When combined with Kastak Arms' intimidating aesthetic, it's easy to see why this medium armor has become infamous across the Empire.",
+            "DescriptionData": {
+                "Item Type": "Medium Armor",
+                "Damage Reduction": "30%",
+                "Temp. Rating": "-56 / 86 \u00b0C",
+                "Radiation Protection": "26400 REM",
+                "Radiation Scrub Rate": "145.8 REM/s"
+            },
+            "DescriptionText": "Strength and speed combine with the new Inquisitor armor set. Strong yet lightweight alloy plating works alongside reinforced polyfiber weaving to save your skin, but not slow you down. When combined with Kastak Arms' intimidating aesthetic, it's easy to see why this medium armor has become infamous across the Empire.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "Outlaw_Legacy_Medium",
@@ -1938,15 +1948,59 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "SuitArmor": {
+                "DamageResistance": {
+                    "Impact": 0.6925,
+                    "Physical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Energy": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Distortion": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Thermal": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Biochemical": {
+                        "Multiplier": 0.7,
+                        "Threshold": 0
+                    },
+                    "Stun": {
+                        "Multiplier": 0.55,
+                        "Threshold": 0
+                    }
+                },
                 "ProtectedBodyParts": [
                     "b6d0be4f-bbdd-4a47-a168-8c9c9293c63a",
                     "e9c7c16d-d408-41c1-8d13-eec69cd2a013"
+                ],
+                "Signature": [
+                    {
+                        "Signature": "Electromagnetic",
+                        "Emission": 5
+                    }
                 ]
             },
             "TemperatureResistance": {
                 "Minimum": -56,
                 "Maximum": 86
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 26400,
+                "RadiationDissipationRate": 145.8
             }
         }
     }

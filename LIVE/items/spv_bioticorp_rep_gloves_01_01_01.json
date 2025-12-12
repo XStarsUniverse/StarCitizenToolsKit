@@ -1739,6 +1739,7 @@
         "grade": 1,
         "name": "Tigo Gloves",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SPV",
         "classification": "FPS.Clothing.Gloves",
         "stdItem": {
@@ -1752,19 +1753,28 @@
             "Type": "Char_Clothing_Hands.UNDEFINED",
             "Name": "Tigo Gloves",
             "Description": "Make a statement without saying a word. Spar Van Miles' Tigo gloves made headlines in the fashion world with their open-finger design.",
+            "DescriptionText": "Make a statement without saying a word. Spar Van Miles' Tigo gloves made headlines in the fashion world with their open-finger design.",
             "Manufacturer": {
                 "Code": "SPV",
-                "Name": "Spar Van Miles"
+                "Name": "Spar Van Miles",
+                "UUID": "e7c9f9ee-a1db-40ee-bfa8-a8ffead4ac1d"
             },
             "Ports": [
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1774,9 +1784,20 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear"
+            ],
             "TemperatureResistance": {
                 "Minimum": 0,
                 "Maximum": 30
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

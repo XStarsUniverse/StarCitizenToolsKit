@@ -2006,6 +2006,7 @@
         "grade": 1,
         "name": "ITG Flask",
         "tags": "bottle_01 Stash_Water",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "7444d6a8-1684-4186-851c-b72d97a00fc4",
@@ -2018,9 +2019,11 @@
             "Type": "Drink.Bottle",
             "Name": "ITG Flask",
             "Description": "Honoring the Interstellar Transport Guild, this screw-top hip flask offers the ideal way to slake your thirst wherever your travels take you.",
+            "DescriptionText": "Honoring the Interstellar Transport Guild, this screw-top hip flask offers the ideal way to slake your thirst wherever your travels take you.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "bottle_01",
@@ -2032,12 +2035,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 1,
-                "canBeReclosed": 1,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 1,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 1,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

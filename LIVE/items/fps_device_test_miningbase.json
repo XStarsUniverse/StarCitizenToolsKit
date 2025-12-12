@@ -2537,6 +2537,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "REPLACEME",
+        "required_tags": "",
         "stdItem": {
             "UUID": "ff681f56-4f99-422f-a494-7e414e0be83a",
             "ClassName": "FPS_Device_Test_MiningBase",
@@ -2548,12 +2549,33 @@
             "Type": "Gadget.Gadget",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "REPLACEME"
             ],
             "Durability": {
-                "Health": 10
-            }
+                "Health": 10,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Activate",
+                "Deactivate",
+                "Store",
+                "Offhandstore",
+                "Equip",
+                "Offhandequip",
+                "Prime",
+                "Unprime"
+            ]
         }
     }
 }

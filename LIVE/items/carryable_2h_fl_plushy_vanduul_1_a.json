@@ -1275,6 +1275,7 @@
         "grade": 1,
         "name": "Vanduul Plushie",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "8378b1d3-a541-4d3e-8ed2-3ee4c7291e20",
             "ClassName": "Carryable_2H_FL_plushy_vanduul_1_a",
@@ -1286,11 +1287,23 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "Vanduul Plushie",
             "Description": "Not all Vanduul crave battle, some crave cuddles. Intricately crafted using a high-grade polyester, this plushie is ready to conquer your heart with its durable plastic armor, felt shoulder pads, and elegant gold detailing.",
+            "DescriptionText": "Not all Vanduul crave battle, some crave cuddles. Intricately crafted using a high-grade polyester, this plushie is ready to conquer your heart with its durable plastic armor, felt shoulder pads, and elegant gold detailing.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.65
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

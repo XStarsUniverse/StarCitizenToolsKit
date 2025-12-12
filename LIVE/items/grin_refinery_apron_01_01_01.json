@@ -2077,6 +2077,7 @@
         "grade": 1,
         "name": "ThermoWeave Coat",
         "tags": "grin_refinery_apron set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -2090,9 +2091,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "ThermoWeave Coat",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nThe ThermoWeave coat provides complete upper body fire and heat defense. It features a high collar and additional frontside protection thanks to a lengthy apron made of aluminized fabric that reflects radiant heat.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "The ThermoWeave coat provides complete upper body fire and heat defense. It features a high collar and additional frontside protection thanks to a lengthy apron made of aluminized fabric that reflects radiant heat.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_refinery_apron",
@@ -2103,17 +2109,26 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
+                    ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "backpack",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "grin_refinery_01"
                     ],
@@ -2123,6 +2138,11 @@
                     "Types": [
                         "Char_Clothing_Backpack"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Backpack"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
@@ -2131,6 +2151,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2146,6 +2175,10 @@
             "TemperatureResistance": {
                 "Minimum": 10,
                 "Maximum": 29
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

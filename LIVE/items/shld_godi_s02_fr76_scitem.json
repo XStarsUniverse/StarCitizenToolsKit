@@ -1076,6 +1076,7 @@
         "grade": 1,
         "name": "FR-76",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GODI",
         "classification": "Ship.Shield",
         "stdItem": {
@@ -1089,17 +1090,37 @@
             "Type": "Shield.UNDEFINED",
             "Name": "FR-76",
             "Description": "Item Type: Shield Generator\\nManufacturer: Gorgon Defender Industries\\nSize: 2\\nGrade: A\\nClass: Military\\n\\nRefined by years of extensive, real world testing by the military, Gorgon Defender Industries FR-76 is the ultimate shield generator. Perfect for everyone from folks defending the frontline to those exploring the frontier.",
+            "DescriptionData": {
+                "Item Type": "Shield Generator",
+                "Manufacturer": "Gorgon Defender Industries",
+                "Size": "2",
+                "Grade": "A",
+                "Class": "Military"
+            },
+            "DescriptionText": "Refined by years of extensive, real world testing by the military, Gorgon Defender Industries FR-76 is the ultimate shield generator. Perfect for everyone from folks defending the frontline to those exploring the frontier.",
             "Manufacturer": {
                 "Code": "GODI",
-                "Name": "Gorgon Defender Industries"
+                "Name": "Gorgon Defender Industries",
+                "UUID": "57bfcf3d-13f6-4c2c-b7c7-6bf8eacb8a24"
             },
             "DimensionOverrides": {
                 "Width": 2.25,
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1100
+                "Health": 1100,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 3.5,
@@ -1136,6 +1157,36 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 2.5,
                 "DecayRateOfEM": 0.2
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Conversion",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "GeneratedResource": "Shield",
+                                "GeneratedRate": 323,
+                                "MinimumFraction": 0.25,
+                                "NoOverGeneration": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 4,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 1650
+                        }
+                    }
+                ]
             },
             "Shield": {
                 "MaxShieldHealth": 5100,

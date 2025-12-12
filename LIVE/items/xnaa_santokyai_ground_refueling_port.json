@@ -653,6 +653,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "stdItem": {
             "UUID": "8733e85a-4f6c-4801-bf25-da915859fdbd",
@@ -665,10 +666,17 @@
             "Type": "Door.UNDEFINED",
             "Name": "<= PLACEHOLDER =>",
             "Description": "",
+            "DescriptionText": "",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
-            }
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
+            },
+            "Interactions": [
+                "Open",
+                "Close",
+                "Locked"
+            ]
         }
     }
 }

@@ -7071,6 +7071,7 @@
         "grade": 1,
         "name": "AAT-34 Turret",
         "tags": "",
+        "required_tags": "NOPE",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "02b31f62-421a-41ca-b756-c3c360ae368b",
@@ -7083,25 +7084,49 @@
             "Type": "Turret.MannedTurret",
             "Name": "AAT-34 Turret",
             "Description": "Manufacturer: Behring\\nItem Type: Anti-Aircraft Turret\\n\\nMaintain order with the AAT-34 anti-aircraft turret. This rugged design is ideal for perimeter protection and can survive long exposure to the elements with minimal maintenance while still providing first class defensive fire from its S10 weapon and dual S7 missile launchers. Its custom targeting software also helps to maximize area coverage while keeping placement numbers reasonable; protecting more sky with fewer turrets.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Item Type": "Anti-Aircraft Turret"
+            },
+            "DescriptionText": "Maintain order with the AAT-34 anti-aircraft turret. This rugged design is ideal for perimeter protection and can survive long exposure to the elements with minimal maintenance while still providing first class defensive fire from its S10 weapon and dual S7 missile launchers. Its custom targeting software also helps to maximize area coverage while keeping placement numbers reasonable; protecting more sky with fewer turrets.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Ports": [
                 {
                     "PortName": "BatteryPort",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "invisible"
                     ],
                     "Types": [
                         "Battery"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Battery"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 1,
+                "DecayRate": 50,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 190
+                "Health": 190,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.3525,
@@ -7138,6 +7163,33 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 5000,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0,
+                                "MinimumFraction": 0
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 0,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 375
+                        }
+                    }
+                ]
             },
             "Radar": {
                 "Cooldown": 0,

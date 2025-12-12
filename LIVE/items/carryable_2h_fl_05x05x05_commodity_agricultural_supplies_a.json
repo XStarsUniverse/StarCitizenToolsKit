@@ -1098,6 +1098,7 @@
         "grade": 1,
         "name": "Agricultural Supplies",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "ae596ace-fb95-43b4-8ad7-e299a771c033",
@@ -1110,6 +1111,12 @@
             "Type": "Cargo.Small",
             "Name": "Agricultural Supplies",
             "Description": "Items required for agricultural production. Includes fertilizers, feed, and pesticides.",
+            "DescriptionText": "Items required for agricultural production. Includes fertilizers, feed, and pesticides.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1117,6 +1124,31 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "9c09556c-a9c7-4af8-893d-7a3cd6152746",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

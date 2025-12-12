@@ -2062,6 +2062,7 @@
         "grade": 1,
         "name": "MPUV-1P Standard Flight Blade",
         "tags": "ARGO_MPUV_Transport_Blade",
+        "required_tags": "ARGO_MPUV_Transport_Blade",
         "manufacturer": "ARGO",
         "stdItem": {
             "UUID": "83b6e655-d767-4b0c-862e-8894ae30d046",
@@ -2074,9 +2075,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "MPUV-1P Standard Flight Blade",
             "Description": "Manufacturer: Argo Astronautics\\nType: Flight Blade\\n\\nThis is the standard issue flight blade for the Argo MPUV-1P.",
+            "DescriptionData": {
+                "Manufacturer": "Argo Astronautics",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "This is the standard issue flight blade for the Argo MPUV-1P.",
             "Manufacturer": {
                 "Code": "ARGO",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "9e1f5a35-edcc-4d19-bede-08e2730043c5"
             },
             "Tags": [
                 "ARGO_MPUV_Transport_Blade"
@@ -2119,6 +2126,40 @@
                     "CapacitorRegenDelayAfterUse": 1.1,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

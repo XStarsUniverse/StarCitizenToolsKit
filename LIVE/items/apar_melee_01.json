@@ -1587,6 +1587,7 @@
         "grade": 1,
         "name": "Demon Fang Combat Knife",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "APAR",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1600,9 +1601,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "Demon Fang Combat Knife",
             "Description": "Manufacturer: Apocalypse Arms\\nItem Type: Knife\\nClass: Melee\\n\\nSize: 15 cm\\n\\nThe Demon Fang is a simple yet sinister split blade knife supported by a sturdy and lightly textured handle. Vibrant red cutting edges highlight the knife's unusual and intimidating look, guaranteeing to give anyone second thoughts about getting in its way.",
+            "DescriptionData": {
+                "Manufacturer": "Apocalypse Arms",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "15 cm"
+            },
+            "DescriptionText": "The Demon Fang is a simple yet sinister split blade knife supported by a sturdy and lightly textured handle. Vibrant red cutting edges highlight the knife's unusual and intimidating look, guaranteeing to give anyone second thoughts about getting in its way.",
             "Manufacturer": {
                 "Code": "APAR",
-                "Name": "Apocalypse Arms"
+                "Name": "Apocalypse Arms",
+                "UUID": "77f7999a-b23b-4812-94c2-09b5e15e1b0e"
             },
             "Tags": [
                 "knife"
@@ -1612,6 +1621,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

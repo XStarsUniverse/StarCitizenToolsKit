@@ -1127,6 +1127,7 @@
         "grade": 1,
         "name": "",
         "tags": "salvageMount",
+        "required_tags": "salvageMount",
         "stdItem": {
             "UUID": "6e99cfb7-45cb-4221-aa7f-d24964fd0cef",
             "ClassName": "AEGS_Reclaimer_Salvage_Arm",
@@ -1138,6 +1139,12 @@
             "Type": "ToolArm.UNDEFINED",
             "Name": "",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "salvageMount"
             ],
@@ -1145,6 +1152,8 @@
                 {
                     "PortName": "disintegration_intake",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "uneditable"
                     ],
@@ -1153,6 +1162,11 @@
                     ],
                     "Types": [
                         "SalvageFieldEmitter"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "SalvageFieldEmitter"
+                        }
                     ],
                     "Uneditable": true
                 }
@@ -1163,8 +1177,14 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 5000
-            }
+                "Health": 5000,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "Interactions": [
+                "Startgrinder",
+                "Stopgrinder"
+            ]
         }
     }
 }

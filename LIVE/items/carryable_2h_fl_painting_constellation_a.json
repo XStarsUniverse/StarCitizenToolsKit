@@ -938,6 +938,7 @@
         "grade": 1,
         "name": "RSI Constellation Painting",
         "tags": "poster",
+        "required_tags": "",
         "stdItem": {
             "UUID": "2c7b59c8-2c40-4dfe-97cf-9b99f1dd9f19",
             "ClassName": "Carryable_2H_FL_Painting_Constellation_a",
@@ -949,6 +950,12 @@
             "Type": "Misc.Flair_Wall_Picture",
             "Name": "RSI Constellation Painting",
             "Description": "Rendered with incredible detail, this beautiful painting features RSI's iconic ship sailing through a tempestuous stretch of unexplored space.",
+            "DescriptionText": "Rendered with incredible detail, this beautiful painting features RSI's iconic ship sailing through a tempestuous stretch of unexplored space.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "poster"
             ],
@@ -956,7 +963,14 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.5
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Sit",
+                "Exit"
+            ]
         }
     }
 }

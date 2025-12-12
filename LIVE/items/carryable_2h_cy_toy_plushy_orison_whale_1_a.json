@@ -1208,6 +1208,7 @@
         "grade": 1,
         "name": "Finley the Stormwal Large Plushie",
         "tags": "plush 2H",
+        "required_tags": "",
         "manufacturer": "CRUS",
         "stdItem": {
             "UUID": "4376fce2-c6fd-40fa-b42c-9b9ad80428e9",
@@ -1220,9 +1221,11 @@
             "Type": "Misc.Personal",
             "Name": "Finley the Stormwal Large Plushie",
             "Description": "Finley the Stormwal loves sailing through the clouds in Crusader's atmosphere. Much like Crusader's ships, Finley is big, graceful, and quite the sight to behold. Now this majestic blue stormwal can accompany you on a journey through the stars with this large, soft, and squeezable plushie.",
+            "DescriptionText": "Finley the Stormwal loves sailing through the clouds in Crusader's atmosphere. Much like Crusader's ships, Finley is big, graceful, and quite the sight to behold. Now this majestic blue stormwal can accompany you on a journey through the stars with this large, soft, and squeezable plushie.",
             "Manufacturer": {
                 "Code": "CRUS",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "63685f47-b0cc-4ebe-8f16-72793a5cd6e0"
             },
             "Tags": [
                 "plush",
@@ -1232,7 +1235,14 @@
                 "Width": 0.3,
                 "Length": 0.5,
                 "Height": 0.25
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Inspect",
+                "Store"
+            ]
         }
     }
 }

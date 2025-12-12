@@ -1953,6 +1953,7 @@
         "grade": 1,
         "name": "Tulsi Jacket Redwood",
         "tags": "hdh_jacket Set_05 Color_01",
+        "required_tags": "",
         "manufacturer": "HDH",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1966,9 +1967,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Tulsi Jacket Redwood",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nThis Tulsi jacket features an outer shell designed to cut down on wind shear and an inner shell made to retain warmth without sacrificing comfort. For ease of use, it also features an gentle-glide zipper with a secure top stop and roomy pockets that guarantee you'll always have what you need on hand.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "This Tulsi jacket features an outer shell designed to cut down on wind shear and an inner shell made to retain warmth without sacrificing comfort. For ease of use, it also features an gentle-glide zipper with a secure top stop and roomy pockets that guarantee you'll always have what you need on hand.",
             "Manufacturer": {
                 "Code": "HDH",
-                "Name": "Habidash"
+                "Name": "Habidash",
+                "UUID": "70ce6432-3a1e-45a1-8179-fe30a3ee54dc"
             },
             "Tags": [
                 "hdh_jacket",
@@ -1979,11 +1985,18 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1993,6 +2006,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2008,6 +2030,10 @@
             "TemperatureResistance": {
                 "Minimum": -10,
                 "Maximum": 20
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

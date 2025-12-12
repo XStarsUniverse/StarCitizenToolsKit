@@ -782,6 +782,7 @@
         "grade": 1,
         "name": "VariPuck S4 Gimbal Mount",
         "tags": "gimbalMount flightReady",
+        "required_tags": "",
         "manufacturer": "VNC",
         "stdItem": {
             "UUID": "0bff5ad1-931a-4d4d-83b9-a312b1404a97",
@@ -794,9 +795,16 @@
             "Type": "Turret.GunTurret",
             "Name": "VariPuck S4 Gimbal Mount",
             "Description": "Manufacturer: Flashfire Systems\\nItem Type: Weapon Mount\\nSize: 4\\n\\nThe VariPuck fits between your weapon and the ship hardpoint to transform a fixed weapon mount into a gimballed mount, allowing the pilot to independently aim their weapon\u2019s fire. VariPucks will accept any weapon the same size as the hardpoint it is mounting to.",
+            "DescriptionData": {
+                "Manufacturer": "Flashfire Systems",
+                "Item Type": "Weapon Mount",
+                "Size": "4"
+            },
+            "DescriptionText": "The VariPuck fits between your weapon and the ship hardpoint to transform a fixed weapon mount into a gimballed mount, allowing the pilot to independently aim their weapon's fire. VariPucks will accept any weapon the same size as the hardpoint it is mounting to.",
             "Manufacturer": {
                 "Code": "VNC",
-                "Name": "Vanduul"
+                "Name": "Vanduul",
+                "UUID": "4668760a-d8a1-48d0-be4d-42304b702de0"
             },
             "Tags": [
                 "gimbalMount",
@@ -806,8 +814,18 @@
                 {
                     "PortName": "hardpoint_class_2",
                     "Size": 4,
+                    "MinSize": 3,
+                    "MaxSize": 4,
                     "Types": [
-                        "WeaponGun"
+                        "WeaponGun.Gun"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponGun",
+                            "sub_types": [
+                                "Gun"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -818,7 +836,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1650
+                "Health": 1650,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 6,

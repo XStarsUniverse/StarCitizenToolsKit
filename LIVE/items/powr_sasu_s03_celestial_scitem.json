@@ -1137,6 +1137,7 @@
         "grade": 2,
         "name": "Celestial",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "SASU",
         "classification": "Ship.PowerPlant.Power",
         "stdItem": {
@@ -1150,17 +1151,37 @@
             "Type": "PowerPlant.Power",
             "Name": "Celestial",
             "Description": "Item Type: Power Plant\\nManufacturer: Sakura Sun\\nSize: 3\\nGrade: B\\nClass: Civilian\\n\\nThe Celestial from Sakura Sun improves upon the company\u2019s base large power plant by redesigning the power rate and other key aspects to raise the component\u2019s overall performance.",
+            "DescriptionData": {
+                "Item Type": "Power Plant",
+                "Manufacturer": "Sakura Sun",
+                "Size": "3",
+                "Grade": "B",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "The Celestial from Sakura Sun improves upon the company's base large power plant by redesigning the power rate and other key aspects to raise the component's overall performance.",
             "Manufacturer": {
                 "Code": "SASU",
-                "Name": "Sakura Sun"
+                "Name": "Sakura Sun",
+                "UUID": "40c59850-8fb5-4a0e-ab61-7fd3871a632a"
             },
             "DimensionOverrides": {
                 "Width": 3,
                 "Length": 1.5,
                 "Height": 1.5
             },
+            "Distortion": {
+                "DecayDelay": 5,
+                "DecayRate": 133.33,
+                "Maximum": 40000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 1
+            },
             "Durability": {
-                "Health": 1700
+                "Health": 1700,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 5,
@@ -1183,6 +1204,10 @@
                 "MisfireMinTemperature": 300,
                 "MisfireMaxTemperature": 900
             },
+            "Interactions": [
+                "Enablepowerplant",
+                "Disablepowerplant"
+            ],
             "PowerConnection": {
                 "PowerBase": 0,
                 "PowerDraw": 26250,
@@ -1200,6 +1225,39 @@
             },
             "PowerPlant": {
                 "Output": 26250
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Generation",
+                                "Resource": "Power",
+                                "Rate": 22,
+                                "NoOverGeneration": 0,
+                                "Composition": [
+                                    {
+                                        "ContainerResource": "bcc8cde9-de58-4e6b-8ee9-37d4aaa507eb",
+                                        "Ratio": 1
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 22,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 9080
+                        }
+                    }
+                ]
             }
         }
     }

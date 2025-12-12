@@ -1104,6 +1104,7 @@
         "grade": 1,
         "name": "LifeCure Medsticks",
         "tags": "MissionQuestItem",
+        "required_tags": "",
         "classification": "Ship.CargoGrid",
         "stdItem": {
             "UUID": "0dbe4f25-b0a7-4ec8-be91-d062ead3cc3d",
@@ -1116,6 +1117,12 @@
             "Type": "Cargo.Small",
             "Name": "LifeCure Medsticks",
             "Description": "The use of these imitation CureLife Medpens has resulted in numerous deaths.",
+            "DescriptionText": "The use of these imitation CureLife Medpens has resulted in numerous deaths.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "MissionQuestItem"
             ],
@@ -1123,6 +1130,39 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place"
+            ],
+            "ResourceContainer": {
+                "Mass": 0,
+                "Immutable": true,
+                "DefaultFillFraction": 1,
+                "Capacity": {
+                    "Unit": "SStandardCargoUnit",
+                    "Value": 0.125,
+                    "UnitName": "SCU",
+                    "SCU": 0.125
+                },
+                "ExclusiveResources": [
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000",
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "InclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "ExclusiveGroups": [
+                    "00000000-0000-0000-0000-000000000000"
+                ],
+                "DefaultComposition": [
+                    {
+                        "Entry": "4ad4350f-d61a-47c0-809b-78ecba2e4f6b",
+                        "Weight": 1
+                    }
+                ]
             }
         }
     }

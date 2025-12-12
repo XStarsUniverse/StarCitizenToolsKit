@@ -1979,6 +1979,7 @@
         "grade": 1,
         "name": "Mug",
         "tags": "Mug",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "40e4cfd1-bf80-419e-afcb-422820c8e040",
@@ -1991,9 +1992,11 @@
             "Type": "Drink.UNDEFINED",
             "Name": "Mug",
             "Description": "A small, handled drinking vessel made from insulating ceramic to help keep bevarages warm. Features a unique Orison theme.",
+            "DescriptionText": "A small, handled drinking vessel made from insulating ceramic to help keep bevarages warm. Features a unique Orison theme.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Tags": [
                 "Mug"
@@ -2002,11 +2005,18 @@
                 {
                     "PortName": "slot_garnish",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "slot_garnish"
                     ],
                     "Types": [
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2017,12 +2027,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 0,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

@@ -569,6 +569,7 @@
         "grade": 1,
         "name": "<= PLACEHOLDER =>",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "40f9ef52-4608-48da-bc80-d3d604fd2bfb",
             "ClassName": "DoorKeypad_Portrait",
@@ -579,7 +580,17 @@
             "Length": 0.15,
             "Type": "ControlPanel.DoorPart",
             "Name": "<= PLACEHOLDER =>",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Keypadsuccess",
+                "Keypadfail"
+            ]
         }
     }
 }

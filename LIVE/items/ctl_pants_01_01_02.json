@@ -1996,6 +1996,7 @@
         "grade": 1,
         "name": "Perth Pants Maroon",
         "tags": "ctl_pants Set_01 Color_02",
+        "required_tags": "",
         "manufacturer": "CTL",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2009,9 +2010,14 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Perth Pants Maroon",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nThese straight-leg pants from City Lights are essential for everyday work and play. Both the front and back pockets feature metallic button accents to provide that perfect amount of flair.\\n\\nWomen's sizes currently out of stock.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "These straight-leg pants from City Lights are essential for everyday work and play. Both the front and back pockets feature metallic button accents to provide that perfect amount of flair.\n\nWomen's sizes currently out of stock.",
             "Manufacturer": {
                 "Code": "CTL",
-                "Name": "City Lights"
+                "Name": "City Lights",
+                "UUID": "5ca8a669-44c2-40e4-89b2-7a5da790b832"
             },
             "Tags": [
                 "ctl_pants",
@@ -2022,19 +2028,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2044,7 +2062,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2054,6 +2080,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -2069,6 +2104,10 @@
             "TemperatureResistance": {
                 "Minimum": 1,
                 "Maximum": 31
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

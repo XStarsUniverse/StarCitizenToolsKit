@@ -2233,6 +2233,7 @@
         "grade": 1,
         "name": "Denning",
         "tags": "flightReady",
+        "required_tags": "",
         "classification": "Ship.Radar.MidRangeRadar",
         "stdItem": {
             "UUID": "28e81323-a16a-4995-9da5-1aca23b4044c",
@@ -2245,6 +2246,19 @@
             "Type": "Radar.MidRangeRadar",
             "Name": "Denning",
             "Description": "Item Type: Radar\\nManufacturer: WillsOp\\nSize: 0\\nGrade: C\\nClass: Civilian\\n\\nWith the Denning, you can now equip an award winning WillsOp radar to your vehicle.",
+            "DescriptionData": {
+                "Item Type": "Radar",
+                "Manufacturer": "WillsOp",
+                "Size": "0",
+                "Grade": "C",
+                "Class": "Civilian"
+            },
+            "DescriptionText": "With the Denning, you can now equip an award winning WillsOp radar to your vehicle.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "flightReady"
             ],
@@ -2252,17 +2266,35 @@
                 {
                     "PortName": "BatteryPort",
                     "Size": 2,
+                    "MinSize": 1,
+                    "MaxSize": 2,
                     "Flags": [
                         "invisible"
                     ],
                     "Types": [
                         "Battery"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Battery"
+                        }
+                    ],
                     "Uneditable": false
                 }
             ],
+            "Distortion": {
+                "DecayDelay": 1,
+                "DecayRate": 50,
+                "Maximum": 1000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0.7,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 190
+                "Health": 190,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 3.517,
@@ -2299,6 +2331,33 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 13000,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1,
+                                "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 1,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 375
+                        }
+                    }
+                ]
             },
             "Radar": {
                 "Cooldown": 2.5,

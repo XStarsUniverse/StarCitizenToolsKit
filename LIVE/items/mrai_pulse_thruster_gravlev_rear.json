@@ -1318,6 +1318,7 @@
         "grade": 1,
         "name": "Grav Lev 1",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "CNOU",
         "classification": "Ship.ManneuverThruster.JointThruster",
         "stdItem": {
@@ -1331,12 +1332,16 @@
             "Type": "ManneuverThruster.JointThruster",
             "Name": "Grav Lev 1",
             "Description": "Grav Lev 1",
+            "DescriptionText": "Grav Lev 1",
             "Manufacturer": {
                 "Code": "CNOU",
-                "Name": "Consolidated Outland"
+                "Name": "Consolidated Outland",
+                "UUID": "ec227ef3-fb08-4897-abdb-579eb4e87c25"
             },
             "Durability": {
-                "Health": 2750
+                "Health": 2750,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 0.1,
@@ -1373,6 +1378,24 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 0,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Fuel",
+                                "Rate": 0.01,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Thruster": {
                 "thrustCapacity": 250,

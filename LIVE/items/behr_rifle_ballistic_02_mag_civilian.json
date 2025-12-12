@@ -1885,6 +1885,7 @@
         "grade": 1,
         "name": "P8-AR Rifle Magazine (15 Cap)",
         "tags": "behr_rifle_ballistic_02_civilian",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1898,9 +1899,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "P8-AR Rifle Magazine (15 Cap)",
             "Description": "Item Type: Magazine\\nCapacity: 15\\n\\nThis magazine for the Behring P8-AR rifle comes pre-loaded with fifteen rounds.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "15"
+            },
+            "DescriptionText": "This magazine for the Behring P8-AR rifle comes pre-loaded with fifteen rounds.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "Tags": [
                 "behr_rifle_ballistic_02_civilian"
@@ -1959,7 +1966,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

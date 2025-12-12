@@ -1633,6 +1633,7 @@
         "grade": 1,
         "name": "Ham and Cheese Sandwich",
         "tags": "sandwich hamcheese",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "a9bca1fe-2662-495b-b524-5f80b262c60b",
@@ -1645,9 +1646,15 @@
             "Type": "Food.Junk",
             "Name": "Ham and Cheese Sandwich",
             "Description": "NDR: 38\\nEffects: None\\n\\nSmoked ham and sharp cheddar on white bread.",
+            "DescriptionData": {
+                "NDR": "38",
+                "Effects": "None"
+            },
+            "DescriptionText": "Smoked ham and sharp cheddar on white bread.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "sandwich",
@@ -1659,12 +1666,25 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "38",
+                "Effects": [
+                    "None"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Consume"
+            ]
         }
     }
 }

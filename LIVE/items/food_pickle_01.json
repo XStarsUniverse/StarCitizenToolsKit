@@ -1576,6 +1576,7 @@
         "grade": 1,
         "name": "Pickle",
         "tags": "hotdog plain",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "ba364182-14ed-466e-864b-4ecec98cc06a",
@@ -1588,9 +1589,15 @@
             "Type": "Food.Junk",
             "Name": "Pickle",
             "Description": "NDR: 12\\nHEI: 03\\n\\nA pickled cucumber that has been fermented in a brine flavored with coriander seeds, dill, and garlic.",
+            "DescriptionData": {
+                "NDR": "12",
+                "HEI": "03"
+            },
+            "DescriptionText": "A pickled cucumber that has been fermented in a brine flavored with coriander seeds, dill, and garlic.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "Tags": [
                 "hotdog",
@@ -1602,12 +1609,24 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "hotdog"
-            }
+                "NutritionalDensityRating": "12",
+                "HydrationEfficacyIndex": "03",
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "hotdog",
+                "ContainerTypeTag": "hotdog",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

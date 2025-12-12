@@ -554,6 +554,7 @@
         "grade": 1,
         "name": "Elevator Control",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "8f88eed1-67c1-4c82-a06a-6d66378cc4eb",
             "ClassName": "AEGS_Reclaimer_Interior_Platform",
@@ -564,7 +565,19 @@
             "Length": 0.15,
             "Type": "Elevator.UNDEFINED",
             "Name": "Elevator Control",
-            "Description": ""
+            "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
+            "Interactions": [
+                "Openinnerdoor",
+                "Closealldoors",
+                "Openinnerdoorfinished",
+                "Closeinnerdoorfinished"
+            ]
         }
     }
 }

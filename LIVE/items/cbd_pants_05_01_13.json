@@ -1993,6 +1993,7 @@
         "grade": 1,
         "name": "Courser Jeans Rust",
         "tags": "headhunter cbd_pants Set_05 Texture_01 Color_13",
+        "required_tags": "",
         "manufacturer": "CBD",
         "classification": "FPS.Clothing.Legs",
         "stdItem": {
@@ -2006,9 +2007,11 @@
             "Type": "Char_Clothing_Legs.UNDEFINED",
             "Name": "Courser Jeans Rust",
             "Description": "Made with soft yet sturdy cotton, these jeans are ripped and then \"repaired\" with colorful thread alongside misshapen patches that give them a touch of history.",
+            "DescriptionText": "Made with soft yet sturdy cotton, these jeans are ripped and then \"repaired\" with colorful thread alongside misshapen patches that give them a touch of history.",
             "Manufacturer": {
                 "Code": "CBD",
-                "Name": "CBD"
+                "Name": "CBD",
+                "UUID": "64eef2d9-5d3d-431d-a83b-ae077a16b4e2"
             },
             "Tags": [
                 "headhunter",
@@ -2021,19 +2024,31 @@
                 {
                     "PortName": "wep_sidearm",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Small"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Small"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "utility_attach_1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
@@ -2043,7 +2058,15 @@
                         "multitool"
                     ],
                     "Types": [
-                        "WeaponPersonal"
+                        "WeaponPersonal.Gadget"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponPersonal",
+                            "sub_types": [
+                                "Gadget"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2053,6 +2076,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.0004,
                 "unit": 6,
@@ -2068,6 +2100,10 @@
             "TemperatureResistance": {
                 "Minimum": -10,
                 "Maximum": 60
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

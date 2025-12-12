@@ -2746,6 +2746,7 @@
         "grade": 1,
         "name": "Maris Cannon",
         "tags": "ESP BallisticCannon flightReady weaponMountUsable RSI_Polaris_Bespoke",
+        "required_tags": "RSI_Polaris_Bespoke",
         "manufacturer": "RSI",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2759,9 +2760,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Maris Cannon",
             "Description": "Manufacturer: Roberts Space Industries\\nItem Type: Ballistic Cannon\\nSize: 6\\n\\nThis powerful ballistic cannon was designed by RSI as a bespoke armament for their Polaris corvette.",
+            "DescriptionData": {
+                "Manufacturer": "Roberts Space Industries",
+                "Item Type": "Ballistic Cannon",
+                "Size": "6"
+            },
+            "DescriptionText": "This powerful ballistic cannon was designed by RSI as a bespoke armament for their Polaris corvette.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "ESP",
@@ -2774,32 +2782,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 6,
+                    "MinSize": 6,
+                    "MaxSize": 6,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2825,8 +2873,37 @@
                 "Length": 0.38,
                 "Height": 0.38
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 5600
+                "Health": 5600,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

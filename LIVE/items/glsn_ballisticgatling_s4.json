@@ -2768,6 +2768,7 @@
         "grade": 1,
         "name": "Breakneck S4 Gatling",
         "tags": "GLSN BallisticGatling flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "GLSN",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -2781,9 +2782,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "Breakneck S4 Gatling",
             "Description": "Manufacturer: Unknown\\nItem Type: Ballistic Gatling\\nSize: 4\\n\\nWhile the exact origins and designer are unknown, the Breakneck is built off an existing ballistic gatling then modified to cause more mayhem. When the Breakneck starts shooting, the fun begins.",
+            "DescriptionData": {
+                "Manufacturer": "Unknown",
+                "Item Type": "Ballistic Gatling",
+                "Size": "4"
+            },
+            "DescriptionText": "While the exact origins and designer are unknown, the Breakneck is built off an existing ballistic gatling then modified to cause more mayhem. When the Breakneck starts shooting, the fun begins.",
             "Manufacturer": {
                 "Code": "GLSN",
-                "Name": "Grey's Market"
+                "Name": "Grey's Market",
+                "UUID": "768b4380-6486-4187-8c22-bc3deaf80770"
             },
             "Tags": [
                 "GLSN",
@@ -2795,32 +2803,72 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2846,8 +2894,37 @@
                 "Length": 3,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 1800
+                "Health": 1800,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 0.1,
+                                "MinimumFraction": 1
+                            }
+                        ]
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [

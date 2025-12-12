@@ -262,6 +262,7 @@
         "grade": 1,
         "name": "Drake Caterpillar Self Destruct",
         "tags": "flightReady",
+        "required_tags": "",
         "manufacturer": "DRAK",
         "classification": "Ship.SelfDestruct",
         "stdItem": {
@@ -275,13 +276,36 @@
             "Type": "SelfDestruct.UNDEFINED",
             "Name": "Drake Caterpillar Self Destruct",
             "Description": "Drake Caterpillar Self Destruct",
+            "DescriptionText": "Drake Caterpillar Self Destruct",
             "Manufacturer": {
                 "Code": "DRAK",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "6116471c-891d-4830-8968-650b6deafc00"
             },
             "Tags": [
                 "flightReady"
-            ]
+            ],
+            "Interactions": [
+                "Selfdestruct_engage",
+                "Selfdestruct_disengage"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Power",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

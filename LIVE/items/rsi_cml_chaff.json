@@ -1955,6 +1955,7 @@
         "grade": 1,
         "name": "RSI Noise Launcher",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "RSI",
         "classification": "Ship.WeaponDefensive.CountermeasureLauncher",
         "stdItem": {
@@ -1968,9 +1969,11 @@
             "Type": "WeaponDefensive.CountermeasureLauncher",
             "Name": "RSI Noise Launcher",
             "Description": "RSI Noise Launcher",
+            "DescriptionText": "RSI Noise Launcher",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Ammunition": {
                 "UUID": "fba15492-1bee-4ef0-8efd-815e3c500ea9",
@@ -1986,7 +1989,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 1000
+                "Health": 1000,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "PowerConnection": {
                 "PowerBase": 1,
