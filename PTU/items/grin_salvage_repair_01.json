@@ -2315,7 +2315,7 @@
                 },
                 "SCItemWeaponComponentParams": {
                     "ammoContainerRecord": "680e69e1-4bf5-4647-92bc-989d1e4a5faa",
-                    "ShouldIgnorePrimaryAmmoContainer": 0,
+                    "ShouldIgnorePrimaryAmmoContainer": 1,
                     "geometryTags": "",
                     "supplementaryFireTime": 0,
                     "proceduralAnimationRecord": "95dd0802-5a85-4f8b-abcc-5c462abc3a80",
@@ -2330,7 +2330,7 @@
                     "allowFiringDuringFiremodeSwitch": 0,
                     "secondaryAmmoContainers": {
                         "SSecondaryAmmoContainerParams": {
-                            "ammoContainerRecord": "891a1422-3980-4756-84b2-04dd07ad7177",
+                            "ammoContainerRecord": "100037d0-d9c1-400d-a29a-c2ea3b621753",
                             "condition": {
                                 "SWeaponConditionHasTags": {
                                     "tags": {
@@ -3616,6 +3616,7 @@
                                             "maxVehicleDamageRatio": 1,
                                             "repairedMaterialRatio": 1,
                                             "maxHealthRepairRate": 160,
+                                            "maxDamageMapRepairRate": 10,
                                             "healthToAmmoRatio": 0.1,
                                             "heatPerSecond": 0,
                                             "wearPerSecond": 0,
@@ -3816,6 +3817,71 @@
                                                     }
                                                 }
                                             },
+                                            "beamGroupOnlyHealthTypeItemRepair": {
+                                                "SBeamGroupParams": {
+                                                    "hitEffectName": "repair_fps",
+                                                    "cuttableImpacts": 0,
+                                                    "tractorBeam": 0,
+                                                    "skipListIncludeOwner": 1,
+                                                    "useADSHelper": 0,
+                                                    "detachOnActivate": 0,
+                                                    "immediateRaycast": 0,
+                                                    "beamModifierRTPCSource": "Power",
+                                                    "beamImpactModifierSource": "SalvageRepair",
+                                                    "beamSizeSwitch": {
+                                                        "switch": ""
+                                                    },
+                                                    "beamAudioOneShot": {
+                                                        "audioTrigger": ""
+                                                    },
+                                                    "beamLoopAudioTrigger": {
+                                                        "audioTrigger": ""
+                                                    },
+                                                    "beamStopAudioTrigger": {
+                                                        "audioTrigger": ""
+                                                    },
+                                                    "beamActiveRTPC": {
+                                                        "rtpc": ""
+                                                    },
+                                                    "beamModifierRTPC": {
+                                                        "rtpc": "Weapon_Power_Level"
+                                                    },
+                                                    "beamImpactStartTriggerOneShot": {
+                                                        "audioTrigger": ""
+                                                    },
+                                                    "beamImpactStopTriggerOneShot": {
+                                                        "audioTrigger": ""
+                                                    },
+                                                    "beamImpactStartTrigger": {
+                                                        "audioTrigger": ""
+                                                    },
+                                                    "beamImpactStopTrigger": {
+                                                        "audioTrigger": ""
+                                                    },
+                                                    "targetAttractionRTPC": {
+                                                        "rtpc": ""
+                                                    },
+                                                    "beamEffects": {
+                                                        "SBeamEffectParams": {
+                                                            "helper": "muzzle_flash",
+                                                            "killParticlesOnDeactivate": 1,
+                                                            "startPointStrength": 0,
+                                                            "endPointStrength": 1,
+                                                            "useMultiSpline": 1,
+                                                            "multiSplineOffset": 0,
+                                                            "modifierSource": "SalvageRepair",
+                                                            "particleEffect": {
+                                                                "path": "c85d0c67-6e92-c761-53b4-91d4f905e2a0|Gadgets/salvage_tool.fps.beam.repair_1st"
+                                                            },
+                                                            "thirdPersonParticleEffect": {
+                                                                "path": "8cf0c2b1-a2db-672a-9fc6-f7369dd6f4a0|Gadgets/salvage_tool.fps.beam.repair_3rd"
+                                                            },
+                                                            "tintColor": [],
+                                                            "particleAudioParams": []
+                                                        }
+                                                    }
+                                                }
+                                            },
                                             "updateCondition": {
                                                 "SWeaponConditionIsHeldEntity": []
                                             },
@@ -3855,6 +3921,7 @@
                             "maxVehicleDamageRatio": 1,
                             "repairedMaterialRatio": 1,
                             "maxHealthRepairRate": 670,
+                            "maxDamageMapRepairRate": 670,
                             "healthToAmmoRatio": 5.8,
                             "heatPerSecond": 0,
                             "wearPerSecond": 0,
@@ -4077,6 +4144,7 @@
                                     }
                                 }
                             },
+                            "beamGroupOnlyHealthTypeItemRepair": [],
                             "updateCondition": {
                                 "SWeaponConditionIsHeldEntity": []
                             },
@@ -8187,7 +8255,7 @@
                                                 "value": "bc9a3b85-0965-41f1-8dcc-1aef373ea3f0"
                                             },
                                             {
-                                                "value": "bed8e09b-a5f2-4f4e-9be9-ab618ebfbd58"
+                                                "value": "d1fc00f6-b7d3-4a32-bad6-0599490db488"
                                             },
                                             {
                                                 "value": "9e614c02-b0c6-4515-adde-92dfc6ab3ca9"
@@ -8748,8 +8816,8 @@
                                                 }
                                             },
                                             "SCItemPurchasableParams": {
-                                                "displayName": "Cambio SRT Canister",
-                                                "__displayName": "@item_Namegrin_tool_01_salvage_mag",
+                                                "displayName": "Cambio SRT Canister (Empty)",
+                                                "__displayName": "@item_Namegrin_tool_01_salvage_mag_empty",
                                                 "displayType": "Magazine",
                                                 "__displayType": "@item_displayType_Magazine",
                                                 "displayThumbnail": "",
