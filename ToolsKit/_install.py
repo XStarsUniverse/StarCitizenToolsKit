@@ -9,8 +9,16 @@ DEFAULT_CONFIG = {
 }
 
 
-def write_text(path: Path, content: str) -> None:
+def write_or_recreate(path: Path, content: str) -> None:
+    """
+    Supprime le fichier s'il existe puis le recrée.
+    (Utile pour mettre à jour les .bat générés après un git pull)
+    """
     path.parent.mkdir(parents=True, exist_ok=True)
+
+    if path.exists():
+        path.unlink()
+
     # Force CRLF for .bat comfort on Windows
     content = content.replace("\r\n", "\n").replace("\n", "\r\n")
     path.write_text(content, encoding="utf-8")
@@ -18,7 +26,7 @@ def write_text(path: Path, content: str) -> None:
 
 def load_or_create_config(config_path: Path) -> dict:
     if not config_path.exists():
-        write_text(config_path, json.dumps(DEFAULT_CONFIG, indent=2))
+        write_or_recreate(config_path, json.dumps(DEFAULT_CONFIG, indent=2))
         return DEFAULT_CONFIG.copy()
 
     with config_path.open("r", encoding="utf-8") as f:
@@ -43,7 +51,10 @@ docker compose exec scdatadumper php cli.php load:data --scUnpackedFormat import
 
 
 def bat_clean(dest_subfolder: str) -> str:
-    # DEST_DIR is portable: ToolsKit\<DEST_SUBFOLDER>, since ROOT is ScDataDumper-master\
+    # ROOT = ScDataDumper-master\
+    # On veut écrire dans la racine du repo (StarCitizenToolsKit\VERSION)
+    # Donc : ScDataDumper-master\ -> ..\ToolsKit\ -> ..\StarCitizenToolsKit\
+    # => ..\..\{VERSION}
     return rf"""@echo off
 REM =========================================
 REM  Script Import / Export sans supprimer export
@@ -56,8 +67,8 @@ REM Dossier import & export
 set "IMPORT_DIR=%ROOT%import"
 set "EXPORT_DIR=%ROOT%export"
 
-REM Dossier de destination (portable, relatif au repo)
-set "DEST_DIR=%ROOT%..\{dest_subfolder}"
+REM Dossier de destination (racine du repo)
+set "DEST_DIR=%ROOT%..\..\{dest_subfolder}"
 
 echo --- Nettoyage du dossier "import" ---
 if exist "%IMPORT_DIR%" (
@@ -152,19 +163,19 @@ def main() -> None:
     versions = [str(v).upper() for v in cfg.get("versions", [])]
 
     # --- ScDataDumper-master ---
-    write_text(scdatadumper_dir / "START.bat", bat_scdatadumper_start())
+    write_or_recreate(scdatadumper_dir / "START.bat", bat_scdatadumper_start())
 
     for v in versions:
-        write_text(scdatadumper_dir / f"Clean4{v}.bat", bat_clean(dest_subfolder=v))
+        write_or_recreate(scdatadumper_dir / f"Clean4{v}.bat", bat_clean(dest_subfolder=v))
 
     # --- unp4k ---
     for v in versions:
-        write_text(unp4k_dir / f"START_{v}.bat", bat_unp4k_start(v, sc_install_dir))
-        write_text(unp4k_dir / f"START_FULL_{v}.bat", bat_unp4k_start_full(v, sc_install_dir))
+        write_or_recreate(unp4k_dir / f"START_{v}.bat", bat_unp4k_start(v, sc_install_dir))
+        write_or_recreate(unp4k_dir / f"START_FULL_{v}.bat", bat_unp4k_start_full(v, sc_install_dir))
 
-    write_text(unp4k_dir / "ScMOVE.bat", bat_scmove())
+    write_or_recreate(unp4k_dir / "ScMOVE.bat", bat_scmove())
 
-    print("OK: .bat générés dans ScDataDumper-master/ et unp4k/")
+    print("OK: .bat générés (suppression/recréation) dans ScDataDumper-master/ et unp4k/")
     print(f"Config: {config_path}")
 
 
