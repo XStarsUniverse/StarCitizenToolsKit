@@ -410,7 +410,7 @@
                     "isRelay": 0,
                     "isConnectedToRoom": 0,
                     "wirelessConnection": 0,
-                    "defaultPriority": 10,
+                    "defaultPriority": 0,
                     "filterParams": [],
                     "states": [
                         {
@@ -422,7 +422,7 @@
                                         "resource": "Power",
                                         "resourceAmountPerSecond": {
                                             "SStandardResourceUnit": {
-                                                "standardResourceUnits": 9
+                                                "standardResourceUnits": 5
                                             }
                                         }
                                     },
@@ -489,7 +489,7 @@
                                         "resource": "Power",
                                         "resourceAmountPerSecond": {
                                             "SStandardResourceUnit": {
-                                                "standardResourceUnits": 9
+                                                "standardResourceUnits": 5
                                             }
                                         }
                                     },
@@ -1813,7 +1813,7 @@
             "ResourceNetwork": {
                 "IsNetworked": true,
                 "IsRelay": false,
-                "DefaultPriority": 10,
+                "DefaultPriority": 0,
                 "States": [
                     {
                         "Name": "Online",
@@ -1821,7 +1821,7 @@
                             {
                                 "Type": "Consumption",
                                 "Resource": "Power",
-                                "Rate": 9,
+                                "Rate": 5,
                                 "MinimumFraction": 1
                             },
                             {
@@ -1841,7 +1841,7 @@
                             {
                                 "Type": "Consumption",
                                 "Resource": "Power",
-                                "Rate": 9,
+                                "Rate": 5,
                                 "MinimumFraction": 1
                             },
                             {
