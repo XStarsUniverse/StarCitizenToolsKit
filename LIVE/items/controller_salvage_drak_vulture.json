@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "56157788-054f-4994-b840-062c638023f9",
             "__path": "libs/foundry/records/entities/scitem/ships/controller/controller_salvage_drak_vulture.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -296,6 +301,7 @@
                     "UIAudioDef": "ff29b069-da28-4f04-9d54-1d01aa93ef9f",
                     "useEntityClass": "00000000-0000-0000-0000-000000000000",
                     "dialogueContext": "00000000-0000-0000-0000-000000000000",
+                    "bypassRealisticMode": 0,
                     "UIAudioManufacturers": [],
                     "offset": [],
                     "videoAudioPlayTrigger": {
@@ -310,7 +316,8 @@
                     "videoAudioResumeTrigger": {
                         "audioTrigger": ""
                     }
-                }
+                },
+                "SAudioProxyParams": []
             },
             "ClassName": "Controller_Salvage_DRAK_Vulture",
             "__type": "SalvageController"

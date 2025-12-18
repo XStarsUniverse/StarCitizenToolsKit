@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "f877f2cb-e03d-46fb-8130-93194530e597",
             "__path": "libs/foundry/records/entities/scitem/aimodule_atc_newbabbageatc01.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -94,6 +99,7 @@
                     "useGameRulesActivation": 0,
                     "isHostilityPrimaryChild": 1
                 },
+                "SCItemUserParams": [],
                 "SAnimationControllerParams": {
                     "AnimationDatabase": "SCItems\\ATC\\SCItem_ATC_Anims.adb",
                     "AnimationController": "SCItems\\ATC\\SCItem_ATC_ControllerDefs.xml",
@@ -114,6 +120,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -191,6 +202,7 @@
                     },
                     "tagTriggers": []
                 },
+                "SubsumptionEventReceiverComponentParams": [],
                 "SubsumptionComponentParams": {
                     "subsumptionMastergraph": "AIModuleMastergraph",
                     "subsumptionActivity": "ATC_Controller",
@@ -199,6 +211,7 @@
                 "SCItemCommsComponentParams": {
                     "setup": "201bfe98-d5f6-499a-bd02-0076c73ddc19"
                 },
+                "SRadarSenseComponentParams": [],
                 "AttentionTargetComponentParams": {
                     "attackerScore": 1
                 },
@@ -212,6 +225,7 @@
                     "ignoreHostiles": 0,
                     "perceptionProfile": "00000000-0000-0000-0000-000000000000"
                 },
+                "AISeatOperatorComponentParams": [],
                 "ItemControlComponentParams": {
                     "turnedOnByDefault": 1,
                     "forceOn": 0,
@@ -223,7 +237,9 @@
                     "allowTogglePowerObservedItems": 0,
                     "operatorModeDefinitionsOverride": "00000000-0000-0000-0000-000000000000",
                     "additionalItemControlPriorities": []
-                }
+                },
+                "SDialogueComponentParams": [],
+                "SAudioProxyParams": []
             },
             "ClassName": "AImodule_ATC_NewBabbageATC01",
             "__type": "AIModule"

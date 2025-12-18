@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "4a19c59f-773e-4a26-9459-897e80817226",
             "__path": "libs/foundry/records/entities/scitem/ships/thrusters/orig_m50_thruster_main_dummy.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "ThrusterMFXEntityParams": {
@@ -151,6 +156,11 @@
                     "rootOverridePaint": 1,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -215,6 +225,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -235,14 +246,19 @@
                             "temperature": {
                                 "enable": 1,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 500,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 1,
@@ -252,6 +268,7 @@
                                     "stateHeatGenerationValues": {
                                         "EntityTemperatureResourceHeatGeneration": {
                                             "state": "states",
+                                            "resource": "Fuel",
                                             "baselineTemperatureChange": 1
                                         }
                                     },
@@ -262,7 +279,7 @@
                                     "maximum": 525
                                 },
                                 "fireHazard": {
-                                    "enable": 1,
+                                    "enable": 0,
                                     "dissolveOnBurn": 0,
                                     "dissolvePercentageRange": {
                                         "minimum": 0,
@@ -290,8 +307,8 @@
                     "states": {
                         "ItemResourceState": {
                             "name": "Online",
-                            "deltas": {
-                                "ItemResourceDeltaConsumption": {
+                            "deltas": [
+                                {
                                     "minimumConsumptionFraction": 1,
                                     "consumption": {
                                         "resource": "Fuel",
@@ -304,9 +321,28 @@
                                     "consumptionComposition": {
                                         "values": []
                                     },
-                                    "dynamicAmountOverride": []
+                                    "dynamicAmountOverride": {
+                                        "ItemResourceDynamicAmountThrusterFuel": []
+                                    }
+                                },
+                                {
+                                    "minimumConsumptionFraction": 0,
+                                    "consumption": {
+                                        "resource": "Coolant",
+                                        "resourceAmountPerSecond": {
+                                            "SStandardResourceUnit": {
+                                                "standardResourceUnits": 0
+                                            }
+                                        }
+                                    },
+                                    "consumptionComposition": {
+                                        "values": []
+                                    },
+                                    "dynamicAmountOverride": {
+                                        "ItemResourceDynamicAmountCoolant": []
+                                    }
                                 }
-                            },
+                            ],
                             "linkedInteractionStates": [],
                             "signatureParams": {
                                 "EMSignature": {
@@ -320,14 +356,36 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
+                "EntityComponentFuelConnection": [],
                 "EntityComponentPowerConnection": {
                     "PowerBase": 20,
                     "PowerDraw": 24,
@@ -525,6 +583,7 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": {
                         "SItemPortMasterControllerParams": {
                             "Pipes": [
@@ -546,12 +605,15 @@
                     "Ports": [
                         {
                             "Name": "hardpoint_engine_left_attach",
-                            "DisplayName": "port_NameThrustMain01",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "main rear left uneditable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 2,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -559,6 +621,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -651,12 +714,15 @@
                         },
                         {
                             "Name": "hardpoint_engine_right_attach",
-                            "DisplayName": "port_NameThrustMain02",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "main rear right uneditable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 2,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -664,6 +730,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -891,6 +958,12 @@
                                 "Resource": "Fuel",
                                 "Rate": 0.01,
                                 "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 0,
+                                "MinimumFraction": 0
                             }
                         ]
                     }

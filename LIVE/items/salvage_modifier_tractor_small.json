@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "cdcddccb-247c-4fcb-ab5b-915822159c87",
             "__path": "libs/foundry/records/entities/scitem/ships/utility/salvage/salvagemodifiers/salvage_modifier_tractor_small.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -92,6 +97,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -487,6 +497,7 @@
                                     "chargeTimeMultiplier": 1,
                                     "useAlternateProjectileVisuals": 0,
                                     "useAugmentedRealityProjectiles": 0,
+                                    "disableMisfire": 0,
                                     "recoilModifier": {
                                         "decayMultiplier": 1,
                                         "endDecayMultiplier": 1,
@@ -501,6 +512,7 @@
                                         "frontalOscillationDecayMultiplier": 1,
                                         "frontalOscillationRandomnessMultiplier": 1,
                                         "animatedRecoilMultiplier": 1,
+                                        "disableRecoil": 0,
                                         "headRotationMultiplier": {
                                             "x": 1,
                                             "y": 1,

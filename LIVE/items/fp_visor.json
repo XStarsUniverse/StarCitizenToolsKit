@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "b48e460e-6809-4547-a7b1-3ebb3c5930ac",
             "__path": "libs/foundry/records/entities/scitem/characters/human/player_hud/fp_visor.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -16,6 +21,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -1419,7 +1429,8 @@
                         "snowEnabled": 0
                     },
                     "renderNodeLoadoutEntries": []
-                }
+                },
+                "EntityComponentRoomOccupantParams": []
             },
             "ClassName": "FP_Visor",
             "__type": "Visor"

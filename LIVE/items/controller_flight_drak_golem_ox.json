@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "16678db6-0fcb-4ecd-a9a7-1fc63d54a61c",
             "__path": "libs/foundry/records/entities/scitem/ships/controller/controller_flight_drak_golem_ox.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "68b3fe59-d53f-4e20-8c82-92dca83846ad"
@@ -450,7 +455,7 @@
                     "maxSpeedPrecisionModeZeroProximityAssist": 30,
                     "pitchYawLimiterType": "Ellipsoid",
                     "linearLimiterType": "NormalizedUniformWithMaxRadius",
-                    "torqueDistanceThreshold": -1,
+                    "torqueDistanceThreshold": 0.4,
                     "torqueImbalanceMultiplier": 0.25,
                     "refreshCachesOnLandingMode": 0,
                     "liftMultiplier": 7,
@@ -883,9 +888,6 @@
                             "stallSpeedModifier": 1,
                             "thrusterControlSurfaceMixRatioLerpTime": 0.5,
                             "hoverMaxRange": 20,
-                            "pitchAnimationVariable": "pitchDeflection",
-                            "yawAnimationVariable": "yawDeflection",
-                            "rollAnimationVariable": "rollDeflection",
                             "dampingTorqueDerivative": {
                                 "x": 50000,
                                 "y": 22000,
@@ -1209,6 +1211,15 @@
                                 "x": 0,
                                 "y": 0,
                                 "z": 0
+                            },
+                            "surfaceAnimations": {
+                                "pitchVariable": "pitchDeflection",
+                                "yawVariable": "yawDeflection",
+                                "rollVariable": "rollDeflection",
+                                "pitchAddRollVariable": "pitchAddRollDeflection",
+                                "pitchMinusRollVariable": "pitchMinusRollDeflection",
+                                "pitchAddYawVariable": "pitchAddYawDeflection",
+                                "pitchMinusYawVariable": "pitchMinusYawDeflection"
                             },
                             "turbulence": {
                                 "groundTurbulenceAmplitude": 0.4,
@@ -1806,14 +1817,14 @@
                         "z": 1.06
                     },
                     "positiveAngularScale": {
-                        "x": 0.117,
-                        "y": 0.1465,
-                        "z": 0.1153
+                        "x": 0.1157,
+                        "y": 0.093,
+                        "z": 0.113
                     },
                     "negativeAngularScale": {
                         "x": 0.1526,
-                        "y": 0.1465,
-                        "z": 0.1153
+                        "y": 0.093,
+                        "z": 0.113
                     },
                     "authoredMotionLimits": {
                         "linearMaxAcceleration": 400,
@@ -1859,8 +1870,8 @@
                     "forceOn": 0,
                     "asopSpawnState": "Off",
                     "throttleParams": {
-                        "ItemPowerSegmentThrottleParams": {
-                            "default": 4
+                        "ItemPowerSimpleSegmentThrottleParams": {
+                            "defaultFull": 0
                         }
                     },
                     "masterModeExclusionsOverride": []
@@ -1910,19 +1921,45 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "SGeometryResourceParams": {
                     "cacheResources": 0,
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -2024,7 +2061,7 @@
                 "maxSpeed": 1000,
                 "maxSpeedPrecisionModeFullProximityAssist": 10,
                 "maxSpeedPrecisionModeZeroProximityAssist": 30,
-                "torqueDistanceThreshold": -1,
+                "torqueDistanceThreshold": 0.4,
                 "torqueImbalanceMultiplier": 0.25,
                 "refreshCachesOnLandingMode": 0,
                 "liftMultiplier": 7,

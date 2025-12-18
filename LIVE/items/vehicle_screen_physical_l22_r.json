@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "aa767c5b-e10d-4386-9851-7aca06a35cca",
             "__path": "libs/foundry/records/entities/scitem/ships/displays/vehicle_screen_physical_l22_r.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -92,6 +97,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -387,6 +397,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -474,7 +485,8 @@
                                     "name": "_physicalScreen",
                                     "component": {
                                         "canvas": "3b46ae71-d669-41f8-b662-5cf6bc46fd36",
-                                        "isSystemViewInstance": 0
+                                        "isSystemViewInstance": 0,
+                                        "canvasInstantiationMode": "RootDeferred"
                                     }
                                 }
                             }
@@ -511,13 +523,34 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "ItemDashboardScreenPhysicalParams": {
                     "isHolographic": 0
@@ -526,6 +559,7 @@
                     "UIAudioDef": "30ce1d0e-754c-4557-94eb-78d327532cec",
                     "useEntityClass": "00000000-0000-0000-0000-000000000000",
                     "dialogueContext": "00000000-0000-0000-0000-000000000000",
+                    "bypassRealisticMode": 0,
                     "UIAudioManufacturers": {
                         "UIAudioManufacturer": {
                             "AudioManufacturerTag": "764cff0d-8ab9-4563-8354-e8e78f476ff1",

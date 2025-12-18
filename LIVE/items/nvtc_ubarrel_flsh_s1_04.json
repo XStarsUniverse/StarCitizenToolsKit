@@ -8,12 +8,17 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "d7d93249-f0ef-4b50-803b-781a904a2cef",
             "__path": "libs/foundry/records/entities/scitem/weapons/weapon_modifier/nvtc_ubarrel_flsh_s1_04.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "b97f2439-cde7-45f9-acc3-5eab75b0f84c"
                 },
                 {
-                    "value": "59ca5e36-b9a2-4459-ad0e-5745bcf5d899"
+                    "value": "dfbc6af5-6211-4d71-8d10-b64c66ea95a9"
                 },
                 {
                     "value": "774ce8f9-0a9a-45a8-ae7c-be28f30999e1"
@@ -26,6 +31,9 @@
                 },
                 {
                     "value": "7ccfbd18-9b22-436f-a746-e28265c1e965"
+                },
+                {
+                    "value": "a54a6778-05a9-4520-9a1f-94390d55247d"
                 }
             ],
             "StaticEntityClassData": {
@@ -185,6 +193,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -199,6 +208,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -405,6 +415,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -564,6 +579,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -584,14 +600,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -636,6 +657,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -677,6 +699,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -718,6 +741,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -747,6 +771,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -788,6 +813,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -808,6 +834,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1043,6 +1070,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1184,6 +1213,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -1498,9 +1528,11 @@
                     },
                     "carryableSequences": []
                 },
+                "SPersistentComponentParams": [],
                 "SAuxiliaryWeaponActionComponentParams": {
                     "pausable": 1,
                     "supplementaryFireTime": 0,
+                    "alwaysOn": 0,
                     "particleEffects": [],
                     "startAudioTriggerOneshot": {
                         "audioTrigger": "Play_WPFA_Attachments_Flashlight_On"
@@ -1552,6 +1584,11 @@
                                         "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
                                         "__ref": "187726a9-3eb5-48f7-96b5-b7419b1c0a49",
                                         "__path": "libs/foundry/records/entities/scitem/weapons/weapon_modifier/weapon_underbarrel_light_narrow_red_01.xml",
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
                                         "tags": [],
                                         "StaticEntityClassData": {
                                             "DefaultEntitlementEntityParams": {
@@ -1677,7 +1714,8 @@
                                                     "flareFOV": 60,
                                                     "flareScale": 1,
                                                     "attachToSun": 0
-                                                }
+                                                },
+                                                "aiExtender": []
                                             },
                                             "SAttachableComponentParams": {
                                                 "attachToTileItemPort": "NoConnection",
@@ -1760,7 +1798,8 @@
                                                     }
                                                 },
                                                 "entityAttachParams": []
-                                            }
+                                            },
+                                            "SPersistentComponentParams": []
                                         }
                                     }
                                 },
@@ -1778,6 +1817,11 @@
                                         "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
                                         "__ref": "8b848848-07b5-44dc-8709-5f292d028625",
                                         "__path": "libs/foundry/records/entities/scitem/weapons/weapon_modifier/weapon_underbarrel_light_wide_red_01.xml",
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
                                         "tags": [],
                                         "StaticEntityClassData": {
                                             "DefaultEntitlementEntityParams": {
@@ -1903,7 +1947,8 @@
                                                     "flareFOV": 180,
                                                     "flareScale": 1,
                                                     "attachToSun": 0
-                                                }
+                                                },
+                                                "aiExtender": []
                                             },
                                             "SAttachableComponentParams": {
                                                 "attachToTileItemPort": "NoConnection",
@@ -2001,16 +2046,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [
                         {
                             "Name": "light_1",
-                            "DisplayName": "light_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 0,
                             "MaxSize": 0,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2018,6 +2067,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2119,12 +2169,15 @@
                         },
                         {
                             "Name": "light_2",
-                            "DisplayName": "light_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 0,
                             "MaxSize": 0,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2132,6 +2185,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",

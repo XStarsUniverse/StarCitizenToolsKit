@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "1f74e62c-6093-4d2f-a560-e33df359a7e4",
             "__path": "libs/foundry/records/entities/scitem/ships/quantumenforcementdevice/qdmp_wetk_s01_burke.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": {
                 "Reference": {
                     "value": "980ce6e8-afa2-4084-b13b-b0d01e5d7848"
@@ -822,6 +827,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -1427,11 +1437,15 @@
                     "onInteractionSuccessTriggers": [
                         {
                             "targetInteraction": "Interactable.SharedInteractions[0]",
-                            "gameplayTriggers": []
+                            "gameplayTriggers": {
+                                "STurnOnItemGameplayTrigger": []
+                            }
                         },
                         {
                             "targetInteraction": "Interactable.SharedInteractions[1]",
-                            "gameplayTriggers": []
+                            "gameplayTriggers": {
+                                "STurnOffItemGameplayTrigger": []
+                            }
                         }
                     ],
                     "onInteractionFailedTriggers": []
@@ -1447,6 +1461,7 @@
                     },
                     "masterModeExclusionsOverride": []
                 },
+                "SCItemAimableComponentParams": [],
                 "ItemResourceComponentParams": {
                     "isResourceNetworked": 1,
                     "isRelay": 0,
@@ -1487,14 +1502,36 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
-                }
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
+                },
+                "SAudioProxyParams": []
             },
             "ClassName": "QDMP_WETK_S01_Burke",
             "__type": "QuantumInterdictionGenerator"

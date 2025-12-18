@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "e64ea21f-bb7d-465c-bd8e-ca16825c3fda",
             "__path": "libs/foundry/records/entities/scitem/characters/human/armor/pu_armor/medium/core/qrt_specialist_medium_core_01_01_iae2022.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "8f77e0fc-4086-4d66-ae9e-8601b0a3c7f4"
@@ -60,7 +65,9 @@
                     "displayImage": "",
                     "displayIcon": "ui/textures/ea/loadouticons/medium_armour_64.tif",
                     "sortString": "",
-                    "trackerProperties": []
+                    "trackerProperties": {
+                        "SObjectDataBankEntryTrackerParams": []
+                    }
                 }
             },
             "Components": {
@@ -72,6 +79,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -92,14 +100,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -255,6 +268,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -359,7 +377,7 @@
                                     "EnableDecalProjection": 0,
                                     "BBoxJoint": "",
                                     "BBoxRadius": 0,
-                                    "Wear": 0,
+                                    "Wear": 0.1,
                                     "Dirt": 0,
                                     "Interference": 0,
                                     "Damage": 0,
@@ -489,7 +507,7 @@
                                     "EnableDecalProjection": 0,
                                     "BBoxJoint": "",
                                     "BBoxRadius": 0,
-                                    "Wear": 0,
+                                    "Wear": 0.1,
                                     "Dirt": 0,
                                     "Interference": 0,
                                     "Damage": 0,
@@ -713,16 +731,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [
                         {
                             "Name": "wep_stocked_2",
-                            "DisplayName": "wep_stocked_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory invis_p1 transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 2,
                             "MaxSize": 4,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -734,6 +756,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -871,12 +894,15 @@
                         },
                         {
                             "Name": "wep_stocked_3",
-                            "DisplayName": "wep_stocked_3",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory invis_p1 transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 2,
                             "MaxSize": 5,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -888,6 +914,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1084,12 +1111,15 @@
                         },
                         {
                             "Name": "magazine_attach_1",
-                            "DisplayName": "magazine_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1101,6 +1131,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1187,12 +1218,15 @@
                         },
                         {
                             "Name": "magazine_attach_2",
-                            "DisplayName": "magazine_attach_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1204,6 +1238,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1290,12 +1325,15 @@
                         },
                         {
                             "Name": "magazine_attach_3",
-                            "DisplayName": "magazine_attach_3",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1307,6 +1345,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1393,12 +1432,15 @@
                         },
                         {
                             "Name": "magazine_attach_4",
-                            "DisplayName": "magazine_attach_4",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1410,6 +1452,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1496,12 +1539,15 @@
                         },
                         {
                             "Name": "magazine_attach_5",
-                            "DisplayName": "magazine_attach_5",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1513,6 +1559,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1599,12 +1646,15 @@
                         },
                         {
                             "Name": "magazine_attach_6",
-                            "DisplayName": "magazine_attach_6",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1616,6 +1666,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1702,12 +1753,15 @@
                         },
                         {
                             "Name": "grenade_attach_1",
-                            "DisplayName": "grenade_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1719,6 +1773,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1847,12 +1902,15 @@
                         },
                         {
                             "Name": "grenade_attach_2",
-                            "DisplayName": "grenade_attach_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1864,6 +1922,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1992,12 +2051,15 @@
                         },
                         {
                             "Name": "grenade_attach_3",
-                            "DisplayName": "grenade_attach_3",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2012,6 +2074,7 @@
                                     "value": "00000000-0000-0000-0000-000000000000"
                                 }
                             ],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2137,12 +2200,15 @@
                         },
                         {
                             "Name": "backpack",
-                            "DisplayName": "backpack",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "utility combat",
                             "RequiredPortTags": "$backpack",
                             "Flags": "body_attach inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 2,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2157,6 +2223,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             ],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2236,12 +2303,15 @@
                         },
                         {
                             "Name": "gadget_attach_1",
-                            "DisplayName": "gadget_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 2,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2253,6 +2323,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2559,6 +2630,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "EntityRoot",
@@ -2672,6 +2745,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -2800,6 +2875,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 0,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -3101,6 +3177,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -3146,6 +3223,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -3195,6 +3273,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -3215,6 +3294,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -3252,6 +3332,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -3272,6 +3353,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": {
@@ -3299,6 +3381,7 @@
                     "vehicleItemPortInteractionLinks": [],
                     "linkPlugs": []
                 },
+                "SPersistentComponentParams": [],
                 "SCItemInventoryContainerComponentParams": {
                     "openInventoryInteraction": "Interactable.SharedInteractions[5]",
                     "openLootingInteraction": "Interactable.SharedInteractions[6]",
@@ -3336,6 +3419,7 @@
                     "remoteHitEffectLibName": "playerhits_armour_heavy",
                     "actorAimLimits": "b0bf0159-6f59-4465-b553-a763aa28b758",
                     "restrictedMoveViewPenalty": "50ca5e64-e834-4f4f-b054-139063052f6f",
+                    "integrityMilestoneToBreak": 0.1,
                     "protectedBodyParts": {
                         "Reference": {
                             "value": "cbe3a3e8-5035-4772-acb7-014617c6b03a"
@@ -3742,6 +3826,8 @@
                     "fragmentTag": "",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": {
                         "UsableUseSlot": {
                             "name": "Main",
@@ -3864,6 +3950,7 @@
                         }
                     },
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [
                         {
                             "name": "",
@@ -3918,6 +4005,7 @@
                         "specializedDataEntry": []
                     }
                 },
+                "SubsumptionMissionLinkComponentParams": [],
                 "ResourceContainer": {
                     "mass": 0.2,
                     "immutable": 0,
@@ -3941,7 +4029,8 @@
                             "weight": 1
                         }
                     }
-                }
+                },
+                "SAudioProxyParams": []
             },
             "ClassName": "qrt_specialist_medium_core_01_01_iae2022",
             "__type": "Char_Armor_Torso"

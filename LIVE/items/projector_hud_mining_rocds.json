@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "5d2c9019-540f-49d1-9a6f-c71350aab348",
             "__path": "libs/foundry/records/entities/scitem/ships/displays/projector_hud_mining_rocds.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -163,7 +168,8 @@
                                     "name": "_flight",
                                     "component": {
                                         "canvas": "c6321d6a-7575-4b1f-9011-f4615faa8229",
-                                        "isSystemViewInstance": 0
+                                        "isSystemViewInstance": 0,
+                                        "canvasInstantiationMode": "RootDeferred"
                                     }
                                 }
                             }
@@ -175,6 +181,7 @@
                     "UIAudioDef": "436eb23c-ff1d-46de-805d-e178e7975eed",
                     "useEntityClass": "00000000-0000-0000-0000-000000000000",
                     "dialogueContext": "00000000-0000-0000-0000-000000000000",
+                    "bypassRealisticMode": 0,
                     "UIAudioManufacturers": [],
                     "offset": [],
                     "videoAudioPlayTrigger": {
@@ -189,7 +196,8 @@
                     "videoAudioResumeTrigger": {
                         "audioTrigger": ""
                     }
-                }
+                },
+                "SAudioProxyParams": []
             },
             "ClassName": "Projector_HUD_Mining_ROCDS",
             "__type": "Display"

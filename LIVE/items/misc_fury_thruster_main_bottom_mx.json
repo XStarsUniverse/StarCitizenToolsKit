@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "c4fafcd7-e7b1-4f23-84ec-0a17c50616fe",
             "__path": "libs/foundry/records/entities/scitem/ships/thrusters/misc_fury_thruster_main_bottom_mx.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "ThrusterMFXEntityParams": {
@@ -108,6 +113,11 @@
                     "rootOverridePaint": 1,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -603,6 +613,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -623,14 +634,19 @@
                             "temperature": {
                                 "enable": 1,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 500,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 1,
@@ -640,6 +656,7 @@
                                     "stateHeatGenerationValues": {
                                         "EntityTemperatureResourceHeatGeneration": {
                                             "state": "states",
+                                            "resource": "Fuel",
                                             "baselineTemperatureChange": 1
                                         }
                                     },
@@ -650,7 +667,7 @@
                                     "maximum": 525
                                 },
                                 "fireHazard": {
-                                    "enable": 1,
+                                    "enable": 0,
                                     "dissolveOnBurn": 0,
                                     "dissolvePercentageRange": {
                                         "minimum": 0,
@@ -683,6 +700,7 @@
                     "ExplosionBone": "",
                     "IsSalvagable": 1,
                     "IsRepairable": 1,
+                    "SalvageDamageModifier": 1,
                     "MirrorSalvageHit": 0,
                     "DisableMaterialDamage": 0,
                     "alwaysPropagateHitToParent": 0,
@@ -730,7 +748,7 @@
                     "DeathGasComposition": [],
                     "InteractionLocks": [],
                     "sequencerTasks": [],
-                    "shatterDestroyEvent": [],
+                    "maelstromEvents": [],
                     "craftingData": []
                 },
                 "ItemControlComponentParams": {
@@ -750,8 +768,8 @@
                     "states": {
                         "ItemResourceState": {
                             "name": "Online",
-                            "deltas": {
-                                "ItemResourceDeltaConsumption": {
+                            "deltas": [
+                                {
                                     "minimumConsumptionFraction": 1,
                                     "consumption": {
                                         "resource": "Fuel",
@@ -764,9 +782,28 @@
                                     "consumptionComposition": {
                                         "values": []
                                     },
-                                    "dynamicAmountOverride": []
+                                    "dynamicAmountOverride": {
+                                        "ItemResourceDynamicAmountThrusterFuel": []
+                                    }
+                                },
+                                {
+                                    "minimumConsumptionFraction": 0,
+                                    "consumption": {
+                                        "resource": "Coolant",
+                                        "resourceAmountPerSecond": {
+                                            "SStandardResourceUnit": {
+                                                "standardResourceUnits": 0
+                                            }
+                                        }
+                                    },
+                                    "consumptionComposition": {
+                                        "values": []
+                                    },
+                                    "dynamicAmountOverride": {
+                                        "ItemResourceDynamicAmountCoolant": []
+                                    }
                                 }
-                            },
+                            ],
                             "linkedInteractionStates": [],
                             "signatureParams": {
                                 "EMSignature": {
@@ -780,16 +817,37 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "SCItemThrusterParams": {
-                    "thrustCapacity": 990000,
+                    "thrustCapacity": 638725.6,
                     "thrustCapacityNew": 0,
                     "maxSupportedAtmosphericEfficiency": 2,
                     "minHealthThrustMultiplier": 0.25,
@@ -1812,13 +1870,17 @@
                                     "rtpc": {
                                         "rtpc": "GP_Thrusters_Usage"
                                     },
-                                    "behavior": []
+                                    "behavior": {
+                                        "SRtpcBehaviour": []
+                                    }
                                 },
                                 {
                                     "rtpc": {
                                         "rtpc": "GP_Thrusters_Usage_Slow_Lerp"
                                     },
-                                    "behavior": []
+                                    "behavior": {
+                                        "SRtpcBehaviour": []
+                                    }
                                 },
                                 {
                                     "rtpc": {
@@ -1849,6 +1911,7 @@
                         "z": 0
                     }
                 },
+                "EntityComponentFuelConnection": [],
                 "EntityComponentPowerConnection": {
                     "PowerBase": 20,
                     "PowerDraw": 24,
@@ -1997,6 +2060,7 @@
                     "MisfireMinTemperature": 400,
                     "MisfireMaxTemperature": 1100
                 },
+                "EntityComponentRoomOccupantParams": [],
                 "SInteractionStateMachineParams": {
                     "StateTypes": [
                         {
@@ -2016,6 +2080,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2036,6 +2101,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2056,6 +2122,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2076,6 +2143,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2106,6 +2174,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2126,6 +2195,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2243,13 +2313,19 @@
                                 "Resource": "Fuel",
                                 "Rate": 0.01,
                                 "MinimumFraction": 1
+                            },
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Coolant",
+                                "Rate": 0,
+                                "MinimumFraction": 0
                             }
                         ]
                     }
                 ]
             },
             "Thruster": {
-                "thrustCapacity": 990000,
+                "thrustCapacity": 638725.6,
                 "thrustCapacityNew": 0,
                 "maxSupportedAtmosphericEfficiency": 2,
                 "minHealthThrustMultiplier": 0.25,

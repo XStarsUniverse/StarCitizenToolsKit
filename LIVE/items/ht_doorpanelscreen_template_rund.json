@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "9571e795-b0ba-4d1c-8f45-0112f6b3f0e4",
             "__path": "libs/foundry/records/entities/scitem/doors/ht_doorpanelscreen_template_rund.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -92,6 +97,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -204,6 +214,7 @@
                     "UIAudioDef": "f4ecfeed-8e8a-46ad-b071-8d971e568ff0",
                     "useEntityClass": "00000000-0000-0000-0000-000000000000",
                     "dialogueContext": "00000000-0000-0000-0000-000000000000",
+                    "bypassRealisticMode": 0,
                     "UIAudioManufacturers": [],
                     "offset": [],
                     "videoAudioPlayTrigger": {
@@ -219,6 +230,7 @@
                         "audioTrigger": ""
                     }
                 },
+                "SAudioProxyParams": [],
                 "UIBuildingBlocksEntityComponentParams": {
                     "enableFullScreenMouse": 0,
                     "defaultStyle": "86613679-2536-44a0-85a1-afcd3e425725",
@@ -232,7 +244,8 @@
                                     "name": "canvas",
                                     "component": {
                                         "canvas": "b532a081-8b58-4c62-a625-9b4ed008cffb",
-                                        "isSystemViewInstance": 0
+                                        "isSystemViewInstance": 0,
+                                        "canvasInstantiationMode": "RootDeferred"
                                     }
                                 }
                             }

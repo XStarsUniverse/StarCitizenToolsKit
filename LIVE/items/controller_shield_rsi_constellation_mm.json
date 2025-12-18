@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "d9664edb-76aa-4136-8b05-023aea9b5b1f",
             "__path": "libs/foundry/records/entities/scitem/ships/controller/controller_shield_rsi_constellation_mm.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -109,7 +114,11 @@
                     "turnedOnByDefault": 0,
                     "forceOn": 0,
                     "asopSpawnState": "None",
-                    "throttleParams": [],
+                    "throttleParams": {
+                        "ItemPowerSimpleSegmentThrottleParams": {
+                            "defaultFull": 0
+                        }
+                    },
                     "masterModeExclusionsOverride": []
                 },
                 "ItemControllerComponentParams": {
@@ -157,13 +166,34 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "SItemPortContainerComponentParams": {
                     "PortFlags": "",
@@ -171,6 +201,7 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [],
                     "InternalResourceLinks": [],

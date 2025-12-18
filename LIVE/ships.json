@@ -870,7 +870,7 @@
         "ClassName": "GRIN_MDC",
         "Name": "Greycat MDC",
         "Description": "Manufacturer: Greycat Industrial\\nFocus: Combat\\n \\nBuilding upon a robust and sturdy industrial frame, Greycat has crafted the MDC Mobile Defense Center into an effective combat vehicle ready to protect your interests from remote mining sites to patrolling high-value processing centers thanks to its mounted PDS turret.",
-        "Career": "Combat",
+        "Career": "Ground",
         "Role": "Anti-Air",
         "Manufacturer": {
             "Code": "GRIN",
@@ -886,26 +886,20 @@
             "ExpeditedClaimTime": 1.3,
             "StandardClaimTime": 5.1
         },
-        "IsVehicle": false,
+        "IsVehicle": true,
         "IsGravlev": false,
-        "IsSpaceship": true,
+        "IsSpaceship": false,
         "Mass": 53700,
         "ShieldFaceType": "Bubble",
-        "Propulsion": {
-            "FuelCapacity": 0,
-            "FuelIntakeRate": 0,
-            "FuelUsage": {
-                "Main": 0,
-                "Retro": 0,
-                "Vtol": 0,
-                "Maneuvering": 0
-            },
-            "ThrustCapacity": {
-                "Main": 0,
-                "Retro": 0,
-                "Vtol": 0,
-                "Maneuvering": 0
-            }
+        "DriveCharacteristics": {
+            "TopSpeed": 68.93,
+            "ReverseSpeed": 68.93,
+            "Acceleration": 0.394,
+            "Decceleration": 1.4754,
+            "ZeroToMax": 48.6,
+            "ZeroToReverse": 48.6,
+            "MaxToZero": 12.98,
+            "ReverseToZero": 12.98
         },
         "Cargo": 0,
         "CargoGrids": [],
@@ -939,8 +933,8 @@
         "ClassName": "GRIN_MTC",
         "Name": "Greycat MTC",
         "Description": "Manufacturer: Greycat Industrial\\nFocus: Personnel Transport\\n\\nAs an expert in industrial operations, Greycat understands that jobsite security is a vital part of any successful business venture. Not only that, but to be fully effective, you need to be able to get your security personnel and their equipment to wherever they\u2019re needed most. That\u2019s why the MTC Mobile Tactical Center is such an important addition to your next venture. Nimble enough to access the difficult terrain encountered at remote operations and equipped with enough suit lockers, weapon racks, and storage to tackle a wide host of issues, the Greycat MTC could make all the difference when it comes to turning a potential problem into potential profit.",
-        "Career": "Exploration",
-        "Role": "Pathfinder",
+        "Career": "Ground",
+        "Role": "Passenger",
         "Manufacturer": {
             "Code": "GRIN",
             "Name": "Greycat Industrial"
@@ -955,26 +949,20 @@
             "ExpeditedClaimTime": 0.54,
             "StandardClaimTime": 2.17
         },
-        "IsVehicle": false,
+        "IsVehicle": true,
         "IsGravlev": false,
-        "IsSpaceship": true,
+        "IsSpaceship": false,
         "Mass": 53700,
         "ShieldFaceType": "Bubble",
-        "Propulsion": {
-            "FuelCapacity": 0,
-            "FuelIntakeRate": 0,
-            "FuelUsage": {
-                "Main": 0,
-                "Retro": 0,
-                "Vtol": 0,
-                "Maneuvering": 0
-            },
-            "ThrustCapacity": {
-                "Main": 0,
-                "Retro": 0,
-                "Vtol": 0,
-                "Maneuvering": 0
-            }
+        "DriveCharacteristics": {
+            "TopSpeed": 68.93,
+            "ReverseSpeed": 68.93,
+            "Acceleration": 0.394,
+            "Decceleration": 1.4754,
+            "ZeroToMax": 48.6,
+            "ZeroToReverse": 48.6,
+            "MaxToZero": 12.98,
+            "ReverseToZero": 12.98
         },
         "Cargo": 0,
         "CargoGrids": [],
@@ -1008,7 +996,7 @@
         "ClassName": "GRIN_PTV",
         "Name": "Greycat PTV",
         "Description": "Manufacturer: Greycat Industrial\\nFocus: Personal Transport\\n\\nThe Greycat PTV is a simple and practical buggy frequently used to reduce travel times in large hangars or outposts.",
-        "Career": "Transport",
+        "Career": "Ground",
         "Role": "Passenger",
         "Manufacturer": {
             "Code": "GRIN",
@@ -1024,27 +1012,19 @@
             "ExpeditedClaimTime": 0.09,
             "StandardClaimTime": 0.28
         },
-        "IsVehicle": false,
+        "IsVehicle": true,
         "IsGravlev": false,
-        "IsSpaceship": true,
+        "IsSpaceship": false,
         "Mass": 14690,
-        "Propulsion": {
-            "FuelCapacity": 1000,
-            "FuelIntakeRate": 15,
-            "FuelUsage": {
-                "Main": 0,
-                "Retro": 0,
-                "Vtol": 0,
-                "Maneuvering": 0
-            },
-            "ThrustCapacity": {
-                "Main": 0,
-                "Retro": 0,
-                "Vtol": 0,
-                "Maneuvering": 0
-            },
-            "IntakeToTankCapacityRatio": 0.015,
-            "TimeForIntakesToFillTank": 66.66666666666667
+        "DriveCharacteristics": {
+            "TopSpeed": 155.52,
+            "ReverseSpeed": 155.52,
+            "Acceleration": 0.3638,
+            "Decceleration": 1.3827,
+            "ZeroToMax": 118.76,
+            "ZeroToReverse": 118.76,
+            "MaxToZero": 31.24,
+            "ReverseToZero": 31.24
         },
         "Cargo": 0,
         "CargoGrids": [],
@@ -1190,7 +1170,7 @@
         "ClassName": "GRIN_STV",
         "Name": "Greycat STV",
         "Description": "Manufacturer: Greycat Industrial\\nFocus: Transport\\n\\nGet ready to have some serious fun on the job with the STV from Greycat. This Sport Terrain Vehicle was built by pros for pros and features blazing speed and convenient built-in storage.",
-        "Career": "Transporter",
+        "Career": "Ground",
         "Role": "Passenger",
         "Manufacturer": {
             "Code": "GRIN",
@@ -1206,25 +1186,19 @@
             "ExpeditedClaimTime": 0,
             "StandardClaimTime": 0.2
         },
-        "IsVehicle": false,
+        "IsVehicle": true,
         "IsGravlev": false,
-        "IsSpaceship": true,
+        "IsSpaceship": false,
         "Mass": 22070,
-        "Propulsion": {
-            "FuelCapacity": 0,
-            "FuelIntakeRate": 0,
-            "FuelUsage": {
-                "Main": 0,
-                "Retro": 0,
-                "Vtol": 0,
-                "Maneuvering": 0
-            },
-            "ThrustCapacity": {
-                "Main": 0,
-                "Retro": 0,
-                "Vtol": 0,
-                "Maneuvering": 0
-            }
+        "DriveCharacteristics": {
+            "TopSpeed": 127.77,
+            "ReverseSpeed": 127.77,
+            "Acceleration": 0.1751,
+            "Decceleration": 0.4366,
+            "ZeroToMax": 202.66,
+            "ZeroToReverse": 202.66,
+            "MaxToZero": 81.29,
+            "ReverseToZero": 81.29
         },
         "Cargo": 0,
         "CargoGrids": [],
@@ -2287,6 +2261,1493 @@
         }
     },
     {
+        "UUID": "e20211a3-e615-4103-a099-c00fb4fd1552",
+        "ClassName": "MISC_Starlancer_Max_Collector_Indust",
+        "Name": "MISC Starlancer MAX Wikelo Work Special",
+        "Description": "Manufacturer: MISC\\nFocus: Cargo\\n \\nFor those looking to expand their hauling operations, the engineers at MISC have upgraded the Starlancer MAX with an extra spacious hold ready to transport cargo and vehicles. Paired with comfortable accommodations for longer trips and a full defensive package for when you go off the beaten path, it\u2019s easy to see why the Starlancer MAX is the hauler of choice for industrious pilots across the \u2018verse.",
+        "Career": "Transporter",
+        "Role": "Medium Freight",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Musashi Industrial & Starflight Concern"
+        },
+        "Size": 5,
+        "Width": 60,
+        "Length": 90,
+        "Height": 20,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 5190,
+            "ExpeditedClaimTime": 3.08,
+            "StandardClaimTime": 12.33
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 498070.5,
+        "ShieldFaceType": "Quadrant",
+        "QuantumTravel": {
+            "FuelCapacity": 3600,
+            "Range": 428928869295.8418,
+            "Speed": 282000000,
+            "SpoolTime": 6,
+            "PortOlisarToArcCorpTime": 148.67854989361703,
+            "PortOlisarToArcCorpFuel": 351.89625753050996,
+            "PortOlisarToArcCorpAndBack": 5.11514391381084
+        },
+        "Propulsion": {
+            "FuelCapacity": 50000,
+            "FuelIntakeRate": 50,
+            "FuelUsage": {
+                "Main": 331.25,
+                "Retro": 187.5,
+                "Vtol": 112.5,
+                "Maneuvering": 915
+            },
+            "ThrustCapacity": {
+                "Main": 26500000,
+                "Retro": 15000000,
+                "Vtol": 9000000,
+                "Maneuvering": 73200000
+            },
+            "IntakeToMainFuelRatio": 0.1509433962264151,
+            "IntakeToTankCapacityRatio": 0.001,
+            "TimeForIntakesToFillTank": 1000,
+            "ManeuveringTimeTillEmpty": 67.68189509306261
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 160,
+            "MaxSpeed": 990,
+            "BoostSpeedForward": 325,
+            "BoostSpeedBackward": 165,
+            "Acceleration": {
+                "Main": 53.20531932728399,
+                "Retro": 30.11621848714188,
+                "Vtol": 18.069731092285128,
+                "Maneuvering": 146.96714621725238
+            },
+            "AccelerationG": {
+                "Main": 5.42543267346994,
+                "Retro": 3.070999626492419,
+                "Vtol": 1.8425997758954515,
+                "Maneuvering": 14.986478177283006
+            },
+            "Pitch": 31,
+            "Yaw": 31,
+            "Roll": 65,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 2,
+                "RampDownTime": 0.2,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 3
+            },
+            "ZeroToScm": 3.0072181132075473,
+            "ZeroToMax": 18.6071620754717,
+            "ScmToZero": 5.312752000000001,
+            "MaxToZero": 32.872653
+        },
+        "Cargo": 224,
+        "CargoGrids": [
+            {
+                "SCU": 48,
+                "unit": 0,
+                "unitName": "SCU",
+                "x": 2.5,
+                "y": 10,
+                "z": 3.75,
+                "minSize": {
+                    "x": 1.25,
+                    "y": 1.25,
+                    "z": 1.25
+                },
+                "maxSize": {
+                    "x": 2.5,
+                    "y": 10,
+                    "z": 2.5
+                },
+                "isOpenContainer": true,
+                "isExternalContainer": false,
+                "isClosedContainer": false,
+                "uuid": "b321cf6b-a66b-4e88-8534-b9bce1b45504"
+            },
+            {
+                "SCU": 48,
+                "unit": 0,
+                "unitName": "SCU",
+                "x": 2.5,
+                "y": 10,
+                "z": 3.75,
+                "minSize": {
+                    "x": 1.25,
+                    "y": 1.25,
+                    "z": 1.25
+                },
+                "maxSize": {
+                    "x": 2.5,
+                    "y": 10,
+                    "z": 2.5
+                },
+                "isOpenContainer": true,
+                "isExternalContainer": false,
+                "isClosedContainer": false,
+                "uuid": "b321cf6b-a66b-4e88-8534-b9bce1b45504"
+            },
+            {
+                "SCU": 64,
+                "unit": 0,
+                "unitName": "SCU",
+                "x": 2.5,
+                "y": 20,
+                "z": 2.5,
+                "minSize": {
+                    "x": 1.25,
+                    "y": 1.25,
+                    "z": 1.25
+                },
+                "maxSize": {
+                    "x": 2.5,
+                    "y": 2.5,
+                    "z": 10
+                },
+                "isOpenContainer": true,
+                "isExternalContainer": false,
+                "isClosedContainer": false,
+                "uuid": "fe72fd63-29fb-46e5-9832-a0338befbf81"
+            },
+            {
+                "SCU": 64,
+                "unit": 0,
+                "unitName": "SCU",
+                "x": 2.5,
+                "y": 20,
+                "z": 2.5,
+                "minSize": {
+                    "x": 1.25,
+                    "y": 1.25,
+                    "z": 1.25
+                },
+                "maxSize": {
+                    "x": 2.5,
+                    "y": 2.5,
+                    "z": 10
+                },
+                "isOpenContainer": true,
+                "isExternalContainer": false,
+                "isClosedContainer": false,
+                "uuid": "fe72fd63-29fb-46e5-9832-a0338befbf81"
+            }
+        ],
+        "CargoSizeLimits": {
+            "MinSize": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1.25
+            },
+            "MaxSize": {
+                "x": 2.5,
+                "y": 10,
+                "z": 2.5
+            }
+        },
+        "Health": 84200,
+        "DamageBeforeDestruction": {
+            "body": 35000
+        },
+        "DamageBeforeDetach": {
+            "wing_aileron_left": 1000,
+            "wing_left_rear": 1000,
+            "wing_left": 2000,
+            "wing_plate_left": 1000,
+            "nacelle_left": 7000,
+            "wing_aileron_right": 1000,
+            "wing_right_rear": 1000,
+            "wing_right": 2000,
+            "wing_plate_right": 1000,
+            "nacelle_right": 7000,
+            "spoiler_connection_left": 200,
+            "spoiler_connection_right": 200,
+            "top_spoiler_left": 200,
+            "top_spoiler_right": 200,
+            "nose": 20000
+        }
+    },
+    {
+        "UUID": "14b8caeb-d5e1-4816-9537-86ef19afada8",
+        "ClassName": "MISC_Starlancer_TAC",
+        "Name": "MISC Starlancer TAC",
+        "Description": "Manufacturer: MISC\\nFocus: Combat\\n \\nFor those looking to for a versatile ship that can stand on its own in a fight, the engineers have upgraded the Starlancer TAC with an aggressive offensive package ready to face down the fiercest of foes. When you take on a high risk, high reward job, the Starlancer TAC is there to make sure you and your crew are able to see it through to the very end.",
+        "Career": "Combat",
+        "Role": "Gunship",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Musashi Industrial & Starflight Concern"
+        },
+        "Size": 5,
+        "Width": 60,
+        "Length": 90,
+        "Height": 20,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 7190,
+            "ExpeditedClaimTime": 3.33,
+            "StandardClaimTime": 13.33
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 738070.5,
+        "ShieldFaceType": "Quadrant",
+        "QuantumTravel": {
+            "FuelCapacity": 3350,
+            "Range": 614678899082.5688,
+            "Speed": 171000000,
+            "SpoolTime": 6,
+            "PortOlisarToArcCorpTime": 245.18918754385965,
+            "PortOlisarToArcCorpFuel": 228.5040633315,
+            "PortOlisarToArcCorpAndBack": 7.3302854031528115
+        },
+        "Propulsion": {
+            "FuelCapacity": 48000,
+            "FuelIntakeRate": 50,
+            "FuelUsage": {
+                "Main": 331.25,
+                "Retro": 187.5,
+                "Vtol": 75,
+                "Maneuvering": 915
+            },
+            "ThrustCapacity": {
+                "Main": 26500000,
+                "Retro": 15000000,
+                "Vtol": 6000000,
+                "Maneuvering": 73200000
+            },
+            "IntakeToMainFuelRatio": 0.1509433962264151,
+            "IntakeToTankCapacityRatio": 0.0010416666666666667,
+            "TimeForIntakesToFillTank": 960,
+            "ManeuveringTimeTillEmpty": 64.9746192893401
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 150,
+            "MaxSpeed": 960,
+            "BoostSpeedForward": 315,
+            "BoostSpeedBackward": 155,
+            "Acceleration": {
+                "Main": 35.90442918393297,
+                "Retro": 20.32326180222621,
+                "Vtol": 8.129304720890485,
+                "Maneuvering": 99.1775175948639
+            },
+            "AccelerationG": {
+                "Main": 3.6612328556574334,
+                "Retro": 2.07239595603251,
+                "Vtol": 0.8289583824130039,
+                "Maneuvering": 10.113292265438647
+            },
+            "Pitch": 27,
+            "Yaw": 27,
+            "Roll": 60,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 2,
+                "RampDownTime": 0.2,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 3
+            },
+            "ZeroToScm": 4.177757547169811,
+            "ZeroToMax": 26.737648301886793,
+            "ScmToZero": 7.380705,
+            "MaxToZero": 47.236512000000005
+        },
+        "Cargo": 96,
+        "CargoGrids": [
+            {
+                "SCU": 48,
+                "unit": 0,
+                "unitName": "SCU",
+                "x": 2.5,
+                "y": 10,
+                "z": 3.75,
+                "minSize": {
+                    "x": 1.25,
+                    "y": 1.25,
+                    "z": 1.25
+                },
+                "maxSize": {
+                    "x": 2.5,
+                    "y": 10,
+                    "z": 2.5
+                },
+                "isOpenContainer": true,
+                "isExternalContainer": false,
+                "isClosedContainer": false,
+                "uuid": "b321cf6b-a66b-4e88-8534-b9bce1b45504"
+            },
+            {
+                "SCU": 48,
+                "unit": 0,
+                "unitName": "SCU",
+                "x": 2.5,
+                "y": 10,
+                "z": 3.75,
+                "minSize": {
+                    "x": 1.25,
+                    "y": 1.25,
+                    "z": 1.25
+                },
+                "maxSize": {
+                    "x": 2.5,
+                    "y": 10,
+                    "z": 2.5
+                },
+                "isOpenContainer": true,
+                "isExternalContainer": false,
+                "isClosedContainer": false,
+                "uuid": "b321cf6b-a66b-4e88-8534-b9bce1b45504"
+            }
+        ],
+        "CargoSizeLimits": {
+            "MinSize": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1.25
+            },
+            "MaxSize": {
+                "x": 2.5,
+                "y": 10,
+                "z": 2.5
+            }
+        },
+        "Health": 116600,
+        "DamageBeforeDestruction": {
+            "body": 38000
+        },
+        "DamageBeforeDetach": {
+            "geo_nacelle_fin_04": 500,
+            "geo_nacelle_fin_05": 500,
+            "geo_nacelle_fin_03": 500,
+            "geo_nacelle_fin_02": 500,
+            "geo_nacelle_fin_01": 500,
+            "geo_nacelle_fin_06": 500,
+            "nacelle_air_brake_left": 600,
+            "wing_aileron_left": 500,
+            "wing_left_rear": 1500,
+            "wing_left": 3000,
+            "wing_plate_left": 6000,
+            "nacelle_left": 8000,
+            "rear_spoiler_left": 500,
+            "spoiler_connection_left": 500,
+            "rear_spoiler_right": 500,
+            "spoiler_connection_right": 500,
+            "top_spoiler_left": 1200,
+            "top_spoiler_right": 1200,
+            "nose": 25000,
+            "nacelle_air_brake_right": 600,
+            "geo_nacelle_fin_007": 500,
+            "geo_nacelle_fin_008": 500,
+            "geo_nacelle_fin_009": 500,
+            "geo_nacelle_fin_010": 500,
+            "geo_nacelle_fin_011": 500,
+            "geo_nacelle_fin_012": 500,
+            "wing_aileron_right": 500,
+            "wing_right_rear": 1500,
+            "wing_right": 3000,
+            "wing_plate_right": 6000,
+            "nacelle_right": 8000
+        },
+        "MannedTurrets": [
+            {
+                "Size": 5,
+                "Fixed": true,
+                "WeaponSizes": [
+                    5
+                ]
+            },
+            {
+                "Size": 5,
+                "Fixed": true,
+                "WeaponSizes": [
+                    5
+                ]
+            },
+            {
+                "Size": 1,
+                "Fixed": true,
+                "WeaponSizes": [
+                    1
+                ]
+            },
+            {
+                "Size": 1,
+                "Fixed": true,
+                "WeaponSizes": [
+                    1
+                ]
+            }
+        ]
+    },
+    {
+        "UUID": "4369e7f9-f2e5-4b62-969f-8b35e623ff29",
+        "ClassName": "MISC_Starlancer_TAC_Collector_Military",
+        "Name": "MISC Starlancer TAC Wikelo War Special",
+        "Description": "Manufacturer: MISC\\nFocus: Combat\\n \\nFor those looking to for a versatile ship that can stand on its own in a fight, the engineers have upgraded the Starlancer TAC with an aggressive offensive package ready to face down the fiercest of foes. When you take on a high risk, high reward job, the Starlancer TAC is there to make sure you and your crew are able to see it through to the very end.\\n\\nWikelo here. Made useful modifications to make ship even more fighter like. Very impressive.",
+        "Career": "Combat",
+        "Role": "Gunship",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Musashi Industrial & Starflight Concern"
+        },
+        "Size": 5,
+        "Width": 60,
+        "Length": 90,
+        "Height": 20,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 7190,
+            "ExpeditedClaimTime": 3.33,
+            "StandardClaimTime": 13.33
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 738070.5,
+        "ShieldFaceType": "Quadrant",
+        "QuantumTravel": {
+            "FuelCapacity": 3350,
+            "Range": 146352118829.18304,
+            "Speed": 278000000,
+            "SpoolTime": 6,
+            "PortOlisarToArcCorpTime": 150.81780960431655,
+            "PortOlisarToArcCorpFuel": 959.7170659923,
+            "PortOlisarToArcCorpAndBack": 1.745306048369717
+        },
+        "Propulsion": {
+            "FuelCapacity": 48000,
+            "FuelIntakeRate": 50,
+            "FuelUsage": {
+                "Main": 331.25,
+                "Retro": 187.5,
+                "Vtol": 75,
+                "Maneuvering": 915
+            },
+            "ThrustCapacity": {
+                "Main": 26500000,
+                "Retro": 15000000,
+                "Vtol": 6000000,
+                "Maneuvering": 73200000
+            },
+            "IntakeToMainFuelRatio": 0.1509433962264151,
+            "IntakeToTankCapacityRatio": 0.0010416666666666667,
+            "TimeForIntakesToFillTank": 960,
+            "ManeuveringTimeTillEmpty": 64.9746192893401
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 150,
+            "MaxSpeed": 960,
+            "BoostSpeedForward": 315,
+            "BoostSpeedBackward": 155,
+            "Acceleration": {
+                "Main": 35.90442918393297,
+                "Retro": 20.32326180222621,
+                "Vtol": 8.129304720890485,
+                "Maneuvering": 99.1775175948639
+            },
+            "AccelerationG": {
+                "Main": 3.6612328556574334,
+                "Retro": 2.07239595603251,
+                "Vtol": 0.8289583824130039,
+                "Maneuvering": 10.113292265438647
+            },
+            "Pitch": 27,
+            "Yaw": 27,
+            "Roll": 60,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 2,
+                "RampDownTime": 0.2,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 3
+            },
+            "ZeroToScm": 4.177757547169811,
+            "ZeroToMax": 26.737648301886793,
+            "ScmToZero": 7.380705,
+            "MaxToZero": 47.236512000000005
+        },
+        "Cargo": 96,
+        "CargoGrids": [
+            {
+                "SCU": 48,
+                "unit": 0,
+                "unitName": "SCU",
+                "x": 2.5,
+                "y": 10,
+                "z": 3.75,
+                "minSize": {
+                    "x": 1.25,
+                    "y": 1.25,
+                    "z": 1.25
+                },
+                "maxSize": {
+                    "x": 2.5,
+                    "y": 10,
+                    "z": 2.5
+                },
+                "isOpenContainer": true,
+                "isExternalContainer": false,
+                "isClosedContainer": false,
+                "uuid": "b321cf6b-a66b-4e88-8534-b9bce1b45504"
+            },
+            {
+                "SCU": 48,
+                "unit": 0,
+                "unitName": "SCU",
+                "x": 2.5,
+                "y": 10,
+                "z": 3.75,
+                "minSize": {
+                    "x": 1.25,
+                    "y": 1.25,
+                    "z": 1.25
+                },
+                "maxSize": {
+                    "x": 2.5,
+                    "y": 10,
+                    "z": 2.5
+                },
+                "isOpenContainer": true,
+                "isExternalContainer": false,
+                "isClosedContainer": false,
+                "uuid": "b321cf6b-a66b-4e88-8534-b9bce1b45504"
+            }
+        ],
+        "CargoSizeLimits": {
+            "MinSize": {
+                "x": 1.25,
+                "y": 1.25,
+                "z": 1.25
+            },
+            "MaxSize": {
+                "x": 2.5,
+                "y": 10,
+                "z": 2.5
+            }
+        },
+        "Health": 116600,
+        "DamageBeforeDestruction": {
+            "body": 38000
+        },
+        "DamageBeforeDetach": {
+            "geo_nacelle_fin_04": 500,
+            "geo_nacelle_fin_05": 500,
+            "geo_nacelle_fin_03": 500,
+            "geo_nacelle_fin_02": 500,
+            "geo_nacelle_fin_01": 500,
+            "geo_nacelle_fin_06": 500,
+            "nacelle_air_brake_left": 600,
+            "wing_aileron_left": 500,
+            "wing_left_rear": 1500,
+            "wing_left": 3000,
+            "wing_plate_left": 6000,
+            "nacelle_left": 8000,
+            "rear_spoiler_left": 500,
+            "spoiler_connection_left": 500,
+            "rear_spoiler_right": 500,
+            "spoiler_connection_right": 500,
+            "top_spoiler_left": 1200,
+            "top_spoiler_right": 1200,
+            "nose": 25000,
+            "nacelle_air_brake_right": 600,
+            "geo_nacelle_fin_007": 500,
+            "geo_nacelle_fin_008": 500,
+            "geo_nacelle_fin_009": 500,
+            "geo_nacelle_fin_010": 500,
+            "geo_nacelle_fin_011": 500,
+            "geo_nacelle_fin_012": 500,
+            "wing_aileron_right": 500,
+            "wing_right_rear": 1500,
+            "wing_right": 3000,
+            "wing_plate_right": 6000,
+            "nacelle_right": 8000
+        },
+        "MannedTurrets": [
+            {
+                "Size": 5,
+                "Fixed": true,
+                "WeaponSizes": [
+                    5
+                ]
+            },
+            {
+                "Size": 5,
+                "Fixed": true,
+                "WeaponSizes": [
+                    5
+                ]
+            },
+            {
+                "Size": 1,
+                "Fixed": true,
+                "WeaponSizes": [
+                    1
+                ]
+            },
+            {
+                "Size": 1,
+                "Fixed": true,
+                "WeaponSizes": [
+                    1
+                ]
+            }
+        ]
+    },
+    {
+        "UUID": "30e0f7ac-26fc-4d31-a231-af625511e37e",
+        "ClassName": "MRAI_Guardian",
+        "Name": "Mirai Guardian",
+        "Description": "Manufacturer: Mirai\\nFocus: Long Range Fighter\\n\\nTaking the adage that the best defense is a good offense, Mirai engineers have brought their expertise in performance and maneuverability to the Guardian long range fighter.  Fly circles around your opponents with the Mirai Guardian while establishing your space superiority. \\n",
+        "Career": "Combat",
+        "Role": "Heavy Fighter",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Mirai"
+        },
+        "Size": 2,
+        "Width": 16.3,
+        "Length": 24.3,
+        "Height": 9.1,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 5710,
+            "ExpeditedClaimTime": 2.83,
+            "StandardClaimTime": 11.33
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 113100,
+        "ShieldFaceType": "Bubble",
+        "QuantumTravel": {
+            "FuelCapacity": 1800,
+            "Range": 86914534041.52583,
+            "Speed": 231000000,
+            "SpoolTime": 6,
+            "PortOlisarToArcCorpTime": 181.5036842857143,
+            "PortOlisarToArcCorpFuel": 868.3154406596999,
+            "PortOlisarToArcCorpAndBack": 1.0364896877985121
+        },
+        "Propulsion": {
+            "FuelCapacity": 9000,
+            "FuelIntakeRate": 30,
+            "FuelUsage": {
+                "Main": 58.875,
+                "Retro": 58.75,
+                "Vtol": 0,
+                "Maneuvering": 396.5
+            },
+            "ThrustCapacity": {
+                "Main": 4710000,
+                "Retro": 4700000,
+                "Vtol": 0,
+                "Maneuvering": 31720000
+            },
+            "IntakeToMainFuelRatio": 0.5095541401273885,
+            "IntakeToTankCapacityRatio": 0.0033333333333333335,
+            "TimeForIntakesToFillTank": 300,
+            "ManeuveringTimeTillEmpty": 39.62575674188222
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 213,
+            "MaxSpeed": 1125,
+            "BoostSpeedForward": 465,
+            "BoostSpeedBackward": 225,
+            "Acceleration": {
+                "Main": 41.644562334217504,
+                "Retro": 41.55614500442087,
+                "Vtol": 0,
+                "Maneuvering": 280.4597701149425
+            },
+            "AccelerationG": {
+                "Main": 4.246563539457155,
+                "Retro": 4.23754748098697,
+                "Vtol": 0,
+                "Maneuvering": 28.598937467426953
+            },
+            "Pitch": 45,
+            "Yaw": 45,
+            "Roll": 130,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 0.6,
+                "RampDownTime": 0.3,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 0.7
+            },
+            "ZeroToScm": 5.114713375796178,
+            "ZeroToMax": 27.014331210191084,
+            "ScmToZero": 5.125595744680851,
+            "MaxToZero": 27.071808510638295
+        },
+        "Cargo": 0,
+        "CargoGrids": [],
+        "Health": 69200,
+        "DamageBeforeDestruction": {
+            "geo_body": 7100
+        },
+        "DamageBeforeDetach": {
+            "geo_wing_left_top_back": 2500,
+            "geo_wing_left_top_front": 3000,
+            "geo_wing_left_top_middle": 4000,
+            "geo_wing_arm_left_rear_top_a": 300,
+            "geo_wing_right_top_back": 2500,
+            "geo_wing_right_top_front": 3000,
+            "geo_wing_right_top_middle": 4000,
+            "geo_wing_arm_right_rear_top_a": 300,
+            "geo_wing_bottom_left_back": 2500,
+            "geo_wing_bottom_left_front": 3000,
+            "geo_wing_bottom_left_middle": 4000,
+            "geo_wing_bottom_right_back": 2500,
+            "geo_wing_bottom_right_front": 3000,
+            "geo_wing_bottom_right_middle": 4000,
+            "geo_thruster_arm_left_c": 5000,
+            "geo_thruster_arm_left_b": 5000,
+            "geo_thruster_arm_right_c": 5000,
+            "geo_thruster_arm_right_b": 5000,
+            "geo_body_top_front_b": 300
+        }
+    },
+    {
+        "UUID": "e07d46e4-92cd-462d-8cda-e17b5051a9eb",
+        "ClassName": "MRAI_Guardian_Military",
+        "Name": "Mirai Guardian Wikelo War Special",
+        "Description": "Manufacturer: Mirai\\nFocus: Long Range Fighter\\n\\nTaking the adage that the best defense is a good offense, Mirai engineers have brought their expertise in performance and maneuverability to the Guardian long range fighter.  Fly circles around your opponents with the Mirai Guardian while establishing your space superiority. \\n\\nWikelo here. Made useful modifications to make ship much more fighter like. Very impressive.",
+        "Career": "Combat",
+        "Role": "Heavy Fighter",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Mirai"
+        },
+        "Size": 2,
+        "Width": 16.3,
+        "Length": 24.3,
+        "Height": 9.1,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 5710,
+            "ExpeditedClaimTime": 2.83,
+            "StandardClaimTime": 11.33
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 113100,
+        "ShieldFaceType": "Bubble",
+        "QuantumTravel": {
+            "FuelCapacity": 1800,
+            "Range": 83487940630.79778,
+            "Speed": 266000000,
+            "SpoolTime": 4,
+            "PortOlisarToArcCorpTime": 157.62162056390977,
+            "PortOlisarToArcCorpFuel": 903.9536890692,
+            "PortOlisarToArcCorpAndBack": 0.9956262260810385
+        },
+        "Propulsion": {
+            "FuelCapacity": 9000,
+            "FuelIntakeRate": 30,
+            "FuelUsage": {
+                "Main": 58.875,
+                "Retro": 58.75,
+                "Vtol": 0,
+                "Maneuvering": 396.5
+            },
+            "ThrustCapacity": {
+                "Main": 4710000,
+                "Retro": 4700000,
+                "Vtol": 0,
+                "Maneuvering": 31720000
+            },
+            "IntakeToMainFuelRatio": 0.5095541401273885,
+            "IntakeToTankCapacityRatio": 0.0033333333333333335,
+            "TimeForIntakesToFillTank": 300,
+            "ManeuveringTimeTillEmpty": 39.62575674188222
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 213,
+            "MaxSpeed": 1125,
+            "BoostSpeedForward": 465,
+            "BoostSpeedBackward": 225,
+            "Acceleration": {
+                "Main": 41.644562334217504,
+                "Retro": 41.55614500442087,
+                "Vtol": 0,
+                "Maneuvering": 280.4597701149425
+            },
+            "AccelerationG": {
+                "Main": 4.246563539457155,
+                "Retro": 4.23754748098697,
+                "Vtol": 0,
+                "Maneuvering": 28.598937467426953
+            },
+            "Pitch": 45,
+            "Yaw": 45,
+            "Roll": 130,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 0.6,
+                "RampDownTime": 0.3,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 0.7
+            },
+            "ZeroToScm": 5.114713375796178,
+            "ZeroToMax": 27.014331210191084,
+            "ScmToZero": 5.125595744680851,
+            "MaxToZero": 27.071808510638295
+        },
+        "Cargo": 0,
+        "CargoGrids": [],
+        "Health": 69200,
+        "DamageBeforeDestruction": {
+            "geo_body": 7100
+        },
+        "DamageBeforeDetach": {
+            "geo_wing_left_top_back": 2500,
+            "geo_wing_left_top_front": 3000,
+            "geo_wing_left_top_middle": 4000,
+            "geo_wing_arm_left_rear_top_a": 300,
+            "geo_wing_right_top_back": 2500,
+            "geo_wing_right_top_front": 3000,
+            "geo_wing_right_top_middle": 4000,
+            "geo_wing_arm_right_rear_top_a": 300,
+            "geo_wing_bottom_left_back": 2500,
+            "geo_wing_bottom_left_front": 3000,
+            "geo_wing_bottom_left_middle": 4000,
+            "geo_wing_bottom_right_back": 2500,
+            "geo_wing_bottom_right_front": 3000,
+            "geo_wing_bottom_right_middle": 4000,
+            "geo_thruster_arm_left_c": 5000,
+            "geo_thruster_arm_left_b": 5000,
+            "geo_thruster_arm_right_c": 5000,
+            "geo_thruster_arm_right_b": 5000,
+            "geo_body_top_front_b": 300
+        }
+    },
+    {
+        "UUID": "aaa0cdcd-907c-4533-b3fc-181ede06076d",
+        "ClassName": "MRAI_Guardian_MX",
+        "Name": "Mirai Guardian MX",
+        "Description": "Manufacturer: Mirai\\nFocus: Heavy Fighter\\n\\nTaking the framework of the Guardian fighter and adding even more offensive options, the Mirai Guardian MX packs additional firepower and armor ideal for overwhelming opponents. While not as nimble as the base Guardian, this heavy fighter is still more agile than many other ships in its class.\\n",
+        "Career": "Combat",
+        "Role": "Heavy Fighter",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Mirai"
+        },
+        "Size": 2,
+        "Width": 17,
+        "Length": 26,
+        "Height": 10,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 4200,
+            "ExpeditedClaimTime": 2.08,
+            "StandardClaimTime": 8.33
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 123540.37,
+        "ShieldFaceType": "Bubble",
+        "QuantumTravel": {
+            "FuelCapacity": 1800,
+            "Range": 86914534041.52583,
+            "Speed": 231000000,
+            "SpoolTime": 6,
+            "PortOlisarToArcCorpTime": 181.5036842857143,
+            "PortOlisarToArcCorpFuel": 868.3154406596999,
+            "PortOlisarToArcCorpAndBack": 1.0364896877985121
+        },
+        "Propulsion": {
+            "FuelCapacity": 9000,
+            "FuelIntakeRate": 30,
+            "FuelUsage": {
+                "Main": 125,
+                "Retro": 59.75,
+                "Vtol": 0,
+                "Maneuvering": 177.5
+            },
+            "ThrustCapacity": {
+                "Main": 10000000,
+                "Retro": 4780000,
+                "Vtol": 0,
+                "Maneuvering": 14200000
+            },
+            "IntakeToMainFuelRatio": 0.24,
+            "IntakeToTankCapacityRatio": 0.0033333333333333335,
+            "TimeForIntakesToFillTank": 300,
+            "ManeuveringTimeTillEmpty": 48.97959183673469
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 208,
+            "MaxSpeed": 1100,
+            "BoostSpeedForward": 455,
+            "BoostSpeedBackward": 221,
+            "Acceleration": {
+                "Main": 80.94520034220393,
+                "Retro": 38.69180576357348,
+                "Vtol": 0,
+                "Maneuvering": 114.94218448592959
+            },
+            "AccelerationG": {
+                "Main": 8.25411331516919,
+                "Retro": 3.9454661646508726,
+                "Vtol": 0,
+                "Maneuvering": 11.72084090754025
+            },
+            "Pitch": 39,
+            "Yaw": 39,
+            "Roll": 120,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 0.6,
+                "RampDownTime": 0.3,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 0.7
+            },
+            "ZeroToScm": 2.569639696,
+            "ZeroToMax": 13.589440699999999,
+            "ScmToZero": 5.3758152635983265,
+            "MaxToZero": 28.429792259414228
+        },
+        "Cargo": 0,
+        "CargoGrids": [],
+        "Health": 89300,
+        "DamageBeforeDestruction": {
+            "geo_body": 8100
+        },
+        "DamageBeforeDetach": {
+            "geo_wing_hinge_attach_left": 1000,
+            "geo_flap_01_wing_bottom_left": 1200,
+            "geo_flap_02_wing_bottom_left": 700,
+            "geo_guardian_mx_wing_bottom_left": 5000,
+            "geo_wing_arm_rear_bottom_left": 5000,
+            "geo_flap_02_wing_top_left": 700,
+            "geo_guardian_mx_wing_top_left": 5000,
+            "geo_wing_arm_rear_top_a_left": 5000,
+            "geo_flap_02_wing_top_right": 700,
+            "geo_guardian_mx_wing_top_right": 5000,
+            "geo_wing_arm_rear_top_a_right": 5000,
+            "geo_wing_hinge_attach_right": 1000,
+            "geo_flap_02_wing_bottom_right": 700,
+            "geo_flap_01_wing_bottom_right": 1200,
+            "geo_guardian_mx_wing_bottom_right": 5000,
+            "geo_wing_arm_rear_bottom_right": 5000,
+            "geo_thruster_arm_c_left": 6000,
+            "geo_thruster_arm_b_left": 6000,
+            "geo_thruster_arm_c_right": 6000,
+            "geo_thruster_arm_b_right": 6000,
+            "geo_body_top": 1900,
+            "geo_nose_cap": 1200
+        }
+    },
+    {
+        "UUID": "57ea2eaa-c495-43ae-bc96-c6f53a8e46ef",
+        "ClassName": "MRAI_Guardian_MX_Collector_Military",
+        "Name": "Mirai Guardian MX Wikelo War Special",
+        "Description": "Manufacturer: Mirai\\nFocus: Heavy Fighter\\n\\nTaking the framework of the Guardian fighter and adding even more offensive options, the Mirai Guardian MX packs additional firepower and armor ideal for overwhelming opponents. While not as nimble as the base Guardian, this heavy fighter is still more agile than many other ships in its class.\\n\\nWikelo here. Made useful modifications to make ship much more fighter like. Very impressive.",
+        "Career": "Combat",
+        "Role": "Heavy Fighter",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Mirai"
+        },
+        "Size": 2,
+        "Width": 17,
+        "Length": 26,
+        "Height": 10,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 4200,
+            "ExpeditedClaimTime": 2.08,
+            "StandardClaimTime": 8.33
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 123540.37,
+        "ShieldFaceType": "Bubble",
+        "QuantumTravel": {
+            "FuelCapacity": 1800,
+            "Range": 75062552126.77231,
+            "Speed": 324000000,
+            "SpoolTime": 6,
+            "PortOlisarToArcCorpTime": 129.40540453703704,
+            "PortOlisarToArcCorpFuel": 1005.4178786586,
+            "PortOlisarToArcCorpAndBack": 0.8951501849168969
+        },
+        "Propulsion": {
+            "FuelCapacity": 9000,
+            "FuelIntakeRate": 30,
+            "FuelUsage": {
+                "Main": 125,
+                "Retro": 59.75,
+                "Vtol": 0,
+                "Maneuvering": 177.5
+            },
+            "ThrustCapacity": {
+                "Main": 10000000,
+                "Retro": 4780000,
+                "Vtol": 0,
+                "Maneuvering": 14200000
+            },
+            "IntakeToMainFuelRatio": 0.24,
+            "IntakeToTankCapacityRatio": 0.0033333333333333335,
+            "TimeForIntakesToFillTank": 300,
+            "ManeuveringTimeTillEmpty": 48.97959183673469
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 208,
+            "MaxSpeed": 1100,
+            "BoostSpeedForward": 455,
+            "BoostSpeedBackward": 221,
+            "Acceleration": {
+                "Main": 80.94520034220393,
+                "Retro": 38.69180576357348,
+                "Vtol": 0,
+                "Maneuvering": 114.94218448592959
+            },
+            "AccelerationG": {
+                "Main": 8.25411331516919,
+                "Retro": 3.9454661646508726,
+                "Vtol": 0,
+                "Maneuvering": 11.72084090754025
+            },
+            "Pitch": 39,
+            "Yaw": 39,
+            "Roll": 120,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 0.6,
+                "RampDownTime": 0.3,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 0.7
+            },
+            "ZeroToScm": 2.569639696,
+            "ZeroToMax": 13.589440699999999,
+            "ScmToZero": 5.3758152635983265,
+            "MaxToZero": 28.429792259414228
+        },
+        "Cargo": 0,
+        "CargoGrids": [],
+        "Health": 89300,
+        "DamageBeforeDestruction": {
+            "geo_body": 8100
+        },
+        "DamageBeforeDetach": {
+            "geo_wing_hinge_attach_left": 1000,
+            "geo_flap_01_wing_bottom_left": 1200,
+            "geo_flap_02_wing_bottom_left": 700,
+            "geo_guardian_mx_wing_bottom_left": 5000,
+            "geo_wing_arm_rear_bottom_left": 5000,
+            "geo_flap_02_wing_top_left": 700,
+            "geo_guardian_mx_wing_top_left": 5000,
+            "geo_wing_arm_rear_top_a_left": 5000,
+            "geo_flap_02_wing_top_right": 700,
+            "geo_guardian_mx_wing_top_right": 5000,
+            "geo_wing_arm_rear_top_a_right": 5000,
+            "geo_wing_hinge_attach_right": 1000,
+            "geo_flap_02_wing_bottom_right": 700,
+            "geo_flap_01_wing_bottom_right": 1200,
+            "geo_guardian_mx_wing_bottom_right": 5000,
+            "geo_wing_arm_rear_bottom_right": 5000,
+            "geo_thruster_arm_c_left": 6000,
+            "geo_thruster_arm_b_left": 6000,
+            "geo_thruster_arm_c_right": 6000,
+            "geo_thruster_arm_b_right": 6000,
+            "geo_body_top": 1900,
+            "geo_nose_cap": 1200
+        }
+    },
+    {
+        "UUID": "e98521b6-ea2f-4c10-9050-abc29d89d0e8",
+        "ClassName": "MRAI_Guardian_QI",
+        "Name": "Mirai Guardian QI",
+        "Description": "Manufacturer: Mirai\\nFocus: Long Range Fighter\\n\\nTaking the adage that the best defense is a good offense, Mirai engineers have brought their expertise in performance and maneuverability to the Guardian long range fighter.  Fly circles around your opponents with the Mirai Guardian while establishing your space superiority. \\n",
+        "Career": "Combat",
+        "Role": "Interdiction",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Mirai"
+        },
+        "Size": 2,
+        "Width": 16.3,
+        "Length": 24.3,
+        "Height": 9.1,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 6180,
+            "ExpeditedClaimTime": 3,
+            "StandardClaimTime": 12
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 113100,
+        "ShieldFaceType": "Bubble",
+        "QuantumTravel": {
+            "FuelCapacity": 1800,
+            "Range": 86914534041.52583,
+            "Speed": 231000000,
+            "SpoolTime": 6,
+            "PortOlisarToArcCorpTime": 181.5036842857143,
+            "PortOlisarToArcCorpFuel": 868.3154406596999,
+            "PortOlisarToArcCorpAndBack": 1.0364896877985121
+        },
+        "Propulsion": {
+            "FuelCapacity": 9000,
+            "FuelIntakeRate": 30,
+            "FuelUsage": {
+                "Main": 58.875,
+                "Retro": 58.75,
+                "Vtol": 0,
+                "Maneuvering": 396.5
+            },
+            "ThrustCapacity": {
+                "Main": 4710000,
+                "Retro": 4700000,
+                "Vtol": 0,
+                "Maneuvering": 31720000
+            },
+            "IntakeToMainFuelRatio": 0.5095541401273885,
+            "IntakeToTankCapacityRatio": 0.0033333333333333335,
+            "TimeForIntakesToFillTank": 300,
+            "ManeuveringTimeTillEmpty": 39.62575674188222
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 210,
+            "MaxSpeed": 1100,
+            "BoostSpeedForward": 460,
+            "BoostSpeedBackward": 223,
+            "Acceleration": {
+                "Main": 41.644562334217504,
+                "Retro": 41.55614500442087,
+                "Vtol": 0,
+                "Maneuvering": 280.4597701149425
+            },
+            "AccelerationG": {
+                "Main": 4.246563539457155,
+                "Retro": 4.23754748098697,
+                "Vtol": 0,
+                "Maneuvering": 28.598937467426953
+            },
+            "Pitch": 42,
+            "Yaw": 42,
+            "Roll": 125,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 0.6,
+                "RampDownTime": 0.3,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 0.7
+            },
+            "ZeroToScm": 5.042675159235669,
+            "ZeroToMax": 26.414012738853504,
+            "ScmToZero": 5.0534042553191485,
+            "MaxToZero": 26.470212765957445
+        },
+        "Cargo": 0,
+        "CargoGrids": [],
+        "Health": 69100,
+        "DamageBeforeDestruction": {
+            "geo_body": 7000
+        },
+        "DamageBeforeDetach": {
+            "geo_wing_left_top_back": 2500,
+            "geo_wing_left_top_front": 3000,
+            "geo_wing_left_top_middle": 4000,
+            "geo_wing_arm_left_rear_top_a": 300,
+            "geo_wing_right_top_back": 2500,
+            "geo_wing_right_top_front": 3000,
+            "geo_wing_right_top_middle": 4000,
+            "geo_wing_arm_right_rear_top_a": 300,
+            "geo_wing_bottom_left_back": 2500,
+            "geo_wing_bottom_left_front": 3000,
+            "geo_wing_bottom_left_middle": 4000,
+            "geo_wing_bottom_right_back": 2500,
+            "geo_wing_bottom_right_front": 3000,
+            "geo_wing_bottom_right_middle": 4000,
+            "geo_thruster_arm_left_c": 5000,
+            "geo_thruster_arm_left_b": 5000,
+            "geo_thruster_arm_right_c": 5000,
+            "geo_thruster_arm_right_b": 5000,
+            "geo_body_top_front_b": 300
+        }
+    },
+    {
+        "UUID": "4eea10ca-d254-462b-8a44-7de6852dc1d4",
+        "ClassName": "MRAI_Guardian_QI_Collector_Indust",
+        "Name": "Mirai Guardian QI Wikelo Special",
+        "Description": "Manufacturer: Mirai\\nFocus: Interdiction\\n\\nIt\u2019s not too surprising that hostiles may run when confronted with a powerful opponent, but thanks to its quantum dampening capabilities, the Mirai Guardian QI ensures that your enemies won\u2019t be able to fight another day. Taking the best features of the base Guardian, the engineers at Mirai have made the QI variant the ideal complement to any protective forces.\\n\\nWikelo like ship very much. Had to get in and play around with it. Add parts to make even more useful. Enjoy.",
+        "Career": "Combat",
+        "Role": "Interdiction",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Mirai"
+        },
+        "Size": 2,
+        "Width": 16.3,
+        "Length": 24.3,
+        "Height": 9.1,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 6180,
+            "ExpeditedClaimTime": 3,
+            "StandardClaimTime": 12
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 113100,
+        "ShieldFaceType": "Bubble",
+        "QuantumTravel": {
+            "FuelCapacity": 1800,
+            "Range": 275229357798.16516,
+            "Speed": 205000000,
+            "SpoolTime": 6,
+            "PortOlisarToArcCorpTime": 204.52366375609756,
+            "PortOlisarToArcCorpFuel": 274.2048759978,
+            "PortOlisarToArcCorpAndBack": 3.282217344695289
+        },
+        "Propulsion": {
+            "FuelCapacity": 9000,
+            "FuelIntakeRate": 30,
+            "FuelUsage": {
+                "Main": 58.875,
+                "Retro": 58.75,
+                "Vtol": 0,
+                "Maneuvering": 396.5
+            },
+            "ThrustCapacity": {
+                "Main": 4710000,
+                "Retro": 4700000,
+                "Vtol": 0,
+                "Maneuvering": 31720000
+            },
+            "IntakeToMainFuelRatio": 0.5095541401273885,
+            "IntakeToTankCapacityRatio": 0.0033333333333333335,
+            "TimeForIntakesToFillTank": 300,
+            "ManeuveringTimeTillEmpty": 39.62575674188222
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 210,
+            "MaxSpeed": 1100,
+            "BoostSpeedForward": 460,
+            "BoostSpeedBackward": 223,
+            "Acceleration": {
+                "Main": 41.644562334217504,
+                "Retro": 41.55614500442087,
+                "Vtol": 0,
+                "Maneuvering": 280.4597701149425
+            },
+            "AccelerationG": {
+                "Main": 4.246563539457155,
+                "Retro": 4.23754748098697,
+                "Vtol": 0,
+                "Maneuvering": 28.598937467426953
+            },
+            "Pitch": 42,
+            "Yaw": 42,
+            "Roll": 125,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 0.6,
+                "RampDownTime": 0.3,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 0.7
+            },
+            "ZeroToScm": 5.042675159235669,
+            "ZeroToMax": 26.414012738853504,
+            "ScmToZero": 5.0534042553191485,
+            "MaxToZero": 26.470212765957445
+        },
+        "Cargo": 0,
+        "CargoGrids": [],
+        "Health": 69100,
+        "DamageBeforeDestruction": {
+            "geo_body": 7000
+        },
+        "DamageBeforeDetach": {
+            "geo_wing_left_top_back": 2500,
+            "geo_wing_left_top_front": 3000,
+            "geo_wing_left_top_middle": 4000,
+            "geo_wing_arm_left_rear_top_a": 300,
+            "geo_wing_right_top_back": 2500,
+            "geo_wing_right_top_front": 3000,
+            "geo_wing_right_top_middle": 4000,
+            "geo_wing_arm_right_rear_top_a": 300,
+            "geo_wing_bottom_left_back": 2500,
+            "geo_wing_bottom_left_front": 3000,
+            "geo_wing_bottom_left_middle": 4000,
+            "geo_wing_bottom_right_back": 2500,
+            "geo_wing_bottom_right_front": 3000,
+            "geo_wing_bottom_right_middle": 4000,
+            "geo_thruster_arm_left_c": 5000,
+            "geo_thruster_arm_left_b": 5000,
+            "geo_thruster_arm_right_c": 5000,
+            "geo_thruster_arm_right_b": 5000,
+            "geo_body_top_front_b": 300
+        }
+    },
+    {
+        "UUID": "48415834-ac12-4c28-ad01-7c210f30c2da",
+        "ClassName": "MRAI_Pulse",
+        "Name": "Mirai Pulse",
+        "Description": "Manufacturer: Mirai\\nFocus: Combat\\n \\nThe engineers at Mirai set out to craft an open-canopy bike capable of more. A more intimate connection between pilot and performance with a form-fitting silhouette. A more intuitive way to tame formidable landscapes with a responsive grav-lev system. A more intelligent combat experience with a custom weapon fully integrated into the spirit of the vehicle. The end result? The Mirai Pulse.\\n",
+        "Career": "Ground",
+        "Role": "Combat",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Mirai"
+        },
+        "Size": 1,
+        "Width": 1.5,
+        "Length": 3.5,
+        "Height": 2.5,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 75,
+            "ExpeditedClaimTime": 0.05,
+            "StandardClaimTime": 0.15
+        },
+        "IsVehicle": true,
+        "IsGravlev": false,
+        "IsSpaceship": false,
+        "Mass": 2140,
+        "ShieldFaceType": "Bubble",
+        "Cargo": 0,
+        "CargoGrids": [],
+        "Health": 1550,
+        "DamageBeforeDestruction": {
+            "body": 700
+        },
+        "DamageBeforeDetach": {
+            "arm_front_left_debris_a_panel": 50,
+            "arm_front_left_debris_a": 50,
+            "arm_front_right_debris_a_panel": 50,
+            "arm_front_right_debris_a": 50,
+            "body_panel_back_left_debris": 50,
+            "body_panel_back_right_debris": 50,
+            "body_spoiler_upper_right_mesh": 50,
+            "component_housing_mesh": 50,
+            "body_spoiler_upper_left_mesh": 50
+        }
+    },
+    {
+        "UUID": "d1f27f85-90db-4b5d-8ac2-09a9e9ee1315",
+        "ClassName": "MRAI_Pulse_LX",
+        "Name": "Mirai Pulse LX",
+        "Description": "Manufacturer: Mirai\\nFocus: Racing\\n \\nSeamlessly pairing pilot and pure speed, the Mirai Pulse LX grav-lev bike soars over terrain like no open-canopy racer before. Feel your heartrate quicken as you experience first-hand the Pulse\u2019s ground-breaking responsiveness and form-fitting silhouette.   \\n",
+        "Career": "Ground",
+        "Role": "Racing",
+        "Manufacturer": {
+            "Code": "MIS",
+            "Name": "Mirai"
+        },
+        "Size": 1,
+        "Width": 1.5,
+        "Length": 3.5,
+        "Height": 2.5,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 75,
+            "ExpeditedClaimTime": 0.05,
+            "StandardClaimTime": 0.15
+        },
+        "IsVehicle": true,
+        "IsGravlev": false,
+        "IsSpaceship": false,
+        "Mass": 2140,
+        "ShieldFaceType": "Bubble",
+        "Cargo": 0,
+        "CargoGrids": [],
+        "Health": 1550,
+        "DamageBeforeDestruction": {
+            "body": 700
+        },
+        "DamageBeforeDetach": {
+            "arm_front_left_debris_a_panel": 50,
+            "arm_front_left_debris_a": 50,
+            "arm_front_right_debris_a_panel": 50,
+            "arm_front_right_debris_a": 50,
+            "body_panel_back_left_debris": 50,
+            "body_panel_back_right_debris": 50,
+            "body_spoiler_upper_right_mesh": 50,
+            "component_housing_mesh": 50,
+            "body_spoiler_upper_left_mesh": 50
+        }
+    },
+    {
         "UUID": "6135a874-4cb1-4f49-9f29-5781e5991f2b",
         "ClassName": "ORIG_100i",
         "Name": "Origin 100i",
@@ -2713,42 +4174,42 @@
             "FuelCapacity": 10500,
             "FuelIntakeRate": 12,
             "FuelUsage": {
-                "Main": 70.7905,
-                "Retro": 35.625,
+                "Main": 66.46062174999999,
+                "Retro": 37.669025000000005,
                 "Vtol": 0,
-                "Maneuvering": 48.9375
+                "Maneuvering": 52.13308062500001
             },
             "ThrustCapacity": {
-                "Main": 13420000,
-                "Retro": 2850000,
+                "Main": 12599170,
+                "Retro": 3013522,
                 "Vtol": 0,
-                "Maneuvering": 15660000
+                "Maneuvering": 16682585.8
             },
-            "IntakeToMainFuelRatio": 0.16951427098268837,
+            "IntakeToMainFuelRatio": 0.18055804601316422,
             "IntakeToTankCapacityRatio": 0.001142857142857143,
             "TimeForIntakesToFillTank": 875,
-            "ManeuveringTimeTillEmpty": 126.1121136690518
+            "ManeuveringTimeTillEmpty": 130.39078655038875
         },
         "FlightCharacteristics": {
-            "ScmSpeed": 260,
-            "MaxSpeed": 1425,
-            "BoostSpeedForward": 610,
-            "BoostSpeedBackward": 230,
+            "ScmSpeed": 258,
+            "MaxSpeed": 1440,
+            "BoostSpeedForward": 550,
+            "BoostSpeedBackward": 270,
             "Acceleration": {
-                "Main": 192.6030110366405,
-                "Retro": 40.9030239533849,
+                "Main": 180.82250957991877,
+                "Retro": 43.24988159650961,
                 "Vtol": 0,
-                "Maneuvering": 224.7513526701781
+                "Maneuvering": 239.42744090589434
             },
             "AccelerationG": {
-                "Main": 19.64004130224292,
-                "Retro": 4.170947668509114,
+                "Main": 18.43876446899999,
+                "Retro": 4.410260547333658,
                 "Vtol": 0,
-                "Maneuvering": 22.918259820650082
+                "Maneuvering": 24.41480433235553
             },
-            "Pitch": 52,
-            "Yaw": 48,
-            "Roll": 180,
+            "Pitch": 50,
+            "Yaw": 46,
+            "Roll": 175,
             "PitchBoostMultiplier": 1.2,
             "YawBoostMultiplier": 1.2,
             "RollBoostMultiplier": 1.2,
@@ -2763,10 +4224,10 @@
                 "RegenPerSec": 0.75,
                 "RegenDelayAfterUse": 0.2
             },
-            "ZeroToScm": 1.3499269746646796,
-            "ZeroToMax": 7.39863822652757,
-            "ScmToZero": 6.356498245614035,
-            "MaxToZero": 34.8385
+            "ZeroToScm": 1.4268135123186685,
+            "ZeroToMax": 7.963610301313499,
+            "ScmToZero": 5.965334250090094,
+            "MaxToZero": 33.29488883771215
         },
         "Cargo": 8,
         "CargoGrids": [
@@ -2805,10 +4266,10 @@
                 "z": 1.25
             }
         },
-        "Health": 8200,
+        "Health": 8700,
         "DamageBeforeDestruction": {
-            "tail": 1650,
-            "nose": 1650
+            "tail": 1900,
+            "nose": 1900
         },
         "DamageBeforeDetach": {
             "glass_canopy_front": 1500,
@@ -2861,42 +4322,42 @@
             "FuelCapacity": 18000,
             "FuelIntakeRate": 12,
             "FuelUsage": {
-                "Main": 70.7905,
-                "Retro": 35.625,
+                "Main": 66.46062174999999,
+                "Retro": 37.669025000000005,
                 "Vtol": 0,
-                "Maneuvering": 48.9375
+                "Maneuvering": 52.13308062500001
             },
             "ThrustCapacity": {
-                "Main": 13420000,
-                "Retro": 2850000,
+                "Main": 12599170,
+                "Retro": 3013522,
                 "Vtol": 0,
-                "Maneuvering": 15660000
+                "Maneuvering": 16682585.8
             },
-            "IntakeToMainFuelRatio": 0.16951427098268837,
+            "IntakeToMainFuelRatio": 0.18055804601316422,
             "IntakeToTankCapacityRatio": 0.0006666666666666666,
             "TimeForIntakesToFillTank": 1500,
-            "ManeuveringTimeTillEmpty": 216.19219486123166
+            "ManeuveringTimeTillEmpty": 223.5270626578093
         },
         "FlightCharacteristics": {
-            "ScmSpeed": 260,
-            "MaxSpeed": 1425,
-            "BoostSpeedForward": 610,
-            "BoostSpeedBackward": 230,
+            "ScmSpeed": 258,
+            "MaxSpeed": 1460,
+            "BoostSpeedForward": 550,
+            "BoostSpeedBackward": 270,
             "Acceleration": {
-                "Main": 190.10652765185856,
-                "Retro": 40.37284678150499,
+                "Main": 178.4787228014506,
+                "Retro": 42.68928490480508,
                 "Vtol": 0,
-                "Maneuvering": 221.83816863100634
+                "Maneuvering": 236.32402821849502
             },
             "AccelerationG": {
-                "Main": 19.3854708439537,
-                "Retro": 4.116884642717441,
+                "Main": 18.19976473122326,
+                "Retro": 4.353095593786367,
                 "Vtol": 0,
-                "Maneuvering": 22.621197721036882
+                "Maneuvering": 24.09834430906528
             },
-            "Pitch": 52,
-            "Yaw": 48,
-            "Roll": 180,
+            "Pitch": 50,
+            "Yaw": 46,
+            "Roll": 175,
             "PitchBoostMultiplier": 1.2,
             "YawBoostMultiplier": 1.2,
             "RollBoostMultiplier": 1.2,
@@ -2911,10 +4372,10 @@
                 "RegenPerSec": 0.75,
                 "RegenDelayAfterUse": 0.2
             },
-            "ZeroToScm": 1.3676542473919524,
-            "ZeroToMax": 7.495797317436662,
-            "ScmToZero": 6.439971929824561,
-            "MaxToZero": 35.296
+            "ZeroToScm": 1.4455504608636918,
+            "ZeroToMax": 8.180246794034845,
+            "ScmToZero": 6.0436711595269585,
+            "MaxToZero": 34.20061973995876
         },
         "Cargo": 12,
         "CargoGrids": [
@@ -2975,10 +4436,10 @@
                 "z": 1.25
             }
         },
-        "Health": 8200,
+        "Health": 9100,
         "DamageBeforeDestruction": {
-            "tail": 1650,
-            "nose": 1650
+            "tail": 2100,
+            "nose": 2100
         },
         "DamageBeforeDetach": {
             "glass_canopy_front": 1500,
@@ -3031,39 +4492,39 @@
             "FuelCapacity": 18000,
             "FuelIntakeRate": 0,
             "FuelUsage": {
-                "Main": 70.7905,
-                "Retro": 35.625,
+                "Main": 66.46062174999999,
+                "Retro": 37.669025000000005,
                 "Vtol": 0,
-                "Maneuvering": 48.9375
+                "Maneuvering": 52.13308062500001
             },
             "ThrustCapacity": {
-                "Main": 13420000,
-                "Retro": 2850000,
+                "Main": 12599170,
+                "Retro": 3013522,
                 "Vtol": 0,
-                "Maneuvering": 15660000
+                "Maneuvering": 16682585.8
             },
             "IntakeToMainFuelRatio": 0,
             "IntakeToTankCapacityRatio": 0,
-            "ManeuveringTimeTillEmpty": 188.95802769809757
+            "ManeuveringTimeTillEmpty": 194.5374698495714
         },
         "FlightCharacteristics": {
             "ScmSpeed": 260,
-            "MaxSpeed": 1425,
-            "BoostSpeedForward": 610,
-            "BoostSpeedBackward": 230,
+            "MaxSpeed": 1430,
+            "BoostSpeedForward": 600,
+            "BoostSpeedBackward": 270,
             "Acceleration": {
-                "Main": 193.58375165887716,
-                "Retro": 41.11130344469448,
+                "Main": 181.74326351624256,
+                "Retro": 43.47011136114477,
                 "Vtol": 0,
-                "Maneuvering": 225.89579366453177
+                "Maneuvering": 240.64661300559692
             },
             "AccelerationG": {
-                "Main": 19.740049013564995,
-                "Retro": 4.192186265921031,
+                "Main": 18.532655240703257,
+                "Retro": 4.432717733491536,
                 "Vtol": 0,
-                "Maneuvering": 23.034960324323983
+                "Maneuvering": 24.539125288003238
             },
-            "Pitch": 52,
+            "Pitch": 54,
             "Yaw": 48,
             "Roll": 180,
             "PitchBoostMultiplier": 1.2,
@@ -3080,10 +4541,10 @@
                 "RegenPerSec": 0.75,
                 "RegenDelayAfterUse": 0.2
             },
-            "ZeroToScm": 1.3430879284649777,
-            "ZeroToMax": 7.3611549925484345,
-            "ScmToZero": 6.324294736842106,
-            "MaxToZero": 34.662
+            "ZeroToScm": 1.430589475338455,
+            "ZeroToMax": 7.868242114361502,
+            "ScmToZero": 5.981121093524455,
+            "MaxToZero": 32.8961660143845
         },
         "Cargo": 4,
         "CargoGrids": [
@@ -3122,10 +4583,10 @@
                 "z": 1.25
             }
         },
-        "Health": 8200,
+        "Health": 9300,
         "DamageBeforeDestruction": {
-            "tail": 1650,
-            "nose": 1650
+            "tail": 2200,
+            "nose": 2200
         },
         "DamageBeforeDetach": {
             "glass_canopy_front": 1500,
@@ -3178,59 +4639,59 @@
             "FuelCapacity": 27000,
             "FuelIntakeRate": 0,
             "FuelUsage": {
-                "Main": 70.7905,
-                "Retro": 35.625,
+                "Main": 76.42599349999999,
+                "Retro": 37.669025000000005,
                 "Vtol": 0,
-                "Maneuvering": 48.9375
+                "Maneuvering": 65.219515
             },
             "ThrustCapacity": {
-                "Main": 13420000,
-                "Retro": 2850000,
+                "Main": 14488340,
+                "Retro": 3013522,
                 "Vtol": 0,
-                "Maneuvering": 15660000
+                "Maneuvering": 20870244.799999997
             },
             "IntakeToMainFuelRatio": 0,
             "IntakeToTankCapacityRatio": 0,
-            "ManeuveringTimeTillEmpty": 283.43704154714635
+            "ManeuveringTimeTillEmpty": 247.6252032234822
         },
         "FlightCharacteristics": {
-            "ScmSpeed": 260,
-            "MaxSpeed": 1425,
-            "BoostSpeedForward": 610,
-            "BoostSpeedBackward": 230,
+            "ScmSpeed": 265,
+            "MaxSpeed": 1500,
+            "BoostSpeedForward": 490,
+            "BoostSpeedBackward": 270,
             "Acceleration": {
-                "Main": 171.81558631108607,
-                "Retro": 36.48840692895643,
+                "Main": 185.49348970002688,
+                "Retro": 38.58197088609216,
                 "Vtol": 0,
-                "Maneuvering": 200.49419386226586
+                "Maneuvering": 267.20069648046905
             },
             "AccelerationG": {
-                "Main": 17.520313900372305,
-                "Retro": 3.720782013119305,
+                "Main": 18.915071884897177,
+                "Retro": 3.934266124119058,
                 "Vtol": 0,
-                "Maneuvering": 20.444718008929232
+                "Maneuvering": 27.246888232012875
             },
-            "Pitch": 52,
-            "Yaw": 48,
+            "Pitch": 56,
+            "Yaw": 56,
             "Roll": 180,
             "PitchBoostMultiplier": 1.2,
             "YawBoostMultiplier": 1.2,
             "RollBoostMultiplier": 1.2,
             "Afterburner": {
-                "PreDelayTime": 0.15,
+                "PreDelayTime": 0,
                 "RampUpTime": 0.4,
                 "RampDownTime": 0.2,
-                "Capacitor": 20,
+                "Capacitor": 25,
                 "IdleCost": 1,
                 "LinearCost": 0,
                 "AngularCost": 0,
                 "RegenPerSec": 0.75,
                 "RegenDelayAfterUse": 0.2
             },
-            "ZeroToScm": 1.5132503725782416,
-            "ZeroToMax": 8.293776080476901,
-            "ScmToZero": 7.125550877192983,
-            "MaxToZero": 39.0535
+            "ZeroToScm": 1.4286215674121396,
+            "ZeroToMax": 8.08653717403098,
+            "ScmToZero": 6.86849307886254,
+            "MaxToZero": 38.87826271054268
         },
         "Cargo": 4,
         "CargoGrids": [
@@ -3269,10 +4730,10 @@
                 "z": 1.25
             }
         },
-        "Health": 3050,
+        "Health": 2400,
         "DamageBeforeDestruction": {
-            "tail": 1200,
-            "nose": 850
+            "tail": 700,
+            "nose": 700
         },
         "DamageBeforeDetach": {
             "glass_canopy_front": 250,
@@ -4580,41 +6041,41 @@
             "FuelCapacity": 4500,
             "FuelIntakeRate": 0,
             "FuelUsage": {
-                "Main": 25.305979999999998,
-                "Retro": 10.320737,
+                "Main": 30.388889999999996,
+                "Retro": 9.2320655,
                 "Vtol": 0,
-                "Maneuvering": 16.32521375
+                "Maneuvering": 27.058973937500003
             },
             "ThrustCapacity": {
-                "Main": 2892112,
-                "Retro": 1179512.8,
+                "Main": 3473016,
+                "Retro": 1055093.2,
                 "Vtol": 0,
-                "Maneuvering": 5224068.399999999
+                "Maneuvering": 8658871.66
             },
             "IntakeToMainFuelRatio": 0,
             "IntakeToTankCapacityRatio": 0,
-            "ManeuveringTimeTillEmpty": 134.45443683675097
+            "ManeuveringTimeTillEmpty": 102.46280283085058
         },
         "FlightCharacteristics": {
-            "ScmSpeed": 230,
+            "ScmSpeed": 235,
             "MaxSpeed": 1250,
-            "BoostSpeedForward": 550,
+            "BoostSpeedForward": 560,
             "BoostSpeedBackward": 270,
             "Acceleration": {
-                "Main": 152.2685129123121,
-                "Retro": 62.100866085766185,
+                "Main": 182.85287071893015,
+                "Retro": 55.55022507700002,
                 "Vtol": 0,
-                "Maneuvering": 275.0450627846368
+                "Maneuvering": 455.88604838497383
             },
             "AccelerationG": {
-                "Main": 15.527067134272368,
-                "Retro": 6.332525998762695,
+                "Main": 18.645803686165017,
+                "Retro": 5.664546514559,
                 "Vtol": 0,
-                "Maneuvering": 28.046790982102635
+                "Maneuvering": 46.48743948085981
             },
-            "Pitch": 65,
-            "Yaw": 65,
-            "Roll": 215,
+            "Pitch": 75,
+            "Yaw": 60,
+            "Roll": 220,
             "PitchBoostMultiplier": 1.2,
             "YawBoostMultiplier": 1.2,
             "RollBoostMultiplier": 1.2,
@@ -4629,16 +6090,16 @@
                 "RegenPerSec": 0.75,
                 "RegenDelayAfterUse": 0.2
             },
-            "ZeroToScm": 1.5104895661025577,
-            "ZeroToMax": 8.209182424470422,
-            "ScmToZero": 3.7036520502363346,
-            "MaxToZero": 20.12854375128443
+            "ZeroToScm": 1.2851862761357853,
+            "ZeroToMax": 6.83609721348822,
+            "ScmToZero": 4.2304059015829125,
+            "MaxToZero": 22.50215905097294
         },
         "Cargo": 0,
         "CargoGrids": [],
-        "Health": 2800,
+        "Health": 2100,
         "DamageBeforeDestruction": {
-            "Body": 1600
+            "Body": 900
         },
         "DamageBeforeDetach": {
             "wing_left": 600,
@@ -4991,37 +6452,37 @@
             "FuelCapacity": 3000,
             "FuelIntakeRate": 0,
             "FuelUsage": {
-                "Main": 19.4586,
-                "Retro": 3.7869125,
+                "Main": 19.213045915,
+                "Retro": 4.2497997675,
                 "Vtol": 0,
-                "Maneuvering": 7.44773375
+                "Maneuvering": 4.828047812500001
             },
             "ThrustCapacity": {
-                "Main": 1968000,
-                "Retro": 383000,
+                "Main": 1943165.2,
+                "Retro": 429815.4,
                 "Vtol": 0,
-                "Maneuvering": 2383274.8
+                "Maneuvering": 1544975.3
             },
             "IntakeToMainFuelRatio": 0,
             "IntakeToTankCapacityRatio": 0,
-            "ManeuveringTimeTillEmpty": 129.40814349810216
+            "ManeuveringTimeTillEmpty": 138.71504668895577
         },
         "FlightCharacteristics": {
             "ScmSpeed": 280,
-            "MaxSpeed": 1450,
-            "BoostSpeedForward": 620,
+            "MaxSpeed": 1575,
+            "BoostSpeedForward": 490,
             "BoostSpeedBackward": 290,
             "Acceleration": {
-                "Main": 201.39173147769137,
-                "Retro": 39.19361440851412,
+                "Main": 198.85030699959066,
+                "Retro": 43.98438395415473,
                 "Vtol": 0,
-                "Maneuvering": 243.88812934916083
+                "Maneuvering": 158.10226156365124
             },
             "AccelerationG": {
-                "Main": 20.536241374749928,
-                "Retro": 3.9966364057567185,
+                "Main": 20.2770882003121,
+                "Retro": 4.485158943589782,
                 "Vtol": 0,
-                "Maneuvering": 24.86966796501974
+                "Maneuvering": 16.121943942493232
             },
             "Pitch": 55,
             "Yaw": 55,
@@ -5040,19 +6501,19 @@
                 "RegenPerSec": 0.75,
                 "RegenDelayAfterUse": 0.2
             },
-            "ZeroToScm": 1.3903252032520326,
-            "ZeroToMax": 7.19989837398374,
-            "ScmToZero": 7.14402088772846,
-            "MaxToZero": 36.99582245430809
+            "ZeroToScm": 1.408094381270311,
+            "ZeroToMax": 7.920530894645499,
+            "ScmToZero": 6.3658956845194465,
+            "MaxToZero": 35.808163225421886
         },
         "Cargo": 0,
         "CargoGrids": [],
-        "Health": 3621,
+        "Health": 2281,
         "DamageBeforeDestruction": {
-            "Body": 800
+            "Body": 400
         },
         "DamageBeforeDetach": {
-            "Tail": 840,
+            "Tail": 300,
             "WingLeft": 200,
             "WingRight": 200,
             "WingFrontRight": 50,
@@ -5395,7 +6856,7 @@
         "Width": 73,
         "Length": 54,
         "Height": 14,
-        "Crew": 1,
+        "Crew": 2,
         "Insurance": {
             "ExpeditedCost": 9370,
             "ExpeditedClaimTime": 4.55,
@@ -5615,7 +7076,7 @@
         "Width": 73,
         "Length": 54,
         "Height": 14,
-        "Crew": 1,
+        "Crew": 2,
         "Insurance": {
             "ExpeditedCost": 9370,
             "ExpeditedClaimTime": 4.55,
@@ -5796,7 +7257,7 @@
         "Width": 73,
         "Length": 54,
         "Height": 14,
-        "Crew": 1,
+        "Crew": 2,
         "Insurance": {
             "ExpeditedCost": 9370,
             "ExpeditedClaimTime": 4.55,
@@ -5977,7 +7438,7 @@
         "Width": 73,
         "Length": 54,
         "Height": 14,
-        "Crew": 1,
+        "Crew": 2,
         "Insurance": {
             "ExpeditedCost": 9370,
             "ExpeditedClaimTime": 4.55,
@@ -6158,7 +7619,7 @@
         "Width": 73,
         "Length": 54,
         "Height": 14,
-        "Crew": 1,
+        "Crew": 2,
         "Insurance": {
             "ExpeditedCost": 8970,
             "ExpeditedClaimTime": 4.38,
@@ -6378,7 +7839,7 @@
         "Width": 73,
         "Length": 54,
         "Height": 14,
-        "Crew": 1,
+        "Crew": 2,
         "Insurance": {
             "ExpeditedCost": 8970,
             "ExpeditedClaimTime": 4.38,
@@ -6598,7 +8059,7 @@
         "Width": 73,
         "Length": 54,
         "Height": 14,
-        "Crew": 1,
+        "Crew": 2,
         "Insurance": {
             "ExpeditedCost": 8970,
             "ExpeditedClaimTime": 4.38,
@@ -6818,7 +8279,7 @@
         "Width": 73,
         "Length": 54,
         "Height": 14,
-        "Crew": 1,
+        "Crew": 2,
         "Insurance": {
             "ExpeditedCost": 8970,
             "ExpeditedClaimTime": 4.38,
@@ -9202,6 +10663,128 @@
         }
     },
     {
+        "UUID": "2e14be84-643f-404c-9df8-e38351fa1f99",
+        "ClassName": "RSI_Meteor_Collector_Military",
+        "Name": "RSI Meteor PYAM Exec",
+        "Description": "Manufacturer: RSI\\nFocus: Medium Fighter\\n\\nPacking some serious firepower, the Meteor is a sight enemies won't want to see. Taking inspiration from the iconic Mantis, this heavy fighter forgoes quantum enforcement and instead features two bespoke S5 ballistic cannons and four single-load S4 missile racks; making the Meteor a force that can light up the sky like a shooting star.\\n\\nThis variant features an exclusive livery and loadout for the ship.",
+        "Career": "Combat",
+        "Role": "Medium Fighter",
+        "Manufacturer": {
+            "Code": "RSI",
+            "Name": "Roberts Space Industries"
+        },
+        "Size": 2,
+        "Width": 17,
+        "Length": 30,
+        "Height": 7.5,
+        "Crew": 1,
+        "Insurance": {
+            "ExpeditedCost": 6750,
+            "ExpeditedClaimTime": 4.5,
+            "StandardClaimTime": 13.5
+        },
+        "IsVehicle": false,
+        "IsGravlev": false,
+        "IsSpaceship": true,
+        "Mass": 238832,
+        "ShieldFaceType": "Bubble",
+        "QuantumTravel": {
+            "FuelCapacity": 1150,
+            "Range": 55879494655.00486,
+            "Speed": 228000000,
+            "SpoolTime": 4,
+            "PortOlisarToArcCorpTime": 183.89189065789475,
+            "PortOlisarToArcCorpFuel": 862.8648850206,
+            "PortOlisarToArcCorpAndBack": 0.6663847492023881
+        },
+        "Propulsion": {
+            "FuelCapacity": 28950,
+            "FuelIntakeRate": 0,
+            "FuelUsage": {
+                "Main": 467.73650000000004,
+                "Retro": 92.165525,
+                "Vtol": 0,
+                "Maneuvering": 265
+            },
+            "ThrustCapacity": {
+                "Main": 37418920,
+                "Retro": 7373242,
+                "Vtol": 0,
+                "Maneuvering": 21200000
+            },
+            "IntakeToMainFuelRatio": 0,
+            "IntakeToTankCapacityRatio": 0,
+            "ManeuveringTimeTillEmpty": 48.23098895185481
+        },
+        "FlightCharacteristics": {
+            "ScmSpeed": 229,
+            "MaxSpeed": 1405,
+            "BoostSpeedForward": 570,
+            "BoostSpeedBackward": 235,
+            "Acceleration": {
+                "Main": 156.67464996315402,
+                "Retro": 30.87208581764588,
+                "Vtol": 0,
+                "Maneuvering": 88.76532457962082
+            },
+            "AccelerationG": {
+                "Main": 15.976368073006993,
+                "Retro": 3.1480766436699463,
+                "Vtol": 0,
+                "Maneuvering": 9.051544062408757
+            },
+            "Pitch": 46,
+            "Yaw": 38,
+            "Roll": 155,
+            "PitchBoostMultiplier": 1.2,
+            "YawBoostMultiplier": 1.2,
+            "RollBoostMultiplier": 1.2,
+            "Afterburner": {
+                "PreDelayTime": 0,
+                "RampUpTime": 0.4,
+                "RampDownTime": 0.2,
+                "Capacitor": 20,
+                "IdleCost": 1,
+                "LinearCost": 0,
+                "AngularCost": 0,
+                "RegenPerSec": 0.75,
+                "RegenDelayAfterUse": 0.4
+            },
+            "ZeroToScm": 1.461627647190245,
+            "ZeroToMax": 8.967628141058052,
+            "ScmToZero": 7.417704179518317,
+            "MaxToZero": 45.510368437656055
+        },
+        "Cargo": 0,
+        "CargoGrids": [],
+        "Health": 30150,
+        "DamageBeforeDestruction": {
+            "body_main": 2750
+        },
+        "DamageBeforeDetach": {
+            "engines_base_right": 2800,
+            "dbr_engine_right": 2800,
+            "dbr_tail_wing_right": 4000,
+            "dbr_topside_inner_fin_right": 150,
+            "dbr_wing_topcover_inner_right": 150,
+            "engines_base_left": 2800,
+            "dbr_engine_left": 2800,
+            "dbr_tail_wing_left": 4000,
+            "dbr_topside_inner_fin_left": 150,
+            "dbr_wing_topcover_inner_left": 150,
+            "dbr_body_cap_rear_outer_left": 150,
+            "dbr_body_cap_rear_outer_right": 150,
+            "dbr_body_cap_rear_inner_right": 150,
+            "dbr_body_cap_rear_inner_left": 150,
+            "dbr_body_spine_topside_fin_right": 150,
+            "dbr_body_spine_topside_fin_left": 150,
+            "dbr_small_fin_right": 150,
+            "dbr_small_fin_left": 150,
+            "dbr_body_underside_fin_left": 150,
+            "dbr_body_underside_fin_right": 150
+        }
+    },
+    {
         "UUID": "656d529f-ea3c-4bb4-8ca0-883071734e87",
         "ClassName": "RSI_Meteor_Collector_Stealth",
         "Name": "RSI Meteor Wikelo Sneak Special",
@@ -9395,7 +10978,7 @@
                 "Maneuvering": 8.589780204817997
             },
             "Pitch": 15,
-            "Yaw": 13,
+            "Yaw": 15,
             "Roll": 25,
             "PitchBoostMultiplier": 1.5,
             "YawBoostMultiplier": 1.5,

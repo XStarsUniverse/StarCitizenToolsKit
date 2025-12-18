@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "7975b72c-9988-4609-aa40-492e8953dd6e",
             "__path": "libs/foundry/records/entities/scitem/characters/human/armor/pu_armor/heavy/legs/srvl_combat_heavy_legs_03_01_01.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "264e2ddb-ca12-4eb8-9dde-b859d420db22"
@@ -63,7 +68,9 @@
                     "displayImage": "",
                     "displayIcon": "ui/textures/ea/loadouticons/heavy_armour_64.tif",
                     "sortString": "",
-                    "trackerProperties": []
+                    "trackerProperties": {
+                        "SObjectDataBankEntryTrackerParams": []
+                    }
                 }
             },
             "Components": {
@@ -75,6 +82,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -95,14 +103,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -143,11 +156,11 @@
                         "ignoredAttachAxis": "None",
                         "attachCheckCenterOfMass": 0,
                         "Localization": {
-                            "Name": "Wrecker Legs",
+                            "Name": "@item_Name_srvl_combat_heavy_legs_03_01_01",
                             "__Name": "@item_Name_srvl_combat_heavy_legs_03_01_01",
                             "ShortName": "",
                             "__ShortName": "@LOC_EMPTY",
-                            "Description": "Item Type: Heavy Armor\\nDamage Reduction: 40%\\nTemp. Rating: -70 / 100 \u00b0C\\nRadiation Protection: 26800 REM\\nRadiation Scrub Rate: 145.8 REM/s\\nCarrying Capacity: 8K \u00b5SCU\\n\\nFavored by the most brutal of hunters, the Wrecker armor is a fusion of discarded metal and pilfered fabric cobbled together to offer protection while stalking prey. It is sprayed with orange paint and anointed with bone fragments and Vanduul armor pieces.",
+                            "Description": "@item_Desc_srvl_combat_heavy_legs_03_01_01",
                             "__Description": "@item_Desc_srvl_combat_heavy_legs_03_01_01",
                             "displayFeatures": {
                                 "LogoSimplifiedWhite": "",
@@ -170,9 +183,11 @@
                             },
                             "English": {
                                 "Locale": "english",
-                                "Name": "Wrecker Legs",
+                                "Name": "@item_Name_srvl_combat_heavy_legs_03_01_01",
+                                "__Name": "@item_Name_srvl_combat_heavy_legs_03_01_01",
                                 "ShortName": "",
-                                "Description": "Item Type: Heavy Armor\\nDamage Reduction: 40%\\nTemp. Rating: -70 / 100 \u00b0C\\nRadiation Protection: 26800 REM\\nRadiation Scrub Rate: 145.8 REM/s\\nCarrying Capacity: 8K \u00b5SCU\\n\\nFavored by the most brutal of hunters, the Wrecker armor is a fusion of discarded metal and pilfered fabric cobbled together to offer protection while stalking prey. It is sprayed with orange paint and anointed with bone fragments and Vanduul armor pieces."
+                                "Description": "@item_Desc_srvl_combat_heavy_legs_03_01_01",
+                                "__Description": "@item_Desc_srvl_combat_heavy_legs_03_01_01"
                             }
                         },
                         "mannequinTags": {
@@ -215,6 +230,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -490,7 +510,7 @@
                     }
                 },
                 "SCItemPurchasableParams": {
-                    "displayName": "Wrecker Legs",
+                    "displayName": "@item_Name_srvl_combat_heavy_legs_03_01_01",
                     "__displayName": "@item_Name_srvl_combat_heavy_legs_03_01_01",
                     "displayType": "Armor: Legs",
                     "__displayType": "@item_displayType_ArmorLegs",
@@ -574,16 +594,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [
                         {
                             "Name": "medPen_attach_1",
-                            "DisplayName": "medPen_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -595,6 +619,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -674,12 +699,15 @@
                         },
                         {
                             "Name": "medPen_attach_2",
-                            "DisplayName": "medPen_attach_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -691,6 +719,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -813,12 +842,15 @@
                         },
                         {
                             "Name": "utility_attach_1",
-                            "DisplayName": "utility_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "multitool",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -830,6 +862,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -924,12 +957,15 @@
                         },
                         {
                             "Name": "utility_attach_2",
-                            "DisplayName": "utility_attach_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "melee",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -941,6 +977,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1027,12 +1064,15 @@
                         },
                         {
                             "Name": "oxyPen_attach_1",
-                            "DisplayName": "oxyPen_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1044,6 +1084,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1123,12 +1164,15 @@
                         },
                         {
                             "Name": "oxyPen_attach_2",
-                            "DisplayName": "oxyPen_attach_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1140,6 +1184,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1219,12 +1264,15 @@
                         },
                         {
                             "Name": "wep_sidearm",
-                            "DisplayName": "wep_sidearm",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1236,6 +1284,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1549,6 +1598,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "EntityRoot",
@@ -1666,6 +1717,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1794,6 +1847,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 0,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -2095,6 +2149,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -2140,6 +2195,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -2189,6 +2245,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2209,6 +2266,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -2246,6 +2304,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2266,6 +2325,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": {
@@ -2293,6 +2353,7 @@
                     "vehicleItemPortInteractionLinks": [],
                     "linkPlugs": []
                 },
+                "SPersistentComponentParams": [],
                 "SCItemInventoryContainerComponentParams": {
                     "openInventoryInteraction": "Interactable.SharedInteractions[5]",
                     "openLootingInteraction": "Interactable.SharedInteractions[6]",
@@ -2330,6 +2391,7 @@
                     "remoteHitEffectLibName": "playerhits_armour_heavy",
                     "actorAimLimits": "4b5a5f18-893a-496e-8dc9-60cce482d9c5",
                     "restrictedMoveViewPenalty": "de802b3c-c2a1-465b-ae3f-4647be19ea0c",
+                    "integrityMilestoneToBreak": 0.1,
                     "protectedBodyParts": [
                         {
                             "value": "b8507c75-47b0-4119-9657-2e516f6959cb"
@@ -2392,6 +2454,8 @@
                     "fragmentTag": "",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": {
                         "UsableUseSlot": {
                             "name": "Main",
@@ -2514,6 +2578,7 @@
                         }
                     },
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [
                         {
                             "name": "",
@@ -2597,7 +2662,9 @@
                     "specializedData": {
                         "specializedDataEntry": []
                     }
-                }
+                },
+                "SubsumptionMissionLinkComponentParams": [],
+                "SAudioProxyParams": []
             },
             "ClassName": "srvl_combat_heavy_legs_03_01_01",
             "__type": "Char_Armor_Legs"
@@ -2611,7 +2678,7 @@
         "subType": "Heavy",
         "size": 1,
         "grade": 1,
-        "name": "Wrecker Legs",
+        "name": "@item_Name_srvl_combat_heavy_legs_03_01_01",
         "tags": "$Legs++ SM_RestrictedArm Survival Heavy Set_03 Texture_01 Color_01",
         "required_tags": "",
         "classification": "FPS.Armor.Legs",
@@ -2624,17 +2691,9 @@
             "Height": 0.553,
             "Length": 0.36,
             "Type": "Char_Armor_Legs.Heavy",
-            "Name": "Wrecker Legs",
-            "Description": "Item Type: Heavy Armor\\nDamage Reduction: 40%\\nTemp. Rating: -70 / 100 \u00b0C\\nRadiation Protection: 26800 REM\\nRadiation Scrub Rate: 145.8 REM/s\\nCarrying Capacity: 8K \u00b5SCU\\n\\nFavored by the most brutal of hunters, the Wrecker armor is a fusion of discarded metal and pilfered fabric cobbled together to offer protection while stalking prey. It is sprayed with orange paint and anointed with bone fragments and Vanduul armor pieces.",
-            "DescriptionData": {
-                "Item Type": "Heavy Armor",
-                "Damage Reduction": "40%",
-                "Temp. Rating": "-70 / 100 \u00b0C",
-                "Radiation Protection": "26800 REM",
-                "Radiation Scrub Rate": "145.8 REM/s",
-                "Carrying Capacity": "8K \u00b5SCU"
-            },
-            "DescriptionText": "Favored by the most brutal of hunters, the Wrecker armor is a fusion of discarded metal and pilfered fabric cobbled together to offer protection while stalking prey. It is sprayed with orange paint and anointed with bone fragments and Vanduul armor pieces.",
+            "Name": "@item_Name_srvl_combat_heavy_legs_03_01_01",
+            "Description": "@item_Desc_srvl_combat_heavy_legs_03_01_01",
+            "DescriptionText": "@item_Desc_srvl_combat_heavy_legs_03_01_01",
             "Manufacturer": {
                 "Name": "Unknown Manufacturer",
                 "Code": "UNKN",

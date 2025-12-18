@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "c555b750-f66d-47da-a72a-9db3e099f5eb",
             "__path": "libs/foundry/records/entities/scitem/ships/displays/h_dashboard_projector_hud_rsi_zeus_cp_l.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -163,7 +168,8 @@
                                     "name": "_flight",
                                     "component": {
                                         "canvas": "d62e9799-ca18-4619-85bc-db824ae26165",
-                                        "isSystemViewInstance": 0
+                                        "isSystemViewInstance": 0,
+                                        "canvasInstantiationMode": "RootDeferred"
                                     }
                                 }
                             }
@@ -180,6 +186,7 @@
                     "UIAudioDef": "436eb23c-ff1d-46de-805d-e178e7975eed",
                     "useEntityClass": "00000000-0000-0000-0000-000000000000",
                     "dialogueContext": "00000000-0000-0000-0000-000000000000",
+                    "bypassRealisticMode": 0,
                     "UIAudioManufacturers": [],
                     "offset": [],
                     "videoAudioPlayTrigger": {
@@ -195,6 +202,7 @@
                         "audioTrigger": ""
                     }
                 },
+                "SAudioProxyParams": [],
                 "UserArraysComponentParams": {
                     "name": "LineTicksArray",
                     "itemsPerPage": 0,
@@ -390,13 +398,34 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "UIGroundingEffectsEntityComponentParams": {
                     "manualEnable": 0,

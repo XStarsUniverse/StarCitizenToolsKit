@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "dd669aaa-7cc4-4ac9-99a2-4ed7ddb59f60",
             "__path": "libs/foundry/records/entities/scitem/characters/human/armor/s42_armor/undersuit/nvs_pilot_flightsuit_01_01_02.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "80c7276b-b8e1-4b19-a5f3-1ea6eebb6b80"
@@ -60,7 +65,9 @@
                     "displayImage": "",
                     "displayIcon": "ui/textures/ea/loadouticons/heavy_armour_64.tif",
                     "sortString": "",
-                    "trackerProperties": []
+                    "trackerProperties": {
+                        "SObjectDataBankEntryTrackerParams": []
+                    }
                 }
             },
             "Components": {
@@ -72,6 +79,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -92,14 +100,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -212,6 +225,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -791,16 +809,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [
                         {
                             "Name": "wep_stocked_3",
-                            "DisplayName": "wep_stocked_3",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory invis_p1 transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 2,
                             "MaxSize": 5,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -812,6 +834,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1029,12 +1052,15 @@
                         },
                         {
                             "Name": "magazine_attach_1",
-                            "DisplayName": "magazine_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1046,6 +1072,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1132,12 +1159,15 @@
                         },
                         {
                             "Name": "magazine_attach_2",
-                            "DisplayName": "magazine_attach_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1149,6 +1179,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1235,12 +1266,15 @@
                         },
                         {
                             "Name": "medPen_attach_1",
-                            "DisplayName": "medPen_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1252,6 +1286,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1353,12 +1388,15 @@
                         },
                         {
                             "Name": "utility_attach_1",
-                            "DisplayName": "utility_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "multitool",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1370,6 +1408,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1464,12 +1503,15 @@
                         },
                         {
                             "Name": "oxyPen_attach_1",
-                            "DisplayName": "oxyPen_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1481,6 +1523,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1560,12 +1603,15 @@
                         },
                         {
                             "Name": "wep_sidearm",
-                            "DisplayName": "wep_sidearm",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1577,6 +1623,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1663,12 +1710,15 @@
                         },
                         {
                             "Name": "Armor_Helmet",
-                            "DisplayName": "Armor_Helmet",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "nophys unlootable userbreathingpoint HeadWear inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1683,6 +1733,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             ],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1761,13 +1812,16 @@
                             }
                         },
                         {
-                            "Name": "helmethook_attach_PLACEHOLDER",
-                            "DisplayName": "helmethook_attach",
+                            "Name": "helmethook_attach",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
-                            "Flags": "body_attach nophys heldEntity attach_helmet invisible",
+                            "Flags": "body_attach nophys inventory heldEntity attach_helmet",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1775,6 +1829,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1812,18 +1867,148 @@
                                     "Helper": {
                                         "Tags": "",
                                         "Helper": {
-                                            "Name": "utility_attach_1_override",
+                                            "Name": "helmethook_attach_override",
+                                            "ItemOffsetHelperName": "helmet_hook_attach",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": -30,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": {
+                                                "SSimulationParamsPendulumHalfCone": {
+                                                    "UseSimulation": 1,
+                                                    "UseDebugSetup": 0,
+                                                    "UseDebugText": 0,
+                                                    "UseRedirect": 1,
+                                                    "SimFPS": 60,
+                                                    "Mass": 10,
+                                                    "Gravity": 30,
+                                                    "Damping": 5,
+                                                    "JointSpring": 10,
+                                                    "ConeAngle": 30,
+                                                    "HingeRotation": 0,
+                                                    "ProjectionType": "PS1_NoProjection",
+                                                    "PivotOffset": {
+                                                        "x": 0,
+                                                        "y": 0,
+                                                        "z": 0
+                                                    },
+                                                    "SimulationAxis": {
+                                                        "x": 0,
+                                                        "y": 0,
+                                                        "z": -0.75
+                                                    },
+                                                    "SpringTarget": {
+                                                        "x": 0,
+                                                        "y": 0
+                                                    },
+                                                    "Capsule": {
+                                                        "x": 0,
+                                                        "y": 0
+                                                    },
+                                                    "AvailableCollisionProxies": []
+                                                }
+                                            }
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
+                        },
+                        {
+                            "Name": "universal_necksock_undersuit",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "necksock_undersuit",
+                            "RequiredPortTags": "necksock_undersuit",
+                            "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 0,
+                            "MaxSize": 0,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "Char_Flair",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationSkin": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "",
                                             "ItemOffsetHelperName": "",
                                             "Offset": {
                                                 "Rotation": {
                                                     "x": 0,
                                                     "y": 0,
-                                                    "z": 50
+                                                    "z": 0
                                                 },
                                                 "Position": {
-                                                    "x": -0.073,
-                                                    "y": -0.0555,
-                                                    "z": 0.1329
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
                                                 }
                                             },
                                             "SimulationParams": []
@@ -1833,7 +2018,7 @@
                                 }
                             },
                             "Breakable": {
-                                "YoungsModulus": 2000,
+                                "YoungsModulus": 0,
                                 "BreakStrain": 0,
                                 "YieldStrain": 0,
                                 "Breakable": 0
@@ -2091,6 +2276,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "EntityRoot",
@@ -2220,6 +2407,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -2342,6 +2531,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 0,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -2643,6 +2833,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -2688,6 +2879,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -2737,6 +2929,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2757,6 +2950,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -2798,6 +2992,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2818,6 +3013,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": {
@@ -2845,6 +3041,7 @@
                     "vehicleItemPortInteractionLinks": [],
                     "linkPlugs": []
                 },
+                "SPersistentComponentParams": [],
                 "SCItemInventoryContainerComponentParams": {
                     "openInventoryInteraction": "null",
                     "openLootingInteraction": "Interactable.SharedInteractions[5]",
@@ -2882,6 +3079,7 @@
                     "remoteHitEffectLibName": "playerhits_armour_heavy",
                     "actorAimLimits": "4d0cbb00-3227-4db9-96ed-394fb398baa6",
                     "restrictedMoveViewPenalty": "00000000-0000-0000-0000-000000000000",
+                    "integrityMilestoneToBreak": 0.1,
                     "protectedBodyParts": [
                         {
                             "value": "cbe3a3e8-5035-4772-acb7-014617c6b03a"
@@ -3530,11 +3728,23 @@
                     "throttleParams": [],
                     "masterModeExclusionsOverride": []
                 },
+                "SEntityComponentDefaultLoadoutParams": {
+                    "loadout": {
+                        "SItemPortLoadoutManualParams": {
+                            "WearRange": [],
+                            "DirtRange": [],
+                            "InventoryItems": [],
+                            "entries": []
+                        }
+                    }
+                },
                 "SActorUsableParams": {
                     "archetype": "8149e01e-35dc-4ea0-9b46-c8d440068026",
                     "fragmentTag": "",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": {
                         "UsableUseSlot": {
                             "name": "Main",
@@ -3657,6 +3867,7 @@
                         }
                     },
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [
                         {
                             "name": "",
@@ -3756,6 +3967,7 @@
                         "specializedDataEntry": []
                     }
                 },
+                "SubsumptionMissionLinkComponentParams": [],
                 "ResourceContainer": {
                     "mass": 0.2,
                     "immutable": 0,
@@ -3779,7 +3991,8 @@
                             "weight": 1
                         }
                     }
-                }
+                },
+                "SAudioProxyParams": []
             },
             "ClassName": "nvs_pilot_flightsuit_01_01_02",
             "__type": "Char_Armor_Undersuit"
@@ -4047,16 +4260,16 @@
                     "Uneditable": false
                 },
                 {
-                    "PortName": "helmethook_attach_PLACEHOLDER",
+                    "PortName": "helmethook_attach",
                     "Size": 1,
                     "MinSize": 1,
                     "MaxSize": 1,
                     "Flags": [
                         "body_attach",
                         "nophys",
+                        "inventory",
                         "heldEntity",
-                        "attach_helmet",
-                        "invisible"
+                        "attach_helmet"
                     ],
                     "Types": [
                         "Char_Armor_Helmet"
@@ -4064,6 +4277,27 @@
                     "CompatibleTypes": [
                         {
                             "type": "Char_Armor_Helmet"
+                        }
+                    ],
+                    "Uneditable": false
+                },
+                {
+                    "PortName": "universal_necksock_undersuit",
+                    "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "Tags": [
+                        "necksock_undersuit"
+                    ],
+                    "RequiredTags": [
+                        "necksock_undersuit"
+                    ],
+                    "Types": [
+                        "Char_Flair"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Flair"
                         }
                     ],
                     "Uneditable": false

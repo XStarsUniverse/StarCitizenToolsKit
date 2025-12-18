@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "2fc87e12-177e-49c9-b105-d49a2d23292b",
             "__path": "libs/foundry/records/entities/scitem/ships/controller/controller_flight_misc_razor.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "68b3fe59-d53f-4e20-8c82-92dca83846ad"
@@ -442,8 +447,8 @@
                     "linkPlugs": []
                 },
                 "IFCSParams": {
-                    "scmSpeed": 280,
-                    "boostSpeedForward": 620,
+                    "scmSpeed": 265,
+                    "boostSpeedForward": 595,
                     "boostSpeedBackward": 290,
                     "maxSpeed": 1450,
                     "maxSpeedPrecisionModeFullProximityAssist": 10,
@@ -465,9 +470,9 @@
                     "__thrusterImbalanceMessage": "@dfm_ui_UnexpectedTorqueImbalance",
                     "intoxicationModifierRef": "802adf13-525f-4365-934a-a7b28153b664",
                     "maxAngularVelocity": {
-                        "x": 55,
-                        "y": 200,
-                        "z": 55
+                        "x": 59,
+                        "y": 205,
+                        "z": 52
                     },
                     "speedProfile": {
                         "angularVelocityLimiter": "Ellipsoid",
@@ -883,9 +888,6 @@
                             "stallSpeedModifier": 1,
                             "thrusterControlSurfaceMixRatioLerpTime": 0.5,
                             "hoverMaxRange": 20,
-                            "pitchAnimationVariable": "pitchDeflection",
-                            "yawAnimationVariable": "yawDeflection",
-                            "rollAnimationVariable": "rollDeflection",
                             "dampingTorqueDerivative": {
                                 "x": 50000,
                                 "y": 22000,
@@ -1210,6 +1212,15 @@
                                 "y": 0,
                                 "z": 0
                             },
+                            "surfaceAnimations": {
+                                "pitchVariable": "pitchDeflection",
+                                "yawVariable": "yawDeflection",
+                                "rollVariable": "rollDeflection",
+                                "pitchAddRollVariable": "pitchAddRollDeflection",
+                                "pitchMinusRollVariable": "pitchMinusRollDeflection",
+                                "pitchAddYawVariable": "pitchAddYawDeflection",
+                                "pitchMinusYawVariable": "pitchMinusYawDeflection"
+                            },
                             "turbulence": {
                                 "groundTurbulenceAmplitude": 0.4,
                                 "groundTurbulenceAltitudeMin": 20,
@@ -1368,7 +1379,7 @@
                         "afterburnerRampUpTime": 0.4,
                         "afterburnerRampDownTime": 0.2,
                         "afterburnerCapacitorThresholdRatio": 0.25,
-                        "capacitorMax": 25,
+                        "capacitorMax": 20,
                         "capacitorAfterburnerIdleCost": 1,
                         "capacitorAfterburnerLinearCost": 0,
                         "capacitorAfterburnerAngularCost": 0,
@@ -1831,14 +1842,14 @@
                         "z": 1
                     },
                     "positiveAngularScale": {
-                        "x": 0.0917,
-                        "y": 0.0615,
-                        "z": 0.1167
+                        "x": 0.0697,
+                        "y": 0.046,
+                        "z": 0.062
                     },
                     "negativeAngularScale": {
-                        "x": 0.0843,
-                        "y": 0.0615,
-                        "z": 0.1167
+                        "x": 0.0622,
+                        "y": 0.046,
+                        "z": 0.062
                     },
                     "authoredMotionLimits": {
                         "linearMaxAcceleration": 400,
@@ -1884,8 +1895,8 @@
                     "forceOn": 0,
                     "asopSpawnState": "Off",
                     "throttleParams": {
-                        "ItemPowerSegmentThrottleParams": {
-                            "default": 4
+                        "ItemPowerSimpleSegmentThrottleParams": {
+                            "defaultFull": 0
                         }
                     },
                     "masterModeExclusionsOverride": []
@@ -1935,19 +1946,45 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "SGeometryResourceParams": {
                     "cacheResources": 0,
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -2043,8 +2080,8 @@
                 "Height": 0.75
             },
             "Ifcs": {
-                "scmSpeed": 280,
-                "boostSpeedForward": 620,
+                "scmSpeed": 265,
+                "boostSpeedForward": 595,
                 "boostSpeedBackward": 290,
                 "maxSpeed": 1450,
                 "maxSpeedPrecisionModeFullProximityAssist": 10,
@@ -2060,15 +2097,15 @@
                 "linearAccelDecay": 3,
                 "angularAccelDecay": 14,
                 "scmMaxDragMultiplier": 4,
-                "Pitch": 55,
-                "Yaw": 55,
-                "Roll": 200,
+                "Pitch": 59,
+                "Yaw": 52,
+                "Roll": 205,
                 "Afterburner": {
                     "PreDelayTime": 0,
                     "RampUpTime": 0.4,
                     "RampDownTime": 0.2,
                     "CapacitorThresholdRatio": 0.25,
-                    "CapacitorMax": 25,
+                    "CapacitorMax": 20,
                     "CapacitorAfterburnerIdleCost": 1,
                     "CapacitorAfterburnerLinearCost": 0,
                     "CapacitorAfterburnerAngularCost": 0,

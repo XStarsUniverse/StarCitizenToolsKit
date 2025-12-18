@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "a15e9077-c94b-4123-9179-1eeb20c1b10a",
             "__path": "libs/foundry/records/entities/scitem/characters/human/armor/pu_armor/light/core/kap_combat_light_core_02_02_01.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "f1c9b063-4a55-4066-a577-a8f445c9d684"
@@ -60,7 +65,9 @@
                     "displayImage": "",
                     "displayIcon": "ui/textures/ea/loadouticons/light_armour_64.tif",
                     "sortString": "",
-                    "trackerProperties": []
+                    "trackerProperties": {
+                        "SObjectDataBankEntryTrackerParams": []
+                    }
                 }
             },
             "Components": {
@@ -72,6 +79,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -92,14 +100,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -132,7 +145,50 @@
                         "SubType": "Light",
                         "Size": 1,
                         "Grade": 1,
-                        "Manufacturer": "a349d45f-cda5-4fdb-89ea-4ea91804a163",
+                        "Manufacturer": {
+                            "Logo": "UI/SharedAssets/ManufacturerLogos/KAP_256_diff.tif",
+                            "LogoFullColor": "",
+                            "LogoSimplifiedWhite": "",
+                            "Code": "KAP",
+                            "DashboardCanvasConfig": "00000000-0000-0000-0000-000000000000",
+                            "BuildingBlocksStyle": "00000000-0000-0000-0000-000000000000",
+                            "AudioManufacturerTag": "00000000-0000-0000-0000-000000000000",
+                            "__ref": "a349d45f-cda5-4fdb-89ea-4ea91804a163",
+                            "__path": "libs/foundry/records/scitemmanufacturer/kap.xml",
+                            "Localization": {
+                                "Name": "Kilgore and Poole",
+                                "__Name": "@manufacturer_NameKAP",
+                                "ShortName": "",
+                                "__ShortName": "@LOC_EMPTY",
+                                "Description": "Kilgore and Poole caters its armor and image to a high-end clientele. Criticized by some as prioritizing form over function, their eye-catching armor favors ease of movement and agility over heavy defense.",
+                                "__Description": "@manufacturer_DescKAP",
+                                "displayFeatures": {
+                                    "LogoSimplifiedWhite": "",
+                                    "FrontendBackground": "",
+                                    "History": "",
+                                    "__History": "@LOC_EMPTY",
+                                    "Callout1": "",
+                                    "__Callout1": "@LOC_EMPTY",
+                                    "Callout2": "",
+                                    "__Callout2": "@LOC_EMPTY",
+                                    "Callout3": "",
+                                    "__Callout3": "@LOC_EMPTY",
+                                    "UIPriority": 0,
+                                    "locationAudioPlayTrigger": {
+                                        "audioTrigger": ""
+                                    },
+                                    "locationAudioStopTrigger": {
+                                        "audioTrigger": ""
+                                    }
+                                },
+                                "English": {
+                                    "Locale": "english",
+                                    "Name": "Kilgore and Poole",
+                                    "ShortName": "",
+                                    "Description": "Kilgore and Poole caters its armor and image to a high-end clientele. Criticized by some as prioritizing form over function, their eye-catching armor favors ease of movement and agility over heavy defense."
+                                }
+                            }
+                        },
                         "inheritParentManufacturer": 0,
                         "Tags": "kap_light Set_01 Color_01 SM_RestrictedArm",
                         "RequiredTags": "",
@@ -212,6 +268,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -627,16 +688,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [
                         {
                             "Name": "wep_stocked_3",
-                            "DisplayName": "wep_stocked_3",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory invis_p1 transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 2,
                             "MaxSize": 5,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -648,6 +713,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -844,12 +910,15 @@
                         },
                         {
                             "Name": "magazine_attach_1",
-                            "DisplayName": "magazine_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -861,6 +930,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -947,12 +1017,15 @@
                         },
                         {
                             "Name": "magazine_attach_2",
-                            "DisplayName": "magazine_attach_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -964,6 +1037,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1106,12 +1180,15 @@
                         },
                         {
                             "Name": "magazine_attach_3",
-                            "DisplayName": "magazine_attach_3",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1123,6 +1200,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1209,12 +1287,15 @@
                         },
                         {
                             "Name": "magazine_attach_4",
-                            "DisplayName": "magazine_attach_4",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1226,6 +1307,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1312,12 +1394,15 @@
                         },
                         {
                             "Name": "grenade_attach_1",
-                            "DisplayName": "grenade_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1329,6 +1414,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1454,12 +1540,15 @@
                         },
                         {
                             "Name": "grenade_attach_2",
-                            "DisplayName": "grenade_attach_2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1471,6 +1560,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1596,12 +1686,15 @@
                         },
                         {
                             "Name": "backpack",
-                            "DisplayName": "backpack",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "utility combat",
                             "RequiredPortTags": "$backpack",
                             "Flags": "body_attach inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1616,6 +1709,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             ],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1695,12 +1789,15 @@
                         },
                         {
                             "Name": "gadget_attach_1",
-                            "DisplayName": "gadget_attach_1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "body_attach nophys inventory transferable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 2,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1712,6 +1809,7 @@
                                     "value": "201aae5c-92c9-43f9-8c6c-b50c279080f8"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -1792,11 +1890,14 @@
                         {
                             "Name": "universal_undersuit_necksock",
                             "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "necksock_undersuit",
                             "RequiredPortTags": "necksock_undersuit",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -1804,6 +1905,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2110,6 +2212,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "EntityRoot",
@@ -2223,6 +2327,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -2351,6 +2457,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 0,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -2652,6 +2759,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -2697,6 +2805,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -2746,6 +2855,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2766,6 +2876,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -2803,6 +2914,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -2823,6 +2935,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": {
@@ -2850,6 +2963,7 @@
                     "vehicleItemPortInteractionLinks": [],
                     "linkPlugs": []
                 },
+                "SPersistentComponentParams": [],
                 "SCItemInventoryContainerComponentParams": {
                     "openInventoryInteraction": "Interactable.SharedInteractions[5]",
                     "openLootingInteraction": "Interactable.SharedInteractions[6]",
@@ -2887,6 +3001,7 @@
                     "remoteHitEffectLibName": "playerhits_armour_heavy",
                     "actorAimLimits": "9005835c-2d10-4703-8060-c44533ed9af2",
                     "restrictedMoveViewPenalty": "7bc7bbc3-64fc-437e-bf6c-3c261f8978ce",
+                    "integrityMilestoneToBreak": 0.1,
                     "protectedBodyParts": {
                         "Reference": {
                             "value": "cbe3a3e8-5035-4772-acb7-014617c6b03a"
@@ -3293,6 +3408,8 @@
                     "fragmentTag": "",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": {
                         "UsableUseSlot": {
                             "name": "Main",
@@ -3415,6 +3532,7 @@
                         }
                     },
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [
                         {
                             "name": "",
@@ -3469,6 +3587,7 @@
                         "specializedDataEntry": []
                     }
                 },
+                "SubsumptionMissionLinkComponentParams": [],
                 "ResourceContainer": {
                     "mass": 0.2,
                     "immutable": 0,
@@ -3492,7 +3611,8 @@
                             "weight": 1
                         }
                     }
-                }
+                },
+                "SAudioProxyParams": []
             },
             "ClassName": "kap_combat_light_core_02_02_01",
             "__type": "Char_Armor_Torso"
@@ -3509,6 +3629,7 @@
         "name": "Geist Armor Core Snow Camo",
         "tags": "kap_light Set_01 Color_01 SM_RestrictedArm",
         "required_tags": "",
+        "manufacturer": "KAP",
         "classification": "FPS.Armor.Torso",
         "stdItem": {
             "UUID": "a15e9077-c94b-4123-9179-1eeb20c1b10a",
@@ -3531,9 +3652,9 @@
             },
             "DescriptionText": "An ideal synthesis of strength and technology, the Geist Stealth Armor has been crafted from military-grade carbon silk sourced from the same manufacturers that protect the UEE's special forces. Hair-thin filaments woven into the fabric mask the wearer's emissions, making them undetectable via radar, and specialized tubing built into the soles of the boots dampens the sound of footsteps.\n\nFeaturing a hooded shawl and a white digital camo pattern, the Snow Camo edition is perfect for stalking prey in frozen environments.",
             "Manufacturer": {
-                "Name": "Unknown Manufacturer",
-                "Code": "UNKN",
-                "UUID": "00000000-0000-0000-0000-000000000000"
+                "Code": "KAP",
+                "Name": "Kilgore and Poole",
+                "UUID": "a349d45f-cda5-4fdb-89ea-4ea91804a163"
             },
             "Tags": [
                 "kap_light",

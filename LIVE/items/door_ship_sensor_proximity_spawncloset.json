@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "bd3106ef-862c-4f0a-8bb2-03d73d381911",
             "__path": "libs/foundry/records/entities/scitem/doors/door_ship_sensor_proximity_spawncloset.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -250,6 +255,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -287,6 +293,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -326,6 +333,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -355,6 +363,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -384,8 +393,12 @@
                         {
                             "name": "Link Tagged Interactions With Parent",
                             "id": [],
-                            "entityTraversingType": [],
-                            "executeNodes": [],
+                            "entityTraversingType": {
+                                "SEntityTraversingNodeTypeParentEntity": []
+                            },
+                            "executeNodes": {
+                                "SEntityTraversingNodeExecuteLinkAllTaggedInteractions": []
+                            },
                             "nextNodes": []
                         },
                         {
@@ -396,7 +409,9 @@
                                     "entityTag": "00000000-0000-0000-0000-000000000000"
                                 }
                             },
-                            "executeNodes": [],
+                            "executeNodes": {
+                                "SEntityTraversingNodeExecuteLinkAllTaggedInteractions": []
+                            },
                             "nextNodes": []
                         }
                     ],

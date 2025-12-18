@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "bbea3063-5ca5-4d78-9327-95cceb638eb9",
             "__path": "libs/foundry/records/entities/scitem/weapons/weapon_modifier/gmni_optics_tsco_x4_s2_firerats01.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "b97f2439-cde7-45f9-acc3-5eab75b0f84c"
@@ -37,7 +42,7 @@
                     "value": "27699dde-7519-4286-9efd-4a8684479a9f"
                 },
                 {
-                    "value": "f133f057-fcf0-4e65-82b4-604dff7c518d"
+                    "value": "e2489168-748e-4b8d-bcd2-b93292b4ad3f"
                 }
             ],
             "StaticEntityClassData": {
@@ -109,7 +114,7 @@
                             "__Name": "@item_Namegmni_optics_tsco_x4_s2_firerats02",
                             "ShortName": "OT4-RF SCR 4xTELE",
                             "__ShortName": "@item_Namegmni_optics_tsco_x4_s2_firerats02_short",
-                            "Description": "Manufacturer: Gemini\u00a0\\nType: Telescopic\\nAttachment Point: Optic\u00a0 \u00a0\\nMagnification: 2x - 4x\\nAim Time: +5%\\nRecoil Smoothness: +10%\\nSize: 2\\n\\nCombining a premium 4x telescopic sight with Gemini's innovative echoburst rangefinder, the OT4-RF model allows you to accurately gauge the distance to your target; vital for effective precision shooting. When paired with the Gemini S71 or other compatible weapon, the OT4-RF is engineered to impress in a variety of situations and engagements. The Scorched edition features a unique flame patina.",
+                            "Description": "Manufacturer: Gemini\u00a0\\nType: Telescopic\\nAttachment Point: Optic\u00a0 \u00a0\\nMagnification: 2x - 4x\\nAim Time: +5%\\nVisual Recoil: -10%\\nParallax: Medium\\nSize: 2\\n\\nCombining a premium 4x telescopic sight with Gemini's innovative echoburst rangefinder, the OT4-RF model allows you to accurately gauge the distance to your target; vital for effective precision shooting. When paired with the Gemini S71 or other compatible weapon, the OT4-RF is engineered to impress in a variety of situations and engagements. The Scorched edition features a unique flame patina.",
                             "__Description": "@item_Descgmni_optics_tsco_x4_s2_firerats02",
                             "displayFeatures": {
                                 "LogoSimplifiedWhite": "",
@@ -134,7 +139,7 @@
                                 "Locale": "english",
                                 "Name": "OT4-RF \"Scorched\" (4x Telescopic)",
                                 "ShortName": "OT4-RF SCR 4xTELE",
-                                "Description": "Manufacturer: Gemini\u00a0\\nType: Telescopic\\nAttachment Point: Optic\u00a0 \u00a0\\nMagnification: 2x - 4x\\nAim Time: +5%\\nRecoil Smoothness: +10%\\nSize: 2\\n\\nCombining a premium 4x telescopic sight with Gemini's innovative echoburst rangefinder, the OT4-RF model allows you to accurately gauge the distance to your target; vital for effective precision shooting. When paired with the Gemini S71 or other compatible weapon, the OT4-RF is engineered to impress in a variety of situations and engagements. The Scorched edition features a unique flame patina."
+                                "Description": "Manufacturer: Gemini\u00a0\\nType: Telescopic\\nAttachment Point: Optic\u00a0 \u00a0\\nMagnification: 2x - 4x\\nAim Time: +5%\\nVisual Recoil: -10%\\nParallax: Medium\\nSize: 2\\n\\nCombining a premium 4x telescopic sight with Gemini's innovative echoburst rangefinder, the OT4-RF model allows you to accurately gauge the distance to your target; vital for effective precision shooting. When paired with the Gemini S71 or other compatible weapon, the OT4-RF is engineered to impress in a variety of situations and engagements. The Scorched edition features a unique flame patina."
                             }
                         },
                         "mannequinTags": {
@@ -197,6 +202,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -211,6 +217,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -435,6 +442,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -723,6 +735,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -743,14 +756,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -795,6 +813,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -836,6 +855,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -877,6 +897,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -906,6 +927,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -947,6 +969,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -967,6 +990,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1202,6 +1226,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1343,6 +1369,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -1657,6 +1684,7 @@
                     },
                     "carryableSequences": []
                 },
+                "SPersistentComponentParams": [],
                 "UIOwnerEntityComponentParams": {
                     "startOpen": 1,
                     "areScreens3D": 0,
@@ -1710,7 +1738,8 @@
                                     "name": "Default",
                                     "component": {
                                         "canvas": "72ea3363-8d8a-413a-82f2-f201646b49e2",
-                                        "isSystemViewInstance": 0
+                                        "isSystemViewInstance": 0,
+                                        "canvasInstantiationMode": "RootDeferred"
                                     }
                                 }
                             }
@@ -1722,6 +1751,7 @@
                     "UIAudioDef": "5f1775eb-5767-4756-8127-e1e9ffbaed87",
                     "useEntityClass": "00000000-0000-0000-0000-000000000000",
                     "dialogueContext": "00000000-0000-0000-0000-000000000000",
+                    "bypassRealisticMode": 0,
                     "UIAudioManufacturers": [],
                     "offset": [],
                     "videoAudioPlayTrigger": {
@@ -1737,6 +1767,7 @@
                         "audioTrigger": ""
                     }
                 },
+                "SAudioProxyParams": [],
                 "UserVariablesComponentParams": {
                     "AlwaysUseDefaultValues": 0,
                     "floats": {
@@ -1791,7 +1822,7 @@
             "Length": 0.1463,
             "Type": "WeaponAttachment.IronSight",
             "Name": "OT4-RF \"Scorched\" (4x Telescopic)",
-            "Description": "Manufacturer: Gemini\u00a0\\nType: Telescopic\\nAttachment Point: Optic\u00a0 \u00a0\\nMagnification: 2x - 4x\\nAim Time: +5%\\nRecoil Smoothness: +10%\\nSize: 2\\n\\nCombining a premium 4x telescopic sight with Gemini's innovative echoburst rangefinder, the OT4-RF model allows you to accurately gauge the distance to your target; vital for effective precision shooting. When paired with the Gemini S71 or other compatible weapon, the OT4-RF is engineered to impress in a variety of situations and engagements. The Scorched edition features a unique flame patina.",
+            "Description": "Manufacturer: Gemini\u00a0\\nType: Telescopic\\nAttachment Point: Optic\u00a0 \u00a0\\nMagnification: 2x - 4x\\nAim Time: +5%\\nVisual Recoil: -10%\\nParallax: Medium\\nSize: 2\\n\\nCombining a premium 4x telescopic sight with Gemini's innovative echoburst rangefinder, the OT4-RF model allows you to accurately gauge the distance to your target; vital for effective precision shooting. When paired with the Gemini S71 or other compatible weapon, the OT4-RF is engineered to impress in a variety of situations and engagements. The Scorched edition features a unique flame patina.",
             "DescriptionData": {
                 "Manufacturer": "Gemini",
                 "Type": "Telescopic",
