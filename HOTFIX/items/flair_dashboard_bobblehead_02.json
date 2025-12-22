@@ -8,6 +8,11 @@
             "entityDensityClass": "2b63baf4-9e57-49a9-8b0c-c47ccdacda9a",
             "__ref": "27091a02-d1d3-40ec-acd5-b2a0f3a1ca77",
             "__path": "libs/foundry/records/entities/scitem/flair/vehicle/flair_dashboard_bobblehead_02.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -160,6 +165,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 0.75,
@@ -231,6 +241,7 @@
         "grade": 1,
         "name": "@item_NameFlair_Vehicle",
         "tags": "GenericModel",
+        "required_tags": "",
         "manufacturer": "SASU",
         "stdItem": {
             "UUID": "27091a02-d1d3-40ec-acd5-b2a0f3a1ca77",
@@ -243,9 +254,11 @@
             "Type": "Flair_Cockpit.Flair_Static",
             "Name": "@item_NameFlair_Vehicle",
             "Description": "@itemDescFlair_Vehicle",
+            "DescriptionText": "@itemDescFlair_Vehicle",
             "Manufacturer": {
                 "Code": "SASU",
-                "Name": "Sakura Sun"
+                "Name": "Sakura Sun",
+                "UUID": "40c59850-8fb5-4a0e-ab61-7fd3871a632a"
             },
             "Tags": [
                 "GenericModel"

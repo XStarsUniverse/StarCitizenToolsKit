@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "c2127743-c82c-48d8-8e46-442cfc26fc7d",
             "__path": "libs/foundry/records/entities/scitem/ships/controller/controller_flight_krig_p52_merlin_mm_322.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "68b3fe59-d53f-4e20-8c82-92dca83846ad"
@@ -442,8 +447,8 @@
                     "linkPlugs": []
                 },
                 "IFCSParams": {
-                    "scmSpeed": 280,
-                    "boostSpeedForward": 620,
+                    "scmSpeed": 275,
+                    "boostSpeedForward": 605,
                     "boostSpeedBackward": 290,
                     "maxSpeed": 1450,
                     "maxSpeedPrecisionModeFullProximityAssist": 10,
@@ -465,9 +470,9 @@
                     "__thrusterImbalanceMessage": "@dfm_ui_UnexpectedTorqueImbalance",
                     "intoxicationModifierRef": "802adf13-525f-4365-934a-a7b28153b664",
                     "maxAngularVelocity": {
-                        "x": 55,
+                        "x": 58,
                         "y": 200,
-                        "z": 55
+                        "z": 50
                     },
                     "speedProfile": {
                         "angularVelocityLimiter": "Ellipsoid",
@@ -883,9 +888,6 @@
                             "stallSpeedModifier": 1,
                             "thrusterControlSurfaceMixRatioLerpTime": 0.5,
                             "hoverMaxRange": 20,
-                            "pitchAnimationVariable": "pitchDeflection",
-                            "yawAnimationVariable": "yawDeflection",
-                            "rollAnimationVariable": "rollDeflection",
                             "dampingTorqueDerivative": {
                                 "x": 50000,
                                 "y": 22000,
@@ -1209,6 +1211,15 @@
                                 "x": 0,
                                 "y": 0,
                                 "z": 0
+                            },
+                            "surfaceAnimations": {
+                                "pitchVariable": "pitchDeflection",
+                                "yawVariable": "yawDeflection",
+                                "rollVariable": "rollDeflection",
+                                "pitchAddRollVariable": "pitchAddRollDeflection",
+                                "pitchMinusRollVariable": "pitchMinusRollDeflection",
+                                "pitchAddYawVariable": "pitchAddYawDeflection",
+                                "pitchMinusYawVariable": "pitchMinusYawDeflection"
                             },
                             "turbulence": {
                                 "groundTurbulenceAmplitude": 0.4,
@@ -1831,14 +1842,14 @@
                         "z": 1
                     },
                     "positiveAngularScale": {
-                        "x": 0.0808,
-                        "y": 0.1514,
-                        "z": 0.0566
+                        "x": 0.0882,
+                        "y": 0.142,
+                        "z": 0.0564
                     },
                     "negativeAngularScale": {
-                        "x": 0.0995,
-                        "y": 0.1514,
-                        "z": 0.0566
+                        "x": 0.0987,
+                        "y": 0.142,
+                        "z": 0.0564
                     },
                     "authoredMotionLimits": {
                         "linearMaxAcceleration": 400,
@@ -1884,8 +1895,8 @@
                     "forceOn": 0,
                     "asopSpawnState": "Off",
                     "throttleParams": {
-                        "ItemPowerSegmentThrottleParams": {
-                            "default": 4
+                        "ItemPowerSimpleSegmentThrottleParams": {
+                            "defaultFull": 0
                         }
                     },
                     "masterModeExclusionsOverride": []
@@ -1935,19 +1946,45 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "SGeometryResourceParams": {
                     "cacheResources": 0,
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -2019,6 +2056,7 @@
         "grade": 1,
         "name": "Flight Blade",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "c2127743-c82c-48d8-8e46-442cfc26fc7d",
             "ClassName": "Controller_Flight_KRIG_P52_Merlin_MM_322",
@@ -2030,14 +2068,20 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Flight Blade",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
             },
             "Ifcs": {
-                "scmSpeed": 280,
-                "boostSpeedForward": 620,
+                "scmSpeed": 275,
+                "boostSpeedForward": 605,
                 "boostSpeedBackward": 290,
                 "maxSpeed": 1450,
                 "maxSpeedPrecisionModeFullProximityAssist": 10,
@@ -2053,8 +2097,8 @@
                 "linearAccelDecay": 3,
                 "angularAccelDecay": 12,
                 "scmMaxDragMultiplier": 4,
-                "Pitch": 55,
-                "Yaw": 55,
+                "Pitch": 58,
+                "Yaw": 50,
                 "Roll": 200,
                 "Afterburner": {
                     "PreDelayTime": 0,
@@ -2068,6 +2112,40 @@
                     "CapacitorRegenDelayAfterUse": 0.2,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "6138951f-5e23-43ba-ab57-30b42d6f38ac",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_santokyai_red_black_black.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "San'tok.yai Xua'cha Livery",
         "tags": "Paint_SanTokYai @Paint_SanTokYai_Red_Black_Black",
+        "required_tags": "Paint_SanTokYai",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "San'tok.yai Xua'cha Livery",
             "Description": "Outfit the San'tok.yai in fiery red and black trim with the Xua'cha livery.",
+            "DescriptionText": "Outfit the San'tok.yai in fiery red and black trim with the Xua'cha livery.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Mirai"
+                "Name": "Mirai",
+                "UUID": "fc8ad4a1-b137-4bf4-8fab-7e2d0f12ccec"
             },
             "Tags": [
                 "Paint_SanTokYai",

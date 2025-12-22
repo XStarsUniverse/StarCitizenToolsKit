@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "3d48eb3c-0d9c-43bd-84f4-e8d2f35bbd49",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_srv_white_grey.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "SRV Overcast Livery",
         "tags": "Paint_SRV @Paint_SRV_White_Grey",
+        "required_tags": "Paint_SRV",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "SRV Overcast Livery",
             "Description": "Have your SRV looking good on recovery operations with the Overcast livery, which is white with black highlights.",
+            "DescriptionText": "Have your SRV looking good on recovery operations with the Overcast livery, which is white with black highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "02d06a62-4402-46bb-89d3-81f31f82a225"
             },
             "Tags": [
                 "Paint_SRV",

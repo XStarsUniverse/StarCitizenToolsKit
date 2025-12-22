@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "31013aa3-8656-4974-a2ae-fa2ae34dacee",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_vulture_assembly_red_white.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Vulture Assembly Livery",
         "tags": "Paint_Vulture @Paint_Vulture_Assembly_Red_White",
+        "required_tags": "Paint_Vulture",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Vulture Assembly Livery",
             "Description": "Make them see red! The Assembly livery is a full fuselage red design with black and silver accents that makes sure your spacecraft is easily identifiable during salvage operations.",
+            "DescriptionText": "Make them see red! The Assembly livery is a full fuselage red design with black and silver accents that makes sure your spacecraft is easily identifiable during salvage operations.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Drake Interplanetary"
+                "Name": "Drake Interplanetary",
+                "UUID": "7f3ede92-24f1-4697-9112-1a0743ecd766"
             },
             "Tags": [
                 "Paint_Vulture",

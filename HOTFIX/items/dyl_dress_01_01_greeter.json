@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "3166a12f-e35d-42b3-b54e-77aeb4f5abca",
             "__path": "libs/foundry/records/entities/scitem/characters/human/clothing/pu_clothing/clothing_torso1/dyl_dress_01_01_greeter.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "fa5bbe66-38c2-4f61-865c-4ad793373ded"
@@ -43,6 +48,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -63,14 +69,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -371,6 +382,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -857,16 +873,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
-                    "Ports": {
-                        "SItemPortDef": {
+                    "Ports": [
+                        {
                             "Name": "Material_Variant",
-                            "DisplayName": "Material_Variant",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "nontransferable ",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -874,6 +894,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -972,8 +993,104 @@
                                 "y": 0,
                                 "z": -1
                             }
+                        },
+                        {
+                            "Name": "Clothing_Torso2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 0,
+                            "MaxSize": 0,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "Char_Clothing_Torso_2",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationSkin": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "Spine3",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
                         }
-                    },
+                    ],
                     "InternalResourceLinks": [],
                     "InternalHardpointLinks": [],
                     "destroyEntitiesOnItemportList": [],
@@ -1202,6 +1319,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1303,6 +1422,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "EntityRoot",
@@ -1431,6 +1552,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 0,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -1732,6 +1854,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1773,6 +1896,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1814,6 +1938,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1834,6 +1959,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1875,6 +2001,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1895,6 +2022,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": {
@@ -1939,10 +2067,12 @@
                         }
                     }
                 },
+                "SPersistentComponentParams": [],
                 "SInteractionLinkParams": {
                     "vehicleItemPortInteractionLinks": [],
                     "linkPlugs": []
-                }
+                },
+                "SubsumptionMissionLinkComponentParams": []
             },
             "ClassName": "dyl_dress_01_01_greeter",
             "__type": "Char_Clothing_Torso_1"
@@ -1958,6 +2088,7 @@
         "grade": 1,
         "name": "Martel Dress",
         "tags": "dyl_dress Set_01 Color_greeter",
+        "required_tags": "",
         "manufacturer": "DYL",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1971,9 +2102,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Martel Dress",
             "Description": "Carrying Capacity: 2K \u00b5SCU\\n\\nThis open-front grey dress from Dyna Lei reveals a draped, checkered layer offset by gold trim beneath its wide cinched belt. The finished look is paired with black bodysuit and a fetching handkerchief to complete the ensemble.\\n\\nMen's sizes currently not available.",
+            "DescriptionData": {
+                "Carrying Capacity": "2K \u00b5SCU"
+            },
+            "DescriptionText": "This open-front grey dress from Dyna Lei reveals a draped, checkered layer offset by gold trim beneath its wide cinched belt. The finished look is paired with black bodysuit and a fetching handkerchief to complete the ensemble.\n\nMen's sizes currently not available.",
             "Manufacturer": {
                 "Code": "DYL",
-                "Name": "Dyna Lei"
+                "Name": "Dyna Lei",
+                "UUID": "92b20988-dbf3-4e95-b4a9-7e5e22112516"
             },
             "Tags": [
                 "dyl_dress",
@@ -1984,11 +2120,33 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
+                    ],
+                    "Uneditable": false
+                },
+                {
+                    "PortName": "Clothing_Torso2",
+                    "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "Types": [
+                        "Char_Clothing_Torso_2"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Torso_2"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1998,6 +2156,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.002,
                 "unit": 6,
@@ -2013,6 +2180,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -3,7 +3,7 @@
     "ClassName": "GRIN_PTV",
     "Name": "Greycat PTV",
     "Description": "Manufacturer: Greycat Industrial\\nFocus: Personal Transport\\n\\nThe Greycat PTV is a simple and practical buggy frequently used to reduce travel times in large hangars or outposts.",
-    "Career": "Transport",
+    "Career": "Ground",
     "Role": "Passenger",
     "Manufacturer": {
         "Code": "GRIN",
@@ -19,27 +19,19 @@
         "ExpeditedClaimTime": 0.09,
         "StandardClaimTime": 0.28
     },
-    "IsVehicle": false,
+    "IsVehicle": true,
     "IsGravlev": false,
-    "IsSpaceship": true,
+    "IsSpaceship": false,
     "Mass": 14690,
-    "Propulsion": {
-        "FuelCapacity": 1000,
-        "FuelIntakeRate": 15,
-        "FuelUsage": {
-            "Main": 0,
-            "Retro": 0,
-            "Vtol": 0,
-            "Maneuvering": 0
-        },
-        "ThrustCapacity": {
-            "Main": 0,
-            "Retro": 0,
-            "Vtol": 0,
-            "Maneuvering": 0
-        },
-        "IntakeToTankCapacityRatio": 0.015,
-        "TimeForIntakesToFillTank": 66.66666666666667
+    "DriveCharacteristics": {
+        "TopSpeed": 155.52,
+        "ReverseSpeed": 155.52,
+        "Acceleration": 0.3638,
+        "Decceleration": 1.3827,
+        "ZeroToMax": 118.76,
+        "ZeroToReverse": 118.76,
+        "MaxToZero": 31.24,
+        "ReverseToZero": 31.24
     },
     "Cargo": 0,
     "CargoGrids": [],

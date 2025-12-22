@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "7b35dc9f-c013-4b54-b6a5-d50c3c3c9133",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_ptv_metal.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "PTV Gunmetal Livery",
         "tags": "GRIN_PTV_Base GRIN_PTV PTV_Paint @ptv_paint_metal",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "PTV Gunmetal Livery",
             "Description": "Who says a buggy can?t be elegant? The Gunmetal livery is a medium gloss, two-component technology that maximizes gloss retention and durability.",
+            "DescriptionText": "Who says a buggy can?t be elegant? The Gunmetal livery is a medium gloss, two-component technology that maximizes gloss retention and durability.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "GRIN_PTV_Base",

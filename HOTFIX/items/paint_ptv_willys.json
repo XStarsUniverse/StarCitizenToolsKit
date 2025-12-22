@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "c684aeb1-5f07-4221-b737-69e886754368",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_ptv_willys.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "PTV Rifle Green Livery",
         "tags": "GRIN_PTV_Base GRIN_PTV PTV_Paint @ptv_paint_willys",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "PTV Rifle Green Livery",
             "Description": "Rifle Green livery uses a premium two-component technology designed to endure harsher environments without fading or scratching.",
+            "DescriptionText": "Rifle Green livery uses a premium two-component technology designed to endure harsher environments without fading or scratching.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "GRIN_PTV_Base",

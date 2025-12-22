@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "ff5452f3-731f-481e-94aa-e095f6b148ea",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_sabre_beige_black_black.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Sabre Landslide Livery",
         "tags": "AEGS_Sabre_Base Sabre_Paint Paint_Sabre @Paint_Sabre_Beige_Black_Black",
+        "required_tags": "Paint_Sabre",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Sabre Landslide Livery",
             "Description": "The Landslide livery for the Sabre features a tan fuselage with grey wings and subtle silver highlights.",
+            "DescriptionText": "The Landslide livery for the Sabre features a tan fuselage with grey wings and subtle silver highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "310b0369-16b7-4d53-8fd0-8dd7f3308951"
             },
             "Tags": [
                 "AEGS_Sabre_Base",

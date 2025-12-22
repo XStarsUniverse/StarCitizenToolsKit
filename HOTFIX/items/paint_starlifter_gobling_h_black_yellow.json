@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "882db93b-3807-4310-82d5-ea7342c9debd",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_starlifter_gobling_h_black_yellow.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Hercules Starlifter Hurston Livery",
         "tags": "Paint_Starlifter @Paint_Starlifter_GoblinG_H_Black_Yellow",
+        "required_tags": "Paint_Starlifter",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Hercules Starlifter Hurston Livery",
             "Description": "The Hurston livery for the Starlifter features the company's logo atop a grey base paint with yellow highlights.",
+            "DescriptionText": "The Hurston livery for the Starlifter features the company's logo atop a grey base paint with yellow highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "3e48892e-95f3-4f44-a0b1-537502a0870c"
             },
             "Tags": [
                 "Paint_Starlifter",

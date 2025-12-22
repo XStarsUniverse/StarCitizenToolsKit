@@ -8,6 +8,11 @@
             "entityDensityClass": "ad1a0441-246c-4b7a-859d-bfa38f91a816",
             "__ref": "07017667-fa3e-449e-ae5b-589bbfb97b13",
             "__path": "libs/foundry/records/entities/scitem/carryables/1h/drink_cup_alcohol_template.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "5e11a544-7fea-4160-b2bf-98c6cf9ee9df"
@@ -50,6 +55,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -70,14 +76,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -247,6 +258,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -901,6 +913,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1002,6 +1016,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -1141,6 +1160,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1174,8 +1194,13 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
+                                        {
+                                            "Interaction": "Interactable.SharedInteractions[4]",
+                                            "NextState": "null"
+                                        },
                                         {
                                             "Interaction": "Interactable.SharedInteractions[2]",
                                             "NextState": "null"
@@ -1215,10 +1240,15 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
                                             "Interaction": "Interactable.SharedInteractions[0]",
+                                            "NextState": "null"
+                                        },
+                                        {
+                                            "Interaction": "Interactable.SharedInteractions[4]",
                                             "NextState": "null"
                                         },
                                         {
@@ -1272,6 +1302,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1292,6 +1323,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1312,6 +1344,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1340,6 +1373,8 @@
                         }
                     }
                 },
+                "SPersistentComponentParams": [],
+                "SubsumptionMissionLinkComponentParams": [],
                 "EntityPhysicalAudioParams": {
                     "minimumImpulseContinuous": 9,
                     "minimumImpulseTransient": 6,
@@ -1347,6 +1382,7 @@
                     "slideThreshold": 1,
                     "rollThreshold": 1.1,
                     "momentumScale": 1,
+                    "rollVelocityScale": 1,
                     "useAABBCentre": 0,
                     "oneShotTag": "0d401f6c-38a4-4c52-bb02-26059dd8d98a",
                     "oneShotCooldown": 0.2,
@@ -1390,6 +1426,18 @@
                     "placeTrigger": {
                         "audioTrigger": ""
                     },
+                    "tractorBeamPickupTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "tractorBeamDropTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "detachBreakTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "playerCausedDetachBreakTrigger": {
+                        "audioTrigger": ""
+                    },
                     "rtpcSlideVelocity": {
                         "rtpc": "PhysicalAudio_Velocity"
                     },
@@ -1422,6 +1470,9 @@
                     },
                     "rtpcCarried": {
                         "rtpc": "PhysicalAudio_CarryState"
+                    },
+                    "rtpcSize": {
+                        "rtpc": ""
                     }
                 },
                 "SEntityAudioControllerParams": {
@@ -1437,6 +1488,7 @@
                     },
                     "tagTriggers": []
                 },
+                "SAudioProxyParams": [],
                 "SCItemConsumableParams": {
                     "consumeInteraction": "Interactable.SharedInteractions[5]",
                     "consumeFragmentId": "consume",
@@ -1529,6 +1581,8 @@
                     "fragmentTag": "Carryable",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": [
                         {
                             "name": "",
@@ -1999,6 +2053,7 @@
                         }
                     ],
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [],
                     "views": [],
                     "abilityLocks": [],
@@ -2017,16 +2072,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": {
                         "SItemPortDef": {
                             "Name": "slot_garnish",
-                            "DisplayName": "slot_garnish",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "slot_garnish",
                             "RequiredPortTags": "",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 0,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2038,6 +2097,7 @@
                                     "value": "f865a890-2958-47dd-a4a6-589b42b59065"
                                 }
                             },
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2139,6 +2199,7 @@
         "grade": 1,
         "name": "Cup",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GEND",
         "stdItem": {
             "UUID": "07017667-fa3e-449e-ae5b-589bbfb97b13",
@@ -2151,19 +2212,28 @@
             "Type": "Drink.UNDEFINED",
             "Name": "Cup",
             "Description": "A drinking vessel.",
+            "DescriptionText": "A drinking vessel.",
             "Manufacturer": {
                 "Code": "GEND",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "f80ab8de-4d04-4a1f-a8f2-ee2bb01fd125"
             },
             "Ports": [
                 {
                     "PortName": "slot_garnish",
                     "Size": 1,
+                    "MinSize": 0,
+                    "MaxSize": 1,
                     "Tags": [
                         "slot_garnish"
                     ],
                     "Types": [
                         "Misc"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Misc"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -2174,12 +2244,22 @@
                 "Height": 0.75
             },
             "Food": {
-                "oneShotConsume": 0,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "bottle"
-            }
+                "Type": "Drink",
+                "ContainerClosed": 0,
+                "ContainerType": "bottle",
+                "ContainerTypeTag": "bottle",
+                "OneShotConsume": 0,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

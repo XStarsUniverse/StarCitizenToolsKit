@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "bc0f6356-3cfa-4a54-875b-5456ac03ff0e",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_polaris_fw2955_grey_black_red_camo.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -103,6 +108,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -278,6 +288,7 @@
         "grade": 1,
         "name": "Polaris Nightbreak Livery",
         "tags": "Paint_Polaris @Paint_Polaris_FW2955_Grey_Black_Red_Camo",
+        "required_tags": "Paint_Polaris",
         "classification": "Ship.Paints",
         "stdItem": {
             "UUID": "bc0f6356-3cfa-4a54-875b-5456ac03ff0e",
@@ -290,6 +301,12 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Polaris Nightbreak Livery",
             "Description": "Discreetly soar through the night sky in the Polaris with the Nightbreak livery, which is primarily black with red highlights.",
+            "DescriptionText": "Discreetly soar through the night sky in the Polaris with the Nightbreak livery, which is primarily black with red highlights.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Paint_Polaris",
                 "@Paint_Polaris_FW2955_Grey_Black_Red_Camo"

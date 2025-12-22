@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "316244e4-dd72-4435-8000-a3cca0952a54",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_zeus_gobling_m_white_blue.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Zeus microTech Livery",
         "tags": "Paint_Zeus @Paint_Zeus_GoblinG_M_White_Blue",
+        "required_tags": "Paint_Zeus",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Zeus microTech Livery",
             "Description": "The microTech livery for the Zeus features the company's logo atop a white base paint with light blue and grey highlights.",
+            "DescriptionText": "The microTech livery for the Zeus features the company's logo atop a white base paint with light blue and grey highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "dd4645a9-c02b-4ccf-b207-39ad9f32ccd6"
             },
             "Tags": [
                 "Paint_Zeus",

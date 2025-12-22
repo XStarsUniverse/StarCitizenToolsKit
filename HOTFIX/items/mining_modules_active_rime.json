@@ -8,6 +8,11 @@
             "entityDensityClass": "ad1a0441-246c-4b7a-859d-bfa38f91a816",
             "__ref": "4af4857b-b564-4448-afbc-820ff288c0af",
             "__path": "libs/foundry/records/entities/scitem/ships/utility/mining/miningarm/mining_modules_active_rime.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "8e76fabb-1f04-4e7e-a6a3-60bcf0ab1cb1"
@@ -104,6 +109,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -124,14 +130,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -287,6 +298,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -574,6 +590,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "EntityRoot",
@@ -700,6 +718,7 @@
                                     "chargeTimeMultiplier": 1,
                                     "useAlternateProjectileVisuals": 0,
                                     "useAugmentedRealityProjectiles": 0,
+                                    "disableMisfire": 0,
                                     "recoilModifier": {
                                         "decayMultiplier": 1,
                                         "endDecayMultiplier": 1,
@@ -714,6 +733,7 @@
                                         "frontalOscillationDecayMultiplier": 1,
                                         "frontalOscillationRandomnessMultiplier": 1,
                                         "animatedRecoilMultiplier": 1,
+                                        "disableRecoil": 0,
                                         "headRotationMultiplier": {
                                             "x": 1,
                                             "y": 1,
@@ -924,6 +944,7 @@
                                     "chargeTimeMultiplier": 1,
                                     "useAlternateProjectileVisuals": 0,
                                     "useAugmentedRealityProjectiles": 0,
+                                    "disableMisfire": 0,
                                     "recoilModifier": {
                                         "decayMultiplier": 1,
                                         "endDecayMultiplier": 1,
@@ -938,6 +959,7 @@
                                         "frontalOscillationDecayMultiplier": 1,
                                         "frontalOscillationRandomnessMultiplier": 1,
                                         "animatedRecoilMultiplier": 1,
+                                        "disableRecoil": 0,
                                         "headRotationMultiplier": {
                                             "x": 1,
                                             "y": 1,
@@ -1225,6 +1247,7 @@
                         }
                     }
                 },
+                "SPersistentComponentParams": [],
                 "SInteractionLinkParams": {
                     "vehicleItemPortInteractionLinks": [],
                     "linkPlugs": []
@@ -1270,6 +1293,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1303,6 +1327,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1340,6 +1365,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1377,6 +1403,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1397,6 +1424,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1436,6 +1464,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1460,6 +1489,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1480,6 +1510,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1516,6 +1547,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1536,6 +1568,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1558,7 +1591,9 @@
                                     "normal": "StateTypes[2].SInteractionStateType.States[1]",
                                     "warning": "StateTypes[2].SInteractionStateType.States[1]",
                                     "failed": "StateTypes[2].SInteractionStateType.States[0]",
-                                    "context": []
+                                    "context": {
+                                        "AttachableStateModifierContext_Immediate_Parent": []
+                                    }
                                 }
                             }
                         },
@@ -1579,6 +1614,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1604,6 +1640,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1624,7 +1661,9 @@
                                     "mining": "StateTypes[3].SInteractionStateType.States[0]",
                                     "quantumNavigation": "StateTypes[3].SInteractionStateType.States[1]",
                                     "refuel": "StateTypes[3].SInteractionStateType.States[1]",
-                                    "context": []
+                                    "context": {
+                                        "AttachableStateModifierContext_Immediate_Parent": []
+                                    }
                                 }
                             }
                         }
@@ -1706,6 +1745,7 @@
                     "ExplosionBone": "",
                     "IsSalvagable": 0,
                     "IsRepairable": 0,
+                    "SalvageDamageModifier": 1,
                     "MirrorSalvageHit": 0,
                     "DisableMaterialDamage": 0,
                     "alwaysPropagateHitToParent": 0,
@@ -1753,7 +1793,7 @@
                     "DeathGasComposition": [],
                     "InteractionLocks": [],
                     "sequencerTasks": [],
-                    "shatterDestroyEvent": [],
+                    "maelstromEvents": [],
                     "craftingData": []
                 },
                 "SItemPortContainerComponentParams": {
@@ -1762,6 +1802,7 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [],
                     "InternalResourceLinks": [],
@@ -1818,6 +1859,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes[0].SInteractionStateType.States[0]",
                         "carriedState": "StateTypes[0].SInteractionStateType.States[1]",
@@ -2139,6 +2181,7 @@
         "grade": 1,
         "name": "Rime Module",
         "tags": "miningConsumable miningMount",
+        "required_tags": "miningConsumable",
         "manufacturer": "GRIN",
         "stdItem": {
             "UUID": "4af4857b-b564-4448-afbc-820ff288c0af",
@@ -2151,9 +2194,20 @@
             "Type": "MiningModifier.Gun",
             "Name": "Rime Module",
             "Description": "Manufacturer: Greycat Industrial\\nItem Type: Mining Module (Active)\\n\\nResistance: -25%\\nShatter Damage: -10%\\n\\nMining Laser Power: 85%\\n\\nDuration: 20 seconds\\nUses: 10\\n\\nThe Rime delivers a safer mining experience by sacrificing laser power to reduce a deposit's resistance and the dangers associated with shattering.",
+            "DescriptionData": {
+                "Manufacturer": "Greycat Industrial",
+                "Item Type": "Mining Module (Active)",
+                "Resistance": "-25%",
+                "Shatter Damage": "-10%",
+                "Mining Laser Power": "85%",
+                "Duration": "20 seconds",
+                "Uses": "10"
+            },
+            "DescriptionText": "The Rime delivers a safer mining experience by sacrificing laser power to reduce a deposit's resistance and the dangers associated with shattering.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "miningConsumable",
@@ -2165,8 +2219,18 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
-            }
+                "Health": 200,
+                "Salvageable": 0,
+                "Repairable": 0
+            },
+            "Interactions": [
+                "Activate",
+                "Carrylowered",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

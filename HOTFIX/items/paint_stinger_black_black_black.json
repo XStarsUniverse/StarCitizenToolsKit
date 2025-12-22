@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "df34221a-190e-45f2-a8c6-ead7c0a2f146",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_stinger_black_black_black.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Stinger Mamba Livery",
         "tags": "Paint_Stinger @Paint_Stinger_Black_Black_Black",
+        "required_tags": "Paint_Stinger",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Stinger Mamba Livery",
             "Description": "Your enemies will never see you coming with the black-on-black Mamba livery for the Esperia Stinger.",
+            "DescriptionText": "Your enemies will never see you coming with the black-on-black Mamba livery for the Esperia Stinger.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "5b3c97c0-eb72-48ef-bc7f-433fe8af31e6"
             },
             "Tags": [
                 "Paint_Stinger",

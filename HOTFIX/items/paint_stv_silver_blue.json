@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "b9778ac5-26bf-4876-ae49-deabf83ab9ff",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_stv_silver_blue.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "STV Blue Steel Livery",
         "tags": "Paint_STV @Paint_STV_Silver_Blue",
+        "required_tags": "Paint_STV",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "STV Blue Steel Livery",
             "Description": "Ground adventures never looked so good with the Blue Steel livery, which gives the STV a sleek silver finish trimmed with vibrant blue.",
+            "DescriptionText": "Ground adventures never looked so good with the Blue Steel livery, which gives the STV a sleek silver finish trimmed with vibrant blue.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Origin Jumpworks"
+                "Name": "Origin Jumpworks",
+                "UUID": "ca4c0b26-6538-4ce1-96c5-f22a2bcbbd5f"
             },
             "Tags": [
                 "Paint_STV",

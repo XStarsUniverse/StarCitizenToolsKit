@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "fa12a7a5-6fdd-4e7b-9237-1f2e131a43c4",
             "__path": "libs/foundry/records/entities/scitem/weapons/magazines/volt_sniper_energy_01_mag.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "6c6028af-fcc2-4205-b18c-8e344c629c10"
@@ -171,6 +176,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -493,7 +503,8 @@
                                 },
                                 "penetrationParams": {
                                     "basePenetrationDistance": 0,
-                                    "angle": 0
+                                    "nearRadius": 0.5,
+                                    "farRadius": 5
                                 },
                                 "visualParams": {
                                     "maxLength": 0,
@@ -529,6 +540,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -549,14 +561,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -633,6 +650,7 @@
                         "z": 1
                     }
                 },
+                "SPersistentComponentParams": [],
                 "SEntityComponentCarryableParams": {
                     "carryInteraction": "Interactable.SharedInteractions[0]",
                     "placeInteraction": "Interactable.SharedInteractions[7]",
@@ -652,6 +670,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes[0].SInteractionStateType.States[0]",
                         "carriedState": "StateTypes[0].SInteractionStateType.States[1]",
@@ -859,7 +878,8 @@
                     "carryableTasks": {
                         "SSequencerMoveToAnimateCarryableTaskParams": {
                             "fragmentId": "Place",
-                            "fragTag": ""
+                            "fragTag": "",
+                            "bForceExactPositioning": 0
                         },
                         "SSequencerBespokeTakeCarryableTaskParams": {
                             "fragmentId": "Take",
@@ -1245,6 +1265,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 1,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1402,6 +1424,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1451,6 +1474,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1496,6 +1520,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1516,6 +1541,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1561,6 +1587,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1581,6 +1608,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1636,6 +1664,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1661,6 +1690,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1686,6 +1716,8 @@
                     "fragmentTag": "Carryable",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": {
                         "UsableUseSlot": {
                             "name": "",
@@ -1808,6 +1840,7 @@
                         }
                     },
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [],
                     "views": [],
                     "abilityLocks": [],
@@ -1823,6 +1856,8 @@
                     "isOverridden": 0,
                     "enableDetectionOnItemPort": 0,
                     "ignoreHighlightWhenDetectorInsideBounds": 0,
+                    "ignoreHighlightWhenNoLinkedOrActiveObjectives": 0,
+                    "priorityBoxoutTag": "00000000-0000-0000-0000-000000000000",
                     "isObjectOfInterest": 0,
                     "radarProperties": {
                         "SSCRadarContactProperites": {
@@ -1861,7 +1896,11 @@
                             },
                             "crossSectionParams": [],
                             "emissionModifierParams": [],
-                            "scanBounds": []
+                            "deathParams": [],
+                            "scanBounds": [],
+                            "roomParams": {
+                                "ignoreInteriorVsExteriorCheck": 0
+                            }
                         }
                     },
                     "audioParams": [],
@@ -1871,7 +1910,8 @@
                         "x": 0,
                         "y": 0,
                         "z": 0
-                    }
+                    },
+                    "linkedObjectives": []
                 },
                 "SInteractionLinkParams": {
                     "vehicleItemPortInteractionLinks": [],
@@ -1892,6 +1932,7 @@
         "grade": 1,
         "name": "Zenith Laser Sniper Rifle Battery (22 Cap)",
         "tags": "volt_sniper_energy_01",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1905,9 +1946,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Zenith Laser Sniper Rifle Battery (22 Cap)",
             "Description": "Item Type: Battery\\nCapacity: 22\\n\\nThis battery for the Zenith Laser Sniper Rifle holds enough energy for 22 shots.",
+            "DescriptionData": {
+                "Item Type": "Battery",
+                "Capacity": "22"
+            },
+            "DescriptionText": "This battery for the Zenith Laser Sniper Rifle holds enough energy for 22 shots.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "e2787f3b-b892-4276-bb2e-eb2b4dc9666b"
             },
             "Tags": [
                 "volt_sniper_energy_01"
@@ -1966,7 +2013,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "b6205a2d-563c-415d-9e8f-7873283aea8b",
             "__path": "libs/foundry/records/entities/scitem/ships/missile_racks/rsi/mrck_s05_rsi_perseus_torpedo_holder.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -147,16 +152,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": {
                         "SItemPortDef": {
                             "Name": "missile_01_attach",
-                            "DisplayName": "port_NameMissileRackSlot01",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 5,
                             "MaxSize": 5,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -164,6 +173,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -291,6 +301,7 @@
         "grade": 1,
         "name": "RSI Polaris Torpedo Rack",
         "tags": "RSI_Perseus",
+        "required_tags": "RSI_Perseus",
         "manufacturer": "RSI",
         "classification": "Ship.MissileLauncher.MissileRack",
         "stdItem": {
@@ -304,9 +315,16 @@
             "Type": "MissileLauncher.MissileRack",
             "Name": "RSI Polaris Torpedo Rack",
             "Description": "Item Type: Torpedo Rack\\nManufacturer: RSI\\nSize: 10\\nTorpedo: 7xS10 \\n\\nBring the impressive firepower of the Polaris to bear with this bespoke torpedo rack holding seven massive S10 torpedoes.",
+            "DescriptionData": {
+                "Item Type": "Torpedo Rack",
+                "Manufacturer": "RSI",
+                "Size": "10"
+            },
+            "DescriptionText": "Bring the impressive firepower of the Polaris to bear with this bespoke torpedo rack holding seven massive S10 torpedoes.",
             "Manufacturer": {
                 "Code": "RSI",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "093e6eba-93fa-4dad-b3dd-38966934e34e"
             },
             "Tags": [
                 "RSI_Perseus"
@@ -315,8 +333,18 @@
                 {
                     "PortName": "missile_01_attach",
                     "Size": 5,
+                    "MinSize": 5,
+                    "MaxSize": 5,
                     "Types": [
-                        "Missile"
+                        "Missile.Torpedo"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Missile",
+                            "sub_types": [
+                                "Torpedo"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 }

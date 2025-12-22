@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "8fae8721-8de5-4dba-95a1-f21ae265e5eb",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_starfarer_invictus_black.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Starfarer Black Livery",
         "tags": "Paint_Starfarer @Paint_Starfarer_Invictus_Black",
+        "required_tags": "Paint_Starfarer",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Starfarer Black Livery",
             "Description": "Customize your Starfarer with this black chrome livery.",
+            "DescriptionText": "Customize your Starfarer with this black chrome livery.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Ace Astrogation"
+                "Name": "Ace Astrogation",
+                "UUID": "6595f94c-2e2e-436d-a160-63030c498867"
             },
             "Tags": [
                 "Paint_Starfarer",

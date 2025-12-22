@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "4f74e487-6edf-401c-8e49-0735a874cec8",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_scorpius_pirateweek_red_black_skull.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Scorpius Skullcrusher Livery",
         "tags": "Paint_Scorpius @Paint_Scorpius_PirateWeek_Red_Black_Skull",
+        "required_tags": "Paint_Scorpius",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Scorpius Skullcrusher Livery",
             "Description": "Exude attitude with the Skullcrusher livery for the Scorpius, which features a massive skull decal across the top.",
+            "DescriptionText": "Exude attitude with the Skullcrusher livery for the Scorpius, which features a massive skull decal across the top.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "cc90a5f1-42f2-4b83-8501-1919fb3e21c1"
             },
             "Tags": [
                 "Paint_Scorpius",

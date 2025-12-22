@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "034ea1a3-ea95-472d-bc71-3527317a7bea",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_perseus_beige_blue_brown.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -105,6 +110,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -280,6 +290,7 @@
         "grade": 1,
         "name": "@item_NamePerseus_Paint_beige_blue_brown",
         "tags": "Paint_Perseus  @Paint_Perseus_Beige_Blue_Brown",
+        "required_tags": "Paint_Perseus",
         "classification": "Ship.Paints",
         "stdItem": {
             "UUID": "034ea1a3-ea95-472d-bc71-3527317a7bea",
@@ -292,6 +303,12 @@
             "Type": "Paints.UNDEFINED",
             "Name": "@item_NamePerseus_Paint_beige_blue_brown",
             "Description": "@item_DescPerseus_Paint_beige_blue_brown",
+            "DescriptionText": "@item_DescPerseus_Paint_beige_blue_brown",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": {
                 "0": "Paint_Perseus",
                 "2": "@Paint_Perseus_Beige_Blue_Brown"

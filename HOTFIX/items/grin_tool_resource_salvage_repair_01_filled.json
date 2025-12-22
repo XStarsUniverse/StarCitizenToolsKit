@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "100037d0-d9c1-400d-a29a-c2ea3b621753",
             "__path": "libs/foundry/records/entities/scitem/weapons/magazines/grin_tool_resource_salvage_repair_01_filled.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "6c6028af-fcc2-4205-b18c-8e344c629c10"
@@ -177,6 +182,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -499,7 +509,8 @@
                                 },
                                 "penetrationParams": {
                                     "basePenetrationDistance": 0,
-                                    "angle": 0
+                                    "nearRadius": 0.5,
+                                    "farRadius": 5
                                 },
                                 "visualParams": {
                                     "maxLength": 15,
@@ -529,6 +540,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -549,14 +561,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -583,8 +600,8 @@
                     }
                 },
                 "SCItemPurchasableParams": {
-                    "displayName": "Cambio SRT Canister",
-                    "__displayName": "@item_Namegrin_tool_01_salvage_mag",
+                    "displayName": "Cambio SRT Canister (Filled)",
+                    "__displayName": "@item_Namegrin_tool_01_salvage_mag_filled",
                     "displayType": "Magazine",
                     "__displayType": "@item_displayType_Magazine",
                     "displayThumbnail": "",
@@ -633,6 +650,7 @@
                         "z": 1
                     }
                 },
+                "SPersistentComponentParams": [],
                 "SEntityComponentCarryableParams": {
                     "carryInteraction": "Interactable.SharedInteractions[0]",
                     "placeInteraction": "Interactable.SharedInteractions[7]",
@@ -652,6 +670,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes[0].SInteractionStateType.States[0]",
                         "carriedState": "StateTypes[0].SInteractionStateType.States[1]",
@@ -859,7 +878,8 @@
                     "carryableTasks": {
                         "SSequencerMoveToAnimateCarryableTaskParams": {
                             "fragmentId": "Place",
-                            "fragTag": ""
+                            "fragTag": "",
+                            "bForceExactPositioning": 0
                         },
                         "SSequencerBespokeTakeCarryableTaskParams": {
                             "fragmentId": "Take",
@@ -868,7 +888,8 @@
                         "SSequencerBespokePlaceCarryableTaskParams": {
                             "fragmentId": "Place",
                             "fragTag": ""
-                        }
+                        },
+                        "SSequencerFirstSelectCarryableTaskParams": []
                     },
                     "throwableParams": {
                         "reticle": "none",
@@ -1244,6 +1265,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 1,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1401,6 +1424,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1450,6 +1474,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1495,6 +1520,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1515,6 +1541,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1560,6 +1587,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1580,6 +1608,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1635,6 +1664,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1660,6 +1690,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1685,6 +1716,8 @@
                     "fragmentTag": "Carryable",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": {
                         "UsableUseSlot": {
                             "name": "",
@@ -1807,6 +1840,7 @@
                         }
                     },
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [],
                     "views": [],
                     "abilityLocks": [],
@@ -1822,6 +1856,8 @@
                     "isOverridden": 0,
                     "enableDetectionOnItemPort": 0,
                     "ignoreHighlightWhenDetectorInsideBounds": 0,
+                    "ignoreHighlightWhenNoLinkedOrActiveObjectives": 0,
+                    "priorityBoxoutTag": "00000000-0000-0000-0000-000000000000",
                     "isObjectOfInterest": 0,
                     "radarProperties": {
                         "SSCRadarContactProperites": {
@@ -1860,7 +1896,11 @@
                             },
                             "crossSectionParams": [],
                             "emissionModifierParams": [],
-                            "scanBounds": []
+                            "deathParams": [],
+                            "scanBounds": [],
+                            "roomParams": {
+                                "ignoreInteriorVsExteriorCheck": 0
+                            }
                         }
                     },
                     "audioParams": [],
@@ -1870,7 +1910,8 @@
                         "x": 0,
                         "y": 0,
                         "z": 0
-                    }
+                    },
+                    "linkedObjectives": []
                 },
                 "SInteractionLinkParams": {
                     "vehicleItemPortInteractionLinks": [],
@@ -1891,6 +1932,7 @@
         "grade": 1,
         "name": "Cambio SRT Canister",
         "tags": "grin_tool_salvage_01_canister",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -1904,9 +1946,14 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Cambio SRT Canister",
             "Description": "Item Type: RMC Canister (Large)\\n\\nCanister used by the Cambio SRT to store recycle material composite (RMC) reclaimed from scrap. Contents can be sold or used to make repairs.",
+            "DescriptionData": {
+                "Item Type": "RMC Canister (Large)"
+            },
+            "DescriptionText": "Canister used by the Cambio SRT to store recycle material composite (RMC) reclaimed from scrap. Contents can be sold or used to make repairs.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "grin_tool_salvage_01_canister"
@@ -1965,7 +2012,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

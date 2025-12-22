@@ -8,6 +8,11 @@
             "entityDensityClass": "ad1a0441-246c-4b7a-859d-bfa38f91a816",
             "__ref": "233876b6-c5b4-456d-a89b-740109770c35",
             "__path": "libs/foundry/records/entities/scitem/carryables/2h/carryable_2h_cy_toy_plushie_penguin_3_b.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "37ba7ad8-8553-45df-a84b-c49eb6ebb7a6"
@@ -46,6 +51,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -66,14 +72,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -243,6 +254,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 0,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -763,6 +775,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "EntityRoot",
@@ -854,6 +868,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -929,6 +948,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -962,6 +982,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -999,6 +1020,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1019,6 +1041,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1044,6 +1067,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1064,6 +1088,8 @@
                         }
                     }
                 },
+                "SPersistentComponentParams": [],
+                "SubsumptionMissionLinkComponentParams": [],
                 "SCItemPurchasableParams": {
                     "displayName": "Pico the Penguin Plushie",
                     "__displayName": "@item_Nameplushy_penguin_1",
@@ -1122,6 +1148,7 @@
                     "slideThreshold": 0.1,
                     "rollThreshold": 0.1,
                     "momentumScale": 1,
+                    "rollVelocityScale": 1,
                     "useAABBCentre": 0,
                     "oneShotTag": "0d401f6c-38a4-4c52-bb02-26059dd8d98a",
                     "oneShotCooldown": 0.2,
@@ -1172,6 +1199,18 @@
                     "placeTrigger": {
                         "audioTrigger": "Play_PHOB_Sml_Plushy_a_Place"
                     },
+                    "tractorBeamPickupTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "tractorBeamDropTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "detachBreakTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "playerCausedDetachBreakTrigger": {
+                        "audioTrigger": ""
+                    },
                     "rtpcSlideVelocity": {
                         "rtpc": "PhysicalAudio_Velocity"
                     },
@@ -1204,6 +1243,9 @@
                     },
                     "rtpcCarried": {
                         "rtpc": "PhysicalAudio_CarryState"
+                    },
+                    "rtpcSize": {
+                        "rtpc": ""
                     }
                 }
             },
@@ -1221,6 +1263,7 @@
         "grade": 1,
         "name": "Pico the Penguin Party Animal Purple Plushie",
         "tags": "plush",
+        "required_tags": "",
         "manufacturer": "MITE",
         "stdItem": {
             "UUID": "233876b6-c5b4-456d-a89b-740109770c35",
@@ -1233,9 +1276,11 @@
             "Type": "Misc.Personal",
             "Name": "Pico the Penguin Party Animal Purple Plushie",
             "Description": "No one can shred the slopes or celebrate quite like Pico the Penguin. This version of the charming microTech mascot makes any occasion more fun and festive by sporting a vibrant purple jacket and playful party hat.",
+            "DescriptionText": "No one can shred the slopes or celebrate quite like Pico the Penguin. This version of the charming microTech mascot makes any occasion more fun and festive by sporting a vibrant purple jacket and playful party hat.",
             "Manufacturer": {
                 "Code": "MITE",
-                "Name": "Casaba Outlet"
+                "Name": "Casaba Outlet",
+                "UUID": "dcfca4a3-180e-4190-9a7e-820e747e1ad9"
             },
             "Tags": [
                 "plush"
@@ -1244,7 +1289,14 @@
                 "Width": 0.5,
                 "Length": 0.5,
                 "Height": 0.65
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Inspect",
+                "Store"
+            ]
         }
     }
 }

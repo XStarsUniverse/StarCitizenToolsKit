@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "34ca03ed-aaf7-405d-98b8-6cf03cd9165e",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_stinger_silver_grey_teal.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Stinger Insularis Livery",
         "tags": "Paint_Stinger @Paint_Stinger_Silver_Grey_Teal",
+        "required_tags": "Paint_Stinger",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Stinger Insularis Livery",
             "Description": "Silvery gray highlights frame metallic blue wings in the Insularis livery for the Esperia Stinger.",
+            "DescriptionText": "Silvery gray highlights frame metallic blue wings in the Insularis livery for the Esperia Stinger.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "5456737b-79e0-44b9-95ed-ca18d07ced81"
             },
             "Tags": [
                 "Paint_Stinger",

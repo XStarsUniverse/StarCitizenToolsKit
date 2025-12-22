@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "34441b1a-33dc-4e66-9fbc-551e58265bd1",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_starfarer_invictus_camo.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Starfarer Storm Surge Livery",
         "tags": "Paint_Starfarer @Paint_Starfarer_Invictus_Camo",
+        "required_tags": "Paint_Starfarer",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Starfarer Storm Surge Livery",
             "Description": "Customize your Starfarer with this fragmented blue livery.",
+            "DescriptionText": "Customize your Starfarer with this fragmented blue livery.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Ace Astrogation"
+                "Name": "Ace Astrogation",
+                "UUID": "732de86d-5622-498b-a49e-ff2f07b39331"
             },
             "Tags": [
                 "Paint_Starfarer",

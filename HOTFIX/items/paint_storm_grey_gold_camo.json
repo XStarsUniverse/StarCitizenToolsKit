@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "c3f4df2e-b978-47e9-b56c-7a27773d733b",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_storm_grey_gold_camo.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Storm GCD-Army Livery",
         "tags": "Paint_Storm @Paint_Storm_Grey_Gold_Camo",
+        "required_tags": "Paint_Storm",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Storm GCD-Army Livery",
             "Description": "In honor of the soldiers who protect the Empire, Tumbril crafted this limited-edition GCD-Army livery for the Storm. The golden seal of the UEE army and gold highlights stand out against the grey camo base paint.",
+            "DescriptionText": "In honor of the soldiers who protect the Empire, Tumbril crafted this limited-edition GCD-Army livery for the Storm. The golden seal of the UEE army and gold highlights stand out against the grey camo base paint.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Tumbril Land Systems"
+                "Name": "Tumbril Land Systems",
+                "UUID": "2b135030-f217-4830-8600-06d3d384381c"
             },
             "Tags": [
                 "Paint_Storm",

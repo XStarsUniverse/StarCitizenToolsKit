@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "dced07ce-cb72-4cad-865a-0e4a6bdf64c1",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_perseus_grey_blue_red.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -103,6 +108,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -278,6 +288,7 @@
         "grade": 1,
         "name": "Perseus Resilient Livery",
         "tags": "Paint_Perseus @Paint_Perseus_Grey_Blue_Red",
+        "required_tags": "Paint_Perseus",
         "classification": "Ship.Paints",
         "stdItem": {
             "UUID": "dced07ce-cb72-4cad-865a-0e4a6bdf64c1",
@@ -290,6 +301,12 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Perseus Resilient Livery",
             "Description": "The Resilient livery for the Perseus elegantly mixes grey and blue with red highlights.",
+            "DescriptionText": "The Resilient livery for the Perseus elegantly mixes grey and blue with red highlights.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Paint_Perseus",
                 "@Paint_Perseus_Grey_Blue_Red"

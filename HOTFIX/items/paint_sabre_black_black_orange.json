@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "82198d1d-47ab-4404-8f62-f63049289b07",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_sabre_black_black_orange.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Sabre Harvest Livery",
         "tags": "AEGS_Sabre_Base Sabre_Paint Paint_Sabre @Paint_Sabre_Black_Black_Orange",
+        "required_tags": "Paint_Sabre",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Sabre Harvest Livery",
             "Description": "The Harvest livery for the Sabre features orange highlights that stand in bold contrast to the black base paint.",
+            "DescriptionText": "The Harvest livery for the Sabre features orange highlights that stand in bold contrast to the black base paint.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "c0e72286-a591-4c80-ab13-b40223e3759a"
             },
             "Tags": [
                 "AEGS_Sabre_Base",

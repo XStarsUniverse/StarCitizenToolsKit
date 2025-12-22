@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "2ea2b311-ec4a-479f-9540-8dc07277b221",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_starlancer_blue_black_white.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Starlancer Snowcap Livery",
         "tags": "Paint_Starlancer @Paint_Starlancer_Blue_Black_White",
+        "required_tags": "Paint_Starlancer",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Starlancer Snowcap Livery",
             "Description": "The dynamic stylings of the Snowcap livery gives the Starlancer a white front with a crisp shift to black in the back.",
+            "DescriptionText": "The dynamic stylings of the Snowcap livery gives the Starlancer a white front with a crisp shift to black in the back.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "99dc08db-37b5-48c7-88c8-0a3d78d9f425"
             },
             "Tags": [
                 "Paint_Starlancer",

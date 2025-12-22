@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "f32a2b7f-649d-416f-897a-8dcf479a45e9",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_spirit_bis2954.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Spirit 2954 Best in Show Livery",
         "tags": "Paint_Spirit @Paint_Spirit_BIS2954",
+        "required_tags": "Paint_Spirit",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Spirit 2954 Best in Show Livery",
             "Description": "This purple and white 2954 Best in Show Livery celebrates the Spirit making it to the finals of the 2954 Ship Showdown.",
+            "DescriptionText": "This purple and white 2954 Best in Show Livery celebrates the Spirit making it to the finals of the 2954 Ship Showdown.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "0a345218-0201-4da9-aca7-ddbcff0730de"
             },
             "Tags": [
                 "Paint_Spirit",

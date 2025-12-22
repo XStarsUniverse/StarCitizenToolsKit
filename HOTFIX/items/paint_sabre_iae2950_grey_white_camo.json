@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "ce0a3a9f-c3d7-45dd-8d05-ed869ae1c131",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_sabre_iae2950_grey_white_camo.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Sabre Polar Camo Livery",
         "tags": "AEGS_Sabre_Base Sabre_Paint Paint_Sabre @Paint_Sabre_IAE2950_Grey_White_Camo",
+        "required_tags": "Paint_Sabre",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Sabre Polar Camo Livery",
             "Description": "Modify your Sabre with this white and grey camo livery specifically designed for the 2950 IAE event on microTech.",
+            "DescriptionText": "Modify your Sabre with this white and grey camo livery specifically designed for the 2950 IAE event on microTech.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "11393dcd-0b9b-4c4c-a1dc-3676e2133e48"
             },
             "Tags": [
                 "AEGS_Sabre_Base",

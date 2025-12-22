@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "9f08c0ec-5e54-4bf6-a32d-5fc103459a3e",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_paladin_cream_yellow_green.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -35,7 +40,7 @@
                             "__Name": "@item_NamePaladin_Paint_Cream_Yellow_Green",
                             "ShortName": "",
                             "__ShortName": "@LOC_EMPTY",
-                            "Description": "Showcasing the Paladin?s powerful design, the wild greens, beige, and yellow of the Solaris livery demonstrate that this is not a ship to be trifled with.",
+                            "Description": "Showcasing the Paladin's powerful design, the wild greens, beige, and yellow of the Solaris livery demonstrate that this is not a ship to be trifled with.",
                             "__Description": "@item_DescPaladin_Paint_Cream_Yellow_Green",
                             "displayFeatures": {
                                 "LogoSimplifiedWhite": "",
@@ -60,7 +65,7 @@
                                 "Locale": "english",
                                 "Name": "Paladin Solaris Livery",
                                 "ShortName": "",
-                                "Description": "Showcasing the Paladin?s powerful design, the wild greens, beige, and yellow of the Solaris livery demonstrate that this is not a ship to be trifled with."
+                                "Description": "Showcasing the Paladin's powerful design, the wild greens, beige, and yellow of the Solaris livery demonstrate that this is not a ship to be trifled with."
                             }
                         },
                         "mannequinTags": {
@@ -103,6 +108,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -278,6 +288,7 @@
         "grade": 1,
         "name": "Paladin Solaris Livery",
         "tags": "Paint_Paladin @Paint_Paladin_Cream_Yellow_Green",
+        "required_tags": "Paint_Paladin",
         "classification": "Ship.Paints",
         "stdItem": {
             "UUID": "9f08c0ec-5e54-4bf6-a32d-5fc103459a3e",
@@ -289,7 +300,13 @@
             "Length": 0.4,
             "Type": "Paints.UNDEFINED",
             "Name": "Paladin Solaris Livery",
-            "Description": "Showcasing the Paladin?s powerful design, the wild greens, beige, and yellow of the Solaris livery demonstrate that this is not a ship to be trifled with.",
+            "Description": "Showcasing the Paladin's powerful design, the wild greens, beige, and yellow of the Solaris livery demonstrate that this is not a ship to be trifled with.",
+            "DescriptionText": "Showcasing the Paladin's powerful design, the wild greens, beige, and yellow of the Solaris livery demonstrate that this is not a ship to be trifled with.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Paint_Paladin",
                 "@Paint_Paladin_Cream_Yellow_Green"

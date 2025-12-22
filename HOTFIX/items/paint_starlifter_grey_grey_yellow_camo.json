@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "47b1c5dd-b7bb-46a5-9397-8289ed6cdfca",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_starlifter_grey_grey_yellow_camo.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Hercules Starlifter Deadlock Camo Livery",
         "tags": "Paint_Starlifter @Paint_Starlifter_Grey_Grey_Yellow_Camo",
+        "required_tags": "Paint_Starlifter",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Hercules Starlifter Deadlock Camo Livery",
             "Description": "Disguise the silhouette of the Hercules Starlifter with the Deadlock Camo livery, featuring a grey camo pattern with yellow highlights.",
+            "DescriptionText": "Disguise the silhouette of the Hercules Starlifter with the Deadlock Camo livery, featuring a grey camo pattern with yellow highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "889542c3-e578-4c3a-8284-e1c904171f64"
             },
             "Tags": [
                 "Paint_Starlifter",

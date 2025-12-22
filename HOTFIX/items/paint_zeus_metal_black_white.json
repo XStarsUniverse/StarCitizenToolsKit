@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "cb3c6f8d-a856-4c65-86c0-7fa9271a5cfa",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_zeus_metal_black_white.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Zeus Mk II Obsidian Livery",
         "tags": "Paint_Zeus @Paint_Zeus_Metal_Black_White",
+        "required_tags": "Paint_Zeus",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Zeus Mk II Obsidian Livery",
             "Description": "The Obsidian livery uses black, white, and a metallic finish to give the Zeus Mk II a distinctly bold look.",
+            "DescriptionText": "The Obsidian livery uses black, white, and a metallic finish to give the Zeus Mk II a distinctly bold look.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "f541caa7-0ef7-4ce5-b5f3-66760ce75004"
             },
             "Tags": [
                 "Paint_Zeus",

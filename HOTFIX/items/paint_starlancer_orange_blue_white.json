@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "6c430487-c74b-4cc7-8016-ace36e1720b1",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_starlancer_orange_blue_white.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Starlancer Wildcat Livery",
         "tags": "Paint_Starlancer @Paint_Starlancer_Orange_Blue_White",
+        "required_tags": "Paint_Starlancer",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Starlancer Wildcat Livery",
             "Description": "The Wildcat livery divides the Starlancer between being orange in front and black in back.",
+            "DescriptionText": "The Wildcat livery divides the Starlancer between being orange in front and black in back.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "9b3a4fea-083b-422b-85af-21147acc1a16"
             },
             "Tags": [
                 "Paint_Starlancer",

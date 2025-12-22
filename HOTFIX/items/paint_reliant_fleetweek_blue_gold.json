@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "105ad697-b26d-4084-80f8-0349bce79ea2",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_reliant_fleetweek_blue_gold.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Reliant Invictus Blue and Gold Livery",
         "tags": "MISC_Reliant_Base Paint_Reliant @Paint_Reliant_FW_Blue_Gold",
+        "required_tags": "Paint_Reliant",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Reliant Invictus Blue and Gold Livery",
             "Description": "Featuring a vibrant blue base color and gold highlights, the Invictus Blue and Gold livery will give your Reliant a striking style.",
+            "DescriptionText": "Featuring a vibrant blue base color and gold highlights, the Invictus Blue and Gold livery will give your Reliant a striking style.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Musashi Industrial & Starflight Concern"
+                "Name": "Musashi Industrial & Starflight Concern",
+                "UUID": "cbba3cd2-bd12-4562-b594-cdc8b03f0eca"
             },
             "Tags": [
                 "MISC_Reliant_Base",

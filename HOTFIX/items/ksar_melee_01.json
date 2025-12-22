@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "ea692f4b-0545-4f0b-8d4f-05f41fa1e876",
             "__path": "libs/foundry/records/entities/scitem/weapons/melee/ksar_melee_01.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "01e3aa70-377e-49df-911f-21bf56bf2ad4"
@@ -46,6 +51,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -66,14 +72,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -243,6 +254,7 @@
                     "interactionPointToMoveOnEquip": "Interactable.InteractionPoints",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -739,6 +751,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 1,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -874,6 +888,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -1142,6 +1161,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1191,6 +1211,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1240,6 +1261,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1260,6 +1282,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1309,6 +1332,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": {
@@ -1333,6 +1357,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1353,6 +1378,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1406,6 +1432,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1435,6 +1462,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1472,6 +1500,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1508,6 +1537,7 @@
                         }
                     }
                 },
+                "SPersistentComponentParams": [],
                 "SARDataComponentParams": {
                     "dataType": "ShopItem",
                     "rangeMin": 1,
@@ -1689,6 +1719,8 @@
                     "fragmentTag": "Carryable",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": {
                         "UsableUseSlot": {
                             "name": "",
@@ -1811,6 +1843,7 @@
                         }
                     },
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [],
                     "views": [],
                     "abilityLocks": [],
@@ -1847,6 +1880,8 @@
                     "isOverridden": 0,
                     "enableDetectionOnItemPort": 0,
                     "ignoreHighlightWhenDetectorInsideBounds": 0,
+                    "ignoreHighlightWhenNoLinkedOrActiveObjectives": 0,
+                    "priorityBoxoutTag": "00000000-0000-0000-0000-000000000000",
                     "isObjectOfInterest": 0,
                     "radarProperties": {
                         "SSCRadarContactProperites": {
@@ -1885,7 +1920,11 @@
                             },
                             "crossSectionParams": [],
                             "emissionModifierParams": [],
-                            "scanBounds": []
+                            "deathParams": [],
+                            "scanBounds": [],
+                            "roomParams": {
+                                "ignoreInteriorVsExteriorCheck": 0
+                            }
                         }
                     },
                     "audioParams": [],
@@ -1895,7 +1934,8 @@
                         "x": 0,
                         "y": 0,
                         "z": 0
-                    }
+                    },
+                    "linkedObjectives": []
                 }
             },
             "ClassName": "ksar_melee_01",
@@ -1912,6 +1952,7 @@
         "grade": 1,
         "name": "Sawtooth Combat Knife",
         "tags": "knife",
+        "required_tags": "",
         "manufacturer": "KSAR",
         "classification": "FPS.Weapon.Knife",
         "stdItem": {
@@ -1925,9 +1966,17 @@
             "Type": "WeaponPersonal.Knife",
             "Name": "Sawtooth Combat Knife",
             "Description": "Manufacturer: Kastak Arms\\nItem Type: Knife\\nClass: Melee\\n\\nSize: 16 cm\\n\\nDon't end up on the wrong side of the Sawtooth combat knife. The blade embodies Kastak Arms' aggressive styling and was designed to stab, slice, or saw. It features a strong tip for piercing, a straight edge for slicing, and a unique serrated edge with microblades for when you really need to rip through something. The blade is also made with a special ceramic polymer coating that enhances its strength and overall wear resistance.",
+            "DescriptionData": {
+                "Manufacturer": "Kastak Arms",
+                "Item Type": "Knife",
+                "Class": "Melee",
+                "Size": "16 cm"
+            },
+            "DescriptionText": "Don't end up on the wrong side of the Sawtooth combat knife. The blade embodies Kastak Arms' aggressive styling and was designed to stab, slice, or saw. It features a strong tip for piercing, a straight edge for slicing, and a unique serrated edge with microblades for when you really need to rip through something. The blade is also made with a special ceramic polymer coating that enhances its strength and overall wear resistance.",
             "Manufacturer": {
                 "Code": "KSAR",
-                "Name": "Kastak Arms"
+                "Name": "Kastak Arms",
+                "UUID": "709e8255-a0b1-4c5e-8b0e-28781be25984"
             },
             "Tags": [
                 "knife"
@@ -1937,6 +1986,20 @@
                 "Length": 0.5,
                 "Height": 0.5
             },
+            "Interactions": [
+                "Holdready",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Vendorinspect",
+                "Vendorreturn",
+                "Vendorkeep"
+            ],
             "MeleeWeapon": {
                 "canBeUsedForTakeDown": 1,
                 "canBlock": 1,

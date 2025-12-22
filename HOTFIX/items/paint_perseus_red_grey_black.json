@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "44aacee2-1c5d-40bd-bf73-b11c95e047b9",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_perseus_red_grey_black.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -103,6 +108,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -278,6 +288,7 @@
         "grade": 1,
         "name": "Perseus Incite Livery",
         "tags": "Paint_Perseus @Paint_Perseus_Red_Grey_Black",
+        "required_tags": "Paint_Perseus",
         "classification": "Ship.Paints",
         "stdItem": {
             "UUID": "44aacee2-1c5d-40bd-bf73-b11c95e047b9",
@@ -290,6 +301,12 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Perseus Incite Livery",
             "Description": "Proclaim the presence of the Perseus with the Incite livery, featuring a bold red front and grey and black rear.",
+            "DescriptionText": "Proclaim the presence of the Perseus with the Incite livery, featuring a bold red front and grey and black rear.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Paint_Perseus",
                 "@Paint_Perseus_Red_Grey_Black"

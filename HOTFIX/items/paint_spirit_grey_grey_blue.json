@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "7c4831e3-c964-4f95-8983-bc2b5c07be81",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_spirit_grey_grey_blue.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Spirit Resolute Livery",
         "tags": "Paint_Spirit @Paint_Spirit_Grey_Grey_Blue",
+        "required_tags": "Paint_Spirit",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Spirit Resolute Livery",
             "Description": "With a dual tone grey body and steel blue trim, this subtle livery will ensure you Crusader Spirit is worth a second look.",
+            "DescriptionText": "With a dual tone grey body and steel blue trim, this subtle livery will ensure you Crusader Spirit is worth a second look.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "360f9f73-a7ba-4a27-bfb3-f661cb6c745b"
             },
             "Tags": [
                 "Paint_Spirit",

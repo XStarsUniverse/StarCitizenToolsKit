@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "f171609e-962c-482f-93b4-1752b36c39fb",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_prowler_icysilver_titanium_titanium.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Prowler Elysian Livery",
         "tags": "Paint_Prowler @Paint_Prowler_IcySilver_Titanium_Titanium",
+        "required_tags": "Paint_Prowler",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Prowler Elysian Livery",
             "Description": "Beautiful blues swirl together with the Elysian livery to bring a truly special look to the Prowler.",
+            "DescriptionText": "Beautiful blues swirl together with the Elysian livery to bring a truly special look to the Prowler.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Esperia"
+                "Name": "Esperia",
+                "UUID": "1faf4ac3-9160-4d59-a315-99a5ba85f691"
             },
             "Tags": [
                 "Paint_Prowler",

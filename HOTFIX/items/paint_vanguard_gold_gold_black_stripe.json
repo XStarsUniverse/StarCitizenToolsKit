@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "6e27e43c-d5df-4012-9de5-ce101ef83c43",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_vanguard_gold_gold_black_stripe.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Vanguard New Dawn Livery",
         "tags": "Paint_Vanguard @Paint_Vanguard_Gold_Gold_Black_Stripe",
+        "required_tags": "Paint_Vanguard",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Vanguard New Dawn Livery",
             "Description": "Proudly proclaim that your Vanguard is a predator with the New Dawn livery. Inspired by the patterns seen in nature, this livery mixes orange and gold with black stripes for a supremely unique look.",
+            "DescriptionText": "Proudly proclaim that your Vanguard is a predator with the New Dawn livery. Inspired by the patterns seen in nature, this livery mixes orange and gold with black stripes for a supremely unique look.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "e58c1ecb-441b-46dd-88c7-7088e269b361"
             },
             "Tags": [
                 "Paint_Vanguard",

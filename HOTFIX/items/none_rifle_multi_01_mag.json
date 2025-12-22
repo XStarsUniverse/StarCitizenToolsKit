@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "c40b7e8e-0f04-43d7-ac3a-7ffb8df071d8",
             "__path": "libs/foundry/records/entities/scitem/weapons/magazines/none_rifle_multi_01_mag.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "6c6028af-fcc2-4205-b18c-8e344c629c10"
@@ -171,6 +176,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -493,7 +503,8 @@
                                 },
                                 "penetrationParams": {
                                     "basePenetrationDistance": 0,
-                                    "angle": 0
+                                    "nearRadius": 0.5,
+                                    "farRadius": 5
                                 },
                                 "visualParams": {
                                     "maxLength": 1,
@@ -675,7 +686,8 @@
                                 },
                                 "penetrationParams": {
                                     "basePenetrationDistance": 0,
-                                    "angle": 0
+                                    "nearRadius": 0.5,
+                                    "farRadius": 5
                                 },
                                 "visualParams": {
                                     "maxLength": 15,
@@ -705,6 +717,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -725,14 +738,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -809,6 +827,7 @@
                         "z": 1
                     }
                 },
+                "SPersistentComponentParams": [],
                 "SEntityComponentCarryableParams": {
                     "carryInteraction": "Interactable.SharedInteractions[0]",
                     "placeInteraction": "Interactable.SharedInteractions[7]",
@@ -828,6 +847,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes[0].SInteractionStateType.States[0]",
                         "carriedState": "StateTypes[0].SInteractionStateType.States[1]",
@@ -1035,7 +1055,8 @@
                     "carryableTasks": {
                         "SSequencerMoveToAnimateCarryableTaskParams": {
                             "fragmentId": "Place",
-                            "fragTag": ""
+                            "fragTag": "",
+                            "bForceExactPositioning": 0
                         },
                         "SSequencerBespokeTakeCarryableTaskParams": {
                             "fragmentId": "Take",
@@ -1044,7 +1065,8 @@
                         "SSequencerBespokePlaceCarryableTaskParams": {
                             "fragmentId": "Place",
                             "fragTag": ""
-                        }
+                        },
+                        "SSequencerFirstSelectCarryableTaskParams": []
                     },
                     "throwableParams": {
                         "reticle": "none",
@@ -1420,6 +1442,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 1,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1577,6 +1601,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1626,6 +1651,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1671,6 +1697,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1691,6 +1718,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1736,6 +1764,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1756,6 +1785,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1811,6 +1841,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1836,6 +1867,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -1861,6 +1893,8 @@
                     "fragmentTag": "Carryable",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": {
                         "UsableUseSlot": {
                             "name": "",
@@ -1983,6 +2017,7 @@
                         }
                     },
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [],
                     "views": [],
                     "abilityLocks": [],
@@ -1998,6 +2033,8 @@
                     "isOverridden": 0,
                     "enableDetectionOnItemPort": 0,
                     "ignoreHighlightWhenDetectorInsideBounds": 0,
+                    "ignoreHighlightWhenNoLinkedOrActiveObjectives": 0,
+                    "priorityBoxoutTag": "00000000-0000-0000-0000-000000000000",
                     "isObjectOfInterest": 0,
                     "radarProperties": {
                         "SSCRadarContactProperites": {
@@ -2036,7 +2073,11 @@
                             },
                             "crossSectionParams": [],
                             "emissionModifierParams": [],
-                            "scanBounds": []
+                            "deathParams": [],
+                            "scanBounds": [],
+                            "roomParams": {
+                                "ignoreInteriorVsExteriorCheck": 0
+                            }
                         }
                     },
                     "audioParams": [],
@@ -2046,7 +2087,8 @@
                         "x": 0,
                         "y": 0,
                         "z": 0
-                    }
+                    },
+                    "linkedObjectives": []
                 },
                 "SInteractionLinkParams": {
                     "vehicleItemPortInteractionLinks": [],
@@ -2067,6 +2109,7 @@
         "grade": 1,
         "name": "Killshot Rifle Magazine (45 Cap)",
         "tags": "none_rifle_multi_01",
+        "required_tags": "",
         "manufacturer": "UNKN",
         "classification": "FPS.WeaponAttachment.Magazine",
         "stdItem": {
@@ -2080,9 +2123,15 @@
             "Type": "WeaponAttachment.Magazine",
             "Name": "Killshot Rifle Magazine (45 Cap)",
             "Description": "Item Type: Magazine\\nCapacity: 45\\n\\nThis magazine for the Killshot rifle comes pre-loaded with forty-five rounds.",
+            "DescriptionData": {
+                "Item Type": "Magazine",
+                "Capacity": "45"
+            },
+            "DescriptionText": "This magazine for the Killshot rifle comes pre-loaded with forty-five rounds.",
             "Manufacturer": {
                 "Code": "UNKN",
-                "Name": "Unknown"
+                "Name": "Unknown",
+                "UUID": "587a3cae-5e66-4f22-b0fc-1a47d41cafef"
             },
             "Tags": [
                 "none_rifle_multi_01"
@@ -2141,7 +2190,18 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Equiptosuit",
+                "Offhandequiptosuit",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Swapammomag"
+            ]
         }
     }
 }

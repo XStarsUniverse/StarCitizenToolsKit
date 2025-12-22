@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "28ec05bc-52c1-445e-91a3-c4025be63ad1",
             "__path": "libs/foundry/records/entities/scitem/ships/controller/controller_flight_xnaa_santokyai.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "68b3fe59-d53f-4e20-8c82-92dca83846ad"
@@ -943,9 +948,6 @@
                             "stallSpeedModifier": 1,
                             "thrusterControlSurfaceMixRatioLerpTime": 0.5,
                             "hoverMaxRange": 20,
-                            "pitchAnimationVariable": "pitchDeflection",
-                            "yawAnimationVariable": "yawDeflection",
-                            "rollAnimationVariable": "rollDeflection",
                             "dampingTorqueDerivative": {
                                 "x": 50000,
                                 "y": 22000,
@@ -1269,6 +1271,15 @@
                                 "x": 0,
                                 "y": 0,
                                 "z": 0
+                            },
+                            "surfaceAnimations": {
+                                "pitchVariable": "pitchDeflection",
+                                "yawVariable": "yawDeflection",
+                                "rollVariable": "rollDeflection",
+                                "pitchAddRollVariable": "pitchAddRollDeflection",
+                                "pitchMinusRollVariable": "pitchMinusRollDeflection",
+                                "pitchAddYawVariable": "pitchAddYawDeflection",
+                                "pitchMinusYawVariable": "pitchMinusYawDeflection"
                             },
                             "turbulence": {
                                 "groundTurbulenceAmplitude": 0.4,
@@ -1944,8 +1955,8 @@
                     "forceOn": 0,
                     "asopSpawnState": "Off",
                     "throttleParams": {
-                        "ItemPowerSegmentThrottleParams": {
-                            "default": 4
+                        "ItemPowerSimpleSegmentThrottleParams": {
+                            "defaultFull": 0
                         }
                     },
                     "masterModeExclusionsOverride": []
@@ -1995,20 +2006,43 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "SEntityTraversingTreeParams": {
                     "TraversingNodes": {
                         "SEntityTraversingNodeBase": {
                             "name": "XNAA_SanTokYai",
                             "id": [],
-                            "entityTraversingType": [],
+                            "entityTraversingType": {
+                                "SEntityTraversingNodeTypeParentEntity": []
+                            },
                             "executeNodes": [],
                             "nextNodes": []
                         }
@@ -2030,6 +2064,7 @@
         "grade": 1,
         "name": "Flight Blade",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "28ec05bc-52c1-445e-91a3-c4025be63ad1",
             "ClassName": "Controller_Flight_XNAA_SanTokYai",
@@ -2041,6 +2076,12 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Flight Blade",
             "Description": "",
+            "DescriptionText": "",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
@@ -2079,6 +2120,43 @@
                     "CapacitorRegenDelayAfterUse": 0.5,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist",
+                "Shiptransformcycle",
+                "Shiptransformretract",
+                "Shiptransformdeploy"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

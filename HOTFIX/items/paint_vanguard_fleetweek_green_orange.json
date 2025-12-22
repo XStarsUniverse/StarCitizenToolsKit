@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "726f9f92-e050-4879-b3b8-15de487a256b",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_vanguard_fleetweek_green_orange.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Vanguard Timberline Livery",
         "tags": "Paint_Vanguard @Paint_Vanguard_FW_Green_Orange",
+        "required_tags": "Paint_Vanguard",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Vanguard Timberline Livery",
             "Description": "Customize your Vanguard with the Timberline livery that's olive green with orange accents.",
+            "DescriptionText": "Customize your Vanguard with the Timberline livery that's olive green with orange accents.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "c9ed498b-7440-4920-bf1d-01567e5429db"
             },
             "Tags": [
                 "Paint_Vanguard",

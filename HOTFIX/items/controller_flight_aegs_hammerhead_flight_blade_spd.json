@@ -8,12 +8,17 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "356013cd-1a32-4947-8ee4-4d123549ad6d",
             "__path": "libs/foundry/records/entities/scitem/ships/controller/controller_flight_aegs_hammerhead_flight_blade_spd.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "68b3fe59-d53f-4e20-8c82-92dca83846ad"
                 },
                 {
-                    "value": "b285311b-1f68-4a69-b73f-1295e83a3909"
+                    "value": "9a46e2f3-6651-4283-8447-c01e6dd778e8"
                 },
                 {
                     "value": "bed8e09b-a5f2-4f4e-9be9-ab618ebfbd58"
@@ -515,19 +520,19 @@
                     "speedProfile": {
                         "angularVelocityLimiter": "Ellipsoid",
                         "positiveLinearTimeToFullSpeed": {
-                            "x": 3,
-                            "y": 3,
-                            "z": 3
+                            "x": 4,
+                            "y": 4,
+                            "z": 4
                         },
                         "negativeLinearTimeToFullSpeed": {
-                            "x": 3,
-                            "y": 3,
-                            "z": 3
+                            "x": 4,
+                            "y": 4,
+                            "z": 4
                         },
                         "angularVelocity": {
-                            "x": 60,
-                            "y": 200,
-                            "z": 60
+                            "x": 25,
+                            "y": 60,
+                            "z": 25
                         },
                         "proximityAssist": {
                             "activationTime": 1.5,
@@ -796,28 +801,28 @@
                         }
                     },
                     "jerkProfile": {
-                        "linAccelerationDecay": 3,
-                        "angAccelerationDecay": 12,
+                        "linAccelerationDecay": 2,
+                        "angAccelerationDecay": 2,
                         "linJerkTime": {
-                            "x": 0.5,
-                            "y": 0.5,
-                            "z": 0.5
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
                         },
                         "angJerkTime": {
-                            "x": 0.15,
-                            "y": 0.15,
-                            "z": 0.15
+                            "x": 0.75,
+                            "y": 0.75,
+                            "z": 0.75
                         }
                     },
                     "accelerationData": {
                         "angularAccelerationLimiter": "PerAxis",
                         "positiveLinearScale": {
-                            "x": 1,
+                            "x": 1.98,
                             "y": 1,
                             "z": 1
                         },
                         "negativeLinearScale": {
-                            "x": 1,
+                            "x": 1.98,
                             "y": 1,
                             "z": 1
                         },
@@ -851,14 +856,14 @@
                             ]
                         },
                         "positiveAngularScale": {
-                            "x": 1,
-                            "y": 1,
-                            "z": 1
+                            "x": 0.336,
+                            "y": 0.4,
+                            "z": 0.5
                         },
                         "negativeAngularScale": {
-                            "x": 1,
-                            "y": 1,
-                            "z": 1
+                            "x": 0.44,
+                            "y": 0.4,
+                            "z": 0.5
                         },
                         "angularThrustPowerAssignmentModifier": {
                             "useLUT": 0,
@@ -926,9 +931,6 @@
                             "stallSpeedModifier": 1,
                             "thrusterControlSurfaceMixRatioLerpTime": 0.5,
                             "hoverMaxRange": 20,
-                            "pitchAnimationVariable": "pitchDeflection",
-                            "yawAnimationVariable": "yawDeflection",
-                            "rollAnimationVariable": "rollDeflection",
                             "dampingTorqueDerivative": {
                                 "x": 50000,
                                 "y": 22000,
@@ -1253,6 +1255,15 @@
                                 "y": 0,
                                 "z": 0
                             },
+                            "surfaceAnimations": {
+                                "pitchVariable": "pitchDeflection",
+                                "yawVariable": "yawDeflection",
+                                "rollVariable": "rollDeflection",
+                                "pitchAddRollVariable": "pitchAddRollDeflection",
+                                "pitchMinusRollVariable": "pitchMinusRollDeflection",
+                                "pitchAddYawVariable": "pitchAddYawDeflection",
+                                "pitchMinusYawVariable": "pitchMinusYawDeflection"
+                            },
                             "turbulence": {
                                 "groundTurbulenceAmplitude": 0.4,
                                 "groundTurbulenceAltitudeMin": 20,
@@ -1297,14 +1308,14 @@
                         "capacitorAssignmentInputOutputRegenNavMode": "f381647d-1e21-4dd2-b63b-567f012deeda",
                         "capacitorAssignmentInputOutputUsage": "822703ac-f458-433e-af38-352232852175",
                         "afterburnAccelMultiplierPositive": {
-                            "x": 1.35,
-                            "y": 1.5,
-                            "z": 1.35
+                            "x": 1.2,
+                            "y": 1.2,
+                            "z": 1.2
                         },
                         "afterburnAccelMultiplierNegative": {
-                            "x": 1.35,
+                            "x": 1.2,
                             "y": 1.2,
-                            "z": 1.35
+                            "z": 1.2
                         },
                         "afterburnLinTimeToFullAccelerationMultiplier": {
                             "x": 1,
@@ -1991,8 +2002,8 @@
                     "forceOn": 0,
                     "asopSpawnState": "Off",
                     "throttleParams": {
-                        "ItemPowerSegmentThrottleParams": {
-                            "default": 4
+                        "ItemPowerSimpleSegmentThrottleParams": {
+                            "defaultFull": 0
                         }
                     },
                     "masterModeExclusionsOverride": []
@@ -2042,19 +2053,45 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "SGeometryResourceParams": {
                     "cacheResources": 0,
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -2126,6 +2163,7 @@
         "grade": 1,
         "name": "Hammerhead TSB Flight Blade",
         "tags": "AEGS_Hammerhead_Blade",
+        "required_tags": "AEGS_Hammerhead_Blade",
         "manufacturer": "BRRA",
         "stdItem": {
             "UUID": "356013cd-1a32-4947-8ee4-4d123549ad6d",
@@ -2138,9 +2176,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Hammerhead TSB Flight Blade",
             "Description": "Manufacturer: Broad & Rabiee\\nType: Flight Blade\\n\\nUnlock the potential of your Aegis Hammerhead with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
+            "DescriptionData": {
+                "Manufacturer": "Broad & Rabiee",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "Unlock the potential of your Aegis Hammerhead with the TSB Flight Blade from Broad & Rabiee. By re-allocating lateral thrust resources, you can expect your ship deliver increased top speeds in the straightaway.",
             "Manufacturer": {
                 "Code": "BRRA",
-                "Name": "Broad & Rabiee"
+                "Name": "Broad & Rabiee",
+                "UUID": "ad865899-f5ba-4818-ae8c-fe80a55108b7"
             },
             "Tags": [
                 "AEGS_Hammerhead_Blade"
@@ -2183,6 +2227,40 @@
                     "CapacitorRegenDelayAfterUse": 1.1,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 8,
+                                "MinimumFraction": 0.125
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

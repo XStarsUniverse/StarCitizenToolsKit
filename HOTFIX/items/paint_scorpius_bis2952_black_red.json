@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "794db369-7918-4dc8-bf3c-a6a5d0e474ea",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_scorpius_bis2952_black_red.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Scorpius Red Alert Livery",
         "tags": "Paint_Scorpius @Paint_Scorpius_BIS2952_Black_Red",
+        "required_tags": "Paint_Scorpius",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Scorpius Red Alert Livery",
             "Description": "Embody the furious firepower of the Scorpius with the metallic red and black look of the Red Alert livery.",
+            "DescriptionText": "Embody the furious firepower of the Scorpius with the metallic red and black look of the Red Alert livery.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "14c55160-d02d-4e16-877e-f32d23792e40"
             },
             "Tags": [
                 "Paint_Scorpius",

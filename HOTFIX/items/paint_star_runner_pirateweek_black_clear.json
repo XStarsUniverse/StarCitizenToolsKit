@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "26932086-0a8f-4a38-b357-a254ca2e09c8",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_star_runner_pirateweek_black_clear.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Mercury Star Runner Meridian Livery",
         "tags": "Paint_Star_Runner @Paint_Star_Runner_PirateWeek_Black_Clear",
+        "required_tags": "Paint_Star_Runner",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Mercury Star Runner Meridian Livery",
             "Description": "The Meridian livery gives the Mercury Star Runner a simple yet stylish metallic silver finish.",
+            "DescriptionText": "The Meridian livery gives the Mercury Star Runner a simple yet stylish metallic silver finish.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "855b18f6-0e99-496a-a3f9-d333c98d7c5d"
             },
             "Tags": [
                 "Paint_Star_Runner",

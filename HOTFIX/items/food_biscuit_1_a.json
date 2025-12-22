@@ -8,6 +8,11 @@
             "entityDensityClass": "ad1a0441-246c-4b7a-859d-bfa38f91a816",
             "__ref": "bca16fd2-37fd-42ba-8aa9-bf7b78a3bd0f",
             "__path": "libs/foundry/records/entities/scitem/carryables/1h/food_biscuit_1_a.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "5e11a544-7fea-4160-b2bf-98c6cf9ee9df"
@@ -38,6 +43,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -58,14 +64,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -235,6 +246,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -667,6 +679,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -764,6 +778,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -859,6 +878,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -896,6 +916,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -941,6 +962,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -998,6 +1020,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1039,6 +1062,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1059,6 +1083,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1079,6 +1104,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1107,6 +1133,8 @@
                         }
                     }
                 },
+                "SPersistentComponentParams": [],
+                "SubsumptionMissionLinkComponentParams": [],
                 "EntityPhysicalAudioParams": {
                     "minimumImpulseContinuous": 3,
                     "minimumImpulseTransient": 3,
@@ -1114,6 +1142,7 @@
                     "slideThreshold": 0.04,
                     "rollThreshold": 0.04,
                     "momentumScale": 1,
+                    "rollVelocityScale": 1,
                     "useAABBCentre": 0,
                     "oneShotTag": "0d401f6c-38a4-4c52-bb02-26059dd8d98a",
                     "oneShotCooldown": 0.2,
@@ -1157,6 +1186,18 @@
                     "placeTrigger": {
                         "audioTrigger": ""
                     },
+                    "tractorBeamPickupTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "tractorBeamDropTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "detachBreakTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "playerCausedDetachBreakTrigger": {
+                        "audioTrigger": ""
+                    },
                     "rtpcSlideVelocity": {
                         "rtpc": "PhysicalAudio_Velocity"
                     },
@@ -1189,6 +1230,9 @@
                     },
                     "rtpcCarried": {
                         "rtpc": "PhysicalAudio_CarryState"
+                    },
+                    "rtpcSize": {
+                        "rtpc": ""
                     }
                 },
                 "SEntityAudioControllerParams": {
@@ -1204,6 +1248,7 @@
                     },
                     "tagTriggers": []
                 },
+                "SAudioProxyParams": [],
                 "SCItemConsumableParams": {
                     "consumeInteraction": "Interactable.SharedInteractions[5]",
                     "consumeFragmentId": "consume",
@@ -1302,6 +1347,8 @@
                     "fragmentTag": "Carryable",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": {
                         "UsableUseSlot": {
                             "name": "",
@@ -1448,6 +1495,7 @@
                         }
                     },
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [],
                     "views": [],
                     "abilityLocks": [],
@@ -1475,6 +1523,7 @@
         "grade": 1,
         "name": "Ringaling",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "GENF",
         "stdItem": {
             "UUID": "bca16fd2-37fd-42ba-8aa9-bf7b78a3bd0f",
@@ -1487,9 +1536,15 @@
             "Type": "Food.Consumable",
             "Name": "Ringaling",
             "Description": "NDR: 10\\nEffects: Energizing, Hyper-Metabolic\\n\\nThis holiday favorite cookie features a crumbly shortbread ring filled with a sweet and tart jam. Often enjoyed during Luminalia. \\n",
+            "DescriptionData": {
+                "NDR": "10",
+                "Effects": "Energizing, Hyper-Metabolic"
+            },
+            "DescriptionText": "This holiday favorite cookie features a crumbly shortbread ring filled with a sweet and tart jam. Often enjoyed during Luminalia.",
             "Manufacturer": {
                 "Code": "GENF",
-                "Name": "Consumable"
+                "Name": "Consumable",
+                "UUID": "1b6be99e-f430-459f-ab2a-a912fd6722f8"
             },
             "DimensionOverrides": {
                 "Width": 0.5,
@@ -1497,12 +1552,27 @@
                 "Height": 0.5
             },
             "Food": {
-                "oneShotConsume": 1,
-                "containerClosed": 0,
-                "canBeReclosed": 0,
-                "discardWhenConsumed": 0,
-                "containerTypeTag": "fruit"
-            }
+                "NutritionalDensityRating": "10",
+                "Effects": [
+                    "Energizing",
+                    "Hyper-Metabolic"
+                ],
+                "Type": "Food",
+                "ContainerClosed": 0,
+                "ContainerType": "fruit",
+                "ContainerTypeTag": "fruit",
+                "OneShotConsume": 1,
+                "CanBeReclosed": 0,
+                "DiscardWhenConsumed": 0
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Consume"
+            ]
         }
     }
 }

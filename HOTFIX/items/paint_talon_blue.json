@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "5b31eacf-b3dd-492c-acd3-c1b3d0adfdb5",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_talon_blue.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Talon Cobalt Livery",
         "tags": "Paint_Talon @TalonBlue",
+        "required_tags": "Paint_Talon",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Talon Cobalt Livery",
             "Description": "Standout with this cool blue livery custom designed for the Esperia Talon and its Shrike variant.",
+            "DescriptionText": "Standout with this cool blue livery custom designed for the Esperia Talon and its Shrike variant.",
             "Manufacturer": {
                 "Code": "",
-                "Name": ""
+                "Name": "",
+                "UUID": "0d72fe4b-e18c-4988-9612-c25ec2553880"
             },
             "Tags": [
                 "Paint_Talon",

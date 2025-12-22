@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "82d9d4a8-d9b1-4502-88bc-17efeb1182c2",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_vulture_fleetweek_black_yellow.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Vulture Pyrite Livery",
         "tags": "Paint_Vulture @Paint_Vulture_Fleetweek_Black_Yellow",
+        "required_tags": "Paint_Vulture",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Vulture Pyrite Livery",
             "Description": "Vulture operators who choose the Pyrite livery never have to apologize for sporting a little style. A stealthy matte black and silver hull contrasts sharply with silver and yellow topped arms.",
+            "DescriptionText": "Vulture operators who choose the Pyrite livery never have to apologize for sporting a little style. A stealthy matte black and silver hull contrasts sharply with silver and yellow topped arms.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Ace Astrogation"
+                "Name": "Ace Astrogation",
+                "UUID": "4efc4427-d74c-4780-9c30-37d787dffd8a"
             },
             "Tags": [
                 "Paint_Vulture",

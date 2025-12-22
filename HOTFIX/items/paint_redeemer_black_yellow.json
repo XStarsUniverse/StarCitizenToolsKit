@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "ab86f582-5349-48ca-8ab0-6d0b5ec7d3ea",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_redeemer_black_yellow.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Redeemer Underworld Livery",
         "tags": "Paint_Redeemer @Paint_Redeemer_Black_Yellow",
+        "required_tags": "Paint_Redeemer",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Redeemer Underworld Livery",
             "Description": "Apply the Underworld livery to the Redeemer and it will be pitch black and ready to attack.",
+            "DescriptionText": "Apply the Underworld livery to the Redeemer and it will be pitch black and ready to attack.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "79a997fd-ace7-436f-afb2-280bda1ba748"
             },
             "Tags": [
                 "Paint_Redeemer",

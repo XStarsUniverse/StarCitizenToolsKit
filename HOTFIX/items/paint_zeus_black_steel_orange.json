@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "2d8be48b-0cb7-4402-b7b6-20b46dc187f5",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_zeus_black_steel_orange.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Zeus MK II Starscape Livery",
         "tags": "Paint_Zeus @Paint_Zeus_Black_Steel_Orange",
+        "required_tags": "Paint_Zeus",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Zeus MK II Starscape Livery",
             "Description": "The subtle style of the Starscape livery features black and steel-colored panels with orange highlights.",
+            "DescriptionText": "The subtle style of the Starscape livery features black and steel-colored panels with orange highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "f89cbc88-07ca-4de2-a6a0-f03a8fa09ff5"
             },
             "Tags": [
                 "Paint_Zeus",

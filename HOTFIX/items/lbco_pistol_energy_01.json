@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "959520d7-d83d-45b7-9e7a-f6d057494736",
             "__path": "libs/foundry/records/entities/scitem/weapons/fps_weapons/lbco_pistol_energy_01.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "e6471cdd-5456-4a7c-91f3-8088c5bc067b"
@@ -54,7 +59,9 @@
                     "displayImage": "",
                     "displayIcon": "UI/Textures/EA/LoadoutIcons/LBCO_Yubarev_Pistol_64.tif",
                     "sortString": "",
-                    "trackerProperties": []
+                    "trackerProperties": {
+                        "SObjectDataBankEntryTrackerParams": []
+                    }
                 }
             },
             "Components": {
@@ -66,6 +73,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -86,14 +94,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -263,6 +276,7 @@
                     "interactionPointToMoveOnEquip": "Interactable.InteractionPoints[0]",
                     "ikInteractionsRecord": "6429cd07-61ba-4cb7-8a8b-993d7a8ba71f",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes[0].SInteractionStateType.States[0]",
                         "carriedState": "StateTypes[0].SInteractionStateType.States[1]",
@@ -396,7 +410,8 @@
                     "carryableTasks": {
                         "SSequencerMoveToAnimateCarryableTaskParams": {
                             "fragmentId": "Take",
-                            "fragTag": "first_select"
+                            "fragTag": "first_select",
+                            "bForceExactPositioning": 0
                         },
                         "SSequencerBespokeTakeCarryableTaskParams": {
                             "fragmentId": "Take",
@@ -408,7 +423,9 @@
                         },
                         "SSequencerSetInteractionStateCarryableTaskParams": {
                             "state": "StateTypes[0].SInteractionStateType.States[0]"
-                        }
+                        },
+                        "SSequencerFirstSelectCarryableTaskParams": [],
+                        "SSequencerStowHeldEntityCarryableTaskParams": []
                     },
                     "throwableParams": {
                         "reticle": "none",
@@ -884,6 +901,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -962,7 +981,9 @@
                                 "PlayerAnimatedInteractionParams": [],
                                 "HighlightBehaviors": {
                                     "SHighlightBehaviorNode": {
-                                        "HighlightBehaviorNodeParams": [],
+                                        "HighlightBehaviorNodeParams": {
+                                            "SEntityandAttachmentsHighlightNode": []
+                                        },
                                         "nextNodes": []
                                     }
                                 },
@@ -1017,6 +1038,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "NearestBoundingBoxIgnoreFurthestSurfaces",
@@ -1095,7 +1118,9 @@
                                 "PlayerAnimatedInteractionParams": [],
                                 "HighlightBehaviors": {
                                     "SHighlightBehaviorNode": {
-                                        "HighlightBehaviorNodeParams": [],
+                                        "HighlightBehaviorNodeParams": {
+                                            "SEntityandAttachmentsHighlightNode": []
+                                        },
                                         "nextNodes": []
                                     }
                                 },
@@ -1156,6 +1181,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -1381,6 +1411,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1426,6 +1457,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1475,6 +1507,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1495,6 +1528,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1544,6 +1578,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1564,6 +1599,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1613,6 +1649,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1668,6 +1705,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1688,6 +1726,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1724,6 +1763,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": {
@@ -1748,6 +1788,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": {
@@ -1772,6 +1813,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1888,6 +1930,7 @@
                         }
                     ]
                 },
+                "SPersistentComponentParams": [],
                 "SARDataComponentParams": {
                     "dataType": "ShopItem",
                     "rangeMin": 1,
@@ -1929,6 +1972,7 @@
                     "slideThreshold": 0.5,
                     "rollThreshold": 0.1,
                     "momentumScale": 1,
+                    "rollVelocityScale": 1,
                     "useAABBCentre": 0,
                     "oneShotTag": "01580479-c8a5-4bb8-85df-56b5edc32c14",
                     "oneShotCooldown": 0.1,
@@ -1972,6 +2016,18 @@
                     "placeTrigger": {
                         "audioTrigger": "Play_PHOB_Weapons_Generic_Pistol_Place"
                     },
+                    "tractorBeamPickupTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "tractorBeamDropTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "detachBreakTrigger": {
+                        "audioTrigger": ""
+                    },
+                    "playerCausedDetachBreakTrigger": {
+                        "audioTrigger": ""
+                    },
                     "rtpcSlideVelocity": {
                         "rtpc": "PhysicalAudio_Velocity"
                     },
@@ -2004,6 +2060,9 @@
                     },
                     "rtpcCarried": {
                         "rtpc": "PhysicalAudio_CarryState"
+                    },
+                    "rtpcSize": {
+                        "rtpc": ""
                     }
                 },
                 "SMeleeWeaponComponentParams": {
@@ -2023,6 +2082,8 @@
                     "fragmentTag": "Carryable",
                     "isExterior": 0,
                     "allowDeadOrUnconscious": 0,
+                    "lowEnergyThreshold": 0,
+                    "highEnergyThreshold": 2,
                     "useSlots": [
                         {
                             "name": "Take",
@@ -2286,6 +2347,7 @@
                         }
                     ],
                     "exclusivityGroups": [],
+                    "freeItemPortsForDirectInteraction": [],
                     "slottingSetups": [],
                     "views": [],
                     "abilityLocks": [],
@@ -2369,7 +2431,8 @@
                         "adsReticle": "none"
                     },
                     "weaponAIData": {
-                        "idealCombatRange": 50,
+                        "idealCombatRange": 30,
+                        "maxFiringRange": 50,
                         "CombatRangeCategory": "Medium",
                         "baseAccuracy": 0.05,
                         "impactRadiusForFriendlyFire": 0,
@@ -2556,6 +2619,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -2570,6 +2634,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -2768,6 +2833,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -2782,6 +2848,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -2980,6 +3047,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -2994,6 +3062,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -3192,6 +3261,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -3206,6 +3276,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -3404,6 +3475,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -3418,6 +3490,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -3660,6 +3733,7 @@
                                         "chargeTimeMultiplier": 1,
                                         "useAlternateProjectileVisuals": 0,
                                         "useAugmentedRealityProjectiles": 0,
+                                        "disableMisfire": 0,
                                         "recoilModifier": {
                                             "decayMultiplier": 1,
                                             "endDecayMultiplier": 1,
@@ -3674,6 +3748,7 @@
                                             "frontalOscillationDecayMultiplier": 1,
                                             "frontalOscillationRandomnessMultiplier": 1,
                                             "animatedRecoilMultiplier": 1,
+                                            "disableRecoil": 0,
                                             "headRotationMultiplier": {
                                                 "x": 1,
                                                 "y": 1,
@@ -3910,6 +3985,7 @@
                             "wearPerShot": 0.2,
                             "recoil": "320461fa-501a-40bb-ac4c-554f74a39d49",
                             "misfire": "c07084a6-7555-412c-93e3-7c341a72c421",
+                            "adaptiveTriggerParams": "00000000-0000-0000-0000-000000000000",
                             "mannequinTag": {
                                 "tag": ""
                             },
@@ -3954,6 +4030,20 @@
                             "cooldownStopTrigger": {
                                 "audioTrigger": ""
                             },
+                            "NLPCAudioTriggers": {
+                                "fireAudioTrigger": {
+                                    "audioTrigger": ""
+                                },
+                                "dryFireAudioTrigger": {
+                                    "audioTrigger": ""
+                                },
+                                "cooldownStartTrigger": {
+                                    "audioTrigger": ""
+                                },
+                                "cooldownStopTrigger": {
+                                    "audioTrigger": ""
+                                }
+                            },
                             "fireEffects": [
                                 {
                                     "helper": "muzzle_flash",
@@ -3963,12 +4053,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "958a9044-73c9-5fb1-026b-cd5b9c3052d4|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.1st_muzzleflash"
                                     },
                                     "thirdPerson": {
                                         "path": "ce19ec07-f36e-42bf-5a88-47aad36d53b8|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.3rd_muzzleflash"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_T_L_01",
@@ -3978,12 +4070,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
                                     },
                                     "thirdPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_T_R_01",
@@ -3993,12 +4087,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
                                     },
                                     "thirdPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_B_L_01",
@@ -4008,12 +4104,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
                                     },
                                     "thirdPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_B_R_01",
@@ -4023,12 +4121,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
                                     },
                                     "thirdPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_T_L_02",
@@ -4038,12 +4138,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
                                     },
                                     "thirdPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_T_R_02",
@@ -4053,12 +4155,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
                                     },
                                     "thirdPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_B_L_02",
@@ -4068,12 +4172,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
                                     },
                                     "thirdPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_B_R_02",
@@ -4083,12 +4189,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
                                     },
                                     "thirdPerson": {
                                         "path": "326a9ff8-1581-379c-1021-c4fd58a30ffa|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_core",
@@ -4098,12 +4206,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "aa94ef28-8e78-d52b-c08e-39d915db715c|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_core"
                                     },
                                     "thirdPerson": {
                                         "path": "aa94ef28-8e78-d52b-c08e-39d915db715c|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_core"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_M_L_01",
@@ -4113,12 +4223,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "2b4c99a2-d24a-9cb0-e386-5de5b70faec5|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_mid"
                                     },
                                     "thirdPerson": {
                                         "path": "2b4c99a2-d24a-9cb0-e386-5de5b70faec5|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_mid"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_M_R_01",
@@ -4128,12 +4240,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "2b4c99a2-d24a-9cb0-e386-5de5b70faec5|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_mid"
                                     },
                                     "thirdPerson": {
                                         "path": "2b4c99a2-d24a-9cb0-e386-5de5b70faec5|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_mid"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_M_L_02",
@@ -4143,12 +4257,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "2b4c99a2-d24a-9cb0-e386-5de5b70faec5|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_mid"
                                     },
                                     "thirdPerson": {
                                         "path": "2b4c99a2-d24a-9cb0-e386-5de5b70faec5|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_mid"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_slide_M_R_02",
@@ -4158,12 +4274,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "2b4c99a2-d24a-9cb0-e386-5de5b70faec5|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_mid"
                                     },
                                     "thirdPerson": {
                                         "path": "2b4c99a2-d24a-9cb0-e386-5de5b70faec5|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.charging_mid"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 }
                             ],
                             "vibrationParams": {
@@ -4183,6 +4301,9 @@
                         },
                         "switchFireModeAudioTrigger": {
                             "audioTrigger": "Play_WPFA_Handling_BEHR_Rifle_P8AR_FiremodeSwitch_Single"
+                        },
+                        "switchWeaponPresetAudioTrigger": {
+                            "audioTrigger": ""
                         },
                         "weaponHeatRTPC": {
                             "rtpc": "Weapon_Heat_Level"
@@ -4336,12 +4457,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "8e7e6e0b-5ab7-7cbb-b707-bfaae85fc12a|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.vent"
                                     },
                                     "thirdPerson": {
                                         "path": "8e7e6e0b-5ab7-7cbb-b707-bfaae85fc12a|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.vent"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 },
                                 {
                                     "helper": "vfx_flap_R",
@@ -4351,12 +4474,14 @@
                                     "scale": 1,
                                     "retriggerOnViewModeChange": 0,
                                     "isMuzzleFlash": 0,
+                                    "allowConditionReEvaluation": 0,
                                     "firstPerson": {
                                         "path": "8e7e6e0b-5ab7-7cbb-b707-bfaae85fc12a|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.vent"
                                     },
                                     "thirdPerson": {
                                         "path": "8e7e6e0b-5ab7-7cbb-b707-bfaae85fc12a|FPS_Weapons/Weapons/Weapons_lbco_pistol_energy_01.vent"
-                                    }
+                                    },
+                                    "effectCondition": []
                                 }
                             ]
                         }
@@ -4399,6 +4524,7 @@
                                 "chargeTimeMultiplier": 1,
                                 "useAlternateProjectileVisuals": 0,
                                 "useAugmentedRealityProjectiles": 0,
+                                "disableMisfire": 0,
                                 "recoilModifier": {
                                     "decayMultiplier": 1,
                                     "endDecayMultiplier": 1,
@@ -4413,6 +4539,7 @@
                                     "frontalOscillationDecayMultiplier": 1,
                                     "frontalOscillationRandomnessMultiplier": 1,
                                     "animatedRecoilMultiplier": 1,
+                                    "disableRecoil": 0,
                                     "headRotationMultiplier": {
                                         "x": 1,
                                         "y": 1,
@@ -4641,6 +4768,11 @@
                         "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
                         "__ref": "9dc383ba-2686-46d0-abf9-1bc764aec0b6",
                         "__path": "libs/foundry/records/entities/scitem/weapons/magazines/lbco_pistol_energy_01_mag.xml",
+                        "defaultEditorColor": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 0
+                        },
                         "tags": [
                             {
                                 "value": "6c6028af-fcc2-4205-b18c-8e344c629c10"
@@ -4804,6 +4936,11 @@
                                 "rootOverridePaint": 0,
                                 "inheritModelTagFromHost": 1,
                                 "ModelTag": [],
+                                "meshsetup": {
+                                    "visibilityTags": {
+                                        "tags": []
+                                    }
+                                },
                                 "Geometry": {
                                     "Tags": "",
                                     "ScaleMultiplier": 1,
@@ -5126,7 +5263,8 @@
                                             },
                                             "penetrationParams": {
                                                 "basePenetrationDistance": 0,
-                                                "angle": 0
+                                                "nearRadius": 0.5,
+                                                "farRadius": 5
                                             },
                                             "visualParams": {
                                                 "maxLength": 1,
@@ -5162,6 +5300,7 @@
                                         "spawnBoxScale": 0.5,
                                         "maxLoggedCollisions": 1,
                                         "Damping": 0.01,
+                                        "DampingZeroG": 0.01,
                                         "DampingFreefall": 0.05,
                                         "PushableByPlayers": 1,
                                         "NeverAffectTriggers": 0,
@@ -5182,14 +5321,19 @@
                                         "temperature": {
                                             "enable": 0,
                                             "initialTemperature": -1,
-                                            "coolingEqualizationMultiplier": 1,
                                             "internalTemperatureGeneration": 0,
+                                            "coolingEqualizationParams": {
+                                                "CoolingEqualizationMultiplier": {
+                                                    "coolingEqualizationMultiplier": 1
+                                                }
+                                            },
                                             "signatureParams": {
                                                 "enable": 0,
                                                 "minimumTemperatureForIR": 250,
                                                 "temperatureToIR": 6
                                             },
                                             "itemResourceParams": {
+                                                "poweredAmbientCoolingMultiplier": 1,
                                                 "minOperatingTemperature": 0,
                                                 "minCoolingTemperature": 300,
                                                 "enableOverheat": 0,
@@ -5266,6 +5410,7 @@
                                     "z": 1
                                 }
                             },
+                            "SPersistentComponentParams": [],
                             "SEntityComponentCarryableParams": {
                                 "carryInteraction": "Interactable.SharedInteractions[0]",
                                 "placeInteraction": "Interactable.SharedInteractions[7]",
@@ -5285,6 +5430,7 @@
                                 "interactionPointToMoveOnEquip": "null",
                                 "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                                 "canBeCarriedInProne": 1,
+                                "disableRotation": 0,
                                 "carryableStatesParams": {
                                     "settledState": "StateTypes[0].SInteractionStateType.States[0]",
                                     "carriedState": "StateTypes[0].SInteractionStateType.States[1]",
@@ -5492,7 +5638,8 @@
                                 "carryableTasks": {
                                     "SSequencerMoveToAnimateCarryableTaskParams": {
                                         "fragmentId": "Place",
-                                        "fragTag": ""
+                                        "fragTag": "",
+                                        "bForceExactPositioning": 0
                                     },
                                     "SSequencerBespokeTakeCarryableTaskParams": {
                                         "fragmentId": "Take",
@@ -5501,7 +5648,8 @@
                                     "SSequencerBespokePlaceCarryableTaskParams": {
                                         "fragmentId": "Place",
                                         "fragTag": ""
-                                    }
+                                    },
+                                    "SSequencerFirstSelectCarryableTaskParams": []
                                 },
                                 "throwableParams": {
                                     "reticle": "none",
@@ -5877,6 +6025,8 @@
                                             "TextScale": 1,
                                             "ShowInteractionTextAtCursorPos": 1,
                                             "ScalePromptOffsetWithEntity": 0,
+                                            "PromptStyle": "PromptAndText",
+                                            "OverrideControlHintDescription": 0,
                                             "InteractionPromptScale": 1,
                                             "InteractionPromptLabelVerticalOffset": 70,
                                             "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -6034,6 +6184,7 @@
                                                 "enterStateEffectTags": [],
                                                 "exitStateEffectTags": [],
                                                 "EnterEventDispatchers": [],
+                                                "ExitEventDispatchers": [],
                                                 "StateAutoChange": [],
                                                 "Interactions": [
                                                     {
@@ -6083,6 +6234,7 @@
                                                 "enterStateEffectTags": [],
                                                 "exitStateEffectTags": [],
                                                 "EnterEventDispatchers": [],
+                                                "ExitEventDispatchers": [],
                                                 "StateAutoChange": [],
                                                 "Interactions": [
                                                     {
@@ -6128,6 +6280,7 @@
                                                 "enterStateEffectTags": [],
                                                 "exitStateEffectTags": [],
                                                 "EnterEventDispatchers": [],
+                                                "ExitEventDispatchers": [],
                                                 "StateAutoChange": [],
                                                 "Interactions": [],
                                                 "interactionPoints": [],
@@ -6148,6 +6301,7 @@
                                                 "enterStateEffectTags": [],
                                                 "exitStateEffectTags": [],
                                                 "EnterEventDispatchers": [],
+                                                "ExitEventDispatchers": [],
                                                 "StateAutoChange": [],
                                                 "Interactions": [
                                                     {
@@ -6193,6 +6347,7 @@
                                                 "enterStateEffectTags": [],
                                                 "exitStateEffectTags": [],
                                                 "EnterEventDispatchers": [],
+                                                "ExitEventDispatchers": [],
                                                 "StateAutoChange": [],
                                                 "Interactions": [],
                                                 "interactionPoints": [],
@@ -6213,6 +6368,7 @@
                                                 "enterStateEffectTags": [],
                                                 "exitStateEffectTags": [],
                                                 "EnterEventDispatchers": [],
+                                                "ExitEventDispatchers": [],
                                                 "StateAutoChange": [],
                                                 "Interactions": [
                                                     {
@@ -6268,6 +6424,7 @@
                                                 "enterStateEffectTags": [],
                                                 "exitStateEffectTags": [],
                                                 "EnterEventDispatchers": [],
+                                                "ExitEventDispatchers": [],
                                                 "StateAutoChange": [],
                                                 "Interactions": {
                                                     "SInteractionStateTransition": {
@@ -6293,6 +6450,7 @@
                                                 "enterStateEffectTags": [],
                                                 "exitStateEffectTags": [],
                                                 "EnterEventDispatchers": [],
+                                                "ExitEventDispatchers": [],
                                                 "StateAutoChange": [],
                                                 "Interactions": {
                                                     "SInteractionStateTransition": {
@@ -6318,6 +6476,8 @@
                                 "fragmentTag": "Carryable",
                                 "isExterior": 0,
                                 "allowDeadOrUnconscious": 0,
+                                "lowEnergyThreshold": 0,
+                                "highEnergyThreshold": 2,
                                 "useSlots": {
                                     "UsableUseSlot": {
                                         "name": "",
@@ -6440,6 +6600,7 @@
                                     }
                                 },
                                 "exclusivityGroups": [],
+                                "freeItemPortsForDirectInteraction": [],
                                 "slottingSetups": [],
                                 "views": [],
                                 "abilityLocks": [],
@@ -6455,6 +6616,8 @@
                                 "isOverridden": 0,
                                 "enableDetectionOnItemPort": 0,
                                 "ignoreHighlightWhenDetectorInsideBounds": 0,
+                                "ignoreHighlightWhenNoLinkedOrActiveObjectives": 0,
+                                "priorityBoxoutTag": "00000000-0000-0000-0000-000000000000",
                                 "isObjectOfInterest": 0,
                                 "radarProperties": {
                                     "SSCRadarContactProperites": {
@@ -6493,7 +6656,11 @@
                                         },
                                         "crossSectionParams": [],
                                         "emissionModifierParams": [],
-                                        "scanBounds": []
+                                        "deathParams": [],
+                                        "scanBounds": [],
+                                        "roomParams": {
+                                            "ignoreInteriorVsExteriorCheck": 0
+                                        }
                                     }
                                 },
                                 "audioParams": [],
@@ -6503,7 +6670,8 @@
                                     "x": 0,
                                     "y": 0,
                                     "z": 0
-                                }
+                                },
+                                "linkedObjectives": []
                             },
                             "SInteractionLinkParams": {
                                 "vehicleItemPortInteractionLinks": [],
@@ -6548,6 +6716,11 @@
                                         "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
                                         "__ref": "9dc383ba-2686-46d0-abf9-1bc764aec0b6",
                                         "__path": "libs/foundry/records/entities/scitem/weapons/magazines/lbco_pistol_energy_01_mag.xml",
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
                                         "tags": [
                                             {
                                                 "value": "6c6028af-fcc2-4205-b18c-8e344c629c10"
@@ -6711,6 +6884,11 @@
                                                 "rootOverridePaint": 0,
                                                 "inheritModelTagFromHost": 1,
                                                 "ModelTag": [],
+                                                "meshsetup": {
+                                                    "visibilityTags": {
+                                                        "tags": []
+                                                    }
+                                                },
                                                 "Geometry": {
                                                     "Tags": "",
                                                     "ScaleMultiplier": 1,
@@ -7033,7 +7211,8 @@
                                                             },
                                                             "penetrationParams": {
                                                                 "basePenetrationDistance": 0,
-                                                                "angle": 0
+                                                                "nearRadius": 0.5,
+                                                                "farRadius": 5
                                                             },
                                                             "visualParams": {
                                                                 "maxLength": 1,
@@ -7069,6 +7248,7 @@
                                                         "spawnBoxScale": 0.5,
                                                         "maxLoggedCollisions": 1,
                                                         "Damping": 0.01,
+                                                        "DampingZeroG": 0.01,
                                                         "DampingFreefall": 0.05,
                                                         "PushableByPlayers": 1,
                                                         "NeverAffectTriggers": 0,
@@ -7089,14 +7269,19 @@
                                                         "temperature": {
                                                             "enable": 0,
                                                             "initialTemperature": -1,
-                                                            "coolingEqualizationMultiplier": 1,
                                                             "internalTemperatureGeneration": 0,
+                                                            "coolingEqualizationParams": {
+                                                                "CoolingEqualizationMultiplier": {
+                                                                    "coolingEqualizationMultiplier": 1
+                                                                }
+                                                            },
                                                             "signatureParams": {
                                                                 "enable": 0,
                                                                 "minimumTemperatureForIR": 250,
                                                                 "temperatureToIR": 6
                                                             },
                                                             "itemResourceParams": {
+                                                                "poweredAmbientCoolingMultiplier": 1,
                                                                 "minOperatingTemperature": 0,
                                                                 "minCoolingTemperature": 300,
                                                                 "enableOverheat": 0,
@@ -7173,6 +7358,7 @@
                                                     "z": 1
                                                 }
                                             },
+                                            "SPersistentComponentParams": [],
                                             "SEntityComponentCarryableParams": {
                                                 "carryInteraction": "Interactable.SharedInteractions[0]",
                                                 "placeInteraction": "Interactable.SharedInteractions[7]",
@@ -7192,6 +7378,7 @@
                                                 "interactionPointToMoveOnEquip": "null",
                                                 "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                                                 "canBeCarriedInProne": 1,
+                                                "disableRotation": 0,
                                                 "carryableStatesParams": {
                                                     "settledState": "StateTypes[0].SInteractionStateType.States[0]",
                                                     "carriedState": "StateTypes[0].SInteractionStateType.States[1]",
@@ -7399,7 +7586,8 @@
                                                 "carryableTasks": {
                                                     "SSequencerMoveToAnimateCarryableTaskParams": {
                                                         "fragmentId": "Place",
-                                                        "fragTag": ""
+                                                        "fragTag": "",
+                                                        "bForceExactPositioning": 0
                                                     },
                                                     "SSequencerBespokeTakeCarryableTaskParams": {
                                                         "fragmentId": "Take",
@@ -7408,7 +7596,8 @@
                                                     "SSequencerBespokePlaceCarryableTaskParams": {
                                                         "fragmentId": "Place",
                                                         "fragTag": ""
-                                                    }
+                                                    },
+                                                    "SSequencerFirstSelectCarryableTaskParams": []
                                                 },
                                                 "throwableParams": {
                                                     "reticle": "none",
@@ -7784,6 +7973,8 @@
                                                             "TextScale": 1,
                                                             "ShowInteractionTextAtCursorPos": 1,
                                                             "ScalePromptOffsetWithEntity": 0,
+                                                            "PromptStyle": "PromptAndText",
+                                                            "OverrideControlHintDescription": 0,
                                                             "InteractionPromptScale": 1,
                                                             "InteractionPromptLabelVerticalOffset": 70,
                                                             "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -7941,6 +8132,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [
                                                                     {
@@ -7990,6 +8182,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [
                                                                     {
@@ -8035,6 +8228,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [],
                                                                 "interactionPoints": [],
@@ -8055,6 +8249,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [
                                                                     {
@@ -8100,6 +8295,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [],
                                                                 "interactionPoints": [],
@@ -8120,6 +8316,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [
                                                                     {
@@ -8175,6 +8372,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -8200,6 +8398,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -8225,6 +8424,8 @@
                                                 "fragmentTag": "Carryable",
                                                 "isExterior": 0,
                                                 "allowDeadOrUnconscious": 0,
+                                                "lowEnergyThreshold": 0,
+                                                "highEnergyThreshold": 2,
                                                 "useSlots": {
                                                     "UsableUseSlot": {
                                                         "name": "",
@@ -8347,6 +8548,7 @@
                                                     }
                                                 },
                                                 "exclusivityGroups": [],
+                                                "freeItemPortsForDirectInteraction": [],
                                                 "slottingSetups": [],
                                                 "views": [],
                                                 "abilityLocks": [],
@@ -8362,6 +8564,8 @@
                                                 "isOverridden": 0,
                                                 "enableDetectionOnItemPort": 0,
                                                 "ignoreHighlightWhenDetectorInsideBounds": 0,
+                                                "ignoreHighlightWhenNoLinkedOrActiveObjectives": 0,
+                                                "priorityBoxoutTag": "00000000-0000-0000-0000-000000000000",
                                                 "isObjectOfInterest": 0,
                                                 "radarProperties": {
                                                     "SSCRadarContactProperites": {
@@ -8400,7 +8604,11 @@
                                                         },
                                                         "crossSectionParams": [],
                                                         "emissionModifierParams": [],
-                                                        "scanBounds": []
+                                                        "deathParams": [],
+                                                        "scanBounds": [],
+                                                        "roomParams": {
+                                                            "ignoreInteriorVsExteriorCheck": 0
+                                                        }
                                                     }
                                                 },
                                                 "audioParams": [],
@@ -8410,7 +8618,8 @@
                                                     "x": 0,
                                                     "y": 0,
                                                     "z": 0
-                                                }
+                                                },
+                                                "linkedObjectives": []
                                             },
                                             "SInteractionLinkParams": {
                                                 "vehicleItemPortInteractionLinks": [],
@@ -8450,16 +8659,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [
                         {
                             "Name": "magazine_attach",
-                            "DisplayName": "Magazine Slot",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "lbco_pistol_energy_01",
                             "RequiredPortTags": "lbco_pistol_energy_01",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -8467,6 +8680,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -8550,12 +8764,15 @@
                         },
                         {
                             "Name": "optics_attach",
-                            "DisplayName": "OpticsSlot",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -8570,6 +8787,7 @@
                                     "value": "fdd7e1a2-e990-4346-a08c-d22d1480e39c"
                                 }
                             ],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -8653,12 +8871,15 @@
                         },
                         {
                             "Name": "underbarrel_attach",
-                            "DisplayName": "UnderbarrelSlot",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "inventory",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -8673,6 +8894,7 @@
                                     "value": "fdd7e1a2-e990-4346-a08c-d22d1480e39c"
                                 }
                             ],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -8757,11 +8979,14 @@
                         {
                             "Name": "item_grab",
                             "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 0,
                             "MaxSize": 0,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -8769,6 +8994,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -8857,6 +9083,8 @@
                     "isOverridden": 0,
                     "enableDetectionOnItemPort": 0,
                     "ignoreHighlightWhenDetectorInsideBounds": 0,
+                    "ignoreHighlightWhenNoLinkedOrActiveObjectives": 0,
+                    "priorityBoxoutTag": "00000000-0000-0000-0000-000000000000",
                     "isObjectOfInterest": 0,
                     "radarProperties": {
                         "SSCRadarContactProperites": {
@@ -8895,7 +9123,11 @@
                             },
                             "crossSectionParams": [],
                             "emissionModifierParams": [],
-                            "scanBounds": []
+                            "deathParams": [],
+                            "scanBounds": [],
+                            "roomParams": {
+                                "ignoreInteriorVsExteriorCheck": 0
+                            }
                         }
                     },
                     "audioParams": [],
@@ -8905,7 +9137,8 @@
                         "x": 0,
                         "y": 0,
                         "z": 0
-                    }
+                    },
+                    "linkedObjectives": []
                 },
                 "SInteractionLinkParams": {
                     "vehicleItemPortInteractionLinks": [],
@@ -8927,13 +9160,18 @@
                             "UseAsTimer": 0,
                             "InitialAgeRatio": 0,
                             "InitialUsageRatio": 0,
-                            "BasePowerMultiplier": 0,
-                            "DrawPowerMultiplier": 0,
                             "AtmosphereMultiplier": 1,
                             "DamageConversionRate": 0.01,
                             "HeatMultipliers": {
                                 "NormalTemperatureMultiplier": 1,
                                 "OverheatTemperatureMultiplier": 1
+                            },
+                            "FunctionalityMultiplier": {
+                                "UsePowerRatio": 1,
+                                "FunctionalityMultiplyCurve": {
+                                    "useLUT": 0,
+                                    "points": []
+                                }
                             },
                             "EffectCurve": {
                                 "useLUT": 0,
@@ -8999,7 +9237,8 @@
                                     "name": "Default",
                                     "component": {
                                         "canvas": "efcdd660-ab8b-4eb1-902c-85cbb20cd8a1",
-                                        "isSystemViewInstance": 0
+                                        "isSystemViewInstance": 0,
+                                        "canvasInstantiationMode": "RootDeferred"
                                     }
                                 }
                             }
@@ -9028,6 +9267,7 @@
         "grade": 1,
         "name": "Yubarev Pistol",
         "tags": "pistol",
+        "required_tags": "",
         "manufacturer": "",
         "classification": "FPS.Weapon.Small",
         "stdItem": {
@@ -9041,9 +9281,20 @@
             "Type": "WeaponPersonal.Small",
             "Name": "Yubarev Pistol",
             "Description": "Manufacturer: Lightning Bolt Co. \\nItem Type: Pistol\\nClass: Electron\\n\\nBattery Size: 10\\nRate Of Fire: 350 rpm\\nEffective Range: 35m\\n\\nAttachments: Optics (S1), Underbarrel (S1)\\n\\nEngineering excellence only scratches the surface of the distinct Yubarev pistol. Former merc turned weapon manufacturing mogul Irina Arkadova oversaw every aspect of the weapon, imbuing it with power, practicality, and panache. Featuring a classic woodgrain grip and cutting edge barrel design, the Yubarev fires a charged electron shot that impacts not only your target, amplifying the charge with each hit, but can spread to additional conductive targets in range.",
+            "DescriptionData": {
+                "Manufacturer": "Lightning Bolt Co.",
+                "Item Type": "Pistol",
+                "Class": "Electron",
+                "Size": "10",
+                "Rate Of Fire": "350 rpm",
+                "Effective Range": "35m",
+                "Attachments": "Optics (S1), Underbarrel (S1)"
+            },
+            "DescriptionText": "Engineering excellence only scratches the surface of the distinct Yubarev pistol. Former merc turned weapon manufacturing mogul Irina Arkadova oversaw every aspect of the weapon, imbuing it with power, practicality, and panache. Featuring a classic woodgrain grip and cutting edge barrel design, the Yubarev fires a charged electron shot that impacts not only your target, amplifying the charge with each hit, but can spread to additional conductive targets in range.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "<= PLACEHOLDER =>"
+                "Name": "<= PLACEHOLDER =>",
+                "UUID": "98bb2e9e-fcc7-46e5-9ba6-d34c42c414e0"
             },
             "Tags": [
                 "pistol"
@@ -9052,6 +9303,8 @@
                 {
                     "PortName": "magazine_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Tags": [
                         "lbco_pistol_energy_01"
                     ],
@@ -9059,35 +9312,66 @@
                         "lbco_pistol_energy_01"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Magazine"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Magazine"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "9dc383ba-2686-46d0-abf9-1bc764aec0b6",
                     "Uneditable": false
                 },
                 {
                     "PortName": "optics_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.IronSight"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "IronSight"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "underbarrel_attach",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "inventory"
                     ],
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.BottomAttachment"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "BottomAttachment"
+                            ]
+                        }
                     ],
                     "Uneditable": false
                 },
                 {
                     "PortName": "item_grab",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Uneditable": false
                 }
             ],
@@ -9146,14 +9430,21 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
-            "MeleeWeapon": {
-                "canBeUsedForTakeDown": 0,
-                "canBlock": 0,
-                "canBeUsedInProne": 0,
-                "canDodge": 0,
-                "stanceTransitionMeleeDelay": 0.6,
-                "meleeCombatConfig": "00000000-0000-0000-0000-000000000000"
-            },
+            "Interactions": [
+                "Holdready",
+                "Holster",
+                "Offhandholster",
+                "Store",
+                "Offhandstore",
+                "Drop",
+                "Carrylowered",
+                "Inspect",
+                "Place",
+                "Chakmafirstselecttake",
+                "Chakmatake",
+                "Customize",
+                "Bespokeplace"
+            ],
             "Weapon": {
                 "Modes": [
                     {

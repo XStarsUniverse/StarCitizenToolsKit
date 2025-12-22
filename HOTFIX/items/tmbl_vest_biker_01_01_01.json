@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "c5244c19-41d0-44b8-bbb2-efe33b2a2264",
             "__path": "libs/foundry/records/entities/scitem/characters/human/clothing/pu_clothing/clothing_torso1/tmbl_vest_biker_01_01_01.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "d405fc9c-593c-4540-9bdb-65a7fb390a49"
@@ -49,6 +54,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -69,14 +75,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -289,6 +300,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -775,16 +791,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
-                    "Ports": {
-                        "SItemPortDef": {
+                    "Ports": [
+                        {
                             "Name": "Material_Variant",
-                            "DisplayName": "Material_Variant",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "nontransferable ",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -792,6 +812,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -890,8 +911,104 @@
                                 "y": 0,
                                 "z": -1
                             }
+                        },
+                        {
+                            "Name": "Clothing_Torso2",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
+                            "PortTags": "",
+                            "RequiredPortTags": "",
+                            "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 0,
+                            "MaxSize": 0,
+                            "MaxAggregateAttachmentHeight": -1,
+                            "gridBehavior": "Both",
+                            "InteractionPointSize": -1,
+                            "DefaultWeaponGroup": "UNDEFINED",
+                            "controllableTag": "",
+                            "resourceLinkToParent": 0,
+                            "useHelperAsInteractionPointName": 0,
+                            "Tags": [],
+                            "OnAttachTags": [],
+                            "defaultItem": {
+                                "itemPort": "",
+                                "entityClass": "00000000-0000-0000-0000-000000000000",
+                                "childItems": []
+                            },
+                            "PitchLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "YawLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "RollLimit": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "InteractionPointOffset": {
+                                "x": 0,
+                                "y": 0,
+                                "z": 0
+                            },
+                            "AttachmentPoints": [],
+                            "control": [],
+                            "Connections": [],
+                            "Types": {
+                                "SItemPortDefTypes": {
+                                    "Type": "Char_Clothing_Torso_2",
+                                    "SubTypes": []
+                                }
+                            },
+                            "Extension": [],
+                            "AttachmentImplementation": {
+                                "SItemPortDefAttachmentImplementationSkin": {
+                                    "Helper": {
+                                        "Tags": "",
+                                        "Helper": {
+                                            "Name": "Spine3",
+                                            "ItemOffsetHelperName": "",
+                                            "Offset": {
+                                                "Rotation": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                },
+                                                "Position": {
+                                                    "x": 0,
+                                                    "y": 0,
+                                                    "z": 0
+                                                }
+                                            },
+                                            "SimulationParams": []
+                                        },
+                                        "SubHelpers": []
+                                    }
+                                }
+                            },
+                            "Breakable": {
+                                "YoungsModulus": 0,
+                                "BreakStrain": 0,
+                                "YieldStrain": 0,
+                                "Breakable": 0
+                            },
+                            "interactions": {
+                                "detach": "null",
+                                "allowPlaceInteractionFromInventory": 0,
+                                "placeInteractionBlockText": "No Appropriate Item",
+                                "__placeInteractionBlockText": "@interaction_condition_placeOnItemport_noMatchingItem"
+                            },
+                            "linkedItemPorts": [],
+                            "itemPortRules": [],
+                            "detachDirection": {
+                                "x": 0,
+                                "y": 0,
+                                "z": -1
+                            }
                         }
-                    },
+                    ],
                     "InternalResourceLinks": [],
                     "InternalHardpointLinks": [],
                     "destroyEntitiesOnItemportList": [],
@@ -1120,6 +1237,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1221,6 +1340,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "EntityRoot",
@@ -1349,6 +1470,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 0,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -1650,6 +1772,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1691,6 +1814,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1732,6 +1856,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1752,6 +1877,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -1793,6 +1919,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1813,6 +1940,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": {
@@ -1857,10 +1985,12 @@
                         }
                     }
                 },
+                "SPersistentComponentParams": [],
                 "SInteractionLinkParams": {
                     "vehicleItemPortInteractionLinks": [],
                     "linkPlugs": []
-                }
+                },
+                "SubsumptionMissionLinkComponentParams": []
             },
             "ClassName": "tmbl_vest_biker_01_01_01",
             "__type": "Char_Clothing_Torso_1"
@@ -1876,6 +2006,7 @@
         "grade": 1,
         "name": "Renegade Cut Vest",
         "tags": "tmbl_vest_biker Set_01 Color_01",
+        "required_tags": "",
         "manufacturer": "TMBL",
         "classification": "FPS.Clothing.Torso",
         "stdItem": {
@@ -1889,9 +2020,14 @@
             "Type": "Char_Clothing_Torso_1.UNDEFINED",
             "Name": "Renegade Cut Vest",
             "Description": "Carrying Capacity: 1K \u00b5SCU\\n\\nReveal your inner rebel with the Renegade Cut vest, featuring a wide notched lapel and metal studs on the left shoulder. High quality synthetic leather and an insulated lining give the vest both comfort and style.",
+            "DescriptionData": {
+                "Carrying Capacity": "1K \u00b5SCU"
+            },
+            "DescriptionText": "Reveal your inner rebel with the Renegade Cut vest, featuring a wide notched lapel and metal studs on the left shoulder. High quality synthetic leather and an insulated lining give the vest both comfort and style.",
             "Manufacturer": {
                 "Code": "TMBL",
-                "Name": "Tumbril Land Systems"
+                "Name": "Tumbril Land Systems",
+                "UUID": "bb1024bc-b82e-491c-820c-36662c36feb3"
             },
             "Tags": [
                 "tmbl_vest_biker",
@@ -1902,11 +2038,33 @@
                 {
                     "PortName": "Material_Variant",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Flags": [
                         "nontransferable"
                     ],
                     "Types": [
                         "Paints"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Paints"
+                        }
+                    ],
+                    "Uneditable": false
+                },
+                {
+                    "PortName": "Clothing_Torso2",
+                    "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
+                    "Types": [
+                        "Char_Clothing_Torso_2"
+                    ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Char_Clothing_Torso_2"
+                        }
                     ],
                     "Uneditable": false
                 }
@@ -1916,6 +2074,15 @@
                 "Length": 0.75,
                 "Height": 0.75
             },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store",
+                "Equiptowear",
+                "Openinventoryui",
+                "Openlootingui"
+            ],
             "InventoryContainer": {
                 "SCU": 0.001,
                 "unit": 6,
@@ -1931,6 +2098,10 @@
             "TemperatureResistance": {
                 "Minimum": 2,
                 "Maximum": 32
+            },
+            "RadiationResistance": {
+                "MaximumRadiationCapacity": 0,
+                "RadiationDissipationRate": 0
             }
         }
     }

@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "4f90232a-2a34-45d4-bf47-1985139de61d",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_valkyrie_blue_turquoise.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Valkyrie Foundation Fest Livery",
         "tags": "Paint_Valkyrie @Paint_Valkyrie_Blue_Turquoise",
+        "required_tags": "Paint_Valkyrie",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Valkyrie Foundation Fest Livery",
             "Description": "Foundation Festival is an opportunity for Citizens and Civilians to come together and strengthen the foundation of our community. Show your commitment to a better universe with this custom livery.",
+            "DescriptionText": "Foundation Festival is an opportunity for Citizens and Civilians to come together and strengthen the foundation of our community. Show your commitment to a better universe with this custom livery.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Ace Astrogation"
+                "Name": "Ace Astrogation",
+                "UUID": "99a89702-09b9-4f52-b365-cd2c8c3e3d4e"
             },
             "Tags": [
                 "Paint_Valkyrie",

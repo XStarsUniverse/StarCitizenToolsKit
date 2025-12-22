@@ -8,6 +8,11 @@
             "entityDensityClass": "ad1a0441-246c-4b7a-859d-bfa38f91a816",
             "__ref": "e738c605-8ef7-4238-8170-5ab0c4f9c15d",
             "__path": "libs/foundry/records/entities/scitem/carryables/2h/carryable_2h_fl_vlk_pearl_irradiated_low_04.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "37ba7ad8-8553-45df-a84b-c49eb6ebb7a6"
@@ -44,6 +49,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.2,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -64,14 +70,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -198,6 +209,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes[0].SInteractionStateType.States[0]",
                         "carriedState": "StateTypes[0].SInteractionStateType.States[1]",
@@ -601,6 +613,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -686,6 +700,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -781,6 +800,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -810,6 +830,7 @@
                                     },
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -843,6 +864,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -863,6 +885,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -888,6 +911,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": {
                                         "SInteractionStateTransition": {
@@ -927,6 +951,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -951,6 +976,7 @@
                                     },
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -972,6 +998,8 @@
                         }
                     ]
                 },
+                "SPersistentComponentParams": [],
+                "SubsumptionMissionLinkComponentParams": [],
                 "SEntityComponentEffects": {
                     "entityEffects": {
                         "particleEffects": {
@@ -1072,6 +1100,7 @@
         "grade": 1,
         "name": "Irradiated Valakkar Pearl (Grade B)",
         "tags": "",
+        "required_tags": "",
         "stdItem": {
             "UUID": "e738c605-8ef7-4238-8170-5ab0c4f9c15d",
             "ClassName": "Carryable_2H_FL_Vlk_Pearl_Irradiated_Low_04",
@@ -1083,11 +1112,23 @@
             "Type": "Misc.Harvestable",
             "Name": "Irradiated Valakkar Pearl (Grade B)",
             "Description": "The valakkar pearl is harvested from the skin of the valakkar. As the valakkar moves through its environment, a large piece of grit will sometimes penetrate its thick hide. If the grit is unable to be expelled on its own, the valakkar's skin will grow to encase it. Layers of organic matter will then coat the piece of grit, isolating it from the valakkar's vulnerable dermis, thus ensuring that it will not cause infection. These \"pearls\" can become substantial in size over time. Because the valakkar that grew this pearl was exposed to radiation over a long period of time, it has developed unusual properties.",
+            "DescriptionText": "The valakkar pearl is harvested from the skin of the valakkar. As the valakkar moves through its environment, a large piece of grit will sometimes penetrate its thick hide. If the grit is unable to be expelled on its own, the valakkar's skin will grow to encase it. Layers of organic matter will then coat the piece of grit, isolating it from the valakkar's vulnerable dermis, thus ensuring that it will not cause infection. These \"pearls\" can become substantial in size over time. Because the valakkar that grew this pearl was exposed to radiation over a long period of time, it has developed unusual properties.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Place",
+                "Store"
+            ]
         }
     }
 }

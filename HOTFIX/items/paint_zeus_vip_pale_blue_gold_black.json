@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "adc38a8e-1972-4632-97ec-c9eb067490f1",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_zeus_vip_pale_blue_gold_black.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Zeus Mk II Solstice Livery",
         "tags": "Paint_Zeus @Paint_Zeus_VIP_Pale_Blue_Gold_Black",
+        "required_tags": "Paint_Zeus",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Zeus Mk II Solstice Livery",
             "Description": "Outfit the ship that launched Humanity into the stars with the gorgeous Solstice livery. Grey and black panels accented by ribbons of gold give the Zeus Mk II a distinguished and unforgettable appearance.",
+            "DescriptionText": "Outfit the ship that launched Humanity into the stars with the gorgeous Solstice livery. Grey and black panels accented by ribbons of gold give the Zeus Mk II a distinguished and unforgettable appearance.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "3bf0baa5-f753-4359-80f6-c8f15f719362"
             },
             "Tags": [
                 "Paint_Zeus",

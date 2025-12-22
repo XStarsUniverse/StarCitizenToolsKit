@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "ee3e42f7-56ea-46b8-bac2-d27187005a70",
             "__path": "libs/foundry/records/entities/scitem/ships/weapons/kron_lasercannon_s2.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -38,6 +43,7 @@
                     "ExplosionBone": "",
                     "IsSalvagable": 1,
                     "IsRepairable": 1,
+                    "SalvageDamageModifier": 1,
                     "MirrorSalvageHit": 0,
                     "DisableMaterialDamage": 0,
                     "alwaysPropagateHitToParent": 0,
@@ -47,7 +53,7 @@
                         "DamageResistance": {
                             "IgnoreMeleeDamage": 0,
                             "PhysicalResistance": {
-                                "Multiplier": 1,
+                                "Multiplier": 0.6,
                                 "Threshold": 0,
                                 "DamageCap": 0
                             },
@@ -85,43 +91,8 @@
                     "DeathGasComposition": [],
                     "InteractionLocks": [],
                     "sequencerTasks": [],
-                    "shatterDestroyEvent": [],
+                    "maelstromEvents": [],
                     "craftingData": []
-                },
-                "SDegradationParams": {
-                    "StopDegradingIfDestroyed": 0,
-                    "accumulators": {
-                        "SWearAccumulatorParams": {
-                            "InitialAccumulationRatio": 0,
-                            "AccumulateWhenUnstreamed": 0,
-                            "AccumulateOnlyAfterTractorBeam": 0,
-                            "AccumulateOnlyWhenAttached": 1,
-                            "StopAccumulationWhenAttached": 0,
-                            "AccumulationEventThreshold": 1,
-                            "PortTags": "",
-                            "RequiredPortTags": "",
-                            "MaxLifetimeHours": 20,
-                            "UseAsTimer": 0,
-                            "InitialAgeRatio": 0,
-                            "InitialUsageRatio": 0,
-                            "BasePowerMultiplier": 0,
-                            "DrawPowerMultiplier": 0,
-                            "AtmosphereMultiplier": 1,
-                            "DamageConversionRate": 0.01,
-                            "HeatMultipliers": {
-                                "NormalTemperatureMultiplier": 1,
-                                "OverheatTemperatureMultiplier": 1
-                            },
-                            "EffectCurve": {
-                                "useLUT": 0,
-                                "points": []
-                            },
-                            "degradeFromParentParams": [],
-                            "DegradationPercentageRTPC": {
-                                "rtpc": ""
-                            }
-                        }
-                    }
                 },
                 "SAmmoContainerComponentParams": {
                     "initialAmmoCount": 0,
@@ -262,8 +233,9 @@
                                     "maxPenetrationThickness": 0.5
                                 },
                                 "penetrationParams": {
-                                    "basePenetrationDistance": 29,
-                                    "angle": 17.8
+                                    "basePenetrationDistance": 1.2,
+                                    "nearRadius": 0.06,
+                                    "farRadius": 0.12
                                 },
                                 "visualParams": {
                                     "maxLength": 0,
@@ -440,7 +412,8 @@
                         "adsReticle": "none"
                     },
                     "weaponAIData": {
-                        "idealCombatRange": 50,
+                        "idealCombatRange": 30,
+                        "maxFiringRange": 50,
                         "CombatRangeCategory": "Medium",
                         "baseAccuracy": 1,
                         "impactRadiusForFriendlyFire": 0,
@@ -517,6 +490,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -531,6 +505,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -729,6 +704,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -743,6 +719,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -941,6 +918,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -955,6 +933,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -1153,6 +1132,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -1167,6 +1147,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -1365,6 +1346,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -1379,6 +1361,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -1576,12 +1559,14 @@
                                 "scale": 0.75,
                                 "retriggerOnViewModeChange": 0,
                                 "isMuzzleFlash": 0,
+                                "allowConditionReEvaluation": 0,
                                 "firstPerson": {
                                     "path": "b396fe88-aa7e-3725-af9d-2f405d9949c7|Spaceships/Weapons/jokr_distortioncannon_s3.Steam"
                                 },
                                 "thirdPerson": {
                                     "path": "b396fe88-aa7e-3725-af9d-2f405d9949c7|Spaceships/Weapons/jokr_distortioncannon_s3.Steam"
-                                }
+                                },
+                                "effectCondition": []
                             },
                             {
                                 "helper": "vfx_right",
@@ -1591,12 +1576,14 @@
                                 "scale": 0.75,
                                 "retriggerOnViewModeChange": 0,
                                 "isMuzzleFlash": 0,
+                                "allowConditionReEvaluation": 0,
                                 "firstPerson": {
                                     "path": "b396fe88-aa7e-3725-af9d-2f405d9949c7|Spaceships/Weapons/jokr_distortioncannon_s3.Steam"
                                 },
                                 "thirdPerson": {
                                     "path": "b396fe88-aa7e-3725-af9d-2f405d9949c7|Spaceships/Weapons/jokr_distortioncannon_s3.Steam"
-                                }
+                                },
+                                "effectCondition": []
                             }
                         ]
                     },
@@ -1604,7 +1591,7 @@
                         "SWeaponRegenConsumerParams": {
                             "initialRegenPerSec": 0,
                             "requestedRegenPerSec": 1904,
-                            "regenerationCooldown": 0.25,
+                            "regenerationCooldown": 1.68,
                             "regenerationCostPerBullet": 78.6,
                             "requestedAmmoLoad": 11425,
                             "maxAmmoLoad": 25,
@@ -1626,6 +1613,7 @@
                             "aiShootingMode": "Single",
                             "hasReloadModesOnUI": 0,
                             "mode": "Looping",
+                            "misfire": "00000000-0000-0000-0000-000000000000",
                             "mannequinTag": {
                                 "tag": ""
                             },
@@ -1655,6 +1643,7 @@
                                             "wearPerShot": 0,
                                             "recoil": "6a864c94-04e9-4521-bce0-0ddb432107f3",
                                             "misfire": "00000000-0000-0000-0000-000000000000",
+                                            "adaptiveTriggerParams": "00000000-0000-0000-0000-000000000000",
                                             "mannequinTag": {
                                                 "tag": ""
                                             },
@@ -1677,9 +1666,9 @@
                                                     "spreadParams": {
                                                         "min": 0.5,
                                                         "max": 0.5,
-                                                        "firstAttack": 0,
-                                                        "attack": 0,
-                                                        "decay": 0
+                                                        "firstAttack": 0.025,
+                                                        "attack": 0.025,
+                                                        "decay": 0.5
                                                     }
                                                 }
                                             },
@@ -1699,6 +1688,20 @@
                                             "cooldownStopTrigger": {
                                                 "audioTrigger": ""
                                             },
+                                            "NLPCAudioTriggers": {
+                                                "fireAudioTrigger": {
+                                                    "audioTrigger": ""
+                                                },
+                                                "dryFireAudioTrigger": {
+                                                    "audioTrigger": ""
+                                                },
+                                                "cooldownStartTrigger": {
+                                                    "audioTrigger": ""
+                                                },
+                                                "cooldownStopTrigger": {
+                                                    "audioTrigger": ""
+                                                }
+                                            },
                                             "fireEffects": [
                                                 {
                                                     "helper": "barrel_out",
@@ -1708,12 +1711,14 @@
                                                     "scale": 1,
                                                     "retriggerOnViewModeChange": 0,
                                                     "isMuzzleFlash": 0,
+                                                    "allowConditionReEvaluation": 0,
                                                     "firstPerson": {
                                                         "path": "3af39f59-0dff-1525-dd79-e4588bc7e86c|Spaceships/Weapons_Templates/template_laser.template_laser.s1-3_muzzle_1st"
                                                     },
                                                     "thirdPerson": {
                                                         "path": "70bc07e2-3db3-0aea-0a94-e1a8eebe76e0|Spaceships/Weapons_Templates/template_laser.template_laser.s1-3_muzzle"
-                                                    }
+                                                    },
+                                                    "effectCondition": []
                                                 },
                                                 {
                                                     "helper": "vfx_blowback_l",
@@ -1723,12 +1728,14 @@
                                                     "scale": 0.75,
                                                     "retriggerOnViewModeChange": 0,
                                                     "isMuzzleFlash": 0,
+                                                    "allowConditionReEvaluation": 0,
                                                     "firstPerson": {
                                                         "path": "0893c7e5-5bce-60fc-96e5-8599a0c9e334|Spaceships/Weapons_Templates/template_laser.template_laser.vent_s3"
                                                     },
                                                     "thirdPerson": {
                                                         "path": "0893c7e5-5bce-60fc-96e5-8599a0c9e334|Spaceships/Weapons_Templates/template_laser.template_laser.vent_s3"
-                                                    }
+                                                    },
+                                                    "effectCondition": []
                                                 },
                                                 {
                                                     "helper": "vfx_blowback_r",
@@ -1738,12 +1745,14 @@
                                                     "scale": 0.75,
                                                     "retriggerOnViewModeChange": 0,
                                                     "isMuzzleFlash": 0,
+                                                    "allowConditionReEvaluation": 0,
                                                     "firstPerson": {
                                                         "path": "0893c7e5-5bce-60fc-96e5-8599a0c9e334|Spaceships/Weapons_Templates/template_laser.template_laser.vent_s3"
                                                     },
                                                     "thirdPerson": {
                                                         "path": "0893c7e5-5bce-60fc-96e5-8599a0c9e334|Spaceships/Weapons_Templates/template_laser.template_laser.vent_s3"
-                                                    }
+                                                    },
+                                                    "effectCondition": []
                                                 }
                                             ],
                                             "vibrationParams": {
@@ -1791,6 +1800,9 @@
                             "rtpc": "Weapon_Power_Level"
                         },
                         "switchFireModeAudioTrigger": {
+                            "audioTrigger": ""
+                        },
+                        "switchWeaponPresetAudioTrigger": {
                             "audioTrigger": ""
                         },
                         "weaponHeatRTPC": {
@@ -2011,6 +2023,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -2109,11 +2126,12 @@
                 "SEntityPhysicsControllerParams": {
                     "PhysType": {
                         "SEntityRigidPhysicsControllerParams": {
-                            "Mass": 115,
+                            "Mass": 300,
                             "compoundingAllowed": 1,
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -2134,14 +2152,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -2216,16 +2239,20 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [
                         {
                             "Name": "BAR1",
-                            "DisplayName": "Barrel Attachment 1",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2233,6 +2260,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2338,12 +2366,15 @@
                         },
                         {
                             "Name": "MEC",
-                            "DisplayName": "Firing Mechanism Attachment",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2351,6 +2382,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2456,12 +2488,15 @@
                         },
                         {
                             "Name": "POW",
-                            "DisplayName": "Power Array Attachment",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2469,6 +2504,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2574,12 +2610,15 @@
                         },
                         {
                             "Name": "VEN",
-                            "DisplayName": "Ventilation Attachment",
+                            "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 1,
                             "MaxSize": 1,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -2587,6 +2626,7 @@
                             "resourceLinkToParent": 0,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -2718,6 +2758,7 @@
                     },
                     "masterModeExclusionsOverride": []
                 },
+                "SCItemAimableComponentParams": [],
                 "SEntityComponentDefaultLoadoutParams": {
                     "loadout": {
                         "SItemPortLoadoutManualParams": {
@@ -2739,6 +2780,11 @@
                                         "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
                                         "__ref": "66e05cc5-64e5-412b-8620-607f27ba4e5a",
                                         "__path": "libs/foundry/records/entities/scitem/ships/weapons/parts/kron_lasercannon_barrel_s2.xml",
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
                                         "tags": [],
                                         "StaticEntityClassData": {
                                             "DefaultEntitlementEntityParams": {
@@ -2871,6 +2917,11 @@
                                                 "rootOverridePaint": 0,
                                                 "inheritModelTagFromHost": 1,
                                                 "ModelTag": [],
+                                                "meshsetup": {
+                                                    "visibilityTags": {
+                                                        "tags": []
+                                                    }
+                                                },
                                                 "Geometry": {
                                                     "Tags": "",
                                                     "ScaleMultiplier": 1,
@@ -2952,6 +3003,7 @@
                                                         "chargeTimeMultiplier": 1,
                                                         "useAlternateProjectileVisuals": 0,
                                                         "useAugmentedRealityProjectiles": 0,
+                                                        "disableMisfire": 0,
                                                         "recoilModifier": {
                                                             "decayMultiplier": 1,
                                                             "endDecayMultiplier": 1,
@@ -2966,6 +3018,7 @@
                                                             "frontalOscillationDecayMultiplier": 1,
                                                             "frontalOscillationRandomnessMultiplier": 1,
                                                             "animatedRecoilMultiplier": 1,
+                                                            "disableRecoil": 0,
                                                             "headRotationMultiplier": {
                                                                 "x": 1,
                                                                 "y": 1,
@@ -3206,6 +3259,7 @@
                                                         "spawnBoxScale": 0.5,
                                                         "maxLoggedCollisions": 1,
                                                         "Damping": 0.01,
+                                                        "DampingZeroG": 0.01,
                                                         "DampingFreefall": 0.05,
                                                         "PushableByPlayers": 1,
                                                         "NeverAffectTriggers": 0,
@@ -3226,14 +3280,19 @@
                                                         "temperature": {
                                                             "enable": 0,
                                                             "initialTemperature": -1,
-                                                            "coolingEqualizationMultiplier": 1,
                                                             "internalTemperatureGeneration": 0,
+                                                            "coolingEqualizationParams": {
+                                                                "CoolingEqualizationMultiplier": {
+                                                                    "coolingEqualizationMultiplier": 1
+                                                                }
+                                                            },
                                                             "signatureParams": {
                                                                 "enable": 0,
                                                                 "minimumTemperatureForIR": 250,
                                                                 "temperatureToIR": 6
                                                             },
                                                             "itemResourceParams": {
+                                                                "poweredAmbientCoolingMultiplier": 1,
                                                                 "minOperatingTemperature": 0,
                                                                 "minCoolingTemperature": 300,
                                                                 "enableOverheat": 0,
@@ -3276,6 +3335,11 @@
                                         "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
                                         "__ref": "5bccf5df-dd6d-496b-8845-452782ef2dd7",
                                         "__path": "libs/foundry/records/entities/scitem/ships/weapons/parts/kron_lasercannon_firingmechanism_s2.xml",
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
                                         "tags": [],
                                         "StaticEntityClassData": {
                                             "DefaultEntitlementEntityParams": {
@@ -3408,6 +3472,11 @@
                                                 "rootOverridePaint": 0,
                                                 "inheritModelTagFromHost": 1,
                                                 "ModelTag": [],
+                                                "meshsetup": {
+                                                    "visibilityTags": {
+                                                        "tags": []
+                                                    }
+                                                },
                                                 "Geometry": {
                                                     "Tags": "",
                                                     "ScaleMultiplier": 1,
@@ -3489,6 +3558,7 @@
                                                         "chargeTimeMultiplier": 1,
                                                         "useAlternateProjectileVisuals": 0,
                                                         "useAugmentedRealityProjectiles": 0,
+                                                        "disableMisfire": 0,
                                                         "recoilModifier": {
                                                             "decayMultiplier": 1,
                                                             "endDecayMultiplier": 1,
@@ -3503,6 +3573,7 @@
                                                             "frontalOscillationDecayMultiplier": 1,
                                                             "frontalOscillationRandomnessMultiplier": 1,
                                                             "animatedRecoilMultiplier": 1,
+                                                            "disableRecoil": 0,
                                                             "headRotationMultiplier": {
                                                                 "x": 1,
                                                                 "y": 1,
@@ -3721,6 +3792,7 @@
                                                         "spawnBoxScale": 0.5,
                                                         "maxLoggedCollisions": 1,
                                                         "Damping": 0.01,
+                                                        "DampingZeroG": 0.01,
                                                         "DampingFreefall": 0.05,
                                                         "PushableByPlayers": 1,
                                                         "NeverAffectTriggers": 0,
@@ -3741,14 +3813,19 @@
                                                         "temperature": {
                                                             "enable": 0,
                                                             "initialTemperature": -1,
-                                                            "coolingEqualizationMultiplier": 1,
                                                             "internalTemperatureGeneration": 0,
+                                                            "coolingEqualizationParams": {
+                                                                "CoolingEqualizationMultiplier": {
+                                                                    "coolingEqualizationMultiplier": 1
+                                                                }
+                                                            },
                                                             "signatureParams": {
                                                                 "enable": 0,
                                                                 "minimumTemperatureForIR": 250,
                                                                 "temperatureToIR": 6
                                                             },
                                                             "itemResourceParams": {
+                                                                "poweredAmbientCoolingMultiplier": 1,
                                                                 "minOperatingTemperature": 0,
                                                                 "minCoolingTemperature": 300,
                                                                 "enableOverheat": 0,
@@ -3791,6 +3868,11 @@
                                         "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
                                         "__ref": "e758aeb5-3ecc-42f4-8f21-d87e476f97a5",
                                         "__path": "libs/foundry/records/entities/scitem/ships/weapons/parts/kron_lasercannon_powerarray_s2.xml",
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
                                         "tags": [],
                                         "StaticEntityClassData": {
                                             "DefaultEntitlementEntityParams": {
@@ -3923,6 +4005,11 @@
                                                 "rootOverridePaint": 0,
                                                 "inheritModelTagFromHost": 1,
                                                 "ModelTag": [],
+                                                "meshsetup": {
+                                                    "visibilityTags": {
+                                                        "tags": []
+                                                    }
+                                                },
                                                 "Geometry": {
                                                     "Tags": "",
                                                     "ScaleMultiplier": 1,
@@ -4004,6 +4091,7 @@
                                                         "chargeTimeMultiplier": 1,
                                                         "useAlternateProjectileVisuals": 0,
                                                         "useAugmentedRealityProjectiles": 0,
+                                                        "disableMisfire": 0,
                                                         "recoilModifier": {
                                                             "decayMultiplier": 1,
                                                             "endDecayMultiplier": 1,
@@ -4018,6 +4106,7 @@
                                                             "frontalOscillationDecayMultiplier": 1,
                                                             "frontalOscillationRandomnessMultiplier": 1,
                                                             "animatedRecoilMultiplier": 1,
+                                                            "disableRecoil": 0,
                                                             "headRotationMultiplier": {
                                                                 "x": 1,
                                                                 "y": 1,
@@ -4236,6 +4325,7 @@
                                                         "spawnBoxScale": 0.5,
                                                         "maxLoggedCollisions": 1,
                                                         "Damping": 0.01,
+                                                        "DampingZeroG": 0.01,
                                                         "DampingFreefall": 0.05,
                                                         "PushableByPlayers": 1,
                                                         "NeverAffectTriggers": 0,
@@ -4256,14 +4346,19 @@
                                                         "temperature": {
                                                             "enable": 0,
                                                             "initialTemperature": -1,
-                                                            "coolingEqualizationMultiplier": 1,
                                                             "internalTemperatureGeneration": 0,
+                                                            "coolingEqualizationParams": {
+                                                                "CoolingEqualizationMultiplier": {
+                                                                    "coolingEqualizationMultiplier": 1
+                                                                }
+                                                            },
                                                             "signatureParams": {
                                                                 "enable": 0,
                                                                 "minimumTemperatureForIR": 250,
                                                                 "temperatureToIR": 6
                                                             },
                                                             "itemResourceParams": {
+                                                                "poweredAmbientCoolingMultiplier": 1,
                                                                 "minOperatingTemperature": 0,
                                                                 "minCoolingTemperature": 300,
                                                                 "enableOverheat": 0,
@@ -4306,6 +4401,11 @@
                                         "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
                                         "__ref": "1f61bf1c-7a75-474b-9cfb-bca7be7202c9",
                                         "__path": "libs/foundry/records/entities/scitem/ships/weapons/parts/kron_lasercannon_ventilation_s2.xml",
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
                                         "tags": [],
                                         "StaticEntityClassData": {
                                             "DefaultEntitlementEntityParams": {
@@ -4438,6 +4538,11 @@
                                                 "rootOverridePaint": 0,
                                                 "inheritModelTagFromHost": 1,
                                                 "ModelTag": [],
+                                                "meshsetup": {
+                                                    "visibilityTags": {
+                                                        "tags": []
+                                                    }
+                                                },
                                                 "Geometry": {
                                                     "Tags": "",
                                                     "ScaleMultiplier": 1,
@@ -4519,6 +4624,7 @@
                                                         "chargeTimeMultiplier": 1,
                                                         "useAlternateProjectileVisuals": 0,
                                                         "useAugmentedRealityProjectiles": 0,
+                                                        "disableMisfire": 0,
                                                         "recoilModifier": {
                                                             "decayMultiplier": 1,
                                                             "endDecayMultiplier": 1,
@@ -4533,6 +4639,7 @@
                                                             "frontalOscillationDecayMultiplier": 1,
                                                             "frontalOscillationRandomnessMultiplier": 1,
                                                             "animatedRecoilMultiplier": 1,
+                                                            "disableRecoil": 0,
                                                             "headRotationMultiplier": {
                                                                 "x": 1,
                                                                 "y": 1,
@@ -4751,6 +4858,7 @@
                                                         "spawnBoxScale": 0.5,
                                                         "maxLoggedCollisions": 1,
                                                         "Damping": 0.01,
+                                                        "DampingZeroG": 0.01,
                                                         "DampingFreefall": 0.05,
                                                         "PushableByPlayers": 1,
                                                         "NeverAffectTriggers": 0,
@@ -4771,14 +4879,19 @@
                                                         "temperature": {
                                                             "enable": 0,
                                                             "initialTemperature": -1,
-                                                            "coolingEqualizationMultiplier": 1,
                                                             "internalTemperatureGeneration": 0,
+                                                            "coolingEqualizationParams": {
+                                                                "CoolingEqualizationMultiplier": {
+                                                                    "coolingEqualizationMultiplier": 1
+                                                                }
+                                                            },
                                                             "signatureParams": {
                                                                 "enable": 0,
                                                                 "minimumTemperatureForIR": 250,
                                                                 "temperatureToIR": 6
                                                             },
                                                             "itemResourceParams": {
+                                                                "poweredAmbientCoolingMultiplier": 1,
                                                                 "minOperatingTemperature": 0,
                                                                 "minCoolingTemperature": 300,
                                                                 "enableOverheat": 0,
@@ -4841,7 +4954,7 @@
                             "linkedInteractionStates": [],
                             "signatureParams": {
                                 "EMSignature": {
-                                    "nominalSignature": 0,
+                                    "nominalSignature": 545,
                                     "decayRate": 0.15,
                                     "functionalityCurve": []
                                 },
@@ -4851,13 +4964,34 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 32,
+                        "healthRatio": 0.2
+                    }
                 },
                 "InteriorMapEntityVisiblityEntityComponentParams": {
                     "show": 1
@@ -4877,6 +5011,7 @@
         "grade": 1,
         "name": "FL-22 Cannon",
         "tags": "KRON DistortionCannon flightReady weaponMountUsable",
+        "required_tags": "",
         "manufacturer": "KRON",
         "classification": "Ship.Weapon.Gun",
         "stdItem": {
@@ -4890,9 +5025,16 @@
             "Type": "WeaponGun.Gun",
             "Name": "FL-22 Cannon",
             "Description": "Manufacturer: Kroneg\\nItem Type: Laser Cannon\\nSize: 2\\n\\nDeliver massive damage from a distance with Kroneg's FL line of laser cannons. The size two FL-22 shines at medium and long ranges thanks to a design that minimizes damage falloff.",
+            "DescriptionData": {
+                "Manufacturer": "Kroneg",
+                "Item Type": "Laser Cannon",
+                "Size": "2"
+            },
+            "DescriptionText": "Deliver massive damage from a distance with Kroneg's FL line of laser cannons. The size two FL-22 shines at medium and long ranges thanks to a design that minimizes damage falloff.",
             "Manufacturer": {
                 "Code": "KRON",
-                "Name": "Kroneg"
+                "Name": "Kroneg",
+                "UUID": "2a64f92e-8f6d-47ac-a6ed-643465e91d4b"
             },
             "Tags": [
                 "KRON",
@@ -4904,33 +5046,77 @@
                 {
                     "PortName": "BAR1",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Barrel"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Barrel"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "66e05cc5-64e5-412b-8620-607f27ba4e5a",
                     "Uneditable": false
                 },
                 {
                     "PortName": "MEC",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.FiringMechanism"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "FiringMechanism"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "5bccf5df-dd6d-496b-8845-452782ef2dd7",
                     "Uneditable": false
                 },
                 {
                     "PortName": "POW",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.PowerArray"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "PowerArray"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "e758aeb5-3ecc-42f4-8f21-d87e476f97a5",
                     "Uneditable": false
                 },
                 {
                     "PortName": "VEN",
                     "Size": 1,
+                    "MinSize": 1,
+                    "MaxSize": 1,
                     "Types": [
-                        "WeaponAttachment"
+                        "WeaponAttachment.Ventilation"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "WeaponAttachment",
+                            "sub_types": [
+                                "Ventilation"
+                            ]
+                        }
+                    ],
+                    "EquippedItem": "1f61bf1c-7a75-474b-9cfb-bca7be7202c9",
                     "Uneditable": false
                 }
             ],
@@ -4955,8 +5141,40 @@
                 "Length": 2.25,
                 "Height": 0.75
             },
+            "Distortion": {
+                "DecayDelay": 0,
+                "DecayRate": 500000,
+                "Maximum": 500000,
+                "WarningRatio": 0.75,
+                "RecoveryRatio": 0,
+                "PowerRatioAtMaxDistortion": 0,
+                "PowerChangeOnlyAtMaxDistortion": 0
+            },
             "Durability": {
-                "Health": 850
+                "Health": 850,
+                "Salvageable": 1,
+                "Repairable": 1
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 1.2,
+                                "MinimumFraction": 0
+                            }
+                        ],
+                        "Signature": {
+                            "EM": 545
+                        }
+                    }
+                ]
             },
             "Weapon": {
                 "Modes": [
@@ -4991,7 +5209,7 @@
                     "InitialRegenPerSec": 0,
                     "RequestedRegenPerSec": 1904,
                     "RequestedAmmoLoad": 11425,
-                    "Cooldown": 0.25,
+                    "Cooldown": 1.68,
                     "CostPerBullet": 78.6
                 }
             }

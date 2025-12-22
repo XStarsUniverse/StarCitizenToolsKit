@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "7b3e9ad7-45f2-4ee5-b17a-8b8b8bb0112c",
             "__path": "libs/foundry/records/entities/scitem/weapons/weapon_modifier/behr_binoculars_01_fakeoptic_collector.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "b97f2439-cde7-45f9-acc3-5eab75b0f84c"
@@ -188,6 +193,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 1,
                                 "endDecayMultiplier": 1,
@@ -202,6 +208,7 @@
                                 "frontalOscillationDecayMultiplier": 1,
                                 "frontalOscillationRandomnessMultiplier": 1,
                                 "animatedRecoilMultiplier": 1,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 1,
                                     "y": 1,
@@ -426,6 +433,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -585,6 +597,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -605,14 +618,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -657,6 +675,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -698,6 +717,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -739,6 +759,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -768,6 +789,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -809,6 +831,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -829,6 +852,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1064,6 +1088,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1205,6 +1231,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -1519,6 +1546,7 @@
                     },
                     "carryableSequences": []
                 },
+                "SPersistentComponentParams": [],
                 "UIOwnerEntityComponentParams": {
                     "startOpen": 1,
                     "areScreens3D": 0,
@@ -1572,7 +1600,8 @@
                                     "name": "Default",
                                     "component": {
                                         "canvas": "54728b94-ae12-4b4d-97af-b329541f69cb",
-                                        "isSystemViewInstance": 0
+                                        "isSystemViewInstance": 0,
+                                        "canvasInstantiationMode": "RootDeferred"
                                     }
                                 }
                             }
@@ -1584,6 +1613,7 @@
                     "UIAudioDef": "5f1775eb-5767-4756-8127-e1e9ffbaed87",
                     "useEntityClass": "00000000-0000-0000-0000-000000000000",
                     "dialogueContext": "00000000-0000-0000-0000-000000000000",
+                    "bypassRealisticMode": 0,
                     "UIAudioManufacturers": [],
                     "offset": [],
                     "videoAudioPlayTrigger": {
@@ -1599,6 +1629,7 @@
                         "audioTrigger": ""
                     }
                 },
+                "SAudioProxyParams": [],
                 "UIBindingsVendorEntityComponentParams": {
                     "namespace": ""
                 },
@@ -1630,6 +1661,7 @@
         "grade": 1,
         "name": "EE16 (16x Telescopic)",
         "tags": "",
+        "required_tags": "",
         "manufacturer": "BEH",
         "classification": "FPS.WeaponAttachment.IronSight",
         "stdItem": {
@@ -1643,15 +1675,33 @@
             "Type": "WeaponAttachment.IronSight",
             "Name": "EE16 (16x Telescopic)",
             "Description": "Manufacturer: Behring\\nType: Telescopic  \\nAttachment Point: Optic\\nMagnification: 16x\\nAim Time: +0%\\nSize: S3\\n\\nGet a clear view of your target from afar with the EE16. Behring craftsmanship produced a 16x scope that's lightweight, durable, and deadly accurate. A rigorous 22-step testing process ensures the EE16 can deliver precision targeting even after encountering extreme weather or surviving battlefield wear and tear.",
+            "DescriptionData": {
+                "Manufacturer": "Behring",
+                "Type": "Telescopic",
+                "Attachment Point": "Optic",
+                "Magnification": "16x",
+                "Size": "S3"
+            },
+            "DescriptionText": "Get a clear view of your target from afar with the EE16. Behring craftsmanship produced a 16x scope that's lightweight, durable, and deadly accurate. A rigorous 22-step testing process ensures the EE16 can deliver precision targeting even after encountering extreme weather or surviving battlefield wear and tear.",
             "Manufacturer": {
                 "Code": "BEH",
-                "Name": "Behring"
+                "Name": "Behring",
+                "UUID": "65a5d887-3b21-4046-a718-6912c0c7c3be"
             },
             "DimensionOverrides": {
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

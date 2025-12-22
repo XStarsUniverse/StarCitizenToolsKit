@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "e5382652-80ce-4e07-8a66-d267c4e17ad2",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_starlifter_fleetweek_gold.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Hercules Starlifter Draco Livery",
         "tags": "Paint_Starlifter @Paint_Starlifter_FW_Gold",
+        "required_tags": "Paint_Starlifter",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Hercules Starlifter Draco Livery",
             "Description": "Customize your Hercules Starlifter with the exquisite Draco livery that's gold with black highlights.",
+            "DescriptionText": "Customize your Hercules Starlifter with the exquisite Draco livery that's gold with black highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "7abf1921-dcb8-4b6d-b5b5-ec36954cef87"
             },
             "Tags": [
                 "Paint_Starlifter",

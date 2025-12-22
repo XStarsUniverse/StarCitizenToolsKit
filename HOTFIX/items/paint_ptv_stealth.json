@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "14493997-2f6e-4ea5-b3d1-a9a5c0f6143a",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_ptv_stealth.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "PTV Tactical Stealth Livery",
         "tags": "GRIN_PTV_Base GRIN_PTV PTV_Paint @ptv_paint_stealth",
+        "required_tags": "",
         "manufacturer": "GRIN",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "PTV Tactical Stealth Livery",
             "Description": "The Tactical Stealth livery uses a near zero gloss paint that incorporates a catalyzed urethane process for unsurpassed durability making it highly resistant to UV rays, chemicals and chips.",
+            "DescriptionText": "The Tactical Stealth livery uses a near zero gloss paint that incorporates a catalyzed urethane process for unsurpassed durability making it highly resistant to UV rays, chemicals and chips.",
             "Manufacturer": {
                 "Code": "GRIN",
-                "Name": "Greycat Industrial"
+                "Name": "Greycat Industrial",
+                "UUID": "819545f4-18af-49a6-814e-ca4fd08f56e5"
             },
             "Tags": [
                 "GRIN_PTV_Base",

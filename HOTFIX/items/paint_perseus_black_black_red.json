@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "5cc6fca4-c1ef-473e-83dc-d8e8d3812af0",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_perseus_black_black_red.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -103,6 +108,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -278,6 +288,7 @@
         "grade": 1,
         "name": "Perseus Deadfire Livery",
         "tags": "Paint_Perseus @Paint_Perseus_Black_Black_Red",
+        "required_tags": "Paint_Perseus",
         "classification": "Ship.Paints",
         "stdItem": {
             "UUID": "5cc6fca4-c1ef-473e-83dc-d8e8d3812af0",
@@ -290,6 +301,12 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Perseus Deadfire Livery",
             "Description": "Maintain your cover and an air of mystique with the Deadfire livery with its inky black base paint and red highlights.",
+            "DescriptionText": "Maintain your cover and an air of mystique with the Deadfire livery with its inky black base paint and red highlights.",
+            "Manufacturer": {
+                "Name": "Unknown Manufacturer",
+                "Code": "UNKN",
+                "UUID": "00000000-0000-0000-0000-000000000000"
+            },
             "Tags": [
                 "Paint_Perseus",
                 "@Paint_Perseus_Black_Black_Red"

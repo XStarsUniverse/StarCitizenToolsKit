@@ -8,6 +8,11 @@
             "entityDensityClass": "41d1b328-7a76-41dc-8c6d-76d9b8249969",
             "__ref": "678aae5b-0d55-42fb-bfe2-ce9973715529",
             "__path": "libs/foundry/records/entities/scitem/weapons/weapon_modifier/arma_barrel_flhd_s3.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "b97f2439-cde7-45f9-acc3-5eab75b0f84c"
@@ -197,6 +202,7 @@
                             "chargeTimeMultiplier": 1,
                             "useAlternateProjectileVisuals": 0,
                             "useAugmentedRealityProjectiles": 0,
+                            "disableMisfire": 0,
                             "recoilModifier": {
                                 "decayMultiplier": 0.85,
                                 "endDecayMultiplier": 0.85,
@@ -211,6 +217,7 @@
                                 "frontalOscillationDecayMultiplier": 0.85,
                                 "frontalOscillationRandomnessMultiplier": 0.85,
                                 "animatedRecoilMultiplier": 0.85,
+                                "disableRecoil": 0,
                                 "headRotationMultiplier": {
                                     "x": 0.85,
                                     "y": 0.85,
@@ -414,12 +421,14 @@
                             "scale": 1,
                             "retriggerOnViewModeChange": 0,
                             "isMuzzleFlash": 0,
+                            "allowConditionReEvaluation": 0,
                             "firstPerson": {
                                 "path": "e5343888-a9fe-a667-8f8a-51177c232c93|FPS_Weapons/Attachments/arma_barrel_flhd_s1-3.flash_hider_s1-3"
                             },
                             "thirdPerson": {
                                 "path": "e5343888-a9fe-a667-8f8a-51177c232c93|FPS_Weapons/Attachments/arma_barrel_flhd_s1-3.flash_hider_s1-3"
-                            }
+                            },
+                            "effectCondition": []
                         },
                         {
                             "helper": "vfx_muzzle_flash_R",
@@ -429,12 +438,14 @@
                             "scale": 1,
                             "retriggerOnViewModeChange": 0,
                             "isMuzzleFlash": 0,
+                            "allowConditionReEvaluation": 0,
                             "firstPerson": {
                                 "path": "e5343888-a9fe-a667-8f8a-51177c232c93|FPS_Weapons/Attachments/arma_barrel_flhd_s1-3.flash_hider_s1-3"
                             },
                             "thirdPerson": {
                                 "path": "e5343888-a9fe-a667-8f8a-51177c232c93|FPS_Weapons/Attachments/arma_barrel_flhd_s1-3.flash_hider_s1-3"
-                            }
+                            },
+                            "effectCondition": []
                         }
                     ],
                     "beamEffect": [],
@@ -448,6 +459,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -607,6 +623,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 1,
                             "Damping": 0.01,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 1,
                             "NeverAffectTriggers": 0,
@@ -627,14 +644,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -679,6 +701,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -720,6 +743,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -761,6 +785,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -790,6 +815,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [
                                         {
@@ -831,6 +857,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -851,6 +878,7 @@
                                     "enterStateEffectTags": [],
                                     "exitStateEffectTags": [],
                                     "EnterEventDispatchers": [],
+                                    "ExitEventDispatchers": [],
                                     "StateAutoChange": [],
                                     "Interactions": [],
                                     "interactionPoints": [],
@@ -1086,6 +1114,8 @@
                                 "TextScale": 1,
                                 "ShowInteractionTextAtCursorPos": 0,
                                 "ScalePromptOffsetWithEntity": 0,
+                                "PromptStyle": "PromptAndText",
+                                "OverrideControlHintDescription": 0,
                                 "InteractionPromptScale": 1,
                                 "InteractionPromptLabelVerticalOffset": 70,
                                 "InteractionPromptBound": "TopBoundingBoxZSurface",
@@ -1227,6 +1257,7 @@
                     "interactionPointToMoveOnEquip": "null",
                     "ikInteractionsRecord": "00000000-0000-0000-0000-000000000000",
                     "canBeCarriedInProne": 1,
+                    "disableRotation": 0,
                     "carryableStatesParams": {
                         "settledState": "StateTypes.SInteractionStateType.States[0]",
                         "carriedState": "StateTypes.SInteractionStateType.States[1]",
@@ -1541,6 +1572,7 @@
                     },
                     "carryableSequences": []
                 },
+                "SPersistentComponentParams": [],
                 "SEntityComponentEffects": {
                     "entityEffects": {
                         "particleEffects": [],
@@ -1571,6 +1603,7 @@
         "grade": 1,
         "name": "Veil Flash Hider3",
         "tags": "FPS_Barrel ballistic_attach energy_attach",
+        "required_tags": "",
         "manufacturer": "ARMA",
         "classification": "Ship.WeaponAttachment.Barrel",
         "stdItem": {
@@ -1584,9 +1617,17 @@
             "Type": "WeaponAttachment.Barrel",
             "Name": "Veil Flash Hider3",
             "Description": "Manufacturer: ArmaMod\\nType: Flash Hider\\nAttachment Point: Barrel\\nSize: 3\\n\\nRecoil Stability: +15%\\nRecoil Smoothness: +15%\\n\\nThe Veil Flash Hider3 is an S3 flash hider from ArmaMod. Designed to reduce muzzle flash, it will help keep your position hidden once the action begins.",
+            "DescriptionData": {
+                "Manufacturer": "ArmaMod",
+                "Type": "Flash Hider",
+                "Attachment Point": "Barrel",
+                "Size": "3"
+            },
+            "DescriptionText": "The Veil Flash Hider3 is an S3 flash hider from ArmaMod. Designed to reduce muzzle flash, it will help keep your position hidden once the action begins.",
             "Manufacturer": {
                 "Code": "ARMA",
-                "Name": "ArmaMod"
+                "Name": "ArmaMod",
+                "UUID": "f2ca879c-deb6-49bf-a4b1-dc3a9cf91e7a"
             },
             "Tags": [
                 "FPS_Barrel",
@@ -1597,7 +1638,16 @@
                 "Width": 0.75,
                 "Length": 0.75,
                 "Height": 0.75
-            }
+            },
+            "Interactions": [
+                "Carry",
+                "Drop",
+                "Inspect",
+                "Place",
+                "Store",
+                "Offhandstore",
+                "Equiptoweapon"
+            ]
         }
     }
 }

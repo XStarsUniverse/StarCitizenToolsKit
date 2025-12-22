@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "80cf5c5f-067f-4608-96d2-fd9e5f66d2ad",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_starlifter_fleetweek_green_orange.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Hercules Starlifter Timberline Livery",
         "tags": "Paint_Starlifter @Paint_Starlifter_FW_Green_Orange",
+        "required_tags": "Paint_Starlifter",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Hercules Starlifter Timberline Livery",
             "Description": "Customize your Hercules Starlifter with the Timberline livery that's olive green with orange accents.",
+            "DescriptionText": "Customize your Hercules Starlifter with the Timberline livery that's olive green with orange accents.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Ace Astrogation"
+                "Name": "Ace Astrogation",
+                "UUID": "54b6de34-263d-439b-bbad-fc65a7f43c76"
             },
             "Tags": [
                 "Paint_Starlifter",

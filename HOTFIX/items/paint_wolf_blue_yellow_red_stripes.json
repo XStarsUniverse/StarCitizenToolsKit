@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "c3e7a9e5-9782-4fdb-849f-86f8eb40e1a0",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_wolf_blue_yellow_red_stripes.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Wolf Heatsink Livery",
         "tags": "Paint_Wolf @Paint_Wolf_Blue_Yellow_Red_Stripes",
+        "required_tags": "Paint_Wolf",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Wolf Heatsink Livery",
             "Description": "The Heatsink livery features a two-tone striped blue base paint with bold yellow and red highlights.",
+            "DescriptionText": "The Heatsink livery features a two-tone striped blue base paint with bold yellow and red highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "1229df54-6392-4f0e-9b38-092a5a67cc55"
             },
             "Tags": [
                 "Paint_Wolf",

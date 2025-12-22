@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "daeea277-f1d1-4a81-ab17-4753eb7cc11a",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_star_runner_silver_spark_grey_yellow.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Mercury Star Runner Silver Spark Livery",
         "tags": "Paint_Star_Runner @Paint_Star_Runner_Silver_Spark_Grey_Yellow",
+        "required_tags": "Paint_Star_Runner",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Mercury Star Runner Silver Spark Livery",
             "Description": "Emphasize the special shape of the Mercury Star Runner with the Silver Spark livery featuring yellow highlights expertly integrated into the grey and black paint scheme.",
+            "DescriptionText": "Emphasize the special shape of the Mercury Star Runner with the Silver Spark livery featuring yellow highlights expertly integrated into the grey and black paint scheme.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Crusader Industries"
+                "Name": "Crusader Industries",
+                "UUID": "ba42353a-8f9f-4fb2-807d-dd1dcdd5535b"
             },
             "Tags": [
                 "Paint_Star_Runner",

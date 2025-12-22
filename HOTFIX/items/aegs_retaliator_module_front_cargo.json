@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "4cd10ac0-2c15-4753-9284-fafe5e8fa7db",
             "__path": "libs/foundry/records/entities/scitem/ships/module/aegs/aegs_retaliator_module_front_cargo.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": [],
             "Components": {
@@ -141,6 +146,11 @@
                     "rootOverridePaint": 1,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -205,6 +215,7 @@
                             "spawnBoxScale": 0.5,
                             "maxLoggedCollisions": 2,
                             "Damping": 0,
+                            "DampingZeroG": 0.01,
                             "DampingFreefall": 0.05,
                             "PushableByPlayers": 0,
                             "NeverAffectTriggers": 0,
@@ -225,14 +236,19 @@
                             "temperature": {
                                 "enable": 0,
                                 "initialTemperature": -1,
-                                "coolingEqualizationMultiplier": 1,
                                 "internalTemperatureGeneration": 0,
+                                "coolingEqualizationParams": {
+                                    "CoolingEqualizationMultiplier": {
+                                        "coolingEqualizationMultiplier": 1
+                                    }
+                                },
                                 "signatureParams": {
                                     "enable": 0,
                                     "minimumTemperatureForIR": 250,
                                     "temperatureToIR": 6
                                 },
                                 "itemResourceParams": {
+                                    "poweredAmbientCoolingMultiplier": 1,
                                     "minOperatingTemperature": 0,
                                     "minCoolingTemperature": 300,
                                     "enableOverheat": 0,
@@ -280,6 +296,7 @@
                     "ExplosionBone": "",
                     "IsSalvagable": 1,
                     "IsRepairable": 1,
+                    "SalvageDamageModifier": 1,
                     "MirrorSalvageHit": 0,
                     "DisableMaterialDamage": 0,
                     "alwaysPropagateHitToParent": 0,
@@ -327,7 +344,7 @@
                     "DeathGasComposition": [],
                     "InteractionLocks": [],
                     "sequencerTasks": [],
-                    "shatterDestroyEvent": [],
+                    "maelstromEvents": [],
                     "craftingData": []
                 },
                 "SItemPortContainerComponentParams": {
@@ -336,23 +353,28 @@
                     "RequiredItemTags": "",
                     "LinkAllItemsToResourceNetwork": 0,
                     "cheatResourceNetworkUpdate": 0,
+                    "doorsIgnorePower": 0,
                     "masterController": [],
                     "Ports": [
                         {
                             "Name": "hardpoint_module_oc",
                             "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "",
-                            "MinSize": 0,
-                            "MaxSize": 0,
+                            "PropagateOnAttachTagsToHierarchy": 0,
+                            "MinSize": 4,
+                            "MaxSize": 4,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
                             "controllableTag": "",
-                            "resourceLinkToParent": 0,
+                            "resourceLinkToParent": 1,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -450,11 +472,14 @@
                         {
                             "Name": "hardpoint_front_cargo_lift",
                             "DisplayName": "",
+                            "__DisplayName": "@LOC_EMPTY",
                             "PortTags": "",
                             "RequiredPortTags": "",
                             "Flags": "uneditable",
+                            "PropagateOnAttachTagsToHierarchy": 0,
                             "MinSize": 0,
                             "MaxSize": 0,
+                            "MaxAggregateAttachmentHeight": -1,
                             "gridBehavior": "Both",
                             "InteractionPointSize": -1,
                             "DefaultWeaponGroup": "UNDEFINED",
@@ -462,6 +487,7 @@
                             "resourceLinkToParent": 1,
                             "useHelperAsInteractionPointName": 0,
                             "Tags": [],
+                            "OnAttachTags": [],
                             "defaultItem": {
                                 "itemPort": "",
                                 "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -596,6 +622,11 @@
                                         "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
                                         "__ref": "f7784f3b-865a-45d0-9aad-395cbdacc378",
                                         "__path": "libs/foundry/records/entities/scitem/ships/objectcontainers/aegs_retaliator_oc_front_cargo.xml",
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
                                         "tags": [],
                                         "StaticEntityClassData": [],
                                         "Components": {
@@ -680,6 +711,11 @@
                                                 "rootOverridePaint": 0,
                                                 "inheritModelTagFromHost": 1,
                                                 "ModelTag": [],
+                                                "meshsetup": {
+                                                    "visibilityTags": {
+                                                        "tags": []
+                                                    }
+                                                },
                                                 "Geometry": {
                                                     "Tags": "",
                                                     "ScaleMultiplier": 1,
@@ -738,7 +774,8 @@
                                             },
                                             "SStreamingObjectContainerComponentParams": {
                                                 "objectContainer": "ObjectContainers/Ships/AEGS/Retaliator/Modules/Front/front_cargo_module.socpak"
-                                            }
+                                            },
+                                            "SSuperGUIDComponentParams": []
                                         }
                                     }
                                 },
@@ -756,7 +793,16 @@
                                         "entityDensityClass": "00000000-0000-0000-0000-000000000000",
                                         "__ref": "d2dd78a7-511e-43c5-b0a2-ecc056f8e642",
                                         "__path": "libs/foundry/records/entities/scitem/doors/door_rn_roomconnector_breachable_openclose_aegs_retaliator_front_module_lift.xml",
-                                        "tags": [],
+                                        "defaultEditorColor": {
+                                            "r": 1,
+                                            "g": 1,
+                                            "b": 0
+                                        },
+                                        "tags": {
+                                            "Reference": {
+                                                "value": "5132c9bc-475d-4afc-a146-a778cb410717"
+                                            }
+                                        },
                                         "StaticEntityClassData": [],
                                         "Components": {
                                             "SAttachableComponentParams": {
@@ -774,8 +820,8 @@
                                                     "ignoredAttachAxis": "None",
                                                     "attachCheckCenterOfMass": 0,
                                                     "Localization": {
-                                                        "Name": "<= PLACEHOLDER =>",
-                                                        "__Name": "@LOC_PLACEHOLDER",
+                                                        "Name": "Door",
+                                                        "__Name": "@item_TypeDoor",
                                                         "ShortName": "",
                                                         "__ShortName": "@LOC_EMPTY",
                                                         "Description": "",
@@ -801,7 +847,7 @@
                                                         },
                                                         "English": {
                                                             "Locale": "english",
-                                                            "Name": "<= PLACEHOLDER =>",
+                                                            "Name": "Door",
                                                             "ShortName": "",
                                                             "Description": ""
                                                         }
@@ -863,6 +909,11 @@
                                                                     "entityDensityClass": "00000000-0000-0000-0000-000000000000",
                                                                     "__ref": "85330907-ff0d-4ddf-9b8d-5e1ee6e28a5e",
                                                                     "__path": "libs/foundry/records/entities/scitem/ships/cargogrid/aegs/retaliator/aegs_retaliator_cargogrid_front_main.xml",
+                                                                    "defaultEditorColor": {
+                                                                        "r": 1,
+                                                                        "g": 1,
+                                                                        "b": 0
+                                                                    },
                                                                     "tags": [],
                                                                     "StaticEntityClassData": [],
                                                                     "Components": {
@@ -950,6 +1001,7 @@
                                                                                     "spawnBoxScale": 0.5,
                                                                                     "maxLoggedCollisions": 1,
                                                                                     "Damping": 0.01,
+                                                                                    "DampingZeroG": 0.01,
                                                                                     "DampingFreefall": 0.05,
                                                                                     "PushableByPlayers": 1,
                                                                                     "NeverAffectTriggers": 0,
@@ -970,14 +1022,19 @@
                                                                                     "temperature": {
                                                                                         "enable": 0,
                                                                                         "initialTemperature": -1,
-                                                                                        "coolingEqualizationMultiplier": 1,
                                                                                         "internalTemperatureGeneration": 0,
+                                                                                        "coolingEqualizationParams": {
+                                                                                            "CoolingEqualizationMultiplier": {
+                                                                                                "coolingEqualizationMultiplier": 1
+                                                                                            }
+                                                                                        },
                                                                                         "signatureParams": {
                                                                                             "enable": 0,
                                                                                             "minimumTemperatureForIR": 250,
                                                                                             "temperatureToIR": 6
                                                                                         },
                                                                                         "itemResourceParams": {
+                                                                                            "poweredAmbientCoolingMultiplier": 1,
                                                                                             "minOperatingTemperature": 0,
                                                                                             "minCoolingTemperature": 300,
                                                                                             "enableOverheat": 0,
@@ -1121,6 +1178,11 @@
                                                                     "entityDensityClass": "00000000-0000-0000-0000-000000000000",
                                                                     "__ref": "1c72ac07-0f44-4f11-a755-a7284d9a934f",
                                                                     "__path": "libs/foundry/records/entities/scitem/ships/cargogrid/aegs/retaliator/aegs_retaliator_cargogrid_front_left.xml",
+                                                                    "defaultEditorColor": {
+                                                                        "r": 1,
+                                                                        "g": 1,
+                                                                        "b": 0
+                                                                    },
                                                                     "tags": [],
                                                                     "StaticEntityClassData": [],
                                                                     "Components": {
@@ -1208,6 +1270,7 @@
                                                                                     "spawnBoxScale": 0.5,
                                                                                     "maxLoggedCollisions": 1,
                                                                                     "Damping": 0.01,
+                                                                                    "DampingZeroG": 0.01,
                                                                                     "DampingFreefall": 0.05,
                                                                                     "PushableByPlayers": 1,
                                                                                     "NeverAffectTriggers": 0,
@@ -1228,14 +1291,19 @@
                                                                                     "temperature": {
                                                                                         "enable": 0,
                                                                                         "initialTemperature": -1,
-                                                                                        "coolingEqualizationMultiplier": 1,
                                                                                         "internalTemperatureGeneration": 0,
+                                                                                        "coolingEqualizationParams": {
+                                                                                            "CoolingEqualizationMultiplier": {
+                                                                                                "coolingEqualizationMultiplier": 1
+                                                                                            }
+                                                                                        },
                                                                                         "signatureParams": {
                                                                                             "enable": 0,
                                                                                             "minimumTemperatureForIR": 250,
                                                                                             "temperatureToIR": 6
                                                                                         },
                                                                                         "itemResourceParams": {
+                                                                                            "poweredAmbientCoolingMultiplier": 1,
                                                                                             "minOperatingTemperature": 0,
                                                                                             "minCoolingTemperature": 300,
                                                                                             "enableOverheat": 0,
@@ -1379,6 +1447,11 @@
                                                                     "entityDensityClass": "00000000-0000-0000-0000-000000000000",
                                                                     "__ref": "f47fd2c2-b851-4987-b5e1-f093533b6446",
                                                                     "__path": "libs/foundry/records/entities/scitem/ships/cargogrid/aegs/retaliator/aegs_retaliator_cargogrid_front_right.xml",
+                                                                    "defaultEditorColor": {
+                                                                        "r": 1,
+                                                                        "g": 1,
+                                                                        "b": 0
+                                                                    },
                                                                     "tags": [],
                                                                     "StaticEntityClassData": [],
                                                                     "Components": {
@@ -1466,6 +1539,7 @@
                                                                                     "spawnBoxScale": 0.5,
                                                                                     "maxLoggedCollisions": 1,
                                                                                     "Damping": 0.01,
+                                                                                    "DampingZeroG": 0.01,
                                                                                     "DampingFreefall": 0.05,
                                                                                     "PushableByPlayers": 1,
                                                                                     "NeverAffectTriggers": 0,
@@ -1486,14 +1560,19 @@
                                                                                     "temperature": {
                                                                                         "enable": 0,
                                                                                         "initialTemperature": -1,
-                                                                                        "coolingEqualizationMultiplier": 1,
                                                                                         "internalTemperatureGeneration": 0,
+                                                                                        "coolingEqualizationParams": {
+                                                                                            "CoolingEqualizationMultiplier": {
+                                                                                                "coolingEqualizationMultiplier": 1
+                                                                                            }
+                                                                                        },
                                                                                         "signatureParams": {
                                                                                             "enable": 0,
                                                                                             "minimumTemperatureForIR": 250,
                                                                                             "temperatureToIR": 6
                                                                                         },
                                                                                         "itemResourceParams": {
+                                                                                            "poweredAmbientCoolingMultiplier": 1,
                                                                                             "minOperatingTemperature": 0,
                                                                                             "minCoolingTemperature": 300,
                                                                                             "enableOverheat": 0,
@@ -1679,7 +1758,9 @@
                                                 "DestructionBehavior": "UnlockDoor",
                                                 "idleState": "null",
                                                 "activeState": "null",
-                                                "CollisionReaction": [],
+                                                "CollisionReaction": {
+                                                    "SDoorCollisionReactionNoneParams": []
+                                                },
                                                 "AnimationParams": {
                                                     "SCItemDoorSimpleOpenCloseParams": {
                                                         "DefaultAnimationDurationScale": 1,
@@ -2587,6 +2668,8 @@
                                                             "TextScale": 1,
                                                             "ShowInteractionTextAtCursorPos": 0,
                                                             "ScalePromptOffsetWithEntity": 0,
+                                                            "PromptStyle": "PromptAndText",
+                                                            "OverrideControlHintDescription": 0,
                                                             "InteractionPromptScale": 1,
                                                             "InteractionPromptLabelVerticalOffset": 70,
                                                             "InteractionPromptBound": "EntityRoot",
@@ -2657,6 +2740,8 @@
                                                             "TextScale": 1,
                                                             "ShowInteractionTextAtCursorPos": 0,
                                                             "ScalePromptOffsetWithEntity": 0,
+                                                            "PromptStyle": "PromptAndText",
+                                                            "OverrideControlHintDescription": 0,
                                                             "InteractionPromptScale": 1,
                                                             "InteractionPromptLabelVerticalOffset": 70,
                                                             "InteractionPromptBound": "EntityRoot",
@@ -2769,6 +2854,11 @@
                                                 "rootOverridePaint": 1,
                                                 "inheritModelTagFromHost": 1,
                                                 "ModelTag": [],
+                                                "meshsetup": {
+                                                    "visibilityTags": {
+                                                        "tags": []
+                                                    }
+                                                },
                                                 "Geometry": {
                                                     "Tags": "",
                                                     "ScaleMultiplier": 1,
@@ -2833,6 +2923,7 @@
                                                         "spawnBoxScale": 0.5,
                                                         "maxLoggedCollisions": 1,
                                                         "Damping": 0.01,
+                                                        "DampingZeroG": 0.01,
                                                         "DampingFreefall": 0.05,
                                                         "PushableByPlayers": 1,
                                                         "NeverAffectTriggers": 0,
@@ -2853,14 +2944,19 @@
                                                         "temperature": {
                                                             "enable": 0,
                                                             "initialTemperature": -1,
-                                                            "coolingEqualizationMultiplier": 1,
                                                             "internalTemperatureGeneration": 0,
+                                                            "coolingEqualizationParams": {
+                                                                "CoolingEqualizationMultiplier": {
+                                                                    "coolingEqualizationMultiplier": 1
+                                                                }
+                                                            },
                                                             "signatureParams": {
                                                                 "enable": 0,
                                                                 "minimumTemperatureForIR": 250,
                                                                 "temperatureToIR": 6
                                                             },
                                                             "itemResourceParams": {
+                                                                "poweredAmbientCoolingMultiplier": 1,
                                                                 "minOperatingTemperature": 0,
                                                                 "minCoolingTemperature": 300,
                                                                 "enableOverheat": 0,
@@ -2919,6 +3015,8 @@
                                                 "fragmentTag": "",
                                                 "isExterior": 0,
                                                 "allowDeadOrUnconscious": 0,
+                                                "lowEnergyThreshold": 0,
+                                                "highEnergyThreshold": 2,
                                                 "useSlots": [
                                                     {
                                                         "name": "TraverseSlot_A",
@@ -3166,6 +3264,7 @@
                                                     }
                                                 ],
                                                 "exclusivityGroups": [],
+                                                "freeItemPortsForDirectInteraction": [],
                                                 "slottingSetups": [],
                                                 "views": [],
                                                 "abilityLocks": [],
@@ -3268,7 +3367,9 @@
                                                         }
                                                     }
                                                 ],
-                                                "controller": []
+                                                "controller": {
+                                                    "DoorNavigationLinkController": []
+                                                }
                                             },
                                             "SInteractionStateMachineParams": {
                                                 "StateTypes": [
@@ -3289,6 +3390,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -3318,6 +3420,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [],
                                                                 "interactionPoints": [],
@@ -3342,6 +3445,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -3371,6 +3475,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -3422,6 +3527,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [],
                                                                 "interactionPoints": [],
@@ -3446,6 +3552,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": {
                                                                     "SStateAutoChange": {
                                                                         "NextState": "StateTypes[1].SInteractionStateType.States[0]",
@@ -3472,6 +3579,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": {
                                                                     "SStateAutoChange": {
                                                                         "NextState": "StateTypes[1].SInteractionStateType.States[3]",
@@ -3498,6 +3606,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [],
                                                                 "interactionPoints": [],
@@ -3542,6 +3651,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [
                                                                     {
@@ -3575,6 +3685,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [],
                                                                 "interactionPoints": [],
@@ -3605,6 +3716,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -3630,6 +3742,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -3655,6 +3768,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -3674,7 +3788,9 @@
                                                         "StateModifiers": {
                                                             "SLinkedInteractionStateChangedStateModifier": {
                                                                 "nullEntityState": "null",
-                                                                "context": [],
+                                                                "context": {
+                                                                    "SEntityLinkedContext": []
+                                                                },
                                                                 "onChangeStateTagStates": {
                                                                     "SLinkedInteractionStateTags": {
                                                                         "isANDList": 0,
@@ -3709,6 +3825,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [
                                                                     {
@@ -3738,6 +3855,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [],
                                                                 "interactionPoints": [],
@@ -3768,6 +3886,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -3793,6 +3912,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [],
                                                                 "interactionPoints": [],
@@ -3827,6 +3947,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [
                                                                     {
@@ -3867,6 +3988,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [
                                                                     {
@@ -3904,6 +4026,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -3933,6 +4056,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -3972,6 +4096,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -4001,6 +4126,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -4023,13 +4149,18 @@
                                                         ],
                                                         "StateModifiers": {
                                                             "ItemResourceStateModifier": {
-                                                                "stateRanges": {
-                                                                    "SRangeStateLevel": {
+                                                                "stateRanges": [
+                                                                    {
                                                                         "state": "StateTypes[7].SInteractionStateType.States[0]",
-                                                                        "min": 0,
+                                                                        "min": 1,
                                                                         "max": 1
+                                                                    },
+                                                                    {
+                                                                        "state": "StateTypes[7].SInteractionStateType.States[1]",
+                                                                        "min": 0,
+                                                                        "max": 0
                                                                     }
-                                                                },
+                                                                ],
                                                                 "linkedRNetStates": {
                                                                     "WeakPointer": {
                                                                         "linkedRNetStates": "states"
@@ -4055,6 +4186,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -4084,6 +4216,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -4123,6 +4256,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -4152,6 +4286,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -4191,6 +4326,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": [],
                                                                 "interactionPoints": [],
@@ -4211,6 +4347,7 @@
                                                                 "enterStateEffectTags": [],
                                                                 "exitStateEffectTags": [],
                                                                 "EnterEventDispatchers": [],
+                                                                "ExitEventDispatchers": [],
                                                                 "StateAutoChange": [],
                                                                 "Interactions": {
                                                                     "SInteractionStateTransition": {
@@ -4272,16 +4409,20 @@
                                                 "RequiredItemTags": "",
                                                 "LinkAllItemsToResourceNetwork": 0,
                                                 "cheatResourceNetworkUpdate": 0,
+                                                "doorsIgnorePower": 0,
                                                 "masterController": [],
                                                 "Ports": [
                                                     {
                                                         "Name": "control_panel_Exterior",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "Front",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 1,
                                                         "MaxSize": 10,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -4289,6 +4430,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -4373,11 +4515,14 @@
                                                     {
                                                         "Name": "control_panel",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "Back",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 10,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -4385,6 +4530,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -4469,11 +4615,14 @@
                                                     {
                                                         "Name": "charge_handle_a",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "Front",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 10,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -4481,6 +4630,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -4565,11 +4715,14 @@
                                                     {
                                                         "Name": "charge_handle_b",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "Back",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 10,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -4577,6 +4730,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -4661,11 +4815,14 @@
                                                     {
                                                         "Name": "close_button_a",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 10,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -4673,6 +4830,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -4757,11 +4915,14 @@
                                                     {
                                                         "Name": "close_button_b",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 1,
                                                         "MaxSize": 10,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -4769,6 +4930,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -4853,11 +5015,14 @@
                                                     {
                                                         "Name": "proximity_sensor",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 2,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -4865,6 +5030,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -4949,11 +5115,14 @@
                                                     {
                                                         "Name": "light_group_a",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 1,
                                                         "MaxSize": 10,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -4961,6 +5130,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5045,11 +5215,14 @@
                                                     {
                                                         "Name": "light_group_b",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 1,
                                                         "MaxSize": 10,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5057,6 +5230,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5141,11 +5315,14 @@
                                                     {
                                                         "Name": "decal_front",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 1,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5153,6 +5330,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5237,11 +5415,14 @@
                                                     {
                                                         "Name": "decal_rear",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 1,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5249,6 +5430,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5333,11 +5515,14 @@
                                                     {
                                                         "Name": "decal_screen",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 1,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5345,6 +5530,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5429,11 +5615,14 @@
                                                     {
                                                         "Name": "hardpoint_lift_panel",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 0,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5441,6 +5630,7 @@
                                                         "resourceLinkToParent": 1,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5516,11 +5706,14 @@
                                                     {
                                                         "Name": "hardpoint_cargo_grid_b",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "selfphys uneditable",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 1,
                                                         "MaxSize": 1,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5528,6 +5721,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5608,11 +5802,14 @@
                                                     {
                                                         "Name": "hardpoint_cargo_grid_c",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "selfphys uneditable",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 1,
                                                         "MaxSize": 1,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5620,6 +5817,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5700,11 +5898,14 @@
                                                     {
                                                         "Name": "hardpoint_cargo_grid_a",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "selfphys uneditable",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 1,
                                                         "MaxSize": 1,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5712,6 +5913,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5792,11 +5994,14 @@
                                                     {
                                                         "Name": "hardpoint_lift_room_panel",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 0,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5804,6 +6009,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -5879,11 +6085,14 @@
                                                     {
                                                         "Name": "hardpoint_lift_panel_exterior",
                                                         "DisplayName": "",
+                                                        "__DisplayName": "@LOC_EMPTY",
                                                         "PortTags": "",
                                                         "RequiredPortTags": "",
                                                         "Flags": "",
+                                                        "PropagateOnAttachTagsToHierarchy": 0,
                                                         "MinSize": 0,
                                                         "MaxSize": 0,
+                                                        "MaxAggregateAttachmentHeight": -1,
                                                         "gridBehavior": "Both",
                                                         "InteractionPointSize": -1,
                                                         "DefaultWeaponGroup": "UNDEFINED",
@@ -5891,6 +6100,7 @@
                                                         "resourceLinkToParent": 0,
                                                         "useHelperAsInteractionPointName": 0,
                                                         "Tags": [],
+                                                        "OnAttachTags": [],
                                                         "defaultItem": {
                                                             "itemPort": "",
                                                             "entityClass": "00000000-0000-0000-0000-000000000000",
@@ -6111,8 +6321,8 @@
                                             },
                                             "ItemControlComponentParams": {
                                                 "turnedOnByDefault": 1,
-                                                "forceOn": 0,
-                                                "asopSpawnState": "None",
+                                                "forceOn": 1,
+                                                "asopSpawnState": "On",
                                                 "throttleParams": [],
                                                 "masterModeExclusionsOverride": []
                                             },
@@ -6142,6 +6352,7 @@
                                                 "tagsToEnableOnLoad": [],
                                                 "triggersToEnableOnLoad": []
                                             },
+                                            "SAudioProxyParams": [],
                                             "ItemResourceComponentParams": {
                                                 "isResourceNetworked": 1,
                                                 "isRelay": 0,
@@ -6171,13 +6382,34 @@
                                                                 "functionalityCurve": []
                                                             }
                                                         },
-                                                        "rangeParams": []
+                                                        "powerRanges": {
+                                                            "low": {
+                                                                "start": 0,
+                                                                "modifier": 1,
+                                                                "registerRange": 0
+                                                            },
+                                                            "medium": {
+                                                                "start": 0,
+                                                                "modifier": 1,
+                                                                "registerRange": 0
+                                                            },
+                                                            "high": {
+                                                                "start": 0,
+                                                                "modifier": 1,
+                                                                "registerRange": 0
+                                                            }
+                                                        }
                                                     }
                                                 },
                                                 "controlParameters": [],
                                                 "controlBlocks": [],
                                                 "functionalityModifiers": [],
-                                                "powerPlantOverride": []
+                                                "powerPlantOverride": [],
+                                                "selfRepair": {
+                                                    "maxRepairCount": 1,
+                                                    "timeToRepair": 120,
+                                                    "healthRatio": 0.2
+                                                }
                                             },
                                             "InteriorMapEntityVisiblityEntityComponentParams": {
                                                 "show": 1
@@ -6188,8 +6420,8 @@
                                                 "apertureAnimateTime": 0.85,
                                                 "audioSoundProofing": -20,
                                                 "defaultAreaBounds": {
-                                                    "x": 2.25,
-                                                    "y": 1,
+                                                    "x": 6,
+                                                    "y": 10,
                                                     "z": 2.5
                                                 },
                                                 "boundsOffset": {
@@ -6202,6 +6434,7 @@
                                             "SAreaComponentParams": {
                                                 "densityClassOverwrites": []
                                             },
+                                            "EntityComponentRoomOccupantParams": [],
                                             "SHealthComponentParams": {
                                                 "Health": 1000,
                                                 "DamageCap": 0,
@@ -6224,6 +6457,7 @@
                                                 "ExplosionBone": "",
                                                 "IsSalvagable": 1,
                                                 "IsRepairable": 1,
+                                                "SalvageDamageModifier": 1,
                                                 "MirrorSalvageHit": 0,
                                                 "DisableMaterialDamage": 0,
                                                 "alwaysPropagateHitToParent": 0,
@@ -6271,11 +6505,13 @@
                                                 "DeathGasComposition": [],
                                                 "InteractionLocks": [],
                                                 "sequencerTasks": [],
-                                                "shatterDestroyEvent": [],
+                                                "maelstromEvents": [],
                                                 "craftingData": []
                                             },
                                             "AINavigationDynamicTriggerComponent": {
-                                                "adapters": []
+                                                "adapters": {
+                                                    "DoorNavigationTriggerAdapter": []
+                                                }
                                             }
                                         }
                                     }
@@ -6299,6 +6535,7 @@
         "grade": 3,
         "name": "Retaliator Cargo Front Module",
         "tags": "AEGS_Retaliator_Module_Front",
+        "required_tags": "AEGS_Retaliator_Module_Front",
         "manufacturer": "AEG",
         "stdItem": {
             "UUID": "4cd10ac0-2c15-4753-9284-fafe5e8fa7db",
@@ -6311,9 +6548,11 @@
             "Type": "Module.UNDEFINED",
             "Name": "Retaliator Cargo Front Module",
             "Description": "Retaliator owners can equip their ship with this front module to allow for storage of an additional 36 SCU of cargo.",
+            "DescriptionText": "Retaliator owners can equip their ship with this front module to allow for storage of an additional 36 SCU of cargo.",
             "Manufacturer": {
                 "Code": "AEG",
-                "Name": "Aegis Dynamics"
+                "Name": "Aegis Dynamics",
+                "UUID": "cf4a74bf-eb2c-462a-9b78-f7f2724c31d2"
             },
             "Tags": [
                 "AEGS_Retaliator_Module_Front"
@@ -6321,18 +6560,29 @@
             "Ports": [
                 {
                     "PortName": "hardpoint_module_oc",
-                    "Size": 0,
+                    "Size": 4,
+                    "MinSize": 4,
+                    "MaxSize": 4,
+                    "EquippedItem": "f7784f3b-865a-45d0-9aad-395cbdacc378",
                     "Uneditable": false
                 },
                 {
                     "PortName": "hardpoint_front_cargo_lift",
                     "Size": 0,
+                    "MinSize": 0,
+                    "MaxSize": 0,
                     "Flags": [
                         "uneditable"
                     ],
                     "Types": [
                         "Door"
                     ],
+                    "CompatibleTypes": [
+                        {
+                            "type": "Door"
+                        }
+                    ],
+                    "EquippedItem": "d2dd78a7-511e-43c5-b0a2-ecc056f8e642",
                     "Uneditable": true
                 }
             ],
@@ -6342,7 +6592,9 @@
                 "Height": 0.75
             },
             "Durability": {
-                "Health": 200
+                "Health": 200,
+                "Salvageable": 1,
+                "Repairable": 1
             },
             "HeatConnection": {
                 "TemperatureToIR": 1.68,
@@ -6401,6 +6653,23 @@
                 "OverclockPerformance": 0,
                 "PowerToEM": 1.68,
                 "DecayRateOfEM": 0.15
+            },
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 52,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "NetworkReflection",
+                                "Resource": "Power",
+                                "BinaryEvaluation": 1
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

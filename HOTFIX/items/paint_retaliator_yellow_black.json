@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "95c59f5f-6d09-46ea-89d4-f6b52f3079ec",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_retaliator_yellow_black.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Retaliator Backlash Livery",
         "tags": "Paint_Retaliator @Paint_Retaliator_Yellow_Black",
+        "required_tags": "Paint_Retaliator",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Retaliator Backlash Livery",
             "Description": "The bright and bold Backlash livery brings a dynamic design to the Retaliator, featuring a black central stripe ringed in yellow with red highlights.",
+            "DescriptionText": "The bright and bold Backlash livery brings a dynamic design to the Retaliator, featuring a black central stripe ringed in yellow with red highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Ace Astrogation"
+                "Name": "Ace Astrogation",
+                "UUID": "f59f4345-0681-4550-864b-b559877d79ca"
             },
             "Tags": [
                 "Paint_Retaliator",

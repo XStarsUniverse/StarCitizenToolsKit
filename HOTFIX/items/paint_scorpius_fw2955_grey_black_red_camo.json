@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "9e8a633a-6088-43e7-82b2-17e875f4cb10",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_scorpius_fw2955_grey_black_red_camo.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Scorpius Nightbreak Livery",
         "tags": "Paint_Scorpius @Paint_Scorpius_FW2955_Grey_Black_Red_Camo",
+        "required_tags": "Paint_Scorpius",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Scorpius Nightbreak Livery",
             "Description": "Discreetly soar through the night sky in the Scorpius with the Nightbreak livery, which is primarily black with red highlights.",
+            "DescriptionText": "Discreetly soar through the night sky in the Scorpius with the Nightbreak livery, which is primarily black with red highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "0801e480-5256-4c21-bf14-720d24663c5c"
             },
             "Tags": [
                 "Paint_Scorpius",

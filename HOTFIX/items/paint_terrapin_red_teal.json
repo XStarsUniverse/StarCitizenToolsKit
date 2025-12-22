@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "4f585d9e-37bc-24f4-887e-09b325df3783",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_terrapin_red_teal.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Terrapin Vitality Livery",
         "tags": "Paint_Terrapin @Paint_Terrapin_Red_Teal",
+        "required_tags": "Paint_Terrapin",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Terrapin Vitality Livery",
             "Description": "The Vitality livery brings a bright white base paint with teal and red accents to the Terrapin.",
+            "DescriptionText": "The Vitality livery brings a bright white base paint with teal and red accents to the Terrapin.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "4e893928-7de4-9236-ab9d-eeb312caf3b7"
             },
             "Tags": [
                 "Paint_Terrapin",

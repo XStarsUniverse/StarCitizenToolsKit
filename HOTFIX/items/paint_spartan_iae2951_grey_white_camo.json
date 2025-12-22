@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "b0460b71-b294-47ff-b8d7-c5381c60ef2a",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_spartan_iae2951_grey_white_camo.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Spartan Polar Camo Livery",
         "tags": "Paint_Spartan @Paint_Spartan_IAE2951_Grey_White_Camo",
+        "required_tags": "Paint_Spartan",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Spartan Polar Camo Livery",
             "Description": "Modify your Spartan with this white and grey camo livery specifically designed for the 2951 IAE.",
+            "DescriptionText": "Modify your Spartan with this white and grey camo livery specifically designed for the 2951 IAE.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Anvil Aerospace"
+                "Name": "Anvil Aerospace",
+                "UUID": "ccb36630-2c7f-4c5f-9298-159bd1df51fe"
             },
             "Tags": [
                 "Paint_Spartan",

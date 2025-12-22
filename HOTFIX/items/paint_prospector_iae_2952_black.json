@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "d20a54f0-aa98-4e1f-876d-502368484eb7",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_prospector_iae_2952_black.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Prospector Nebula Livery",
         "tags": "Paint_Prospector MISC_Prospector_Base Prospector_Paint @Paint_Prospector_IAE_2952_Black",
+        "required_tags": "Paint_Prospector",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Prospector Nebula Livery",
             "Description": "Balancing black and white, the Nebula livery for the Prospector lets you blast rocks in style.",
+            "DescriptionText": "Balancing black and white, the Nebula livery for the Prospector lets you blast rocks in style.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Argo Astronautics"
+                "Name": "Argo Astronautics",
+                "UUID": "090c8a87-7fd3-425b-a9bf-7e426243ac5a"
             },
             "Tags": [
                 "Paint_Prospector",

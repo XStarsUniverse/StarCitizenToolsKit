@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "6e761c1f-327b-4a67-af6e-bff5d1eab70c",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_retaliator_invictus_camo.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Retaliator Twilight Livery",
         "tags": "Paint_Retaliator @Paint_Retaliator_Invictus_Camo",
+        "required_tags": "Paint_Retaliator",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Retaliator Twilight Livery",
             "Description": "Customize your Retaliator with this fragmented grey livery.",
+            "DescriptionText": "Customize your Retaliator with this fragmented grey livery.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Ace Astrogation"
+                "Name": "Ace Astrogation",
+                "UUID": "10b80dbb-e9b7-439d-8dea-25c13f5d91d8"
             },
             "Tags": [
                 "Paint_Retaliator",

@@ -8,6 +8,11 @@
             "entityDensityClass": "a153bc13-b348-47a4-8bae-1ce22b0b4023",
             "__ref": "59e7bafb-b82a-4e5b-885d-ae18aa4e2efd",
             "__path": "libs/foundry/records/entities/scitem/ships/paints/paint_scorpius_sunburn_white_orange.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [],
             "StaticEntityClassData": {
                 "DefaultEntitlementEntityParams": {
@@ -146,6 +151,11 @@
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -321,6 +331,7 @@
         "grade": 1,
         "name": "Scorpius Sunburn Livery",
         "tags": "Paint_Scorpius @Paint_Scorpius_Sunburn_White_Orange",
+        "required_tags": "Paint_Scorpius",
         "manufacturer": "",
         "classification": "Ship.Paints",
         "stdItem": {
@@ -334,9 +345,11 @@
             "Type": "Paints.UNDEFINED",
             "Name": "Scorpius Sunburn Livery",
             "Description": "A ship designed to be a daring dogfighter deserves an equally audacious look. The Scorpius Sunburn livery is primarily white with a dynamic mix of orange and black highlights.",
+            "DescriptionText": "A ship designed to be a daring dogfighter deserves an equally audacious look. The Scorpius Sunburn livery is primarily white with a dynamic mix of orange and black highlights.",
             "Manufacturer": {
                 "Code": "",
-                "Name": "Roberts Space Industries"
+                "Name": "Roberts Space Industries",
+                "UUID": "168306ad-cd40-42dc-8cb8-f5ac9121c3f6"
             },
             "Tags": [
                 "Paint_Scorpius",

@@ -8,6 +8,11 @@
             "entityDensityClass": "00000000-0000-0000-0000-000000000000",
             "__ref": "c4e95e93-0f73-436b-b70a-98a07fea330c",
             "__path": "libs/foundry/records/entities/scitem/ships/controller/controller_flight_aegs_avenger_stalker_flight_blade_hnd.xml",
+            "defaultEditorColor": {
+                "r": 1,
+                "g": 1,
+                "b": 0
+            },
             "tags": [
                 {
                     "value": "68b3fe59-d53f-4e20-8c82-92dca83846ad"
@@ -485,7 +490,7 @@
                     "linkPlugs": []
                 },
                 "IFCSParams": {
-                    "scmSpeed": 252,
+                    "scmSpeed": 254,
                     "boostSpeedForward": 600,
                     "boostSpeedBackward": 270,
                     "maxSpeed": 1400,
@@ -508,9 +513,9 @@
                     "__thrusterImbalanceMessage": "@dfm_ui_UnexpectedTorqueImbalance",
                     "intoxicationModifierRef": "802adf13-525f-4365-934a-a7b28153b664",
                     "maxAngularVelocity": {
-                        "x": 53.5,
-                        "y": 182,
-                        "z": 49.5
+                        "x": 54,
+                        "y": 192,
+                        "z": 49
                     },
                     "speedProfile": {
                         "angularVelocityLimiter": "Ellipsoid",
@@ -926,9 +931,6 @@
                             "stallSpeedModifier": 1,
                             "thrusterControlSurfaceMixRatioLerpTime": 0.5,
                             "hoverMaxRange": 20,
-                            "pitchAnimationVariable": "pitchDeflection",
-                            "yawAnimationVariable": "yawDeflection",
-                            "rollAnimationVariable": "rollDeflection",
                             "dampingTorqueDerivative": {
                                 "x": 50000,
                                 "y": 22000,
@@ -1252,6 +1254,15 @@
                                 "x": 0,
                                 "y": 0,
                                 "z": 0
+                            },
+                            "surfaceAnimations": {
+                                "pitchVariable": "pitchDeflection",
+                                "yawVariable": "yawDeflection",
+                                "rollVariable": "rollDeflection",
+                                "pitchAddRollVariable": "pitchAddRollDeflection",
+                                "pitchMinusRollVariable": "pitchMinusRollDeflection",
+                                "pitchAddYawVariable": "pitchAddYawDeflection",
+                                "pitchMinusYawVariable": "pitchMinusYawDeflection"
                             },
                             "turbulence": {
                                 "groundTurbulenceAmplitude": 0.4,
@@ -1927,8 +1938,8 @@
                     "forceOn": 0,
                     "asopSpawnState": "Off",
                     "throttleParams": {
-                        "ItemPowerSegmentThrottleParams": {
-                            "default": 4
+                        "ItemPowerSimpleSegmentThrottleParams": {
+                            "defaultFull": 0
                         }
                     },
                     "masterModeExclusionsOverride": []
@@ -1978,19 +1989,45 @@
                                     "functionalityCurve": []
                                 }
                             },
-                            "rangeParams": []
+                            "powerRanges": {
+                                "low": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "medium": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                },
+                                "high": {
+                                    "start": 0,
+                                    "modifier": 1,
+                                    "registerRange": 0
+                                }
+                            }
                         }
                     },
                     "controlParameters": [],
                     "controlBlocks": [],
                     "functionalityModifiers": [],
-                    "powerPlantOverride": []
+                    "powerPlantOverride": [],
+                    "selfRepair": {
+                        "maxRepairCount": 1,
+                        "timeToRepair": 120,
+                        "healthRatio": 0.2
+                    }
                 },
                 "SGeometryResourceParams": {
                     "cacheResources": 0,
                     "rootOverridePaint": 0,
                     "inheritModelTagFromHost": 1,
                     "ModelTag": [],
+                    "meshsetup": {
+                        "visibilityTags": {
+                            "tags": []
+                        }
+                    },
                     "Geometry": {
                         "Tags": "",
                         "ScaleMultiplier": 1,
@@ -2062,6 +2099,7 @@
         "grade": 1,
         "name": "Avenger Stalker PHB Flight Blade",
         "tags": "AEGS_Avenger_Stalker_Blade",
+        "required_tags": "AEGS_Avenger_Stalker_Blade",
         "manufacturer": "BRRA",
         "stdItem": {
             "UUID": "c4e95e93-0f73-436b-b70a-98a07fea330c",
@@ -2074,9 +2112,15 @@
             "Type": "FlightController.UNDEFINED",
             "Name": "Avenger Stalker PHB Flight Blade",
             "Description": "Manufacturer: Broad & Rabiee\\nType: Flight Blade\\n\\nUnlock the potential of your Aegis Avenger Stalker with the PHB Flight Blade from Broad & Rabiee. By re-allocating forward thrust resources, you can expect your ship deliver increased precision handling during tight maneuvers.",
+            "DescriptionData": {
+                "Manufacturer": "Broad & Rabiee",
+                "Type": "Flight Blade"
+            },
+            "DescriptionText": "Unlock the potential of your Aegis Avenger Stalker with the PHB Flight Blade from Broad & Rabiee. By re-allocating forward thrust resources, you can expect your ship deliver increased precision handling during tight maneuvers.",
             "Manufacturer": {
                 "Code": "BRRA",
-                "Name": "Broad & Rabiee"
+                "Name": "Broad & Rabiee",
+                "UUID": "ad865899-f5ba-4818-ae8c-fe80a55108b7"
             },
             "Tags": [
                 "AEGS_Avenger_Stalker_Blade"
@@ -2087,7 +2131,7 @@
                 "Height": 0.75
             },
             "Ifcs": {
-                "scmSpeed": 252,
+                "scmSpeed": 254,
                 "boostSpeedForward": 600,
                 "boostSpeedBackward": 270,
                 "maxSpeed": 1400,
@@ -2104,9 +2148,9 @@
                 "linearAccelDecay": 3,
                 "angularAccelDecay": 11.5,
                 "scmMaxDragMultiplier": 4,
-                "Pitch": 53.5,
-                "Yaw": 49.5,
-                "Roll": 182,
+                "Pitch": 54,
+                "Yaw": 49,
+                "Roll": 192,
                 "Afterburner": {
                     "PreDelayTime": 0,
                     "RampUpTime": 0.4,
@@ -2119,6 +2163,40 @@
                     "CapacitorRegenDelayAfterUse": 0.2,
                     "CapacitorRegenPerSec": 0.75
                 }
+            },
+            "Interactions": [
+                "Engineon",
+                "Engineoff",
+                "Enabledecoupled",
+                "Disabledecoupled",
+                "Enablegsafe",
+                "Disablegsafe",
+                "Enableesp",
+                "Disableesp",
+                "Enablecruise",
+                "Disablecruise",
+                "Enablevtol",
+                "Disablevtol",
+                "Enableproximityassist",
+                "Disableproximityassist"
+            ],
+            "ResourceNetwork": {
+                "IsNetworked": true,
+                "IsRelay": false,
+                "DefaultPriority": 50,
+                "States": [
+                    {
+                        "Name": "Online",
+                        "Deltas": [
+                            {
+                                "Type": "Consumption",
+                                "Resource": "Power",
+                                "Rate": 4,
+                                "MinimumFraction": 0.25
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }
